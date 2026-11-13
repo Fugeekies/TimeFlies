@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Réglages</title>
+</head>
+<body>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Big+Shoulders+Display:wght@700;900&amp;family=Caveat:wght@700&amp;family=Bungee&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#B01F33}a:hover{color:#7E1524}
+button{font:inherit}
+</style>
+
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F2EE; color: #1F1B24; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+
+  <header style="padding: 18px 20px 8px;">
+    <span style="font-family: 'Big Shoulders Display', Impact, sans-serif; font-weight: 900; font-size: 28px;">Réglages</span>
+  </header>
+
+  <main style="flex-grow: 1; padding: 0 16px; display: flex; flex-direction: column; gap: 10px; overflow: hidden;">
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #5E5866;">GÉNÉRATIONS</span>
+    <div style="background: #FFFFFF; border: 1px solid #D9D5DE; border-radius: 14px; padding: 12px 16px; display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+        <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px;">Ton mois et ton année de naissance</span><b style="font-size: 16px;">Mai 1991 · 35 ans</b></div>
+        <a href="Settings.html" style="font-size: 14px;">Effacer</a>
+      </div>
+      <div style="border-top: 1px solid #ECE9EF;"></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 15px;">Âge du jeune</span><b style="font-family: 'Big Shoulders Display', Impact, sans-serif; font-size: 22px;">15 ans</b></div>
+      <input type="range" min="5" max="60" value="15" aria-label="Âge du jeune" style="width: 100%; accent-color: #D7263D; margin: 0;">
+      <span style="font-size: 14px; color: #B01F33; font-weight: 700;">20 ans d'écart</span>
+    </div>
+
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #5E5866; margin-top: 4px;">AFFICHAGE</span>
+    <div style="background: #FFFFFF; border: 1px solid #D9D5DE; border-radius: 14px; padding: 12px 16px; display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-size: 15px;">Style</span>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">
+        <button type="button" aria-pressed="true" style="border: 2px solid #D7263D; border-radius: 12px; background: #FFFFFF; padding: 8px 6px; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #1F1B24;">
+          <span style="width: 72px; height: 64px; background: #F3F2EE; border-radius: 6px; border-top: 2px dashed #D9D5DE; display: flex; align-items: center; justify-content: center; font-family: 'Big Shoulders Display', Impact, sans-serif; font-weight: 900; font-size: 32px; color: #D7263D;">15</span>
+          <span style="font-size: 13px; font-weight: 700;">Éphéméride</span>
+        </button>
+        <button type="button" aria-pressed="false" style="border: 1px solid #D9D5DE; border-radius: 12px; background: #FFFFFF; padding: 9px 7px; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #1F1B24;">
+          <span style="width: 72px; height: 64px; background: #1B1824; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Bungee', Impact, sans-serif; font-size: 22px; color: #FF3EA5;">15</span>
+          <span style="font-size: 13px;">VHS</span>
+        </button>
+        <button type="button" aria-pressed="false" style="border: 1px solid #D9D5DE; border-radius: 12px; background: #FFFFFF; padding: 9px 7px; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #1F1B24;">
+          <span style="width: 72px; height: 64px; background: #FBFAF7; box-shadow: 0 1px 3px rgba(43,36,32,0.25); border-radius: 2px; display: flex; flex-direction: column; padding: 5px 5px 0; box-sizing: border-box; transform: rotate(-3deg);"><span style="height: 38px; background: #D9A441; display: flex; align-items: center; justify-content: center; font-family: 'Caveat', cursive; font-size: 26px; color: #FFFDF6;">15</span></span>
+          <span style="font-size: 13px;">Polaroïd</span>
+        </button>
+      </div>
+      <div style="border-top: 1px solid #ECE9EF;"></div>
+      <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 15px;">Région</span><span style="font-size: 15px; color: #5E5866;">France ›</span></div>
+    </div>
+
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #5E5866; margin-top: 4px;">ÉCRAN D'ACCUEIL</span>
+    <div style="background: #FFFFFF; border: 1px solid #D9D5DE; border-radius: 14px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <span style="font-size: 14px; line-height: 1.35;">Ton coup de vieux chaque jour sur l'écran d'accueil.</span>
+      <a href="Widget.html" style="text-decoration: none; flex-shrink: 0; height: 40px; padding: 0 14px; border-radius: 999px; background: #D7263D; color: #FFFFFF; font-size: 14px; font-weight: 700; display: flex; align-items: center;">Ajouter le widget</a>
+    </div>
+
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #5E5866; margin-top: 4px;">À PROPOS</span>
+    <div style="background: #FFFFFF; border: 1px solid #D9D5DE; border-radius: 14px; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; font-size: 14px;">
+      <span><b>TimeFlies v0.1.0</b> · Inspiré de Bloqués #108</span>
+      <span style="color: #5E5866;">[NOMBRE] événements · Aucune donnée ne quitte cet appareil.</span>
+    </div>
+  </main>
+
+  <nav aria-label="Navigation principale" style="height: 80px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #D9D5DE; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center;">
+    <a href="Today.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #5E5866;">
+      <span style="padding: 4px 18px; display: flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>
+      <span style="font-size: 12px;">Aujourd'hui</span>
+    </a>
+    <a href="Equivalences.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #5E5866;">
+      <span style="padding: 4px 18px; display: flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4"></path></svg></span>
+      <span style="font-size: 12px;">Équivalences</span>
+    </a>
+    <a href="MyEquivalent.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #5E5866;">
+      <span style="padding: 4px 18px; display: flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg></span>
+      <span style="font-size: 12px;">Mon équivalent</span>
+    </a>
+    <a href="Settings.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #1F1B24;">
+      <span style="background: rgba(215,38,61,0.14); border-radius: 999px; padding: 4px 18px; display: flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7263D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"></path><circle cx="16" cy="6" r="2"></circle><circle cx="10" cy="12" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span>
+      <span style="font-size: 12px; font-weight: 700;">Réglages</span>
+    </a>
+  </nav>
+</div>
+
+</body>
+</html>

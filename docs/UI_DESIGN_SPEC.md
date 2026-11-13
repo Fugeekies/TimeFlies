@@ -1,6 +1,6 @@
 # Spécification visuelle & design UI - TimeFlies
 
-> Document de conception écrit avant le code (13/11/2026). Les trois styles d'affichage sont décidés (13/11/2026) ; leurs détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
+> Document de conception écrit avant le code (13/11/2026). L'ordre des styles est décidé (Polaroïd en V1, puis Éphéméride, VHS en idée) ; les détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
 
 Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de **TimeFlies**, sur Android et sur Windows. Les maquettes et les règles de chaque écran sont dans `UISpec/`.
 
@@ -8,10 +8,20 @@ Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de
 
 ## 🎨 Identité & charte graphique
 
-### 1. Trois styles d'affichage (décision du 13/11/2026)
-L'utilisateur choisit le style dans **Réglages › Affichage** ; il s'applique à toute l'application et au widget. Chaque style a son propre jeu de jetons (couleurs, polices, ornements) ; la mise en page des écrans, elle, est la même dans les trois. Le style **Éphéméride** est celui par défaut, et celui que montrent les maquettes de `UISpec/`.
+### 1. Styles d'affichage (décisions du 13/11/2026)
+Trois styles sont prévus. Chaque style a son propre jeu de jetons (couleurs, polices, ornements) ; la mise en page des écrans, elle, est la même dans tous. Maquettes : [`maquettes/`](maquettes/README.md).
 
-#### Éphéméride (par défaut)
+| Style | Version | Pourquoi |
+|---|---|---|
+| **Polaroïd** | **V1**, seul style livré (décision du 13/11/2026, qui remplace celle donnant l'Éphéméride en V1) | Le plus beau pour la feuille du jour ; les âges écrits à la main sur les bandeaux. |
+| **Éphéméride** | Jalon « Style Éphéméride », juste après la V1 | Le plus clair pour les menus et les listes. |
+| **VHS** | Idée, peut-être plus tard | — |
+
+Tant qu'il n'y a qu'un style, Réglages ne propose pas de choix. À partir de l'Éphéméride, l'utilisateur choisit dans **Réglages › Affichage** (Polaroïd par défaut), et le style s'applique à toute l'application et au widget. Le code prévoit dès la V1 des jetons de thème séparés par style, pour que l'ajout de l'Éphéméride ne touche pas aux écrans.
+
+Les maquettes des écrans autres qu'Aujourd'hui sont dessinées en Éphéméride (`maquettes/`) : leur **mise en page** vaut pour la V1, mais leurs couleurs et leurs polices sont celles du Polaroïd (voir plus bas). Elles ne seront pas redessinées avant le code (décision du 13/11/2026).
+
+#### Éphéméride (jalon après la V1)
 Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on arrache une feuille chaque matin : un grand chiffre rouge, le jour en dessous, du papier. L'écran Aujourd'hui et le widget reprennent cette feuille ; le reste de l'application reste sobre pour la laisser au premier plan.
 
 - Le **grand chiffre** n'est pas le jour du mois mais le **nombre d'années** écoulées (« 15 ans »), en rouge éphéméride.
@@ -19,19 +29,41 @@ Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on
 - Le reste (listes, réglages) utilise des cartes simples, sans perforation.
 - Palette et polices : § 2 et § 5 ci-dessous.
 
-#### VHS (**À valider** : palette et polices à dessiner)
+#### VHS (idée, peut-être plus tard)
 La feuille du jour devient une **jaquette de cassette VHS** : étiquette blanche collée de travers, nombre d'années écrit comme un titre de film enregistré, petit « ▶ REC » et compteur de bande `00:15:00` en guise d'ornement. Ambiance sombre par défaut, couleurs saturées (magenta, cyan, jaune), léger effet de lignes de balayage sur la feuille seulement.
 
-#### Polaroïd (**À valider** : palette et polices à dessiner)
-La feuille du jour devient un **Polaroïd** : cadre blanc avec bande épaisse en bas, où le nombre d'années et le titre sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé. Ambiance claire et chaude, ruban adhésif en coin comme ornement.
+#### Polaroïd (V1, maquette validée le 13/11/2026)
+La feuille du jour devient un **Polaroïd** : cadre blanc avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
+
+Règles du style Polaroïd dans toute l'application :
+- **Écriture manuscrite** (`Caveat`) pour le nombre d'années partout où il apparaît : la photo du jour, et le **bandeau de gauche des cartes** des listes (« 18 ans », « 37 ans »), en accent. Aussi pour le titre de la photo, sa légende et les titres de section (« Bientôt… »).
+- **Texte lisible** (`Atkinson Hyperlegible`) pour tout le reste : titres et détails des cartes, menus, réglages, boutons. Les menus restent aussi clairs qu'en Éphéméride.
+- Cartes des listes : fond blanc cassé, coins de 6 px, ombre légère, sans bordure.
+
+Jetons de la maquette (clair) : fond `#E8DFD2`, cadre et cartes `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C`. À finir avant les écrans de la V1 : la **version sombre** et le **contraste** de la légende manuscrite (taille minimale, couleur), voir la feuille de route.
 
 #### Règles communes aux trois styles
 - Contraste AA dans les trois, en clair et en sombre (VHS peut ne proposer que le sombre).
 - Les couleurs des familles (§ 3) et la puce « Chiffre rond » (§ 4) gardent leur sens dans les trois styles.
 - Aucune image photographique d'une œuvre réelle (affiche, pochette) : les styles n'utilisent que des formes dessinées et du texte.
 
-### 2. Palette (clair et sombre)
-L'application suit le thème du système (clair ou sombre). Toutes les couleurs sont des jetons du thème Compose (`ColorScheme` Material 3 personnalisé), jamais des couleurs écrites en dur dans un écran.
+### 2. Palettes (clair et sombre)
+L'application suit le thème du système (clair ou sombre). Toutes les couleurs sont des jetons du thème Compose (`ColorScheme` Material 3 personnalisé), un jeu par style, jamais des couleurs écrites en dur dans un écran.
+
+#### Polaroïd (V1)
+
+| Jeton | Clair | Sombre | Usage |
+|---|---|---|---|
+| `background` | `#E8DFD2` papier kraft | à définir | fond des écrans |
+| `surface` | `#FBFAF7` blanc cassé | à définir | cadre de la photo, cartes |
+| `onSurface` | `#2B2420` encre | à définir | texte principal |
+| `onSurfaceVariant` | `#6A5D52` | à définir | libellés, dates, textes secondaires |
+| `primary` | `#9A4E1C` brun cuivré | à définir | âges manuscrits, onglet actif, boutons principaux |
+| `outline` | `#D6CBBC` | à définir | séparateurs |
+
+La photo du jour prend la couleur de la famille de l'événement (§ 3), légèrement passée.
+
+#### Éphéméride (jalon après la V1)
 
 | Jeton | Clair | Sombre | Usage |
 |---|---|---|---|
@@ -60,8 +92,9 @@ Un anniversaire rond est signalé par une puce « Chiffre rond » : fond `primar
 ### 5. Typographies (embarquées)
 Les polices sont **embarquées** dans l'application (ressources Compose, licence SIL OFL) : ni Android ni Windows ne les fournissent, et les télécharger serait une connexion réseau.
 
-* **Grand chiffre et titres d'écran :** `Big Shoulders Display` (gras, condensée), le style des chiffres d'éphéméride. Réservée au grand chiffre, aux nombres d'années et aux titres d'écran.
-* **Interface et textes :** `Atkinson Hyperlegible`, conçue pour la lisibilité, y compris aux grandes tailles de police du système.
+* **Interface et textes (tous les styles) :** `Atkinson Hyperlegible`, conçue pour la lisibilité, y compris aux grandes tailles de police du système.
+* **Polaroïd (V1) :** `Caveat` (manuscrite) pour les nombres d'années, le titre et la légende de la photo, le nom de l'application et les titres de section. Jamais en dessous de 20 sp, pour rester lisible.
+* **Éphéméride (après la V1) :** `Big Shoulders Display` (gras, condensée), le style des chiffres d'éphéméride, pour le grand chiffre, les nombres d'années et les titres d'écran.
 * **Échelle (sp)** : grand chiffre 96 (téléphone) / 120 (PC) ; titre d'écran 28 ; titre d'événement 20 ; texte 16 ; libellé 13 (majuscules, espacement des lettres 0,06 em).
 
 ---
@@ -101,15 +134,19 @@ Quatre destinations, dans cet ordre :
 * Les tailles de police suivent le réglage du système ; à 200 %, les cartes passent sur plusieurs lignes au lieu de couper le texte.
 * Chaque carte a une description pour TalkBack et le Narrateur Windows, par exemple : « Intouchables, sortie au cinéma le 2 novembre 2011, il y a 15 ans. Tu avais 20 ans. »
 * Zones tactiles de 48 dp minimum. Sur Windows, tout se fait aussi au clavier (Tab, Entrée, flèches dans les listes).
-* Animations réduites quand le système le demande (feuille d'éphéméride affichée sans l'effet d'arrachage).
+* Animations réduites quand le système le demande (photo ou feuille affichée directement, sans effet).
+* L'écriture manuscrite n'est jamais la seule porteuse d'une information : la description TalkBack et le Narrateur lisent le texte, et les détails de chaque carte sont aussi en police lisible.
 
 ## ✨ Animation
 
-Une seule animation marquante : à l'ouverture de l'écran Aujourd'hui, la feuille de la veille s'arrache vers le haut et laisse apparaître celle du jour (une fois par jour, pas à chaque retour sur l'écran). Le reste se limite aux transitions standard de Material 3.
+Une seule animation marquante, à l'ouverture de l'écran Aujourd'hui, une fois par jour (pas à chaque retour sur l'écran) :
+* **Polaroïd (V1)** : la photo du jour **se développe**, l'aplat de couleur apparaît peu à peu sur le blanc, puis l'écriture (**À valider**).
+* **Éphéméride (après la V1)** : la feuille de la veille s'arrache vers le haut et laisse apparaître celle du jour.
+
+Le reste se limite aux transitions standard de Material 3.
 
 ---
 
 ## Questions ouvertes
 
-1. Palettes et polices des styles VHS et Polaroïd, à dessiner avant le jalon « Écrans communs ».
-2. Le nom affiché sous l'icône reste à choisir (jalon « Nom et icône définitifs ») : les maquettes affichent « TimeFlies » en attendant.
+1. Le nom affiché sous l'icône reste à choisir (jalon « Nom et icône définitifs ») : les maquettes affichent « TimeFlies » en attendant.

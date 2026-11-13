@@ -9,11 +9,13 @@ TimeFlies est une application **Android et Windows** qui donne des coups de vieu
 - **Les équivalences** : selon ton âge et celui d'un jeune, les événements qui ont la même place dans vos deux vies (Friends ↔ Happy Days, la mort de Tupac ↔ la mort d'Elvis, Zidane ↔ Platini…).
 - **Mon équivalent** : choisis un événement et trouve son équivalent pour l'autre génération.
 
+<p align="center"><img src="docs/maquettes/android/TodayPolaroid.png" alt="Aperçu de l'écran Aujourd'hui" width="260"> <img src="docs/maquettes/android/Equivalences.png" alt="Aperçu de l'écran Équivalences" width="260"></p>
+
 Aucun compte, aucune connexion : les événements sont intégrés à l'application et tes réglages restent sur ton appareil.
 
 ## État
 
-Projet en démarrage : aucune version n'est encore publiée. Les spécifications sont dans [`docs/`](docs/) et la suite dans la [feuille de route](docs/ROADMAP.md).
+Projet en démarrage : aucune version n'est encore publiée. Les spécifications sont dans [`docs/`](docs/), les maquettes dans [`docs/maquettes/`](docs/maquettes/README.md), et la suite dans la [feuille de route](docs/ROADMAP.md).
 
 ## Installation (à venir)
 
