@@ -10,7 +10,11 @@ Le principe de l'épisode : pour un jeune de l'âge choisi, quels événements o
 #### Bandeau des générations (en haut)
 * « Toi : 35 ans · Le jeune : 15 ans » et, en grand, « **20 ans d'écart** ».
 * Bouton « Modifier » : ouvre une feuille avec le curseur de l'âge du jeune (même règle que dans Réglages) ; le changement est enregistré et la liste se recalcule aussitôt. Le mois et l'année de naissance se changent dans Réglages.
-* Changer les deux âges « à la volée » pour des amis, sans toucher aux réglages : demandé le 13/11/2026, forme **À valider** (voir questions ouvertes).
+* **Âges à la volée** (décision du 13/11/2026) : pour comparer entre amis, le bandeau devient « Le vieux : 35 ans · Le jeune : 15 ans ». Toucher un des deux âges ouvre un curseur (de 5 à 100 ans pour le vieux, de 1 à l'âge du vieux moins 5 pour le jeune) ; la liste se recalcule aussitôt.
+  * Ces âges ne sont **pas enregistrés** : Mon équivalent utilise les mêmes, mais tout revient aux réglages à la fermeture de l'application.
+  * Tant que des âges à la volée sont actifs, le bandeau porte la mention « Âges temporaires » et un bouton **« Revenir à mes réglages »**.
+  * Un âge donné à la volée correspond à une naissance « aujourd'hui moins cet âge », au jour près, comme pour le jeune dans Réglages.
+  * Ils marchent aussi sans mois et année de naissance enregistrés : c'est alors le seul moyen de voir des équivalences.
 
 #### Sens de lecture (décision du 13/11/2026)
 * Bouton **« Inverser »** (⇄) à côté du bandeau :
@@ -31,7 +35,7 @@ Le principe de l'épisode : pour un jeune de l'âge choisi, quels événements o
 * **Tri** : de l'événement le plus récent au plus ancien (côté jeune, ou côté utilisateur en sens inversé).
 * Un événement qui n'a pas de paire dans la tolérance n'apparaît pas.
 * **Liste vide** (filtre trop restrictif) : « Aucune équivalence pour ces thèmes. Coche d'autres thèmes ou essaie un autre âge. »
-* **Sans mois et année de naissance** : à la place du bandeau et de la liste, « Indique ton mois et ton année de naissance pour voir tes équivalences. » et le bouton **« Ouvrir les réglages »** (décision du 13/11/2026).
+* **Sans mois et année de naissance** : à la place de la liste, « Indique ton mois et ton année de naissance pour voir tes équivalences. » avec le bouton **« Ouvrir les réglages »** (décision du 13/11/2026), et le bouton secondaire « Choisir des âges » qui ouvre les âges à la volée.
 * Toucher une carte ouvre **Mon équivalent** sur l'événement de la colonne de gauche.
 
 ### Wireframe ASCII (téléphone)
@@ -86,6 +90,3 @@ Liste des thèmes (feuille ouverte par « Thèmes »)
 Sur Windows, les cartes s'affichent sur deux colonnes au-dessus de 840 dp de large.
 
 Exemple calculé pour une naissance en mai 1991 et un jeune de 15 ans, le 2 novembre 2026. Les paires illustrent la mise en page ; leurs dates et leurs types seront vérifiés lors de la saisie de la base.
-
-### Questions ouvertes
-1. **Âges à la volée** : pouvoir changer l'âge du « vieux » et celui du « jeune » directement dans cet écran et dans Mon équivalent (pour comparer entre amis), sans toucher aux réglages. À préciser : saisie par âges ou par mois et année, et retour aux réglages à la fermeture de l'application ou par un bouton.

@@ -7,7 +7,7 @@ Les jalons à faire sont en haut, par ordre de priorité. Les jalons terminés s
 ### Jalon — Spécifications initiales
 Décrire l'application avant de coder : architecture, base d'événements, identité visuelle et maquette de chaque écran.
 - [x] `docs/ARCHITECTURE.md`, `docs/EVENTS_DATA.md`, `docs/UI_DESIGN_SPEC.md` et les spécifications d'écran `docs/UISpec/`.
-- [ ] Trancher les points marqués **À valider** et les questions ouvertes de chaque document.
+- [x] Trancher les points marqués **À valider** et les questions ouvertes (13/11/2026). Restent les palettes et polices des styles VHS et Polaroïd, à dessiner avant les écrans.
 
 ### Jalon — Chaîne de compilation
 Valider dès le départ que GitHub produit une APK et un `.msi` installables, avant d'écrire les fonctionnalités.
@@ -20,7 +20,7 @@ Valider dès le départ que GitHub produit une APK et un `.msi` installables, av
 - [ ] Première version de test `v0.1.0` installée sur un téléphone et sur un PC.
 
 ### Jalon — Base d'événements v1
-- [ ] Trancher le format, les natures et le catalogue de types (`docs/EVENTS_DATA.md`).
+- [x] Trancher le format, les natures et le principe des types larges (`docs/EVENTS_DATA.md`, 13/11/2026).
 - [ ] Chargement et validation de `events.json` dans `core`, avec les tests de validation et le rapport de couverture.
 - [ ] Saisie d'environ 400 événements vérifiés, chacun avec sa source, par lots d'une famille à la fois (une PR par lot pour faciliter la relecture des dates).
 

@@ -1,6 +1,6 @@
 # Architecture technique - TimeFlies
 
-> Document de conception écrit avant le code (13/11/2026). Les choix marqués **À valider** sont des propositions : ils ne sont pas tranchés.
+> Document de conception écrit avant le code (13/11/2026). Les décisions sont datées ; un choix marqué **À valider** n'est pas encore tranché.
 
 ## Principes
 
@@ -8,7 +8,7 @@
 - **Hors ligne, sans compte.** La base d'événements est livrée dans l'application. Aucune donnée ne quitte l'appareil.
 - **Calculs testables sans interface.** Les règles (anniversaires, âges, équivalences) vivent dans un module sans dépendance à Compose, couvert par des tests unitaires.
 
-## Modules (proposition, **À valider**)
+## Modules
 
 | Module | Rôle |
 |---|---|
@@ -17,7 +17,7 @@
 | `androidApp` | Point d'entrée Android, **widget** (Jetpack Glance), mise à jour quotidienne (WorkManager), stockage des réglages (DataStore). |
 | `desktopApp` | Point d'entrée Windows (Compose Desktop), **icône de barre des tâches** (`Tray`), **notification** du matin, lancement au démarrage de Windows, stockage des réglages (fichier JSON dans `%APPDATA%\TimeFlies`). |
 
-Le découpage peut se réduire à un module partagé (`shared`, avec `core` et `ui` en paquets) si deux modules alourdissent la compilation sans bénéfice : à décider au jalon « Chaîne de compilation ».
+Départ sur deux modules (`core` et `ui`), réduits à un seul module partagé (`shared`, avec `core` et `ui` en paquets) si cela alourdit la compilation sans bénéfice : décision finale au jalon « Chaîne de compilation » (décision du 13/11/2026).
 
 ## Flux de données
 
@@ -44,7 +44,7 @@ Détaillées dans [`EVENTS_DATA.md`](EVENTS_DATA.md) (format et types) et dans l
 | Android | DataStore (Preferences), privé à l'application | mois et année de naissance, âge du jeune, région, style, thèmes et sens de l'écran Équivalences, premier lancement terminé |
 | Windows | `%APPDATA%\TimeFlies\settings.json`, écrit d'un bloc | les mêmes, plus l'heure de la notification, le lancement au démarrage et la taille de la fenêtre |
 
-Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APPDATA%\TimeFlies` reste après une désinstallation (**À valider** : le supprimer ou non).
+Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APPDATA%\TimeFlies` reste après une désinstallation : une réinstallation retrouve les réglages (décision du 13/11/2026).
 
 ## Distribution
 
@@ -54,7 +54,7 @@ Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APP
 - Une version est publiée dans les Releases à partir d'un tag `vX.Y.Z` (Semantic Versioning). Le numéro de version de l'application vient du tag ; une compilation locale reste en `0.0.0-dev`.
 - L'installeur Windows n'est pas signé par un éditeur reconnu : Windows affiche « éditeur inconnu » au premier lancement. Le README l'explique.
 
-## Versions minimales (proposition, **À valider**)
+## Versions minimales (décision du 13/11/2026)
 
 - Android 8.0 (API 26) et plus : WorkManager et Glance y fonctionnent, et cela couvre la quasi-totalité des téléphones en service.
 - Windows 10 et 11, 64 bits.

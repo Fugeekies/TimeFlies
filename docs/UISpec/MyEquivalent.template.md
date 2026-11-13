@@ -61,5 +61,6 @@ Exemple pour une naissance en mai 1991 et un jeune de 15 ans (20 ans d'écart), 
 #### Sans mois et année de naissance
 * À la place du résultat : « Indique ton mois et ton année de naissance pour voir tes équivalences. » et le bouton **« Ouvrir les réglages »** (décision du 13/11/2026). La recherche reste utilisable.
 
-### Questions ouvertes
-1. **Âges à la volée** (demandé le 13/11/2026) : changer l'âge du « vieux » et celui du « jeune » directement ici, pour comparer entre amis, sans toucher aux réglages. Même question que dans [`Equivalences.template.md`](Equivalences.template.md) : saisie par âges ou par mois et année, et quand revenir aux réglages.
+#### Âges à la volée (décision du 13/11/2026)
+* Même bandeau et mêmes règles que dans [`Equivalences.template.md`](Equivalences.template.md) : « Le vieux : 35 ans · Le jeune : 15 ans », modifiable sans toucher aux réglages, partagé entre les deux écrans, oublié à la fermeture de l'application, avec le bouton « Revenir à mes réglages ».
+* Sans mois et année de naissance, le bouton secondaire « Choisir des âges » ouvre ce bandeau.

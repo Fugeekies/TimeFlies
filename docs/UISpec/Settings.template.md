@@ -1,6 +1,6 @@
 ## 4. ⚙️ Réglages (`SettingsScreen`)
 
-> Spécification de conception (13/11/2026), avant le code. Les points marqués **À valider** ne sont pas tranchés.
+> Spécification de conception (13/11/2026), avant le code.
 
 ### Description
 Les réglages qui pilotent toute l'application (mois et année de naissance, âge du jeune, région), le style d'affichage, les réglages propres à la plateforme et les informations sur l'application. Chaque réglage est **enregistré dès qu'il change**, sans bouton « Enregistrer ».
@@ -32,10 +32,10 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, âg
 * Bouton **« Ajouter le widget »** : demande au lanceur d'épingler le widget (`requestPinAppWidget`) ; masqué si le lanceur ne le permet pas, avec à la place l'explication « Appui long sur l'écran d'accueil › Widgets › TimeFlies ».
 
 #### Panneau « Notification et démarrage » (Windows uniquement, eyebrow « WINDOWS »)
-Valeurs par défaut **À valider**.
-* Case **« Lancer TimeFlies au démarrage de Windows »** (proposition : cochée) : nécessaire pour l'icône de la barre des tâches et la notification. Écrit ou retire la clé `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\TimeFlies` (utilisateur courant, sans droits administrateur).
-* Case **« Notification du coup de vieux chaque matin »** (proposition : cochée) et **heure** (liste par quart d'heure, proposition : 9:00).
-* Case **« Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre »** (proposition : cochée) : fermer la fenêtre la cache au lieu de quitter l'application (voir `WindowsTray.template.md`).
+Valeurs par défaut décidées le 13/11/2026.
+* Case **« Lancer TimeFlies au démarrage de Windows »** (cochée par défaut) : nécessaire pour l'icône de la barre des tâches et la notification. Écrit ou retire la clé `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\TimeFlies` (utilisateur courant, sans droits administrateur).
+* Case **« Notification du coup de vieux chaque matin »** (cochée par défaut) et **heure** (liste par quart d'heure, 9:00 par défaut).
+* Case **« Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre »** (cochée par défaut) : fermer la fenêtre la cache au lieu de quitter l'application (voir `WindowsTray.template.md`).
 
 #### Panneau « À propos »
 * Nom et version (« TimeFlies v0.1.0 », « version de développement » pour une compilation locale).
@@ -108,5 +108,3 @@ Valeurs par défaut **À valider**.
 
 Le chiffre « 412 événements » est un exemple : il vient de la base réelle.
 
-### Questions ouvertes
-1. Valeurs par défaut sur Windows : lancement au démarrage coché, notification à 9:00, fenêtre fermée qui reste dans la barre des tâches, d'accord ?

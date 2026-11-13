@@ -1,6 +1,6 @@
 ## 5. 🧩 Widget Android (`TimeFliesWidget`)
 
-> Spécification de conception (13/11/2026), avant le code. Les points marqués **À valider** ne sont pas tranchés.
+> Spécification de conception (13/11/2026), avant le code.
 
 ### Description
 Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même que la feuille de l'écran Aujourd'hui, en version miniature de la feuille d'éphéméride. Construit avec Jetpack Glance.
@@ -14,7 +14,7 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 * Sans mois et année de naissance (premier lancement passé) : l'anniversaire s'affiche sans « Tu avais N ans ».
 * Le widget suit le style d'affichage choisi dans Réglages (Éphéméride, VHS ou Polaroïd).
 
-#### Tailles (proposition, **À valider**)
+#### Tailles (décision du 13/11/2026)
 | Taille | Contenu |
 |---|---|
 | **2 × 2** (petit) | nombre d'années + titre (2 lignes au plus, coupé par « … ») |
@@ -31,6 +31,7 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 
 #### Interaction
 * Toucher le widget ouvre l'application sur **Aujourd'hui**.
+* **Bouton « suivant »** (›, décision du 13/11/2026), en bas à droite : affiche l'anniversaire suivant du jour, dans l'ordre habituel, puis revient au premier après le dernier. Masqué s'il n'y a qu'un anniversaire. Le widget revient au coup de vieux principal à chaque nouveau jour. En 4 × 3 et plus, les lignes compactes suivent le défilement.
 
 ### Wireframe ASCII
 ```text
@@ -40,12 +41,9 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 │                                      │    │                   │
 │  15 ans    Intouchables              │    │  Intouchables     │
 │            Sortie au cinéma · 2011   │    │                   │
-│            Tu avais 20 ans.          │    │                   │
+│            Tu avais 20 ans.        › │    │                 › │
 └──────────────────────────────────────┘    └───────────────────┘
 ```
 
 Exemple pour une naissance en mai 1991, le 2 novembre 2026.
 
-### Questions ouvertes
-1. Les trois tailles proposées conviennent-elles ?
-2. Faut-il un bouton « suivant » sur le widget pour faire défiler les autres anniversaires du jour ?

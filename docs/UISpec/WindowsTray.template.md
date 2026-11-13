@@ -1,6 +1,6 @@
 ## 6. 🖥️ Barre des tâches et notification Windows (`TimeFliesTray`)
 
-> Spécification de conception (13/11/2026), avant le code. Windows ne permet pas facilement à une application d'ajouter un widget : l'icône de la zone de notification et la notification du matin en tiennent lieu (décision du 13/11/2026). Les points marqués **À valider** ne sont pas tranchés.
+> Spécification de conception (13/11/2026), avant le code. Windows ne permet pas facilement à une application d'ajouter un widget : l'icône de la zone de notification et la notification du matin en tiennent lieu (décision du 13/11/2026).
 
 ### Description
 Sur Windows, TimeFlies peut rester ouvert en arrière-plan, avec une icône dans la **zone de notification** (à côté de l'horloge). Elle affiche le coup de vieux du jour au survol et envoie une **notification** chaque matin.
@@ -29,7 +29,7 @@ Sur Windows, TimeFlies peut rester ouvert en arrière-plan, avec une icône dans
 * Sans anniversaire du jour : titre « Dans 3 jours », texte avec le prochain anniversaire.
 * PC éteint ou en veille à l'heure prévue : la notification part au premier réveil de la journée, une seule fois par jour.
 * Cliquer sur la notification ouvre la fenêtre sur Aujourd'hui.
-* Implémentation : notification de la zone de notification (`TrayState.sendNotification`), sans service externe (**À valider** : une notification Windows native plus riche demanderait une bibliothèque en plus).
+* Implémentation : notification de la zone de notification (`TrayState.sendNotification`), sans bibliothèque en plus : une notification simple, titre et texte (décision du 13/11/2026).
 
 ### Wireframe ASCII
 ```text
@@ -53,5 +53,3 @@ Notification du matin (coin inférieur droit de l'écran)
 
 Exemple pour une naissance en mai 1991, le 2 novembre 2026.
 
-### Questions ouvertes
-1. Une notification simple de la zone de notification suffit-elle, ou veux-tu une notification Windows native plus riche (image, bouton « Voir l'équivalent ») ?
