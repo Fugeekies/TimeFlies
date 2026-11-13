@@ -22,7 +22,7 @@ Le découpage peut se réduire à un module partagé (`shared`, avec `core` et `
 ## Flux de données
 
 1. Au démarrage, `core` lit `events.json` (ressource embarquée) et vérifie chaque entrée : date valide et passée, type connu, identifiant unique. Une entrée invalide fait échouer les tests, jamais l'application en production (elle est écartée et journalisée).
-2. Les réglages (date de naissance, âge du jeune) sont lus depuis le stockage de la plateforme.
+2. Les réglages (mois et année de naissance, âge du jeune, région, style) sont lus depuis le stockage de la plateforme.
 3. Les écrans demandent leurs données à `core` pour la date du jour, dans le **fuseau horaire de l'appareil** : le « jour » d'un anniversaire est le jour civil local.
 4. Le widget Android et la notification Windows appellent le même calcul `Anniversaries` que l'écran Aujourd'hui : ils affichent toujours le même coup de vieux.
 
@@ -30,17 +30,19 @@ Le découpage peut se réduire à un module partagé (`shared`, avec `core` et `
 
 Détaillées dans [`EVENTS_DATA.md`](EVENTS_DATA.md) (format et types) et dans les spécifications d'écran (`UISpec/`). En résumé :
 
+- **Naissance** : l'utilisateur ne donne que son **mois et son année** (jamais le jour, décision du 13/11/2026) ; la date retenue est le 1er du mois. Celle du jeune est aujourd'hui moins son âge.
 - **Âge à une date** : années civiles révolues entre la date de naissance et la date, comme un âge réel (on ne prend pas d'année de 365,25 jours).
-- **Anniversaire** : même jour et même mois qu'une date d'événement, au moins un an après. Un événement du 29 février est fêté le 28 février les années non bissextiles (**À valider**).
-- **Écart d'âge** : différence entre la date de naissance de l'utilisateur et celle du jeune, calculée à partir de son âge (voir `UISpec/Settings.template.md`).
-- **Équivalence** : événement de **même type**, décalé de l'écart d'âge, dans une tolérance (proposition : ±2 ans, **À valider**).
+- **Date d'un événement** : sa date dans la région de l'utilisateur, à défaut sa date de référence (première sortie mondiale).
+- **Anniversaire** : même jour et même mois qu'une date d'événement, au moins un an après. Un événement du 29 février est fêté le 28 février les années non bissextiles (décision du 13/11/2026).
+- **Écart d'âge** : différence au jour près entre la date de naissance de l'utilisateur et celle du jeune (voir `UISpec/Settings.template.md`).
+- **Équivalence** : événement de **même type** (types larges), décalé de l'écart d'âge, à ±2 ans près (décision du 13/11/2026).
 
 ## Stockage des réglages
 
 | Plateforme | Emplacement | Contenu |
 |---|---|---|
-| Android | DataStore (Preferences), privé à l'application | date de naissance, âge du jeune, premier lancement terminé |
-| Windows | `%APPDATA%\TimeFlies\settings.json`, écrit d'un bloc | les mêmes, plus l'heure de la notification et le lancement au démarrage |
+| Android | DataStore (Preferences), privé à l'application | mois et année de naissance, âge du jeune, région, style, thèmes et sens de l'écran Équivalences, premier lancement terminé |
+| Windows | `%APPDATA%\TimeFlies\settings.json`, écrit d'un bloc | les mêmes, plus l'heure de la notification, le lancement au démarrage et la taille de la fenêtre |
 
 Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APPDATA%\TimeFlies` reste après une désinstallation (**À valider** : le supprimer ou non).
 

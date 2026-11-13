@@ -51,7 +51,7 @@ Notification du matin (coin inférieur droit de l'écran)
 └─────────────────────────────────────────────┘
 ```
 
-Exemple pour une naissance le 14/05/1991, le 2 novembre 2026.
+Exemple pour une naissance en mai 1991, le 2 novembre 2026.
 
 ### Questions ouvertes
 1. Une notification simple de la zone de notification suffit-elle, ou veux-tu une notification Windows native plus riche (image, bouton « Voir l'équivalent ») ?

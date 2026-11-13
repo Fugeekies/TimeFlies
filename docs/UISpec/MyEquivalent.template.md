@@ -56,7 +56,10 @@ L'utilisateur choisit un événement et voit son équivalent pour l'autre géné
 └────────────────────────────────────────┘
 ```
 
-Exemple pour une naissance le 14/05/1991 et un jeune de 15 ans (20 ans d'écart), le 2 novembre 2026 : la date cible est le 4 décembre 1993, Le Roi Lion en est à moins d'un an. Les dates seront vérifiées lors de la saisie de la base.
+Exemple pour une naissance en mai 1991 et un jeune de 15 ans (20 ans d'écart), le 2 novembre 2026 : la date cible est le 4 décembre 1993, Le Roi Lion en est à moins d'un an. Les dates seront vérifiées lors de la saisie de la base.
+
+#### Sans mois et année de naissance
+* À la place du résultat : « Indique ton mois et ton année de naissance pour voir tes équivalences. » et le bouton **« Ouvrir les réglages »** (décision du 13/11/2026). La recherche reste utilisable.
 
 ### Questions ouvertes
-1. Faut-il pouvoir choisir un âge de jeune différent ici, sans changer le réglage général ?
+1. **Âges à la volée** (demandé le 13/11/2026) : changer l'âge du « vieux » et celui du « jeune » directement ici, pour comparer entre amis, sans toucher aux réglages. Même question que dans [`Equivalences.template.md`](Equivalences.template.md) : saisie par âges ou par mois et année, et quand revenir aux réglages.

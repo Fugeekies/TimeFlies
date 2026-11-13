@@ -9,21 +9,30 @@ Le principe de l'épisode : pour un jeune de l'âge choisi, quels événements o
 
 #### Bandeau des générations (en haut)
 * « Toi : 35 ans · Le jeune : 15 ans » et, en grand, « **20 ans d'écart** ».
-* Bouton « Modifier » : ouvre une feuille avec le curseur de l'âge du jeune (même règle que dans Réglages) ; le changement est enregistré et la liste se recalcule aussitôt. La date de naissance se change dans Réglages.
+* Bouton « Modifier » : ouvre une feuille avec le curseur de l'âge du jeune (même règle que dans Réglages) ; le changement est enregistré et la liste se recalcule aussitôt. Le mois et l'année de naissance se changent dans Réglages.
+* Changer les deux âges « à la volée » pour des amis, sans toucher aux réglages : demandé le 13/11/2026, forme **À valider** (voir questions ouvertes).
 
-#### Filtres
-* Puces de familles (voir `UI_DESIGN_SPEC.md` § 3), sélection multiple : Toutes (par défaut), Séries & télé, Cinéma, Musique, Sport, Jeux vidéo & tech, Politique & histoire.
-* Le filtre choisi est mémorisé jusqu'à la fermeture de l'application (**À valider** : ou durablement).
+#### Sens de lecture (décision du 13/11/2026)
+* Bouton **« Inverser »** (⇄) à côté du bandeau :
+  * **Pour le jeune → Pour toi** (par défaut) : colonne de gauche « Pour le jeune », tri par événement du jeune ;
+  * **Pour toi → Pour le jeune** : colonnes échangées, tri par événement de l'utilisateur.
+* Le sens choisi est mémorisé comme un réglage.
+
+#### Filtres (décision du 13/11/2026)
+* Bouton **« Thèmes »** qui ouvre une liste de **cases à cocher**, une par famille (Séries & télé, Cinéma, Musique, Sport, Jeux vidéo & tech, Politique & histoire), toutes cochées par défaut, avec « Tout cocher » / « Tout décocher ».
+* Le résumé du filtre s'affiche sous le bandeau (« 4 thèmes sur 6 »).
+* Le choix est **mémorisé durablement**, comme un réglage.
 
 #### Liste des paires
-* Une carte par paire, en deux colonnes : à gauche **« Pour le jeune »**, à droite **« Pour toi »**, une flèche ⇄ entre les deux.
+* Une carte par paire, en deux colonnes séparées par une flèche ⇄.
 * Chaque côté : titre de l'événement, nature, date (« 15 juillet 2018 »), âge au moment de l'événement (« il avait 6 ans » / « tu avais 7 ans », ou « 2 ans avant sa naissance » / « avant ta naissance »).
 * En haut de la carte : pastille et nom du type en clair (« Victoire des Bleus en Coupe du monde »).
-* **Événements pris côté jeune** : ceux dont la date va de 5 ans avant sa naissance à aujourd'hui (**À valider**) et qui ont une paire dans la tolérance.
-* **Tri** : de l'événement du jeune le plus récent au plus ancien.
-* Un événement qui n'a pas de paire n'apparaît pas.
-* **Liste vide** (filtre trop restrictif ou base trop pauvre pour cet écart) : « Aucune équivalence pour ces réglages. Essaie un autre âge ou une autre famille. »
-* Toucher une carte ouvre **Mon équivalent** sur l'événement du jeune.
+* **Tous les événements** de la base sont pris en compte, y compris ceux d'avant la naissance des deux personnes (décision du 13/11/2026).
+* **Tri** : de l'événement le plus récent au plus ancien (côté jeune, ou côté utilisateur en sens inversé).
+* Un événement qui n'a pas de paire dans la tolérance n'apparaît pas.
+* **Liste vide** (filtre trop restrictif) : « Aucune équivalence pour ces thèmes. Coche d'autres thèmes ou essaie un autre âge. »
+* **Sans mois et année de naissance** : à la place du bandeau et de la liste, « Indique ton mois et ton année de naissance pour voir tes équivalences. » et le bouton **« Ouvrir les réglages »** (décision du 13/11/2026).
+* Toucher une carte ouvre **Mon équivalent** sur l'événement de la colonne de gauche.
 
 ### Wireframe ASCII (téléphone)
 ```text
@@ -31,13 +40,11 @@ Le principe de l'épisode : pour un jeune de l'âge choisi, quels événements o
 │ Équivalences                           │
 ├────────────────────────────────────────┤
 │  Toi : 35 ans · Le jeune : 15 ans      │
-│  20 ANS D'ÉCART            [Modifier]  │
-│                                        │
-│  (Toutes) (Séries) (Ciné) (Musique)    │
-│  (Sport) (Jeux & tech) (Histoire)  →   │
+│  20 ANS D'ÉCART     [Modifier] [ ⇄ ]   │
+│  [ Thèmes ▾ ]  6 thèmes sur 6          │
 │                                        │
 │  ┌──────────────────────────────────┐  │
-│  │ ● Mort d'une star de la chanson  │  │
+│  │ ● Mort d'une icône de la musique │  │
 │  │ POUR LE JEUNE   ⇄   POUR TOI     │  │
 │  │ Johnny Hallyday     Barbara      │  │
 │  │ Mort                Mort         │  │
@@ -62,12 +69,23 @@ Le principe de l'épisode : pour un jeune de l'âge choisi, quels événements o
 ├────────────────────────────────────────┤
 │  📅  ⇄ Équivalences  🔍  ⚙              │
 └────────────────────────────────────────┘
+
+Liste des thèmes (feuille ouverte par « Thèmes »)
+┌────────────────────────────────────────┐
+│  THÈMES                                │
+│  ☑ ● Séries & télé                     │
+│  ☑ ● Cinéma                            │
+│  ☑ ● Musique                           │
+│  ☑ ● Sport                             │
+│  ☑ ● Jeux vidéo & tech                 │
+│  ☑ ● Politique & histoire              │
+│  Tout cocher · Tout décocher           │
+└────────────────────────────────────────┘
 ```
 
 Sur Windows, les cartes s'affichent sur deux colonnes au-dessus de 840 dp de large.
 
-Exemple calculé pour une naissance le 14/05/1991 et un jeune de 15 ans, le 2 novembre 2026. Les paires illustrent la mise en page ; leurs dates et leurs types seront vérifiés lors de la saisie de la base.
+Exemple calculé pour une naissance en mai 1991 et un jeune de 15 ans, le 2 novembre 2026. Les paires illustrent la mise en page ; leurs dates et leurs types seront vérifiés lors de la saisie de la base.
 
 ### Questions ouvertes
-1. Côté jeune, la fenêtre « de 5 ans avant sa naissance à aujourd'hui » convient-elle ?
-2. Faut-il un mode inverse (partir des événements de ta jeunesse et trouver ceux du jeune), ou « Mon équivalent » suffit-il pour ça ?
+1. **Âges à la volée** : pouvoir changer l'âge du « vieux » et celui du « jeune » directement dans cet écran et dans Mon équivalent (pour comparer entre amis), sans toucher aux réglages. À préciser : saisie par âges ou par mois et année, et retour aux réglages à la fermeture de l'application ou par un bouton.

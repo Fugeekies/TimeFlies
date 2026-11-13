@@ -21,7 +21,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 - **Aujourd'hui** (écran d'ouverture) : le coup de vieux du jour, c'est-à-dire les anniversaires d'événements du jour, chiffres ronds en premier (10, 15, 20, 25 ans…), avec l'âge qu'avait l'utilisateur. À défaut, l'anniversaire le plus proche des jours suivants.
 - **Équivalences** : à partir de l'âge de l'utilisateur et de celui d'un jeune (15 ans par défaut), les paires d'événements de **même type** décalées de l'écart d'âge (Friends ↔ Happy Days). Pas de phrase générée : les deux événements, leurs dates et l'âge de chacun.
 - **Mon équivalent** : un événement choisi et son équivalent pour l'autre génération, dans les deux sens.
-- **Réglages** : âge ou date de naissance de l'utilisateur, âge du jeune, gardés sur l'appareil.
+- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026), âge du jeune, région, style d'affichage (Éphéméride, VHS ou Polaroïd), gardés sur l'appareil.
 - **Widget Android** (mis à jour chaque jour) ; sur Windows, **icône de barre des tâches** et **notification** le matin.
 
 ## Données

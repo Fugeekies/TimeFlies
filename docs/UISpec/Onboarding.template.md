@@ -1,21 +1,23 @@
 ## 0. 👋 Premier lancement (`OnboardingScreen`)
 
-> Spécification de conception (13/11/2026), avant le code. Écran **proposé** : l'application a besoin d'une date de naissance pour calculer les âges, elle doit donc la demander au premier lancement. **À valider.**
+> Spécification de conception (13/11/2026), avant le code. Écran validé le 13/11/2026 : il demande le mois et l'année de naissance, et peut être passé.
 
 ### Description
-Écran unique affiché au premier lancement, avant Aujourd'hui. Il explique le principe en une phrase et demande la date de naissance de l'utilisateur et l'âge du jeune. Il ne revient plus ensuite : tout se modifie dans Réglages.
+Écran unique affiché au premier lancement, avant Aujourd'hui. Il explique le principe en une phrase et demande le **mois et l'année** de naissance de l'utilisateur et l'âge du jeune. Il ne revient plus ensuite : tout se modifie dans Réglages.
 
 ### Spécifications fonctionnelles
 
 * **Titre :** « Le jeu le plus triste du monde ».
 * **Texte d'introduction :** « Pour un jeune de 15 ans, Friends, c'est ce que Happy Days était pour toi. TimeFlies te le rappelle chaque jour. »
-* **Champ « Ta date de naissance »** : sélecteur de date (Material 3 `DatePicker`), date par défaut vide. Dates acceptées : du 1er janvier 1920 à aujourd'hui moins 5 ans.
-  * Lien secondaire « Je préfère donner mon année seulement » : remplace le sélecteur par une liste d'années. La date retenue est alors le **1er juillet** de cette année, milieu de l'année, pour que l'âge affiché ne se trompe au plus que d'un an (**À valider**).
+* **Champ « Ton mois et ton année de naissance »** : deux listes, mois (janvier à décembre) et année (de 1920 à l'année en cours moins 5), vides par défaut. **Ni jour ni date complète** (décision du 13/11/2026) : moins intrusif, et le jour ne change presque rien aux âges affichés.
 * **Champ « Âge du jeune »** : curseur de 5 à 60 ans, **15 ans** par défaut, valeur affichée à côté. Doit rester inférieur à l'âge de l'utilisateur d'au moins 5 ans ; sinon le message « Le jeune doit avoir au moins 5 ans de moins que toi. » s'affiche et le bouton est désactivé.
-* **Résumé en direct** sous les champs : « Tu as 35 ans, le jeune en a 15 : 20 ans d'écart. »
-* **Bouton « C'est parti »** (principal) : enregistre les réglages, marque le premier lancement comme terminé et ouvre Aujourd'hui. Désactivé tant que la date de naissance manque.
-* **Mention de confidentialité** en bas, en petit : « Ta date de naissance reste sur cet appareil. »
-* Sur Android, le retour système quitte l'application sans rien enregistrer.
+* **Résumé en direct** sous les champs, dès que le mois et l'année sont choisis : « Tu as 35 ans, le jeune en a 15 : 20 ans d'écart. »
+* **Bouton « C'est parti »** (principal) : enregistre les réglages, marque le premier lancement comme terminé et ouvre Aujourd'hui. Désactivé tant que le mois ou l'année manque.
+* **Bouton « Plus tard »** (secondaire, décision du 13/11/2026) : marque le premier lancement comme terminé sans date de naissance et ouvre Aujourd'hui. L'application fonctionne alors en mode réduit :
+  * Aujourd'hui et le widget affichent les anniversaires sans la ligne « Tu avais N ans » ;
+  * Équivalences et Mon équivalent affichent « Indique ton mois et ton année de naissance pour voir tes équivalences. » avec un bouton **« Ouvrir les réglages »**.
+* **Mention de confidentialité** en bas, en petit : « Ton mois et ton année de naissance restent sur cet appareil. »
+* Sur Android, le retour système quitte l'application sans rien enregistrer ; l'écran revient au lancement suivant.
 
 ### Wireframe ASCII (téléphone)
 ```text
@@ -29,9 +31,8 @@
 │  toi. TimeFlies te le rappelle chaque  │
 │  jour.                                 │
 │                                        │
-│  TA DATE DE NAISSANCE                  │
-│  [ 14/05/1991                     📅 ] │
-│  Je préfère donner mon année seulement │
+│  TON MOIS ET TON ANNÉE DE NAISSANCE    │
+│  [ Mai            ▼ ] [ 1991       ▼ ] │
 │                                        │
 │  ÂGE DU JEUNE                  15 ans  │
 │  ●━━━━━━━━○──────────────────────────  │
@@ -40,14 +41,11 @@
 │  20 ans d'écart.                       │
 │                                        │
 │  [          C'est parti           ]    │
+│               Plus tard                │
 │                                        │
-│  Ta date de naissance reste sur cet    │
-│  appareil.                             │
+│  Ton mois et ton année de naissance    │
+│  restent sur cet appareil.             │
 └────────────────────────────────────────┘
 ```
 
 Sur Windows, le même contenu est centré dans une colonne de 480 dp de large.
-
-### Questions ouvertes
-1. Faut-il pouvoir passer cet écran (bouton « Plus tard ») ? Sans date de naissance, l'écran Aujourd'hui pourrait afficher les anniversaires sans « Tu avais N ans » et les équivalences resteraient vides.
-2. Le 1er juillet pour « année seulement » convient-il ?

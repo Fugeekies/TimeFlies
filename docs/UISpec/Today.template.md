@@ -3,7 +3,7 @@
 > Spécification de conception (13/11/2026), avant le code. Les règles de calcul sont celles de [`EVENTS_DATA.md`](../EVENTS_DATA.md) ; les points marqués **À valider** ne sont pas tranchés.
 
 ### Description
-Écran d'ouverture : le **coup de vieux du jour**, présenté comme une feuille d'éphéméride. En dessous, les autres anniversaires du jour et ceux des 7 prochains jours.
+Écran d'ouverture : le **coup de vieux du jour**, présenté comme une feuille d'éphéméride (ou une cassette VHS, ou un Polaroïd, selon le style choisi dans Réglages). Les maquettes ci-dessous montrent le style Éphéméride. En dessous, les autres anniversaires du jour et ceux des 7 prochains jours.
 
 ### Spécifications fonctionnelles
 
@@ -12,10 +12,10 @@
 * Contenu, de haut en bas :
   * eyebrow : date du jour en toutes lettres, majuscules (« LUNDI 2 NOVEMBRE 2026 ») ;
   * **grand chiffre** : nombre d'années (`15`), en `primary`, police `Big Shoulders Display`, suivi de « ans » (« an » pour 1) ;
-  * « Il y a 15 ans » n'est pas écrit : le grand chiffre suffit ;
+  * « Il y a » n'est pas écrit : le grand chiffre suffit (décision du 13/11/2026) ;
   * **titre** de l'événement (« Intouchables ») ;
   * **nature et date** : « Sortie au cinéma · 2 novembre 2011 » (libellé du `kind`, voir `EVENTS_DATA.md`) ;
-  * **âge de l'utilisateur** : « Tu avais 20 ans. » ; si l'événement est antérieur à sa naissance : « C'était 3 ans avant ta naissance. » ; l'année de sa naissance : « C'était l'année de ta naissance. » ;
+  * **âge de l'utilisateur** : « Tu avais 20 ans. » ; si l'événement est antérieur à sa naissance : « C'était 3 ans avant ta naissance. » ; l'année de sa naissance : « C'était l'année de ta naissance. » ; **sans mois et année de naissance** (premier lancement passé), la ligne n'est pas affichée (décision du 13/11/2026) ;
   * puce **« Chiffre rond »** si le nombre d'années est un multiple de 5 ;
   * pastille de la famille (couleur, voir `UI_DESIGN_SPEC.md` § 3).
 * **Aucun anniversaire aujourd'hui** : la feuille affiche le premier anniversaire des 7 jours suivants, avec l'eyebrow « DANS 3 JOURS · JEUDI 5 NOVEMBRE » et « fêtera ses 25 ans » sous le titre au lieu de la nature seule.
@@ -30,7 +30,7 @@
 * 10 cartes au maximum, triées par jour puis dans l'ordre habituel.
 
 #### Interactions
-* Toucher une carte (ou la feuille) ouvre **Mon équivalent** sur cet événement, pour voir son équivalent dans l'autre génération.
+* Toucher une carte (ou la feuille) ouvre **Mon équivalent** sur cet événement, pour voir son équivalent dans l'autre génération (décision du 13/11/2026).
 * Glisser vers le bas (Android) ou `F5` (Windows) recalcule l'écran ; il se recalcule aussi seul quand le jour change pendant que l'application est ouverte.
 
 ### Wireframe ASCII (téléphone)
@@ -90,8 +90,4 @@
 ```
 Au-dessus de 840 dp de large, la feuille et les listes passent sur deux colonnes.
 
-Exemple calculé pour une naissance le 14/05/1991, le 2 novembre 2026.
-
-### Questions ouvertes
-1. Faut-il afficher « Il y a » au-dessus du grand chiffre pour les nouveaux utilisateurs, ou le chiffre seul est-il assez clair ?
-2. Toucher une carte doit-il ouvrir Mon équivalent (proposition) ou une fiche détaillée de l'événement ?
+Exemple calculé pour une naissance en mai 1991, le 2 novembre 2026.

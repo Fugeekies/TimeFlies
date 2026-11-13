@@ -10,7 +10,9 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 #### Contenu
 * Même événement que la feuille d'Aujourd'hui (même calcul `Anniversaries`) : nombre d'années en grand (`primary`), titre, année et nature, « Tu avais N ans ».
 * Aucun anniversaire aujourd'hui : le premier des 7 prochains jours, précédé de « Dans 3 jours ».
-* Réglages pas encore faits (premier lancement non terminé) : « Ouvre TimeFlies pour commencer. »
+* Premier lancement pas encore fait : « Ouvre TimeFlies pour commencer. »
+* Sans mois et année de naissance (premier lancement passé) : l'anniversaire s'affiche sans « Tu avais N ans ».
+* Le widget suit le style d'affichage choisi dans Réglages (Éphéméride, VHS ou Polaroïd).
 
 #### Tailles (proposition, **À valider**)
 | Taille | Contenu |
@@ -42,7 +44,7 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 └──────────────────────────────────────┘    └───────────────────┘
 ```
 
-Exemple pour une naissance le 14/05/1991, le 2 novembre 2026.
+Exemple pour une naissance en mai 1991, le 2 novembre 2026.
 
 ### Questions ouvertes
 1. Les trois tailles proposées conviennent-elles ?

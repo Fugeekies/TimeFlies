@@ -1,6 +1,6 @@
 # Spécification visuelle & design UI - TimeFlies
 
-> Document de conception écrit avant le code (13/11/2026). L'identité visuelle entière est une **proposition à valider** ; les règles d'ergonomie (navigation, accessibilité, langues) le sont aussi tant qu'elles ne sont pas cochées dans la feuille de route.
+> Document de conception écrit avant le code (13/11/2026). Les trois styles d'affichage sont décidés (13/11/2026) ; leurs détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
 
 Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de **TimeFlies**, sur Android et sur Windows. Les maquettes et les règles de chaque écran sont dans `UISpec/`.
 
@@ -8,12 +8,27 @@ Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de
 
 ## 🎨 Identité & charte graphique
 
-### 1. Thème : l'éphéméride
+### 1. Trois styles d'affichage (décision du 13/11/2026)
+L'utilisateur choisit le style dans **Réglages › Affichage** ; il s'applique à toute l'application et au widget. Chaque style a son propre jeu de jetons (couleurs, polices, ornements) ; la mise en page des écrans, elle, est la même dans les trois. Le style **Éphéméride** est celui par défaut, et celui que montrent les maquettes de `UISpec/`.
+
+#### Éphéméride (par défaut)
 Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on arrache une feuille chaque matin : un grand chiffre rouge, le jour en dessous, du papier. L'écran Aujourd'hui et le widget reprennent cette feuille ; le reste de l'application reste sobre pour la laisser au premier plan.
 
 - Le **grand chiffre** n'est pas le jour du mois mais le **nombre d'années** écoulées (« 15 ans »), en rouge éphéméride.
 - Haut de la feuille : deux petits anneaux de reliure et une ligne de perforation (pointillés) ; c'est le seul ornement de l'application.
 - Le reste (listes, réglages) utilise des cartes simples, sans perforation.
+- Palette et polices : § 2 et § 5 ci-dessous.
+
+#### VHS (**À valider** : palette et polices à dessiner)
+La feuille du jour devient une **jaquette de cassette VHS** : étiquette blanche collée de travers, nombre d'années écrit comme un titre de film enregistré, petit « ▶ REC » et compteur de bande `00:15:00` en guise d'ornement. Ambiance sombre par défaut, couleurs saturées (magenta, cyan, jaune), léger effet de lignes de balayage sur la feuille seulement.
+
+#### Polaroïd (**À valider** : palette et polices à dessiner)
+La feuille du jour devient un **Polaroïd** : cadre blanc avec bande épaisse en bas, où le nombre d'années et le titre sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé. Ambiance claire et chaude, ruban adhésif en coin comme ornement.
+
+#### Règles communes aux trois styles
+- Contraste AA dans les trois, en clair et en sombre (VHS peut ne proposer que le sombre).
+- Les couleurs des familles (§ 3) et la puce « Chiffre rond » (§ 4) gardent leur sens dans les trois styles.
+- Aucune image photographique d'une œuvre réelle (affiche, pochette) : les styles n'utilisent que des formes dessinées et du texte.
 
 ### 2. Palette (clair et sombre)
 L'application suit le thème du système (clair ou sombre). Toutes les couleurs sont des jetons du thème Compose (`ColorScheme` Material 3 personnalisé), jamais des couleurs écrites en dur dans un écran.
@@ -96,5 +111,5 @@ Une seule animation marquante : à l'ouverture de l'écran Aujourd'hui, la feuil
 
 ## Questions ouvertes
 
-1. L'identité « éphéméride » convient-elle, ou préfères-tu une autre ambiance (VHS, album photo, télé des années 90…) ?
+1. Palettes et polices des styles VHS et Polaroïd, à dessiner avant le jalon « Écrans communs ».
 2. Le nom affiché sous l'icône reste à choisir (jalon « Nom et icône définitifs ») : les maquettes affichent « TimeFlies » en attendant.

@@ -31,7 +31,8 @@ Valider dès le départ que GitHub produit une APK et un `.msi` installables, av
 - [ ] Tests unitaires sur des dates fixes (pas sur la date du jour).
 
 ### Jalon — Écrans communs
-- [ ] Thème, polices embarquées et navigation adaptative (`docs/UI_DESIGN_SPEC.md`).
+- [ ] Style Éphéméride, polices embarquées et navigation adaptative (`docs/UI_DESIGN_SPEC.md`).
+- [ ] Styles VHS et Polaroïd : dessiner leurs palettes et polices, puis les ajouter au choix de Réglages.
 - [ ] Premier lancement ([`Onboarding.template.md`](UISpec/Onboarding.template.md)).
 - [ ] Aujourd'hui ([`Today.template.md`](UISpec/Today.template.md)).
 - [ ] Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)).
