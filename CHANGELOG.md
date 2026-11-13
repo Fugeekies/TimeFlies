@@ -12,3 +12,4 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 ### Added
 
 - Création du dépôt : licence GPL v3, README, règles du projet (`AGENTS.md`).
+- Spécifications initiales : architecture, base d'événements, identité visuelle, feuille de route et maquettes des écrans (`docs/`).

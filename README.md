@@ -13,7 +13,7 @@ Aucun compte, aucune connexion : les événements sont intégrés à l'applicati
 
 ## État
 
-Projet en démarrage : aucune version n'est encore publiée.
+Projet en démarrage : aucune version n'est encore publiée. Les spécifications sont dans [`docs/`](docs/) et la suite dans la [feuille de route](docs/ROADMAP.md).
 
 ## Installation (à venir)
 
