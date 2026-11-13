@@ -3,7 +3,7 @@
 > Spécification de conception (13/11/2026), avant le code. Les règles de calcul sont celles de [`EVENTS_DATA.md`](../EVENTS_DATA.md) ; les points marqués **À valider** ne sont pas tranchés.
 
 ### Description
-Écran d'ouverture : le **coup de vieux du jour**, présenté comme une feuille d'éphéméride (ou une cassette VHS, ou un Polaroïd, selon le style choisi dans Réglages). Les maquettes ci-dessous montrent le style Éphéméride. En dessous, les autres anniversaires du jour et ceux des 7 prochains jours.
+Écran d'ouverture : le **coup de vieux du jour**, présenté comme une feuille d'éphéméride (style de la V1 ; un Polaroïd viendra dans un jalon suivant, voir [`maquettes/`](../maquettes/README.md)). En dessous, les autres anniversaires du jour et ceux des 7 prochains jours.
 
 ### Spécifications fonctionnelles
 

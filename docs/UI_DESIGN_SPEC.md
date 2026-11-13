@@ -8,8 +8,16 @@ Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de
 
 ## 🎨 Identité & charte graphique
 
-### 1. Trois styles d'affichage (décision du 13/11/2026)
-L'utilisateur choisit le style dans **Réglages › Affichage** ; il s'applique à toute l'application et au widget. Chaque style a son propre jeu de jetons (couleurs, polices, ornements) ; la mise en page des écrans, elle, est la même dans les trois. Le style **Éphéméride** est celui par défaut, et celui que montrent les maquettes de `UISpec/`.
+### 1. Styles d'affichage (décisions du 13/11/2026)
+Trois styles sont prévus. Chaque style a son propre jeu de jetons (couleurs, polices, ornements) ; la mise en page des écrans, elle, est la même dans tous. Maquettes : [`maquettes/`](maquettes/README.md).
+
+| Style | Version | Pourquoi |
+|---|---|---|
+| **Éphéméride** | **V1**, seul style livré | Le plus clair pour les menus et les listes. |
+| **Polaroïd** | Jalon « Style Polaroïd », après la V1 | Le plus beau pour la feuille du jour. |
+| **VHS** | Idée, peut-être plus tard | — |
+
+Tant qu'il n'y a qu'un style, Réglages ne propose pas de choix. À partir du Polaroïd, l'utilisateur choisit dans **Réglages › Affichage**, et le style s'applique à toute l'application et au widget. Le code prévoit dès la V1 des jetons de thème séparés par style, pour que l'ajout du Polaroïd ne touche pas aux écrans.
 
 #### Éphéméride (par défaut)
 Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on arrache une feuille chaque matin : un grand chiffre rouge, le jour en dessous, du papier. L'écran Aujourd'hui et le widget reprennent cette feuille ; le reste de l'application reste sobre pour la laisser au premier plan.
@@ -19,11 +27,13 @@ Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on
 - Le reste (listes, réglages) utilise des cartes simples, sans perforation.
 - Palette et polices : § 2 et § 5 ci-dessous.
 
-#### VHS (**À valider** : palette et polices à dessiner)
+#### VHS (idée, peut-être plus tard)
 La feuille du jour devient une **jaquette de cassette VHS** : étiquette blanche collée de travers, nombre d'années écrit comme un titre de film enregistré, petit « ▶ REC » et compteur de bande `00:15:00` en guise d'ornement. Ambiance sombre par défaut, couleurs saturées (magenta, cyan, jaune), léger effet de lignes de balayage sur la feuille seulement.
 
-#### Polaroïd (**À valider** : palette et polices à dessiner)
-La feuille du jour devient un **Polaroïd** : cadre blanc avec bande épaisse en bas, où le nombre d'années et le titre sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé. Ambiance claire et chaude, ruban adhésif en coin comme ornement.
+#### Polaroïd (jalon après la V1, maquette validée le 13/11/2026)
+La feuille du jour devient un **Polaroïd** : cadre blanc avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
+
+Jetons de la maquette : fond `#E8DFD2`, cadre `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C` ; police manuscrite `Caveat` (titres, nombres, légende) avec `Atkinson Hyperlegible` pour les listes. À reprendre au jalon : version sombre, contraste de la légende manuscrite.
 
 #### Règles communes aux trois styles
 - Contraste AA dans les trois, en clair et en sombre (VHS peut ne proposer que le sombre).
@@ -111,5 +121,4 @@ Une seule animation marquante : à l'ouverture de l'écran Aujourd'hui, la feuil
 
 ## Questions ouvertes
 
-1. Palettes et polices des styles VHS et Polaroïd, à dessiner avant le jalon « Écrans communs ».
-2. Le nom affiché sous l'icône reste à choisir (jalon « Nom et icône définitifs ») : les maquettes affichent « TimeFlies » en attendant.
+1. Le nom affiché sous l'icône reste à choisir (jalon « Nom et icône définitifs ») : les maquettes affichent « TimeFlies » en attendant.

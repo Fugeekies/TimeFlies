@@ -12,6 +12,7 @@ Ce fichier est la **source unique** des instructions pour les agents IA : GitHub
 | `docs/EVENTS_DATA.md` | Format de la base d'événements, natures, types, règles d'appariement et du coup de vieux du jour. |
 | `docs/UI_DESIGN_SPEC.md` | Identité visuelle, palette, polices, navigation, langues, accessibilité. |
 | `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `Equivalences`, `MyEquivalent`, `Settings`, `AndroidWidget`, `WindowsTray`. |
+| `docs/maquettes/` | Maquettes visuelles (HTML et PNG) des écrans Android et Windows. En cas d'écart, les specs `UISpec/` font foi. |
 | `docs/ROADMAP.md` | Jalons à faire et terminés. |
 
 Les points marqués **À valider** et les « Questions ouvertes » de ces documents ne sont pas tranchés : poser la question avant de coder un comportement qui en dépend. Une décision prise est datée dans le document (« décision du JJ/MM/AAAA »).
@@ -21,7 +22,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 - **Aujourd'hui** (écran d'ouverture) : le coup de vieux du jour, c'est-à-dire les anniversaires d'événements du jour, chiffres ronds en premier (10, 15, 20, 25 ans…), avec l'âge qu'avait l'utilisateur. À défaut, l'anniversaire le plus proche des jours suivants.
 - **Équivalences** : à partir de l'âge de l'utilisateur et de celui d'un jeune (15 ans par défaut), les paires d'événements de **même type** décalées de l'écart d'âge (Friends ↔ Happy Days). Pas de phrase générée : les deux événements, leurs dates et l'âge de chacun.
 - **Mon équivalent** : un événement choisi et son équivalent pour l'autre génération, dans les deux sens.
-- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026), âge du jeune, région, style d'affichage (Éphéméride, VHS ou Polaroïd), gardés sur l'appareil.
+- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026), âge du jeune, région, gardés sur l'appareil. Un seul style d'affichage en V1, Éphéméride ; le Polaroïd vient dans un jalon suivant, le VHS peut-être plus tard (décision du 13/11/2026, maquettes dans `docs/maquettes/`).
 - **Widget Android** (mis à jour chaque jour) ; sur Windows, **icône de barre des tâches** et **notification** le matin.
 
 ## Données
