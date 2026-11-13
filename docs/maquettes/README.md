@@ -9,13 +9,15 @@ Maquettes visuelles de TimeFlies, dessinées le 13/11/2026 à partir des spécif
 
 ## Styles d'affichage
 
-| Éphéméride (V1) | Polaroïd (jalon futur) | VHS (idée) |
+| Polaroïd (V1) | Éphéméride (jalon suivant) | VHS (idée) |
 |---|---|---|
-| ![Aujourd'hui, Éphéméride](android/Today.png) | ![Aujourd'hui, Polaroïd](android/TodayPolaroid.png) | ![Aujourd'hui, VHS](android/TodayVhs.png) |
+| ![Aujourd'hui, Polaroïd](android/TodayPolaroid.png) | ![Aujourd'hui, Éphéméride](android/Today.png) | ![Aujourd'hui, VHS](android/TodayVhs.png) |
 
-Décision du 13/11/2026 : la V1 n'a que le style **Éphéméride**, le plus clair pour les menus. Le **Polaroïd** viendra dans un jalon suivant, le **VHS** peut-être plus tard.
+Décision du 13/11/2026 : la V1 n'a que le style **Polaroïd**, pour ses âges écrits à la main. L'**Éphéméride** vient juste après, le **VHS** peut-être plus tard.
 
-## Android (style Éphéméride)
+Les écrans ci-dessous sont dessinés en Éphéméride. Leur **mise en page** vaut pour la V1 ; en V1, ils prennent les couleurs du Polaroïd et ses âges manuscrits sur le bandeau de gauche des cartes (voir [`UI_DESIGN_SPEC.md`](../UI_DESIGN_SPEC.md) § 1). Ils ne seront pas redessinés avant le code.
+
+## Android (mise en page, dessinée en Éphéméride)
 
 | Premier lancement | Équivalences | Mon équivalent | Réglages | Widget |
 |---|---|---|---|---|
@@ -23,7 +25,7 @@ Décision du 13/11/2026 : la V1 n'a que le style **Éphéméride**, le plus clai
 
 La maquette Réglages montre le choix des trois styles : en V1, ce choix n'apparaît pas (voir [`Settings.template.md`](../UISpec/Settings.template.md)).
 
-## Windows (style Éphéméride)
+## Windows (mise en page, dessinée en Éphéméride)
 
 | Aujourd'hui | Équivalences |
 |---|---|

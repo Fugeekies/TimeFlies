@@ -19,9 +19,9 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, âg
 * **Écart** : différence entre les deux dates de naissance, au jour près. Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
 
 #### Panneau « Affichage » (eyebrow « AFFICHAGE »)
-* **Style** : **absent en V1**, qui n'a que l'Éphéméride (décision du 13/11/2026). Il apparaît avec le jalon « Style Polaroïd » : un choix par style livré, avec un aperçu miniature de la feuille du jour (voir `UI_DESIGN_SPEC.md` § 1). La maquette ci-dessous montre ce futur choix :
-  * **Éphéméride** (par défaut) ;
-  * **Polaroïd** ;
+* **Style** : **absent en V1**, qui n'a que le Polaroïd (décision du 13/11/2026). Il apparaît avec le jalon « Style Éphéméride » : un choix par style livré, avec un aperçu miniature de la feuille du jour (voir `UI_DESIGN_SPEC.md` § 1). La maquette ci-dessous montre ce futur choix :
+  * **Polaroïd** (par défaut) ;
+  * **Éphéméride** ;
   * **VHS**, si ce style est fait un jour.
   Le style s'applique aussitôt à toute l'application et au widget.
 * **Région** : liste des pays, chacun écrit dans la langue de l'interface. Par défaut, la région du système (décision du 13/11/2026). Elle choisit les dates régionales des événements (voir `EVENTS_DATA.md`, « Dates par région »).

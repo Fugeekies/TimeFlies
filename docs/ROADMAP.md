@@ -8,7 +8,7 @@ Les jalons à faire sont en haut, par ordre de priorité. Les jalons terminés s
 Décrire l'application avant de coder : architecture, base d'événements, identité visuelle et maquette de chaque écran.
 - [x] `docs/ARCHITECTURE.md`, `docs/EVENTS_DATA.md`, `docs/UI_DESIGN_SPEC.md` et les spécifications d'écran `docs/UISpec/`.
 - [x] Maquettes Android et Windows (`docs/maquettes/`, 13/11/2026).
-- [x] Trancher les points marqués **À valider** et les questions ouvertes (13/11/2026). Maquettes Android et Windows dans `docs/maquettes/` ; la V1 n'a que le style Éphéméride.
+- [x] Trancher les points marqués **À valider** et les questions ouvertes (13/11/2026). Maquettes Android et Windows dans `docs/maquettes/` ; la V1 n'a que le style Polaroïd (décision du 13/11/2026).
 
 ### Jalon — Chaîne de compilation
 Valider dès le départ que GitHub produit une APK et un `.msi` installables, avant d'écrire les fonctionnalités.
@@ -32,7 +32,8 @@ Valider dès le départ que GitHub produit une APK et un `.msi` installables, av
 - [ ] Tests unitaires sur des dates fixes (pas sur la date du jour).
 
 ### Jalon — Écrans communs
-- [ ] Style Éphéméride (seul style de la V1), polices embarquées et navigation adaptative (`docs/UI_DESIGN_SPEC.md`, maquettes dans [`maquettes/`](maquettes/README.md)). Jetons de thème séparés par style, pour accueillir le Polaroïd sans toucher aux écrans.
+- [ ] Finir les jetons du style Polaroïd : version sombre, contraste et taille minimale de l'écriture manuscrite (`docs/UI_DESIGN_SPEC.md` § 1 et 2).
+- [ ] Style Polaroïd (seul style de la V1), polices embarquées et navigation adaptative (`docs/UI_DESIGN_SPEC.md`, maquettes dans [`maquettes/`](maquettes/README.md)). Jetons de thème séparés par style, pour accueillir l'Éphéméride sans toucher aux écrans.
 - [ ] Premier lancement ([`Onboarding.template.md`](UISpec/Onboarding.template.md)).
 - [ ] Aujourd'hui ([`Today.template.md`](UISpec/Today.template.md)).
 - [ ] Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)).
@@ -45,10 +46,10 @@ Valider dès le départ que GitHub produit une APK et un `.msi` installables, av
 ### Jalon — Barre des tâches et notification Windows
 - [ ] Icône de barre des tâches, notification du matin et lancement au démarrage de Windows ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)).
 
-### Jalon — Style Polaroïd (après la V1)
-La feuille du jour en photo Polaroïd, maquette validée le 13/11/2026 ([`maquettes/`](maquettes/README.md)).
-- [ ] Finaliser les jetons du style (version sombre, contraste de la légende manuscrite), voir `docs/UI_DESIGN_SPEC.md` § 1.
-- [ ] Ajouter le choix du style dans Réglages et l'appliquer au widget.
+### Jalon — Style Éphéméride (après la V1)
+La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [`maquettes/`](maquettes/README.md).
+- [ ] Jetons du style (palette claire et sombre déjà définies, `docs/UI_DESIGN_SPEC.md` § 2).
+- [ ] Ajouter le choix du style dans Réglages (Polaroïd par défaut) et l'appliquer au widget.
 
 ### Jalon — Nom et icône définitifs
 - [ ] Choisir le nom affiché sous l'icône et dans les menus (le dépôt reste `TimeFlies`).

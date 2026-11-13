@@ -3,7 +3,7 @@
 > Spécification de conception (13/11/2026), avant le code. Les règles de calcul sont celles de [`EVENTS_DATA.md`](../EVENTS_DATA.md) ; les points marqués **À valider** ne sont pas tranchés.
 
 ### Description
-Écran d'ouverture : le **coup de vieux du jour**, présenté comme une feuille d'éphéméride (style de la V1 ; un Polaroïd viendra dans un jalon suivant, voir [`maquettes/`](../maquettes/README.md)). En dessous, les autres anniversaires du jour et ceux des 7 prochains jours.
+Écran d'ouverture : le **coup de vieux du jour**, présenté comme une **photo Polaroïd** en V1 (décision du 13/11/2026), comme une feuille d'éphéméride dans le jalon suivant ; voir [`maquettes/`](../maquettes/README.md). Le contenu ci-dessous est le même dans les deux styles ; seuls la forme de la feuille, les couleurs et les polices changent (en Polaroïd : âges, titre et légende écrits à la main). Les wireframes montrent l'Éphéméride. En dessous, les autres anniversaires du jour et ceux des 7 prochains jours.
 
 ### Spécifications fonctionnelles
 
@@ -11,7 +11,7 @@
 * Événement choisi : le premier anniversaire du jour selon l'ordre de `EVENTS_DATA.md` (multiples de 10, puis de 5, puis les autres ; puis `importance` ; puis le plus récent).
 * Contenu, de haut en bas :
   * eyebrow : date du jour en toutes lettres, majuscules (« LUNDI 2 NOVEMBRE 2026 ») ;
-  * **grand chiffre** : nombre d'années (`15`), en `primary`, police `Big Shoulders Display`, suivi de « ans » (« an » pour 1) ;
+  * **grand chiffre** : nombre d'années (`15`), suivi de « ans » (« an » pour 1) ; en Polaroïd, écrit à la main en blanc sur l'aplat de la photo ; en Éphéméride, en `primary`, police `Big Shoulders Display` ;
   * « Il y a » n'est pas écrit : le grand chiffre suffit (décision du 13/11/2026) ;
   * **titre** de l'événement (« Intouchables ») ;
   * **nature et date** : « Sortie au cinéma · 2 novembre 2011 » (libellé du `kind`, voir `EVENTS_DATA.md`) ;
