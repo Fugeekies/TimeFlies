@@ -13,7 +13,9 @@ Décrire l'application avant de coder : architecture, base d'événements, ident
 ### Jalon — Chaîne de compilation
 Valider dès le départ que GitHub produit une APK et un `.msi` installables, avant d'écrire les fonctionnalités.
 - [ ] Projet Kotlin Multiplatform minimal (une fenêtre « TimeFlies » sur Android et Windows), wrapper Gradle commité.
-- [ ] Choisir le découpage des modules (`core` + `ui`, ou un seul module partagé), voir `docs/ARCHITECTURE.md`.
+- [x] Choisir l'architecture : Clean Architecture, modules `domain`, `data`, `ui`, `androidApp`, `desktopApp` (`docs/ARCHITECTURE.md`, 14/11/2026).
+- [ ] Squelette des cinq modules et `gradle/libs.versions.toml` (versions stables figées) ; confirmer ou réduire le nombre de modules.
+- [ ] Vérifier Compose Hot Reload sur la cible PC et la présence de WiX sur l'exécuteur Windows de GitHub.
 - [ ] `ci.yml` : compilation et tests à chaque PR prête (pas sur les brouillons).
 - [ ] Clé de signature Android générée et stockée dans les secrets du dépôt ; une sauvegarde gardée hors du dépôt.
 - [ ] `release.yml` : sur un tag `vX.Y.Z`, compile l'APK signée et le `.msi`, puis publie la release avec les deux fichiers.
@@ -22,10 +24,11 @@ Valider dès le départ que GitHub produit une APK et un `.msi` installables, av
 
 ### Jalon — Base d'événements v1
 - [x] Trancher le format, les natures et le principe des types larges (`docs/EVENTS_DATA.md`, 13/11/2026).
-- [ ] Chargement et validation de `events.json` dans `core`, avec les tests de validation et le rapport de couverture.
+- [ ] `JsonEventRepository` dans `data` : chargement des fichiers par famille, validation, index en mémoire, tests de validation et rapport de couverture.
 - [ ] Saisie d'environ 400 événements vérifiés, chacun avec sa source, par lots d'une famille à la fois (une PR par lot pour faciliter la relecture des dates).
 
-### Jalon — Moteur de calcul
+### Jalon — Moteur de calcul (`domain`)
+- [ ] Entités, ports (`EventRepository`, `SettingsRepository`, `Clock`) et cas d'usage (`GetDailyShock`, `GetEquivalences`, `FindEquivalent`, `UpdateSettings`).
 - [ ] `Ages` : âge en années révolues à une date, avant/après une naissance.
 - [ ] `Anniversaries` : coup de vieux du jour, ordre des chiffres ronds, repli sur les 7 jours suivants, cas du 29 février.
 - [ ] `Equivalences` : appariement par type, écart d'âge et tolérance ; « Mon équivalent » dans les deux sens.
@@ -38,7 +41,8 @@ Valider dès le départ que GitHub produit une APK et un `.msi` installables, av
 - [ ] Aujourd'hui ([`Today.template.md`](UISpec/Today.template.md)).
 - [ ] Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)).
 - [ ] Mon équivalent ([`MyEquivalent.template.md`](UISpec/MyEquivalent.template.md)).
-- [ ] Réglages ([`Settings.template.md`](UISpec/Settings.template.md)).
+- [ ] Réglages ([`Settings.template.md`](UISpec/Settings.template.md)), stockés par `DataStoreSettingsRepository`.
+- [ ] Panneau de débogage, versions de débogage seulement ([`DEVELOPMENT.md`](DEVELOPMENT.md)).
 
 ### Jalon — Widget Android
 - [ ] Widget du coup de vieux du jour ([`AndroidWidget.template.md`](UISpec/AndroidWidget.template.md)), mis à jour juste après minuit.

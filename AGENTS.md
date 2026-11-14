@@ -2,13 +2,16 @@
 
 Application **Android et Windows** qui donne des « coups de vieux », inspirée de l'épisode *Bloqués #108 - On est les vieux des jeunes*. Kotlin et Compose Multiplatform : un seul code partagé, avec des parties propres à chaque plateforme (widget Android, icône de barre des tâches et notification Windows). La documentation est en **français**, le code et les commentaires en **anglais**. L'interface est en français d'abord, prévue pour être traduite.
 
+**Architecture (décision du 14/11/2026)** : Clean Architecture. `domain` (entités, ports, cas d'usage, règles en fonctions pures) ne dépend de rien d'autre que `kotlinx-datetime` ; `data` implémente les ports (JSON, DataStore, horloge) ; `ui`, le widget Android et l'icône Windows n'appellent que des cas d'usage ; `androidApp` et `desktopApp` assemblent le tout (`AppGraph`, sans framework d'injection). La date du jour est toujours injectée (`Clock`). Événements en fichiers JSON chargés en mémoire, réévaluation à 5 000 événements.
+
 Ce fichier est la **source unique** des instructions pour les agents IA : GitHub Copilot le lit directement, Claude Code via l'import `@AGENTS.md` de `CLAUDE.md`.
 
 ## Documentation
 
 | Document | Contenu |
 |---|---|
-| `docs/ARCHITECTURE.md` | Modules, flux de données, stockage des réglages, distribution. |
+| `docs/ARCHITECTURE.md` | Clean Architecture (`domain`, `data`, `ui`, `androidApp`, `desktopApp`), stack, base d'événements, réglages, langues, distribution. |
+| `docs/DEVELOPMENT.md` | Outils, commandes, débogage (version PC, tests, Android, panneau de débogage, logs). |
 | `docs/EVENTS_DATA.md` | Format de la base d'événements, natures, types, règles d'appariement et du coup de vieux du jour. |
 | `docs/UI_DESIGN_SPEC.md` | Identité visuelle, palette, polices, navigation, langues, accessibilité. |
 | `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `Equivalences`, `MyEquivalent`, `Settings`, `AndroidWidget`, `WindowsTray`. |
