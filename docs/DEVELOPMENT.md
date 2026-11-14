@@ -33,6 +33,21 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
 - Écrans et règles étant partagés, la plupart des bugs se reproduisent et se corrigent sur PC.
 - **Compose Hot Reload** (JetBrains, version 1.2.0) pour voir un écran modifié sans relancer, sur la cible PC : `./gradlew :desktopApp:hotRun --auto`, ou le bouton dédié de l'IDE. Il demande le **JetBrains Runtime 21** (un JDK modifié par JetBrains), fourni avec Android Studio et IntelliJ : sans lui, la tâche échoue avec « Failed to find suitable JetBrains Runtime 21 installation ».
 
+#### Avec VS Code
+- Extension **Kotlin by JetBrains** (`JetBrains.kotlin-server`, officielle, en alpha) : édition Kotlin à jour et débogueur `intellij_jvm`. Le support complet de Kotlin Multiplatform n'y est pas encore : on lance donc l'app avec Gradle, puis on attache le débogueur. L'ancienne extension `fwcd.kotlin` n'est plus maintenue et ne gère pas Kotlin 2.
+- `./gradlew :desktopApp:run --debug-jvm` démarre l'app et attend un débogueur sur le port 5005 (« Listening for transport dt_socket at address: 5005 »).
+- `.vscode/` n'est pas commité (chemin du JDK propre à chaque PC). Configuration type :
+
+  ```jsonc
+  // .vscode/launch.json
+  { "name": "Déboguer TimeFlies PC", "type": "intellij_jvm", "request": "attach",
+    "hostName": "localhost", "port": 5005, "timeout": 30000,
+    "preLaunchTask": "TimeFlies PC : lancer en attente du débogueur" }
+  ```
+
+  avec, dans `.vscode/tasks.json`, une tâche de fond `./gradlew :desktopApp:run --debug-jvm` (`isBackground`, fin détectée sur « Listening for transport ») et `JAVA_HOME` dans `options.env`.
+- Le débogage Android avec points d'arrêt et Compose Hot Reload passent par Android Studio.
+
 ### 2. Les règles métier : les tests
 - `domain` est en Kotlin pur et la date du jour est injectée (`Clock`) : un bug de calcul (âge, chiffre rond, 29 février, appariement) se reproduit dans un **test unitaire sur une date fixe** et se débogue avec des points d'arrêt dans le test.
 - Les tests tournent sur la JVM en quelques secondes.
