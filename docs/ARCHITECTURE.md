@@ -45,9 +45,9 @@ Points de conception :
 - **Les cas d'usage restent fins** : même quand l'un ne fait que relayer un appel, il est gardé, pour que `ui` ne touche jamais `data`.
 - **Pas de framework d'injection** (ni Koin ni Hilt) : un `AppGraph` écrit à la main par plateforme suffit pour une dizaine de classes.
 - **Différences entre plateformes par injection, pas par `expect/actual`** : le chemin du fichier de réglages et la lecture des ressources sont passés aux constructeurs de `data` par l'application. `data` reçoit une fonction `suspend (chemin) -> ByteArray` pour lire les fichiers d'événements, ce qui le garde indépendant de Compose.
-- Le repli éventuel vers moins de modules se décide au jalon « Chaîne de compilation », sans changer les couches (paquets au lieu de modules).
+- Le repli éventuel vers moins de modules se décide au jalon 1 « Création de la solution », sans changer les couches (paquets au lieu de modules).
 
-## Stack (proposition du 14/11/2026, versions figées au jalon « Chaîne de compilation »)
+## Stack (proposition du 14/11/2026, versions figées au jalon 1 « Création de la solution »)
 
 Les versions sont celles de la dernière stable au moment du jalon, figées dans `gradle/libs.versions.toml`.
 

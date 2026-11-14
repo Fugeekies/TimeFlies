@@ -36,7 +36,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 
 ## Distribution
 
-- GitHub Actions compile l'**APK** Android et l'**installeur Windows** (`.msi`) et les publie dans les Releases.
+- Pendant le développement, tout se compile et se teste en local, en débogage. **À la fin** (jalon 13, décision du 14/11/2026), GitHub Actions compilera l'**APK** Android et l'**installeur Windows** (`.msi`) et les publiera dans les Releases.
 - L'APK est signée avec une clé stable, gardée dans les secrets du dépôt, jamais dans le code.
 
 ## Règles Git & PR
