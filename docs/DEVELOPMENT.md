@@ -4,7 +4,11 @@
 
 ## Outils
 
-- **JDK 17 ou plus** (le projet compile avec un JDK 21) : pointer `JAVA_HOME` dessus, ou laisser l'IDE fournir le sien.
+- **JDK 21** : les modules demandent une toolchain Java 21 (`jvmToolchain(21)`). Gradle cherche ce JDK aux emplacements habituels ; s'il est installé ailleurs, le déclarer dans le `gradle.properties` **de l'utilisateur** (`%USERPROFILE%\.gradle\gradle.properties`, jamais dans le dépôt), sinon un éditeur qui lance Gradle avec son propre Java (extension Kotlin de VS Code, IDE) échoue avec « Cannot find a Java installation… languageVersion=21 » :
+
+  ```properties
+  org.gradle.java.installations.paths=C:/chemin/vers/jdk-21
+  ```
 - **SDK Android** avec la plateforme **37** (`platforms;android-37.0`), exigée par Compose Multiplatform 1.12. Son chemin va dans `local.properties`, à la racine, jamais commité :
 
   ```properties
