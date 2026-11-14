@@ -1,0 +1,914 @@
+[
+  {
+    "id": "film-blanche-neige-et-les-sept-nains-1938",
+    "date": "1938-05-06",
+    "title": {
+      "fr": "Blanche-Neige et les Sept Nains"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Blanche-Neige_et_les_Sept_Nains",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q134430 : pas de date française."
+  },
+  {
+    "id": "film-le-corniaud-1965",
+    "date": "1965-03-24",
+    "title": {
+      "fr": "Le Corniaud"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Corniaud",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q406936 : même date."
+  },
+  {
+    "id": "film-la-grande-vadrouille-1966",
+    "date": "1966-12-08",
+    "title": {
+      "fr": "La Grande Vadrouille"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Grande_Vadrouille",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q487789 donne une autre date française : 1966-12-07."
+  },
+  {
+    "id": "film-le-livre-de-la-jungle-1968",
+    "date": "1968-12-04",
+    "title": {
+      "fr": "Le Livre de la jungle"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Livre_de_la_jungle_(film,_1967)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q199839 donne une autre date française : 1968-12-11, 1979-11-28, 1988-03-16, 1993-03-31."
+  },
+  {
+    "id": "film-les-dents-de-la-mer-1976",
+    "date": "1976-01-28",
+    "title": {
+      "fr": "Les Dents de la mer"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Dents_de_la_mer",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q189505 : pas de date française."
+  },
+  {
+    "id": "film-la-guerre-des-etoiles-1977",
+    "date": "1977-10-19",
+    "title": {
+      "fr": "La Guerre des étoiles"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_IV_:_Un_nouvel_espoir",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q17738 : même date."
+  },
+  {
+    "id": "film-la-cage-aux-folles-1978",
+    "date": "1978-10-25",
+    "title": {
+      "fr": "La Cage aux folles"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Cage_aux_folles_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q778696 : pas de date française."
+  },
+  {
+    "id": "film-les-bronzes-1978",
+    "date": "1978-11-22",
+    "title": {
+      "fr": "Les Bronzés"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Bronz%C3%A9s",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q652094 : même date."
+  },
+  {
+    "id": "film-les-bronzes-font-du-ski-1979",
+    "date": "1979-11-21",
+    "title": {
+      "fr": "Les Bronzés font du ski"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Bronz%C3%A9s_font_du_ski",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3011267 : pas de date française."
+  },
+  {
+    "id": "film-l-empire-contre-attaque-1980",
+    "date": "1980-08-20",
+    "title": {
+      "fr": "L'Empire contre-attaque"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_V_:_L'Empire_contre-attaque",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q181795 : même date."
+  },
+  {
+    "id": "film-les-aventuriers-de-l-arche-perdue-1981",
+    "date": "1981-09-16",
+    "title": {
+      "fr": "Les Aventuriers de l'arche perdue"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Aventuriers_de_l'arche_perdue",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q174284 : pas de date française."
+  },
+  {
+    "id": "film-le-pere-noel-est-une-ordure-1982",
+    "date": "1982-08-25",
+    "title": {
+      "fr": "Le père Noël est une ordure"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_p%C3%A8re_No%C3%ABl_est_une_ordure_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1156447 : pas de date française."
+  },
+  {
+    "id": "film-e-t-l-extra-terrestre-1982",
+    "date": "1982-12-01",
+    "title": {
+      "fr": "E.T., l'extra-terrestre"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/E.T.,_l'extra-terrestre",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q11621 : même date."
+  },
+  {
+    "id": "film-le-retour-du-jedi-1983",
+    "date": "1983-10-19",
+    "title": {
+      "fr": "Le Retour du Jedi"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_VI_:_Le_Retour_du_Jedi",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q181803 : pas de date française."
+  },
+  {
+    "id": "film-sos-fantomes-1984",
+    "date": "1984-12-12",
+    "title": {
+      "fr": "SOS Fantômes"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/SOS_Fant%C3%B4mes",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108745 : pas de date française."
+  },
+  {
+    "id": "film-retour-vers-le-futur-1985",
+    "date": "1985-10-30",
+    "title": {
+      "fr": "Retour vers le futur"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Retour_vers_le_futur",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q91540 : même date."
+  },
+  {
+    "id": "film-top-gun-1986",
+    "date": "1986-09-17",
+    "title": {
+      "fr": "Top Gun"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Top_Gun_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q110138 : pas de date française."
+  },
+  {
+    "id": "film-batman-1989",
+    "date": "1989-09-13",
+    "title": {
+      "fr": "Batman"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Batman_(film,_1989)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q116852 : même date."
+  },
+  {
+    "id": "film-la-petite-sirene-1990",
+    "date": "1990-11-28",
+    "title": {
+      "fr": "La Petite Sirène"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Petite_Sir%C3%A8ne_(film,_1989)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q190135 : pas de date française."
+  },
+  {
+    "id": "film-terminator-2-le-jugement-dernier-1991",
+    "date": "1991-10-16",
+    "title": {
+      "fr": "Terminator 2 : Le Jugement dernier"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Terminator_2_:_Le_Jugement_dernier",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170564 : pas de date française."
+  },
+  {
+    "id": "film-la-belle-et-la-bete-1992",
+    "date": "1992-10-21",
+    "title": {
+      "fr": "La Belle et la Bête"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Belle_et_la_B%C3%AAte_(film,_1991)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q179673 : pas de date française."
+  },
+  {
+    "id": "film-les-visiteurs-1993",
+    "date": "1993-01-27",
+    "title": {
+      "fr": "Les Visiteurs"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Visiteurs_(film,_1993)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q838013 : même date."
+  },
+  {
+    "id": "film-jurassic-park-1993",
+    "date": "1993-10-20",
+    "title": {
+      "fr": "Jurassic Park"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jurassic_Park",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q167726 : même date."
+  },
+  {
+    "id": "film-aladdin-1993",
+    "date": "1993-11-24",
+    "title": {
+      "fr": "Aladdin"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Aladdin_(film,_1992)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q215518 : pas de date française."
+  },
+  {
+    "id": "film-forrest-gump-1994",
+    "date": "1994-10-05",
+    "title": {
+      "fr": "Forrest Gump"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Forrest_Gump",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q134773 : même date."
+  },
+  {
+    "id": "film-le-roi-lion-1994",
+    "date": "1994-11-23",
+    "title": {
+      "fr": "Le Roi lion"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Roi_lion",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q36479 donne une autre date française : 1994-11-09."
+  },
+  {
+    "id": "film-toy-story-1996",
+    "date": "1996-03-27",
+    "title": {
+      "fr": "Toy Story"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Toy_Story",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q171048 : pas de date française."
+  },
+  {
+    "id": "film-independence-day-1996",
+    "date": "1996-10-02",
+    "title": {
+      "fr": "Independence Day"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Independence_Day_(film,_1996)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q105387 : même date."
+  },
+  {
+    "id": "film-la-verite-si-je-mens-1997",
+    "date": "1997-04-30",
+    "title": {
+      "fr": "La Vérité si je mens !"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_V%C3%A9rit%C3%A9_si_je_mens_!",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2891031 : pas de date française."
+  },
+  {
+    "id": "film-men-in-black-1997",
+    "date": "1997-08-06",
+    "title": {
+      "fr": "Men in Black"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Men_in_Black_(film,_1997)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q51416 : même date."
+  },
+  {
+    "id": "film-titanic-1998",
+    "date": "1998-01-07",
+    "title": {
+      "fr": "Titanic"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Titanic_(film,_1997)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q44578 : même date."
+  },
+  {
+    "id": "film-taxi-1998",
+    "date": "1998-04-08",
+    "title": {
+      "fr": "Taxi"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Taxi_(film,_1998)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q726215 : pas de date française."
+  },
+  {
+    "id": "film-le-diner-de-cons-1998",
+    "date": "1998-04-15",
+    "title": {
+      "fr": "Le Dîner de cons"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_D%C3%AEner_de_cons_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q655315 : pas de date française."
+  },
+  {
+    "id": "film-armageddon-1998",
+    "date": "1998-08-05",
+    "title": {
+      "fr": "Armageddon"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Armageddon_(film,_1998)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q208344 : pas de date française."
+  },
+  {
+    "id": "film-mulan-1998",
+    "date": "1998-11-25",
+    "title": {
+      "fr": "Mulan"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mulan",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q537407 : pas de date française."
+  },
+  {
+    "id": "film-matrix-1999",
+    "date": "1999-06-23",
+    "title": {
+      "fr": "Matrix"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Matrix_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q83495 : pas de date française."
+  },
+  {
+    "id": "film-star-wars-episode-i-la-menace-fantome-1999",
+    "date": "1999-10-13",
+    "title": {
+      "fr": "Star Wars, épisode I : La Menace fantôme"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_I_:_La_Menace_fant%C3%B4me",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q165713 : même date."
+  },
+  {
+    "id": "film-gladiator-2000",
+    "date": "2000-06-20",
+    "title": {
+      "fr": "Gladiator"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Gladiator_(film,_2000)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q128518 : pas de date française."
+  },
+  {
+    "id": "film-le-fabuleux-destin-d-amelie-poulain-2001",
+    "date": "2001-04-25",
+    "title": {
+      "fr": "Le Fabuleux Destin d'Amélie Poulain"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Fabuleux_Destin_d'Am%C3%A9lie_Poulain",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q484048 : même date."
+  },
+  {
+    "id": "film-shrek-2001",
+    "date": "2001-07-04",
+    "title": {
+      "fr": "Shrek"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Shrek_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q483815 : pas de date française."
+  },
+  {
+    "id": "film-fast-and-furious-2001",
+    "date": "2001-09-26",
+    "title": {
+      "fr": "Fast and Furious"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fast_and_Furious",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q155476 : pas de date française."
+  },
+  {
+    "id": "film-harry-potter-a-l-ecole-des-sorciers-2001",
+    "date": "2001-12-05",
+    "title": {
+      "fr": "Harry Potter à l'école des sorciers"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_%C3%A0_l'%C3%A9cole_des_sorciers_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q102438 : même date."
+  },
+  {
+    "id": "film-le-seigneur-des-anneaux-la-communaute-de-l-anneau-2001",
+    "date": "2001-12-19",
+    "title": {
+      "fr": "Le Seigneur des anneaux : La Communauté de l'anneau"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Seigneur_des_anneaux_:_La_Communaut%C3%A9_de_l'anneau",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q127367 : même date."
+  },
+  {
+    "id": "film-asterix-et-obelix-mission-cleopatre-2002",
+    "date": "2002-01-30",
+    "title": {
+      "fr": "Astérix et Obélix : Mission Cléopâtre"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ast%C3%A9rix_et_Ob%C3%A9lix_:_Mission_Cl%C3%A9op%C3%A2tre",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q737904 : même date."
+  },
+  {
+    "id": "film-monstres-et-cie-2002",
+    "date": "2002-03-20",
+    "title": {
+      "fr": "Monstres et Cie"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Monstres_et_Cie",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q187726 : pas de date française."
+  },
+  {
+    "id": "film-le-voyage-de-chihiro-2002",
+    "date": "2002-04-10",
+    "title": {
+      "fr": "Le Voyage de Chihiro"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Voyage_de_Chihiro",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q155653 : pas de date française."
+  },
+  {
+    "id": "film-spider-man-2002",
+    "date": "2002-06-12",
+    "title": {
+      "fr": "Spider-Man"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Spider-Man_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q484442 : même date."
+  },
+  {
+    "id": "film-pirates-des-caraibes-la-malediction-du-black-pearl-2003",
+    "date": "2003-08-13",
+    "title": {
+      "fr": "Pirates des Caraïbes : La Malédiction du Black Pearl"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Pirates_des_Cara%C3%AFbes_:_La_Mal%C3%A9diction_du_Black_Pearl",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q46717 : même date."
+  },
+  {
+    "id": "film-le-monde-de-nemo-2003",
+    "date": "2003-11-26",
+    "title": {
+      "fr": "Le Monde de Nemo"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Monde_de_Nemo",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q132863 : même date."
+  },
+  {
+    "id": "film-les-indestructibles-2004",
+    "date": "2004-11-24",
+    "title": {
+      "fr": "Les Indestructibles"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Indestructibles",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q213326 : même date."
+  },
+  {
+    "id": "film-brice-de-nice-2005",
+    "date": "2005-04-06",
+    "title": {
+      "fr": "Brice de Nice"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Brice_de_Nice_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2713293 : pas de date française."
+  },
+  {
+    "id": "film-oss-117-le-caire-nid-d-espions-2006",
+    "date": "2006-04-19",
+    "title": {
+      "fr": "OSS 117 : Le Caire, nid d'espions"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/OSS_117_:_Le_Caire,_nid_d'espions",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1189436 : pas de date française."
+  },
+  {
+    "id": "film-camping-2006",
+    "date": "2006-04-26",
+    "title": {
+      "fr": "Camping"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Camping_(film,_2006)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2935509 : pas de date française."
+  },
+  {
+    "id": "film-casino-royale-2006",
+    "date": "2006-11-22",
+    "title": {
+      "fr": "Casino Royale"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Casino_Royale_(film,_2006)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q151904 : pas de date française."
+  },
+  {
+    "id": "film-ratatouille-2007",
+    "date": "2007-08-01",
+    "title": {
+      "fr": "Ratatouille"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ratatouille_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170035 : pas de date française."
+  },
+  {
+    "id": "film-bienvenue-chez-les-ch-tis-2008",
+    "date": "2008-02-27",
+    "title": {
+      "fr": "Bienvenue chez les Ch'tis"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bienvenue_chez_les_Ch'tis",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1144330 : même date."
+  },
+  {
+    "id": "film-the-dark-knight-le-chevalier-noir-2008",
+    "date": "2008-08-13",
+    "title": {
+      "fr": "The Dark Knight : Le Chevalier noir"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/The_Dark_Knight_:_Le_Chevalier_noir",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q163872 : même date."
+  },
+  {
+    "id": "film-twilight-chapitre-i-fascination-2009",
+    "date": "2009-01-07",
+    "title": {
+      "fr": "Twilight, chapitre I : Fascination"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Twilight,_chapitre_I_:_Fascination",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q160071 : pas de date française."
+  },
+  {
+    "id": "film-la-haut-2009",
+    "date": "2009-07-29",
+    "title": {
+      "fr": "Là-haut"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/L%C3%A0-haut_(film,_2009)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q174811 : même date."
+  },
+  {
+    "id": "film-avatar-2009",
+    "date": "2009-12-16",
+    "title": {
+      "fr": "Avatar"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avatar_(film,_2009)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q24871 : même date."
+  },
+  {
+    "id": "film-inception-2010",
+    "date": "2010-07-21",
+    "title": {
+      "fr": "Inception"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Inception",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q25188 : même date."
+  },
+  {
+    "id": "film-moi-moche-et-mechant-2010",
+    "date": "2010-10-06",
+    "title": {
+      "fr": "Moi, moche et méchant"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Moi,_moche_et_m%C3%A9chant",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q4447 : même date."
+  },
+  {
+    "id": "film-raiponce-2010",
+    "date": "2010-12-01",
+    "title": {
+      "fr": "Raiponce"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Raiponce_(film,_2010)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q188439 : même date."
+  },
+  {
+    "id": "film-les-tuche-2011",
+    "date": "2011-07-01",
+    "title": {
+      "fr": "Les Tuche"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Tuche_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3235944 : même date."
+  },
+  {
+    "id": "film-intouchables-2011",
+    "date": "2011-11-02",
+    "title": {
+      "fr": "Intouchables"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Intouchables_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q595 : pas de date française."
+  },
+  {
+    "id": "film-hunger-games-2012",
+    "date": "2012-03-21",
+    "title": {
+      "fr": "Hunger Games"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hunger_Games_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q212965 : même date."
+  },
+  {
+    "id": "film-avengers-2012",
+    "date": "2012-04-25",
+    "title": {
+      "fr": "Avengers"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avengers_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q182218 : même date."
+  },
+  {
+    "id": "film-la-reine-des-neiges-2013",
+    "date": "2013-12-04",
+    "title": {
+      "fr": "La Reine des neiges"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Reine_des_neiges_(film,_2013)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q246283 : même date."
+  },
+  {
+    "id": "film-qu-est-ce-qu-on-a-fait-au-bon-dieu-2014",
+    "date": "2014-04-16",
+    "title": {
+      "fr": "Qu'est-ce qu'on a fait au Bon Dieu ?"
+    },
+    "kind": "film-release",
+    "type": "french-comedy-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qu'est-ce_qu'on_a_fait_au_Bon_Dieu_%3F",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q16671761 : même date."
+  },
+  {
+    "id": "film-interstellar-2014",
+    "date": "2014-11-05",
+    "title": {
+      "fr": "Interstellar"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Interstellar",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q13417189 : même date."
+  },
+  {
+    "id": "film-vice-versa-2015",
+    "date": "2015-06-17",
+    "title": {
+      "fr": "Vice-versa"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Vice-versa_(film,_2015)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6144664 : même date."
+  },
+  {
+    "id": "film-star-wars-episode-vii-le-reveil-de-la-force-2015",
+    "date": "2015-12-16",
+    "title": {
+      "fr": "Star Wars, épisode VII : Le Réveil de la Force"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_VII_:_Le_R%C3%A9veil_de_la_Force",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6074 : même date."
+  },
+  {
+    "id": "film-coco-2017",
+    "date": "2017-11-29",
+    "title": {
+      "fr": "Coco"
+    },
+    "kind": "film-release",
+    "type": "animated-feature",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coco_(film,_2017)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q5815826 : même date."
+  },
+  {
+    "id": "film-avengers-endgame-2019",
+    "date": "2019-04-24",
+    "title": {
+      "fr": "Avengers: Endgame"
+    },
+    "kind": "film-release",
+    "type": "saga-episode",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avengers:_Endgame",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q23781155 : même date."
+  },
+  {
+    "id": "film-oppenheimer-2023",
+    "date": "2023-07-19",
+    "title": {
+      "fr": "Oppenheimer"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Oppenheimer_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108839994 : pas de date française."
+  },
+  {
+    "id": "film-barbie-2023",
+    "date": "2023-07-19",
+    "title": {
+      "fr": "Barbie"
+    },
+    "kind": "film-release",
+    "type": "blockbuster",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Barbie_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q55436290 : même date."
+  }
+]

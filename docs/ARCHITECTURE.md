@@ -116,7 +116,7 @@ Détaillées dans [`EVENTS_DATA.md`](EVENTS_DATA.md) (format et types) et dans l
 
 - **Naissance** : l'utilisateur ne donne que son **mois et son année** (jamais le jour, décision du 13/11/2026) ; la date retenue est le 1er du mois. Celle du jeune est aujourd'hui moins son âge.
 - **Âge à une date** : années civiles révolues entre la date de naissance et la date, comme un âge réel (on ne prend pas d'année de 365,25 jours).
-- **Date d'un événement** : `regionalDates[région] ?: date` (date de référence : première sortie mondiale).
+- **Date d'un événement** : `regionalDates[région] ?: date` (date de référence : la date française, décision du 14/11/2026).
 - **Anniversaire** : même jour et même mois qu'une date d'événement, au moins un an après. Un événement du 29 février est fêté le 28 février les années non bissextiles (décision du 13/11/2026).
 - **Écart d'âge** : différence au jour près entre la date de naissance de l'utilisateur et celle du jeune (voir `UISpec/Settings.template.md`).
 - **Équivalence** : événement de **même type** (types larges), décalé de l'écart d'âge, à ±2 ans près (décision du 13/11/2026).

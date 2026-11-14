@@ -23,10 +23,10 @@ Une solution qui compile et s'ouvre dans l'IDE, sans aucune fonctionnalité.
 
 ### Jalon 2 — Lecture des données
 Les événements sont lus, validés et interrogeables, sans encore d'écran.
-- [ ] `domain` : entités (`Event`, `EventType`, `Family`, `Region`), port `EventRepository`.
-- [ ] `data` : `JsonEventRepository` (fichiers par famille, validation, index par jour de l'année et par type, dates régionales) ([`EVENTS_DATA.md`](EVENTS_DATA.md)).
-- [ ] Jeu d'essai d'une vingtaine d'événements réels et sourcés, qui couvre chaque famille, une date régionale et un 29 février.
-- [ ] Tests : validation des fichiers, index, rapport de couverture (jours sans anniversaire, types trop pauvres).
+- [x] `domain` : entités (`Event`, `EventKind`, `EventType`, `Family`, `Region`, `MonthDay`), ports `EventRepository` et `Clock` (avancé du jalon 3 : la validation a besoin de la date du jour).
+- [x] `data` : `JsonEventRepository` (fichiers par famille, validation, index par jour de l'année et par type, dates régionales, recherche sans accents) ([`EVENTS_DATA.md`](EVENTS_DATA.md)), `CoverageReport`.
+- [x] Jeu d'essai : données d'essai inventées **dans les tests seulement** (une date régionale, un 29 février, un doublon, chaque cas d'erreur) ; les vraies données arrivent avec le lot Cinéma 1.
+- [x] Tests : 22 tests sur la validation, les index et la recherche, plus la validation des vrais fichiers livrés (`./gradlew check`), avec le rapport de couverture.
 
 ### Jalon 3 — Première interface : Aujourd'hui
 Le coup de vieux du jour à l'écran, en style Polaroïd.
@@ -101,7 +101,7 @@ Sitcoms et séries cultes, téléréalité, émissions jeunesse, dessins animés
 
 ### Données — Cinéma
 Blockbusters, films d'animation, comédies françaises, sagas.
-- [ ] Palier 1 · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 76 films (17 blockbusters, 20 films d'animation, 19 comédies françaises, 20 épisodes de sagas), sortie nationale en France recoupée avec Wikidata (14/11/2026, méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Musique
 Morts d'icônes de la musique, divas, boys bands, albums de rap et de pop, tubes de l'été.

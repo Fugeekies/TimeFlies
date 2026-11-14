@@ -25,8 +25,11 @@
 ./gradlew :desktopApp:run            # lance la version PC
 ./gradlew :androidApp:assembleDebug  # compile l'APK de débogage
 ./gradlew :androidApp:installDebug   # installe la version de débogage sur le téléphone ou l'émulateur
-./gradlew check                      # tests (à partir du jalon 2)
+./gradlew check                      # tous les tests, dont la validation des fichiers d'événements
+./gradlew :data:desktopTest          # tests de la couche data seulement (affiche le rapport de couverture)
 ```
+
+Le test `RealEventFilesTest` lit les vrais fichiers de `src/ui/src/commonMain/composeResources/files/events/` : une entrée invalide le fait échouer, avec la liste des raisons ; la couverture (événements par thème, jours sans anniversaire, types trop pauvres) s'affiche dans la sortie du test.
 
 Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut afficher « Failed to choose DirectX12 adapter » puis « Fallback to next API » : il bascule simplement vers un autre moteur graphique, sans conséquence.
 
