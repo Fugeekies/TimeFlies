@@ -16,9 +16,10 @@ Une solution qui compile et s'ouvre dans l'IDE, sans aucune fonctionnalité.
 - [x] Projet Kotlin Multiplatform avec les cinq modules `domain`, `data`, `ui`, `androidApp`, `desktopApp` ([`ARCHITECTURE.md`](ARCHITECTURE.md)), wrapper Gradle 9.8.2 commité.
 - [x] `gradle/libs.versions.toml` avec les versions stables du moment, figées : Kotlin 2.4.21, Compose Multiplatform 1.12.2, Android Gradle Plugin 9.5.0, Compose Hot Reload 1.2.0 ; `compileSdk` 37, `targetSdk` 36, `minSdk` 26. Identifiant : `io.github.fugeekies.timeflies`.
 - [x] Une fenêtre « TimeFlies » vide qui s'ouvre sur PC (`./gradlew :desktopApp:run`).
-- [ ] La même sur Android en débogage (émulateur ou téléphone), après installation de la plateforme Android 37.
-- [ ] Vérifier Compose Hot Reload sur la cible PC ([`DEVELOPMENT.md`](DEVELOPMENT.md)).
-- [ ] Confirmer le découpage en cinq modules, ou le réduire si la compilation en souffre.
+- [x] L'APK de débogage compile (`./gradlew :androidApp:assembleDebug`, plateforme Android 37 installée).
+- [ ] La fenêtre sur Android en débogage (émulateur ou téléphone).
+- [ ] Vérifier Compose Hot Reload sur la cible PC : il demande le JetBrains Runtime 21, fourni par Android Studio ou IntelliJ ([`DEVELOPMENT.md`](DEVELOPMENT.md)).
+- [x] Découpage en cinq modules confirmé : compilation complète en une vingtaine de secondes, incrémentale en quelques secondes.
 
 ### Jalon 2 — Lecture des données
 Les événements sont lus, validés et interrogeables, sans encore d'écran.

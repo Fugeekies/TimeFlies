@@ -31,7 +31,7 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
 ### 1. La boucle rapide : la version PC
 - `./gradlew :desktopApp:run`, ou Run/Debug dans l'IDE : application JVM classique, points d'arrêt et pas à pas, sans émulateur.
 - Écrans et règles étant partagés, la plupart des bugs se reproduisent et se corrigent sur PC.
-- **Compose Hot Reload** (JetBrains) pour voir un écran modifié sans relancer, sur la cible PC : version compatible à vérifier au jalon 1 « Création de la solution ».
+- **Compose Hot Reload** (JetBrains, version 1.2.0) pour voir un écran modifié sans relancer, sur la cible PC : `./gradlew :desktopApp:hotRun --auto`, ou le bouton dédié de l'IDE. Il demande le **JetBrains Runtime 21** (un JDK modifié par JetBrains), fourni avec Android Studio et IntelliJ : sans lui, la tâche échoue avec « Failed to find suitable JetBrains Runtime 21 installation ».
 
 ### 2. Les règles métier : les tests
 - `domain` est en Kotlin pur et la date du jour est injectée (`Clock`) : un bug de calcul (âge, chiffre rond, 29 février, appariement) se reproduit dans un **test unitaire sur une date fixe** et se débogue avec des points d'arrêt dans le test.
