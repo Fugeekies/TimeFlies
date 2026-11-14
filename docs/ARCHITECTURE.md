@@ -61,7 +61,7 @@ Les versions sont celles de la dernière stable au moment du jalon, figées dans
 | JSON | `kotlinx-serialization-json` |
 | Textes, polices, fichiers embarqués | Compose Multiplatform Resources |
 | État des écrans | `androidx.lifecycle` ViewModel (multiplateforme) + `StateFlow` |
-| Navigation | `navigation-compose` multiplateforme (JetBrains) |
+| Navigation | un état simple pour les quatre destinations (jalon 3) ; `navigation-compose` multiplateforme si des écrans empilés arrivent |
 | Barre en bas ou rail à gauche | `material3-adaptive-navigation-suite` |
 | Réglages | DataStore multiplateforme (`datastore-core-okio`) |
 | Logs | Kermit (Touchlab) |

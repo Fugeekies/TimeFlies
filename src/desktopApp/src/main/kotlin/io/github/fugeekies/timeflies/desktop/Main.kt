@@ -8,13 +8,16 @@ import androidx.compose.ui.window.rememberWindowState
 import io.github.fugeekies.timeflies.ui.App
 import java.awt.Dimension
 
-fun main() = application {
-    Window(
-        onCloseRequest = ::exitApplication,
-        title = "TimeFlies",
-        state = rememberWindowState(size = DpSize(1000.dp, 700.dp)),
-    ) {
-        window.minimumSize = Dimension(420, 640)
-        App()
+fun main() {
+    val graph = AppGraph()
+    application {
+        Window(
+            onCloseRequest = ::exitApplication,
+            title = "TimeFlies",
+            state = rememberWindowState(size = DpSize(1000.dp, 700.dp)),
+        ) {
+            window.minimumSize = Dimension(420, 640)
+            App(getDailyShock = graph.getDailyShock, clock = graph.clock)
+        }
     }
 }
