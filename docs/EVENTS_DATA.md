@@ -2,7 +2,7 @@
 
 > Document de conception écrit avant le code (13/11/2026). Les choix marqués **À valider** sont des propositions : ils ne sont pas tranchés.
 
-La base d'événements est le cœur de l'application : le coup de vieux du jour, les équivalences et « Mon équivalent » en dépendent tous. Elle est livrée dans l'application (`events.json`), sans connexion.
+La base d'événements est le cœur de l'application : le coup de vieux du jour, les équivalences et « Mon équivalent » en dépendent tous. Elle est livrée dans l'application (un fichier JSON par famille, voir « Fichiers et stockage »), sans connexion.
 
 ## Règle d'or : zéro invention
 
@@ -111,7 +111,13 @@ Notations : `n_v` date de naissance du « vieux » (l'utilisateur), `n_j` date d
 
 Environ **400 événements**, pour que presque chaque jour de l'année ait au moins un anniversaire, et que chaque type ait assez d'événements répartis des années 1950 à aujourd'hui pour que les équivalences marchent quel que soit l'écart d'âge. Une vérification automatique (test) compte les jours de l'année sans anniversaire et les types qui ont moins de 4 événements.
 
-## Validation automatique (tests du module `core`)
+## Fichiers et stockage (décision du 14/11/2026)
+
+- **Un fichier JSON par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`), dans `ui/src/commonMain/composeResources/files/events/`. Chaque fichier est un tableau d'événements au format ci-dessus.
+- Les fichiers sont lus au démarrage et gardés **en mémoire**, avec des index par jour de l'année et par type (voir [`ARCHITECTURE.md`](ARCHITECTURE.md), « Base d'événements »).
+- **À 5 000 événements**, on mesure et on décide s'il faut passer à une base SQLite précompilée, construite à la compilation à partir des mêmes fichiers. Les fichiers JSON restent alors la source éditée par les humains.
+
+## Validation automatique (tests du module `data`)
 
 - `id` uniques, au format attendu.
 - `date` et `regionalDates` valides, au format `AAAA-MM-JJ`, dans le passé ; codes de pays connus.
