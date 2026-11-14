@@ -119,7 +119,21 @@ Environ **400 événements**, pour que presque chaque jour de l'année ait au mo
 
 ## Validation automatique (tests du module `data`)
 
-- `id` uniques, au format attendu.
-- `date` et `regionalDates` valides, au format `AAAA-MM-JJ`, dans le passé ; codes de pays connus.
-- `kind` et `type` connus, `importance` entre 1 et 3, `title.fr` non vide, `source` en `https://`.
+- `id` uniques dans toute la base (tous fichiers confondus), au format attendu (minuscules, chiffres et tirets).
+- `date` et `regionalDates` valides, au format `AAAA-MM-JJ`, strictement avant aujourd'hui ; codes de pays de deux lettres majuscules.
+- `kind` et `type` connus, `type` rangé dans le fichier de sa famille, `importance` entre 1 et 3, `title.fr` non vide, `source` en `https://`.
+- Une entrée invalide est écartée avec toutes ses raisons ; les autres entrées du fichier se chargent quand même. Un fichier absent est une famille vide (les thèmes arrivent un par un).
+- Le test `RealEventFilesTest` valide les vrais fichiers livrés : **une seule entrée rejetée fait échouer `./gradlew check`**.
 - Statistiques de couverture (jours sans anniversaire, types trop pauvres) écrites dans le rapport de test, sans faire échouer la compilation.
+
+## Méthode de saisie (lot Cinéma 1, 14/11/2026)
+
+Méthode suivie pour le premier lot, à reprendre pour les suivants :
+
+1. Liste de films connus, répartie entre les types de la famille.
+2. **Date** : la **sortie nationale en France**, lue sur la ligne « France » de la fiche technique de l'article de Wikipédia en français (qui cite le plus souvent Allociné ou Unifrance). Festivals, avant-premières, exclusivités et ressorties sont écartés.
+3. **Contrôle croisé** avec Wikidata (date de publication avec pour lieu la France). Le résultat est écrit dans `note` : « même date », « pas de date française » ou « donne une autre date française : … ». En cas de désaccord, la fiche technique fait foi.
+4. Un film sans date française vérifiable n'entre pas (lot 1 : *Kirikou et la Sorcière*, *Trois hommes et un couffin*).
+5. **Source** : l'article de Wikipédia en français.
+6. **Importance** (proposition, **À valider**) : selon le nombre de Wikipédia qui ont un article sur le film (Wikidata) : 80 ou plus → 3, de 40 à 79 → 2, moins → 1 ; +1 (au plus 3) pour les comédies françaises, dont la notoriété est surtout nationale.
+7. **`date` = date française, sans `regionalDates`** (proposition, **À valider**) : la « première sortie mondiale » de Wikidata s'est révélée peu fiable (avant-premières, festivals, erreurs comme *Avengers* au 15/07/2011). Les dates des autres pays s'ajouteront en `regionalDates` avec les traductions.

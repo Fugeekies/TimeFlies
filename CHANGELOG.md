@@ -11,6 +11,8 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Lecture des données : entités et ports du domaine (`Event`, `EventType`, `EventRepository`, `Clock`), `JsonEventRepository` (fichiers par thème, validation, index par jour et par type, dates régionales, recherche sans accents), rapport de couverture, tests.
+- Données Cinéma, palier 1 : 76 films avec leur date de sortie nationale en France, sourcée et recoupée avec Wikidata (`cinema.json`).
 - Création de la solution : projet Kotlin Multiplatform en cinq modules rangés dans `src/` (`domain`, `data`, `ui`, `androidApp`, `desktopApp`), wrapper Gradle, versions figées dans `gradle/libs.versions.toml`, fenêtre « TimeFlies » vide sur PC et Android.
 - Création du dépôt : licence GPL v3, README, règles du projet (`AGENTS.md`).
 - Spécifications initiales : architecture, base d'événements, identité visuelle, feuille de route et spécifications des écrans (`docs/`).

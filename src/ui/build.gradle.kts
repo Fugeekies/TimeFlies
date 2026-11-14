@@ -9,7 +9,7 @@ plugins {
 kotlin {
     jvmToolchain(21)
 
-    androidLibrary {
+    android {
         namespace = "io.github.fugeekies.timeflies.ui"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -19,9 +19,9 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(projects.domain)
-            api(compose.runtime)
-            api(compose.foundation)
-            api(compose.material3)
+            api(libs.compose.runtime)
+            api(libs.compose.foundation)
+            api(libs.compose.material3)
         }
     }
 }
