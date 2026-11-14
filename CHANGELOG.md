@@ -11,6 +11,8 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Création de la solution : projet Kotlin Multiplatform en cinq modules (`domain`, `data`, `ui`, `androidApp`, `desktopApp`), wrapper Gradle, versions figées dans `gradle/libs.versions.toml`, fenêtre « TimeFlies » vide sur PC et Android.
+
 - Création du dépôt : licence GPL v3, README, règles du projet (`AGENTS.md`).
 - Spécifications initiales : architecture, base d'événements, identité visuelle, feuille de route et spécifications des écrans (`docs/`).
 - Maquettes visuelles des écrans Android et Windows, en HTML et PNG (`docs/maquettes/`).

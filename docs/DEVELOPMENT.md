@@ -1,20 +1,30 @@
 # Guide développeur - TimeFlies
 
-> Document écrit avant le code (14/11/2026). Les commandes exactes seront confirmées au jalon 1 « Création de la solution ».
+> Mis à jour au jalon 1 « Création de la solution » (14/11/2026).
 
 ## Outils
 
+- **JDK 17 ou plus** (le projet compile avec un JDK 21) : pointer `JAVA_HOME` dessus, ou laisser l'IDE fournir le sien.
+- **SDK Android** avec la plateforme **37** (`platforms;android-37.0`), exigée par Compose Multiplatform 1.12. Son chemin va dans `local.properties`, à la racine, jamais commité :
+
+  ```properties
+  sdk.dir=C\:/chemin/vers/android-sdk
+  ```
+- Gradle n'est pas à installer : le wrapper (`gradlew`) télécharge la bonne version.
 - **Pendant le développement** : tout se compile et se lance en local, en débogage, depuis l'IDE ou Gradle.
 - **Publier une version** : à la fin du projet (jalon 13), GitHub Actions produira l'APK et le `.msi` (voir [`ARCHITECTURE.md`](ARCHITECTURE.md), « Distribution »).
 - **Développer et déboguer** : un IDE en local. **Android Studio** (gratuit) est recommandé : il gère Kotlin Multiplatform, l'émulateur, Logcat et la cible PC. IntelliJ IDEA convient aussi.
 
-## Commandes prévues
+## Commandes
 
 ```bash
-./gradlew :desktopApp:run          # lance la version PC
-./gradlew check                    # tests de domain et data, validation de la base d'événements
-./gradlew :androidApp:installDebug # installe la version de débogage sur le téléphone ou l'émulateur
+./gradlew :desktopApp:run            # lance la version PC
+./gradlew :androidApp:assembleDebug  # compile l'APK de débogage
+./gradlew :androidApp:installDebug   # installe la version de débogage sur le téléphone ou l'émulateur
+./gradlew check                      # tests (à partir du jalon 2)
 ```
+
+Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut afficher « Failed to choose DirectX12 adapter » puis « Fallback to next API » : il bascule simplement vers un autre moteur graphique, sans conséquence.
 
 ## Déboguer
 

@@ -13,9 +13,10 @@ La **V1** = les jalons de code 1 à 10 et le palier 1 de chaque thème de donné
 
 ### Jalon 1 — Création de la solution
 Une solution qui compile et s'ouvre dans l'IDE, sans aucune fonctionnalité.
-- [ ] Projet Kotlin Multiplatform avec les cinq modules `domain`, `data`, `ui`, `androidApp`, `desktopApp` ([`ARCHITECTURE.md`](ARCHITECTURE.md)), wrapper Gradle commité.
-- [ ] `gradle/libs.versions.toml` avec les versions stables du moment, figées.
-- [ ] Une fenêtre « TimeFlies » vide qui s'ouvre sur PC (`./gradlew :desktopApp:run`) et sur Android en débogage (émulateur ou téléphone).
+- [x] Projet Kotlin Multiplatform avec les cinq modules `domain`, `data`, `ui`, `androidApp`, `desktopApp` ([`ARCHITECTURE.md`](ARCHITECTURE.md)), wrapper Gradle 9.8.2 commité.
+- [x] `gradle/libs.versions.toml` avec les versions stables du moment, figées : Kotlin 2.4.21, Compose Multiplatform 1.12.2, Android Gradle Plugin 9.5.0, Compose Hot Reload 1.2.0 ; `compileSdk` 37, `targetSdk` 36, `minSdk` 26. Identifiant : `io.github.fugeekies.timeflies`.
+- [x] Une fenêtre « TimeFlies » vide qui s'ouvre sur PC (`./gradlew :desktopApp:run`).
+- [ ] La même sur Android en débogage (émulateur ou téléphone), après installation de la plateforme Android 37.
 - [ ] Vérifier Compose Hot Reload sur la cible PC ([`DEVELOPMENT.md`](DEVELOPMENT.md)).
 - [ ] Confirmer le découpage en cinq modules, ou le réduire si la compilation en souffre.
 
