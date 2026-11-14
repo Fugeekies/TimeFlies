@@ -18,4 +18,8 @@ dependencyResolutionManagement {
     }
 }
 
-include(":domain", ":data", ":ui", ":androidApp", ":desktopApp")
+// Code modules live under src/, apart from the docs and the build files.
+listOf("domain", "data", "ui", "androidApp", "desktopApp").forEach { name ->
+    include(":$name")
+    project(":$name").projectDir = file("src/$name")
+}
