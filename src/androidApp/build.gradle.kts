@@ -26,6 +26,18 @@ android {
     buildFeatures {
         compose = true
     }
+
+    // Required by the Compose Preview support of editors (VS Code Kotlin extension, Android Studio).
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+    }
+}
+
+// Compose Preview also needs unit tests enabled on every variant, release included.
+androidComponents {
+    beforeVariants { variant ->
+        variant.hostTests[com.android.build.api.variant.HostTestBuilder.UNIT_TEST_TYPE]?.enable = true
+    }
 }
 
 kotlin {
