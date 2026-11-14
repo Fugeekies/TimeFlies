@@ -26,7 +26,7 @@ Chaque version publiera dans l'onglet **Releases** :
 
 ## Technique
 
-Kotlin et Compose Multiplatform : un seul code pour Android et Windows. Les versions sont compilées par GitHub Actions.
+Kotlin et Compose Multiplatform : un seul code pour Android et Windows. Les versions publiées seront compilées par GitHub Actions.
 
 ## Licence
 
