@@ -61,7 +61,7 @@ import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
-import io.github.fugeekies.timeflies.ui.theme.photoColor
+import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -163,56 +163,7 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
         Res.plurals.a11y_anniversary, anniversary.years, anniversary.years,
         event.title("fr"), stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(anniversary.eventDate)),
     )
-    Box(Modifier.padding(top = 14.dp, bottom = 6.dp).clearAndSetSemantics { contentDescription = description }) {
-        Column(
-            Modifier
-                .widthIn(max = 340.dp)
-                .rotate(-2.5f)
-                .shadow(10.dp, RoundedCornerShape(2.dp))
-                .background(colors.surface)
-                .padding(start = 16.dp, end = 16.dp, top = 16.dp),
-        ) {
-            Column(
-                Modifier.fillMaxWidth().height(236.dp).background(style.photoColor(event.family)).padding(14.dp),
-                verticalArrangement = Arrangement.SpaceBetween,
-            ) {
-                Text(
-                    stringResource(Res.string.family_and_year, familyLabel(event.family).uppercase(), anniversary.eventDate.year),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = Color(0xFF3A2A12),
-                )
-                Row(verticalAlignment = Alignment.Bottom) {
-                    Text(anniversary.years.toString(), fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 120.sp, lineHeight = 110.sp, color = Color(0xFFFFFDF6))
-                    Text(
-                        pluralStringResource(Res.plurals.years_unit, anniversary.years),
-                        fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 44.sp, color = Color(0xFFFFFDF6),
-                        modifier = Modifier.padding(start = 8.dp, bottom = 18.dp),
-                    )
-                }
-            }
-            Column(Modifier.padding(top = 12.dp, bottom = 18.dp, start = 4.dp, end = 4.dp)) {
-                Text(event.title("fr"), fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 36.sp, lineHeight = 38.sp, color = colors.onSurface)
-                Text(legend, fontFamily = style.handwriting, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, color = colors.onSurfaceVariant)
-            }
-        }
-        // Tape holding the photo.
-        Box(Modifier.align(Alignment.TopCenter).offset(y = (-12).dp).rotate(3f).size(width = 86.dp, height = 26.dp).background(Color(0xD9F0E2B4)))
-        if (anniversary.isRound) {
-            Surface(
-                color = colors.secondaryContainer,
-                shape = RoundedCornerShape(50),
-                // Sits on the bottom edge of the photo, clear of the handwritten legend.
-                modifier = Modifier.align(Alignment.BottomEnd).offset(x = 10.dp, y = 22.dp).rotate(4f),
-            ) {
-                Text(
-                    stringResource(Res.string.round_chip),
-                    style = MaterialTheme.typography.labelLarge,
-                    color = colors.primary,
-                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                )
-            }
-        }
-    }
+    PolaroidCard(anniversary, legend, description)
 }
 
 @Composable
