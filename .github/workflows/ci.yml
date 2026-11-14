@@ -1,0 +1,76 @@
+# Tests and benchmarks on every pull request that is ready for review (drafts are skipped), and on main.
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Tests et compilation
+    if: github.event_name == 'push' || github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - uses: actions/setup-java@v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@v6.4.1
+
+      # Compose Multiplatform 1.12 needs the Android 37 platform (docs/DEVELOPMENT.md).
+      - name: Plateforme Android 37
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" > /dev/null
+
+      - name: Tests (dont la validation des fichiers d'événements)
+        run: ./gradlew check --console=plain
+
+      - name: Compilation des applications PC et Android
+        run: ./gradlew :desktopApp:jar :androidApp:assembleDebug --console=plain
+
+      - name: Rapports de tests
+        if: failure()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: rapports-de-tests
+          path: src/*/build/reports/tests/
+          if-no-files-found: ignore
+
+  benchmarks:
+    name: Benchmarks
+    if: github.event_name == 'push' || github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - uses: actions/setup-java@v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@v6.4.1
+
+      - name: Benchmarks de chargement des données et des pages
+        run: ./gradlew :benchmarks:benchmark --console=plain
+
+      # The report is shown on the run's summary page and kept as an artifact.
+      - name: Rapport dans le résumé du run
+        run: cat src/benchmarks/build/reports/benchmarks/performance-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: rapport-de-performance
+          path: src/benchmarks/build/reports/benchmarks/performance-report.md

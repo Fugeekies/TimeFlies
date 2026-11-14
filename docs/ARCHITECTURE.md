@@ -150,7 +150,10 @@ Kermit : Logcat sur Android ; console et fichier `%APPDATA%\TimeFlies\logs\` sur
 
 ## Distribution
 
-- **`ci.yml`** : sur une PR prête (pas en brouillon), `./gradlew check` (tests de `domain` et `data`, dont la validation de la base).
+- **`ci.yml`** (en place depuis le 14/11/2026), sur chaque PR prête (pas en brouillon) et sur `main`, deux jobs sur Ubuntu avec un JDK 21 :
+  - « Tests et compilation » : `./gradlew check` (tests de `domain` et `data`, dont la validation de la base), puis compilation de `desktopApp` et de l'APK de débogage (installe la plateforme Android 37) ;
+  - « Benchmarks » : `./gradlew :benchmarks:benchmark`, rapport dans le résumé du run et en artefact.
+- **Benchmarks** (`src/benchmarks`, module JVM, hors de `check`) : chargement complet de la base, requêtes de l'`EventRepository`, calcul de chaque page (Aujourd'hui pour l'instant), sur les fichiers réels et sur des jeux synthétiques de 500 à 10 000 événements. Purement informatifs : aucun seuil ne fait échouer la CI. Ils serviront à la décision des 5 000 événements.
 - **`release.yml`**, sur un tag `vX.Y.Z` :
   - exécuteur Ubuntu : **APK** signée (`assembleRelease`), clé stable dans les secrets du dépôt (`ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`) ;
   - exécuteur Windows : **installeur** `.msi` (`packageMsi` de Compose Desktop, basé sur jpackage), qui embarque son propre Java. jpackage a besoin de WiX pour un `.msi` : sa présence sur l'exécuteur GitHub est à vérifier au jalon ;

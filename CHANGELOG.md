@@ -11,6 +11,8 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- CI GitHub Actions sur chaque PR prête et sur `main` : tests, compilation des applications PC et Android, benchmarks avec rapport dans le résumé du run.
+- Benchmarks de chargement des données et des pages (`src/benchmarks`), sur les fichiers réels et sur des jeux synthétiques jusqu'à 10 000 événements ; premier rapport dans `docs/benchmarks/`.
 - Écran Aujourd'hui, style Polaroïd (cadre de la couleur de la décennie avec son chiffre écrit à la main, dessin du type dans la photo) : coup de vieux du jour (chiffres ronds d'abord, 29 février fêté le 28, repli sur les 7 jours suivants), « Aussi aujourd'hui », « Bientôt… », navigation adaptative à quatre destinations, polices Caveat et Atkinson Hyperlegible embarquées, recalcul au changement de jour.
 - Lecture des données : entités et ports du domaine (`Event`, `EventType`, `EventRepository`, `Clock`), `JsonEventRepository` (fichiers par thème, validation, index par jour et par type, dates régionales, recherche sans accents), rapport de couverture, tests.
 - Données Cinéma, palier 1 : 76 films avec leur date de sortie nationale en France, sourcée et recoupée avec Wikidata (`cinema.json`).

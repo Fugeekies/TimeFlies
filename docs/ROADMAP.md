@@ -4,10 +4,19 @@ Les jalons à faire sont en haut, dans l'ordre où ils seront menés. Les jalons
 
 Découpage décidé le 14/11/2026 :
 - **des jalons courts**, un sujet chacun, testés en **débogage sur PC** (et sur Android quand le jalon le demande) ;
-- **la CI et les releases à la fin**, une fois qu'une bonne version tourne en débogage sur PC ;
+- **les releases à la fin**, une fois qu'une bonne version tourne en débogage sur PC ; la **CI des tests et des benchmarks**, elle, est avancée après le jalon 3 (décision du 14/11/2026) ;
 - **les données par thème**, menées en parallèle du code, par paliers jusqu'à environ 5 000 événements.
 
 La **V1** = les jalons de code 1 à 10 et le palier 1 de chaque thème de données.
+
+## Fait hors ordre
+
+### Jalon — CI des tests et benchmarks (avancé le 14/11/2026, à la demande)
+- [x] `.github/workflows/ci.yml` : sur chaque PR prête (pas les brouillons) et sur `main`, `./gradlew check` (tests et validation des fichiers d'événements), compilation des applications PC et Android, rapports de tests en artefact si échec.
+- [x] Module `src/benchmarks` (`./gradlew :benchmarks:benchmark`, hors de `check`) : chargement complet, requêtes par jour, par type et par titre, calcul de la page Aujourd'hui, sur les fichiers réels et sur des jeux synthétiques de 500 à 10 000 événements.
+- [x] Rapport Markdown dans le résumé du run de CI et en artefact ; premier rapport dans [`benchmarks/performance-2026-11-14.md`](benchmarks/performance-2026-11-14.md) (5 000 événements : chargement complet ≈ 24 ms sur un PC de développement).
+- [ ] Rendre le job « Tests et compilation » obligatoire avant fusion dans la règle de protection de `main` (après un premier run vert).
+- [ ] Benchmarks de rendu des écrans (Compose), si les calculs ne suffisent plus à juger la fluidité.
 
 ## À faire : le code
 
@@ -77,9 +86,8 @@ Pour tester tous les cas sans attendre le bon jour.
 - [ ] Choisir le nom affiché sous l'icône et dans les menus (le dépôt reste `TimeFlies`).
 - [ ] Dessiner l'icône (Android adaptative, `.ico` Windows) et l'image d'aperçu du dépôt.
 
-### Jalon 13 — CI et releases (à la fin, décision du 14/11/2026)
-Seulement quand une bonne version tourne en débogage sur PC.
-- [ ] `ci.yml` : compilation et tests à chaque PR prête (pas sur les brouillons).
+### Jalon 13 — Releases (à la fin, décision du 14/11/2026)
+Seulement quand une bonne version tourne en débogage sur PC. La CI des tests est déjà en place (jalon « CI des tests et benchmarks »).
 - [ ] Clé de signature Android générée et stockée dans les secrets du dépôt ; une sauvegarde gardée hors du dépôt.
 - [ ] `release.yml` : sur un tag `vX.Y.Z`, APK signée et `.msi`, publiés dans la release ; vérifier WiX sur l'exécuteur Windows.
 - [ ] README : section Installation (APK, `.msi`, avertissement « éditeur inconnu »).
