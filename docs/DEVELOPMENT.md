@@ -16,6 +16,7 @@
   ```
 - Gradle n'est pas à installer : le wrapper (`gradlew`) télécharge la bonne version.
 - **Pendant le développement** : tout se compile et se lance en local, en débogage, depuis l'IDE ou Gradle.
+- **CI** : chaque PR prête (pas en brouillon) lance les tests, la compilation des deux applications et les benchmarks sur GitHub Actions (`.github/workflows/ci.yml`).
 - **Publier une version** : à la fin du projet (jalon 13), GitHub Actions produira l'APK et le `.msi` (voir [`ARCHITECTURE.md`](ARCHITECTURE.md), « Distribution »).
 - **Développer et déboguer** : un IDE en local. **Android Studio** (gratuit) est recommandé : il gère Kotlin Multiplatform, l'émulateur, Logcat et la cible PC. IntelliJ IDEA convient aussi.
 
@@ -27,7 +28,10 @@
 ./gradlew :androidApp:installDebug   # installe la version de débogage sur le téléphone ou l'émulateur
 ./gradlew check                      # tous les tests, dont la validation des fichiers d'événements
 ./gradlew :data:desktopTest          # tests de la couche data seulement (affiche le rapport de couverture)
+./gradlew :benchmarks:benchmark      # benchmarks (environ 1 min, hors de check)
 ```
+
+Les benchmarks mesurent le chargement de la base et le calcul de chaque page, sur les fichiers réels et sur des jeux synthétiques de 500 à 10 000 événements. Le rapport s'écrit dans `src/benchmarks/build/reports/benchmarks/performance-report.md` ; une PR qui touche au chargement des données ou au calcul d'une page en committe une copie dans `docs/benchmarks/`. Les durées dépendent de la machine : comparer des rapports faits sur le même PC (ou sur la CI).
 
 Le test `RealEventFilesTest` lit les vrais fichiers de `src/ui/src/commonMain/composeResources/files/events/` : une entrée invalide le fait échouer, avec la liste des raisons ; la couverture (événements par thème, jours sans anniversaire, types trop pauvres) s'affiche dans la sortie du test.
 

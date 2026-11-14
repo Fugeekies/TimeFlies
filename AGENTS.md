@@ -36,13 +36,14 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 
 ## Distribution
 
-- Pendant le développement, tout se compile et se teste en local, en débogage. **À la fin** (jalon 13, décision du 14/11/2026), GitHub Actions compilera l'**APK** Android et l'**installeur Windows** (`.msi`) et les publiera dans les Releases.
+- La **CI** (`.github/workflows/ci.yml`) lance les tests, la compilation des deux applications et les benchmarks sur chaque PR prête et sur `main` (décision du 14/11/2026). Les **releases** viennent **à la fin** (jalon 13) : GitHub Actions compilera alors l'**APK** Android et l'**installeur Windows** (`.msi`) et les publiera dans les Releases.
 - L'APK est signée avec une clé stable, gardée dans les secrets du dépôt, jamais dans le code.
 
 ## Règles Git & PR
 
 - **Jamais de commit direct sur `main`** : branche dédiée (`feature/…`, `fix/…`), puis PR.
-- **PR créées en brouillon** (`gh pr create --draft`), passées en « Ready for review » (`gh pr ready`) quand elles sont terminées.
+- **PR créées en brouillon** (`gh pr create --draft`) : la CI ignore les brouillons. Les passer en « Ready for review » (`gh pr ready`) quand elles sont terminées, ce qui lance la CI, et attendre qu'elle soit verte avant d'annoncer la PR prête.
+- Toute PR qui modifie le chargement des données (`data/events`) ou le calcul d'une page committe un rapport de benchmark à jour dans `docs/benchmarks/` (`./gradlew :benchmarks:benchmark`, rapport dans `src/benchmarks/build/reports/benchmarks/`).
 - Toute PR touchant le code, la configuration ou les fonctionnalités met à jour `CHANGELOG.md` sous `## [Unreleased]`, catégories Keep a Changelog : `Added`, `Changed`, `Fixed`, `Performance`, `Security`. Entrées en français, concises.
 
 ## Méthode de travail
