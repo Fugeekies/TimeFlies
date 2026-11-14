@@ -1,6 +1,6 @@
 # Base d'événements - TimeFlies
 
-> Document de conception écrit avant le code (13/11/2026). Les choix marqués **À valider** sont des propositions : ils ne sont pas tranchés.
+> Document de conception écrit avant le code (13/11/2026), mis à jour au jalon 2 (14/11/2026). Les choix marqués **À valider** sont des propositions : ils ne sont pas tranchés.
 
 La base d'événements est le cœur de l'application : le coup de vieux du jour, les équivalences et « Mon équivalent » en dépendent tous. Elle est livrée dans l'application (un fichier JSON par famille, voir « Fichiers et stockage »), sans connexion.
 
@@ -8,28 +8,27 @@ La base d'événements est le cœur de l'application : le coup de vieux du jour,
 
 - Chaque événement a une **source** vérifiable (page Wikipédia ou source officielle) qui confirme sa date **au jour près**.
 - Un événement dont on ne connaît pas le jour exact (« l'été 1969 ») **n'entre pas dans la base**, même pour les équivalences seulement (décision du 13/11/2026).
-- Quand la date dépend du pays (sortie d'un film, d'une console), la date de référence est la **première sortie mondiale**, et chaque pays dont la date diffère a sa propre date, elle aussi sourcée (décision du 13/11/2026, voir « Dates par région »).
+- Quand la date dépend du pays (sortie d'un film, d'une console), la date de référence est la **date française** (décision du 14/11/2026, qui remplace celle du 13/11/2026 donnant la première sortie mondiale, trop peu fiable dans les sources), et chaque autre pays dont la date diffère a sa propre date, elle aussi sourcée (voir « Dates par région »).
 
 ## Format d'un événement (validé le 13/11/2026)
 
 ```json
 {
-  "id": "film-intouchables",
+  "id": "film-intouchables-2011",
   "date": "2011-11-02",
-  "regionalDates": { "US": "2012-05-25" },
   "title": { "fr": "Intouchables" },
   "kind": "film-release",
   "type": "french-comedy-hit",
   "importance": 3,
-  "source": "https://fr.wikipedia.org/wiki/Intouchables",
-  "note": "Première sortie : France."
+  "source": "https://fr.wikipedia.org/wiki/Intouchables_(film)",
+  "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q595 : pas de date française."
 }
 ```
 
 | Champ | Obligatoire | Description |
 |---|---|---|
 | `id` | oui | Identifiant stable, en minuscules et tirets, unique dans la base. Ne change jamais une fois publié (le widget et les tests s'y réfèrent). |
-| `date` | oui | Date de référence, `AAAA-MM-JJ`, au jour près, dans le passé : la première sortie mondiale pour une œuvre ou un produit, la date de l'événement sinon. |
+| `date` | oui | Date de référence, `AAAA-MM-JJ`, au jour près, dans le passé : la sortie en France pour une œuvre ou un produit (décision du 14/11/2026), la date de l'événement sinon. |
 | `regionalDates` | non | Dates par pays (code ISO 3166-1 à deux lettres : `FR`, `BE`, `US`, `JP`…) quand elles diffèrent de `date`. Chacune doit être sourcée (dans `source` ou `note`). |
 | `title` | oui | Nom affiché, par langue. Le français (`fr`) est obligatoire ; les autres langues s'ajoutent au jalon « Traductions ». Les noms propres et les titres d'œuvre restent dans leur forme connue dans la langue affichée. |
 | `kind` | oui | Nature de l'événement, qui donne le libellé affiché sous le titre (voir « Natures »). |
@@ -42,7 +41,7 @@ La base d'événements est le cœur de l'application : le coup de vieux du jour,
 
 - La **région** de l'utilisateur est déduite du système (région du téléphone ou de Windows) et se change dans Réglages.
 - Pour chaque événement, l'application utilise `regionalDates[région]` si elle existe, sinon `date`. Cette date sert partout : anniversaire, âge, équivalences.
-- Au départ, seules les dates françaises sont saisies quand elles diffèrent de la première sortie mondiale ; les autres pays s'ajoutent au fil des traductions.
+- Au départ, seule la date française est saisie (dans `date`) ; les dates des autres pays s'ajoutent en `regionalDates` au fil des traductions.
 
 ## Natures (`kind`, validées le 13/11/2026)
 
@@ -135,5 +134,5 @@ Méthode suivie pour le premier lot, à reprendre pour les suivants :
 3. **Contrôle croisé** avec Wikidata (date de publication avec pour lieu la France). Le résultat est écrit dans `note` : « même date », « pas de date française » ou « donne une autre date française : … ». En cas de désaccord, la fiche technique fait foi.
 4. Un film sans date française vérifiable n'entre pas (lot 1 : *Kirikou et la Sorcière*, *Trois hommes et un couffin*).
 5. **Source** : l'article de Wikipédia en français.
-6. **Importance** (proposition, **À valider**) : selon le nombre de Wikipédia qui ont un article sur le film (Wikidata) : 80 ou plus → 3, de 40 à 79 → 2, moins → 1 ; +1 (au plus 3) pour les comédies françaises, dont la notoriété est surtout nationale.
-7. **`date` = date française, sans `regionalDates`** (proposition, **À valider**) : la « première sortie mondiale » de Wikidata s'est révélée peu fiable (avant-premières, festivals, erreurs comme *Avengers* au 15/07/2011). Les dates des autres pays s'ajouteront en `regionalDates` avec les traductions.
+6. **Importance** (décision du 14/11/2026) : selon le nombre de Wikipédia qui ont un article sur le film (Wikidata) : 80 ou plus → 3, de 40 à 79 → 2, moins → 1 ; +1 (au plus 3) pour les comédies françaises, dont la notoriété est surtout nationale.
+7. **`date` = date française, sans `regionalDates`** (décision du 14/11/2026) : la « première sortie mondiale » de Wikidata s'est révélée peu fiable (avant-premières, festivals, erreurs comme *Avengers* au 15/07/2011). Les dates des autres pays s'ajouteront en `regionalDates` avec les traductions.
