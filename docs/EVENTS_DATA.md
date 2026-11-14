@@ -113,7 +113,7 @@ Environ **400 événements**, pour que presque chaque jour de l'année ait au mo
 
 ## Fichiers et stockage (décision du 14/11/2026)
 
-- **Un fichier JSON par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`), dans `ui/src/commonMain/composeResources/files/events/`. Chaque fichier est un tableau d'événements au format ci-dessus.
+- **Un fichier JSON par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`), dans `src/ui/src/commonMain/composeResources/files/events/`. Chaque fichier est un tableau d'événements au format ci-dessus.
 - Les fichiers sont lus au démarrage et gardés **en mémoire**, avec des index par jour de l'année et par type (voir [`ARCHITECTURE.md`](ARCHITECTURE.md), « Base d'événements »).
 - **À 5 000 événements**, on mesure et on décide s'il faut passer à une base SQLite précompilée, construite à la compilation à partir des mêmes fichiers. Les fichiers JSON restent alors la source éditée par les humains.
 

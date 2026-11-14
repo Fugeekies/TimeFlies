@@ -11,6 +11,8 @@
 
 ## Couches et modules (décision du 14/11/2026)
 
+Les cinq modules sont rangés dans `src/` (`src/domain`, `src/data`, `src/ui`, `src/androidApp`, `src/desktopApp`), à part de la documentation et des fichiers de build. Leurs noms Gradle restent `:domain`, `:data`, `:ui`, `:androidApp` et `:desktopApp` (`settings.gradle.kts`).
+
 ```
         androidApp            desktopApp          ← assemblage (composition root), un par plateforme
         │  widget Glance      │  Tray, notification
@@ -94,7 +96,7 @@ class GetDailyShock(
 ## Base d'événements (décision du 14/11/2026)
 
 - **Fichiers JSON chargés en mémoire**, pas de base SQL : la base est en lecture seule et petite au départ. Format dans [`EVENTS_DATA.md`](EVENTS_DATA.md).
-- **Un fichier par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`) dans `ui/src/commonMain/composeResources/files/events/`, pour des PR de saisie petites et faciles à relire.
+- **Un fichier par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`) dans `src/ui/src/commonMain/composeResources/files/events/`, pour des PR de saisie petites et faciles à relire.
 - **Port** `EventRepository` dans `domain` :
 
   ```kotlin
