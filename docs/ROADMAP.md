@@ -30,10 +30,12 @@ Les événements sont lus, validés et interrogeables, sans encore d'écran.
 
 ### Jalon 3 — Première interface : Aujourd'hui
 Le coup de vieux du jour à l'écran, en style Polaroïd.
-- [ ] `domain` : port `Clock`, `Ages`, `Anniversaries` (chiffres ronds, repli sur les 7 jours suivants, 29 février), cas d'usage `GetDailyShock`, tests sur dates fixes.
-- [ ] Jetons du style Polaroïd (clair d'abord), polices embarquées ([`UI_DESIGN_SPEC.md`](UI_DESIGN_SPEC.md)).
-- [ ] Navigation adaptative avec les quatre destinations (les trois autres vides pour l'instant).
-- [ ] Écran Aujourd'hui ([`Today.template.md`](UISpec/Today.template.md)), sans âge de l'utilisateur tant que les réglages n'existent pas.
+- [x] `domain` : `Ages`, `Anniversaries` (chiffres ronds, puis importance, puis le plus récent ; repli sur les 7 jours suivants ; 10 anniversaires à venir au plus ; 29 février fêté le 28 les années non bissextiles), cas d'usage `GetDailyShock`, 20 tests sur dates fixes. Le port `Clock` était arrivé au jalon 2 ; `SystemClock` dans `data`.
+- [x] Jetons du style Polaroïd (clair), polices embarquées Caveat et Atkinson Hyperlegible (licences SIL OFL dans `licenses/`) ([`UI_DESIGN_SPEC.md`](UI_DESIGN_SPEC.md)).
+- [x] Navigation adaptative avec les quatre destinations (`NavigationSuiteScaffold` : barre en bas sur téléphone, rail sur une fenêtre large ; les trois autres écrans affichent « Cet écran arrive dans un prochain jalon »). Icônes dessinées comme sur les maquettes.
+- [x] Écran Aujourd'hui ([`Today.template.md`](UISpec/Today.template.md)) : photo Polaroïd du jour (ou « Dans N jours »), « Aussi aujourd'hui », « Bientôt… » par jour, deux colonnes au-delà de 840 dp, recalcul au changement de jour, descriptions pour la lecture d'écran. Sans âge de l'utilisateur (jalon 4).
+- [x] Polaroïd enrichi (décision du 14/11/2026) : cadre de la couleur de la décennie, chiffre de la décennie écrit à la main dans le coin, dessin au trait du type dans la photo (4 types du cinéma, un dessin par famille pour les autres).
+- [ ] Reste de la spec d'Aujourd'hui, reporté : toucher une carte ouvre Mon équivalent (jalon 8), actualisation par glisser vers le bas ou `F5`.
 
 ### Jalon 4 — Menu Réglages
 Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
@@ -94,6 +96,8 @@ Paliers communs à tous les thèmes (répartition indicative, à ajuster selon c
 | 1 | ~70 | ~400 | V1 : presque un anniversaire par jour, et des équivalences pour chaque type |
 | 2 | ~300 | ~1 800 | plusieurs anniversaires par jour, des équivalences pour la plupart des écarts d'âge |
 | 3 | ~850 | ~5 000 | objectif final |
+
+Avec le palier 1 de chaque thème viennent aussi **les dessins au trait de ses types** pour la photo du Polaroïd (`TypeDrawings.kt`, docs/UI_DESIGN_SPEC.md § 1) ; d'ici là, ses types prennent le dessin de leur famille. Les 4 types du cinéma sont dessinés.
 
 ### Données — Séries & télé
 Sitcoms et séries cultes, téléréalité, émissions jeunesse, dessins animés à la télé.

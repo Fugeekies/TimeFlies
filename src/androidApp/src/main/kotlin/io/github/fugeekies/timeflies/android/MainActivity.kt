@@ -10,6 +10,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
-        setContent { App() }
+        val graph = (application as TimeFliesApplication).graph
+        setContent { App(getDailyShock = graph.getDailyShock, clock = graph.clock) }
     }
 }

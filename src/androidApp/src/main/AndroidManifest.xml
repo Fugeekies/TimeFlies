@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
+        android:name=".TimeFliesApplication"
         android:allowBackup="false"
         android:label="TimeFlies"
         android:supportsRtl="true"

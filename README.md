@@ -31,3 +31,5 @@ Kotlin et Compose Multiplatform : un seul code pour Android et Windows. Les vers
 ## Licence
 
 [GNU GPL v3](LICENSE).
+
+Polices embarquées sous licence SIL Open Font License 1.1 : [Caveat](licenses/OFL-Caveat.txt) et [Atkinson Hyperlegible](licenses/OFL-AtkinsonHyperlegible.txt).

@@ -33,14 +33,35 @@ Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on
 La feuille du jour devient une **jaquette de cassette VHS** : étiquette blanche collée de travers, nombre d'années écrit comme un titre de film enregistré, petit « ▶ REC » et compteur de bande `00:15:00` en guise d'ornement. Ambiance sombre par défaut, couleurs saturées (magenta, cyan, jaune), léger effet de lignes de balayage sur la feuille seulement.
 
 #### Polaroïd (V1, maquette validée le 13/11/2026)
-La feuille du jour devient un **Polaroïd** : cadre blanc avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
+La feuille du jour devient un **Polaroïd** : cadre (de la couleur de la décennie, voir plus bas) avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
 
 Règles du style Polaroïd dans toute l'application :
 - **Écriture manuscrite** (`Caveat`) pour le nombre d'années partout où il apparaît : la photo du jour, et le **bandeau de gauche des cartes** des listes (« 18 ans », « 37 ans »), en accent. Aussi pour le titre de la photo, sa légende et les titres de section (« Bientôt… »).
 - **Texte lisible** (`Atkinson Hyperlegible`) pour tout le reste : titres et détails des cartes, menus, réglages, boutons. Les menus restent aussi clairs qu'en Éphéméride.
 - Cartes des listes : fond blanc cassé, coins de 6 px, ombre légère, sans bordure.
 
-Jetons de la maquette (clair) : fond `#E8DFD2`, cadre et cartes `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C`. À finir avant les écrans de la V1 : la **version sombre** et le **contraste** de la légende manuscrite (taille minimale, couleur), voir la feuille de route.
+Jetons de la maquette (clair) : fond `#E8DFD2`, cartes `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C`. À finir avant les écrans de la V1 : la **version sombre** et le **contraste** de la légende manuscrite (taille minimale, couleur), voir la feuille de route.
+
+##### Le cadre dit *quand*, la photo dit *quoi* (décision du 14/11/2026)
+
+![Huit Polaroïds, un par décennie](maquettes/polaroid-decennies.png)
+
+- **Le cadre** prend la couleur de la **décennie** de l'événement (teintes claires, pour garder l'encre foncée) :
+
+  | Décennie | Cadre |
+  |---|---|
+  | Avant 1960 | `#EFE3C4` crème jauni |
+  | Années 60 | `#CFE8DC` vert d'eau |
+  | Années 70 | `#F2D3A0` moutarde clair |
+  | Années 80 | `#F6C6D9` rose adouci |
+  | Années 90 | `#BFE6E3` turquoise clair |
+  | Années 2000 | `#DADDE2` argenté |
+  | Années 2010 | `#FBFAF7` blanc |
+  | Années 2020 | `#DDD3F0` lavande |
+
+- **Le chiffre de la décennie** est écrit à la main dans le coin bas droit du cadre, comme un tampon incliné : « années » en petit, puis « 70 » (« 2000 », « 2010 » à partir de 2000), dans la couleur du cadre assombrie de 45 % vers l'encre. Le chiffre suit la vraie décennie (« 30 » pour 1938), même quand la couleur du cadre regroupe tout ce qui précède 1960.
+- **La photo** garde la couleur de la famille, avec en filigrane (blanc à 42 %), en haut à droite, **un dessin au trait par type** : pop-corn (blockbuster), crayon et étincelle (film d'animation), masques de théâtre (comédie française), planète et étoiles (épisode de saga). Un type sans dessin prend celui de sa famille : clap, télévision, vinyle, ballon, manette, monument. Les dessins des autres types arrivent avec leurs données.
+- Tout est dessiné par l'application (vectoriel) : aucune image, aucun droit, aucun poids ajouté.
 
 #### Règles communes aux trois styles
 - Contraste AA dans les trois, en clair et en sombre (VHS peut ne proposer que le sombre).
