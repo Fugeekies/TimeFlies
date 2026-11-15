@@ -17,11 +17,12 @@ object Ages {
     }
 
     /**
-     * How old the user born on [birth] was on [at] (decision of 15/11/2026): the birth year itself and the
-     * years before it are told in calendar years; after it, in completed years, "less than a year" for 0.
+     * How old the person born on [birth] was on [at]: before the birth, a negative age in completed years, as on the
+     * "Quel âge ?" screen ("Tu avais −3 ans.", decision of 15/11/2026); in the birth year after the birth, "the year of
+     * the birth"; then completed years, "less than a year" for 0.
      */
     fun userAge(birth: LocalDate, at: LocalDate): UserAge = when {
-        at.year < birth.year -> UserAge.BeforeBirth(birth.year - at.year)
+        at < birth -> UserAge.BeforeBirth(-age(birth, at))
         at.year == birth.year -> UserAge.BirthYear
         else -> when (val years = age(birth, at)) {
             0 -> UserAge.UnderOne

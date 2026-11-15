@@ -62,7 +62,6 @@ import io.github.fugeekies.timeflies.ui.resources.type_us_president_elected
 import io.github.fugeekies.timeflies.ui.resources.type_actor_turned_politician
 import io.github.fugeekies.timeflies.ui.resources.type_world_event
 import io.github.fugeekies.timeflies.ui.resources.type_royal_event
-import io.github.fugeekies.timeflies.ui.resources.person_age_before_birth
 import io.github.fugeekies.timeflies.ui.resources.person_age_birth_year
 import io.github.fugeekies.timeflies.ui.resources.person_age_under_one
 import io.github.fugeekies.timeflies.ui.resources.years_count
@@ -101,7 +100,8 @@ fun userAgeText(age: UserAge?): String? = when (age) {
     is UserAge.Years -> pluralStringResource(Res.plurals.user_age_years, age.years, age.years)
     UserAge.UnderOne -> stringResource(Res.string.user_age_under_one)
     UserAge.BirthYear -> stringResource(Res.string.user_age_birth_year)
-    is UserAge.BeforeBirth -> pluralStringResource(Res.plurals.user_age_before_birth, age.years, age.years)
+    // "Tu avais −3 ans.", with a real minus sign, as on "Quel âge ?" (decision of 15/11/2026).
+    is UserAge.BeforeBirth -> pluralStringResource(Res.plurals.user_age_before_birth, age.years, "−${age.years}")
 }
 
 @Composable
@@ -181,13 +181,13 @@ fun typeLabel(type: EventType): String = stringResource(
     },
 )
 
-/** A person's age on the date of an event, after their pictogram: "6 ans", "moins d'un an", "2 ans avant sa naissance". */
+/** A person's age on the date of an event, after their pictogram: "6 ans", "moins d'un an", "−2 ans" before the birth. */
 @Composable
 fun personAgeText(age: UserAge): String = when (age) {
     is UserAge.Years -> pluralStringResource(Res.plurals.years_count, age.years, age.years)
     UserAge.UnderOne -> stringResource(Res.string.person_age_under_one)
     UserAge.BirthYear -> stringResource(Res.string.person_age_birth_year)
-    is UserAge.BeforeBirth -> pluralStringResource(Res.plurals.person_age_before_birth, age.years, age.years)
+    is UserAge.BeforeBirth -> signedYearsText(-age.years)
 }
 
 /**

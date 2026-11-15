@@ -49,8 +49,8 @@ class GetEquivalencesTest {
         assertEquals(EventType.MUSIC_ICON_DEATH, death.type)
         assertEquals(UserAge.Years(6), death.left.age)
         assertEquals(UserAge.Years(6), death.right.age)
-        // The child was not born yet in 2004.
-        assertEquals(UserAge.BeforeBirth(7), pairs[1].left.age)
+        // The child was not born yet in 2004: 7 years and 2 months before, "−8 ans".
+        assertEquals(UserAge.BeforeBirth(8), pairs[1].left.age)
     }
 
     @Test

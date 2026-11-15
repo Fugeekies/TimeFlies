@@ -89,7 +89,7 @@ Notations : deux personnes `A` et `B` (l'utilisateur et l'autre personne, dans u
 - Une date cible dans le futur ne donne pas d'équivalent (cas où `B` est plus jeune que `A`).
 - S'il existe plusieurs candidats dans la tolérance, on garde le plus proche de la date cible, puis la plus grande `importance`.
 - **Tous les événements** de la base peuvent être appariés, y compris ceux d'avant la naissance des deux personnes : « je n'ai pas connu l'élection de De Gaulle, mais pour un jeune ça peut être celle de Chirac » (décision du 13/11/2026).
-- L'âge de chacun au moment de son événement est affiché : `âge(n_A, E.date)` et `âge(n_B, F.date)`. Un événement antérieur à une naissance s'affiche « N ans avant sa naissance ».
+- L'âge de chacun au moment de son événement est affiché : `âge(n_A, E.date)` et `âge(n_B, F.date)`. Un événement antérieur à une naissance s'affiche avec un âge négatif, « −N ans » (décision du 15/11/2026).
 - Un événement ne s'apparie jamais avec lui-même.
 - Un événement compte dès **1 an** (décision du 13/11/2026) : un événement de moins d'un an n'est ni apparié ni affiché comme anniversaire.
 
