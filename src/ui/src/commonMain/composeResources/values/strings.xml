@@ -51,9 +51,10 @@
     </plurals>
     <string name="user_age_under_one">Tu avais moins d'un an.</string>
     <string name="user_age_birth_year">C'était l'année de ta naissance.</string>
+    <!-- Before the birth, a negative age as on "Quel âge ?" (decision of 15/11/2026); %1$s is "−3", with a real minus sign. -->
     <plurals name="user_age_before_birth">
-        <item quantity="one">C'était %1$d an avant ta naissance.</item>
-        <item quantity="other">C'était %1$d ans avant ta naissance.</item>
+        <item quantity="one">Tu avais %1$s an.</item>
+        <item quantity="other">Tu avais %1$s ans.</item>
     </plurals>
 
     <!-- First launch (docs/UISpec/Onboarding.template.md) -->
@@ -106,10 +107,6 @@
     <!-- Age of a person on the date of an event, after their pictogram. -->
     <string name="person_age_under_one">moins d'un an</string>
     <string name="person_age_birth_year">l'année de sa naissance</string>
-    <plurals name="person_age_before_birth">
-        <item quantity="one">%1$d an avant sa naissance</item>
-        <item quantity="other">%1$d ans avant sa naissance</item>
-    </plurals>
 
     <!-- Quel âge ? (docs/UISpec/EventAges.template.md, decision of 15/11/2026) -->
     <string name="event_ages_title">Quel âge ?</string>

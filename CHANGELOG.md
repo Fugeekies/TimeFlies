@@ -43,5 +43,6 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Avant la naissance, l'âge devient négatif comme sur « Quel âge ? » : « Tu avais −3 ans. » sur Aujourd'hui au lieu de « C'était 3 ans avant ta naissance. », et « 👤 −2 ans » sur Équivalences au lieu de « 2 ans avant sa naissance ». Il se compte en années révolues (quelques mois avant la naissance : « −1 an »), donc le même nombre sur les trois écrans.
 - `domain` dépend aussi de `kotlinx-coroutines-core`, pour le `Flow` des réglages (`docs/ARCHITECTURE.md`).
 - L'autre personne des équivalences peut être plus jeune ou plus âgée que l'utilisateur (1 à 100 ans) ; un écart de moins de 5 ans n'est plus refusé. `settings.json` passe en version 2 : `youngAge` devient `otherAge` (un ancien fichier se lit toujours), avec le sens et les thèmes de l'écran Équivalences.

@@ -39,7 +39,7 @@ Le principe de l'épisode : pour une autre personne de l'âge choisi, quels év�
 
 #### Liste des paires
 * Une carte par paire, en deux colonnes séparées par une flèche ⇄.
-* Chaque côté : titre de l'événement, nature, date (« 15 juillet 2018 »), âge au moment de l'événement, précédé du pictogramme de la personne (« 👤 6 ans », « 👤 moins d'un an » ou « 👤 2 ans avant sa naissance »).
+* Chaque côté : titre de l'événement, nature, date (« 15 juillet 2018 »), âge au moment de l'événement, précédé du pictogramme de la personne (« 👤 6 ans », « 👤 moins d'un an » ou, avant sa naissance, « 👤 −2 ans » comme sur « Quel âge ? », décision du 15/11/2026).
 * En haut de la carte : pastille et nom du type en clair (« Victoire des Bleus en Coupe du monde »).
 * **Tous les événements** de la base sont pris en compte, y compris ceux d'avant la naissance des deux personnes (décision du 13/11/2026).
 * **Tri** : de l'événement le plus récent au plus ancien (côté de la colonne de gauche).

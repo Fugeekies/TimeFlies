@@ -57,10 +57,12 @@ class GenerationsTest {
         assertEquals(UserAge.Years(20), Ages.userAge(birth, LocalDate(2011, 11, 2)))
         assertEquals(UserAge.UnderOne, Ages.userAge(birth, LocalDate(1992, 2, 10)))
         assertEquals(UserAge.Years(1), Ages.userAge(birth, LocalDate(1992, 5, 1)))
-        assertEquals(UserAge.BirthYear, Ages.userAge(birth, LocalDate(1991, 1, 3)))
+        assertEquals(UserAge.BirthYear, Ages.userAge(birth, LocalDate(1991, 5, 1)))
         assertEquals(UserAge.BirthYear, Ages.userAge(birth, LocalDate(1991, 12, 31)))
-        // Before the birth year: difference of calendar years.
-        assertEquals(UserAge.BeforeBirth(1), Ages.userAge(birth, LocalDate(1990, 3, 1)))
+        // Before the birth, even in the birth year: minus the age in completed years, as on "Quel âge ?" ("Tu avais −1 an.").
+        assertEquals(UserAge.BeforeBirth(1), Ages.userAge(birth, LocalDate(1991, 1, 3)))
+        assertEquals(UserAge.BeforeBirth(2), Ages.userAge(birth, LocalDate(1990, 3, 1)))
+        assertEquals(Ages.age(birth, LocalDate(1990, 3, 1)), -2)
         assertEquals(UserAge.BeforeBirth(3), Ages.userAge(birth, LocalDate(1988, 12, 31)))
     }
 }
