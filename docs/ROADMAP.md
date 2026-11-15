@@ -129,7 +129,7 @@ Blockbusters, films d'animation, comédies françaises, sagas.
 
 ### Données — Musique
 Morts d'icônes de la musique, divas, boys bands, albums de rap et de pop, tubes de l'été.
-- [ ] Palier 1 · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 78 événements (25 morts d'icônes, 12 albums pop, 12 albums de rap, 10 tubes de divas, 10 tubes de boys bands, 9 tubes de l'été), date de sortie originale pour les albums et les singles (15/11/2026, méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Sport
 Stars du foot, victoires des Bleus, Jeux olympiques, records.

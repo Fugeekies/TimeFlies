@@ -1,0 +1,938 @@
+[
+  {
+    "id": "death-edith-piaf-1963",
+    "date": "1963-10-10",
+    "title": {
+      "fr": "Édith Piaf"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/%C3%89dith_Piaf",
+    "note": "Date de décès de l'infobox. Wikidata Q1631 donne deux dates : 1963-10-10 et 1963-10-11 (annonce officielle le 11)."
+  },
+  {
+    "id": "single-respect-aretha-franklin-1967",
+    "date": "1967-04-29",
+    "title": {
+      "fr": "Respect (Aretha Franklin)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Respect_(chanson_d'Otis_Redding)",
+    "note": "Sortie de la reprise d'Aretha Franklin selon la seconde infobox de l'article. Wikidata Q2030651 décrit la version d'Otis Redding (1965) : pas de date pour la reprise."
+  },
+  {
+    "id": "album-sgt-peppers-1967",
+    "date": "1967-06-01",
+    "title": {
+      "fr": "Sgt. Pepper's Lonely Hearts Club Band (The Beatles)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Sgt._Pepper's_Lonely_Hearts_Club_Band_(album)",
+    "note": "Sortie au Royaume-Uni et en France selon l'infobox et l'introduction. Wikidata Q169226 donne une autre date au Royaume-Uni : 1967-05-26."
+  },
+  {
+    "id": "album-abbey-road-1969",
+    "date": "1969-09-26",
+    "title": {
+      "fr": "Abbey Road (The Beatles)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Abbey_Road_(album)",
+    "note": "Sortie au Royaume-Uni selon l'infobox (qui donne aussi la France le 12 septembre 1969). Wikidata Q173643 : même date."
+  },
+  {
+    "id": "death-jimi-hendrix-1970",
+    "date": "1970-09-18",
+    "title": {
+      "fr": "Jimi Hendrix"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jimi_Hendrix",
+    "note": "Date de décès de l'infobox. Wikidata Q5928 : même date."
+  },
+  {
+    "id": "death-janis-joplin-1970",
+    "date": "1970-10-04",
+    "title": {
+      "fr": "Janis Joplin"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Janis_Joplin",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q1514 : même date."
+  },
+  {
+    "id": "death-jim-morrison-1971",
+    "date": "1971-07-03",
+    "title": {
+      "fr": "Jim Morrison"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jim_Morrison",
+    "note": "Date de décès de l'infobox. Wikidata Q44301 : même date."
+  },
+  {
+    "id": "album-the-dark-side-of-the-moon-1973",
+    "date": "1973-03-01",
+    "title": {
+      "fr": "The Dark Side of the Moon (Pink Floyd)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Dark_Side_of_the_Moon",
+    "note": "Première sortie (États-Unis) selon l'infobox. Wikidata Q150901 : même date aux États-Unis."
+  },
+  {
+    "id": "album-rumours-1977",
+    "date": "1977-02-04",
+    "title": {
+      "fr": "Rumours (Fleetwood Mac)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rumours",
+    "note": "Sortie selon l'infobox. Wikidata Q695405 : même date."
+  },
+  {
+    "id": "death-elvis-presley-1977",
+    "date": "1977-08-16",
+    "title": {
+      "fr": "Elvis Presley"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Elvis_Presley",
+    "note": "Date de décès de l'infobox. Wikidata Q303 : même date."
+  },
+  {
+    "id": "death-claude-francois-1978",
+    "date": "1978-03-11",
+    "title": {
+      "fr": "Claude François"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Claude_Fran%C3%A7ois",
+    "note": "Date de décès de l'infobox. Wikidata Q365985 : même date."
+  },
+  {
+    "id": "death-jacques-brel-1978",
+    "date": "1978-10-09",
+    "title": {
+      "fr": "Jacques Brel"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jacques_Brel",
+    "note": "Date de décès de l'infobox. Wikidata Q1666 : même date."
+  },
+  {
+    "id": "death-john-lennon-1980",
+    "date": "1980-12-08",
+    "title": {
+      "fr": "John Lennon"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/John_Lennon",
+    "note": "Date de décès de l'infobox. Wikidata Q1203 : même date."
+  },
+  {
+    "id": "death-bob-marley-1981",
+    "date": "1981-05-11",
+    "title": {
+      "fr": "Bob Marley"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Bob_Marley",
+    "note": "Date de décès de l'infobox. Wikidata Q409 : même date (et une seconde valeur erronée, 1981-04-11)."
+  },
+  {
+    "id": "album-thriller-1982",
+    "date": "1982-11-30",
+    "title": {
+      "fr": "Thriller (Michael Jackson)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Thriller_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q44320 : même date."
+  },
+  {
+    "id": "album-born-in-the-usa-1984",
+    "date": "1984-06-04",
+    "title": {
+      "fr": "Born in the U.S.A. (Bruce Springsteen)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Born_in_the_U.S.A.",
+    "note": "Sortie selon l'infobox. Wikidata Q40425 : même date."
+  },
+  {
+    "id": "single-like-a-virgin-1984",
+    "date": "1984-11-06",
+    "title": {
+      "fr": "Like a Virgin (Madonna)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Like_a_Virgin_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q542497 : même date."
+  },
+  {
+    "id": "death-daniel-balavoine-1986",
+    "date": "1986-01-14",
+    "title": {
+      "fr": "Daniel Balavoine"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Daniel_Balavoine",
+    "note": "Date de décès de l'infobox. Wikidata Q1802 : même date."
+  },
+  {
+    "id": "death-dalida-1987",
+    "date": "1987-05-03",
+    "title": {
+      "fr": "Dalida"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Dalida",
+    "note": "Date de décès de l'infobox. Wikidata Q539171 : même date."
+  },
+  {
+    "id": "single-la-bamba-los-lobos-1987",
+    "date": "1987-07-20",
+    "title": {
+      "fr": "La Bamba (Los Lobos)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/La_Bamba",
+    "note": "Sortie de la version de Los Lobos selon la seconde infobox de l'article. Wikidata Q641677 : année seulement."
+  },
+  {
+    "id": "album-it-takes-a-nation-1988",
+    "date": "1988-06-28",
+    "title": {
+      "fr": "It Takes a Nation of Millions to Hold Us Back (Public Enemy)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/It_Takes_a_Nation_of_Millions_to_Hold_Us_Back",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q926127 donne une autre date : 1988-06-30."
+  },
+  {
+    "id": "album-like-a-prayer-1989",
+    "date": "1989-03-21",
+    "title": {
+      "fr": "Like a Prayer (Madonna)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Like_a_Prayer_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q252447 : même date."
+  },
+  {
+    "id": "single-lambada-1989",
+    "date": "1989-07-20",
+    "title": {
+      "fr": "Lambada (Kaoma)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Lambada_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q701766 : mois seulement (juillet 1989)."
+  },
+  {
+    "id": "death-serge-gainsbourg-1991",
+    "date": "1991-03-02",
+    "title": {
+      "fr": "Serge Gainsbourg"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Serge_Gainsbourg",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q1698 : même date."
+  },
+  {
+    "id": "album-nevermind-1991",
+    "date": "1991-09-24",
+    "title": {
+      "fr": "Nevermind (Nirvana)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nevermind",
+    "note": "Sortie selon l'infobox. Wikidata Q17444 : même date."
+  },
+  {
+    "id": "album-qui-seme-le-vent-1991",
+    "date": "1991-10-15",
+    "title": {
+      "fr": "Qui sème le vent récolte le tempo (MC Solaar)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qui_s%C3%A8me_le_vent_r%C3%A9colte_le_tempo",
+    "note": "Sortie selon l'infobox. Wikidata Q617517 : même date."
+  },
+  {
+    "id": "death-freddie-mercury-1991",
+    "date": "1991-11-24",
+    "title": {
+      "fr": "Freddie Mercury"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Freddie_Mercury",
+    "note": "Date de décès de l'infobox. Wikidata Q15869 : même date."
+  },
+  {
+    "id": "single-i-will-always-love-you-1992",
+    "date": "1992-11-03",
+    "title": {
+      "fr": "I Will Always Love You (Whitney Houston)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/I_Will_Always_Love_You",
+    "note": "Sortie de la version de Whitney Houston selon la seconde infobox de l'article. Wikidata Q666856 : année de la version originale seulement (1974)."
+  },
+  {
+    "id": "single-pray-take-that-1993",
+    "date": "1993-07-05",
+    "title": {
+      "fr": "Pray (Take That)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pray_(chanson_de_Take_That)",
+    "note": "Sortie au Royaume-Uni selon l'infobox. Wikidata Q3909988 : mois seulement (juillet 1993)."
+  },
+  {
+    "id": "album-ready-to-die-1994",
+    "date": "1994-09-13",
+    "title": {
+      "fr": "Ready to Die (The Notorious B.I.G.)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ready_to_Die",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q529999 : même date."
+  },
+  {
+    "id": "single-pour-que-tu-m-aimes-encore-1995",
+    "date": "1995-03-13",
+    "title": {
+      "fr": "Pour que tu m'aimes encore (Céline Dion)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pour_que_tu_m'aimes_encore",
+    "note": "Sortie selon l'infobox. Wikidata Q2708219 : année seulement."
+  },
+  {
+    "id": "single-back-for-good-1995",
+    "date": "1995-03-27",
+    "title": {
+      "fr": "Back for Good (Take That)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Back_for_Good_(chanson)",
+    "note": "Sortie au Royaume-Uni selon l'infobox. Wikidata Q2574121 : même date."
+  },
+  {
+    "id": "album-paris-sous-les-bombes-1995",
+    "date": "1995-03-28",
+    "title": {
+      "fr": "Paris sous les bombes (Suprême NTM)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Paris_sous_les_bombes",
+    "note": "Sortie selon l'infobox. Wikidata Q3100880 : même date."
+  },
+  {
+    "id": "album-jagged-little-pill-1995",
+    "date": "1995-06-13",
+    "title": {
+      "fr": "Jagged Little Pill (Alanis Morissette)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jagged_Little_Pill",
+    "note": "Sortie selon l'infobox. Wikidata Q750084 donne une autre date : 1995-06-09."
+  },
+  {
+    "id": "album-all-eyez-on-me-1996",
+    "date": "1996-02-13",
+    "title": {
+      "fr": "All Eyez on Me (Tupac Shakur)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/All_Eyez_on_Me",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q498054 : même date."
+  },
+  {
+    "id": "single-coco-jamboo-1996",
+    "date": "1996-03-29",
+    "title": {
+      "fr": "Coco Jamboo (Mr. President)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coco_Jamboo",
+    "note": "Sortie selon l'infobox. Wikidata Q2918656 : même date."
+  },
+  {
+    "id": "death-tupac-shakur-1996",
+    "date": "1996-09-13",
+    "title": {
+      "fr": "Tupac Shakur"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Tupac_Shakur",
+    "note": "Date de décès de l'infobox. Wikidata Q6107 : même date."
+  },
+  {
+    "id": "single-quit-playing-games-1996",
+    "date": "1996-10-14",
+    "title": {
+      "fr": "Quit Playing Games (with My Heart) (Backstreet Boys)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Quit_Playing_Games_(With_My_Heart)",
+    "note": "Première sortie (Royaume-Uni) selon l'infobox. Wikidata Q2454853 : année seulement."
+  },
+  {
+    "id": "single-tearin-up-my-heart-1997",
+    "date": "1997-02-10",
+    "title": {
+      "fr": "Tearin' Up My Heart (*NSYNC)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tearin'_Up_My_Heart",
+    "note": "Première sortie (Allemagne) selon l'infobox. Wikidata Q5841534 : même date."
+  },
+  {
+    "id": "death-the-notorious-big-1997",
+    "date": "1997-03-09",
+    "title": {
+      "fr": "The Notorious B.I.G."
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Notorious_B.I.G.",
+    "note": "Date de décès de l'infobox. Wikidata Q179157 : même date."
+  },
+  {
+    "id": "album-l-ecole-du-micro-d-argent-1997",
+    "date": "1997-03-18",
+    "title": {
+      "fr": "L'École du micro d'argent (IAM)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'%C3%89cole_du_micro_d'argent",
+    "note": "Sortie selon l'infobox. Wikidata Q920654 : même date."
+  },
+  {
+    "id": "single-everybody-backstreets-back-1997",
+    "date": "1997-07-14",
+    "title": {
+      "fr": "Everybody (Backstreet's Back) (Backstreet Boys)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Everybody_(Backstreet's_Back)",
+    "note": "Sortie selon l'infobox. Wikidata Q2302917 : même date."
+  },
+  {
+    "id": "single-believe-1998",
+    "date": "1998-10-19",
+    "title": {
+      "fr": "Believe (Cher)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Believe_(chanson_de_Cher)",
+    "note": "Sortie selon l'infobox. Wikidata Q2639231 donne une autre date : 1998-10-18."
+  },
+  {
+    "id": "single-baby-one-more-time-1998",
+    "date": "1998-10-23",
+    "title": {
+      "fr": "…Baby One More Time (Britney Spears)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/...Baby_One_More_Time_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q155016 : même date."
+  },
+  {
+    "id": "single-livin-la-vida-loca-1999",
+    "date": "1999-03-23",
+    "title": {
+      "fr": "Livin' la Vida Loca (Ricky Martin)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Livin'_la_Vida_Loca",
+    "note": "Sortie selon l'infobox. Wikidata Q2604345 : même date."
+  },
+  {
+    "id": "single-i-want-it-that-way-1999",
+    "date": "1999-04-12",
+    "title": {
+      "fr": "I Want It That Way (Backstreet Boys)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/I_Want_It_That_Way",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q338796 : même date."
+  },
+  {
+    "id": "single-mambo-no-5-1999",
+    "date": "1999-04-19",
+    "title": {
+      "fr": "Mambo No. 5 (Lou Bega)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mambo_No._5",
+    "note": "Première sortie (Allemagne) de la version de Lou Bega selon l'infobox. Wikidata Q705575 décrit l'original de Pérez Prado (1949)."
+  },
+  {
+    "id": "album-2001-1999",
+    "date": "1999-11-16",
+    "title": {
+      "fr": "2001 (Dr. Dre)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/2001_(album_de_Dr._Dre)",
+    "note": "Sortie aux États-Unis selon l'infobox et l'introduction. Wikidata Q182280 : même date."
+  },
+  {
+    "id": "single-bye-bye-bye-2000",
+    "date": "2000-01-11",
+    "title": {
+      "fr": "Bye Bye Bye (*NSYNC)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Bye_Bye_Bye",
+    "note": "Sortie selon l'infobox. Wikidata Q3647850 : mois seulement (janvier 2000)."
+  },
+  {
+    "id": "album-the-marshall-mathers-lp-2000",
+    "date": "2000-05-23",
+    "title": {
+      "fr": "The Marshall Mathers LP (Eminem)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Marshall_Mathers_LP",
+    "note": "Sortie selon l'infobox. Wikidata Q153607 : même date."
+  },
+  {
+    "id": "album-temps-mort-2002",
+    "date": "2002-01-22",
+    "title": {
+      "fr": "Temps mort (Booba)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Temps_mort_(album)",
+    "note": "Sortie originale selon l'infobox. Wikidata Q288411 : même date."
+  },
+  {
+    "id": "single-dragostea-din-tei-2003",
+    "date": "2003-04-20",
+    "title": {
+      "fr": "Dragostea din tei (O-Zone)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dragostea_din_tei",
+    "note": "Sortie selon l'infobox. Wikidata Q161407 : année seulement (2003)."
+  },
+  {
+    "id": "single-crazy-in-love-2003",
+    "date": "2003-05-14",
+    "title": {
+      "fr": "Crazy in Love (Beyoncé)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Crazy_in_Love",
+    "note": "Sortie selon l'infobox. Wikidata Q148511 : mois seulement (mai 2003)."
+  },
+  {
+    "id": "album-the-college-dropout-2004",
+    "date": "2004-02-10",
+    "title": {
+      "fr": "The College Dropout (Kanye West)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_College_Dropout",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q747526 : même date."
+  },
+  {
+    "id": "single-single-ladies-2008",
+    "date": "2008-10-08",
+    "title": {
+      "fr": "Single Ladies (Put a Ring on It) (Beyoncé)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Single_Ladies_(Put_a_Ring_on_It)",
+    "note": "Première sortie (radio) selon l'infobox. Wikidata Q147409 : année seulement."
+  },
+  {
+    "id": "death-michael-jackson-2009",
+    "date": "2009-06-25",
+    "title": {
+      "fr": "Michael Jackson"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Michael_Jackson",
+    "note": "Date de décès de l'infobox. Wikidata Q2831 : même date."
+  },
+  {
+    "id": "single-rolling-in-the-deep-2010",
+    "date": "2010-11-29",
+    "title": {
+      "fr": "Rolling in the Deep (Adele)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rolling_in_the_Deep",
+    "note": "Sortie selon l'infobox. Wikidata Q170165 : même date."
+  },
+  {
+    "id": "album-21-2011",
+    "date": "2011-01-24",
+    "title": {
+      "fr": "21 (Adele)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/21_(album_d'Adele)",
+    "note": "Première sortie (Europe) selon l'infobox. Wikidata Q155169 : même date."
+  },
+  {
+    "id": "death-amy-winehouse-2011",
+    "date": "2011-07-23",
+    "title": {
+      "fr": "Amy Winehouse"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Amy_Winehouse",
+    "note": "Date de décès de l'infobox. Wikidata Q15897 : même date."
+  },
+  {
+    "id": "single-ai-se-eu-te-pego-2011",
+    "date": "2011-07-25",
+    "title": {
+      "fr": "Ai se eu te pego (Michel Teló)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ai_se_eu_te_pego",
+    "note": "Sortie de la version de Michel Teló selon la seconde infobox de l'article. Wikidata Q403225 : année seulement (2008, version originale)."
+  },
+  {
+    "id": "single-what-makes-you-beautiful-2011",
+    "date": "2011-09-11",
+    "title": {
+      "fr": "What Makes You Beautiful (One Direction)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/What_Makes_You_Beautiful",
+    "note": "Sortie selon l'infobox. Wikidata Q27979 : même date."
+  },
+  {
+    "id": "death-whitney-houston-2012",
+    "date": "2012-02-11",
+    "title": {
+      "fr": "Whitney Houston"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Whitney_Houston",
+    "note": "Date de décès de l'infobox. Wikidata Q34389 : même date."
+  },
+  {
+    "id": "single-gangnam-style-2012",
+    "date": "2012-07-15",
+    "title": {
+      "fr": "Gangnam Style (Psy)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Gangnam_Style",
+    "note": "Sortie selon l'infobox. Wikidata Q890 : même date."
+  },
+  {
+    "id": "album-random-access-memories-2013",
+    "date": "2013-05-17",
+    "title": {
+      "fr": "Random Access Memories (Daft Punk)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Random_Access_Memories",
+    "note": "Première sortie selon l'infobox. Wikidata Q8119033 : même date pour les premiers pays (2013-05-20 en France)."
+  },
+  {
+    "id": "single-story-of-my-life-2013",
+    "date": "2013-10-28",
+    "title": {
+      "fr": "Story of My Life (One Direction)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Story_of_My_Life_(chanson_de_One_Direction)",
+    "note": "Sortie selon l'infobox. Wikidata Q15221456 : même date."
+  },
+  {
+    "id": "album-1989-2014",
+    "date": "2014-10-27",
+    "title": {
+      "fr": "1989 (Taylor Swift)"
+    },
+    "kind": "album-release",
+    "type": "pop-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/1989_(album)",
+    "note": "Sortie selon l'infobox et l'introduction. Wikidata Q17544553 : même date."
+  },
+  {
+    "id": "album-feu-2015",
+    "date": "2015-06-08",
+    "title": {
+      "fr": "Feu (Nekfeu)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Feu_(album)",
+    "note": "Sortie selon l'infobox et l'introduction. Wikidata Q20668963 : même date."
+  },
+  {
+    "id": "single-hello-adele-2015",
+    "date": "2015-10-23",
+    "title": {
+      "fr": "Hello (Adele)"
+    },
+    "kind": "single-release",
+    "type": "diva-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hello_(chanson_d'Adele)",
+    "note": "Sortie selon l'infobox. Wikidata Q21172725 : même date."
+  },
+  {
+    "id": "death-david-bowie-2016",
+    "date": "2016-01-10",
+    "title": {
+      "fr": "David Bowie"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/David_Bowie",
+    "note": "Date de décès de l'infobox. Wikidata Q5383 : même date."
+  },
+  {
+    "id": "death-prince-2016",
+    "date": "2016-04-21",
+    "title": {
+      "fr": "Prince"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Prince_(musicien)",
+    "note": "Date de décès de l'infobox. Wikidata Q7542 : même date."
+  },
+  {
+    "id": "album-dans-la-legende-2016",
+    "date": "2016-09-16",
+    "title": {
+      "fr": "Dans la légende (PNL)"
+    },
+    "kind": "album-release",
+    "type": "rap-album-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dans_la_l%C3%A9gende",
+    "note": "Sortie selon l'infobox. Wikidata Q28494258 : même date en France."
+  },
+  {
+    "id": "death-george-michael-2016",
+    "date": "2016-12-25",
+    "title": {
+      "fr": "George Michael"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/George_Michael",
+    "note": "Date de décès de l'infobox. Wikidata Q130311 : même date."
+  },
+  {
+    "id": "single-despacito-2017",
+    "date": "2017-01-13",
+    "title": {
+      "fr": "Despacito (Luis Fonsi)"
+    },
+    "kind": "single-release",
+    "type": "summer-hit",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Despacito",
+    "note": "Sortie selon l'infobox. Wikidata Q28572509 donne une autre date : 2017-01-12."
+  },
+  {
+    "id": "death-johnny-hallyday-2017",
+    "date": "2017-12-05",
+    "title": {
+      "fr": "Johnny Hallyday"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Johnny_Hallyday",
+    "note": "Date de décès de l'infobox (nuit du 5 au 6 décembre, annoncée le 6). Wikidata Q212015 donne aussi 2017-12-06."
+  },
+  {
+    "id": "death-france-gall-2018",
+    "date": "2018-01-07",
+    "title": {
+      "fr": "France Gall"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/France_Gall",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q208258 : même date."
+  },
+  {
+    "id": "death-avicii-2018",
+    "date": "2018-04-20",
+    "title": {
+      "fr": "Avicii"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avicii",
+    "note": "Date de décès de l'infobox. Wikidata Q505476 : même date."
+  },
+  {
+    "id": "death-charles-aznavour-2018",
+    "date": "2018-10-01",
+    "title": {
+      "fr": "Charles Aznavour"
+    },
+    "kind": "death",
+    "type": "music-icon-death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Charles_Aznavour",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q1785 : même date."
+  },
+  {
+    "id": "single-dynamite-bts-2020",
+    "date": "2020-08-21",
+    "title": {
+      "fr": "Dynamite (BTS)"
+    },
+    "kind": "single-release",
+    "type": "boy-band-hit",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dynamite_(chanson_de_BTS)",
+    "note": "Sortie selon l'infobox. Wikidata Q98073193 : même date."
+  }
+]
