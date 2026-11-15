@@ -74,7 +74,7 @@ Pour tester tous les cas sans attendre le bon jour.
 ### Jalon 8 — Quel âge ?
 - [x] Décision du 15/11/2026 : « Mon équivalent » (chercher l'équivalent d'un événement) est remplacé par « Quel âge ? » : pour un événement choisi, l'âge des deux personnes à sa date, négatif avant une naissance (« −14 ans »).
 - [x] `domain` : cas d'usage `GetEventAges` (âges en années révolues, négatifs avant la naissance) et `SearchEvents` (recherche dès 2 caractères, liste par famille, sans les événements de moins d'un an), tests.
-- [x] Écran « Quel âge ? » ([`EventAges.template.md`](UISpec/EventAges.template.md)) : bandeau des âges partagé avec Équivalences (même `GenerationsViewModel`, âges à la volée communs), recherche ou liste par famille, carte de l'événement avec « 👤 35 ans → 6 ans » pour chaque personne, « Changer d'événement », mode réduit avec la recherche utilisable. Une carte touchée sur Aujourd'hui ou Équivalences y mène.
+- [x] Écran « Quel âge ? » ([`EventAges.template.md`](UISpec/EventAges.template.md)) : bandeau des âges partagé avec Équivalences (même `GenerationsViewModel`, âges à la volée communs), recherche ou liste par famille avec les deux âges directement sur chaque ligne (« 👤 6 ans » / « 👤 −14 ans », rien à toucher, décision du 15/11/2026), mode réduit avec la liste sans les âges. Une carte touchée sur Aujourd'hui ou Équivalences y mène, avec son titre dans la recherche.
 - [x] Benchmark de la page ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 1 ms pour la liste par famille, 5 000 événements).
 
 ### Jalon 9 — Finitions du style Polaroïd

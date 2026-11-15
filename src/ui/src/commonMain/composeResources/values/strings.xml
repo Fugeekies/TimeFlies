@@ -115,9 +115,9 @@
     <string name="event_ages_title">Quel âge ?</string>
     <string name="event_ages_search_hint">Cherche un film, une série, un artiste…</string>
     <string name="event_ages_no_results">Aucun événement ne correspond à cette recherche.</string>
-    <string name="event_ages_change">Changer d'événement</string>
-    <string name="event_ages_reduced">Indique ton mois et ton année de naissance pour voir ton âge à cette date.</string>
-    <string name="event_ages_a11y_person">%1$s : %2$s aujourd'hui, %3$s à cette date.</string>
+    <string name="event_ages_reduced">Indique ton mois et ton année de naissance pour voir ton âge à chaque événement.</string>
+    <!-- Read after an event: "Toi : 6 ans." / "L'autre personne : −14 ans." -->
+    <string name="event_ages_a11y_line">%1$s : %2$s.</string>
     <!-- An age that can be negative before a birth; %1$s is the number with a real minus sign ("−14"). -->
     <plurals name="years_signed">
         <item quantity="one">%1$s an</item>

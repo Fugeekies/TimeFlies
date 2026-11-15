@@ -23,21 +23,21 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+/** One line of the list: an event and the two people's ages on its date; [ages] is null in reduced mode. */
+data class EventLine(val event: Event, val ages: EventAges?)
+
 /**
- * What the "Quel âge ?" screen shows (docs/UISpec/EventAges.template.md).
+ * What the "Quel âge ?" screen shows (docs/UISpec/EventAges.template.md): every line carries the two ages, no need to
+ * touch it (decision of 15/11/2026).
  *
  * @property results search results; null while the query has fewer than 2 characters (the list by family shows).
  * @property byFamily every event by family, the most recent first; null until loaded.
- * @property chosen the chosen event; null while searching.
- * @property ages the two people's ages on [chosen]'s date; null without a chosen event or in reduced mode.
  */
 data class EventAgesUiState(
     val region: Region = Region.FRANCE,
     val query: String = "",
-    val results: List<Event>? = null,
-    val byFamily: Map<Family, List<Event>>? = null,
-    val chosen: Event? = null,
-    val ages: EventAges? = null,
+    val results: List<EventLine>? = null,
+    val byFamily: Map<Family, List<EventLine>>? = null,
     val error: Boolean = false,
 )
 
@@ -57,39 +57,41 @@ class EventAgesViewModel(
     private val _state = MutableStateFlow(EventAgesUiState())
     val state: StateFlow<EventAgesUiState> = _state.asStateFlow()
 
-    private val chosen = MutableStateFlow<Event?>(null)
     private val query = MutableStateFlow("")
+
+    /** Every event by family for [cachedRegion], read once per region. */
+    private var cachedByFamily: Map<Family, List<Event>>? = null
+    private var cachedRegion: Region? = null
 
     init {
         start()
-        // The ages: recomputed when the people or the event change.
+        // The lines: recomputed when the people, the region or the query change.
         viewModelScope.launch {
-            combine(generations.filterNotNull(), chosen) { people, event -> people to event }
-                .collectLatest { (people, event) -> computeAges(people, event) }
-        }
-        // The search: recomputed when the query or the region change.
-        viewModelScope.launch {
-            combine(query, generations.filterNotNull()) { text, people -> text to people.settings.region }
-                .collectLatest { (text, region) ->
-                    val results = if (text.trim().length < SearchEvents.MIN_QUERY_LENGTH) null else runCatchingLogged { searchEvents.search(text, region) }
-                    _state.update { it.copy(query = text, results = results) }
-                }
+            combine(generations.filterNotNull(), query) { people, text -> people to text }
+                .collectLatest { (people, text) -> load(people, text) }
         }
     }
 
-    override suspend fun onGenerations(generations: GenerationsUiState) {
-        val region = generations.settings.region
-        val current = _state.value
-        if (current.byFamily == null || current.region != region) {
-            val byFamily = runCatchingLogged { searchEvents.byFamily(region) }
-            _state.update { it.copy(region = region, byFamily = byFamily, error = byFamily == null) }
-        }
-    }
+    /** Nothing to do here: [load] follows the same changes. */
+    override suspend fun onGenerations(generations: GenerationsUiState) = Unit
 
-    private fun computeAges(people: GenerationsUiState, event: Event?) {
-        val userBirth = people.userBirth
-        val ages = if (event != null && userBirth != null) getEventAges(event, userBirth, people.otherBirth, people.settings.region) else null
-        _state.update { it.copy(chosen = event, ages = ages) }
+    private suspend fun load(people: GenerationsUiState, text: String) {
+        val region = people.settings.region
+        val byFamily = cachedByFamily.takeIf { cachedRegion == region } ?: runCatchingLogged { searchEvents.byFamily(region) }?.also {
+            cachedByFamily = it
+            cachedRegion = region
+        }
+        val results = if (text.trim().length < SearchEvents.MIN_QUERY_LENGTH) null else runCatchingLogged { searchEvents.search(text, region) }
+        fun line(event: Event) = EventLine(event, people.userBirth?.let { getEventAges(event, it, people.otherBirth, region) })
+        _state.update {
+            it.copy(
+                region = region,
+                query = text,
+                results = results?.map(::line),
+                byFamily = byFamily?.mapValues { (_, events) -> events.map(::line) },
+                error = byFamily == null,
+            )
+        }
     }
 
     private suspend fun <T> runCatchingLogged(block: suspend () -> T): T? = try {
@@ -106,13 +108,6 @@ class EventAgesViewModel(
         _state.update { it.copy(query = text) }
     }
 
-    /** An event chosen in the list, or opened from a card of Today or Equivalences. */
-    fun choose(event: Event) {
-        chosen.value = event
-    }
-
-    /** "Changer d'événement": back to the search. */
-    fun changeEvent() {
-        chosen.value = null
-    }
+    /** Opened from a card of Today or Equivalences: the event's title in the search, so its line shows at once. */
+    fun open(event: Event) = onQueryChange(event.title("fr"))
 }
