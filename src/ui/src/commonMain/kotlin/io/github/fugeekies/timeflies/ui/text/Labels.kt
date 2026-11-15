@@ -66,6 +66,7 @@ import io.github.fugeekies.timeflies.ui.resources.person_age_before_birth
 import io.github.fugeekies.timeflies.ui.resources.person_age_birth_year
 import io.github.fugeekies.timeflies.ui.resources.person_age_under_one
 import io.github.fugeekies.timeflies.ui.resources.years_count
+import io.github.fugeekies.timeflies.ui.resources.years_signed
 import io.github.fugeekies.timeflies.domain.model.EventType
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.isoDayNumber
@@ -187,4 +188,14 @@ fun personAgeText(age: UserAge): String = when (age) {
     UserAge.UnderOne -> stringResource(Res.string.person_age_under_one)
     UserAge.BirthYear -> stringResource(Res.string.person_age_birth_year)
     is UserAge.BeforeBirth -> pluralStringResource(Res.plurals.person_age_before_birth, age.years, age.years)
+}
+
+/**
+ * An age that is negative before a birth ("−14 ans", "6 ans"), with a real minus sign (decision of 15/11/2026).
+ * The plural follows the absolute value.
+ */
+@Composable
+fun signedYearsText(years: Int): String {
+    val number = if (years < 0) "−${-years}" else years.toString()
+    return pluralStringResource(Res.plurals.years_signed, kotlin.math.abs(years), number)
 }

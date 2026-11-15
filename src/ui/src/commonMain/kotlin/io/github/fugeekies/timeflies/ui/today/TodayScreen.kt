@@ -1,6 +1,7 @@
 package io.github.fugeekies.timeflies.ui.today
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -20,7 +21,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -28,7 +31,9 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -37,6 +42,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Anniversary
 import io.github.fugeekies.timeflies.domain.model.DailyShock
+import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.UpcomingDay
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.a11y_anniversary
@@ -66,14 +72,23 @@ import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
-/** The Today screen (docs/UISpec/Today.template.md), Polaroïd style. */
+/** A card touched: opens "Quel âge ?" on its event. */
+private val LocalOpenEvent = staticCompositionLocalOf<(Event) -> Unit> { {} }
+
+/**
+ * The Today screen (docs/UISpec/Today.template.md), Polaroïd style.
+ *
+ * @param onOpenEvent a card touched: "Quel âge ?" on its event.
+ */
 @Composable
-fun TodayScreen(viewModel: TodayViewModel, modifier: Modifier = Modifier) {
+fun TodayScreen(viewModel: TodayViewModel, onOpenEvent: (Event) -> Unit = {}, modifier: Modifier = Modifier) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     when (val current = state) {
         TodayUiState.Loading -> CenteredText(stringResource(Res.string.loading), modifier)
         TodayUiState.Error -> CenteredText(stringResource(Res.string.load_error), modifier)
-        is TodayUiState.Loaded -> TodayContent(current.shock, modifier)
+        is TodayUiState.Loaded -> CompositionLocalProvider(LocalOpenEvent provides onOpenEvent) {
+            TodayContent(current.shock, modifier)
+        }
     }
 }
 
@@ -162,7 +177,8 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
     }
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
-    PolaroidCard(anniversary, legend, userAge, description)
+    val open = LocalOpenEvent.current
+    PolaroidCard(anniversary, legend, userAge, description, Modifier.clickable(role = Role.Button) { open(event) })
 }
 
 @Composable
@@ -208,11 +224,18 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
     val event = anniversary.event
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
+    val open = LocalOpenEvent.current
     Surface(
         color = colors.surface,
         shape = RoundedCornerShape(6.dp),
         shadowElevation = 1.dp,
-        modifier = Modifier.fillMaxWidth().clearAndSetSemantics { contentDescription = description },
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(role = Role.Button) { open(event) }
+            .clearAndSetSemantics {
+                contentDescription = description
+                onClick { open(event); true }
+            },
     ) {
         Row(Modifier.padding(horizontal = 14.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             Text(

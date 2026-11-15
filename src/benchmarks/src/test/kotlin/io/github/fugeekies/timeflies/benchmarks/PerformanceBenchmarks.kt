@@ -9,6 +9,7 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
+import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
@@ -95,7 +96,7 @@ class PerformanceBenchmarks {
                 }
             }
         }
-        rows += measure("Recherche dans les titres × 20 (Mon équivalent)") {
+        rows += measure("Recherche dans les titres × 20 (Quel âge ?)") {
             runBlocking { listOf("roi", "écran", "test 12", "zzz").forEach { repeat(5) { _ -> loaded.search(it, 20) } } }
         }
 
@@ -124,6 +125,14 @@ class PerformanceBenchmarks {
         }
         rows += measure("Page Équivalences, autre personne plus âgée (GetEquivalences)", iterations = 100) {
             runBlocking { getEquivalences(user, parent, allFamilies, region) }
+        }
+        // "Quel âge ?": the list by family when the screen opens, and a search.
+        val searchEvents = SearchEvents(loaded, clock)
+        rows += measure("Page Quel âge ?, liste par famille (SearchEvents)", iterations = 50) {
+            runBlocking { searchEvents.byFamily(region) }
+        }
+        rows += measure("Page Quel âge ?, recherche × 4 (SearchEvents)", iterations = 50) {
+            runBlocking { listOf("roi", "écran", "test 12", "zzz").forEach { searchEvents.search(it, region) } }
         }
         rows
     }

@@ -1,14 +1,9 @@
 package io.github.fugeekies.timeflies.ui
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
-import androidx.compose.foundation.layout.widthIn
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -19,37 +14,36 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
+import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
+import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
+import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.debug.DebugScreen
 import io.github.fugeekies.timeflies.ui.debug.DebugViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesScreen
 import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesViewModel
+import io.github.fugeekies.timeflies.ui.equivalences.TemporaryAgesStore
+import io.github.fugeekies.timeflies.ui.eventages.EventAgesScreen
+import io.github.fugeekies.timeflies.ui.eventages.EventAgesViewModel
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingScreen
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingViewModel
 import io.github.fugeekies.timeflies.ui.resources.Res
-import io.github.fugeekies.timeflies.ui.resources.coming_soon
 import io.github.fugeekies.timeflies.ui.resources.nav_debug
 import io.github.fugeekies.timeflies.ui.resources.nav_equivalences
-import io.github.fugeekies.timeflies.ui.resources.nav_my_equivalent
+import io.github.fugeekies.timeflies.ui.resources.nav_event_ages
 import io.github.fugeekies.timeflies.ui.resources.nav_settings
 import io.github.fugeekies.timeflies.ui.resources.nav_today
-import io.github.fugeekies.timeflies.ui.resources.open_settings
-import io.github.fugeekies.timeflies.ui.resources.reduced_mode_message
 import io.github.fugeekies.timeflies.ui.settings.SettingsScreen
 import io.github.fugeekies.timeflies.ui.settings.SettingsViewModel
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
@@ -63,7 +57,7 @@ import org.jetbrains.compose.resources.stringResource
 private enum class Destination(val label: StringResource, val icon: ImageVector) {
     TODAY(Res.string.nav_today, TimeFliesIcons.Calendar),
     EQUIVALENCES(Res.string.nav_equivalences, TimeFliesIcons.Compare),
-    MY_EQUIVALENT(Res.string.nav_my_equivalent, TimeFliesIcons.Search),
+    EVENT_AGES(Res.string.nav_event_ages, TimeFliesIcons.Search),
     SETTINGS(Res.string.nav_settings, TimeFliesIcons.Tune),
 
     /** Debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage"). */
@@ -82,6 +76,8 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
 fun App(
     getDailyShock: GetDailyShock,
     getEquivalences: GetEquivalences,
+    getEventAges: GetEventAges,
+    searchEvents: SearchEvents,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
     completeOnboarding: CompleteOnboarding,
@@ -102,7 +98,7 @@ fun App(
                     OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
                 }
             } else {
-                MainScreens(current, getDailyShock, getEquivalences, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
+                MainScreens(getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
             }
         }
     }
@@ -110,9 +106,10 @@ fun App(
 
 @Composable
 private fun MainScreens(
-    settings: Settings,
     getDailyShock: GetDailyShock,
     getEquivalences: GetEquivalences,
+    getEventAges: GetEventAges,
+    searchEvents: SearchEvents,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
     countEvents: CountEvents,
@@ -121,6 +118,14 @@ private fun MainScreens(
     debugTools: DebugTools?,
 ) {
     var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
+    // Ages picked on the fly, shared by Equivalences and "Quel âge ?", forgotten when the app closes.
+    val temporaryAges = remember { TemporaryAgesStore() }
+    // A card touched on Today or Equivalences: "Quel âge ?" opens on its event.
+    var eventRequest by remember { mutableStateOf<Event?>(null) }
+    val openEvent = { event: Event ->
+        eventRequest = event
+        current = Destination.EVENT_AGES
+    }
     NavigationSuiteScaffold(
         navigationSuiteItems = {
             Destination.entries.filter { it != Destination.DEBUG || debugTools != null }.forEach { destination ->
@@ -136,56 +141,33 @@ private fun MainScreens(
     ) {
         val content = Modifier.fillMaxSize().safeDrawingPadding()
         when (current) {
-            Destination.TODAY -> TodayScreen(viewModel { TodayViewModel(getDailyShock, observeSettings, clock) }, content)
+            Destination.TODAY -> TodayScreen(
+                viewModel { TodayViewModel(getDailyShock, observeSettings, clock) },
+                onOpenEvent = openEvent,
+                modifier = content,
+            )
             Destination.SETTINGS -> SettingsScreen(
                 viewModel { SettingsViewModel(observeSettings, updateSettings, countEvents, clock) },
                 appVersion,
                 content,
             )
-            // Its reduced mode (without birth) also offers ages picked on the fly.
+            // Their reduced mode (without birth) also offers ages picked on the fly.
             Destination.EQUIVALENCES -> EquivalencesScreen(
-                viewModel { EquivalencesViewModel(getEquivalences, observeSettings, updateSettings, clock) },
+                viewModel { EquivalencesViewModel(getEquivalences, observeSettings, updateSettings, clock, temporaryAges) },
                 onOpenSettings = { current = Destination.SETTINGS },
-                content,
+                onOpenEvent = openEvent,
+                modifier = content,
             )
-            // Reduced mode (docs/UISpec/Onboarding.template.md): without birth, no equivalences.
-            Destination.MY_EQUIVALENT ->
-                if (settings.birth == null) ReducedMode(onOpenSettings = { current = Destination.SETTINGS }, content) else ComingSoon(content)
+            Destination.EVENT_AGES -> EventAgesScreen(
+                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, updateSettings, clock, temporaryAges) },
+                request = eventRequest,
+                onRequestHandled = { eventRequest = null },
+                onOpenSettings = { current = Destination.SETTINGS },
+                modifier = content,
+            )
             Destination.DEBUG -> debugTools?.let { tools ->
                 DebugScreen(viewModel { DebugViewModel(tools, observeSettings, clock) }, content)
             }
         }
-    }
-}
-
-/** "Indique ton mois et ton année de naissance pour voir tes équivalences." with "Ouvrir les réglages". */
-@Composable
-private fun ReducedMode(onOpenSettings: () -> Unit, modifier: Modifier) {
-    Box(modifier, contentAlignment = Alignment.Center) {
-        Column(
-            Modifier.widthIn(max = 420.dp).padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Text(
-                stringResource(Res.string.reduced_mode_message),
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onBackground,
-                textAlign = TextAlign.Center,
-            )
-            Button(onClick = onOpenSettings) { Text(stringResource(Res.string.open_settings)) }
-        }
-    }
-}
-
-@Composable
-private fun ComingSoon(modifier: Modifier) {
-    Box(modifier, contentAlignment = Alignment.Center) {
-        Text(
-            stringResource(Res.string.coming_soon),
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.padding(24.dp),
-        )
     }
 }

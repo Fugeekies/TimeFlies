@@ -19,7 +19,7 @@ Le principe de l'épisode : pour une autre personne de l'âge choisi, quels év�
 * Bouton « Modifier » : ouvre une feuille avec le curseur de l'âge de l'autre personne : de **1 à 100 ans**, **15 ans** par défaut, plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026). Le changement est enregistré et la liste se recalcule aussitôt. C'est le seul endroit où se règle cet âge : il n'est ni dans Réglages ni au premier lancement (décision du 15/11/2026). Le mois et l'année de naissance se changent dans Réglages.
 * **Petit écart** (décision du 15/11/2026, qui remplace l'interdiction d'un écart de moins de 5 ans) : un écart de moins de 5 ans, dans un sens ou dans l'autre, est permis. Une fenêtre prévient alors : « Attention : avec un écart aussi petit, les équivalences ne sont pas forcément représentatives. » (bouton « OK »). Elle s'affiche quand un âge choisi donne un tel écart, et à l'ouverture de l'écran si l'écart est déjà sous 5 ans (une fois par lancement de l'application).
 * **Âges à la volée** (décision du 13/11/2026) : pour comparer entre amis, toucher un des deux âges du bandeau ouvre un curseur de 1 à 100 ans ; la liste se recalcule aussitôt. Le même avertissement s'applique sous 5 ans d'écart.
-  * Ces âges ne sont **pas enregistrés** : Mon équivalent utilise les mêmes, mais tout revient aux réglages à la fermeture de l'application.
+  * Ces âges ne sont **pas enregistrés** : « Quel âge ? » utilise les mêmes, mais tout revient aux réglages à la fermeture de l'application.
   * Tant que des âges à la volée sont actifs, le bandeau porte la mention « Âges temporaires » et un bouton **« Revenir à mes réglages »**.
   * Un âge donné à la volée correspond à une naissance « aujourd'hui moins cet âge », au jour près, comme pour l'autre personne (voir `Settings.template.md`, « Calcul des âges et de l'écart »).
   * Ils marchent aussi sans mois et année de naissance enregistrés : c'est alors le seul moyen de voir des équivalences. « Choisir des âges » part alors de 35 ans pour l'utilisateur (l'âge de l'exemple des maquettes) et de l'âge enregistré de l'autre personne.
@@ -46,7 +46,7 @@ Le principe de l'épisode : pour une autre personne de l'âge choisi, quels év�
 * Un événement qui n'a pas de paire dans la tolérance n'apparaît pas, ni celui dont la date cible tombe dans le futur.
 * **Liste vide** (filtre trop restrictif) : « Aucune équivalence pour ces thèmes. Coche d'autres thèmes ou essaie un autre âge. »
 * **Sans mois et année de naissance** : à la place de la liste, « Indique ton mois et ton année de naissance pour voir tes équivalences. » avec le bouton **« Ouvrir les réglages »** (décision du 13/11/2026), et le bouton secondaire « Choisir des âges » qui ouvre les âges à la volée.
-* Toucher une carte ouvre **Mon équivalent** sur l'événement de la colonne de gauche.
+* Toucher une carte ouvre **« Quel âge ? »** sur l'événement de la colonne de gauche (décision du 15/11/2026, « Mon équivalent » est remplacé).
 
 ### Wireframe ASCII (téléphone)
 ```text

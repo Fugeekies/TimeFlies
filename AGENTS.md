@@ -14,7 +14,7 @@ Ce fichier est la **source unique** des instructions pour les agents IA : GitHub
 | `docs/DEVELOPMENT.md` | Outils, commandes, débogage (version PC, tests, Android, panneau de débogage, logs). |
 | `docs/EVENTS_DATA.md` | Format de la base d'événements, natures, types, règles d'appariement et du coup de vieux du jour. |
 | `docs/UI_DESIGN_SPEC.md` | Identité visuelle, palette, polices, navigation, langues, accessibilité. |
-| `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `Equivalences`, `MyEquivalent`, `Settings`, `AndroidWidget`, `WindowsTray`. |
+| `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `Equivalences`, `EventAges` (« Quel âge ? »), `Settings`, `AndroidWidget`, `WindowsTray`. |
 | `docs/maquettes/` | Maquettes visuelles (HTML et PNG) des écrans Android et Windows. En cas d'écart, les specs `UISpec/` font foi. |
 | `docs/ROADMAP.md` | Jalons à faire et terminés. |
 
@@ -24,7 +24,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 
 - **Aujourd'hui** (écran d'ouverture) : le coup de vieux du jour, c'est-à-dire les anniversaires d'événements du jour, chiffres ronds en premier (10, 15, 20, 25 ans…), avec l'âge qu'avait l'utilisateur. À défaut, l'anniversaire le plus proche des jours suivants.
 - **Équivalences** : à partir de l'âge de l'utilisateur et de celui d'une autre personne, plus jeune ou plus âgée (15 ans par défaut, décision du 15/11/2026), les paires d'événements de **même type** décalées de l'écart d'âge (Friends ↔ Happy Days). Pas de phrase générée : les deux événements, leurs dates et l'âge de chacun.
-- **Mon équivalent** : un événement choisi et son équivalent pour l'autre génération, dans les deux sens.
+- **Quel âge ?** : un événement choisi et l'âge des deux personnes à sa date, négatif avant une naissance (« −14 ans »), décision du 15/11/2026 qui remplace « Mon équivalent ».
 - **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026) et région, gardés sur l'appareil. L'âge de l'autre personne est gardé aussi, mais ne se règle que dans Équivalences, ni dans Réglages ni au premier lancement (décision du 15/11/2026). À l'écran, aucune des deux personnes n'a de nom : un pictogramme de personne de couleur devant chaque âge (décision du 15/11/2026). Un seul style d'affichage en V1, **Polaroïd** (âges écrits à la main) ; l'Éphéméride vient dans le jalon suivant, le VHS peut-être plus tard (décision du 13/11/2026, maquettes dans `docs/maquettes/`).
 - **Widget Android** (mis à jour chaque jour) ; sur Windows, **icône de barre des tâches** et **notification** le matin.
 

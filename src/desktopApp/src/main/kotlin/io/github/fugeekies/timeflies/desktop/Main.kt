@@ -25,6 +25,8 @@ fun main() {
             App(
                 getDailyShock = graph.getDailyShock,
                 getEquivalences = graph.getEquivalences,
+                getEventAges = graph.getEventAges,
+                searchEvents = graph.searchEvents,
                 observeSettings = graph.observeSettings,
                 updateSettings = graph.updateSettings,
                 completeOnboarding = graph.completeOnboarding,

@@ -11,6 +11,9 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Écran « Quel âge ? », à la place de Mon équivalent : un événement cherché dans les titres (dès 2 caractères, sans accents ni casse) ou dans la liste par famille, avec sur chaque ligne l'âge des deux personnes à sa date (« 👤 6 ans », « 👤 −14 ans »), négatif avant une naissance, sans avoir à toucher la ligne. Même bandeau des âges qu'Équivalences, âges à la volée partagés entre les deux écrans.
+- Toucher une carte d'Aujourd'hui ou d'Équivalences ouvre « Quel âge ? » sur cet événement.
+- Benchmarks : page « Quel âge ? » (liste par famille, recherche), environ 1 ms pour 5 000 événements.
 - Écran Équivalences : les paires d'événements de même type qui ont la même place dans la vie des deux personnes (à 2 ans près), de la plus récente à la plus ancienne, sur deux colonnes au-delà de 840 dp. Les deux personnes n'ont pas de nom : une silhouette de couleur devant chaque âge. Bouton « Modifier » (âge de l'autre personne, enregistré), bouton Inverser et thèmes à cocher (mémorisés), âges à la volée non enregistrés avec « Revenir à mes réglages », « Choisir des âges » sans mois et année de naissance, avertissement sous 5 ans d'écart.
 - Benchmarks : calcul de la page Équivalences (autre personne plus jeune ou plus âgée), environ 7 ms pour 5 000 événements.
 

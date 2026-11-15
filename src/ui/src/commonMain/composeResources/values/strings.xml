@@ -7,9 +7,8 @@
     <!-- Navigation -->
     <string name="nav_today">Aujourd'hui</string>
     <string name="nav_equivalences">Équivalences</string>
-    <string name="nav_my_equivalent">Mon équivalent</string>
+    <string name="nav_event_ages">Quel âge ?</string>
     <string name="nav_settings">Réglages</string>
-    <string name="coming_soon">Cet écran arrive dans un prochain jalon.</string>
 
     <!-- Today -->
     <string name="loading">Chargement…</string>
@@ -110,6 +109,19 @@
     <plurals name="person_age_before_birth">
         <item quantity="one">%1$d an avant sa naissance</item>
         <item quantity="other">%1$d ans avant sa naissance</item>
+    </plurals>
+
+    <!-- Quel âge ? (docs/UISpec/EventAges.template.md, decision of 15/11/2026) -->
+    <string name="event_ages_title">Quel âge ?</string>
+    <string name="event_ages_search_hint">Cherche un film, une série, un artiste…</string>
+    <string name="event_ages_no_results">Aucun événement ne correspond à cette recherche.</string>
+    <string name="event_ages_reduced">Indique ton mois et ton année de naissance pour voir ton âge à chaque événement.</string>
+    <!-- Read after an event: "Toi : 6 ans." / "L'autre personne : −14 ans." -->
+    <string name="event_ages_a11y_line">%1$s : %2$s.</string>
+    <!-- An age that can be negative before a birth; %1$s is the number with a real minus sign ("−14"). -->
+    <plurals name="years_signed">
+        <item quantity="one">%1$s an</item>
+        <item quantity="other">%1$s ans</item>
     </plurals>
 
     <!-- Debug panel, debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage") -->
