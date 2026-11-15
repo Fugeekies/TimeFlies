@@ -47,6 +47,7 @@ import io.github.fugeekies.timeflies.ui.resources.nav_today
 import io.github.fugeekies.timeflies.ui.settings.SettingsScreen
 import io.github.fugeekies.timeflies.ui.settings.SettingsViewModel
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
+import io.github.fugeekies.timeflies.ui.theme.ThemeMode
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesTheme
 import io.github.fugeekies.timeflies.ui.today.TodayScreen
 import io.github.fugeekies.timeflies.ui.today.TodayViewModel
@@ -86,7 +87,9 @@ fun App(
     appVersion: String? = null,
     debugTools: DebugTools? = null,
 ) {
-    TimeFliesTheme {
+    // Forced light or dark from the debug panel, for this session only.
+    var themeMode by rememberSaveable { mutableStateOf(ThemeMode.SYSTEM) }
+    TimeFliesTheme(darkTheme = themeMode.isDark()) {
         val settingsFlow = remember(observeSettings) { observeSettings() }
         val settings by settingsFlow.collectAsStateWithLifecycle(initialValue = null)
         val content = Modifier.fillMaxSize().safeDrawingPadding()
@@ -98,7 +101,10 @@ fun App(
                     OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
                 }
             } else {
-                MainScreens(getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
+                MainScreens(
+                    getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock,
+                    appVersion, debugTools, themeMode, onThemeMode = { themeMode = it },
+                )
             }
         }
     }
@@ -116,6 +122,8 @@ private fun MainScreens(
     clock: Clock,
     appVersion: String?,
     debugTools: DebugTools?,
+    themeMode: ThemeMode,
+    onThemeMode: (ThemeMode) -> Unit,
 ) {
     var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
     // Ages picked on the fly, shared by Equivalences and "Quel âge ?", forgotten when the app closes.
@@ -166,7 +174,7 @@ private fun MainScreens(
                 modifier = content,
             )
             Destination.DEBUG -> debugTools?.let { tools ->
-                DebugScreen(viewModel { DebugViewModel(tools, observeSettings, clock) }, content)
+                DebugScreen(viewModel { DebugViewModel(tools, observeSettings, clock) }, themeMode, onThemeMode, content)
             }
         }
     }

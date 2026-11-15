@@ -164,3 +164,18 @@ fun TimeFliesTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composa
         MaterialTheme(colorScheme = if (darkTheme) PolaroidDark else PolaroidLight, typography = typography, content = content)
     }
 }
+
+/**
+ * Light or dark: the system's choice, or forced from the debug panel to try both themes (docs/DEVELOPMENT.md,
+ * "Panneau de débogage"). Never saved.
+ */
+enum class ThemeMode {
+    SYSTEM, LIGHT, DARK;
+
+    @Composable
+    fun isDark(): Boolean = when (this) {
+        SYSTEM -> isSystemInDarkTheme()
+        LIGHT -> false
+        DARK -> true
+    }
+}

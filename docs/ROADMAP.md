@@ -81,6 +81,7 @@ Pour tester tous les cas sans attendre le bon jour.
 - [x] Version sombre « chambre noire » (décision du 15/11/2026), le thème suit le système, fenêtre Android jour/nuit sans éclair blanc. Contrastes AA vérifiés par `ContrastTest` (jetons, silhouettes, cadres, tampon des décennies, encre de la photo choisie selon la couleur de la famille) ; écriture manuscrite jamais sous 20 sp.
 - [x] Animation de la photo qui se développe (1,6 s, une fois par jour), coupée quand le système réduit les animations (Android : échelle des animations ; Windows : `MinAnimate`).
 - [x] Texte agrandi à 200 % : le grand chiffre de la photo garde sa taille, le bouton du premier lancement grandit avec son texte.
+- [x] Panneau de débogage : forcer le thème clair ou sombre, pour la session.
 
 ### Jalon 10 — Barre des tâches et notification Windows
 - [ ] Icône, infobulle et menu ; notification du matin ; fenêtre fermée qui reste dans la barre des tâches ; lancement au démarrage ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)).
