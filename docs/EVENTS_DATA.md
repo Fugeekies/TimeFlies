@@ -136,3 +136,20 @@ Méthode suivie pour le premier lot, à reprendre pour les suivants :
 5. **Source** : l'article de Wikipédia en français.
 6. **Importance** (décision du 14/11/2026) : selon le nombre de Wikipédia qui ont un article sur le film (Wikidata) : 80 ou plus → 3, de 40 à 79 → 2, moins → 1 ; +1 (au plus 3) pour les comédies françaises, dont la notoriété est surtout nationale.
 7. **`date` = date française, sans `regionalDates`** (décision du 14/11/2026) : la « première sortie mondiale » de Wikidata s'est révélée peu fiable (avant-premières, festivals, erreurs comme *Avengers* au 15/07/2011). Les dates des autres pays s'ajouteront en `regionalDates` avec les traductions.
+## Méthode de saisie, palier 1 des autres thèmes (15/11/2026)
+
+Même méthode que le lot Cinéma 1 (article de Wikipédia en français comme source, contrôle croisé avec Wikidata noté dans `note`), avec ces règles communes :
+
+- **Désaccord avec Wikidata** : l'article en français fait foi quand Wikidata donne la même date, seulement l'année ou le mois, ou un autre jour à une semaine près (noté : « donne une autre date : … »). Au-delà d'une semaine d'écart, l'événement n'entre pas : on ne sait pas laquelle est juste.
+- **Date incertaine** dans l'article (« environ », « vers », mois seulement, référence nécessaire) : l'événement n'entre pas.
+- **Importance** : la règle du Cinéma (nombre de Wikipédia qui ont un article : 80 ou plus → 3, de 40 à 79 → 2, moins → 1), avec +1 (au plus 3) pour les artistes et les œuvres françaises, dont la notoriété est surtout nationale.
+- **Titre** : pour une œuvre musicale, l'artiste entre parenthèses (« Thriller (Michael Jackson) ») ; pour une personne, son nom.
+- Les données sont relevées par un script qui interroge l'API de Wikipédia et de Wikidata (titre de l'article, dates de l'infobox, dates de Wikidata, nombre de Wikipédia) ; chaque date retenue est relue dans l'article.
+
+### Sport (palier 1, 38 événements)
+
+- **Sommet d'une star du foot** : la remise d'un **Ballon d'or** (date de la cérémonie ou de l'annonce, donnée par l'article de l'édition ; les éditions qui n'ont que l'année, la plupart avant 2007, n'entrent pas, ni 2010 et 2011 dont seul Wikidata donne le jour) et quelques **matchs** devenus le sommet d'une carrière (finales de Pelé en 1958 et 1970, de Platini à l'Euro 1984, de Zidane en Ligue des champions 2002, de Messi en 2022, la « main de Dieu » de Maradona en 1986), à la date du match.
+- **Victoires des Bleus en Coupe du monde** : date de la finale (1998, 2018). Le type n'a que deux événements, l'histoire n'en compte pas plus.
+- **Jeux olympiques en France** : date de la cérémonie d'ouverture (en 1900, sans cérémonie, la date d'ouverture). Nature `history` (« Événement »). Écarté : Chamonix 1924 (l'infobox donne le 25 janvier, le texte place la cérémonie le 24).
+- **Records et exploits** : date de l'exploit, lue dans l'article de l'athlète et, quand il existe, dans l'article du record ; Wikidata ne date pas ces exploits. Écarté : Sergueï Bubka (dates de ses 6,14 m confuses dans l'article).
+- Les types du Sport sont étroits : 38 événements au palier 1, au lieu des 70 indicatifs.
