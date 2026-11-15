@@ -3,7 +3,7 @@
 > Spécification de conception (13/11/2026), avant le code. Écran validé le 13/11/2026 : il demande le mois et l'année de naissance, et peut être passé.
 
 ### Description
-Écran unique affiché au premier lancement, avant Aujourd'hui. Il explique le principe en une phrase et demande le **mois et l'année** de naissance de l'utilisateur et l'âge du jeune. Il ne revient plus ensuite : tout se modifie dans Réglages.
+Écran unique affiché au premier lancement, avant Aujourd'hui. Il explique le principe en une phrase et demande le **mois et l'année** de naissance de l'utilisateur et l'âge du jeune. Il ne revient plus ensuite : le mois et l'année se modifient dans Réglages, l'âge du jeune dans Équivalences (décision du 15/11/2026).
 
 ### Spécifications fonctionnelles
 

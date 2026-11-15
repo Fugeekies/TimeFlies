@@ -63,7 +63,7 @@ class UpdateSettingsTest {
 
     @Test
     fun keepsTheYoungAgeWhenANewBirthMakesItTooClose() = runTest {
-        // Decision of 15/11/2026: allowed, the Settings screen shows the message.
+        // Decision of 15/11/2026: allowed, the Equivalences screen shows the message.
         assertTrue(update.setYoungAge(15))
         update.setBirth(YearMonth(2018, Month.MARCH))
         assertEquals(15, repository.state.value.youngAge)

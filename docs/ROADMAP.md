@@ -50,7 +50,7 @@ Le coup de vieux du jour à l'écran, en style Polaroïd.
 Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
 - [x] `domain` : entité `Settings`, port `SettingsRepository` (en `Flow` : `domain` dépend aussi de `kotlinx-coroutines-core`, décision du 15/11/2026), cas d'usage `UpdateSettings`, `ObserveSettings` et `CountEvents`, règles `Generations` (naissance au 1er du mois, jeune né aujourd'hui moins son âge, écart au jour près, 5 ans d'écart au moins), tests.
 - [x] `data` : `DataStoreSettingsRepository` (DataStore 1.3.0 et Okio, JSON lisible avec un champ `version`, fichier illisible remplacé par les valeurs par défaut), `settings.json` dans le dossier privé de l'application sur Android et dans `%APPDATA%\TimeFlies` sur PC, tests.
-- [x] Écran Réglages ([`Settings.template.md`](UISpec/Settings.template.md)) : mois et année de naissance (deux listes, lien « Effacer »), âge du jeune (curseur, écart, message si moins de 5 ans d'écart), région affichée « France » sans liste (décision du 15/11/2026), à propos (version, nombre d'événements, liens GitHub, licences). Le panneau Windows et celui du widget viendront avec leurs jalons.
+- [x] Écran Réglages ([`Settings.template.md`](UISpec/Settings.template.md)) : mois et année de naissance (deux listes, lien « Effacer »), région affichée « France » sans liste (décision du 15/11/2026), à propos (version, nombre d'événements, liens GitHub, licences). Le panneau Windows et celui du widget viendront avec leurs jalons.
 - [x] Aujourd'hui affiche « Tu avais N ans. », « Tu avais moins d'un an. », « C'était l'année de ta naissance. » ou « C'était N ans avant ta naissance. » (décision du 15/11/2026), et se recalcule quand les réglages changent.
 - [ ] Vérifier l'écran Réglages à l'œil sur PC et sur Android.
 
@@ -65,7 +65,7 @@ Pour tester tous les cas sans attendre le bon jour.
 
 ### Jalon 7 — Équivalences
 - [ ] `domain` : `Generations`, `Equivalences` (même type, ±2 ans), cas d'usage `GetEquivalences`, tests.
-- [ ] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : thèmes à cocher, bouton Inverser, âges à la volée.
+- [ ] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge du jeune (retiré de Réglages, décision du 15/11/2026 ; `UpdateSettings.setYoungAge` est prêt).
 
 ### Jalon 8 — Mon équivalent
 - [ ] Cas d'usage `FindEquivalent` (deux sens, autres candidats), recherche dans les titres.

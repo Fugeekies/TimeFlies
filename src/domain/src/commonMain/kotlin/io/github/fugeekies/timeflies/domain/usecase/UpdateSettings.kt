@@ -12,7 +12,7 @@ class UpdateSettings(
 ) {
     /**
      * Saves the user's birth month and year. A young age that is no longer 5 years younger is kept
-     * (decision of 15/11/2026): the Settings screen shows the message.
+     * (decision of 15/11/2026): the Equivalences screen shows the message.
      *
      * @throws IllegalArgumentException if the year is outside 1920 to the current year minus 5.
      */

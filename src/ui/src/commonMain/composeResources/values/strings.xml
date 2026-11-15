@@ -67,12 +67,6 @@
     <string name="settings_month">Mois</string>
     <string name="settings_year">Année</string>
     <string name="settings_clear">Effacer</string>
-    <string name="settings_young_age">Âge du jeune</string>
-    <string name="settings_young_too_old">Le jeune doit avoir au moins 5 ans de moins que toi.</string>
-    <plurals name="settings_gap">
-        <item quantity="one">%1$d an d'écart</item>
-        <item quantity="other">%1$d ans d'écart</item>
-    </plurals>
     <string name="settings_display">AFFICHAGE</string>
     <string name="settings_region">Région</string>
     <string name="region_fr">France</string>

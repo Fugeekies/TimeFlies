@@ -3,15 +3,14 @@
 > Spécification de conception (13/11/2026), avant le code.
 
 ### Description
-Les réglages qui pilotent toute l'application (mois et année de naissance, âge du jeune, région), le style d'affichage, les réglages propres à la plateforme et les informations sur l'application. Chaque réglage est **enregistré dès qu'il change**, sans bouton « Enregistrer ».
+Les réglages qui pilotent toute l'application (mois et année de naissance, région), le style d'affichage, les réglages propres à la plateforme et les informations sur l'application. Chaque réglage est **enregistré dès qu'il change**, sans bouton « Enregistrer ».
 
 ### Spécifications fonctionnelles
 
 #### Panneau « Toi » (eyebrow « GÉNÉRATIONS »)
 * **Ton mois et ton année de naissance** : deux listes, comme au premier lancement (de 1920 à l'année en cours moins 5), **sans le jour** (décision du 13/11/2026). Libellé de la valeur : « Mai 1991 · 35 ans ». Non renseigné : « Non renseigné » et le texte « Sans cette information, TimeFlies affiche les anniversaires sans ton âge et ne peut pas calculer d'équivalences. »
 * Lien **« Effacer »** : retire le mois et l'année enregistrés (retour au mode réduit).
-* **Âge du jeune** : curseur de 5 à 60 ans, **15 ans** par défaut. Au moins 5 ans de moins que l'utilisateur : sinon message « Le jeune doit avoir au moins 5 ans de moins que toi. » et la valeur n'est pas enregistrée. Si l'utilisateur change ensuite son année de naissance et que le jeune n'a plus 5 ans de moins, les deux valeurs sont gardées et le message s'affiche (décision du 15/11/2026).
-* Résumé : « 20 ans d'écart ».
+* **Pas d'âge du jeune dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), et au premier lancement. La valeur reste enregistrée avec les réglages.
 
 #### Calcul des âges et de l'écart (décision du 13/11/2026)
 * **Naissance de l'utilisateur** : le **1er jour** du mois choisi. L'âge affiché peut donc avoir un an d'avance seulement pendant le mois de son anniversaire, avant le jour exact.
@@ -55,9 +54,6 @@ Valeurs par défaut décidées le 13/11/2026.
 │  │ naissance                        │  │
 │  │ Mai 1991 · 35 ans             ›  │  │
 │  │                         Effacer  │  │
-│  │ Âge du jeune             15 ans  │  │
-│  │ ●━━━━━━━━○─────────────────────  │  │
-│  │ 20 ans d'écart                   │  │
 │  └──────────────────────────────────┘  │
 │                                        │
 │  AFFICHAGE                             │

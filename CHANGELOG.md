@@ -11,7 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
-- Écran Réglages : mois et année de naissance (lien « Effacer »), âge du jeune avec l'écart d'âge et le message si le jeune n'a pas 5 ans de moins, région (France en V1), à propos (version, nombre d'événements, liens GitHub et licences). Chaque réglage est enregistré dès qu'il change.
+- Écran Réglages : mois et année de naissance (lien « Effacer »), région (France en V1), à propos (version, nombre d'événements, liens GitHub et licences). Chaque réglage est enregistré dès qu'il change.
 - Réglages gardés sur l'appareil avec DataStore : `settings.json` dans le dossier privé de l'application sur Android, dans `%APPDATA%\TimeFlies` sur PC ; fichier illisible remplacé par les valeurs par défaut.
 - Aujourd'hui affiche l'âge de l'utilisateur à la date de chaque événement (« Tu avais 20 ans. », « Tu avais moins d'un an. », « C'était l'année de ta naissance. », « C'était 3 ans avant ta naissance. ») et se recalcule quand les réglages changent.
 - Feuille de route : jalon « Traductions et régions » (événements et choix de la région pour d'autres pays).

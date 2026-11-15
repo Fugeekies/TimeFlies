@@ -17,7 +17,6 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -31,8 +30,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
-import androidx.compose.ui.semantics.liveRegion
-import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -43,7 +40,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Region
-import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.about_dev_version
 import io.github.fugeekies.timeflies.ui.resources.about_event_count
@@ -65,14 +61,11 @@ import io.github.fugeekies.timeflies.ui.resources.settings_birth_unset_help
 import io.github.fugeekies.timeflies.ui.resources.settings_birth_value
 import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.resources.settings_display
-import io.github.fugeekies.timeflies.ui.resources.settings_gap
 import io.github.fugeekies.timeflies.ui.resources.settings_generations
 import io.github.fugeekies.timeflies.ui.resources.settings_month
 import io.github.fugeekies.timeflies.ui.resources.settings_region
 import io.github.fugeekies.timeflies.ui.resources.settings_title
 import io.github.fugeekies.timeflies.ui.resources.settings_year
-import io.github.fugeekies.timeflies.ui.resources.settings_young_age
-import io.github.fugeekies.timeflies.ui.resources.settings_young_too_old
 import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.text.capitalized
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
@@ -81,7 +74,6 @@ import kotlinx.datetime.number
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
 import org.jetbrains.compose.resources.stringResource
-import kotlin.math.roundToInt
 
 private const val REPOSITORY_URL = "https://github.com/Fugeekies/TimeFlies"
 private const val ISSUES_URL = "$REPOSITORY_URL/issues"
@@ -187,30 +179,6 @@ private fun ColumnScope.GenerationsPanel(state: SettingsUiState, viewModel: Sett
         TextButton(onClick = viewModel::onClearBirth, modifier = Modifier.align(Alignment.End)) {
             Text(stringResource(Res.string.settings_clear))
         }
-    }
-
-    Row(Modifier.fillMaxWidth().padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(stringResource(Res.string.settings_young_age), style = MaterialTheme.typography.titleMedium, color = colors.onSurface, modifier = Modifier.weight(1f))
-        Text(pluralStringResource(Res.plurals.years_count, state.youngAge, state.youngAge), style = MaterialTheme.typography.bodyLarge, color = colors.primary)
-    }
-    val youngAgeLabel = stringResource(Res.string.settings_young_age)
-    Slider(
-        value = state.youngAge.toFloat(),
-        onValueChange = { viewModel.onYoungAgeChange(it.roundToInt()) },
-        onValueChangeFinished = viewModel::onYoungAgeChangeFinished,
-        valueRange = Generations.MIN_YOUNG_AGE.toFloat()..Generations.MAX_YOUNG_AGE.toFloat(),
-        steps = Generations.MAX_YOUNG_AGE - Generations.MIN_YOUNG_AGE - 1,
-        modifier = Modifier.semantics { contentDescription = youngAgeLabel },
-    )
-    val gap = state.gap
-    when {
-        state.youngTooOld -> Text(
-            stringResource(Res.string.settings_young_too_old),
-            style = MaterialTheme.typography.bodyMedium,
-            color = colors.error,
-            modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite },
-        )
-        gap != null -> Text(pluralStringResource(Res.plurals.settings_gap, gap, gap), style = MaterialTheme.typography.bodyMedium, color = colors.onSurfaceVariant)
     }
 }
 
