@@ -3,15 +3,14 @@
 > Spécification de conception (13/11/2026), avant le code.
 
 ### Description
-Les réglages qui pilotent toute l'application (mois et année de naissance, âge du jeune, région), le style d'affichage, les réglages propres à la plateforme et les informations sur l'application. Chaque réglage est **enregistré dès qu'il change**, sans bouton « Enregistrer ».
+Les réglages qui pilotent toute l'application (mois et année de naissance, région), le style d'affichage, les réglages propres à la plateforme et les informations sur l'application. Chaque réglage est **enregistré dès qu'il change**, sans bouton « Enregistrer ».
 
 ### Spécifications fonctionnelles
 
 #### Panneau « Toi » (eyebrow « GÉNÉRATIONS »)
 * **Ton mois et ton année de naissance** : deux listes, comme au premier lancement (de 1920 à l'année en cours moins 5), **sans le jour** (décision du 13/11/2026). Libellé de la valeur : « Mai 1991 · 35 ans ». Non renseigné : « Non renseigné » et le texte « Sans cette information, TimeFlies affiche les anniversaires sans ton âge et ne peut pas calculer d'équivalences. »
 * Lien **« Effacer »** : retire le mois et l'année enregistrés (retour au mode réduit).
-* **Âge du jeune** : curseur de 5 à 60 ans, **15 ans** par défaut. Au moins 5 ans de moins que l'utilisateur : sinon message « Le jeune doit avoir au moins 5 ans de moins que toi. » et la valeur n'est pas enregistrée.
-* Résumé : « 20 ans d'écart ».
+* **Pas d'âge du jeune dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), et au premier lancement. La valeur reste enregistrée avec les réglages.
 
 #### Calcul des âges et de l'écart (décision du 13/11/2026)
 * **Naissance de l'utilisateur** : le **1er jour** du mois choisi. L'âge affiché peut donc avoir un an d'avance seulement pendant le mois de son anniversaire, avant le jour exact.
@@ -24,7 +23,7 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, âg
   * **Éphéméride** ;
   * **VHS**, si ce style est fait un jour.
   Le style s'applique aussitôt à toute l'application et au widget.
-* **Région** : liste des pays, chacun écrit dans la langue de l'interface. Par défaut, la région du système (décision du 13/11/2026). Elle choisit les dates régionales des événements (voir `EVENTS_DATA.md`, « Dates par région »).
+* **Région** : liste des pays, chacun écrit dans la langue de l'interface. Par défaut, la région du système (décision du 13/11/2026). Elle choisit les dates régionales des événements (voir `EVENTS_DATA.md`, « Dates par région »). **En V1, France seulement** (décision du 15/11/2026) : la ligne affiche « Région : France » sans liste ; le choix des pays arrive avec le jalon « Traductions et régions ».
 * **Langue** : liste des langues disponibles, chacune écrite dans sa langue. Au départ, Français seulement : la ligne est masquée tant qu'il n'y a qu'une langue. Par défaut, la langue du système si elle est disponible, le français sinon.
 
 #### Panneau « Widget » (Android uniquement, eyebrow « ÉCRAN D'ACCUEIL »)
@@ -55,9 +54,6 @@ Valeurs par défaut décidées le 13/11/2026.
 │  │ naissance                        │  │
 │  │ Mai 1991 · 35 ans             ›  │  │
 │  │                         Effacer  │  │
-│  │ Âge du jeune             15 ans  │  │
-│  │ ●━━━━━━━━○─────────────────────  │  │
-│  │ 20 ans d'écart                   │  │
 │  └──────────────────────────────────┘  │
 │                                        │
 │  AFFICHAGE                             │

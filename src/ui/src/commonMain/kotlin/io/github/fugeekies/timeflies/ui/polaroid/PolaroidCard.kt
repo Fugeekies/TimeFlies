@@ -50,10 +50,11 @@ private val FrameInkSoft = Color(0xFF55493F)
  * type drawing in the background and the handwritten number of years on top.
  *
  * @param legend handwritten line under the title.
+ * @param userAgeLine handwritten line under the legend ("Tu avais 20 ans."), or null when the birth is unknown.
  * @param description what screen readers say for the whole card.
  */
 @Composable
-fun PolaroidCard(anniversary: Anniversary, legend: String, description: String, modifier: Modifier = Modifier) {
+fun PolaroidCard(anniversary: Anniversary, legend: String, userAgeLine: String?, description: String, modifier: Modifier = Modifier) {
     val style = LocalStyle.current
     val event = anniversary.event
     val era = Era.of(anniversary.eventDate.year)
@@ -89,6 +90,9 @@ fun PolaroidCard(anniversary: Anniversary, legend: String, description: String, 
                 Column(Modifier.padding(top = 12.dp, bottom = 18.dp, start = 4.dp, end = 72.dp)) {
                     Text(event.title("fr"), fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 36.sp, lineHeight = 38.sp, color = FrameInk)
                     Text(legend, fontFamily = style.handwriting, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, color = FrameInkSoft)
+                    if (userAgeLine != null) {
+                        Text(userAgeLine, fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 24.sp, color = FrameInk)
+                    }
                 }
                 DecadeStamp(anniversary.eventDate.year, era, Modifier.align(Alignment.BottomEnd).padding(bottom = 10.dp))
             }

@@ -1,4 +1,4 @@
-// Business rules: entities, ports, use cases. Depends on nothing but kotlinx-datetime.
+// Business rules: entities, ports, use cases. Depends on nothing but kotlinx-datetime and kotlinx-coroutines (Flow).
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.kmp.library)
@@ -17,6 +17,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(libs.kotlinx.datetime)
+            api(libs.kotlinx.coroutines.core)
         }
         commonTest.dependencies {
             implementation(kotlin("test"))

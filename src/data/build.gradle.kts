@@ -20,6 +20,9 @@ kotlin {
             implementation(projects.domain)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.androidx.datastore.core.okio)
+            // The apps hand the file system and the settings file (okio types) to DataStoreSettingsRepository.
+            api(libs.okio)
         }
         commonTest.dependencies {
             implementation(kotlin("test"))

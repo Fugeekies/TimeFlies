@@ -3,6 +3,7 @@ package io.github.fugeekies.timeflies.ui.text
 import androidx.compose.runtime.Composable
 import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.Family
+import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.days
 import io.github.fugeekies.timeflies.ui.resources.family_cinema
@@ -24,10 +25,15 @@ import io.github.fugeekies.timeflies.ui.resources.kind_series_premiere
 import io.github.fugeekies.timeflies.ui.resources.kind_single_release
 import io.github.fugeekies.timeflies.ui.resources.kind_sport
 import io.github.fugeekies.timeflies.ui.resources.months
+import io.github.fugeekies.timeflies.ui.resources.user_age_before_birth
+import io.github.fugeekies.timeflies.ui.resources.user_age_birth_year
+import io.github.fugeekies.timeflies.ui.resources.user_age_under_one
+import io.github.fugeekies.timeflies.ui.resources.user_age_years
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.isoDayNumber
 import kotlinx.datetime.number
 import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -48,6 +54,16 @@ fun kindLabel(kind: EventKind): String = stringResource(
         EventKind.ELECTION -> Res.string.kind_election
     },
 )
+
+/** "Tu avais 20 ans.", or null when the user's birth is unknown (the line is not shown). */
+@Composable
+fun userAgeText(age: UserAge?): String? = when (age) {
+    null -> null
+    is UserAge.Years -> pluralStringResource(Res.plurals.user_age_years, age.years, age.years)
+    UserAge.UnderOne -> stringResource(Res.string.user_age_under_one)
+    UserAge.BirthYear -> stringResource(Res.string.user_age_birth_year)
+    is UserAge.BeforeBirth -> pluralStringResource(Res.plurals.user_age_before_birth, age.years, age.years)
+}
 
 @Composable
 fun familyLabel(family: Family): String = stringResource(familyResource(family))

@@ -7,15 +7,15 @@ import kotlinx.datetime.LocalDate
  *
  * @property eventDate date of the event in the user's region.
  * @property years number of years elapsed on [day] (at least 1).
- * @property userAge age the user had on [eventDate], in completed years; negative before their birth;
- *   null when the user's birth month and year are unknown.
+ * @property userAge how old the user was on [eventDate] ("Tu avais 20 ans."); null when their birth month and
+ *   year are unknown (no line shown).
  */
 data class Anniversary(
     val event: Event,
     val day: LocalDate,
     val eventDate: LocalDate,
     val years: Int,
-    val userAge: Int?,
+    val userAge: UserAge?,
 ) {
     /** A multiple of 5 years: shown with the "Chiffre rond" chip. */
     val isRound: Boolean get() = years % 5 == 0

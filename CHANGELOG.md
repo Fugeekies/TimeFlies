@@ -11,6 +11,11 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Écran Réglages : mois et année de naissance (lien « Effacer »), région (France en V1), à propos (version, nombre d'événements, liens GitHub et licences). Chaque réglage est enregistré dès qu'il change.
+- Réglages gardés sur l'appareil avec DataStore : `settings.json` dans le dossier privé de l'application sur Android, dans `%APPDATA%\TimeFlies` sur PC ; fichier illisible remplacé par les valeurs par défaut.
+- Aujourd'hui affiche l'âge de l'utilisateur à la date de chaque événement (« Tu avais 20 ans. », « Tu avais moins d'un an. », « C'était l'année de ta naissance. », « C'était 3 ans avant ta naissance. ») et se recalcule quand les réglages changent.
+- Feuille de route : jalon « Traductions et régions » (événements et choix de la région pour d'autres pays).
+
 - CI GitHub Actions sur chaque PR prête et sur `main` : tests, compilation des applications PC et Android, benchmarks avec rapport dans le résumé du run.
 - Benchmarks de chargement des données et des pages (`src/benchmarks`), sur les fichiers réels et sur des jeux synthétiques jusqu'à 10 000 événements ; premier rapport dans `docs/benchmarks/`.
 - Écran Aujourd'hui, style Polaroïd (cadre de la couleur de la décennie avec son chiffre écrit à la main, dessin du type dans la photo) : coup de vieux du jour (chiffres ronds d'abord, 29 février fêté le 28, repli sur les 7 jours suivants), « Aussi aujourd'hui », « Bientôt… », navigation adaptative à quatre destinations, polices Caveat et Atkinson Hyperlegible embarquées, recalcul au changement de jour.
@@ -24,3 +29,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 - Architecture technique : Clean Architecture (`domain`, `data`, `ui`, applications Android et Windows), stack, événements en JSON chargés en mémoire jusqu'à 5 000, réglages DataStore partagés (`docs/ARCHITECTURE.md`).
 - Guide développeur : outils, commandes et débogage (`docs/DEVELOPMENT.md`).
 - Feuille de route redécoupée en jalons courts (solution, lecture des données, Aujourd'hui, Réglages…), données par thème en paliers jusqu'à 5 000 événements, CI et releases à la fin.
+
+### Changed
+
+- `domain` dépend aussi de `kotlinx-coroutines-core`, pour le `Flow` des réglages (`docs/ARCHITECTURE.md`).

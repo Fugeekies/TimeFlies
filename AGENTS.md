@@ -2,7 +2,7 @@
 
 Application **Android et Windows** qui donne des « coups de vieux », inspirée de l'épisode *Bloqués #108 - On est les vieux des jeunes*. Kotlin et Compose Multiplatform : un seul code partagé, avec des parties propres à chaque plateforme (widget Android, icône de barre des tâches et notification Windows). La documentation est en **français**, le code et les commentaires en **anglais**. L'interface est en français d'abord, prévue pour être traduite.
 
-**Architecture (décision du 14/11/2026)** : Clean Architecture. `domain` (entités, ports, cas d'usage, règles en fonctions pures) ne dépend de rien d'autre que `kotlinx-datetime` ; `data` implémente les ports (JSON, DataStore, horloge) ; `ui`, le widget Android et l'icône Windows n'appellent que des cas d'usage ; `androidApp` et `desktopApp` assemblent le tout (`AppGraph`, sans framework d'injection). La date du jour est toujours injectée (`Clock`). Événements en fichiers JSON chargés en mémoire, réévaluation à 5 000 événements.
+**Architecture (décision du 14/11/2026)** : Clean Architecture. `domain` (entités, ports, cas d'usage, règles en fonctions pures) ne dépend de rien d'autre que `kotlinx-datetime` et `kotlinx-coroutines-core` (pour `Flow`, décision du 15/11/2026) ; `data` implémente les ports (JSON, DataStore, horloge) ; `ui`, le widget Android et l'icône Windows n'appellent que des cas d'usage ; `androidApp` et `desktopApp` assemblent le tout (`AppGraph`, sans framework d'injection). La date du jour est toujours injectée (`Clock`). Événements en fichiers JSON chargés en mémoire, réévaluation à 5 000 événements.
 
 Ce fichier est la **source unique** des instructions pour les agents IA : GitHub Copilot le lit directement, Claude Code via l'import `@AGENTS.md` de `CLAUDE.md`.
 
@@ -25,7 +25,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 - **Aujourd'hui** (écran d'ouverture) : le coup de vieux du jour, c'est-à-dire les anniversaires d'événements du jour, chiffres ronds en premier (10, 15, 20, 25 ans…), avec l'âge qu'avait l'utilisateur. À défaut, l'anniversaire le plus proche des jours suivants.
 - **Équivalences** : à partir de l'âge de l'utilisateur et de celui d'un jeune (15 ans par défaut), les paires d'événements de **même type** décalées de l'écart d'âge (Friends ↔ Happy Days). Pas de phrase générée : les deux événements, leurs dates et l'âge de chacun.
 - **Mon équivalent** : un événement choisi et son équivalent pour l'autre génération, dans les deux sens.
-- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026), âge du jeune, région, gardés sur l'appareil. Un seul style d'affichage en V1, **Polaroïd** (âges écrits à la main) ; l'Éphéméride vient dans le jalon suivant, le VHS peut-être plus tard (décision du 13/11/2026, maquettes dans `docs/maquettes/`).
+- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026) et région, gardés sur l'appareil. L'âge du jeune est gardé aussi, mais se règle dans Équivalences et au premier lancement, pas dans Réglages (décision du 15/11/2026). Un seul style d'affichage en V1, **Polaroïd** (âges écrits à la main) ; l'Éphéméride vient dans le jalon suivant, le VHS peut-être plus tard (décision du 13/11/2026, maquettes dans `docs/maquettes/`).
 - **Widget Android** (mis à jour chaque jour) ; sur Windows, **icône de barre des tâches** et **notification** le matin.
 
 ## Données

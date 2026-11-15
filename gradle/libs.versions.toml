@@ -1,4 +1,5 @@
 # Versions stables figées au jalon 1 (14/11/2026), toutes publiées depuis au moins deux semaines.
+# DataStore 1.3.0 et Okio 3.18.2 ajoutés au jalon 4 (15/11/2026).
 [versions]
 kotlin = "2.4.21"
 compose-multiplatform = "1.12.2"
@@ -10,6 +11,8 @@ androidx-activity = "1.13.0"
 kotlinx-coroutines = "1.11.0"
 kotlinx-datetime = "0.8.0"
 kotlinx-serialization = "1.12.0"
+androidx-datastore = "1.3.0"
+okio = "3.18.2"
 
 android-compileSdk = "37"
 android-targetSdk = "36"
@@ -27,6 +30,8 @@ kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+androidx-datastore-core-okio = { module = "androidx.datastore:datastore-core-okio", version.ref = "androidx-datastore" }
+okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 [plugins]

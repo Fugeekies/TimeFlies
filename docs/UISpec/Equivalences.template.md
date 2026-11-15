@@ -9,11 +9,11 @@ Le principe de l'épisode : pour un jeune de l'âge choisi, quels événements o
 
 #### Bandeau des générations (en haut)
 * « Toi : 35 ans · Le jeune : 15 ans » et, en grand, « **20 ans d'écart** ».
-* Bouton « Modifier » : ouvre une feuille avec le curseur de l'âge du jeune (même règle que dans Réglages) ; le changement est enregistré et la liste se recalcule aussitôt. Le mois et l'année de naissance se changent dans Réglages.
+* Bouton « Modifier » : ouvre une feuille avec le curseur de l'âge du jeune : de 5 à 60 ans, **15 ans** par défaut ; au moins 5 ans de moins que l'utilisateur, sinon message « Le jeune doit avoir au moins 5 ans de moins que toi. » et la valeur n'est pas enregistrée. Si l'utilisateur change ensuite son année de naissance dans Réglages et que le jeune n'a plus 5 ans de moins, les deux valeurs sont gardées et le message s'affiche (décision du 15/11/2026). C'est le seul endroit, avec le premier lancement, où se règle l'âge du jeune (décision du 15/11/2026, il n'est plus dans Réglages). Le changement est enregistré et la liste se recalcule aussitôt. Le mois et l'année de naissance se changent dans Réglages.
 * **Âges à la volée** (décision du 13/11/2026) : pour comparer entre amis, le bandeau devient « Le vieux : 35 ans · Le jeune : 15 ans ». Toucher un des deux âges ouvre un curseur (de 5 à 100 ans pour le vieux, de 1 à l'âge du vieux moins 5 pour le jeune) ; la liste se recalcule aussitôt.
   * Ces âges ne sont **pas enregistrés** : Mon équivalent utilise les mêmes, mais tout revient aux réglages à la fermeture de l'application.
   * Tant que des âges à la volée sont actifs, le bandeau porte la mention « Âges temporaires » et un bouton **« Revenir à mes réglages »**.
-  * Un âge donné à la volée correspond à une naissance « aujourd'hui moins cet âge », au jour près, comme pour le jeune dans Réglages.
+  * Un âge donné à la volée correspond à une naissance « aujourd'hui moins cet âge », au jour près, comme pour le jeune (voir `Settings.template.md`, « Calcul des âges et de l'écart »).
   * Ils marchent aussi sans mois et année de naissance enregistrés : c'est alors le seul moyen de voir des équivalences.
 
 #### Sens de lecture (décision du 13/11/2026)

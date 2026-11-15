@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.EventType
 import io.github.fugeekies.timeflies.domain.model.MonthDay
@@ -49,6 +50,6 @@ class GetDailyShockTest {
     fun passesTheBirthToComputeTheUserAge() = runTest {
         val repository = FakeRepository(listOf(testEvent("film", "2011-11-02")))
         val shock = GetDailyShock(repository, Clock { LocalDate(2026, 11, 2) })(birth = LocalDate(1991, 5, 1))
-        assertEquals(20, shock.main?.userAge)
+        assertEquals(UserAge.Years(20), shock.main?.userAge)
     }
 }
