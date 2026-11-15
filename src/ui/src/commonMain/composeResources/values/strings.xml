@@ -74,6 +74,35 @@
     <string name="reduced_mode_message">Indique ton mois et ton année de naissance pour voir tes équivalences.</string>
     <string name="open_settings">Ouvrir les réglages</string>
 
+    <!-- Debug panel, debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage") -->
+    <string name="nav_debug">Débogage</string>
+    <string name="debug_title">Débogage</string>
+    <string name="debug_date">DATE DU JOUR</string>
+    <string name="debug_date_system">%1$s (horloge système)</string>
+    <string name="debug_date_fake">%1$s (fausse date)</string>
+    <string name="debug_previous_day">− 1 jour</string>
+    <string name="debug_next_day">+ 1 jour</string>
+    <string name="debug_feb29">29 février 2028</string>
+    <string name="debug_feb28">28 février 2027</string>
+    <string name="debug_next_empty_day">Prochain jour sans anniversaire</string>
+    <string name="debug_date_input">AAAA-MM-JJ</string>
+    <string name="debug_apply">Appliquer</string>
+    <string name="debug_invalid_date">Date invalide (AAAA-MM-JJ).</string>
+    <string name="debug_system_clock">Revenir à l'horloge système</string>
+    <string name="debug_settings">RÉGLAGES FORCÉS</string>
+    <string name="debug_region_input">Région (code ISO, ex. BE)</string>
+    <string name="debug_invalid_region">Code de pays invalide : deux lettres majuscules.</string>
+    <string name="debug_current_region">Région : %1$s</string>
+    <string name="debug_redo_onboarding">Revoir le premier lancement</string>
+    <string name="debug_reset_settings">Remettre les réglages par défaut</string>
+    <string name="debug_stats">BASE D'ÉVÉNEMENTS</string>
+    <string name="debug_stats_count">Événements : %1$d</string>
+    <string name="debug_stats_family">%1$s : %2$d</string>
+    <string name="debug_stats_empty_days">Jours de l'année sans anniversaire : %1$d / 366</string>
+    <string name="debug_stats_poor_types">Types avec moins de %1$d événements : %2$d</string>
+    <string name="debug_stats_rejections">Entrées écartées par la validation : %1$d</string>
+    <string name="debug_refresh">Actualiser</string>
+
     <!-- Settings (docs/UISpec/Settings.template.md) -->
     <string name="settings_title">Réglages</string>
     <string name="settings_generations">GÉNÉRATIONS</string>

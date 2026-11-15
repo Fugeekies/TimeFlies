@@ -27,16 +27,21 @@ import okio.Path
  * @param fileSystem the system file system, handed by the app ([FileSystem.SYSTEM] on both platforms).
  * @param file `settings.json` in the app's private folder (Android) or in `%APPDATA%\TimeFlies` (Windows).
  * @param scope where DataStore runs its writes; DataStore's own I/O scope when null.
+ * @param onCorruption called when an unreadable file is replaced by the defaults, for the logs.
  */
 class DataStoreSettingsRepository(
     fileSystem: FileSystem,
     file: Path,
     scope: CoroutineScope? = null,
+    onCorruption: (Throwable) -> Unit = {},
 ) : SettingsRepository {
 
     private val store: DataStore<SettingsDto> = run {
         val storage = OkioStorage(fileSystem, SettingsSerializer, producePath = { file })
-        val corruptionHandler = ReplaceFileCorruptionHandler<SettingsDto> { SettingsDto() }
+        val corruptionHandler = ReplaceFileCorruptionHandler<SettingsDto> { error ->
+            onCorruption(error)
+            SettingsDto()
+        }
         if (scope == null) {
             DataStoreFactory.create(storage, corruptionHandler)
         } else {

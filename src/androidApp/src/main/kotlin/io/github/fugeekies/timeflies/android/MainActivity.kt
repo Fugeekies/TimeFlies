@@ -19,6 +19,7 @@ class MainActivity : ComponentActivity() {
                 completeOnboarding = graph.completeOnboarding,
                 countEvents = graph.countEvents,
                 clock = graph.clock,
+                debugTools = graph.debugTools,
             )
         }
     }

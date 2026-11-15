@@ -56,7 +56,7 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
     "preLaunchTask": "TimeFlies PC : lancer en attente du débogueur" }
   ```
 
-  avec, dans `.vscode/tasks.json`, une tâche de fond `./gradlew :desktopApp:run --debug-jvm` (`isBackground`, fin détectée sur « Listening for transport ») et `JAVA_HOME` dans `options.env`.
+  avec, dans `.vscode/tasks.json`, une tâche de fond `./gradlew :desktopApp:run --debug-jvm '-Dtimeflies.debug=true'` (`isBackground`, fin détectée sur « Listening for transport ») et `JAVA_HOME` dans `options.env`. L'option `-Dtimeflies.debug=true` active le panneau de débogage : F5 ouvre ainsi l'application avec la destination « Débogage ». Les apostrophes sont nécessaires : VS Code lance les tâches dans PowerShell, qui coupe sinon l'option au point (`Task '.debug=true' not found`).
 - Le débogage Android avec points d'arrêt et Compose Hot Reload passent par Android Studio.
 
 ### 2. Les règles métier : les tests
@@ -72,13 +72,14 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
 Aperçus `@Preview` nourris de données fictives, pour voir chaque écran dans tous ses états sans lancer l'application : vide, sans mois et année de naissance, pas d'anniversaire aujourd'hui, texte agrandi à 200 %.
 
 ### 5. Panneau de débogage (versions de débogage seulement)
-Une destination « Débogage », présente uniquement dans les versions de débogage (Android) ou avec l'option de lancement `-Dtimeflies.debug=true` (Windows), jamais dans une release :
-- **changer la date du jour** (fausse horloge à la place de `SystemClock`) : 29 février, jour sans anniversaire, passage de minuit ;
-- forcer le mois et l'année de naissance, l'âge du jeune et la région ;
-- déclencher tout de suite la notification Windows ou la mise à jour du widget ;
-- statistiques de la base : nombre d'événements, jours de l'année sans anniversaire, types trop pauvres, entrées écartées par la validation.
+Une destination « Débogage » (icône de clé), présente uniquement dans les versions de débogage (Android, détectées par le drapeau `debuggable` de l'APK) ou avec l'option de lancement `-Dtimeflies.debug=true` (Windows : `./gradlew :desktopApp:run '-Dtimeflies.debug=true'`, avec les apostrophes dans PowerShell ; seule la tâche `run` reçoit l'option), jamais dans une release. Elle apparaît une fois le premier lancement passé.
+- **changer la date du jour** (`AdjustableClock` à la place de `SystemClock`) : un jour de plus ou de moins, 29 février 2028, 28 février 2027 (année non bissextile, où les événements du 29 février sont fêtés), prochain jour sans anniversaire, une date saisie (`AAAA-MM-JJ`), retour à l'horloge système. Aujourd'hui et Réglages se recalculent aussitôt ; une fausse date ne change pas toute seule à minuit ;
+- forcer les réglages sans les contrôles des écrans : mois et année de naissance (ou les effacer), région (code de pays à deux lettres), **revoir le premier lancement**, remettre les réglages par défaut. L'âge de l'autre génération n'y est pas (décision du 15/11/2026) ;
+- statistiques de la base : nombre d'événements, par thème, jours de l'année sans anniversaire, types trop pauvres, entrées écartées par la validation ;
+- déclencher tout de suite la notification Windows ou la mise à jour du widget : ajouté avec les jalons 10 et 11.
 
 ### 6. Logs et plantages
-- Kermit : Logcat sur Android ; console et `%APPDATA%\TimeFlies\logs\` sur Windows.
-- **Aucune donnée personnelle** dans les logs (ni mois ni année de naissance).
-- Pas d'outil de rapport de plantage en ligne (l'application n'a aucune connexion) : la trace est écrite dans les logs, à joindre à la main à une issue GitHub.
+- Kermit : Logcat sur Android ; console et `%APPDATA%\TimeFlies\logs\timeflies-AAAA-MM-JJ.log` sur Windows (un fichier par jour, les 7 derniers jours gardés). Niveau `Debug` en débogage, `Info` sinon.
+- **Aucune donnée personnelle** dans les logs (ni mois ni année de naissance) : un fichier de réglages illisible est signalé par le nom de l'erreur seulement, son message pouvant citer le fichier.
+- Pas d'outil de rapport de plantage en ligne (l'application n'a aucune connexion) : une exception non rattrapée est écrite dans les logs (étiquette `Crash`) avant l'arrêt, à joindre à la main à une issue GitHub.
+- La console Windows peut afficher les accents de travers (page de code) ; le fichier est en UTF-8.

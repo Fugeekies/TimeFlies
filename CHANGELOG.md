@@ -11,6 +11,9 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Panneau de débogage, dans les versions de débogage seulement (Android de débogage, `-Dtimeflies.debug=true` sur PC) : fausse date du jour, réglages forcés (naissance, région, revoir le premier lancement, valeurs par défaut), statistiques de la base.
+- Logs Kermit : Logcat sur Android, console et un fichier par jour dans `%APPDATA%\TimeFlies\logs` sur PC, sans donnée personnelle ; les plantages y sont écrits.
+
 - Écran de premier lancement : mois et année de naissance, boutons « C'est parti » et « Plus tard » ; il ne revient plus ensuite.
 - Mode réduit sans mois et année de naissance : Équivalences et Mon équivalent invitent à les indiquer, avec un bouton « Ouvrir les réglages ».
 - Écran Réglages : mois et année de naissance (lien « Effacer »), région (France en V1), à propos (version, nombre d'événements, liens GitHub et licences). Chaque réglage est enregistré dès qu'il change.

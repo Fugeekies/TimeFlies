@@ -5,11 +5,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
+import co.touchlab.kermit.Logger
 import io.github.fugeekies.timeflies.ui.App
 import java.awt.Dimension
 
 fun main() {
-    val graph = AppGraph()
+    // Debug panel and fake date: `./gradlew :desktopApp:run '-Dtimeflies.debug=true'`, never in the installer.
+    val debug = System.getProperty("timeflies.debug") == "true"
+    Logging.setUp(debug)
+    Logger.withTag("App").i { "TimeFlies démarre${if (debug) " (débogage)" else ""}" }
+    val graph = AppGraph(debug)
     application {
         Window(
             onCloseRequest = ::exitApplication,
@@ -24,6 +29,7 @@ fun main() {
                 completeOnboarding = graph.completeOnboarding,
                 countEvents = graph.countEvents,
                 clock = graph.clock,
+                debugTools = graph.debugTools,
             )
         }
     }

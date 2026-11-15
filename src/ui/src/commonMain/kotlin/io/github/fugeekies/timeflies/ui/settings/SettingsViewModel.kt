@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
@@ -55,7 +56,12 @@ class SettingsViewModel(
     private val draft = MutableStateFlow(Draft())
     private val eventCount = MutableStateFlow<Int?>(null)
 
-    val state: StateFlow<SettingsUiState?> = combine(observeSettings(), draft, eventCount) { settings, draft, count ->
+    val state: StateFlow<SettingsUiState?> = combine(
+        observeSettings(),
+        draft,
+        eventCount,
+        clock.manualChanges().onStart { emit(Unit) },
+    ) { settings, draft, count, _ ->
         uiState(settings, draft, count)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 

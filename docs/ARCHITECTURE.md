@@ -36,8 +36,8 @@ Les cinq modules sont rangés dans `src/` (`src/domain`, `src/data`, `src/ui`, `
 
 | Module | Contient | Dépend de |
 |---|---|---|
-| `domain` | Entités (`Event`, `EventType`, `Family`, `Settings`, `Generations`), **ports** (`EventRepository`, `SettingsRepository`, `Clock`), **cas d'usage** (`GetDailyShock`, `GetEquivalences`, `FindEquivalent`, `UpdateSettings`, `ObserveSettings`, `CountEvents`) et fonctions pures des règles (`Ages`, `Anniversaries`, `Equivalences`). | `kotlinx-datetime`, `kotlinx-coroutines-core` |
-| `data` | Implémentations des ports : `JsonEventRepository` (lecture, validation, index), `DataStoreSettingsRepository`, `SystemClock`. Tout en `commonMain`. | `domain`, `kotlinx-serialization-json`, DataStore |
+| `domain` | Entités (`Event`, `EventType`, `Family`, `Settings`, `Generations`), **ports** (`EventRepository`, `SettingsRepository`, `Clock`, `DebugTools` pour le panneau de débogage), **cas d'usage** (`GetDailyShock`, `GetEquivalences`, `FindEquivalent`, `UpdateSettings`, `ObserveSettings`, `CompleteOnboarding`, `CountEvents`) et fonctions pures des règles (`Ages`, `Anniversaries`, `Equivalences`). | `kotlinx-datetime`, `kotlinx-coroutines-core` |
+| `data` | Implémentations des ports : `JsonEventRepository` (lecture, validation, index), `DataStoreSettingsRepository`, `SystemClock`, et pour les versions de débogage seulement `AdjustableClock` (fausse date) et `DataDebugTools`. Tout en `commonMain`. | `domain`, `kotlinx-serialization-json`, DataStore |
 | `ui` | Écrans Compose, ViewModels, thème (jetons par style), ressources (`composeResources/` : textes, polices, fichiers d'événements). Les ViewModels n'appellent **que des cas d'usage**. | `domain`, Compose Multiplatform |
 | `androidApp` | `AppGraph` (assemblage), `MainActivity`, widget Glance, Workers, `BroadcastReceiver` de date et de démarrage. | `domain`, `data`, `ui` |
 | `desktopApp` | `AppGraph`, `main()`, fenêtre, `Tray`, notification, clé de démarrage Windows. | `domain`, `data`, `ui` |
@@ -72,7 +72,7 @@ Les versions sont celles de la dernière stable au moment du jalon, figées dans
 
 1. Au démarrage, `JsonEventRepository` lit les fichiers d'événements sur `Dispatchers.Default`, valide chaque entrée et construit les index en mémoire (voir « Base d'événements »). Une entrée invalide fait échouer les tests ; en production, elle est écartée et journalisée.
 2. `SettingsRepository.settings: Flow<Settings>` fournit les réglages.
-3. `Clock.todayFlow` émet la date du jour, dans le **fuseau horaire de l'appareil**, puis la date suivante à chaque minuit local.
+3. `Clock.today()` donne la date du jour, dans le **fuseau horaire de l'appareil** ; chaque ViewModel concerné attend le minuit local suivant (de l'horloge système) pour recalculer, et `Clock.manualChanges()` signale une fausse date changée à la main dans le panneau de débogage (jalon 6, 15/11/2026).
 4. Chaque ViewModel combine réglages, date du jour et **âges à la volée** (un `MutableStateFlow` gardé par `AppGraph`, jamais écrit sur disque) et appelle les cas d'usage.
 
 Exemple, le coup de vieux du jour :
