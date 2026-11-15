@@ -2,7 +2,7 @@
 
 Application **Android et Windows** qui donne des « coups de vieux », inspirée de l'épisode *Bloqués #108 - On est les vieux des jeunes*. Kotlin et Compose Multiplatform : un seul code partagé, avec des parties propres à chaque plateforme (widget Android, icône de barre des tâches et notification Windows). La documentation est en **français**, le code et les commentaires en **anglais**. L'interface est en français d'abord, prévue pour être traduite.
 
-**Architecture (décision du 14/11/2026)** : Clean Architecture. `domain` (entités, ports, cas d'usage, règles en fonctions pures) ne dépend de rien d'autre que `kotlinx-datetime` ; `data` implémente les ports (JSON, DataStore, horloge) ; `ui`, le widget Android et l'icône Windows n'appellent que des cas d'usage ; `androidApp` et `desktopApp` assemblent le tout (`AppGraph`, sans framework d'injection). La date du jour est toujours injectée (`Clock`). Événements en fichiers JSON chargés en mémoire, réévaluation à 5 000 événements.
+**Architecture (décision du 14/11/2026)** : Clean Architecture. `domain` (entités, ports, cas d'usage, règles en fonctions pures) ne dépend de rien d'autre que `kotlinx-datetime` et `kotlinx-coroutines-core` (pour `Flow`, décision du 15/11/2026) ; `data` implémente les ports (JSON, DataStore, horloge) ; `ui`, le widget Android et l'icône Windows n'appellent que des cas d'usage ; `androidApp` et `desktopApp` assemblent le tout (`AppGraph`, sans framework d'injection). La date du jour est toujours injectée (`Clock`). Événements en fichiers JSON chargés en mémoire, réévaluation à 5 000 événements.
 
 Ce fichier est la **source unique** des instructions pour les agents IA : GitHub Copilot le lit directement, Claude Code via l'import `@AGENTS.md` de `CLAUDE.md`.
 

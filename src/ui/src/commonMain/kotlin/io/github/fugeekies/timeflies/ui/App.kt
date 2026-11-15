@@ -19,13 +19,18 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import io.github.fugeekies.timeflies.domain.port.Clock
+import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
+import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.coming_soon
 import io.github.fugeekies.timeflies.ui.resources.nav_equivalences
 import io.github.fugeekies.timeflies.ui.resources.nav_my_equivalent
 import io.github.fugeekies.timeflies.ui.resources.nav_settings
 import io.github.fugeekies.timeflies.ui.resources.nav_today
+import io.github.fugeekies.timeflies.ui.settings.SettingsScreen
+import io.github.fugeekies.timeflies.ui.settings.SettingsViewModel
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesTheme
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
 import io.github.fugeekies.timeflies.ui.today.TodayScreen
@@ -44,9 +49,18 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
 /**
  * Root composable shared by the Android and Windows apps: theme and adaptive navigation (bottom bar on
  * a phone, rail on a wide window). The use cases come from the app's composition root.
+ *
+ * @param appVersion version shown in Settings › À propos; null for a local development build.
  */
 @Composable
-fun App(getDailyShock: GetDailyShock, clock: Clock) {
+fun App(
+    getDailyShock: GetDailyShock,
+    observeSettings: ObserveSettings,
+    updateSettings: UpdateSettings,
+    countEvents: CountEvents,
+    clock: Clock,
+    appVersion: String? = null,
+) {
     TimeFliesTheme {
         var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
         NavigationSuiteScaffold(
@@ -64,7 +78,12 @@ fun App(getDailyShock: GetDailyShock, clock: Clock) {
         ) {
             val content = Modifier.fillMaxSize().safeDrawingPadding()
             when (current) {
-                Destination.TODAY -> TodayScreen(viewModel { TodayViewModel(getDailyShock, clock) }, content)
+                Destination.TODAY -> TodayScreen(viewModel { TodayViewModel(getDailyShock, observeSettings, clock) }, content)
+                Destination.SETTINGS -> SettingsScreen(
+                    viewModel { SettingsViewModel(observeSettings, updateSettings, countEvents, clock) },
+                    appVersion,
+                    content,
+                )
                 else -> ComingSoon(content)
             }
         }

@@ -45,6 +45,53 @@
         <item quantity="other">%2$s, %3$s, il y a %1$d ans.</item>
     </plurals>
 
+    <!-- User's age on the date of an event (decision of 15/11/2026) -->
+    <plurals name="user_age_years">
+        <item quantity="one">Tu avais %1$d an.</item>
+        <item quantity="other">Tu avais %1$d ans.</item>
+    </plurals>
+    <string name="user_age_under_one">Tu avais moins d'un an.</string>
+    <string name="user_age_birth_year">C'était l'année de ta naissance.</string>
+    <plurals name="user_age_before_birth">
+        <item quantity="one">C'était %1$d an avant ta naissance.</item>
+        <item quantity="other">C'était %1$d ans avant ta naissance.</item>
+    </plurals>
+
+    <!-- Settings (docs/UISpec/Settings.template.md) -->
+    <string name="settings_title">Réglages</string>
+    <string name="settings_generations">GÉNÉRATIONS</string>
+    <string name="settings_birth">Ton mois et ton année de naissance</string>
+    <string name="settings_birth_value">%1$s %2$d · %3$s</string>
+    <string name="settings_birth_unset">Non renseigné</string>
+    <string name="settings_birth_unset_help">Sans cette information, TimeFlies affiche les anniversaires sans ton âge et ne peut pas calculer d'équivalences.</string>
+    <string name="settings_month">Mois</string>
+    <string name="settings_year">Année</string>
+    <string name="settings_clear">Effacer</string>
+    <string name="settings_young_age">Âge du jeune</string>
+    <string name="settings_young_too_old">Le jeune doit avoir au moins 5 ans de moins que toi.</string>
+    <plurals name="settings_gap">
+        <item quantity="one">%1$d an d'écart</item>
+        <item quantity="other">%1$d ans d'écart</item>
+    </plurals>
+    <string name="settings_display">AFFICHAGE</string>
+    <string name="settings_region">Région</string>
+    <string name="region_fr">France</string>
+    <string name="settings_about">À PROPOS</string>
+    <string name="about_version">TimeFlies v%1$s</string>
+    <string name="about_dev_version">TimeFlies · version de développement</string>
+    <string name="about_inspired_before">Inspiré de l'épisode </string>
+    <string name="about_inspired_episode">Bloqués #108 - On est les vieux des jeunes</string>
+    <string name="about_inspired_after">.</string>
+    <plurals name="about_event_count">
+        <item quantity="one">%1$d événement</item>
+        <item quantity="other">%1$d événements</item>
+    </plurals>
+    <string name="about_source">Code source</string>
+    <string name="about_report">Signaler une erreur de date</string>
+    <string name="about_license">Licence GPL v3</string>
+    <string name="about_third_party">Licences des polices et bibliothèques</string>
+    <string name="about_privacy">Aucune donnée ne quitte cet appareil.</string>
+
     <!-- Natures (docs/EVENTS_DATA.md, "Natures") -->
     <string name="kind_film_release">Sortie au cinéma</string>
     <string name="kind_series_premiere">Première diffusion</string>

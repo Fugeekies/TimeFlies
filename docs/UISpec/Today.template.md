@@ -15,7 +15,7 @@
   * « Il y a » n'est pas écrit : le grand chiffre suffit (décision du 13/11/2026) ;
   * **titre** de l'événement (« Intouchables ») ;
   * **nature et date** : « Sortie au cinéma · 2 novembre 2011 » (libellé du `kind`, voir `EVENTS_DATA.md`) ;
-  * **âge de l'utilisateur** : « Tu avais 20 ans. » ; si l'événement est antérieur à sa naissance : « C'était 3 ans avant ta naissance. » ; l'année de sa naissance : « C'était l'année de ta naissance. » ; **sans mois et année de naissance** (premier lancement passé), la ligne n'est pas affichée (décision du 13/11/2026) ;
+  * **âge de l'utilisateur** : « Tu avais 20 ans. » ; si l'événement est antérieur à sa naissance : « C'était 3 ans avant ta naissance. » ; l'année de sa naissance : « C'était l'année de ta naissance. » ; moins d'un an après l'année de sa naissance : « Tu avais moins d'un an. » (décision du 15/11/2026 ; les années avant la naissance se comptent en années civiles, 1988 pour une naissance en 1991 donne « 3 ans ») ; **sans mois et année de naissance** (premier lancement passé), la ligne n'est pas affichée (décision du 13/11/2026) ;
   * puce **« Chiffre rond »** si le nombre d'années est un multiple de 5 ;
   * pastille de la famille (couleur, voir `UI_DESIGN_SPEC.md` § 3).
 * **Aucun anniversaire aujourd'hui** : la feuille affiche le premier anniversaire des 7 jours suivants, avec l'eyebrow « DANS 3 JOURS · JEUDI 5 NOVEMBRE » et « fêtera ses 25 ans » sous le titre au lieu de la nature seule.

@@ -60,6 +60,7 @@ import io.github.fugeekies.timeflies.ui.text.capitalized
 import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
+import io.github.fugeekies.timeflies.ui.text.userAgeText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import org.jetbrains.compose.resources.pluralStringResource
@@ -159,11 +160,9 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
     } else {
         pluralStringResource(Res.plurals.will_turn, anniversary.years, anniversary.years)
     }
-    val description = pluralStringResource(
-        Res.plurals.a11y_anniversary, anniversary.years, anniversary.years,
-        event.title("fr"), stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(anniversary.eventDate)),
-    )
-    PolaroidCard(anniversary, legend, description)
+    val userAge = userAgeText(anniversary.userAge)
+    val description = describe(anniversary, dates, userAge)
+    PolaroidCard(anniversary, legend, userAge, description)
 }
 
 @Composable
@@ -207,10 +206,8 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
     val style = LocalStyle.current
     val colors = MaterialTheme.colorScheme
     val event = anniversary.event
-    val description = pluralStringResource(
-        Res.plurals.a11y_anniversary, anniversary.years, anniversary.years,
-        event.title("fr"), stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(anniversary.eventDate)),
-    )
+    val userAge = userAgeText(anniversary.userAge)
+    val description = describe(anniversary, dates, userAge)
     Surface(
         color = colors.surface,
         shape = RoundedCornerShape(6.dp),
@@ -230,7 +227,21 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
                     style = MaterialTheme.typography.bodySmall,
                     color = colors.onSurfaceVariant,
                 )
+                if (userAge != null) {
+                    Text(userAge, style = MaterialTheme.typography.bodySmall, color = colors.onSurface)
+                }
             }
         }
     }
+}
+
+/** What screen readers say for an anniversary, with the user's age when known. */
+@Composable
+private fun describe(anniversary: Anniversary, dates: DateTexts, userAge: String?): String {
+    val event = anniversary.event
+    val base = pluralStringResource(
+        Res.plurals.a11y_anniversary, anniversary.years, anniversary.years,
+        event.title("fr"), stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(anniversary.eventDate)),
+    )
+    return if (userAge == null) base else "$base $userAge"
 }

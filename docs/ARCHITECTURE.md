@@ -32,11 +32,11 @@ Les cinq modules sont rangés dans `src/` (`src/domain`, `src/data`, `src/ui`, `
    └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Règle de dépendance** : toutes les dépendances pointent vers `domain`, qui ne dépend de rien d'autre que `kotlinx-datetime` (pour `LocalDate`). Il n'importe ni Compose, ni la sérialisation JSON, ni DataStore, ni Android.
+**Règle de dépendance** : toutes les dépendances pointent vers `domain`, qui ne dépend de rien d'autre que `kotlinx-datetime` (pour `LocalDate`) et `kotlinx-coroutines-core` (pour le `Flow` du port `SettingsRepository`, décision du 15/11/2026 ; pas de `Dispatchers` dans `domain`). Il n'importe ni Compose, ni la sérialisation JSON, ni DataStore, ni Android.
 
 | Module | Contient | Dépend de |
 |---|---|---|
-| `domain` | Entités (`Event`, `EventType`, `Family`, `Settings`, `Generations`), **ports** (`EventRepository`, `SettingsRepository`, `Clock`), **cas d'usage** (`GetDailyShock`, `GetEquivalences`, `FindEquivalent`, `UpdateSettings`) et fonctions pures des règles (`Ages`, `Anniversaries`, `Equivalences`). | `kotlinx-datetime` |
+| `domain` | Entités (`Event`, `EventType`, `Family`, `Settings`, `Generations`), **ports** (`EventRepository`, `SettingsRepository`, `Clock`), **cas d'usage** (`GetDailyShock`, `GetEquivalences`, `FindEquivalent`, `UpdateSettings`, `ObserveSettings`, `CountEvents`) et fonctions pures des règles (`Ages`, `Anniversaries`, `Equivalences`). | `kotlinx-datetime`, `kotlinx-coroutines-core` |
 | `data` | Implémentations des ports : `JsonEventRepository` (lecture, validation, index), `DataStoreSettingsRepository`, `SystemClock`. Tout en `commonMain`. | `domain`, `kotlinx-serialization-json`, DataStore |
 | `ui` | Écrans Compose, ViewModels, thème (jetons par style), ressources (`composeResources/` : textes, polices, fichiers d'événements). Les ViewModels n'appellent **que des cas d'usage**. | `domain`, Compose Multiplatform |
 | `androidApp` | `AppGraph` (assemblage), `MainActivity`, widget Glance, Workers, `BroadcastReceiver` de date et de démarrage. | `domain`, `data`, `ui` |

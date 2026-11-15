@@ -36,7 +36,7 @@ object Anniversaries {
             .asSequence()
             .map { it to it.dateFor(region) }
             .filter { (_, date) -> MonthDay.of(date) in celebrated }
-            .map { (event, date) -> Anniversary(event, day, date, day.year - date.year, birth?.let { Ages.age(it, date) }) }
+            .map { (event, date) -> Anniversary(event, day, date, day.year - date.year, birth?.let { Ages.userAge(it, date) }) }
             .filter { it.years >= 1 }
             .sortedWith(displayOrder)
             .toList()

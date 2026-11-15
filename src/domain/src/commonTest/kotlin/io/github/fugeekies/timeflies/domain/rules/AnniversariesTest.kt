@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.rules
 
+import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.MonthDay
 import io.github.fugeekies.timeflies.domain.model.Region
@@ -75,8 +76,8 @@ class AnniversariesTest {
         val events = listOf(testEvent("film", "2011-11-02"), testEvent("before", "1989-11-02"))
         val birth = LocalDate(1991, 5, 1)
         val byId = Anniversaries.on(today, events, france, birth).associateBy { it.event.id }
-        assertEquals(20, byId.getValue("film").userAge)
-        assertEquals(-2, byId.getValue("before").userAge)
+        assertEquals(UserAge.Years(20), byId.getValue("film").userAge)
+        assertEquals(UserAge.BeforeBirth(2), byId.getValue("before").userAge)
         assertNull(Anniversaries.on(today, events, france, null).first().userAge)
     }
 

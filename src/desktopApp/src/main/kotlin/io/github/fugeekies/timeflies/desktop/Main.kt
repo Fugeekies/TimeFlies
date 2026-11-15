@@ -17,7 +17,13 @@ fun main() {
             state = rememberWindowState(size = DpSize(1000.dp, 700.dp)),
         ) {
             window.minimumSize = Dimension(420, 640)
-            App(getDailyShock = graph.getDailyShock, clock = graph.clock)
+            App(
+                getDailyShock = graph.getDailyShock,
+                observeSettings = graph.observeSettings,
+                updateSettings = graph.updateSettings,
+                countEvents = graph.countEvents,
+                clock = graph.clock,
+            )
         }
     }
 }

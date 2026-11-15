@@ -48,10 +48,11 @@ Le coup de vieux du jour à l'écran, en style Polaroïd.
 
 ### Jalon 4 — Menu Réglages
 Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
-- [ ] `domain` : entité `Settings`, port `SettingsRepository`, cas d'usage `UpdateSettings`.
-- [ ] `data` : `DataStoreSettingsRepository` (JSON, mêmes réglages sur PC et Android).
-- [ ] Écran Réglages ([`Settings.template.md`](UISpec/Settings.template.md)) : mois et année de naissance, âge du jeune, région, à propos. Le panneau Windows et celui du widget viendront avec leurs jalons.
-- [ ] Aujourd'hui affiche « Tu avais N ans ».
+- [x] `domain` : entité `Settings`, port `SettingsRepository` (en `Flow` : `domain` dépend aussi de `kotlinx-coroutines-core`, décision du 15/11/2026), cas d'usage `UpdateSettings`, `ObserveSettings` et `CountEvents`, règles `Generations` (naissance au 1er du mois, jeune né aujourd'hui moins son âge, écart au jour près, 5 ans d'écart au moins), tests.
+- [x] `data` : `DataStoreSettingsRepository` (DataStore 1.3.0 et Okio, JSON lisible avec un champ `version`, fichier illisible remplacé par les valeurs par défaut), `settings.json` dans le dossier privé de l'application sur Android et dans `%APPDATA%\TimeFlies` sur PC, tests.
+- [x] Écran Réglages ([`Settings.template.md`](UISpec/Settings.template.md)) : mois et année de naissance (deux listes, lien « Effacer »), âge du jeune (curseur, écart, message si moins de 5 ans d'écart), région affichée « France » sans liste (décision du 15/11/2026), à propos (version, nombre d'événements, liens GitHub, licences). Le panneau Windows et celui du widget viendront avec leurs jalons.
+- [x] Aujourd'hui affiche « Tu avais N ans. », « Tu avais moins d'un an. », « C'était l'année de ta naissance. » ou « C'était N ans avant ta naissance. » (décision du 15/11/2026), et se recalcule quand les réglages changent.
+- [ ] Vérifier l'écran Réglages à l'œil sur PC et sur Android.
 
 ### Jalon 5 — Premier lancement
 - [ ] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)).
@@ -142,9 +143,11 @@ La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [
 - [ ] Jetons du style (palette claire et sombre déjà définies, `docs/UI_DESIGN_SPEC.md` § 2).
 - [ ] Ajouter le choix du style dans Réglages (Polaroïd par défaut) et l'appliquer au widget.
 
-### Jalon — Traductions
+### Jalon — Traductions et régions
 - [ ] Interface en anglais, en plus du français de référence.
 - [ ] Titres des événements en anglais quand ils diffèrent.
+- [ ] Événements pour d'autres régions du monde : dates régionales (`regionalDates`) sourcées pour les pays visés, et événements propres à ces pays.
+- [ ] Choix de la région dans Réglages (liste des pays dans la langue de l'interface, région du système par défaut) : en V1, France seulement (décision du 15/11/2026).
 
 ### Liste d'idées à prioriser
 - Style VHS (cassette, étiquette au feutre, compteur de bande), maquette dans [`maquettes/`](maquettes/README.md).

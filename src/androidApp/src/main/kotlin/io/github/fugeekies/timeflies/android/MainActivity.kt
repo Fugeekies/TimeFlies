@@ -11,6 +11,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         val graph = (application as TimeFliesApplication).graph
-        setContent { App(getDailyShock = graph.getDailyShock, clock = graph.clock) }
+        setContent {
+            App(
+                getDailyShock = graph.getDailyShock,
+                observeSettings = graph.observeSettings,
+                updateSettings = graph.updateSettings,
+                countEvents = graph.countEvents,
+                clock = graph.clock,
+            )
+        }
     }
 }
