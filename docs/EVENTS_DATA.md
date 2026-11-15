@@ -136,6 +136,7 @@ Méthode suivie pour le premier lot, à reprendre pour les suivants :
 5. **Source** : l'article de Wikipédia en français.
 6. **Importance** (décision du 14/11/2026) : selon le nombre de Wikipédia qui ont un article sur le film (Wikidata) : 80 ou plus → 3, de 40 à 79 → 2, moins → 1 ; +1 (au plus 3) pour les comédies françaises, dont la notoriété est surtout nationale.
 7. **`date` = date française, sans `regionalDates`** (décision du 14/11/2026) : la « première sortie mondiale » de Wikidata s'est révélée peu fiable (avant-premières, festivals, erreurs comme *Avengers* au 15/07/2011). Les dates des autres pays s'ajouteront en `regionalDates` avec les traductions.
+
 ## Méthode de saisie, palier 1 des autres thèmes (15/11/2026)
 
 Même méthode que le lot Cinéma 1 (article de Wikipédia en français comme source, contrôle croisé avec Wikidata noté dans `note`), avec ces règles communes :
@@ -153,3 +154,9 @@ Même méthode que le lot Cinéma 1 (article de Wikipédia en français comme so
 - **Jeux olympiques en France** : date de la cérémonie d'ouverture (en 1900, sans cérémonie, la date d'ouverture). Nature `history` (« Événement »). Écarté : Chamonix 1924 (l'infobox donne le 25 janvier, le texte place la cérémonie le 24).
 - **Records et exploits** : date de l'exploit, lue dans l'article de l'athlète et, quand il existe, dans l'article du record ; Wikidata ne date pas ces exploits. Écarté : Sergueï Bubka (dates de ses 6,14 m confuses dans l'article).
 - Les types du Sport sont étroits : 38 événements au palier 1, au lieu des 70 indicatifs.
+
+### Musique (palier 1, 78 événements)
+
+- **Morts** : date de décès de l'infobox ou de l'introduction de l'article. Écarté : Kurt Cobain (mort « le 5 avril 1994 (environ) »).
+- **Albums et singles : date de sortie originale** (décision du 15/11/2026, exception à la date française : la sortie en France est rarement datée au jour près). C'est la première sortie dans le pays d'origine de l'artiste, ou la première sortie tout court quand l'infobox la donne ; pour une reprise (*Respect* d'Aretha Franklin, *I Will Always Love You* de Whitney Houston), la date de la reprise. La date française s'ajoutera plus tard en `regionalDates` si elle est sourcée.
+- Écartés pour un désaccord de plus d'une semaine avec Wikidata : *Raising Hell* (Run–DMC), *My Heart Will Go On* (Céline Dion), *Aserejé* (Las Ketchup), *Waka Waka* (Shakira), *Bailando* (Enrique Iglesias). Écartés faute de jour : *I Want You Back* (Jackson 5), *Partir un jour* (2Be3), *Danza Kuduro*, *Mistral gagnant*, *La Macarena* ; *Ievan Polkka* (date sans référence).

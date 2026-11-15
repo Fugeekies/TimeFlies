@@ -12,6 +12,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 ### Added
 
 - Données : palier 1 du Sport, 38 événements vérifiés (Ballons d'or et matchs de légende, victoires des Bleus en Coupe du monde, Jeux olympiques en France, records).
+- Données : palier 1 de la Musique, 78 événements vérifiés (morts d'icônes, albums pop et rap, tubes de divas, de boys bands et de l'été).
 - Version sombre du style Polaroïd, « chambre noire » (brun nuit, crème, cuivre clair) : l'application suit le thème du système ; sur Android, la fenêtre prend aussi le fond sombre avant la première image.
 - La photo du jour se développe à l'ouverture d'Aujourd'hui (la couleur monte sur le blanc, puis l'écriture), une fois par jour, et pas quand le système réduit les animations.
 - Test de contraste AA des couleurs, en clair et en sombre (`ContrastTest`).
