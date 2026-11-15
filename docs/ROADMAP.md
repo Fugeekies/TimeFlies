@@ -52,19 +52,23 @@ Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
 - [x] `data` : `DataStoreSettingsRepository` (DataStore 1.3.0 et Okio, JSON lisible avec un champ `version`, fichier illisible remplacé par les valeurs par défaut), `settings.json` dans le dossier privé de l'application sur Android et dans `%APPDATA%\TimeFlies` sur PC, tests.
 - [x] Écran Réglages ([`Settings.template.md`](UISpec/Settings.template.md)) : mois et année de naissance (deux listes, lien « Effacer »), région affichée « France » sans liste (décision du 15/11/2026), à propos (version, nombre d'événements, liens GitHub, licences). Le panneau Windows et celui du widget viendront avec leurs jalons.
 - [x] Aujourd'hui affiche « Tu avais N ans. », « Tu avais moins d'un an. », « C'était l'année de ta naissance. » ou « C'était N ans avant ta naissance. » (décision du 15/11/2026), et se recalcule quand les réglages changent.
+
 ### Jalon 5 — Premier lancement
 - [x] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)) : mois et année de naissance seulement (décision du 15/11/2026), « C'est parti » désactivé tant que le mois ou l'année manque, colonne de 480 dp sur une fenêtre large. `domain` : champ `onboardingDone` des réglages, cas d'usage `CompleteOnboarding` (une seule écriture), tests.
 - [x] Mode réduit sans mois et année de naissance : Aujourd'hui sans « Tu avais N ans » (jalon 4), Équivalences et Mon équivalent affichent le message et le bouton « Ouvrir les réglages ».
+
 ### Jalon 6 — Panneau de débogage
 Pour tester tous les cas sans attendre le bon jour.
 - [x] Destination « Débogage » en version de débogage seulement ([`DEVELOPMENT.md`](DEVELOPMENT.md)) : fausse date du jour (`AdjustableClock`, raccourcis 29 février, jour sans anniversaire…), réglages forcés (naissance, région, revoir le premier lancement, valeurs par défaut), statistiques de la base. Port `DebugTools` dans `domain`, `DataDebugTools` dans `data`, tests.
 - [x] Logs Kermit (console, fichier par jour sur PC, Logcat sur Android), sans donnée personnelle, exceptions non rattrapées écrites dans les logs.
+
 ### Jalon 7 — Équivalences
 - [x] Décision du 15/11/2026 : l'autre personne peut être plus jeune ou plus âgée (1 à 100 ans), un écart de moins de 5 ans est permis avec un avertissement, et aucune des deux personnes n'a de nom à l'écran : un pictogramme de personne de couleur devant chaque âge.
 - [x] `domain` : `Generations` dans les deux sens (âge de l'autre personne de 1 à 100 ans, `youngAge` renommé `otherAge`), règles `Equivalences` (même type, ±2 ans, date cible `E.date + (n_B − n_A)` au jour près, plus proche puis plus importante, jamais avec lui-même, événements d'un an au moins, date cible future écartée), entité `Equivalence`, cas d'usage `GetEquivalences`, réglages du sens et des thèmes, tests.
 - [x] `data` : `settings.json` en version 2 (`otherAge`, `equivalencesReversed`, `equivalenceFamilies`), lecture d'un fichier de version 1 par `youngAge`, tests.
 - [x] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : silhouettes de couleur, thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge de l'autre personne, seul endroit où il se règle (ni Réglages ni premier lancement, décision du 15/11/2026), avertissement sous 5 ans d'écart, « Choisir des âges » en mode réduit, deux colonnes au-delà de 840 dp, noms des types en clair.
-- [x] Benchmark de la page Équivalences ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 7 ms pour 5 000 événements).- [ ] Reporté au jalon 8 : toucher une carte ouvre Mon équivalent, et les âges à la volée partagés avec Mon équivalent.
+- [x] Benchmark de la page Équivalences ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 7 ms pour 5 000 événements).
+- [ ] Reporté au jalon 8 : toucher une carte ouvre Mon équivalent, et les âges à la volée partagés avec Mon équivalent.
 
 ### Jalon 8 — Mon équivalent
 - [ ] Cas d'usage `FindEquivalent` (deux sens, autres candidats), recherche dans les titres.
