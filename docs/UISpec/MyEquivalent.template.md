@@ -2,18 +2,22 @@
 
 > Spécification de conception (13/11/2026), avant le code. Règles d'appariement dans [`EVENTS_DATA.md`](../EVENTS_DATA.md) ; les points marqués **À valider** ne sont pas tranchés.
 
-> Décision du 15/11/2026 : l'autre personne peut être plus jeune ou plus âgée, et l'écran ne nomme plus personne (ni « jeune » ni « vieux ») : un pictogramme de personne de couleur devant chaque âge, comme dans [`Equivalences.template.md`](Equivalences.template.md). Les libellés ci-dessous seront revus au jalon 8.
+> Décision du 15/11/2026 : l'autre personne peut être plus jeune ou plus âgée, et l'écran ne nomme plus personne (ni « jeune » ni « vieux ») : un pictogramme de personne de couleur devant chaque âge, comme dans [`Equivalences.template.md`](Equivalences.template.md). Le choix du sens est revu en conséquence ; les autres libellés qui nomment « le jeune » suivent la même règle au jalon 8.
 
 ### Description
 L'utilisateur choisit un événement et voit son équivalent pour l'autre génération, **dans les deux sens** : « c'était quoi pour moi ? » et « c'est quoi pour le jeune ? ».
 
 ### Spécifications fonctionnelles
 
-#### Choix du sens
-* Bouton segmenté, deux choix :
-  * **« Du jeune vers moi »** (par défaut) : l'événement choisi appartient à la vie du jeune ; l'équivalent est cherché à `date − écart`.
-  * **« De moi vers le jeune »** : l'événement choisi appartient à la vie de l'utilisateur ; l'équivalent est cherché à `date + écart`. Une date cible dans le futur ne donne pas d'équivalent.
-* Ouvert depuis une carte d'Aujourd'hui ou d'Équivalences, l'écran arrive avec l'événement déjà choisi et le sens « Du jeune vers moi ».
+#### Choix du sens (décision du 15/11/2026, qui remplace les libellés « Du jeune vers moi » / « De moi vers le jeune »)
+* Bouton segmenté, deux choix, chacun dessiné **« 👤 → 👤 »** avec les silhouettes de couleur d'Équivalences, sans texte :
+  * **silhouette de l'autre personne → la tienne** (par défaut) : l'événement choisi appartient à la vie de l'autre personne ; l'équivalent est cherché dans la tienne ;
+  * **ta silhouette → celle de l'autre personne** : l'événement choisi appartient à ta vie ; l'équivalent est cherché dans celle de l'autre personne.
+  * La date cible suit la règle d'[`EVENTS_DATA.md`](../EVENTS_DATA.md) (`E.date + (n_B − n_A)`) : l'autre personne pouvant être plus jeune ou plus âgée, les deux sens peuvent chercher plus tôt ou plus tard. Une date cible dans le futur ne donne pas d'équivalent.
+  * Lecture d'écran : « De l'autre personne vers toi » / « De toi vers l'autre personne ».
+* Les cartes du résultat portent la silhouette de la personne concernée devant son âge, comme sur Équivalences.
+* Ouvert depuis une carte d'**Équivalences**, l'écran arrive avec l'événement de la colonne de gauche et le sens qui part de sa personne.
+* Ouvert depuis une carte d'**Aujourd'hui** (décision du 15/11/2026) : l'événement est considéré comme **le tien** (Aujourd'hui parle de ta vie) ; le sens est « ta silhouette → celle de l'autre personne ».
 
 #### Recherche
 * Champ de recherche « Cherche un film, une série, un artiste… » : filtre les titres des événements dès 2 caractères, sans tenir compte des accents ni de la casse.
