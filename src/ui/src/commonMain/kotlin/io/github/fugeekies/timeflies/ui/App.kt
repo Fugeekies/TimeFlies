@@ -23,10 +23,9 @@ import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
-import io.github.fugeekies.timeflies.domain.usecase.FindEquivalent
+import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
-import io.github.fugeekies.timeflies.domain.model.EquivalentDirection
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
@@ -35,15 +34,14 @@ import io.github.fugeekies.timeflies.ui.debug.DebugViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesScreen
 import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.TemporaryAgesStore
-import io.github.fugeekies.timeflies.ui.myequivalent.EquivalentRequest
-import io.github.fugeekies.timeflies.ui.myequivalent.MyEquivalentScreen
-import io.github.fugeekies.timeflies.ui.myequivalent.MyEquivalentViewModel
+import io.github.fugeekies.timeflies.ui.eventages.EventAgesScreen
+import io.github.fugeekies.timeflies.ui.eventages.EventAgesViewModel
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingScreen
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingViewModel
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.nav_debug
 import io.github.fugeekies.timeflies.ui.resources.nav_equivalences
-import io.github.fugeekies.timeflies.ui.resources.nav_my_equivalent
+import io.github.fugeekies.timeflies.ui.resources.nav_event_ages
 import io.github.fugeekies.timeflies.ui.resources.nav_settings
 import io.github.fugeekies.timeflies.ui.resources.nav_today
 import io.github.fugeekies.timeflies.ui.settings.SettingsScreen
@@ -59,7 +57,7 @@ import org.jetbrains.compose.resources.stringResource
 private enum class Destination(val label: StringResource, val icon: ImageVector) {
     TODAY(Res.string.nav_today, TimeFliesIcons.Calendar),
     EQUIVALENCES(Res.string.nav_equivalences, TimeFliesIcons.Compare),
-    MY_EQUIVALENT(Res.string.nav_my_equivalent, TimeFliesIcons.Search),
+    EVENT_AGES(Res.string.nav_event_ages, TimeFliesIcons.Search),
     SETTINGS(Res.string.nav_settings, TimeFliesIcons.Tune),
 
     /** Debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage"). */
@@ -78,7 +76,7 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
 fun App(
     getDailyShock: GetDailyShock,
     getEquivalences: GetEquivalences,
-    findEquivalent: FindEquivalent,
+    getEventAges: GetEventAges,
     searchEvents: SearchEvents,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
@@ -100,7 +98,7 @@ fun App(
                     OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
                 }
             } else {
-                MainScreens(getDailyShock, getEquivalences, findEquivalent, searchEvents, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
+                MainScreens(getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
             }
         }
     }
@@ -110,7 +108,7 @@ fun App(
 private fun MainScreens(
     getDailyShock: GetDailyShock,
     getEquivalences: GetEquivalences,
-    findEquivalent: FindEquivalent,
+    getEventAges: GetEventAges,
     searchEvents: SearchEvents,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
@@ -120,13 +118,13 @@ private fun MainScreens(
     debugTools: DebugTools?,
 ) {
     var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
-    // Ages picked on the fly, shared by Equivalences and Mon équivalent, forgotten when the app closes.
+    // Ages picked on the fly, shared by Equivalences and "Quel âge ?", forgotten when the app closes.
     val temporaryAges = remember { TemporaryAgesStore() }
-    // A card touched on Today or Equivalences: Mon équivalent opens on its event.
-    var equivalentRequest by remember { mutableStateOf<EquivalentRequest?>(null) }
-    val openEquivalent = { event: Event, direction: EquivalentDirection ->
-        equivalentRequest = EquivalentRequest(event, direction)
-        current = Destination.MY_EQUIVALENT
+    // A card touched on Today or Equivalences: "Quel âge ?" opens on its event.
+    var eventRequest by remember { mutableStateOf<Event?>(null) }
+    val openEvent = { event: Event ->
+        eventRequest = event
+        current = Destination.EVENT_AGES
     }
     NavigationSuiteScaffold(
         navigationSuiteItems = {
@@ -143,10 +141,9 @@ private fun MainScreens(
     ) {
         val content = Modifier.fillMaxSize().safeDrawingPadding()
         when (current) {
-            // Today speaks of the user's life: its events are the user's (decision of 15/11/2026).
             Destination.TODAY -> TodayScreen(
                 viewModel { TodayViewModel(getDailyShock, observeSettings, clock) },
-                onOpenEquivalent = { openEquivalent(it, EquivalentDirection.USER_TO_OTHER) },
+                onOpenEvent = openEvent,
                 modifier = content,
             )
             Destination.SETTINGS -> SettingsScreen(
@@ -158,13 +155,13 @@ private fun MainScreens(
             Destination.EQUIVALENCES -> EquivalencesScreen(
                 viewModel { EquivalencesViewModel(getEquivalences, observeSettings, updateSettings, clock, temporaryAges) },
                 onOpenSettings = { current = Destination.SETTINGS },
-                onOpenEquivalent = openEquivalent,
+                onOpenEvent = openEvent,
                 modifier = content,
             )
-            Destination.MY_EQUIVALENT -> MyEquivalentScreen(
-                viewModel { MyEquivalentViewModel(searchEvents, findEquivalent, observeSettings, updateSettings, clock, temporaryAges) },
-                request = equivalentRequest,
-                onRequestHandled = { equivalentRequest = null },
+            Destination.EVENT_AGES -> EventAgesScreen(
+                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, updateSettings, clock, temporaryAges) },
+                request = eventRequest,
+                onRequestHandled = { eventRequest = null },
                 onOpenSettings = { current = Destination.SETTINGS },
                 modifier = content,
             )

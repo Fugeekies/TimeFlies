@@ -10,7 +10,7 @@ import io.github.fugeekies.timeflies.domain.rules.Equivalences
 import kotlinx.datetime.LocalDate
 
 /**
- * The events the user can choose on the Mon équivalent screen (docs/UISpec/MyEquivalent.template.md, "Recherche").
+ * The events the user can choose on the "Quel âge ?" screen (docs/UISpec/EventAges.template.md, "Recherche").
  * Events less than a year old are left out, as everywhere (decision of 13/11/2026).
  */
 class SearchEvents(

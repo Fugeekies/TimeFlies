@@ -30,7 +30,7 @@
 * 10 cartes au maximum, triées par jour puis dans l'ordre habituel.
 
 #### Interactions
-* Toucher une carte (ou la feuille) ouvre **Mon équivalent** sur cet événement, pour voir son équivalent dans l'autre génération (décision du 13/11/2026).
+* Toucher une carte (ou la feuille) ouvre **« Quel âge ? »** sur cet événement, pour voir l'âge des deux personnes à sa date (décision du 15/11/2026, qui remplace « Mon équivalent » du 13/11/2026).
 * Glisser vers le bas (Android) ou `F5` (Windows) recalcule l'écran ; il se recalcule aussi seul quand le jour change pendant que l'application est ouverte.
 
 ### Wireframe ASCII (téléphone)

@@ -47,7 +47,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Equivalence
-import io.github.fugeekies.timeflies.domain.model.EquivalentDirection
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.ui.resources.Res
@@ -75,13 +74,13 @@ import org.jetbrains.compose.resources.stringResource
  * their age, no name (decision of 15/11/2026).
  *
  * @param onOpenSettings "Ouvrir les réglages", in reduced mode.
- * @param onOpenEquivalent a card touched: Mon équivalent on the left event, from its person.
+ * @param onOpenEvent a card touched: "Quel âge ?" on the left event.
  */
 @Composable
 fun EquivalencesScreen(
     viewModel: EquivalencesViewModel,
     onOpenSettings: () -> Unit,
-    onOpenEquivalent: (Event, EquivalentDirection) -> Unit,
+    onOpenEvent: (Event) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val generations by viewModel.generations.collectAsStateWithLifecycle()
@@ -101,7 +100,6 @@ fun EquivalencesScreen(
 
     val dates = rememberDateTexts()
     val leftPerson = if (list.reversed) Person.USER else Person.OTHER
-    val direction = if (list.reversed) EquivalentDirection.USER_TO_OTHER else EquivalentDirection.OTHER_TO_USER
     BoxWithConstraints(modifier.fillMaxSize()) {
         val columns = if (maxWidth >= 840.dp) 2 else 1
         LazyVerticalGrid(
@@ -139,7 +137,7 @@ fun EquivalencesScreen(
                 pairs == null -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.loading)) }
                 pairs.isEmpty() -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.equivalences_empty)) }
                 else -> items(pairs, key = { "${it.left.event.id}>${it.right.event.id}" }) { pair ->
-                    PairCard(pair, leftPerson, dates, onClick = { onOpenEquivalent(pair.left.event, direction) })
+                    PairCard(pair, leftPerson, dates, onClick = { onOpenEvent(pair.left.event) })
                 }
             }
         }

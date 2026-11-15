@@ -1,13 +1,12 @@
-package io.github.fugeekies.timeflies.ui.myequivalent
+package io.github.fugeekies.timeflies.ui.eventages
 
 import androidx.lifecycle.viewModelScope
-import io.github.fugeekies.timeflies.domain.model.EquivalentDirection
-import io.github.fugeekies.timeflies.domain.model.EquivalentSearch
 import io.github.fugeekies.timeflies.domain.model.Event
+import io.github.fugeekies.timeflies.domain.model.EventAges
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
-import io.github.fugeekies.timeflies.domain.usecase.FindEquivalent
+import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
@@ -23,55 +22,50 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.datetime.LocalDate
 
 /**
- * What the Mon équivalent screen shows (docs/UISpec/MyEquivalent.template.md).
+ * What the "Quel âge ?" screen shows (docs/UISpec/EventAges.template.md).
  *
  * @property results search results; null while the query has fewer than 2 characters (the list by family shows).
  * @property byFamily every event by family, the most recent first; null until loaded.
  * @property chosen the chosen event; null while searching.
- * @property search the result for [chosen]; null while computing, without a chosen event or in reduced mode.
+ * @property ages the two people's ages on [chosen]'s date; null without a chosen event or in reduced mode.
  */
-data class MyEquivalentUiState(
-    val today: LocalDate,
+data class EventAgesUiState(
     val region: Region = Region.FRANCE,
     val query: String = "",
     val results: List<Event>? = null,
     val byFamily: Map<Family, List<Event>>? = null,
     val chosen: Event? = null,
-    val direction: EquivalentDirection = EquivalentDirection.OTHER_TO_USER,
-    val search: EquivalentSearch? = null,
+    val ages: EventAges? = null,
     val error: Boolean = false,
 )
 
 /**
- * State of the Mon équivalent screen. The banner and the temporary ages are shared with Equivalences
+ * State of the "Quel âge ?" screen. The banner and the temporary ages are shared with Equivalences
  * ([GenerationsViewModel], [TemporaryAgesStore]).
  */
-class MyEquivalentViewModel(
+class EventAgesViewModel(
     private val searchEvents: SearchEvents,
-    private val findEquivalent: FindEquivalent,
+    private val getEventAges: GetEventAges,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
     clock: Clock,
     temporaryAges: TemporaryAgesStore,
 ) : GenerationsViewModel(observeSettings, updateSettings, clock, temporaryAges) {
 
-    private val _state = MutableStateFlow(MyEquivalentUiState(today = clock.today()))
-    val state: StateFlow<MyEquivalentUiState> = _state.asStateFlow()
+    private val _state = MutableStateFlow(EventAgesUiState())
+    val state: StateFlow<EventAgesUiState> = _state.asStateFlow()
 
-    private data class Selection(val event: Event?, val direction: EquivalentDirection)
-
-    private val selection = MutableStateFlow(Selection(null, EquivalentDirection.OTHER_TO_USER))
+    private val chosen = MutableStateFlow<Event?>(null)
     private val query = MutableStateFlow("")
 
     init {
         start()
-        // The result: recomputed when the people, the event or the direction change.
+        // The ages: recomputed when the people or the event change.
         viewModelScope.launch {
-            combine(generations.filterNotNull(), selection) { people, chosen -> people to chosen }
-                .collectLatest { (people, chosen) -> computeResult(people, chosen) }
+            combine(generations.filterNotNull(), chosen) { people, event -> people to event }
+                .collectLatest { (people, event) -> computeAges(people, event) }
         }
         // The search: recomputed when the query or the region change.
         viewModelScope.launch {
@@ -92,16 +86,10 @@ class MyEquivalentViewModel(
         }
     }
 
-    private suspend fun computeResult(people: GenerationsUiState, chosen: Selection) {
-        _state.update { it.copy(today = clock.today(), chosen = chosen.event, direction = chosen.direction, search = null) }
-        val event = chosen.event ?: return
-        val userBirth = people.userBirth ?: return
-        val (from, to) = when (chosen.direction) {
-            EquivalentDirection.OTHER_TO_USER -> people.otherBirth to userBirth
-            EquivalentDirection.USER_TO_OTHER -> userBirth to people.otherBirth
-        }
-        val search = runCatchingLogged { findEquivalent(event, from, to, people.settings.region) }
-        _state.update { it.copy(search = search, error = search == null) }
+    private fun computeAges(people: GenerationsUiState, event: Event?) {
+        val userBirth = people.userBirth
+        val ages = if (event != null && userBirth != null) getEventAges(event, userBirth, people.otherBirth, people.settings.region) else null
+        _state.update { it.copy(chosen = event, ages = ages) }
     }
 
     private suspend fun <T> runCatchingLogged(block: suspend () -> T): T? = try {
@@ -109,7 +97,7 @@ class MyEquivalentViewModel(
     } catch (e: CancellationException) {
         throw e
     } catch (e: Exception) {
-        log.e(e) { "Mon équivalent could not be computed" }
+        log.e(e) { "Events could not be read" }
         null
     }
 
@@ -118,22 +106,13 @@ class MyEquivalentViewModel(
         _state.update { it.copy(query = text) }
     }
 
+    /** An event chosen in the list, or opened from a card of Today or Equivalences. */
     fun choose(event: Event) {
-        selection.update { it.copy(event = event) }
-    }
-
-    /** Opened from a card of Today or Equivalences, with the event and the direction already chosen. */
-    fun open(event: Event, direction: EquivalentDirection) {
-        query.value = ""
-        selection.value = Selection(event, direction)
-    }
-
-    fun setDirection(direction: EquivalentDirection) {
-        selection.update { it.copy(direction = direction) }
+        chosen.value = event
     }
 
     /** "Changer d'événement": back to the search. */
     fun changeEvent() {
-        selection.update { it.copy(event = null) }
+        chosen.value = null
     }
 }

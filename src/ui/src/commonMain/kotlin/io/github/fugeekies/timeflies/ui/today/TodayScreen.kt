@@ -72,21 +72,21 @@ import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
-/** A card touched: opens Mon équivalent on its event, seen as the user's (decision of 15/11/2026). */
-private val LocalOpenEquivalent = staticCompositionLocalOf<(Event) -> Unit> { {} }
+/** A card touched: opens "Quel âge ?" on its event. */
+private val LocalOpenEvent = staticCompositionLocalOf<(Event) -> Unit> { {} }
 
 /**
  * The Today screen (docs/UISpec/Today.template.md), Polaroïd style.
  *
- * @param onOpenEquivalent a card touched: Mon équivalent on its event.
+ * @param onOpenEvent a card touched: "Quel âge ?" on its event.
  */
 @Composable
-fun TodayScreen(viewModel: TodayViewModel, onOpenEquivalent: (Event) -> Unit = {}, modifier: Modifier = Modifier) {
+fun TodayScreen(viewModel: TodayViewModel, onOpenEvent: (Event) -> Unit = {}, modifier: Modifier = Modifier) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     when (val current = state) {
         TodayUiState.Loading -> CenteredText(stringResource(Res.string.loading), modifier)
         TodayUiState.Error -> CenteredText(stringResource(Res.string.load_error), modifier)
-        is TodayUiState.Loaded -> CompositionLocalProvider(LocalOpenEquivalent provides onOpenEquivalent) {
+        is TodayUiState.Loaded -> CompositionLocalProvider(LocalOpenEvent provides onOpenEvent) {
             TodayContent(current.shock, modifier)
         }
     }
@@ -177,7 +177,7 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
     }
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
-    val open = LocalOpenEquivalent.current
+    val open = LocalOpenEvent.current
     PolaroidCard(anniversary, legend, userAge, description, Modifier.clickable(role = Role.Button) { open(event) })
 }
 
@@ -224,7 +224,7 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
     val event = anniversary.event
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
-    val open = LocalOpenEquivalent.current
+    val open = LocalOpenEvent.current
     Surface(
         color = colors.surface,
         shape = RoundedCornerShape(6.dp),

@@ -25,7 +25,7 @@ Les écrans ci-dessous sont dessinés en Éphéméride. Leur **mise en page** va
 
 ## Android (mise en page, dessinée en Éphéméride)
 
-| Premier lancement | Équivalences | Mon équivalent | Réglages | Widget |
+| Premier lancement | Équivalences | Mon équivalent (remplacé par « Quel âge ? », décision du 15/11/2026) | Réglages | Widget |
 |---|---|---|---|---|
 | ![Premier lancement](android/Onboarding.png) | ![Équivalences](android/Equivalences.png) | ![Mon équivalent](android/MyEquivalent.png) | ![Réglages](android/Settings.png) | ![Widget](android/Widget.png) |
 

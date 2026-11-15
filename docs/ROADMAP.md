@@ -44,7 +44,7 @@ Le coup de vieux du jour à l'écran, en style Polaroïd.
 - [x] Navigation adaptative avec les quatre destinations (`NavigationSuiteScaffold` : barre en bas sur téléphone, rail sur une fenêtre large ; les trois autres écrans affichent « Cet écran arrive dans un prochain jalon »). Icônes dessinées comme sur les maquettes.
 - [x] Écran Aujourd'hui ([`Today.template.md`](UISpec/Today.template.md)) : photo Polaroïd du jour (ou « Dans N jours »), « Aussi aujourd'hui », « Bientôt… » par jour, deux colonnes au-delà de 840 dp, recalcul au changement de jour, descriptions pour la lecture d'écran. Sans âge de l'utilisateur (jalon 4).
 - [x] Polaroïd enrichi (décision du 14/11/2026) : cadre de la couleur de la décennie, chiffre de la décennie écrit à la main dans le coin, dessin au trait du type dans la photo (4 types du cinéma, un dessin par famille pour les autres).
-- [x] Toucher une carte ouvre Mon équivalent (fait au jalon 8).
+- [x] Toucher une carte ouvre « Quel âge ? » (fait au jalon 8).
 - [ ] Reste de la spec d'Aujourd'hui, reporté : actualisation par glisser vers le bas ou `F5`.
 
 ### Jalon 4 — Menu Réglages
@@ -56,7 +56,7 @@ Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
 
 ### Jalon 5 — Premier lancement
 - [x] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)) : mois et année de naissance seulement (décision du 15/11/2026), « C'est parti » désactivé tant que le mois ou l'année manque, colonne de 480 dp sur une fenêtre large. `domain` : champ `onboardingDone` des réglages, cas d'usage `CompleteOnboarding` (une seule écriture), tests.
-- [x] Mode réduit sans mois et année de naissance : Aujourd'hui sans « Tu avais N ans » (jalon 4), Équivalences et Mon équivalent affichent le message et le bouton « Ouvrir les réglages ».
+- [x] Mode réduit sans mois et année de naissance : Aujourd'hui sans « Tu avais N ans » (jalon 4), Équivalences et Mon équivalent (devenu « Quel âge ? » au jalon 8) affichent le message et le bouton « Ouvrir les réglages ».
 
 ### Jalon 6 — Panneau de débogage
 Pour tester tous les cas sans attendre le bon jour.
@@ -69,13 +69,13 @@ Pour tester tous les cas sans attendre le bon jour.
 - [x] `data` : `settings.json` en version 2 (`otherAge`, `equivalencesReversed`, `equivalenceFamilies`), lecture d'un fichier de version 1 par `youngAge`, tests.
 - [x] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : silhouettes de couleur, thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge de l'autre personne, seul endroit où il se règle (ni Réglages ni premier lancement, décision du 15/11/2026), avertissement sous 5 ans d'écart, « Choisir des âges » en mode réduit, deux colonnes au-delà de 840 dp, noms des types en clair.
 - [x] Benchmark de la page Équivalences ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 7 ms pour 5 000 événements).
-- [x] Reporté au jalon 8 et fait : toucher une carte ouvre Mon équivalent, et les âges à la volée partagés avec Mon équivalent.
+- [x] Reporté au jalon 8 et fait : toucher une carte ouvre « Quel âge ? », et les âges à la volée partagés avec cet écran.
 
-### Jalon 8 — Mon équivalent
-- [x] Décisions du 15/11/2026 : le sens se choisit avec deux boutons « 👤 → 👤 » aux couleurs des silhouettes, sans texte ; une carte d'Aujourd'hui ouvre Mon équivalent sur un événement de ta vie.
-- [x] `domain` : cas d'usage `FindEquivalent` (deux sens, meilleur candidat, 3 autres candidats dans la tolérance avec leur écart à la date cible, 3 événements du même type hors tolérance quand il n'y a pas d'équivalent, date cible future) et `SearchEvents` (recherche dès 2 caractères, liste par famille, sans les événements de moins d'un an), tests.
-- [x] Écran Mon équivalent ([`MyEquivalent.template.md`](UISpec/MyEquivalent.template.md)) : bandeau des âges partagé avec Équivalences (même `GenerationsViewModel`, âges à la volée communs), choix du sens, recherche ou liste par famille, résultat (« Ton choix », écart « 20 ans plus tôt », « Son équivalent », « Autres candidats », « Les plus proches »), « Changer d'événement », mode réduit avec la recherche utilisable. Une carte touchée sur Aujourd'hui ou Équivalences y mène.
-- [x] Benchmark des pages Mon équivalent ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 1 ms pour la liste par famille et pour 50 résultats, 5 000 événements).
+### Jalon 8 — Quel âge ?
+- [x] Décision du 15/11/2026 : « Mon équivalent » (chercher l'équivalent d'un événement) est remplacé par « Quel âge ? » : pour un événement choisi, l'âge des deux personnes à sa date, négatif avant une naissance (« −14 ans »).
+- [x] `domain` : cas d'usage `GetEventAges` (âges en années révolues, négatifs avant la naissance) et `SearchEvents` (recherche dès 2 caractères, liste par famille, sans les événements de moins d'un an), tests.
+- [x] Écran « Quel âge ? » ([`EventAges.template.md`](UISpec/EventAges.template.md)) : bandeau des âges partagé avec Équivalences (même `GenerationsViewModel`, âges à la volée communs), recherche ou liste par famille, carte de l'événement avec « 👤 35 ans → 6 ans » pour chaque personne, « Changer d'événement », mode réduit avec la recherche utilisable. Une carte touchée sur Aujourd'hui ou Équivalences y mène.
+- [x] Benchmark de la page ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 1 ms pour la liste par famille, 5 000 événements).
 
 ### Jalon 9 — Finitions du style Polaroïd
 - [ ] Version sombre, contraste et taille minimale de l'écriture manuscrite.

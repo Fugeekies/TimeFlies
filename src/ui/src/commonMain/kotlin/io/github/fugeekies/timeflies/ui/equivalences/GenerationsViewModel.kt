@@ -25,7 +25,7 @@ import kotlinx.datetime.LocalDate
 data class TemporaryAges(val user: Int, val other: Int)
 
 /**
- * The temporary ages, shared by the Equivalences and Mon équivalent screens (docs/UISpec/MyEquivalent.template.md).
+ * The temporary ages, shared by the Equivalences and "Quel âge ?" screens (docs/UISpec/EventAges.template.md).
  * One instance per app, kept in memory only.
  */
 class TemporaryAgesStore {
@@ -57,7 +57,7 @@ data class GenerationsUiState(
 }
 
 /**
- * The banner logic shared by the Equivalences and Mon équivalent screens: the two people's ages from the settings or
+ * The banner logic shared by the Equivalences and "Quel âge ?" screens: the two people's ages from the settings or
  * from the temporary ages, "Modifier" (the only place where the other person's age is saved, decision of 15/11/2026)
  * and the small-gap warning. Subclasses call [start] at the end of their `init` and compute their page in
  * [onGenerations].

@@ -2,7 +2,7 @@
 
 > Document de conception écrit avant le code (13/11/2026), mis à jour au jalon 2 (14/11/2026). Les choix marqués **À valider** sont des propositions : ils ne sont pas tranchés.
 
-La base d'événements est le cœur de l'application : le coup de vieux du jour, les équivalences et « Mon équivalent » en dépendent tous. Elle est livrée dans l'application (un fichier JSON par famille, voir « Fichiers et stockage »), sans connexion.
+La base d'événements est le cœur de l'application : le coup de vieux du jour, les équivalences et « Quel âge ? » en dépendent tous. Elle est livrée dans l'application (un fichier JSON par famille, voir « Fichiers et stockage »), sans connexion.
 
 ## Règle d'or : zéro invention
 

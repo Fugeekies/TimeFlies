@@ -128,7 +128,7 @@ Quatre destinations, dans cet ordre :
 |---|---|---|
 | Aujourd'hui | `calendar_today` | [`Today.template.md`](UISpec/Today.template.md) |
 | Équivalences | `compare_arrows` | [`Equivalences.template.md`](UISpec/Equivalences.template.md) |
-| Mon équivalent | `search` | [`MyEquivalent.template.md`](UISpec/MyEquivalent.template.md) |
+| Quel âge ? | `search` | [`EventAges.template.md`](UISpec/EventAges.template.md) |
 | Réglages | `settings` | [`Settings.template.md`](UISpec/Settings.template.md) |
 
 * **Navigation adaptative** (`NavigationSuiteScaffold`) : barre en bas sous 600 dp de large (téléphone), rail à gauche au-dessus (tablette, fenêtre Windows).
