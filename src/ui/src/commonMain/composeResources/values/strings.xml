@@ -9,7 +9,6 @@
     <string name="nav_equivalences">Équivalences</string>
     <string name="nav_my_equivalent">Mon équivalent</string>
     <string name="nav_settings">Réglages</string>
-    <string name="coming_soon">Cet écran arrive dans un prochain jalon.</string>
 
     <!-- Today -->
     <string name="loading">Chargement…</string>
@@ -110,6 +109,50 @@
     <plurals name="person_age_before_birth">
         <item quantity="one">%1$d an avant sa naissance</item>
         <item quantity="other">%1$d ans avant sa naissance</item>
+    </plurals>
+
+    <!-- Mon équivalent (docs/UISpec/MyEquivalent.template.md) -->
+    <string name="my_equivalent_title">Mon équivalent</string>
+    <string name="my_equivalent_direction_other_to_user">De l'autre personne vers toi</string>
+    <string name="my_equivalent_direction_user_to_other">De toi vers l'autre personne</string>
+    <string name="my_equivalent_search_hint">Cherche un film, une série, un artiste…</string>
+    <string name="my_equivalent_no_results">Aucun événement ne correspond à cette recherche.</string>
+    <string name="my_equivalent_choice">TON CHOIX</string>
+    <string name="my_equivalent_equivalent">SON ÉQUIVALENT</string>
+    <string name="my_equivalent_others">AUTRES CANDIDATS</string>
+    <string name="my_equivalent_none">Pas d'équivalent dans la base pour ce type d'événement à cette époque.</string>
+    <string name="my_equivalent_future">Pas d'équivalent : ce moment n'est pas encore arrivé.</string>
+    <string name="my_equivalent_closest">LES PLUS PROCHES</string>
+    <string name="my_equivalent_change">Changer d'événement</string>
+    <string name="my_equivalent_same_time">à la même époque</string>
+    <plurals name="my_equivalent_earlier">
+        <item quantity="one">%1$d an plus tôt</item>
+        <item quantity="other">%1$d ans plus tôt</item>
+    </plurals>
+    <plurals name="my_equivalent_later">
+        <item quantity="one">%1$d an plus tard</item>
+        <item quantity="other">%1$d ans plus tard</item>
+    </plurals>
+    <plurals name="my_equivalent_within_years">
+        <item quantity="one">à %1$d an près</item>
+        <item quantity="other">à %1$d ans près</item>
+    </plurals>
+    <plurals name="my_equivalent_within_months">
+        <item quantity="one">à %1$d mois près</item>
+        <item quantity="other">à %1$d mois près</item>
+    </plurals>
+    <plurals name="my_equivalent_within_days">
+        <item quantity="one">à %1$d jour près</item>
+        <item quantity="other">à %1$d jours près</item>
+    </plurals>
+    <string name="my_equivalent_same_day">le jour même</string>
+    <plurals name="my_equivalent_too_early">
+        <item quantity="one">%1$d an trop tôt</item>
+        <item quantity="other">%1$d ans trop tôt</item>
+    </plurals>
+    <plurals name="my_equivalent_too_late">
+        <item quantity="one">%1$d an trop tard</item>
+        <item quantity="other">%1$d ans trop tard</item>
     </plurals>
 
     <!-- Debug panel, debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage") -->

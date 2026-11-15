@@ -41,11 +41,13 @@ object Equivalences {
             .asSequence()
             .filter { it.id != event.id && it.type == event.type }
             .filter { it.dateFor(region) in window && isOldEnough(it.dateFor(region), today) }
-            .minWithOrNull(
-                compareBy<Event> { abs(it.dateFor(region).daysUntil(target)) }
-                    .thenByDescending { it.importance }
-                    .thenBy { it.dateFor(region) }
-                    .thenBy { it.id },
-            )
+            .minWithOrNull(ranking(target, region))
     }
+
+    /** Order of the candidates for [target]: the closest first, then the highest importance, the earliest date, the smallest id. */
+    fun ranking(target: LocalDate, region: Region): Comparator<Event> =
+        compareBy<Event> { abs(it.dateFor(region).daysUntil(target)) }
+            .thenByDescending { it.importance }
+            .thenBy { it.dateFor(region) }
+            .thenBy { it.id }
 }

@@ -8,7 +8,9 @@ import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
+import io.github.fugeekies.timeflies.domain.usecase.FindEquivalent
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
+import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
@@ -124,6 +126,19 @@ class PerformanceBenchmarks {
         }
         rows += measure("Page Équivalences, autre personne plus âgée (GetEquivalences)", iterations = 100) {
             runBlocking { getEquivalences(user, parent, allFamilies, region) }
+        }
+        // Mon équivalent: the list by family when the screen opens, a search, and the result for one event.
+        val searchEvents = SearchEvents(loaded, clock)
+        rows += measure("Page Mon équivalent, liste par famille (SearchEvents)", iterations = 50) {
+            runBlocking { searchEvents.byFamily(region) }
+        }
+        rows += measure("Page Mon équivalent, recherche × 4 (SearchEvents)", iterations = 50) {
+            runBlocking { listOf("roi", "écran", "test 12", "zzz").forEach { searchEvents.search(it, region) } }
+        }
+        val findEquivalent = FindEquivalent(loaded, clock)
+        val someEvents = runBlocking { searchEvents.byFamily(region).values.flatten().take(50) }
+        rows += measure("Page Mon équivalent, résultat × 50 événements (FindEquivalent)", iterations = 20) {
+            runBlocking { someEvents.forEach { findEquivalent(it, child, user, region) } }
         }
         rows
     }

@@ -37,20 +37,23 @@ L'utilisateur choisit un événement et voit son équivalent pour l'autre géné
 ┌────────────────────────────────────────┐
 │ Mon équivalent                         │
 ├────────────────────────────────────────┤
-│  [ Du jeune vers moi | De moi vers  ]  │
-│  [                   | le jeune     ]  │
+│  👤 35 ans · 👤 15 ans                  │
+│  20 ANS D'ÉCART            [Modifier]  │
+│  [   👤 → 👤    |    👤 → 👤    ]       │
 │  TON CHOIX                             │
 │  ┌──────────────────────────────────┐  │
-│  │ ● La Reine des neiges            │  │
+│  │ ● Film d'animation familial      │  │
+│  │ La Reine des neiges              │  │
 │  │ Sortie au cinéma · 4 déc. 2013   │  │
-│  │ Le jeune avait 2 ans.            │  │
+│  │ 👤 2 ans                         │  │
 │  └──────────────────────────────────┘  │
 │              ↓  20 ans plus tôt        │
-│  SON ÉQUIVALENT POUR TOI               │
+│  SON ÉQUIVALENT                        │
 │  ┌──────────────────────────────────┐  │
-│  │ ● Le Roi Lion                    │  │
+│  │ ● Film d'animation familial      │  │
+│  │ Le Roi Lion                      │  │
 │  │ Sortie au cinéma · 9 nov. 1994   │  │
-│  │ Tu avais 3 ans.                  │  │
+│  │ 👤 3 ans                         │  │
 │  └──────────────────────────────────┘  │
 │                                        │
 │  AUTRES CANDIDATS                      │
@@ -62,11 +65,13 @@ L'utilisateur choisit un événement et voit son équivalent pour l'autre géné
 └────────────────────────────────────────┘
 ```
 
-Exemple pour une naissance en mai 1991 et un jeune de 15 ans (20 ans d'écart), le 2 novembre 2026 : la date cible est le 4 décembre 1993, Le Roi Lion en est à moins d'un an. Les dates seront vérifiées lors de la saisie de la base.
+Chaque 👤 est la silhouette de couleur d'une des deux personnes, comme sur Équivalences ; le bouton de gauche (sélectionné) part de l'autre personne vers toi. Sans recherche, la liste par famille s'affiche sous le choix du sens ; quand il n'y a pas d'équivalent, « Les plus proches » liste au plus 3 événements hors tolérance (« 4 ans trop tôt »).
+
+Exemple pour une naissance en mai 1991 et une autre personne de 15 ans (20 ans d'écart), le 2 novembre 2026 : la date cible est le 4 décembre 1993, Le Roi Lion en est à moins d'un an. Les dates seront vérifiées lors de la saisie de la base.
 
 #### Sans mois et année de naissance
-* À la place du résultat : « Indique ton mois et ton année de naissance pour voir tes équivalences. » et le bouton **« Ouvrir les réglages »** (décision du 13/11/2026). La recherche reste utilisable.
+* À la place du résultat : « Indique ton mois et ton année de naissance pour voir tes équivalences. » et le bouton **« Ouvrir les réglages »** (décision du 13/11/2026). La recherche reste utilisable. Le bandeau des âges n'est pas affiché.
 
 #### Âges à la volée (décision du 13/11/2026)
-* Même bandeau et mêmes règles que dans [`Equivalences.template.md`](Equivalences.template.md) : « Le vieux : 35 ans · Le jeune : 15 ans », modifiable sans toucher aux réglages, partagé entre les deux écrans, oublié à la fermeture de l'application, avec le bouton « Revenir à mes réglages ».
+* Même bandeau et mêmes règles que dans [`Equivalences.template.md`](Equivalences.template.md) : « 👤 35 ans · 👤 15 ans », modifiable sans toucher aux réglages, partagé entre les deux écrans, oublié à la fermeture de l'application, avec le bouton « Revenir à mes réglages ».
 * Sans mois et année de naissance, le bouton secondaire « Choisir des âges » ouvre ce bandeau.
