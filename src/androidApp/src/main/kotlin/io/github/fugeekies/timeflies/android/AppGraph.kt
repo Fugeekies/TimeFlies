@@ -5,6 +5,7 @@ import io.github.fugeekies.timeflies.data.events.JsonEventRepository
 import io.github.fugeekies.timeflies.data.settings.DataStoreSettingsRepository
 import io.github.fugeekies.timeflies.data.time.SystemClock
 import io.github.fugeekies.timeflies.domain.port.Clock
+import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
@@ -33,5 +34,6 @@ class AppGraph(filesDir: File) {
     val getDailyShock = GetDailyShock(events, clock)
     val observeSettings = ObserveSettings(settings)
     val updateSettings = UpdateSettings(settings, clock)
+    val completeOnboarding = CompleteOnboarding(settings, clock)
     val countEvents = CountEvents(events)
 }

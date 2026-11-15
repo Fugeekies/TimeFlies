@@ -7,28 +7,20 @@ import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.SpanStyle
@@ -62,14 +54,12 @@ import io.github.fugeekies.timeflies.ui.resources.settings_birth_value
 import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.resources.settings_display
 import io.github.fugeekies.timeflies.ui.resources.settings_generations
-import io.github.fugeekies.timeflies.ui.resources.settings_month
 import io.github.fugeekies.timeflies.ui.resources.settings_region
 import io.github.fugeekies.timeflies.ui.resources.settings_title
-import io.github.fugeekies.timeflies.ui.resources.settings_year
 import io.github.fugeekies.timeflies.ui.resources.years_count
+import io.github.fugeekies.timeflies.ui.components.BirthFields
 import io.github.fugeekies.timeflies.ui.text.capitalized
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
-import kotlinx.datetime.Month
 import kotlinx.datetime.number
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
@@ -157,61 +147,10 @@ private fun ColumnScope.GenerationsPanel(state: SettingsUiState, viewModel: Sett
         Text(stringResource(Res.string.settings_birth_unset), style = MaterialTheme.typography.bodyLarge, color = colors.onSurfaceVariant)
         Text(stringResource(Res.string.settings_birth_unset_help), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
     }
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        ChoiceField(
-            name = stringResource(Res.string.settings_month),
-            value = state.month?.let { months[it.number - 1] },
-            options = Month.entries,
-            optionLabel = { months[it.number - 1] },
-            onPick = viewModel::onMonthPicked,
-            modifier = Modifier.weight(1f),
-        )
-        ChoiceField(
-            name = stringResource(Res.string.settings_year),
-            value = state.year?.toString(),
-            options = state.birthYears.reversed().toList(),
-            optionLabel = { it.toString() },
-            onPick = viewModel::onYearPicked,
-            modifier = Modifier.weight(1f),
-        )
-    }
+    BirthFields(state.month, state.year, state.birthYears, viewModel::onMonthPicked, viewModel::onYearPicked)
     if (birth != null) {
         TextButton(onClick = viewModel::onClearBirth, modifier = Modifier.align(Alignment.End)) {
             Text(stringResource(Res.string.settings_clear))
-        }
-    }
-}
-
-/** A button that opens a list of choices: [value] once picked, otherwise the field [name]. */
-@Composable
-private fun <T> ChoiceField(
-    name: String,
-    value: String?,
-    options: List<T>,
-    optionLabel: (T) -> String,
-    onPick: (T) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    var expanded by remember { mutableStateOf(false) }
-    Box(modifier) {
-        OutlinedButton(
-            onClick = { expanded = true },
-            shape = RoundedCornerShape(6.dp),
-            modifier = Modifier.fillMaxWidth().semantics { contentDescription = if (value == null) name else "$name : $value" },
-        ) {
-            Text(value ?: name, modifier = Modifier.weight(1f), color = if (value == null) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface)
-            Text("▾", color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }, modifier = Modifier.heightIn(max = 320.dp)) {
-            options.forEach { option ->
-                DropdownMenuItem(
-                    text = { Text(optionLabel(option)) },
-                    onClick = {
-                        expanded = false
-                        onPick(option)
-                    },
-                )
-            }
         }
     }
 }
