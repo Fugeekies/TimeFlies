@@ -40,7 +40,7 @@ Règles du style Polaroïd dans toute l'application :
 - **Texte lisible** (`Atkinson Hyperlegible`) pour tout le reste : titres et détails des cartes, menus, réglages, boutons. Les menus restent aussi clairs qu'en Éphéméride.
 - Cartes des listes : fond blanc cassé, coins de 6 px, ombre légère, sans bordure.
 
-Jetons de la maquette (clair) : fond `#E8DFD2`, cartes `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C`. À finir avant les écrans de la V1 : la **version sombre** et le **contraste** de la légende manuscrite (taille minimale, couleur), voir la feuille de route.
+Jetons de la maquette (clair) : fond `#E8DFD2`, cartes `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C`. Version sombre « chambre noire » et contrastes vérifiés au jalon 9 (décision du 15/11/2026, § 2 et « Accessibilité »). Le Polaroïd reste un tirage clair dans les deux thèmes : son cadre et sa photo gardent leurs couleurs, l'encre manuscrite reste foncée.
 
 ##### Le cadre dit *quand*, la photo dit *quoi* (décision du 14/11/2026)
 
@@ -75,12 +75,17 @@ L'application suit le thème du système (clair ou sombre). Toutes les couleurs 
 
 | Jeton | Clair | Sombre | Usage |
 |---|---|---|---|
-| `background` | `#E8DFD2` papier kraft | à définir | fond des écrans |
-| `surface` | `#FBFAF7` blanc cassé | à définir | cadre de la photo, cartes |
-| `onSurface` | `#2B2420` encre | à définir | texte principal |
-| `onSurfaceVariant` | `#6A5D52` | à définir | libellés, dates, textes secondaires |
-| `primary` | `#9A4E1C` brun cuivré | à définir | âges manuscrits, onglet actif, boutons principaux |
-| `outline` | `#D6CBBC` | à définir | séparateurs |
+| `background` | `#E8DFD2` papier kraft | `#1C1714` brun nuit | fond des écrans |
+| `surface` | `#FBFAF7` blanc cassé | `#2A231F` | cartes (le cadre de la photo garde sa couleur de décennie) |
+| `onSurface` | `#2B2420` encre | `#F1E8DD` crème | texte principal |
+| `onSurfaceVariant` | `#6A5D52` | `#BFAF9F` | libellés, dates, textes secondaires |
+| `primary` | `#9A4E1C` brun cuivré | `#E39A62` cuivre clair | âges manuscrits, onglet actif, boutons principaux |
+| `outline` | `#D6CBBC` | `#4A3F37` | séparateurs |
+| `secondaryContainer` | `#F1E1D3` | `#4A3426` | onglet actif, pastille « Chiffre rond » |
+| silhouette de l'utilisateur | `#B4501E` rouille | `#F08A55` | Équivalences, « Quel âge ? » |
+| silhouette de l'autre personne | `#0E7C7B` bleu canard | `#4FC3C0` | Équivalences, « Quel âge ? » |
+
+Palette sombre « chambre noire » : décision du 15/11/2026. L'application suit le thème du système ; sur Android, la fenêtre prend aussi le fond du thème avant la première image (`values-night/themes.xml`).
 
 La photo du jour prend la couleur de la famille de l'événement (§ 3), légèrement passée.
 
@@ -170,17 +175,17 @@ Quatre destinations, dans cet ordre :
 
 ## ♿ Accessibilité
 
-* Contraste AA au minimum sur les deux thèmes (texte 4,5:1, grand chiffre 3:1).
-* Les tailles de police suivent le réglage du système ; à 200 %, les cartes passent sur plusieurs lignes au lieu de couper le texte.
+* Contraste AA au minimum sur les deux thèmes (texte 4,5:1, grand chiffre 3:1), vérifié par un test (`ContrastTest`, module `ui`) : jetons clairs et sombres, silhouettes, encres des cadres de chaque décennie, tampon de la décennie. Sur la photo, le grand chiffre et l'étiquette prennent, du blanc ou de l'encre, celle qui se lit le mieux sur la couleur de la famille (jalon 9).
+* Les tailles de police suivent le réglage du système ; à 200 %, les cartes passent sur plusieurs lignes au lieu de couper le texte. Seul le grand chiffre de la photo garde sa taille (il fait déjà 120 dp et la photo ne pourrait pas le contenir), le nombre d'années étant aussi lu par la description.
 * Chaque carte a une description pour TalkBack et le Narrateur Windows, par exemple : « Intouchables, sortie au cinéma le 2 novembre 2011, il y a 15 ans. Tu avais 20 ans. »
 * Zones tactiles de 48 dp minimum. Sur Windows, tout se fait aussi au clavier (Tab, Entrée, flèches dans les listes).
-* Animations réduites quand le système le demande (photo ou feuille affichée directement, sans effet).
+* Animations réduites quand le système le demande (photo ou feuille affichée directement, sans effet) : sur Android, échelle de durée des animations à 0 (« Supprimer les animations ») ; sur Windows, `MinAnimate = 0` dans `HKCUControl PanelDesktopWindowMetrics`, que « Afficher les animations dans Windows » désactivé met aussi à 0 (à confirmer sur un PC).
 * L'écriture manuscrite n'est jamais la seule porteuse d'une information : la description TalkBack et le Narrateur lisent le texte, et les détails de chaque carte sont aussi en police lisible.
 
 ## ✨ Animation
 
 Une seule animation marquante, à l'ouverture de l'écran Aujourd'hui, une fois par jour (pas à chaque retour sur l'écran) :
-* **Polaroïd (V1)** : la photo du jour **se développe**, l'aplat de couleur apparaît peu à peu sur le blanc, puis l'écriture (**À valider**).
+* **Polaroïd (V1)** : la photo du jour **se développe** en 1,6 s : l'aplat de couleur apparaît peu à peu sur le blanc, puis l'écriture (décision du 15/11/2026, codée au jalon 9, à juger à l'écran). Une fois par jour et par lancement de l'application.
 * **Éphéméride (après la V1)** : la feuille de la veille s'arrache vers le haut et laisse apparaître celle du jour.
 
 Le reste se limite aux transitions standard de Material 3.

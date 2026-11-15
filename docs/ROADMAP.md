@@ -78,8 +78,9 @@ Pour tester tous les cas sans attendre le bon jour.
 - [x] Benchmark de la page ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 1 ms pour la liste par famille, 5 000 événements).
 
 ### Jalon 9 — Finitions du style Polaroïd
-- [ ] Version sombre, contraste et taille minimale de l'écriture manuscrite.
-- [ ] Animation de la photo qui se développe (à valider à l'écran), accessibilité (TalkBack, Narrateur, texte agrandi à 200 %).
+- [x] Version sombre « chambre noire » (décision du 15/11/2026), le thème suit le système, fenêtre Android jour/nuit sans éclair blanc. Contrastes AA vérifiés par `ContrastTest` (jetons, silhouettes, cadres, tampon des décennies, encre de la photo choisie selon la couleur de la famille) ; écriture manuscrite jamais sous 20 sp.
+- [x] Animation de la photo qui se développe (1,6 s, une fois par jour), coupée quand le système réduit les animations (Android : échelle des animations ; Windows : `MinAnimate`).
+- [x] Texte agrandi à 200 % : le grand chiffre de la photo garde sa taille, le bouton du premier lancement grandit avec son texte.
 
 ### Jalon 10 — Barre des tâches et notification Windows
 - [ ] Icône, infobulle et menu ; notification du matin ; fenêtre fermée qui reste dans la barre des tâches ; lancement au démarrage ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)).

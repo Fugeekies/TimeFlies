@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Window behind the Compose content: the Polaroïd background, so no white flash before the first frame. -->
+<resources>
+    <style name="Theme.TimeFlies" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/polaroid_background</item>
+    </style>
+    <color name="polaroid_background">#E8DFD2</color>
+</resources>

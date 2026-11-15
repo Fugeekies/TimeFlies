@@ -29,6 +29,10 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             api(libs.kermit)
         }
+        // Contrast of the colour tokens (docs/UI_DESIGN_SPEC.md, "Accessibilité"), on the JVM only.
+        getByName("desktopTest").dependencies {
+            implementation(kotlin("test"))
+        }
     }
 }
 
