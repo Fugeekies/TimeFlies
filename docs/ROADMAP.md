@@ -61,8 +61,9 @@ Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
 
 ### Jalon 6 — Panneau de débogage
 Pour tester tous les cas sans attendre le bon jour.
-- [ ] Fausse date du jour, réglages forcés, statistiques de la base ([`DEVELOPMENT.md`](DEVELOPMENT.md)).
-- [ ] Logs Kermit (console, fichier sur PC, Logcat sur Android), sans donnée personnelle.
+- [x] Destination « Débogage » en version de débogage seulement ([`DEVELOPMENT.md`](DEVELOPMENT.md)) : fausse date du jour (`AdjustableClock`, raccourcis 29 février, jour sans anniversaire…), réglages forcés (naissance, région, revoir le premier lancement, valeurs par défaut), statistiques de la base. Port `DebugTools` dans `domain`, `DataDebugTools` dans `data`, tests.
+- [x] Logs Kermit (console, fichier par jour sur PC, Logcat sur Android), sans donnée personnelle, exceptions non rattrapées écrites dans les logs.
+- [ ] Vérifier le panneau à l'œil sur PC et sur Android.
 
 ### Jalon 7 — Équivalences
 - [ ] `domain` : `Generations`, `Equivalences` (même type, ±2 ans), cas d'usage `GetEquivalences`, tests.
@@ -79,10 +80,12 @@ Pour tester tous les cas sans attendre le bon jour.
 ### Jalon 10 — Barre des tâches et notification Windows
 - [ ] Icône, infobulle et menu ; notification du matin ; fenêtre fermée qui reste dans la barre des tâches ; lancement au démarrage ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)).
 - [ ] Panneau Windows des Réglages.
+- [ ] Panneau de débogage : envoyer tout de suite la notification du matin.
 
 ### Jalon 11 — Widget Android
 - [ ] Widget en trois tailles avec le bouton « suivant », mis à jour juste après minuit ([`AndroidWidget.template.md`](UISpec/AndroidWidget.template.md)).
 - [ ] Panneau « Écran d'accueil » des Réglages.
+- [ ] Panneau de débogage : forcer tout de suite la mise à jour du widget.
 
 ### Jalon 12 — Nom et icône définitifs
 - [ ] Choisir le nom affiché sous l'icône et dans les menus (le dépôt reste `TimeFlies`).

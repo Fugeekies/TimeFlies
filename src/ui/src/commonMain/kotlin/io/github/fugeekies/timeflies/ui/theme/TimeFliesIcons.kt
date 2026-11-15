@@ -40,6 +40,14 @@ object TimeFliesIcons {
         moveTo(20f, 18f); arcTo(2f, 2f, 0f, true, true, 16f, 18f); arcTo(2f, 2f, 0f, true, true, 20f, 18f)
     }
 
+    /** A wrench, for the debug panel (debug builds only, not in the mock-ups). */
+    val Debug: ImageVector = strokeIcon("Debug") {
+        // Round head open on its top-right quarter (the jaw), then the handle towards the bottom left.
+        moveTo(16f, 4f); arcTo(4f, 4f, 0f, true, false, 20f, 8f)
+        moveTo(16f, 4f); lineTo(16f, 8f); lineTo(20f, 8f)
+        moveTo(13.2f, 10.8f); lineTo(4.5f, 19.5f)
+    }
+
     private fun strokeIcon(name: String, block: PathBuilder.() -> Unit): ImageVector =
         ImageVector.Builder(name = name, defaultWidth = 24.dp, defaultHeight = 24.dp, viewportWidth = 24f, viewportHeight = 24f)
             .path(

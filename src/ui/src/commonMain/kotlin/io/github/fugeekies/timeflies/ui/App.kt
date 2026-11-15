@@ -28,15 +28,19 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
+import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
+import io.github.fugeekies.timeflies.ui.debug.DebugScreen
+import io.github.fugeekies.timeflies.ui.debug.DebugViewModel
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingScreen
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingViewModel
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.coming_soon
+import io.github.fugeekies.timeflies.ui.resources.nav_debug
 import io.github.fugeekies.timeflies.ui.resources.nav_equivalences
 import io.github.fugeekies.timeflies.ui.resources.nav_my_equivalent
 import io.github.fugeekies.timeflies.ui.resources.nav_settings
@@ -58,6 +62,9 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
     EQUIVALENCES(Res.string.nav_equivalences, TimeFliesIcons.Compare),
     MY_EQUIVALENT(Res.string.nav_my_equivalent, TimeFliesIcons.Search),
     SETTINGS(Res.string.nav_settings, TimeFliesIcons.Tune),
+
+    /** Debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage"). */
+    DEBUG(Res.string.nav_debug, TimeFliesIcons.Debug),
 }
 
 /**
@@ -66,6 +73,7 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
  * come from the app's composition root.
  *
  * @param appVersion version shown in Settings › À propos; null for a local development build.
+ * @param debugTools tools of the debug panel; null in a release, where the panel does not exist.
  */
 @Composable
 fun App(
@@ -76,6 +84,7 @@ fun App(
     countEvents: CountEvents,
     clock: Clock,
     appVersion: String? = null,
+    debugTools: DebugTools? = null,
 ) {
     TimeFliesTheme {
         val settingsFlow = remember(observeSettings) { observeSettings() }
@@ -89,7 +98,7 @@ fun App(
                     OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
                 }
             } else {
-                MainScreens(current, getDailyShock, observeSettings, updateSettings, countEvents, clock, appVersion)
+                MainScreens(current, getDailyShock, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
             }
         }
     }
@@ -104,11 +113,12 @@ private fun MainScreens(
     countEvents: CountEvents,
     clock: Clock,
     appVersion: String?,
+    debugTools: DebugTools?,
 ) {
     var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
     NavigationSuiteScaffold(
         navigationSuiteItems = {
-            Destination.entries.forEach { destination ->
+            Destination.entries.filter { it != Destination.DEBUG || debugTools != null }.forEach { destination ->
                 item(
                     selected = destination == current,
                     onClick = { current = destination },
@@ -130,6 +140,9 @@ private fun MainScreens(
             // Reduced mode (docs/UISpec/Onboarding.template.md): without birth, no equivalences.
             Destination.EQUIVALENCES, Destination.MY_EQUIVALENT ->
                 if (settings.birth == null) ReducedMode(onOpenSettings = { current = Destination.SETTINGS }, content) else ComingSoon(content)
+            Destination.DEBUG -> debugTools?.let { tools ->
+                DebugScreen(viewModel { DebugViewModel(tools, observeSettings, clock) }, content)
+            }
         }
     }
 }

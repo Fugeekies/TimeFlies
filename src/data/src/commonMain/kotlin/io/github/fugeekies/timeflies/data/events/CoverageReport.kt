@@ -13,9 +13,12 @@ import io.github.fugeekies.timeflies.domain.model.Region
 data class CoverageReport(
     val eventCount: Int,
     val eventsByFamily: Map<Family, Int>,
-    val daysWithoutAnniversary: Int,
+    val emptyDays: List<MonthDay>,
     val typesBelowMinimum: Map<EventType, Int>,
 ) {
+    /** Number of days of the year (29 February included) on which no event has its anniversary. */
+    val daysWithoutAnniversary: Int get() = emptyDays.size
+
     override fun toString(): String = buildString {
         appendLine("Événements : $eventCount")
         Family.entries.forEach { appendLine("  ${it.fileName} : ${eventsByFamily[it] ?: 0}") }
@@ -36,7 +39,7 @@ data class CoverageReport(
             return CoverageReport(
                 eventCount = events.size,
                 eventsByFamily = events.groupingBy { it.family }.eachCount(),
-                daysWithoutAnniversary = ALL_DAYS.count { it !in coveredDays },
+                emptyDays = ALL_DAYS.filter { it !in coveredDays },
                 typesBelowMinimum = EventType.entries
                     .associateWith { countByType[it] ?: 0 }
                     .filterValues { it < MIN_EVENTS_PER_TYPE },
