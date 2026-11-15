@@ -10,12 +10,12 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 #### Panneau « Toi » (eyebrow « GÉNÉRATIONS »)
 * **Ton mois et ton année de naissance** : deux listes, comme au premier lancement (de 1920 à l'année en cours moins 5), **sans le jour** (décision du 13/11/2026). Libellé de la valeur : « Mai 1991 · 35 ans ». Non renseigné : « Non renseigné » et le texte « Sans cette information, TimeFlies affiche les anniversaires sans ton âge et ne peut pas calculer d'équivalences. »
 * Lien **« Effacer »** : retire le mois et l'année enregistrés (retour au mode réduit).
-* **Pas d'âge du jeune dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), pas au premier lancement non plus. La valeur reste enregistrée avec les réglages.
+* **Pas d'âge de l'autre personne dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), pas au premier lancement non plus. La valeur reste enregistrée avec les réglages.
 
 #### Calcul des âges et de l'écart (décision du 13/11/2026)
 * **Naissance de l'utilisateur** : le **1er jour** du mois choisi. L'âge affiché peut donc avoir un an d'avance seulement pendant le mois de son anniversaire, avant le jour exact.
-* **Naissance du jeune** : **aujourd'hui moins son âge**, au jour près (un jeune « de 15 ans » est né il y a exactement 15 ans).
-* **Écart** : différence entre les deux dates de naissance, au jour près. Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
+* **Naissance de l'autre personne** : **aujourd'hui moins son âge**, au jour près (une personne « de 15 ans » est née il y a exactement 15 ans). Elle peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
+* **Écart** : différence entre les deux dates de naissance, au jour près, dans un sens ou dans l'autre ; un écart de moins de 5 ans est permis avec un avertissement (voir `Equivalences.template.md`). Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
 
 #### Panneau « Affichage » (eyebrow « AFFICHAGE »)
 * **Style** : **absent en V1**, qui n'a que le Polaroïd (décision du 13/11/2026). Il apparaît avec le jalon « Style Éphéméride » : un choix par style livré, avec un aperçu miniature de la feuille du jour (voir `UI_DESIGN_SPEC.md` § 1). La maquette ci-dessous montre ce futur choix :

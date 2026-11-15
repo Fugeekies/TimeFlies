@@ -114,11 +114,11 @@ class GetDailyShock(
 
 Détaillées dans [`EVENTS_DATA.md`](EVENTS_DATA.md) (format et types) et dans les spécifications d'écran (`UISpec/`). En résumé :
 
-- **Naissance** : l'utilisateur ne donne que son **mois et son année** (jamais le jour, décision du 13/11/2026) ; la date retenue est le 1er du mois. Celle du jeune est aujourd'hui moins son âge.
+- **Naissance** : l'utilisateur ne donne que son **mois et son année** (jamais le jour, décision du 13/11/2026) ; la date retenue est le 1er du mois. Celle de l'autre personne (plus jeune ou plus âgée, décision du 15/11/2026) est aujourd'hui moins son âge.
 - **Âge à une date** : années civiles révolues entre la date de naissance et la date, comme un âge réel (on ne prend pas d'année de 365,25 jours).
 - **Date d'un événement** : `regionalDates[région] ?: date` (date de référence : la date française, décision du 14/11/2026).
 - **Anniversaire** : même jour et même mois qu'une date d'événement, au moins un an après. Un événement du 29 février est fêté le 28 février les années non bissextiles (décision du 13/11/2026).
-- **Écart d'âge** : différence au jour près entre la date de naissance de l'utilisateur et celle du jeune (voir `UISpec/Settings.template.md`).
+- **Écart d'âge** : différence au jour près entre la date de naissance de l'utilisateur et celle de l'autre personne, dans un sens ou dans l'autre (voir `UISpec/Settings.template.md`).
 - **Équivalence** : événement de **même type** (types larges), décalé de l'écart d'âge, à ±2 ans près (décision du 13/11/2026).
 
 ## Réglages (décision du 14/11/2026)
@@ -127,7 +127,7 @@ Une seule implémentation pour les deux plateformes : DataStore (`datastore-core
 
 | Plateforme | Fichier | Contenu |
 |---|---|---|
-| Android | `settings.json` dans le dossier privé de l'application | mois et année de naissance, âge du jeune, région, style, thèmes et sens de l'écran Équivalences, premier lancement terminé |
+| Android | `settings.json` dans le dossier privé de l'application | mois et année de naissance, âge de l'autre personne, région, style, thèmes et sens de l'écran Équivalences, premier lancement terminé |
 | Windows | `%APPDATA%\TimeFlies\settings.json` | les mêmes, plus l'heure de la notification, le lancement au démarrage, la taille et la position de la fenêtre, la date de la dernière notification |
 
 Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APPDATA%\TimeFlies` reste après une désinstallation : une réinstallation retrouve les réglages (décision du 13/11/2026).
