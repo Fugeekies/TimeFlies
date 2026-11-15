@@ -4,8 +4,9 @@ import io.github.fugeekies.timeflies.domain.model.Settings
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.cancel
+import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.job
 import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
@@ -25,16 +26,25 @@ class DataStoreSettingsRepositoryTest {
     private val file = folder / "TimeFlies" / "settings.json"
     private val scopes = mutableListOf<CoroutineScope>()
 
-    /** A new repository on [file], as after a restart of the app (the previous one is closed first). */
-    private fun open(): DataStoreSettingsRepository {
-        scopes.forEach { it.cancel() }
+    /**
+     * A new repository on [file], as after a restart of the app. The previous one is closed first and fully
+     * stopped: DataStore releases the file only once its scope has completed, and refuses two active stores
+     * on the same file (seen on the Linux CI runner).
+     */
+    private suspend fun open(): DataStoreSettingsRepository {
+        closeAll()
         val scope = CoroutineScope(Dispatchers.IO + SupervisorJob()).also { scopes += it }
         return DataStoreSettingsRepository(FileSystem.SYSTEM, file, scope)
     }
 
+    private suspend fun closeAll() {
+        scopes.forEach { it.coroutineContext.job.cancelAndJoin() }
+        scopes.clear()
+    }
+
     @AfterTest
     fun cleanUp() {
-        scopes.forEach { it.cancel() }
+        runBlocking { closeAll() }
         FileSystem.SYSTEM.deleteRecursively(folder)
     }
 
