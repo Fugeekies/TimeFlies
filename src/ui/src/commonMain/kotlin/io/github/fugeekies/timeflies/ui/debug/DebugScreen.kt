@@ -16,6 +16,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.SegmentedButton
+import androidx.compose.material3.SegmentedButtonDefaults
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -55,6 +58,11 @@ import io.github.fugeekies.timeflies.ui.resources.debug_refresh
 import io.github.fugeekies.timeflies.ui.resources.debug_region_input
 import io.github.fugeekies.timeflies.ui.resources.debug_reset_settings
 import io.github.fugeekies.timeflies.ui.resources.debug_settings
+import io.github.fugeekies.timeflies.ui.resources.debug_theme
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_dark
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_light
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_note
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_system
 import io.github.fugeekies.timeflies.ui.resources.debug_stats
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_count
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_empty_days
@@ -68,14 +76,19 @@ import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.ThemeMode
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 import org.jetbrains.compose.resources.stringResource
 
-/** The debug panel (docs/DEVELOPMENT.md, "Panneau de débogage"), debug builds only. */
+/**
+ * The debug panel (docs/DEVELOPMENT.md, "Panneau de débogage"), debug builds only.
+ *
+ * @param themeMode light or dark forced for this session; [onThemeMode] changes it.
+ */
 @Composable
-fun DebugScreen(viewModel: DebugViewModel, modifier: Modifier = Modifier) {
+fun DebugScreen(viewModel: DebugViewModel, themeMode: ThemeMode, onThemeMode: (ThemeMode) -> Unit, modifier: Modifier = Modifier) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val current = state ?: return
     Box(modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
@@ -95,10 +108,38 @@ fun DebugScreen(viewModel: DebugViewModel, modifier: Modifier = Modifier) {
             Panel { DatePanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.debug_settings))
             Panel { SettingsPanel(current, viewModel) }
+            Eyebrow(stringResource(Res.string.debug_theme))
+            Panel { ThemePanel(themeMode, onThemeMode) }
             Eyebrow(stringResource(Res.string.debug_stats))
             Panel { StatsPanel(current, viewModel) }
         }
     }
+}
+
+/** System, light or dark, to try both themes without changing the system setting. */
+@Composable
+private fun ThemePanel(themeMode: ThemeMode, onThemeMode: (ThemeMode) -> Unit) {
+    val options = ThemeMode.entries
+    SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
+        options.forEachIndexed { index, mode ->
+            SegmentedButton(
+                selected = mode == themeMode,
+                onClick = { onThemeMode(mode) },
+                shape = SegmentedButtonDefaults.itemShape(index, options.size),
+            ) {
+                Text(
+                    stringResource(
+                        when (mode) {
+                            ThemeMode.SYSTEM -> Res.string.debug_theme_system
+                            ThemeMode.LIGHT -> Res.string.debug_theme_light
+                            ThemeMode.DARK -> Res.string.debug_theme_dark
+                        },
+                    ),
+                )
+            }
+        }
+    }
+    Text(stringResource(Res.string.debug_theme_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
 }
 
 @Composable

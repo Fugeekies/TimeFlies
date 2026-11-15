@@ -20,7 +20,7 @@ enum class Era(val frame: Color) {
     ;
 
     /** Colour of the decade stamp: the frame, darkened towards the ink. */
-    val stamp: Color get() = lerp(frame, Color(0xFF2B2420), 0.45f)
+    val stamp: Color get() = lerp(frame, Color(0xFF2B2420), 0.55f)
 
     companion object {
         fun of(year: Int): Era = when {

@@ -80,6 +80,15 @@ class TodayViewModel(
         }
     }
 
+    /** The day the photo last developed: once a day, not at each return to the screen (docs/UI_DESIGN_SPEC.md). */
+    private var developedOn: LocalDate? = null
+
+    fun shouldDevelop(day: LocalDate): Boolean = developedOn != day
+
+    fun onDeveloped(day: LocalDate) {
+        developedOn = day
+    }
+
     private fun untilNextDay() = run {
         val zone = TimeZone.currentSystemDefault()
         // The system midnight, not the one of clock.today(): a fake date of the debug panel does not move on its own.
