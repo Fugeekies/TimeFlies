@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Icône « le sablier ailé » : icône adaptative Android avec sa version monochrome (icônes à thème), icône Windows pour l'installeur, la fenêtre et la barre des tâches ; dessin maître et fichiers tirés dans `assets/icon/`.
 - Écran « Quel âge ? », à la place de Mon équivalent : un événement cherché dans les titres (dès 2 caractères, sans accents ni casse) ou dans la liste par famille, avec sur chaque ligne l'âge des deux personnes à sa date (« 👤 6 ans », « 👤 −14 ans »), négatif avant une naissance, sans avoir à toucher la ligne. Même bandeau des âges qu'Équivalences, âges à la volée partagés entre les deux écrans.
 - Toucher une carte d'Aujourd'hui ou d'Équivalences ouvre « Quel âge ? » sur cet événement.
 - Benchmarks : page « Quel âge ? » (liste par famille, recherche), environ 1 ms pour 5 000 événements.

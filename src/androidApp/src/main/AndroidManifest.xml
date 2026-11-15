@@ -4,6 +4,8 @@
     <application
         android:name=".TimeFliesApplication"
         android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:label="TimeFlies"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">

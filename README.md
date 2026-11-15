@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/icon/timeflies-512.png" alt="Icône TimeFlies : un sablier ailé" width="120"></p>
+
 # TimeFlies
 
 > « Pour un gars qui a 15 piges aujourd'hui, Friends, c'est exactement ce que Happy Days était pour nous. »

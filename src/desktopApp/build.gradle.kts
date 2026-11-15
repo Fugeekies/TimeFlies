@@ -27,8 +27,17 @@ compose.desktop {
             targetFormats(TargetFormat.Msi)
             packageName = "TimeFlies"
             packageVersion = "1.0.0"
+            windows {
+                // Installer, shortcuts and executable: the winged hourglass (assets/icon/, docs/UI_DESIGN_SPEC.md).
+                iconFile.set(rootProject.file("assets/icon/timeflies.ico"))
+            }
         }
     }
+}
+
+// Window and taskbar icon, copied from assets/icon/ so the drawing has a single source.
+tasks.processResources {
+    from(rootProject.file("assets/icon/timeflies-256.png")) { into("icon") }
 }
 
 // `./gradlew :desktopApp:run '-Dtimeflies.debug=true'` hands the option to the app (debug panel, fake date);
