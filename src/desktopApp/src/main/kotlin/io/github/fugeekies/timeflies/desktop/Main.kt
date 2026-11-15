@@ -10,7 +10,7 @@ import io.github.fugeekies.timeflies.ui.App
 import java.awt.Dimension
 
 fun main() {
-    // Debug panel and fake date: `./gradlew :desktopApp:run -Dtimeflies.debug=true`, never in the installer.
+    // Debug panel and fake date: `./gradlew :desktopApp:run '-Dtimeflies.debug=true'`, never in the installer.
     val debug = System.getProperty("timeflies.debug") == "true"
     Logging.setUp(debug)
     Logger.withTag("App").i { "TimeFlies démarre${if (debug) " (débogage)" else ""}" }

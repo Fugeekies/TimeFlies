@@ -31,7 +31,8 @@ compose.desktop {
     }
 }
 
-// `./gradlew :desktopApp:run -Dtimeflies.debug=true` hands the option to the app (debug panel, fake date).
+// `./gradlew :desktopApp:run '-Dtimeflies.debug=true'` hands the option to the app (debug panel, fake date);
+// the quotes are needed in PowerShell, which otherwise splits the option at the dot.
 // Only the local run task gets it: the installer never does (docs/DEVELOPMENT.md, "Panneau de débogage").
 val debugOption = providers.systemProperty("timeflies.debug")
 tasks.withType<JavaExec>().matching { it.name == "run" }.configureEach {
