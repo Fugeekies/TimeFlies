@@ -1,0 +1,458 @@
+[
+  {
+    "id": "sport-jeux-olympiques-paris-1900",
+    "date": "1900-05-14",
+    "title": {
+      "fr": "Ouverture des Jeux olympiques de Paris"
+    },
+    "kind": "history",
+    "type": "olympics-in-france",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jeux_olympiques_de_1900",
+    "note": "Date d'ouverture de l'infobox (aucune cérémonie d'ouverture en 1900). Wikidata Q8088 : même date."
+  },
+  {
+    "id": "sport-jeux-olympiques-paris-1924",
+    "date": "1924-07-05",
+    "title": {
+      "fr": "Cérémonie d'ouverture des Jeux olympiques de Paris"
+    },
+    "kind": "history",
+    "type": "olympics-in-france",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jeux_olympiques_d'%C3%A9t%C3%A9_de_1924",
+    "note": "Cérémonie d'ouverture selon l'infobox et l'article. Wikidata Q8132 donne le début des premières épreuves, 1924-05-04."
+  },
+  {
+    "id": "sport-pele-champion-du-monde-1958",
+    "date": "1958-06-29",
+    "title": {
+      "fr": "Pelé champion du monde à 17 ans (finale de la Coupe du monde 1958)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1958",
+    "note": "Date du match donnée par l'infobox. Wikidata Q1078991 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-kopa-1958",
+    "date": "1958-12-16",
+    "title": {
+      "fr": "Ballon d'or de Raymond Kopa"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_1958",
+    "note": "Date d'attribution donnée par l'introduction de l'article. Wikidata Q2372109 : année seulement."
+  },
+  {
+    "id": "sport-jeux-olympiques-grenoble-1968",
+    "date": "1968-02-06",
+    "title": {
+      "fr": "Ouverture des Jeux olympiques d'hiver de Grenoble"
+    },
+    "kind": "history",
+    "type": "olympics-in-france",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jeux_olympiques_d'hiver_de_1968",
+    "note": "Date d'ouverture de l'infobox. Wikidata Q9642 : même date."
+  },
+  {
+    "id": "sport-record-bob-beamon-1968",
+    "date": "1968-10-18",
+    "title": {
+      "fr": "Le saut de Bob Beamon à 8,90 m"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bob_Beamon",
+    "note": "Date de la finale de Mexico selon l'article Bob Beamon et l'article Record du monde du saut en longueur. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-pele-finale-coupe-du-monde-1970",
+    "date": "1970-06-21",
+    "title": {
+      "fr": "Troisième titre mondial de Pelé (finale de la Coupe du monde 1970)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1970",
+    "note": "Date du match donnée par l'infobox. Wikidata Q1069912 : même date."
+  },
+  {
+    "id": "sport-nadia-comaneci-10-1976",
+    "date": "1976-07-18",
+    "title": {
+      "fr": "Le premier 10 de Nadia Comăneci aux Jeux olympiques"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Nadia_Com%C4%83neci",
+    "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-platini-champion-d-europe-1984",
+    "date": "1984-06-27",
+    "title": {
+      "fr": "Platini champion d'Europe (finale de l'Euro 1984)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_du_Championnat_d'Europe_de_football_1984",
+    "note": "Date du match donnée par l'infobox. Wikidata Q64179 : même date."
+  },
+  {
+    "id": "sport-maradona-argentine-angleterre-1986",
+    "date": "1986-06-22",
+    "title": {
+      "fr": "La « main de Dieu » de Maradona (Argentine-Angleterre, Coupe du monde 1986)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Match_de_football_Argentine_-_Angleterre_(1986)",
+    "note": "Date du match donnée par l'infobox. Wikidata Q4493724 : même date."
+  },
+  {
+    "id": "sport-record-florence-griffith-joyner-1988",
+    "date": "1988-07-16",
+    "title": {
+      "fr": "Record du monde du 100 m de Florence Griffith-Joyner"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Florence_Griffith-Joyner",
+    "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-jeux-olympiques-albertville-1992",
+    "date": "1992-02-08",
+    "title": {
+      "fr": "Ouverture des Jeux olympiques d'hiver d'Albertville"
+    },
+    "kind": "history",
+    "type": "olympics-in-france",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jeux_olympiques_d'hiver_de_1992",
+    "note": "Date de la cérémonie d'ouverture de l'infobox et de l'article. Wikidata Q9660 : même date."
+  },
+  {
+    "id": "sport-france-championne-du-monde-1998",
+    "date": "1998-07-12",
+    "title": {
+      "fr": "La France championne du monde (finale de la Coupe du monde 1998)"
+    },
+    "kind": "sport",
+    "type": "world-cup-win-france",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1998",
+    "note": "Date du match donnée par l'infobox. Wikidata Q585295 : même date."
+  },
+  {
+    "id": "sport-zidane-finale-ligue-des-champions-2002",
+    "date": "2002-05-15",
+    "title": {
+      "fr": "Zidane vainqueur de la Ligue des champions (finale 2002)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Ligue_des_champions_de_l'UEFA_2001-2002",
+    "note": "Date du match donnée par l'infobox. Wikidata Q574284 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-kaka-2007",
+    "date": "2007-12-02",
+    "title": {
+      "fr": "Ballon d'or de Kaká"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2007",
+    "note": "Date d'attribution donnée par l'article. Wikidata Q805310 : année seulement."
+  },
+  {
+    "id": "sport-michael-phelps-8-medailles-2008",
+    "date": "2008-08-17",
+    "title": {
+      "fr": "Huitième médaille d'or de Michael Phelps à Pékin"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Michael_Phelps",
+    "note": "Date du dernier titre (relais) donnée par l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2008",
+    "date": "2008-12-02",
+    "title": {
+      "fr": "Premier Ballon d'or de Cristiano Ronaldo"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2008",
+    "note": "Date d'attribution donnée par l'article. Wikidata Q805311 : même date."
+  },
+  {
+    "id": "sport-record-usain-bolt-100-m-2009",
+    "date": "2009-08-16",
+    "title": {
+      "fr": "Record du monde du 100 m d'Usain Bolt (9 s 58)"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Usain_Bolt",
+    "note": "Date donnée par l'article Usain Bolt et par l'article Record du monde du 100 mètres. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2009",
+    "date": "2009-12-01",
+    "title": {
+      "fr": "Premier Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2009",
+    "note": "Date de l'annonce donnée par l'article. Wikidata Q805316 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2012",
+    "date": "2013-01-07",
+    "title": {
+      "fr": "Quatrième Ballon d'or de Lionel Messi (édition 2012)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2012",
+    "note": "Date de la cérémonie donnée par l'article. Wikidata Q218551 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2013",
+    "date": "2014-01-13",
+    "title": {
+      "fr": "Deuxième Ballon d'or de Cristiano Ronaldo (édition 2013)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2013",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q15114097 : année seulement."
+  },
+  {
+    "id": "sport-record-renaud-lavillenie-2014",
+    "date": "2014-02-15",
+    "title": {
+      "fr": "Record du monde de saut à la perche de Renaud Lavillenie (6,16 m)"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Renaud_Lavillenie",
+    "note": "Date donnée par l'article Renaud Lavillenie et par l'article Sergueï Bubka. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2014",
+    "date": "2015-01-12",
+    "title": {
+      "fr": "Troisième Ballon d'or de Cristiano Ronaldo (édition 2014)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2014",
+    "note": "Date de la cérémonie donnée par l'infobox et l'article. Wikidata Q18346574 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2015",
+    "date": "2016-01-11",
+    "title": {
+      "fr": "Cinquième Ballon d'or de Lionel Messi (édition 2015)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2015",
+    "note": "Date de la cérémonie donnée par l'infobox et l'article. Wikidata Q20978666 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2016",
+    "date": "2016-12-12",
+    "title": {
+      "fr": "Quatrième Ballon d'or de Cristiano Ronaldo"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2016",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q27534060 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2017",
+    "date": "2017-12-07",
+    "title": {
+      "fr": "Cinquième Ballon d'or de Cristiano Ronaldo"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2017",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q41737689 : même date."
+  },
+  {
+    "id": "sport-france-championne-du-monde-2018",
+    "date": "2018-07-15",
+    "title": {
+      "fr": "La France championne du monde (finale de la Coupe du monde 2018)"
+    },
+    "kind": "sport",
+    "type": "world-cup-win-france",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2018",
+    "note": "Date du match donnée par l'infobox. Wikidata Q31043671 : même date."
+  },
+  {
+    "id": "sport-record-eliud-kipchoge-2018",
+    "date": "2018-09-16",
+    "title": {
+      "fr": "Record du monde du marathon d'Eliud Kipchoge à Berlin"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Eliud_Kipchoge",
+    "note": "Date donnée par l'article Eliud Kipchoge et par l'article Record du monde du marathon. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-ballon-d-or-modric-2018",
+    "date": "2018-12-03",
+    "title": {
+      "fr": "Ballon d'or de Luka Modrić"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2018",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q57140031 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2019",
+    "date": "2019-12-02",
+    "title": {
+      "fr": "Sixième Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2019",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q67165185 : même date."
+  },
+  {
+    "id": "sport-record-armand-duplantis-2020",
+    "date": "2020-02-08",
+    "title": {
+      "fr": "Premier record du monde de saut à la perche d'Armand Duplantis (6,17 m)"
+    },
+    "kind": "sport",
+    "type": "sports-record",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Armand_Duplantis",
+    "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2021",
+    "date": "2021-11-29",
+    "title": {
+      "fr": "Septième Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2021",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q108839629 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-benzema-2022",
+    "date": "2022-10-17",
+    "title": {
+      "fr": "Ballon d'or de Karim Benzema"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2022",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q112648424 : même date."
+  },
+  {
+    "id": "sport-messi-champion-du-monde-2022",
+    "date": "2022-12-18",
+    "title": {
+      "fr": "Messi champion du monde (finale de la Coupe du monde 2022)"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2022",
+    "note": "Date du match donnée par l'infobox. Wikidata Q55620455 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2023",
+    "date": "2023-10-30",
+    "title": {
+      "fr": "Huitième Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2023",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q118525481 : même date."
+  },
+  {
+    "id": "sport-jeux-olympiques-paris-2024",
+    "date": "2024-07-26",
+    "title": {
+      "fr": "Cérémonie d'ouverture des Jeux olympiques de Paris"
+    },
+    "kind": "history",
+    "type": "olympics-in-france",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jeux_olympiques_d'%C3%A9t%C3%A9_de_2024",
+    "note": "Date d'ouverture de l'infobox. Wikidata Q995653 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-rodri-2024",
+    "date": "2024-10-28",
+    "title": {
+      "fr": "Ballon d'or de Rodri"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2024",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q126488939 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-dembele-2025",
+    "date": "2025-09-22",
+    "title": {
+      "fr": "Ballon d'or d'Ousmane Dembélé"
+    },
+    "kind": "sport",
+    "type": "football-star-peak",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2025",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q130457203 : même date."
+  }
+]

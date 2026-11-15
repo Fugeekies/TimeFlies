@@ -147,6 +147,14 @@ Même méthode que le lot Cinéma 1 (article de Wikipédia en français comme so
 - **Titre** : pour une œuvre musicale, l'artiste entre parenthèses (« Thriller (Michael Jackson) ») ; pour une personne, son nom.
 - Les données sont relevées par un script qui interroge l'API de Wikipédia et de Wikidata (titre de l'article, dates de l'infobox, dates de Wikidata, nombre de Wikipédia) ; chaque date retenue est relue dans l'article.
 
+### Sport (palier 1, 38 événements)
+
+- **Sommet d'une star du foot** : la remise d'un **Ballon d'or** (date de la cérémonie ou de l'annonce, donnée par l'article de l'édition ; les éditions qui n'ont que l'année, la plupart avant 2007, n'entrent pas, ni 2010 et 2011 dont seul Wikidata donne le jour) et quelques **matchs** devenus le sommet d'une carrière (finales de Pelé en 1958 et 1970, de Platini à l'Euro 1984, de Zidane en Ligue des champions 2002, de Messi en 2022, la « main de Dieu » de Maradona en 1986), à la date du match.
+- **Victoires des Bleus en Coupe du monde** : date de la finale (1998, 2018). Le type n'a que deux événements, l'histoire n'en compte pas plus.
+- **Jeux olympiques en France** : date de la cérémonie d'ouverture (en 1900, sans cérémonie, la date d'ouverture). Nature `history` (« Événement »). Écarté : Chamonix 1924 (l'infobox donne le 25 janvier, le texte place la cérémonie le 24).
+- **Records et exploits** : date de l'exploit, lue dans l'article de l'athlète et, quand il existe, dans l'article du record ; Wikidata ne date pas ces exploits. Écarté : Sergueï Bubka (dates de ses 6,14 m confuses dans l'article).
+- Les types du Sport sont étroits : 38 événements au palier 1, au lieu des 70 indicatifs.
+
 ### Musique (palier 1, 78 événements)
 
 - **Morts** : date de décès de l'infobox ou de l'introduction de l'article. Écarté : Kurt Cobain (mort « le 5 avril 1994 (environ) »).

@@ -133,7 +133,7 @@ Morts d'icônes de la musique, divas, boys bands, albums de rap et de pop, tubes
 
 ### Données — Sport
 Stars du foot, victoires des Bleus, Jeux olympiques, records.
-- [ ] Palier 1 · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 38 événements (23 sommets de stars du foot : Ballons d'or et matchs, 2 victoires des Bleus en Coupe du monde, 5 Jeux olympiques en France, 8 records et exploits), 15/11/2026, méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Jeux vidéo & tech
 Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
