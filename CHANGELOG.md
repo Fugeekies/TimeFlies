@@ -11,6 +11,10 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Version sombre du style Polaroïd, « chambre noire » (brun nuit, crème, cuivre clair) : l'application suit le thème du système ; sur Android, la fenêtre prend aussi le fond sombre avant la première image.
+- La photo du jour se développe à l'ouverture d'Aujourd'hui (la couleur monte sur le blanc, puis l'écriture), une fois par jour, et pas quand le système réduit les animations.
+- Test de contraste AA des couleurs, en clair et en sombre (`ContrastTest`).
+- Panneau de débogage : thème clair, sombre ou du système, pour essayer les deux palettes (pas enregistré).
 - Icône « le sablier ailé » : icône adaptative Android avec sa version monochrome (icônes à thème), icône Windows pour l'installeur, la fenêtre et la barre des tâches ; dessin maître et fichiers tirés dans `assets/icon/`.
 - Écran « Quel âge ? », à la place de Mon équivalent : un événement cherché dans les titres (dès 2 caractères, sans accents ni casse) ou dans la liste par famille, avec sur chaque ligne l'âge des deux personnes à sa date (« 👤 6 ans », « 👤 −14 ans »), négatif avant une naissance, sans avoir à toucher la ligne. Même bandeau des âges qu'Équivalences, âges à la volée partagés entre les deux écrans.
 - Toucher une carte d'Aujourd'hui ou d'Équivalences ouvre « Quel âge ? » sur cet événement.
@@ -45,3 +49,9 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 - `domain` dépend aussi de `kotlinx-coroutines-core`, pour le `Flow` des réglages (`docs/ARCHITECTURE.md`).
 - L'autre personne des équivalences peut être plus jeune ou plus âgée que l'utilisateur (1 à 100 ans) ; un écart de moins de 5 ans n'est plus refusé. `settings.json` passe en version 2 : `youngAge` devient `otherAge` (un ancien fichier se lit toujours), avec le sens et les thèmes de l'écran Équivalences.
+
+### Fixed
+
+- Contrastes : le tampon de la décennie sur le cadre d'avant 1960, l'étiquette de la photo violette (Séries & télé) et le grand chiffre sur la photo ambre (Cinéma) passent l'AA ; « années » du tampon passe de 15 à 20 sp.
+- Les boîtes de dialogue prenaient le lavande par défaut de Material au lieu du blanc cassé du Polaroïd.
+- À 200 % de taille de texte, le grand chiffre de la photo ne déborde plus et le bouton « C'est parti » n'est plus coupé.

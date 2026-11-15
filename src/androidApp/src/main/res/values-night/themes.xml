@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark Polaroïd ("chambre noire", decision of 15/11/2026). -->
+<resources>
+    <style name="Theme.TimeFlies" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/polaroid_background</item>
+    </style>
+    <color name="polaroid_background">#1C1714</color>
+</resources>

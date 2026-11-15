@@ -68,12 +68,18 @@ import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.text.userAgeText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.rememberReducedMotion
 import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /** A card touched: opens "Quel âge ?" on its event. */
 private val LocalOpenEvent = staticCompositionLocalOf<(Event) -> Unit> { {} }
+
+/** Whether the main photo develops this time, and what to call once it has (docs/UI_DESIGN_SPEC.md, "Animation"). */
+private class Develop(val enabled: Boolean, val onDeveloped: () -> Unit)
+
+private val LocalDevelop = staticCompositionLocalOf { Develop(false) {} }
 
 /**
  * The Today screen (docs/UISpec/Today.template.md), Polaroïd style.
@@ -83,11 +89,18 @@ private val LocalOpenEvent = staticCompositionLocalOf<(Event) -> Unit> { {} }
 @Composable
 fun TodayScreen(viewModel: TodayViewModel, onOpenEvent: (Event) -> Unit = {}, modifier: Modifier = Modifier) {
     val state by viewModel.state.collectAsStateWithLifecycle()
+    // Asked before the events are loaded, so the answer is there when the photo shows (once a day, never when the
+    // system asks for fewer animations).
+    val reducedMotion = rememberReducedMotion()
     when (val current = state) {
         TodayUiState.Loading -> CenteredText(stringResource(Res.string.loading), modifier)
         TodayUiState.Error -> CenteredText(stringResource(Res.string.load_error), modifier)
-        is TodayUiState.Loaded -> CompositionLocalProvider(LocalOpenEvent provides onOpenEvent) {
-            TodayContent(current.shock, modifier)
+        is TodayUiState.Loaded -> {
+            val day = current.shock.today
+            val develop = Develop(reducedMotion == false && viewModel.shouldDevelop(day)) { viewModel.onDeveloped(day) }
+            CompositionLocalProvider(LocalOpenEvent provides onOpenEvent, LocalDevelop provides develop) {
+                TodayContent(current.shock, modifier)
+            }
         }
     }
 }
@@ -178,7 +191,11 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
     val open = LocalOpenEvent.current
-    PolaroidCard(anniversary, legend, userAge, description, Modifier.clickable(role = Role.Button) { open(event) })
+    val develop = LocalDevelop.current
+    PolaroidCard(
+        anniversary, legend, userAge, description, Modifier.clickable(role = Role.Button) { open(event) },
+        develop = develop.enabled, onDeveloped = develop.onDeveloped,
+    )
 }
 
 @Composable
