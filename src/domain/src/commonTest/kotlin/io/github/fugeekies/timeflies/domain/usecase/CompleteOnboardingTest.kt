@@ -34,32 +34,25 @@ class CompleteOnboardingTest {
     }
 
     @Test
-    fun savesEverythingOnStart() = runTest {
-        assertTrue(onboarding.start(YearMonth(1991, Month.MAY), 20))
+    fun savesTheBirthOnStart() = runTest {
+        assertTrue(onboarding.start(YearMonth(1991, Month.MAY)))
         val settings = repository.state.value
         assertEquals(YearMonth(1991, Month.MAY), settings.birth)
-        assertEquals(20, settings.youngAge)
         assertTrue(settings.onboardingDone)
-    }
-
-    @Test
-    fun savesNothingWhenTheYoungIsTooOld() = runTest {
-        assertFalse(onboarding.start(YearMonth(1991, Month.MAY), 31))
-        assertEquals(Settings(), repository.state.value)
+        // The other generation's age is not asked here (decision of 15/11/2026).
+        assertEquals(Settings().youngAge, settings.youngAge)
     }
 
     @Test
     fun savesNothingForABirthYearOutOfTheList() = runTest {
-        assertFalse(onboarding.start(YearMonth(2022, Month.JANUARY), 5))
+        assertFalse(onboarding.start(YearMonth(2022, Month.JANUARY)))
         assertEquals(Settings(), repository.state.value)
     }
 
     @Test
     fun laterEndsTheFirstLaunchWithoutBirth() = runTest {
-        onboarding.later(25)
-        val settings = repository.state.value
-        assertNull(settings.birth)
-        assertEquals(25, settings.youngAge)
-        assertTrue(settings.onboardingDone)
+        onboarding.later()
+        assertNull(repository.state.value.birth)
+        assertTrue(repository.state.value.onboardingDone)
     }
 }

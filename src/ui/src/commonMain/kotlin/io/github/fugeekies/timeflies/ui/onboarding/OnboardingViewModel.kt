@@ -19,19 +19,13 @@ data class OnboardingUiState(
     val today: LocalDate,
     val month: Month? = null,
     val year: Int? = null,
-    val youngAge: Int = Generations.DEFAULT_YOUNG_AGE,
     val saving: Boolean = false,
 ) {
     val birthYears: IntRange get() = Generations.birthYears(today)
     val birth: YearMonth? get() = if (month != null && year != null) YearMonth(year, month) else null
-    val userAge: Int? get() = birth?.let { Generations.userAge(it, today) }
-    val gap: Int? get() = birth?.let { Generations.gap(it, youngAge, today) }
 
-    /** "Le jeune doit avoir au moins 5 ans de moins que toi." is shown and "C'est parti" is disabled. */
-    val youngTooOld: Boolean get() = !Generations.isYoungAgeAllowed(youngAge, birth, today)
-
-    /** "C'est parti" is enabled once the month and the year are chosen, with an allowed young age. */
-    val canStart: Boolean get() = birth != null && !youngTooOld && !saving
+    /** "C'est parti" is enabled once the month and the year are chosen. */
+    val canStart: Boolean get() = birth != null && !saving
 }
 
 /** State of the first launch screen (docs/UISpec/Onboarding.template.md). */
@@ -47,8 +41,6 @@ class OnboardingViewModel(
 
     fun onYearPicked(year: Int) = _state.update { it.copy(year = year) }
 
-    fun onYoungAgeChange(age: Int) = _state.update { it.copy(youngAge = age) }
-
     /** "C'est parti": the app then opens Today, as soon as the saved settings say the first launch is done. */
     fun onStart() {
         val current = _state.value
@@ -56,7 +48,7 @@ class OnboardingViewModel(
         if (!current.canStart) return
         _state.update { it.copy(saving = true) }
         viewModelScope.launch {
-            if (!completeOnboarding.start(birth, current.youngAge)) _state.update { it.copy(saving = false) }
+            if (!completeOnboarding.start(birth)) _state.update { it.copy(saving = false) }
         }
     }
 
@@ -64,6 +56,6 @@ class OnboardingViewModel(
     fun onLater() {
         if (_state.value.saving) return
         _state.update { it.copy(saving = true) }
-        viewModelScope.launch { completeOnboarding.later(_state.value.youngAge) }
+        viewModelScope.launch { completeOnboarding.later() }
     }
 }

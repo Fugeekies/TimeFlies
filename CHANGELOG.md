@@ -11,14 +11,12 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
-- Écran de premier lancement : mois et année de naissance, âge du jeune, résumé en direct (« Tu as 35 ans, le jeune en a 15 : 20 ans d'écart »), boutons « C'est parti » et « Plus tard » ; il ne revient plus ensuite.
+- Écran de premier lancement : mois et année de naissance, boutons « C'est parti » et « Plus tard » ; il ne revient plus ensuite.
 - Mode réduit sans mois et année de naissance : Équivalences et Mon équivalent invitent à les indiquer, avec un bouton « Ouvrir les réglages ».
-
 - Écran Réglages : mois et année de naissance (lien « Effacer »), région (France en V1), à propos (version, nombre d'événements, liens GitHub et licences). Chaque réglage est enregistré dès qu'il change.
 - Réglages gardés sur l'appareil avec DataStore : `settings.json` dans le dossier privé de l'application sur Android, dans `%APPDATA%\TimeFlies` sur PC ; fichier illisible remplacé par les valeurs par défaut.
 - Aujourd'hui affiche l'âge de l'utilisateur à la date de chaque événement (« Tu avais 20 ans. », « Tu avais moins d'un an. », « C'était l'année de ta naissance. », « C'était 3 ans avant ta naissance. ») et se recalcule quand les réglages changent.
 - Feuille de route : jalon « Traductions et régions » (événements et choix de la région pour d'autres pays).
-
 - CI GitHub Actions sur chaque PR prête et sur `main` : tests, compilation des applications PC et Android, benchmarks avec rapport dans le résumé du run.
 - Benchmarks de chargement des données et des pages (`src/benchmarks`), sur les fichiers réels et sur des jeux synthétiques jusqu'à 10 000 événements ; premier rapport dans `docs/benchmarks/`.
 - Écran Aujourd'hui, style Polaroïd (cadre de la couleur de la décennie avec son chiffre écrit à la main, dessin du type dans la photo) : coup de vieux du jour (chiffres ronds d'abord, 29 février fêté le 28, repli sur les 7 jours suivants), « Aussi aujourd'hui », « Bientôt… », navigation adaptative à quatre destinations, polices Caveat et Atkinson Hyperlegible embarquées, recalcul au changement de jour.

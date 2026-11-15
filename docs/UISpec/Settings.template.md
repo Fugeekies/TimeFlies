@@ -10,7 +10,7 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 #### Panneau « Toi » (eyebrow « GÉNÉRATIONS »)
 * **Ton mois et ton année de naissance** : deux listes, comme au premier lancement (de 1920 à l'année en cours moins 5), **sans le jour** (décision du 13/11/2026). Libellé de la valeur : « Mai 1991 · 35 ans ». Non renseigné : « Non renseigné » et le texte « Sans cette information, TimeFlies affiche les anniversaires sans ton âge et ne peut pas calculer d'équivalences. »
 * Lien **« Effacer »** : retire le mois et l'année enregistrés (retour au mode réduit).
-* **Pas d'âge du jeune dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), et au premier lancement. La valeur reste enregistrée avec les réglages.
+* **Pas d'âge du jeune dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), pas au premier lancement non plus. La valeur reste enregistrée avec les réglages.
 
 #### Calcul des âges et de l'écart (décision du 13/11/2026)
 * **Naissance de l'utilisateur** : le **1er jour** du mois choisi. L'âge affiché peut donc avoir un an d'avance seulement pendant le mois de son anniversaire, avant le jour exact.

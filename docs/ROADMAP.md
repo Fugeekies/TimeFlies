@@ -55,7 +55,7 @@ Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
 - [ ] Vérifier l'écran Réglages à l'œil sur PC et sur Android.
 
 ### Jalon 5 — Premier lancement
-- [x] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)) : mois et année de naissance, âge du jeune, résumé en direct, « C'est parti » désactivé tant que le mois ou l'année manque ou que le jeune n'a pas 5 ans de moins, colonne de 480 dp sur une fenêtre large. `domain` : champ `onboardingDone` des réglages, cas d'usage `CompleteOnboarding` (une seule écriture), tests.
+- [x] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)) : mois et année de naissance seulement (décision du 15/11/2026), « C'est parti » désactivé tant que le mois ou l'année manque, colonne de 480 dp sur une fenêtre large. `domain` : champ `onboardingDone` des réglages, cas d'usage `CompleteOnboarding` (une seule écriture), tests.
 - [x] Mode réduit sans mois et année de naissance : Aujourd'hui sans « Tu avais N ans » (jalon 4), Équivalences et Mon équivalent affichent le message et le bouton « Ouvrir les réglages ».
 - [ ] Vérifier l'écran de premier lancement à l'œil sur PC et sur Android.
 
@@ -66,7 +66,7 @@ Pour tester tous les cas sans attendre le bon jour.
 
 ### Jalon 7 — Équivalences
 - [ ] `domain` : `Generations`, `Equivalences` (même type, ±2 ans), cas d'usage `GetEquivalences`, tests.
-- [ ] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge du jeune (retiré de Réglages, décision du 15/11/2026 ; `UpdateSettings.setYoungAge` est prêt).
+- [ ] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge de l'autre génération, seul endroit où il se règle (ni Réglages ni premier lancement, décision du 15/11/2026 ; `UpdateSettings.setYoungAge` est prêt) ; **choisir son nom à l'écran**, « âge du jeune » ne convient pas.
 
 ### Jalon 8 — Mon équivalent
 - [ ] Cas d'usage `FindEquivalent` (deux sens, autres candidats), recherche dans les titres.
