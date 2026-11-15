@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TimeFlies icon, "the winged hourglass" (decision of 15/11/2026, docs/UI_DESIGN_SPEC.md, "Icône").
+     Master drawing on a 108 x 108 grid. This full version (rounded square background, drawing scaled to 0.82)
+     is the one used for Windows (.ico), the window, the repository and the site. The Android adaptive icon
+     reuses the same paths scaled to 0.66, inside the 66 x 66 safe zone (src/androidApp/src/main/res). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <rect width="108" height="108" rx="24" fill="#3C3489"/>
+  <g transform="translate(54 54) scale(0.82) translate(-54 -54)">
+    <g fill="#EEEDFE">
+      <path d="M30 50 C14 44 8 32 10 22 C20 31 28 34 37 36 Z M30 61 C15 61 7 53 7 43 C17 50 26 51 35 50 Z"/>
+      <path d="M78 50 C94 44 100 32 98 22 C88 31 80 34 71 36 Z M78 61 C93 61 101 53 101 43 C91 50 82 51 73 50 Z"/>
+    </g>
+    <rect x="35" y="17" width="38" height="9" rx="3" fill="#E3A83A"/>
+    <rect x="35" y="82" width="38" height="9" rx="3" fill="#E3A83A"/>
+    <path d="M40 25 H68 C68 42 58 48 58 54 C58 60 68 66 68 83 H40 C40 66 50 60 50 54 C50 48 40 42 40 25 Z" fill="#FBFAF7"/>
+    <path d="M45 32 H63 C61 40 56 44 54 46 C52 44 47 40 45 32 Z M43 81 C44 72 50 68 54 66 C58 68 64 72 65 81 Z" fill="#E3A83A"/>
+  </g>
+</svg>

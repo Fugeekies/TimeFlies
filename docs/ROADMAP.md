@@ -92,13 +92,14 @@ Pour tester tous les cas sans attendre le bon jour.
 - [ ] Panneau de débogage : forcer tout de suite la mise à jour du widget.
 
 ### Jalon 12 — Nom et icône définitifs
-- [ ] Choisir le nom affiché sous l'icône et dans les menus (le dépôt reste `TimeFlies`).
-- [ ] Dessiner l'icône (Android adaptative, `.ico` Windows) et l'image d'aperçu du dépôt.
+- [x] Nom affiché sous l'icône et dans les menus : **TimeFlies**, comme le dépôt (décision du 15/11/2026).
+- [x] Icône « le sablier ailé » (choisie le 15/11/2026 parmi douze pistes) : dessin maître `assets/icon/timeflies-icon.svg`, icône adaptative Android avec sa couche monochrome (icônes à thème d'Android 13+), `.ico` Windows en 9 tailles pour l'installeur, fenêtre et barre des tâches PC ([`UI_DESIGN_SPEC.md`](UI_DESIGN_SPEC.md), « Icône »).
+- [ ] Image d'aperçu du dépôt GitHub (1280 × 640, à partir de `assets/icon/`) : à téléverser à la main dans les réglages du dépôt, GitHub n'ayant pas d'API pour ça.
 
 ### Jalon 13 — Releases (à la fin, décision du 14/11/2026)
 Seulement quand une bonne version tourne en débogage sur PC. La CI des tests est déjà en place (jalon « CI des tests et benchmarks »).
 - [ ] Clé de signature Android générée et stockée dans les secrets du dépôt ; une sauvegarde gardée hors du dépôt.
-- [ ] `release.yml` : sur un tag `vX.Y.Z`, APK signée et `.msi`, publiés dans la release ; vérifier WiX sur l'exécuteur Windows.
+- [ ] `release.yml` : sur un tag `vX.Y.Z`, APK signée et `.msi`, publiés dans la release ; vérifier WiX sur l'exécuteur Windows. L'icône de l'installeur, des raccourcis et de l'exécutable est déjà configurée (`windows.iconFile` = `assets/icon/timeflies.ico`) : vérifier qu'elle apparaît bien dans l'assistant d'installation et dans « Applications installées ».
 - [ ] README : section Installation (APK, `.msi`, avertissement « éditeur inconnu »).
 - [ ] Première version publiée, installée sur un téléphone et sur un PC.
 
@@ -162,7 +163,7 @@ La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [
 - Notification du matin sur Android quand un anniversaire rond tombe.
 - Partager un coup de vieux en image.
 - Ajouter ses propres événements (souvenirs personnels).
-- Page de présentation sur GitHub Pages, comme LMU-DeltaRacing.
+- Page de présentation sur GitHub Pages, comme LMU-DeltaRacing. Icône et favicon à reprendre d'`assets/icon/` (`timeflies-icon.svg` en favicon SVG, `timeflies-512.png`, `timeflies.ico`), image d'aperçu des réseaux sociaux comme celle du dépôt.
 - Vérification des nouvelles versions au démarrage (une seule requête vers GitHub, désactivable).
 
 ## Terminés

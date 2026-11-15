@@ -118,6 +118,25 @@ Les polices sont **embarquées** dans l'application (ressources Compose, licence
 * **Éphéméride (après la V1) :** `Big Shoulders Display` (gras, condensée), le style des chiffres d'éphéméride, pour le grand chiffre, les nombres d'années et les titres d'écran.
 * **Échelle (sp)** : grand chiffre 96 (téléphone) / 120 (PC) ; titre d'écran 28 ; titre d'événement 20 ; texte 16 ; libellé 13 (majuscules, espacement des lettres 0,06 em).
 
+### 6. Nom et icône (décision du 15/11/2026)
+
+<img src="../assets/icon/timeflies-512.png" alt="Icône TimeFlies : un sablier ailé" width="128">
+
+- **Nom** affiché sous l'icône, dans la fenêtre et dans l'installeur : **TimeFlies**.
+- **Icône : « le sablier ailé »**, choisie parmi douze pistes. Elle ne suit pas le style Polaroïd de l'interface : c'est un symbole, lisible en 16 px.
+  - Fond violet `#3C3489`, ailes lavande `#EEEDFE`, verre blanc cassé `#FBFAF7`, montures et sable ambre `#E3A83A`.
+  - **Source unique** : `assets/icon/timeflies-icon.svg` (grille 108 × 108). Les autres fichiers en sont tirés :
+
+  | Fichier | Usage |
+  |---|---|
+  | `assets/icon/timeflies-icon.svg` | Dessin maître (fond en carré arrondi, dessin à l'échelle 0,82) ; favicon du futur site |
+  | `assets/icon/timeflies.ico` | Windows : installeur `.msi`, raccourcis, exécutable (16, 20, 24, 32, 40, 48, 64, 128 et 256 px) |
+  | `assets/icon/timeflies-256.png` | Fenêtre et barre des tâches de l'app PC (copiée au build) |
+  | `assets/icon/timeflies-512.png` | README, documentation, site |
+  | `src/androidApp/src/main/res/` | Icône adaptative Android : fond de couleur, premier plan à l'échelle 0,66 dans la zone sûre, couche monochrome où le verre n'est qu'un contour |
+
+- Pour modifier l'icône : changer le SVG maître, reporter les tracés dans les deux vecteurs Android, puis régénérer les PNG et le `.ico` (rendu du SVG en 512 px, puis réduction ; méthode dans `assets/icon/README.md`).
+
 ---
 
 ## 🧭 Navigation
