@@ -56,7 +56,7 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
     "preLaunchTask": "TimeFlies PC : lancer en attente du débogueur" }
   ```
 
-  avec, dans `.vscode/tasks.json`, une tâche de fond `./gradlew :desktopApp:run --debug-jvm` (`isBackground`, fin détectée sur « Listening for transport ») et `JAVA_HOME` dans `options.env`.
+  avec, dans `.vscode/tasks.json`, une tâche de fond `./gradlew :desktopApp:run --debug-jvm -Dtimeflies.debug=true` (`isBackground`, fin détectée sur « Listening for transport ») et `JAVA_HOME` dans `options.env`. L'option `-Dtimeflies.debug=true` active le panneau de débogage : F5 ouvre ainsi l'application avec la destination « Débogage ».
 - Le débogage Android avec points d'arrêt et Compose Hot Reload passent par Android Studio.
 
 ### 2. Les règles métier : les tests
