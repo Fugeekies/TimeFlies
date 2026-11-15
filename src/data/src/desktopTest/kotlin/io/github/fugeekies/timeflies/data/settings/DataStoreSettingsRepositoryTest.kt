@@ -55,11 +55,12 @@ class DataStoreSettingsRepositoryTest {
 
     @Test
     fun keepsTheSettingsAfterARestart() = runBlocking {
-        open().update { it.copy(birth = YearMonth(1991, Month.MAY), youngAge = 20) }
+        open().update { it.copy(birth = YearMonth(1991, Month.MAY), youngAge = 20, onboardingDone = true) }
         assertTrue(FileSystem.SYSTEM.exists(file), "the parent folder is created")
         val reread = open().settings.first()
         assertEquals(YearMonth(1991, Month.MAY), reread.birth)
         assertEquals(20, reread.youngAge)
+        assertTrue(reread.onboardingDone)
     }
 
     @Test

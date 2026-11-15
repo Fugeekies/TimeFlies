@@ -55,8 +55,9 @@ Les réglages enregistrés, et l'âge de l'utilisateur sur Aujourd'hui.
 - [ ] Vérifier l'écran Réglages à l'œil sur PC et sur Android.
 
 ### Jalon 5 — Premier lancement
-- [ ] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)).
-- [ ] Mode réduit sans mois et année de naissance.
+- [x] Écran de premier lancement, avec « Plus tard » ([`Onboarding.template.md`](UISpec/Onboarding.template.md)) : mois et année de naissance, âge du jeune, résumé en direct, « C'est parti » désactivé tant que le mois ou l'année manque ou que le jeune n'a pas 5 ans de moins, colonne de 480 dp sur une fenêtre large. `domain` : champ `onboardingDone` des réglages, cas d'usage `CompleteOnboarding` (une seule écriture), tests.
+- [x] Mode réduit sans mois et année de naissance : Aujourd'hui sans « Tu avais N ans » (jalon 4), Équivalences et Mon équivalent affichent le message et le bouton « Ouvrir les réglages ».
+- [ ] Vérifier l'écran de premier lancement à l'œil sur PC et sur Android.
 
 ### Jalon 6 — Panneau de débogage
 Pour tester tous les cas sans attendre le bon jour.

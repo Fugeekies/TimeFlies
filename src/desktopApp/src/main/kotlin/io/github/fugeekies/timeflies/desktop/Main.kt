@@ -21,6 +21,7 @@ fun main() {
                 getDailyShock = graph.getDailyShock,
                 observeSettings = graph.observeSettings,
                 updateSettings = graph.updateSettings,
+                completeOnboarding = graph.completeOnboarding,
                 countEvents = graph.countEvents,
                 clock = graph.clock,
             )

@@ -19,12 +19,14 @@ internal data class SettingsDto(
     val birthMonth: Int? = null,
     val youngAge: Int = Generations.DEFAULT_YOUNG_AGE,
     val region: String = Region.FRANCE.code,
+    val onboardingDone: Boolean = false,
 ) {
     /** The domain settings; values edited by hand outside their range fall back to safe ones. */
     fun toDomain(): Settings = Settings(
         birth = if (birthYear != null && birthMonth in 1..12) YearMonth(birthYear, Month(birthMonth!!)) else null,
         youngAge = youngAge.coerceIn(Generations.MIN_YOUNG_AGE, Generations.MAX_YOUNG_AGE),
         region = Region.of(region) ?: Region.FRANCE,
+        onboardingDone = onboardingDone,
     )
 
     companion object {
@@ -35,6 +37,7 @@ internal data class SettingsDto(
             birthMonth = settings.birth?.month?.number,
             youngAge = settings.youngAge,
             region = settings.region.code,
+            onboardingDone = settings.onboardingDone,
         )
     }
 }
