@@ -22,7 +22,8 @@ Le principe de l'épisode : pour une autre personne de l'âge choisi, quels év�
   * Ces âges ne sont **pas enregistrés** : Mon équivalent utilise les mêmes, mais tout revient aux réglages à la fermeture de l'application.
   * Tant que des âges à la volée sont actifs, le bandeau porte la mention « Âges temporaires » et un bouton **« Revenir à mes réglages »**.
   * Un âge donné à la volée correspond à une naissance « aujourd'hui moins cet âge », au jour près, comme pour l'autre personne (voir `Settings.template.md`, « Calcul des âges et de l'écart »).
-  * Ils marchent aussi sans mois et année de naissance enregistrés : c'est alors le seul moyen de voir des équivalences.
+  * Ils marchent aussi sans mois et année de naissance enregistrés : c'est alors le seul moyen de voir des équivalences. « Choisir des âges » part alors de 35 ans pour l'utilisateur (l'âge de l'exemple des maquettes) et de l'âge enregistré de l'autre personne.
+* Au jalon 7, chaque curseur (« Modifier » ou âge à la volée) s'ouvre dans une fenêtre avec la silhouette et l'âge en grand ; la valeur s'applique sur « OK ».
 
 #### Sens de lecture (décision du 13/11/2026)
 * Bouton **« Inverser »** (⇄) à côté du bandeau :

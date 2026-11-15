@@ -32,10 +32,13 @@ import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
+import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.debug.DebugScreen
 import io.github.fugeekies.timeflies.ui.debug.DebugViewModel
+import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesScreen
+import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesViewModel
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingScreen
 import io.github.fugeekies.timeflies.ui.onboarding.OnboardingViewModel
 import io.github.fugeekies.timeflies.ui.resources.Res
@@ -78,6 +81,7 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
 @Composable
 fun App(
     getDailyShock: GetDailyShock,
+    getEquivalences: GetEquivalences,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
     completeOnboarding: CompleteOnboarding,
@@ -98,7 +102,7 @@ fun App(
                     OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
                 }
             } else {
-                MainScreens(current, getDailyShock, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
+                MainScreens(current, getDailyShock, getEquivalences, observeSettings, updateSettings, countEvents, clock, appVersion, debugTools)
             }
         }
     }
@@ -108,6 +112,7 @@ fun App(
 private fun MainScreens(
     settings: Settings,
     getDailyShock: GetDailyShock,
+    getEquivalences: GetEquivalences,
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
     countEvents: CountEvents,
@@ -137,8 +142,14 @@ private fun MainScreens(
                 appVersion,
                 content,
             )
+            // Its reduced mode (without birth) also offers ages picked on the fly.
+            Destination.EQUIVALENCES -> EquivalencesScreen(
+                viewModel { EquivalencesViewModel(getEquivalences, observeSettings, updateSettings, clock) },
+                onOpenSettings = { current = Destination.SETTINGS },
+                content,
+            )
             // Reduced mode (docs/UISpec/Onboarding.template.md): without birth, no equivalences.
-            Destination.EQUIVALENCES, Destination.MY_EQUIVALENT ->
+            Destination.MY_EQUIVALENT ->
                 if (settings.birth == null) ReducedMode(onOpenSettings = { current = Destination.SETTINGS }, content) else ComingSoon(content)
             Destination.DEBUG -> debugTools?.let { tools ->
                 DebugScreen(viewModel { DebugViewModel(tools, observeSettings, clock) }, content)

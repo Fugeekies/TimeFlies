@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
 import io.github.fugeekies.timeflies.domain.rules.Generations
@@ -11,8 +12,8 @@ class UpdateSettings(
     private val clock: Clock,
 ) {
     /**
-     * Saves the user's birth month and year. A young age that is no longer 5 years younger is kept
-     * (decision of 15/11/2026): the Equivalences screen shows the message.
+     * Saves the user's birth month and year. The other person's age is kept even if the gap becomes small:
+     * the Equivalences screen warns (decision of 15/11/2026).
      *
      * @throws IllegalArgumentException if the year is outside 1920 to the current year minus 5.
      */
@@ -27,17 +28,24 @@ class UpdateSettings(
     }
 
     /**
-     * Saves the young person's age if it is allowed ([Generations.isYoungAgeAllowed]).
+     * Saves the other person's age if it is allowed ([Generations.isOtherAgeAllowed]): from 1 to 100, younger or
+     * older than the user. A small gap is allowed too, the screen warns (decision of 15/11/2026).
      *
      * @return true when saved, false when rejected (the stored value does not change).
      */
-    suspend fun setYoungAge(age: Int): Boolean {
-        val today = clock.today()
-        var saved = false
-        settings.update { current ->
-            saved = Generations.isYoungAgeAllowed(age, current.birth, today)
-            if (saved) current.copy(youngAge = age) else current
-        }
-        return saved
+    suspend fun setOtherAge(age: Int): Boolean {
+        if (!Generations.isOtherAgeAllowed(age)) return false
+        settings.update { it.copy(otherAge = age) }
+        return true
+    }
+
+    /** Saves the reading direction of the Equivalences screen (true: the user on the left). */
+    suspend fun setEquivalencesReversed(reversed: Boolean) {
+        settings.update { it.copy(equivalencesReversed = reversed) }
+    }
+
+    /** Saves the themes ticked on the Equivalences screen. */
+    suspend fun setEquivalenceFamilies(families: Set<Family>) {
+        settings.update { it.copy(equivalenceFamilies = families) }
     }
 }

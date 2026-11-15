@@ -24,6 +24,7 @@ fun main() {
             window.minimumSize = Dimension(420, 640)
             App(
                 getDailyShock = graph.getDailyShock,
+                getEquivalences = graph.getEquivalences,
                 observeSettings = graph.observeSettings,
                 updateSettings = graph.updateSettings,
                 completeOnboarding = graph.completeOnboarding,

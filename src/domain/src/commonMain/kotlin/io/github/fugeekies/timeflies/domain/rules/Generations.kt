@@ -5,14 +5,20 @@ import kotlinx.datetime.LocalDate
 import kotlinx.datetime.YearMonth
 import kotlinx.datetime.minus
 
-/** Birth dates, ages and age gap of the user and of the young person (docs/UISpec/Settings.template.md, decision of 13/11/2026). */
+/**
+ * Birth dates, ages and age gap of the user and of the other person they compare themselves with
+ * (docs/UISpec/Settings.template.md). The other person can be younger or older (decision of 15/11/2026).
+ */
 object Generations {
-    const val MIN_YOUNG_AGE = 5
-    const val MAX_YOUNG_AGE = 60
-    const val DEFAULT_YOUNG_AGE = 15
+    const val MIN_OTHER_AGE = 1
+    const val MAX_OTHER_AGE = 100
+    const val DEFAULT_OTHER_AGE = 15
 
-    /** The young person must be at least this many years younger than the user. */
-    const val MIN_GAP = 5
+    /** Range of the ages picked on the fly on the Equivalences screen, for both people. */
+    val AGE_RANGE: IntRange = MIN_OTHER_AGE..MAX_OTHER_AGE
+
+    /** Below this gap, in either direction, the equivalences may not be meaningful: the screen warns (not forbidden). */
+    const val SMALL_GAP = 5
 
     const val FIRST_BIRTH_YEAR = 1920
 
@@ -25,20 +31,19 @@ object Generations {
     /** The user's birth date: the 1st day of the chosen month. */
     fun userBirth(birth: YearMonth): LocalDate = LocalDate(birth.year, birth.month, 1)
 
-    /** The young person's birth date: today minus their age, to the day. */
-    fun youngBirth(today: LocalDate, youngAge: Int): LocalDate = today.minus(youngAge, DateTimeUnit.YEAR)
+    /** Birth date of someone given by their age only (the other person, or an age picked on the fly): today minus that age, to the day. */
+    fun birthFromAge(today: LocalDate, age: Int): LocalDate = today.minus(age, DateTimeUnit.YEAR)
 
     /** The user's age on [today], in completed years. */
     fun userAge(birth: YearMonth, today: LocalDate): Int = Ages.age(userBirth(birth), today)
 
-    /** Gap between the two birth dates, in completed years ("20 ans d'écart"). */
-    fun gap(birth: YearMonth, youngAge: Int, today: LocalDate): Int =
-        Ages.age(userBirth(birth), youngBirth(today, youngAge))
+    /** Gap between two birth dates in completed years, whichever is older ("20 ans d'écart"). */
+    fun gap(birthA: LocalDate, birthB: LocalDate): Int =
+        if (birthA <= birthB) Ages.age(birthA, birthB) else Ages.age(birthB, birthA)
 
-    /**
-     * Whether [youngAge] can be saved: between 5 and 60, and at least 5 years younger than the user
-     * when their birth is known.
-     */
-    fun isYoungAgeAllowed(youngAge: Int, birth: YearMonth?, today: LocalDate): Boolean =
-        youngAge in MIN_YOUNG_AGE..MAX_YOUNG_AGE && (birth == null || gap(birth, youngAge, today) >= MIN_GAP)
+    /** Whether the gap between the two births is small enough for the screen to warn (decision of 15/11/2026). */
+    fun isSmallGap(birthA: LocalDate, birthB: LocalDate): Boolean = gap(birthA, birthB) < SMALL_GAP
+
+    /** Whether [age] can be saved as the other person's age: from 1 to 100, younger or older than the user. */
+    fun isOtherAgeAllowed(age: Int): Boolean = age in AGE_RANGE
 }

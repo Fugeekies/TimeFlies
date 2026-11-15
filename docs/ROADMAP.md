@@ -67,8 +67,12 @@ Pour tester tous les cas sans attendre le bon jour.
 
 ### Jalon 7 — Équivalences
 - [x] Décision du 15/11/2026 : l'autre personne peut être plus jeune ou plus âgée (1 à 100 ans), un écart de moins de 5 ans est permis avec un avertissement, et aucune des deux personnes n'a de nom à l'écran : un pictogramme de personne de couleur devant chaque âge.
-- [ ] `domain` : `Generations` dans les deux sens (l'âge de l'autre personne n'est plus limité à 5 ans de moins, `youngAge` renommé), `Equivalences` (même type, ±2 ans, date cible `E.date + (n_B − n_A)`), cas d'usage `GetEquivalences`, tests.
-- [ ] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : pictogrammes de couleur, thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge de l'autre personne, seul endroit où il se règle (ni Réglages ni premier lancement, décision du 15/11/2026), avertissement sous 5 ans d'écart.
+- [x] `domain` : `Generations` dans les deux sens (âge de l'autre personne de 1 à 100 ans, `youngAge` renommé `otherAge`), règles `Equivalences` (même type, ±2 ans, date cible `E.date + (n_B − n_A)` au jour près, plus proche puis plus importante, jamais avec lui-même, événements d'un an au moins, date cible future écartée), entité `Equivalence`, cas d'usage `GetEquivalences`, réglages du sens et des thèmes, tests.
+- [x] `data` : `settings.json` en version 2 (`otherAge`, `equivalencesReversed`, `equivalenceFamilies`), lecture d'un fichier de version 1 par `youngAge`, tests.
+- [x] Écran Équivalences ([`Equivalences.template.md`](UISpec/Equivalences.template.md)) : silhouettes de couleur, thèmes à cocher, bouton Inverser, âges à la volée, bouton « Modifier » pour l'âge de l'autre personne, seul endroit où il se règle (ni Réglages ni premier lancement, décision du 15/11/2026), avertissement sous 5 ans d'écart, « Choisir des âges » en mode réduit, deux colonnes au-delà de 840 dp, noms des types en clair.
+- [x] Benchmark de la page Équivalences ([`benchmarks/performance-2026-11-15.md`](benchmarks/performance-2026-11-15.md) : environ 7 ms pour 5 000 événements).
+- [ ] Vérifier l'écran à l'œil sur PC et sur Android (couleurs des deux silhouettes, curseurs).
+- [ ] Reporté au jalon 8 : toucher une carte ouvre Mon équivalent, et les âges à la volée partagés avec Mon équivalent.
 
 ### Jalon 8 — Mon équivalent
 - [ ] Cas d'usage `FindEquivalent` (deux sens, autres candidats), recherche dans les titres.

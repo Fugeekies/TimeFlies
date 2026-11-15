@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.data.settings
 
+import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -55,11 +56,13 @@ class DataStoreSettingsRepositoryTest {
 
     @Test
     fun keepsTheSettingsAfterARestart() = runBlocking {
-        open().update { it.copy(birth = YearMonth(1991, Month.MAY), youngAge = 20, onboardingDone = true) }
+        open().update { it.copy(birth = YearMonth(1991, Month.MAY), otherAge = 66, onboardingDone = true, equivalencesReversed = true, equivalenceFamilies = setOf(Family.MUSIC)) }
         assertTrue(FileSystem.SYSTEM.exists(file), "the parent folder is created")
         val reread = open().settings.first()
         assertEquals(YearMonth(1991, Month.MAY), reread.birth)
-        assertEquals(20, reread.youngAge)
+        assertEquals(66, reread.otherAge)
+        assertTrue(reread.equivalencesReversed)
+        assertEquals(setOf(Family.MUSIC), reread.equivalenceFamilies)
         assertTrue(reread.onboardingDone)
     }
 
@@ -69,7 +72,8 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 1" in text, text)
+        assertTrue("\"version\": 2" in text, text)
+        assertTrue("youngAge" !in text, "the version 1 field is no longer written")
     }
 
     @Test
@@ -86,7 +90,8 @@ class DataStoreSettingsRepositoryTest {
         FileSystem.SYSTEM.write(file) { writeUtf8("""{"birthYear": 1980, "birthMonth": 13, "youngAge": 99, "region": "france", "future": true}""") }
         val settings = open().settings.first()
         assertNull(settings.birth)
-        assertEquals(60, settings.youngAge)
+        assertEquals(99, settings.otherAge)
+        assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
     }
 }

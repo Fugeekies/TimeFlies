@@ -11,6 +11,9 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Écran Équivalences : les paires d'événements de même type qui ont la même place dans la vie des deux personnes (à 2 ans près), de la plus récente à la plus ancienne, sur deux colonnes au-delà de 840 dp. Les deux personnes n'ont pas de nom : une silhouette de couleur devant chaque âge. Bouton « Modifier » (âge de l'autre personne, enregistré), bouton Inverser et thèmes à cocher (mémorisés), âges à la volée non enregistrés avec « Revenir à mes réglages », « Choisir des âges » sans mois et année de naissance, avertissement sous 5 ans d'écart.
+- Benchmarks : calcul de la page Équivalences (autre personne plus jeune ou plus âgée), environ 7 ms pour 5 000 événements.
+
 - Panneau de débogage, dans les versions de débogage seulement (Android de débogage, `-Dtimeflies.debug=true` sur PC) : fausse date du jour, réglages forcés (naissance, région, revoir le premier lancement, valeurs par défaut), statistiques de la base.
 - Logs Kermit : Logcat sur Android, console et un fichier par jour dans `%APPDATA%\TimeFlies\logs` sur PC, sans donnée personnelle ; les plantages y sont écrits.
 
@@ -37,3 +40,4 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 ### Changed
 
 - `domain` dépend aussi de `kotlinx-coroutines-core`, pour le `Flow` des réglages (`docs/ARCHITECTURE.md`).
+- L'autre personne des équivalences peut être plus jeune ou plus âgée que l'utilisateur (1 à 100 ans) ; un écart de moins de 5 ans n'est plus refusé. `settings.json` passe en version 2 : `youngAge` devient `otherAge` (un ancien fichier se lit toujours), avec le sens et les thèmes de l'écran Équivalences.

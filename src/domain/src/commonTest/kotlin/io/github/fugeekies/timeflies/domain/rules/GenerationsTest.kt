@@ -28,19 +28,27 @@ class GenerationsTest {
     }
 
     @Test
-    fun placesTheYoungBirthTodayMinusTheirAge() {
-        assertEquals(LocalDate(2011, 11, 15), Generations.youngBirth(today, 15))
-        assertEquals(20, Generations.gap(may1991, 15, today))
+    fun placesTheOtherBirthTodayMinusTheirAge() {
+        assertEquals(LocalDate(2011, 11, 15), Generations.birthFromAge(today, 15))
+        val user = Generations.userBirth(may1991)
+        assertEquals(20, Generations.gap(user, Generations.birthFromAge(today, 15)))
+        // Older than the user: the gap is told the same way.
+        assertEquals(30, Generations.gap(user, Generations.birthFromAge(today, 66)))
+        assertEquals(30, Generations.gap(Generations.birthFromAge(today, 66), user))
     }
 
     @Test
-    fun keepsTheYoungAtLeastFiveYearsYounger() {
-        assertTrue(Generations.isYoungAgeAllowed(30, may1991, today))
-        assertFalse(Generations.isYoungAgeAllowed(31, may1991, today))
-        // Without a birth, only the slider range applies.
-        assertTrue(Generations.isYoungAgeAllowed(60, null, today))
-        assertFalse(Generations.isYoungAgeAllowed(4, null, today))
-        assertFalse(Generations.isYoungAgeAllowed(61, null, today))
+    fun allowsAnOtherPersonYoungerOrOlderWithAWarningUnderFiveYears() {
+        // Decision of 15/11/2026: from 1 to 100, whatever the user's age.
+        assertTrue(Generations.isOtherAgeAllowed(1))
+        assertTrue(Generations.isOtherAgeAllowed(100))
+        assertFalse(Generations.isOtherAgeAllowed(0))
+        assertFalse(Generations.isOtherAgeAllowed(101))
+        val user = Generations.userBirth(may1991)
+        assertTrue(Generations.isSmallGap(user, Generations.birthFromAge(today, 32)))
+        assertTrue(Generations.isSmallGap(user, Generations.birthFromAge(today, 38)))
+        assertFalse(Generations.isSmallGap(user, Generations.birthFromAge(today, 30)))
+        assertFalse(Generations.isSmallGap(user, Generations.birthFromAge(today, 41)))
     }
 
     @Test
