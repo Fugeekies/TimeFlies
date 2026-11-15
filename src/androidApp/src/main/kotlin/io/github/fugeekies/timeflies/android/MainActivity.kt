@@ -14,6 +14,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             App(
                 getDailyShock = graph.getDailyShock,
+                getEquivalences = graph.getEquivalences,
                 observeSettings = graph.observeSettings,
                 updateSettings = graph.updateSettings,
                 completeOnboarding = graph.completeOnboarding,

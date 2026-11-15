@@ -11,6 +11,7 @@ import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
+import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.readResourceFile
@@ -44,6 +45,7 @@ class AppGraph(filesDir: File, debug: Boolean) {
     )
 
     val getDailyShock = GetDailyShock(events, clock)
+    val getEquivalences = GetEquivalences(events, clock)
     val observeSettings = ObserveSettings(settings)
     val updateSettings = UpdateSettings(settings, clock)
     val completeOnboarding = CompleteOnboarding(settings, clock)

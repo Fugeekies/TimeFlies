@@ -6,10 +6,14 @@ import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.MonthDay
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
+import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
+import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
 import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.Month
+import kotlinx.datetime.YearMonth
 import kotlinx.datetime.minus
 import kotlinx.datetime.plus
 import java.io.File
@@ -108,6 +112,18 @@ class PerformanceBenchmarks {
                     day = day.plus(1, DateTimeUnit.DAY)
                 }
             }
+        }
+        // Equivalences: the user born in May 1991, the other person 15 (younger) or 66 (older), all themes.
+        val getEquivalences = GetEquivalences(loaded, clock)
+        val user = Generations.userBirth(YearMonth(1991, Month.MAY))
+        val child = Generations.birthFromAge(today, 15)
+        val parent = Generations.birthFromAge(today, 66)
+        val allFamilies = Family.entries.toSet()
+        rows += measure("Page Équivalences, autre personne plus jeune (GetEquivalences)", iterations = 100) {
+            runBlocking { getEquivalences(child, user, allFamilies, region) }
+        }
+        rows += measure("Page Équivalences, autre personne plus âgée (GetEquivalences)", iterations = 100) {
+            runBlocking { getEquivalences(user, parent, allFamilies, region) }
         }
         rows
     }

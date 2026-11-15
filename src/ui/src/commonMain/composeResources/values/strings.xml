@@ -74,6 +74,44 @@
     <string name="reduced_mode_message">Indique ton mois et ton année de naissance pour voir tes équivalences.</string>
     <string name="open_settings">Ouvrir les réglages</string>
 
+    <!-- Equivalences (docs/UISpec/Equivalences.template.md). No name for the two people on screen, a coloured
+         person pictogram instead (decision of 15/11/2026); the names below are for screen readers only. -->
+    <string name="equivalences_title">Équivalences</string>
+    <string name="person_user">Toi</string>
+    <string name="person_other">L'autre personne</string>
+    <plurals name="equivalences_gap">
+        <item quantity="one">%1$d an d'écart</item>
+        <item quantity="other">%1$d ans d'écart</item>
+    </plurals>
+    <string name="equivalences_gap_none">Moins d'un an d'écart</string>
+    <string name="equivalences_edit">Modifier</string>
+    <string name="equivalences_reverse">Inverser les colonnes</string>
+    <string name="equivalences_themes">Thèmes</string>
+    <plurals name="equivalences_themes_summary">
+        <item quantity="one">%1$d thème sur %2$d</item>
+        <item quantity="other">%1$d thèmes sur %2$d</item>
+    </plurals>
+    <string name="equivalences_check_all">Tout cocher</string>
+    <string name="equivalences_uncheck_all">Tout décocher</string>
+    <string name="equivalences_temporary">Âges temporaires</string>
+    <string name="equivalences_back_to_settings">Revenir à mes réglages</string>
+    <string name="equivalences_choose_ages">Choisir des âges</string>
+    <string name="equivalences_empty">Aucune équivalence pour ces thèmes. Coche d'autres thèmes ou essaie un autre âge.</string>
+    <string name="equivalences_small_gap">Attention : avec un écart aussi petit, les équivalences ne sont pas forcément représentatives.</string>
+    <string name="equivalences_age_saved">Âge enregistré</string>
+    <string name="equivalences_age_temporary">Âge temporaire, pas enregistré</string>
+    <string name="equivalences_a11y_person_age">%1$s, %2$s</string>
+    <string name="equivalences_a11y_side">%1$s : %2$s, %3$s, %4$s.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <!-- Age of a person on the date of an event, after their pictogram. -->
+    <string name="person_age_under_one">moins d'un an</string>
+    <string name="person_age_birth_year">l'année de sa naissance</string>
+    <plurals name="person_age_before_birth">
+        <item quantity="one">%1$d an avant sa naissance</item>
+        <item quantity="other">%1$d ans avant sa naissance</item>
+    </plurals>
+
     <!-- Debug panel, debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage") -->
     <string name="nav_debug">Débogage</string>
     <string name="debug_title">Débogage</string>
@@ -152,6 +190,40 @@
     <string name="family_sport">Sport</string>
     <string name="family_games_tech">Jeux vidéo &amp; tech</string>
     <string name="family_history">Politique &amp; histoire</string>
+
+    <!-- Types, shown at the top of an equivalence card (docs/EVENTS_DATA.md, "Types") -->
+    <string name="type_sitcom_hit">Sitcom culte</string>
+    <string name="type_drama_series_hit">Série dramatique culte</string>
+    <string name="type_french_series_hit">Série française culte</string>
+    <string name="type_reality_tv">Téléréalité</string>
+    <string name="type_kids_tv_show">Émission jeunesse</string>
+    <string name="type_cartoon_on_tv">Dessin animé culte à la télé</string>
+    <string name="type_blockbuster">Blockbuster</string>
+    <string name="type_animated_feature">Film d'animation familial</string>
+    <string name="type_french_comedy_hit">Comédie française à succès</string>
+    <string name="type_saga_episode">Épisode d'une saga culte</string>
+    <string name="type_music_icon_death">Mort d'une icône de la musique</string>
+    <string name="type_diva_hit">Tube d'une diva</string>
+    <string name="type_boy_band_hit">Tube d'un boys band</string>
+    <string name="type_rap_album_hit">Album de rap culte</string>
+    <string name="type_summer_hit">Tube de l'été</string>
+    <string name="type_pop_album_hit">Album pop culte</string>
+    <string name="type_football_star_peak">Sommet d'une star du foot</string>
+    <string name="type_world_cup_win_france">Victoire des Bleus en Coupe du monde</string>
+    <string name="type_olympics_in_france">Jeux olympiques en France</string>
+    <string name="type_sports_record">Record sportif</string>
+    <string name="type_nintendo_console">Console Nintendo</string>
+    <string name="type_playstation_console">Console PlayStation</string>
+    <string name="type_handheld_console">Console portable</string>
+    <string name="type_video_game_phenomenon">Jeu vidéo phénomène</string>
+    <string name="type_phone_launch">Lancement d'un téléphone</string>
+    <string name="type_social_network_launch">Lancement d'un réseau social</string>
+    <string name="type_music_format">Format de musique</string>
+    <string name="type_french_president_elected">Élection présidentielle française</string>
+    <string name="type_us_president_elected">Élection présidentielle américaine</string>
+    <string name="type_actor_turned_politician">Acteur devenu politicien</string>
+    <string name="type_world_event">Grand événement mondial</string>
+    <string name="type_royal_event">Événement royal</string>
 
     <!-- Dates -->
     <string name="first_of_month">1er</string>

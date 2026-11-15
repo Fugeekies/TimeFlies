@@ -2,6 +2,8 @@
 
 > Spécification de conception (13/11/2026), avant le code. Règles d'appariement dans [`EVENTS_DATA.md`](../EVENTS_DATA.md) ; les points marqués **À valider** ne sont pas tranchés.
 
+> Décision du 15/11/2026 : l'autre personne peut être plus jeune ou plus âgée, et l'écran ne nomme plus personne (ni « jeune » ni « vieux ») : un pictogramme de personne de couleur devant chaque âge, comme dans [`Equivalences.template.md`](Equivalences.template.md). Les libellés ci-dessous seront revus au jalon 8.
+
 ### Description
 L'utilisateur choisit un événement et voit son équivalent pour l'autre génération, **dans les deux sens** : « c'était quoi pour moi ? » et « c'est quoi pour le jeune ? ».
 

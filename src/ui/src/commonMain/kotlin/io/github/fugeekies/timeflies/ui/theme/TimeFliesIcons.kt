@@ -48,6 +48,17 @@ object TimeFliesIcons {
         moveTo(13.2f, 10.8f); lineTo(4.5f, 19.5f)
     }
 
+    /**
+     * A filled silhouette (head and shoulders): stands for a person on the Equivalences screen, tinted with their
+     * colour instead of a name (decision of 15/11/2026).
+     */
+    val Person: ImageVector = ImageVector.Builder(name = "Person", defaultWidth = 24.dp, defaultHeight = 24.dp, viewportWidth = 24f, viewportHeight = 24f)
+        .path(fill = SolidColor(Color.Black)) {
+            moveTo(16f, 7.5f); arcTo(4f, 4f, 0f, true, true, 8f, 7.5f); arcTo(4f, 4f, 0f, true, true, 16f, 7.5f); close()
+            moveTo(3.5f, 21f); curveTo(3.5f, 16.6f, 7.3f, 13.5f, 12f, 13.5f); curveTo(16.7f, 13.5f, 20.5f, 16.6f, 20.5f, 21f); close()
+        }
+        .build()
+
     private fun strokeIcon(name: String, block: PathBuilder.() -> Unit): ImageVector =
         ImageVector.Builder(name = name, defaultWidth = 24.dp, defaultHeight = 24.dp, viewportWidth = 24f, viewportHeight = 24f)
             .path(

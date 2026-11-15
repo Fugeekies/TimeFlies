@@ -30,6 +30,9 @@ data class StyleTokens(
     val handwriting: FontFamily,
     val familyColors: Map<Family, Color>,
     val photoFade: Color,
+    /** Pictogram colours of the two people of the Equivalences screen, instead of names (decision of 15/11/2026). */
+    val userColor: Color,
+    val otherColor: Color,
 )
 
 val LocalStyle = staticCompositionLocalOf<StyleTokens> { error("TimeFliesTheme is missing") }
@@ -43,6 +46,10 @@ private val FamilyColors = mapOf(
     Family.GAMES_TECH to Color(0xFF2E8BFF),
     Family.HISTORY to Color(0xFF8A7F72),
 )
+
+/** The two people of the Equivalences screen: rust for the user, teal for the other person, apart from the family colours. */
+private val UserColor = Color(0xFFB4501E)
+private val OtherColor = Color(0xFF0E7C7B)
 
 // Polaroïd, light (docs/UI_DESIGN_SPEC.md, § 2). The dark version comes with milestone 9.
 private val PolaroidLight = lightColorScheme(
@@ -87,7 +94,7 @@ fun TimeFliesTheme(content: @Composable () -> Unit) {
         labelMedium = base.labelMedium.copy(fontFamily = atkinson),
         labelSmall = TextStyle(fontFamily = atkinson, fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 0.8.sp),
     )
-    val tokens = StyleTokens(handwriting = caveat, familyColors = FamilyColors, photoFade = Color(0xFFFBFAF7))
+    val tokens = StyleTokens(handwriting = caveat, familyColors = FamilyColors, photoFade = Color(0xFFFBFAF7), userColor = UserColor, otherColor = OtherColor)
     CompositionLocalProvider(LocalStyle provides tokens) {
         MaterialTheme(colorScheme = PolaroidLight, typography = typography, content = content)
     }

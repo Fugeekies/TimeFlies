@@ -1,6 +1,6 @@
 # Rapport de performance TimeFlies
 
-- Date : 2026-11-15T10:44:02.2400699+01:00
+- Date : 2026-11-15T21:20:57.4419424+01:00
 - JVM : OpenJDK 64-Bit Server VM 21.0.8, 8 processeurs, Windows 10
 - Durées en millisecondes : médiane, 95e centile et minimum, après 5 exécutions de chauffe.
 - Les jeux synthétiques sont inventés (benchmarks seulement) pour voir comment le chargement évolue vers le seuil des 5 000 événements.
@@ -11,12 +11,14 @@
 
 | Mesure | Médiane | P95 | Min |
 |---|---:|---:|---:|
-| Chargement complet (lecture, validation, index) | 6.790 | 12.222 | 3.102 |
-| Requête par jour × 366 (anniversaires) | 0.502 | 1.923 | 0.305 |
-| Requête par type à ±2 ans × 100 (équivalences) | 0.380 | 0.581 | 0.158 |
-| Recherche dans les titres × 20 (Mon équivalent) | 1.447 | 2.284 | 0.356 |
-| Page Aujourd'hui (GetDailyShock) | 0.175 | 0.603 | 0.095 |
-| Page Aujourd'hui pour chaque jour d'une année × 365 | 8.808 | 10.301 | 7.838 |
+| Chargement complet (lecture, validation, index) | 4.234 | 7.259 | 2.309 |
+| Requête par jour × 366 (anniversaires) | 0.464 | 0.819 | 0.278 |
+| Requête par type à ±2 ans × 100 (équivalences) | 0.233 | 0.572 | 0.170 |
+| Recherche dans les titres × 20 (Mon équivalent) | 1.438 | 2.026 | 0.366 |
+| Page Aujourd'hui (GetDailyShock) | 0.159 | 0.229 | 0.086 |
+| Page Aujourd'hui pour chaque jour d'une année × 365 | 8.843 | 9.869 | 6.852 |
+| Page Équivalences, autre personne plus jeune (GetEquivalences) | 0.582 | 1.058 | 0.347 |
+| Page Équivalences, autre personne plus âgée (GetEquivalences) | 0.264 | 0.452 | 0.209 |
 
 ## Synthétique, 500 événements
 
@@ -24,12 +26,14 @@
 
 | Mesure | Médiane | P95 | Min |
 |---|---:|---:|---:|
-| Chargement complet (lecture, validation, index) | 8.351 | 14.206 | 5.612 |
-| Requête par jour × 366 (anniversaires) | 0.201 | 0.214 | 0.190 |
-| Requête par type à ±2 ans × 100 (équivalences) | 0.161 | 0.261 | 0.151 |
-| Recherche dans les titres × 20 (Mon équivalent) | 2.059 | 2.294 | 1.902 |
-| Page Aujourd'hui (GetDailyShock) | 0.055 | 0.098 | 0.050 |
-| Page Aujourd'hui pour chaque jour d'une année × 365 | 7.477 | 8.872 | 6.451 |
+| Chargement complet (lecture, validation, index) | 7.806 | 11.037 | 4.659 |
+| Requête par jour × 366 (anniversaires) | 0.264 | 0.397 | 0.169 |
+| Requête par type à ±2 ans × 100 (équivalences) | 0.200 | 0.239 | 0.140 |
+| Recherche dans les titres × 20 (Mon équivalent) | 2.691 | 4.199 | 2.511 |
+| Page Aujourd'hui (GetDailyShock) | 0.045 | 0.093 | 0.038 |
+| Page Aujourd'hui pour chaque jour d'une année × 365 | 7.697 | 8.750 | 5.144 |
+| Page Équivalences, autre personne plus jeune (GetEquivalences) | 0.870 | 1.678 | 0.634 |
+| Page Équivalences, autre personne plus âgée (GetEquivalences) | 0.414 | 0.782 | 0.327 |
 
 ## Synthétique, 1000 événements
 
@@ -37,12 +41,14 @@
 
 | Mesure | Médiane | P95 | Min |
 |---|---:|---:|---:|
-| Chargement complet (lecture, validation, index) | 8.159 | 10.551 | 6.248 |
-| Requête par jour × 366 (anniversaires) | 0.190 | 0.278 | 0.115 |
-| Requête par type à ±2 ans × 100 (équivalences) | 0.123 | 0.133 | 0.120 |
-| Recherche dans les titres × 20 (Mon équivalent) | 5.293 | 7.105 | 4.275 |
-| Page Aujourd'hui (GetDailyShock) | 0.030 | 0.043 | 0.027 |
-| Page Aujourd'hui pour chaque jour d'une année × 365 | 3.310 | 6.503 | 2.774 |
+| Chargement complet (lecture, validation, index) | 6.090 | 7.840 | 4.643 |
+| Requête par jour × 366 (anniversaires) | 0.112 | 0.213 | 0.105 |
+| Requête par type à ±2 ans × 100 (équivalences) | 0.125 | 0.177 | 0.073 |
+| Recherche dans les titres × 20 (Mon équivalent) | 5.068 | 9.390 | 4.041 |
+| Page Aujourd'hui (GetDailyShock) | 0.017 | 0.044 | 0.014 |
+| Page Aujourd'hui pour chaque jour d'une année × 365 | 3.120 | 3.252 | 2.981 |
+| Page Équivalences, autre personne plus jeune (GetEquivalences) | 0.981 | 1.641 | 0.830 |
+| Page Équivalences, autre personne plus âgée (GetEquivalences) | 1.019 | 1.638 | 0.814 |
 
 ## Synthétique, 5000 événements
 
@@ -50,12 +56,14 @@
 
 | Mesure | Médiane | P95 | Min |
 |---|---:|---:|---:|
-| Chargement complet (lecture, validation, index) | 21.490 | 26.116 | 18.110 |
-| Requête par jour × 366 (anniversaires) | 0.048 | 0.090 | 0.045 |
-| Requête par type à ±2 ans × 100 (équivalences) | 0.151 | 0.188 | 0.135 |
-| Recherche dans les titres × 20 (Mon équivalent) | 23.952 | 28.899 | 21.115 |
-| Page Aujourd'hui (GetDailyShock) | 0.038 | 0.060 | 0.035 |
-| Page Aujourd'hui pour chaque jour d'une année × 365 | 9.828 | 9.971 | 8.987 |
+| Chargement complet (lecture, validation, index) | 24.871 | 29.545 | 21.628 |
+| Requête par jour × 366 (anniversaires) | 0.045 | 0.057 | 0.043 |
+| Requête par type à ±2 ans × 100 (équivalences) | 0.059 | 0.076 | 0.059 |
+| Recherche dans les titres × 20 (Mon équivalent) | 26.366 | 33.096 | 22.967 |
+| Page Aujourd'hui (GetDailyShock) | 0.036 | 0.059 | 0.033 |
+| Page Aujourd'hui pour chaque jour d'une année × 365 | 9.641 | 9.926 | 9.104 |
+| Page Équivalences, autre personne plus jeune (GetEquivalences) | 7.050 | 10.634 | 6.284 |
+| Page Équivalences, autre personne plus âgée (GetEquivalences) | 5.997 | 6.646 | 5.497 |
 
 ## Synthétique, 10000 événements
 
@@ -63,9 +71,11 @@
 
 | Mesure | Médiane | P95 | Min |
 |---|---:|---:|---:|
-| Chargement complet (lecture, validation, index) | 41.048 | 43.388 | 39.211 |
-| Requête par jour × 366 (anniversaires) | 0.043 | 0.046 | 0.042 |
-| Requête par type à ±2 ans × 100 (équivalences) | 0.080 | 0.096 | 0.072 |
-| Recherche dans les titres × 20 (Mon équivalent) | 51.970 | 74.014 | 47.106 |
-| Page Aujourd'hui (GetDailyShock) | 0.077 | 0.102 | 0.074 |
-| Page Aujourd'hui pour chaque jour d'une année × 365 | 21.992 | 26.022 | 21.265 |
+| Chargement complet (lecture, validation, index) | 42.838 | 46.999 | 38.275 |
+| Requête par jour × 366 (anniversaires) | 0.041 | 0.044 | 0.040 |
+| Requête par type à ±2 ans × 100 (équivalences) | 0.080 | 0.090 | 0.080 |
+| Recherche dans les titres × 20 (Mon équivalent) | 62.347 | 77.959 | 50.572 |
+| Page Aujourd'hui (GetDailyShock) | 0.082 | 0.125 | 0.061 |
+| Page Aujourd'hui pour chaque jour d'une année × 365 | 20.529 | 21.589 | 20.134 |
+| Page Équivalences, autre personne plus jeune (GetEquivalences) | 20.342 | 22.084 | 19.331 |
+| Page Équivalences, autre personne plus âgée (GetEquivalences) | 17.557 | 18.991 | 17.025 |

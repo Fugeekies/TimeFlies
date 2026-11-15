@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
@@ -34,7 +35,9 @@ class UpdateSettingsTest {
     fun startsWithTheFirstLaunchDefaults() = runTest {
         val settings = ObserveSettings(repository)().first()
         assertNull(settings.birth)
-        assertEquals(15, settings.youngAge)
+        assertEquals(15, settings.otherAge)
+        assertFalse(settings.equivalencesReversed)
+        assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
     }
 
@@ -54,19 +57,27 @@ class UpdateSettingsTest {
     }
 
     @Test
-    fun doesNotSaveAYoungAgeTooCloseToTheUser() = runTest {
+    fun savesAnOtherAgeYoungerOrOlderThanTheUser() = runTest {
         update.setBirth(YearMonth(1991, Month.MAY))
-        assertTrue(update.setYoungAge(30))
-        assertFalse(update.setYoungAge(31))
-        assertEquals(30, repository.state.value.youngAge)
+        assertTrue(update.setOtherAge(65))
+        assertEquals(65, repository.state.value.otherAge)
+        // A small gap is allowed, the screen warns (decision of 15/11/2026).
+        assertTrue(update.setOtherAge(34))
+        assertEquals(34, repository.state.value.otherAge)
     }
 
     @Test
-    fun keepsTheYoungAgeWhenANewBirthMakesItTooClose() = runTest {
-        // Decision of 15/11/2026: allowed, the Equivalences screen shows the message.
-        assertTrue(update.setYoungAge(15))
-        update.setBirth(YearMonth(2018, Month.MARCH))
-        assertEquals(15, repository.state.value.youngAge)
-        assertEquals(YearMonth(2018, Month.MARCH), repository.state.value.birth)
+    fun rejectsAnOtherAgeOutOfRange() = runTest {
+        assertFalse(update.setOtherAge(0))
+        assertFalse(update.setOtherAge(101))
+        assertEquals(15, repository.state.value.otherAge)
+    }
+
+    @Test
+    fun savesTheDirectionAndThemesOfTheEquivalences() = runTest {
+        update.setEquivalencesReversed(true)
+        update.setEquivalenceFamilies(setOf(Family.MUSIC, Family.SPORT))
+        assertTrue(repository.state.value.equivalencesReversed)
+        assertEquals(setOf(Family.MUSIC, Family.SPORT), repository.state.value.equivalenceFamilies)
     }
 }

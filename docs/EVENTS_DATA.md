@@ -80,16 +80,16 @@ Exemples tirés de l'épisode, qui guident la saisie : Friends ↔ Happy Days (`
 
 ## Règles d'appariement des équivalences
 
-Notations : `n_v` date de naissance du « vieux » (l'utilisateur), `n_j` date de naissance du « jeune », `écart = n_j − n_v` (en jours). Les dates de naissance sont calculées comme indiqué dans [`UISpec/Settings.template.md`](UISpec/Settings.template.md) (mois et année de l'utilisateur, âge du jeune).
+Notations : deux personnes `A` et `B` (l'utilisateur et l'autre personne, dans un ordre ou dans l'autre), nées aux dates `n_A` et `n_B`. Les dates de naissance sont calculées comme indiqué dans [`UISpec/Settings.template.md`](UISpec/Settings.template.md) (mois et année de l'utilisateur, âge de l'autre personne). L'autre personne peut être plus jeune ou plus âgée que l'utilisateur, et l'écart peut être de moins de 5 ans (décision du 15/11/2026, l'écran prévient alors que les équivalences ne sont pas forcément représentatives).
 
-- Pour un événement `E` « du jeune », l'événement « du vieux » correspondant est un événement `F` :
+- Pour un événement `E` de la vie de `A`, l'événement correspondant dans la vie de `B` est un événement `F` :
   - de **même type** que `E` ;
-  - dont la date est la plus proche de `E.date − écart` ;
+  - dont la date est la plus proche de la **date cible** `E.date + (n_B − n_A)` : le jour où `B` avait l'âge qu'avait `A` à la date de `E` ;
   - à moins de **2 ans** de cette date cible (décision du 13/11/2026).
-- Dans l'autre sens (mode inverse, Mon équivalent « Du vieux vers le jeune »), la date cible est `F.date + écart` ; une date cible dans le futur ne donne pas d'équivalent.
+- Une date cible dans le futur ne donne pas d'équivalent (cas où `B` est plus jeune que `A`).
 - S'il existe plusieurs candidats dans la tolérance, on garde le plus proche de la date cible, puis la plus grande `importance`.
 - **Tous les événements** de la base peuvent être appariés, y compris ceux d'avant la naissance des deux personnes : « je n'ai pas connu l'élection de De Gaulle, mais pour un jeune ça peut être celle de Chirac » (décision du 13/11/2026).
-- L'âge de chacun au moment de son événement est affiché : `âge(n_j, E.date)` et `âge(n_v, F.date)`. Un événement antérieur à une naissance s'affiche « N ans avant sa naissance » / « N ans avant ta naissance ».
+- L'âge de chacun au moment de son événement est affiché : `âge(n_A, E.date)` et `âge(n_B, F.date)`. Un événement antérieur à une naissance s'affiche « N ans avant sa naissance ».
 - Un événement ne s'apparie jamais avec lui-même.
 - Un événement compte dès **1 an** (décision du 13/11/2026) : un événement de moins d'un an n'est ni apparié ni affiché comme anniversaire.
 
