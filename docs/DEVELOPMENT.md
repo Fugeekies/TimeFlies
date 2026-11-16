@@ -64,12 +64,16 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
 - Les tests tournent sur la JVM en quelques secondes.
 
 ### 3. Android : téléphone ou émulateur
-- Téléphone en USB ou en Wi-Fi, ou émulateur d'Android Studio : débogueur, **Logcat**, **App Inspection** (tâches WorkManager du widget : état et prochaine exécution).
+- Téléphone en USB ou en Wi-Fi, ou émulateur : débogueur, **Logcat**, **App Inspection** d'Android Studio (tâches WorkManager du widget : état et prochaine exécution).
+- **Émulateur sans Android Studio** (mis en place le 16/11/2026) : le SDK de compilation (`sdk.dir`) n'est souvent pas modifiable sans droits administrateur ; l'émulateur vit dans un SDK utilisateur à part, `%LOCALAPPDATA%\Android\Sdk`.
+  1. Une fois, en administrateur : `Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All`, puis redémarrer (accélération WHPX ; `emulator -accel-check` doit répondre « WHPX … is installed and usable »).
+  2. Une fois : `sdkmanager --sdk_root=%LOCALAPPDATA%\Android\Sdk "emulator" "platform-tools" "cmdline-tools;latest" "system-images;android-36;google_apis;x86_64"`, puis, avec l'`avdmanager` de ce SDK (`ANDROID_SDK_ROOT` pointé dessus) : `avdmanager create avd --name TimeFlies_Pixel --package "system-images;android-36;google_apis;x86_64" --device pixel_7`.
+  3. À chaque fois : `& "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd TimeFlies_Pixel`, puis `./gradlew :androidApp:installDebug`.
 - La version de débogage a son propre identifiant (suffixe `.debug`) : elle s'installe à côté de la version publiée sans l'écraser.
 - Widget : mise à jour forcée depuis le panneau de débogage. La tâche de minuit (`widget-midnight`) se voit dans **App Inspection › Background Task Inspector** d'Android Studio, ou avec `adb shell dumpsys jobscheduler | grep timeflies`.
 
 ### 4. Aperçus d'écrans
-Aperçus `@Preview` nourris de données fictives, pour voir chaque écran dans tous ses états sans lancer l'application : vide, sans mois et année de naissance, pas d'anniversaire aujourd'hui, texte agrandi à 200 %.
+Prévus, pas encore écrits : des aperçus `@Preview` nourris de données fictives, pour voir chaque écran dans tous ses états sans lancer l'application (vide, sans mois et année de naissance, pas d'anniversaire aujourd'hui, texte agrandi à 200 %). En attendant, le panneau de débogage (fausse date, réglages forcés, thème) donne ces états dans l'application.
 
 ### 5. Panneau de débogage (versions de débogage seulement)
 Une destination « Débogage » (icône de clé), présente uniquement dans les versions de débogage (Android, détectées par le drapeau `debuggable` de l'APK) ou avec l'option de lancement `-Dtimeflies.debug=true` (Windows : `./gradlew :desktopApp:run '-Dtimeflies.debug=true'`, avec les apostrophes dans PowerShell ; seule la tâche `run` reçoit l'option), jamais dans une release. Elle apparaît une fois le premier lancement passé.
@@ -81,7 +85,8 @@ Une destination « Débogage » (icône de clé), présente uniquement dans les 
 - Android : **mettre à jour le widget** tout de suite (jalon 11), avec la date du jour du panneau, vraie ou fausse. Changer la fausse date ou les réglages met aussi le widget à jour, comme en vrai.
 
 ### 5 bis. Icône de la barre des tâches et démarrage Windows (jalon 10)
-- L'icône et la notification marchent aussi lancées depuis Gradle. Fermer la fenêtre la cache (réglage par défaut) : clic gauche sur l'icône pour la rouvrir, clic droit › Quitter pour arrêter, sinon la tâche Gradle ne se termine pas.
+- L'icône et la notification marchent aussi lancées depuis Gradle. En débogage (`-Dtimeflies.debug=true`, donc F5), **fermer la fenêtre quitte l'application** : cachée dans la barre des tâches, elle garderait le port 5005 du débogueur et le lancement suivant échouerait aussitôt. Lancée sans cette option, elle suit le réglage « Garder TimeFlies dans la barre des tâches » : clic gauche sur l'icône pour la rouvrir, clic droit › Quitter pour l'arrêter.
+- Si F5 ne lance plus rien, une ancienne instance tient sans doute le port : `Get-NetTCPConnection -LocalPort 5005` donne son numéro de processus, à arrêter avec `Stop-Process -Id <numéro>`.
 - **Lancement au démarrage** : la valeur `TimeFlies` de `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` n'est écrite (ou retirée) que par l'application installée, qui connaît le chemin de son exécutable (`jpackage.app-path`) ; lancée depuis Gradle, elle l'écrit seulement dans les logs. Windows la lance avec l'argument `--background` : fenêtre cachée, icône seule. Vérifier avec `reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v TimeFlies`.
 - Notification du matin : vérifiée chaque minute ; la date du dernier envoi est dans `settings.json` (`windows.lastNotificationDate`). La supprimer à la main, ou choisir une heure déjà passée après avoir effacé cette date, fait repartir la notification du jour.
 

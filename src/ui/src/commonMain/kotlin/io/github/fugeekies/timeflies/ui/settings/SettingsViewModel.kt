@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.onStart
+import io.github.fugeekies.timeflies.ui.dayChanges
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
@@ -63,7 +63,8 @@ class SettingsViewModel(
         observeSettings(),
         draft,
         eventCount,
-        clock.manualChanges().onStart { emit(Unit) },
+        // The age shown next to the birth changes with the day.
+        clock.dayChanges(),
     ) { settings, draft, count, _ ->
         uiState(settings, draft, count)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)

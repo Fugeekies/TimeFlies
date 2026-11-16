@@ -99,7 +99,9 @@ fun main(args: Array<String>) {
             onCloseRequest = {
                 val windows = settings?.windows
                 val current = tray
-                if (current != null && windows?.keepInTray != false) {
+                // A debug run quits when its window closes: hidden in the tray, it would keep the debugger's port
+                // and the next launch from the IDE would fail at once (docs/DEVELOPMENT.md).
+                if (!debug && current != null && windows?.keepInTray != false) {
                     visible = false
                     if (windows?.trayHintShown == false) {
                         scope.launch {

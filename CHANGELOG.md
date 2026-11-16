@@ -9,6 +9,16 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Les événements se chargent hors du fil de l'interface : le premier écran ne se fige plus pendant la lecture de la base, qui grossira jusqu'à 5 000 événements.
+- Équivalences, « Quel âge ? » et Réglages se recalculent aussi à minuit quand l'application reste ouverte, comme Aujourd'hui.
+- Windows, en débogage : fermer la fenêtre quitte l'application, au lieu de la cacher en gardant le port du débogueur (F5 ne relançait plus rien).
+
+## [0.1.0] - 2026-11-16
+
+Première version publiée : [v0.1.0](https://github.com/Fugeekies/TimeFlies/releases/tag/v0.1.0).
+
 ### Added
 
 - Releases : workflow « Release » lancé à la main (Majeur, Mineur, Patch), qui publie l'APK Android signée et l'installeur Windows `TimeFlies-X.Y.Z-Setup.exe` (Inno Setup, sans WiX, installation sans droits administrateur), avec les notes des PR fusionnées. Essai possible sans publier.

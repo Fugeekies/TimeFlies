@@ -7,8 +7,12 @@ import io.github.fugeekies.timeflies.domain.model.MonthDay
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.EventRepository
+import kotlin.concurrent.Volatile
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withContext
 import kotlinx.datetime.LocalDate
 
 /** Outcome of loading the event files, for logs and the debug panel. */
@@ -21,20 +25,28 @@ data class LoadReport(val events: List<Event>, val rejections: List<Rejection>)
  * @param readFile reads a file of the app resources by its path, or returns null when it does not exist.
  *   Supplied by the app, which keeps this layer independent of Compose.
  * @param onRejection called once per rejected entry, for the logs.
+ * @param computation where the files are parsed, the indexes built and the titles searched: never the thread of
+ *   the interface, which the first screen would otherwise freeze while the base loads (docs/ARCHITECTURE.md).
  */
 class JsonEventRepository(
     private val readFile: suspend (path: String) -> ByteArray?,
     private val clock: Clock,
     private val basePath: String = "files/events/",
     private val onRejection: (Rejection) -> Unit = {},
+    private val computation: CoroutineDispatcher = Dispatchers.Default,
 ) : EventRepository {
 
     private val mutex = Mutex()
+
+    @Volatile
     private var loaded: LoadReport? = null
-    private val indexes = mutableMapOf<Region, EventIndex>()
+
+    /** Built indexes, replaced as a whole under [mutex] so it can be read without it. */
+    @Volatile
+    private var indexes: Map<Region, EventIndex> = emptyMap()
 
     /** Loads the files if needed and returns what was kept and left out. */
-    suspend fun load(): LoadReport = mutex.withLock { loadLocked() }
+    suspend fun load(): LoadReport = loaded ?: withContext(computation) { mutex.withLock { loadLocked() } }
 
     override suspend fun onMonthDay(monthDay: MonthDay, region: Region): List<Event> =
         index(region).onMonthDay(monthDay)
@@ -45,18 +57,25 @@ class JsonEventRepository(
     override suspend fun search(query: String, limit: Int): List<Event> {
         val needle = fold(query.trim())
         if (needle.isEmpty() || limit <= 0) return emptyList()
-        return load().events
-            .asSequence()
-            .filter { event -> event.titles.values.any { fold(it).contains(needle) } }
-            .take(limit)
-            .toList()
+        val events = load().events
+        return withContext(computation) {
+            events.asSequence()
+                .filter { event -> event.titles.values.any { fold(it).contains(needle) } }
+                .take(limit)
+                .toList()
+        }
     }
 
     override suspend fun count(): Int = load().events.size
 
-    private suspend fun index(region: Region): EventIndex = mutex.withLock {
-        val events = loadLocked().events
-        indexes.getOrPut(region) { EventIndex(events, region) }
+    /**
+     * The index of [region]. Once built, it is returned at once on the caller's thread: a query costs microseconds,
+     * a switch of thread would cost more than the query (benchmarks of 16/11/2026).
+     */
+    private suspend fun index(region: Region): EventIndex = indexes[region] ?: withContext(computation) {
+        mutex.withLock {
+            indexes[region] ?: EventIndex(loadLocked().events, region).also { indexes = indexes + (region to it) }
+        }
     }
 
     private suspend fun loadLocked(): LoadReport {
