@@ -102,7 +102,7 @@ Pour tester tous les cas sans attendre le bon jour.
 
 ### Jalon 13 — Releases (à la fin, décision du 14/11/2026)
 Seulement quand une bonne version tourne en débogage sur PC. La CI des tests est déjà en place (jalon « CI des tests et benchmarks »).
-- [ ] Clé de signature Android générée et stockée dans les secrets du dépôt ; une sauvegarde gardée hors du dépôt ([`DEVELOPMENT.md`](DEVELOPMENT.md), « Releases »).
+- [x] Clé de signature Android générée (16/11/2026, RSA 4096, valable jusqu'en 2056) et stockée dans les secrets du dépôt ; une sauvegarde gardée hors du dépôt ([`DEVELOPMENT.md`](DEVELOPMENT.md), « Releases »).
 - [x] `release.yml` (décision du 16/11/2026 : comme LMU-DeltaRacing, sans WiX) : lancé à la main (Majeur, Mineur, Patch), version tirée du dernier tag, APK signée et installeur **Inno Setup** (`scripts/installer.iss`, sur le dossier `createDistributable`), tag et release avec les notes des PR fusionnées ; « Publier » décoché pour un essai. Version passée à l'APK (`versionName`, `versionCode`) et à l'application Windows (Réglages › À propos).
 - [ ] Premier essai de `release.yml` sans publier (le workflow doit d'abord être sur `main` pour être lancé), puis vérifier l'icône dans l'assistant d'installation et dans « Applications installées ».
 - [x] README : section Installation (APK, installeur Windows, avertissement SmartScreen).
