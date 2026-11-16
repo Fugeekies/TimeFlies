@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sport-ballon-d-or-kopa-1958",
+    "date": "1958-12-16",
+    "title": {
+      "fr": "Ballon d'or de Raymond Kopa"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_1958",
+    "note": "Date d'attribution donnée par l'introduction de l'article. Wikidata Q2372109 : année seulement."
+  },
+  {
+    "id": "sport-platini-champion-d-europe-1984",
+    "date": "1984-06-27",
+    "title": {
+      "fr": "Platini champion d'Europe (finale de l'Euro 1984)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_du_Championnat_d'Europe_de_football_1984",
+    "note": "Date du match donnée par l'infobox. Wikidata Q64179 : même date."
+  },
+  {
+    "id": "sport-zidane-finale-ligue-des-champions-2002",
+    "date": "2002-05-15",
+    "title": {
+      "fr": "Zidane vainqueur de la Ligue des champions (finale 2002)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Ligue_des_champions_de_l'UEFA_2001-2002",
+    "note": "Date du match donnée par l'infobox. Wikidata Q574284 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-benzema-2022",
+    "date": "2022-10-17",
+    "title": {
+      "fr": "Ballon d'or de Karim Benzema"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2022",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q112648424 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-dembele-2025",
+    "date": "2025-09-22",
+    "title": {
+      "fr": "Ballon d'or d'Ousmane Dembélé"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2025",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q130457203 : même date."
+  }
+]

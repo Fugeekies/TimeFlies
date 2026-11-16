@@ -203,6 +203,90 @@
     <string name="settings_notification_time">Heure de la notification</string>
     <string name="settings_keep_in_tray">Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre</string>
 
+    <!-- Event filter (decision of 16/11/2026, docs/EVENTS_DATA.md "Fichiers et stockage") -->
+    <string name="settings_events">ÉVÉNEMENTS</string>
+    <string name="settings_events_help">Décoche ce qui ne t'intéresse pas : ces événements n'apparaissent plus nulle part, ni sur Aujourd'hui, ni dans le widget, ni dans les équivalences.</string>
+    <plurals name="event_count">
+        <item quantity="one">%1$d événement</item>
+        <item quantity="other">%1$d événements</item>
+    </plurals>
+    <string name="settings_events_expand">Déplier %1$s</string>
+    <string name="settings_events_collapse">Replier %1$s</string>
+    <string name="onboarding_events">CE QUI T'INTÉRESSE</string>
+    <string name="onboarding_events_families">Thèmes</string>
+    <string name="onboarding_events_origins">Origines</string>
+    <string name="onboarding_events_more">Le détail (le rap US sans le rap français, par exemple) se règle dans Réglages › Événements.</string>
+    <!-- Origins of the events: ISO codes in lower case and their names, in the same order. -->
+    <string-array name="origin_codes">
+        <item>international</item>
+        <item>ar</item>
+        <item>be</item>
+        <item>br</item>
+        <item>ca</item>
+        <item>de</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>gb</item>
+        <item>hr</item>
+        <item>jm</item>
+        <item>jp</item>
+        <item>ke</item>
+        <item>kr</item>
+        <item>md</item>
+        <item>pr</item>
+        <item>pt</item>
+        <item>ro</item>
+        <item>se</item>
+        <item>us</item>
+    </string-array>
+    <string-array name="origin_names">
+        <item>International</item>
+        <item>Argentine</item>
+        <item>Belgique</item>
+        <item>Brésil</item>
+        <item>Canada</item>
+        <item>Allemagne</item>
+        <item>Espagne</item>
+        <item>France</item>
+        <item>Royaume-Uni</item>
+        <item>Croatie</item>
+        <item>Jamaïque</item>
+        <item>Japon</item>
+        <item>Kenya</item>
+        <item>Corée du Sud</item>
+        <item>Moldavie</item>
+        <item>Porto Rico</item>
+        <item>Portugal</item>
+        <item>Roumanie</item>
+        <item>Suède</item>
+        <item>États-Unis</item>
+    </string-array>
+    <!-- Subcategories: music genres and sport disciplines, in the same order. -->
+    <string-array name="subcategory_codes">
+        <item>athletisme</item>
+        <item>chanson</item>
+        <item>electro</item>
+        <item>gymnastique</item>
+        <item>natation</item>
+        <item>pop</item>
+        <item>rap</item>
+        <item>reggae</item>
+        <item>rock</item>
+        <item>soul</item>
+    </string-array>
+    <string-array name="subcategory_names">
+        <item>Athlétisme</item>
+        <item>Chanson</item>
+        <item>Électro</item>
+        <item>Gymnastique</item>
+        <item>Natation</item>
+        <item>Pop</item>
+        <item>Rap</item>
+        <item>Reggae</item>
+        <item>Rock</item>
+        <item>Soul</item>
+    </string-array>
+
     <!-- Android home screen panel (docs/UISpec/Settings.template.md, "Widget") -->
     <string name="settings_widget">ÉCRAN D'ACCUEIL</string>
     <string name="settings_widget_text">Ajoute le widget TimeFlies sur ton écran d'accueil pour voir ton coup de vieux chaque jour.</string>

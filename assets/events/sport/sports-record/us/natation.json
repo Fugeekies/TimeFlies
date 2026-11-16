@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-michael-phelps-8-medailles-2008",
+    "date": "2008-08-17",
+    "title": {
+      "fr": "Huitième médaille d'or de Michael Phelps à Pékin"
+    },
+    "kind": "sport",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Michael_Phelps",
+    "note": "Date du dernier titre (relais) donnée par l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

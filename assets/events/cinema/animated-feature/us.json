@@ -1,0 +1,211 @@
+[
+  {
+    "id": "film-blanche-neige-et-les-sept-nains-1938",
+    "date": "1938-05-06",
+    "title": {
+      "fr": "Blanche-Neige et les Sept Nains"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Blanche-Neige_et_les_Sept_Nains",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q134430 : pas de date française."
+  },
+  {
+    "id": "film-le-livre-de-la-jungle-1968",
+    "date": "1968-12-04",
+    "title": {
+      "fr": "Le Livre de la jungle"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Livre_de_la_jungle_(film,_1967)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q199839 donne une autre date française : 1968-12-11, 1979-11-28, 1988-03-16, 1993-03-31."
+  },
+  {
+    "id": "film-la-petite-sirene-1990",
+    "date": "1990-11-28",
+    "title": {
+      "fr": "La Petite Sirène"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Petite_Sir%C3%A8ne_(film,_1989)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q190135 : pas de date française."
+  },
+  {
+    "id": "film-la-belle-et-la-bete-1992",
+    "date": "1992-10-21",
+    "title": {
+      "fr": "La Belle et la Bête"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Belle_et_la_B%C3%AAte_(film,_1991)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q179673 : pas de date française."
+  },
+  {
+    "id": "film-aladdin-1993",
+    "date": "1993-11-24",
+    "title": {
+      "fr": "Aladdin"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Aladdin_(film,_1992)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q215518 : pas de date française."
+  },
+  {
+    "id": "film-le-roi-lion-1994",
+    "date": "1994-11-23",
+    "title": {
+      "fr": "Le Roi lion"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Roi_lion",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q36479 donne une autre date française : 1994-11-09."
+  },
+  {
+    "id": "film-toy-story-1996",
+    "date": "1996-03-27",
+    "title": {
+      "fr": "Toy Story"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Toy_Story",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q171048 : pas de date française."
+  },
+  {
+    "id": "film-mulan-1998",
+    "date": "1998-11-25",
+    "title": {
+      "fr": "Mulan"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mulan",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q537407 : pas de date française."
+  },
+  {
+    "id": "film-shrek-2001",
+    "date": "2001-07-04",
+    "title": {
+      "fr": "Shrek"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Shrek_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q483815 : pas de date française."
+  },
+  {
+    "id": "film-monstres-et-cie-2002",
+    "date": "2002-03-20",
+    "title": {
+      "fr": "Monstres et Cie"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Monstres_et_Cie",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q187726 : pas de date française."
+  },
+  {
+    "id": "film-le-monde-de-nemo-2003",
+    "date": "2003-11-26",
+    "title": {
+      "fr": "Le Monde de Nemo"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Monde_de_Nemo",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q132863 : même date."
+  },
+  {
+    "id": "film-les-indestructibles-2004",
+    "date": "2004-11-24",
+    "title": {
+      "fr": "Les Indestructibles"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Indestructibles",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q213326 : même date."
+  },
+  {
+    "id": "film-ratatouille-2007",
+    "date": "2007-08-01",
+    "title": {
+      "fr": "Ratatouille"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ratatouille_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170035 : pas de date française."
+  },
+  {
+    "id": "film-la-haut-2009",
+    "date": "2009-07-29",
+    "title": {
+      "fr": "Là-haut"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/L%C3%A0-haut_(film,_2009)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q174811 : même date."
+  },
+  {
+    "id": "film-moi-moche-et-mechant-2010",
+    "date": "2010-10-06",
+    "title": {
+      "fr": "Moi, moche et méchant"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Moi,_moche_et_m%C3%A9chant",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q4447 : même date."
+  },
+  {
+    "id": "film-raiponce-2010",
+    "date": "2010-12-01",
+    "title": {
+      "fr": "Raiponce"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Raiponce_(film,_2010)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q188439 : même date."
+  },
+  {
+    "id": "film-la-reine-des-neiges-2013",
+    "date": "2013-12-04",
+    "title": {
+      "fr": "La Reine des neiges"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Reine_des_neiges_(film,_2013)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q246283 : même date."
+  },
+  {
+    "id": "film-vice-versa-2015",
+    "date": "2015-06-17",
+    "title": {
+      "fr": "Vice-versa"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Vice-versa_(film,_2015)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6144664 : même date."
+  },
+  {
+    "id": "film-coco-2017",
+    "date": "2017-11-29",
+    "title": {
+      "fr": "Coco"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coco_(film,_2017)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q5815826 : même date."
+  }
+]

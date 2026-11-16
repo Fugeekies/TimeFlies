@@ -1,0 +1,13 @@
+[
+  {
+    "id": "single-la-bamba-los-lobos-1987",
+    "date": "1987-07-20",
+    "title": {
+      "fr": "La Bamba (Los Lobos)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/La_Bamba",
+    "note": "Sortie de la version de Los Lobos selon la seconde infobox de l'article. Wikidata Q641677 : année seulement."
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "film-le-corniaud-1965",
+    "date": "1965-03-24",
+    "title": {
+      "fr": "Le Corniaud"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Corniaud",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q406936 : même date."
+  },
+  {
+    "id": "film-la-grande-vadrouille-1966",
+    "date": "1966-12-08",
+    "title": {
+      "fr": "La Grande Vadrouille"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Grande_Vadrouille",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q487789 donne une autre date française : 1966-12-07."
+  },
+  {
+    "id": "film-la-cage-aux-folles-1978",
+    "date": "1978-10-25",
+    "title": {
+      "fr": "La Cage aux folles"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Cage_aux_folles_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q778696 : pas de date française."
+  },
+  {
+    "id": "film-les-bronzes-1978",
+    "date": "1978-11-22",
+    "title": {
+      "fr": "Les Bronzés"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Bronz%C3%A9s",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q652094 : même date."
+  },
+  {
+    "id": "film-les-bronzes-font-du-ski-1979",
+    "date": "1979-11-21",
+    "title": {
+      "fr": "Les Bronzés font du ski"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Bronz%C3%A9s_font_du_ski",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3011267 : pas de date française."
+  },
+  {
+    "id": "film-le-pere-noel-est-une-ordure-1982",
+    "date": "1982-08-25",
+    "title": {
+      "fr": "Le père Noël est une ordure"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_p%C3%A8re_No%C3%ABl_est_une_ordure_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1156447 : pas de date française."
+  },
+  {
+    "id": "film-les-visiteurs-1993",
+    "date": "1993-01-27",
+    "title": {
+      "fr": "Les Visiteurs"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Visiteurs_(film,_1993)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q838013 : même date."
+  },
+  {
+    "id": "film-la-verite-si-je-mens-1997",
+    "date": "1997-04-30",
+    "title": {
+      "fr": "La Vérité si je mens !"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_V%C3%A9rit%C3%A9_si_je_mens_!",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2891031 : pas de date française."
+  },
+  {
+    "id": "film-taxi-1998",
+    "date": "1998-04-08",
+    "title": {
+      "fr": "Taxi"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Taxi_(film,_1998)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q726215 : pas de date française."
+  },
+  {
+    "id": "film-le-diner-de-cons-1998",
+    "date": "1998-04-15",
+    "title": {
+      "fr": "Le Dîner de cons"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_D%C3%AEner_de_cons_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q655315 : pas de date française."
+  },
+  {
+    "id": "film-le-fabuleux-destin-d-amelie-poulain-2001",
+    "date": "2001-04-25",
+    "title": {
+      "fr": "Le Fabuleux Destin d'Amélie Poulain"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Fabuleux_Destin_d'Am%C3%A9lie_Poulain",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q484048 : même date."
+  },
+  {
+    "id": "film-asterix-et-obelix-mission-cleopatre-2002",
+    "date": "2002-01-30",
+    "title": {
+      "fr": "Astérix et Obélix : Mission Cléopâtre"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ast%C3%A9rix_et_Ob%C3%A9lix_:_Mission_Cl%C3%A9op%C3%A2tre",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q737904 : même date."
+  },
+  {
+    "id": "film-brice-de-nice-2005",
+    "date": "2005-04-06",
+    "title": {
+      "fr": "Brice de Nice"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Brice_de_Nice_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2713293 : pas de date française."
+  },
+  {
+    "id": "film-oss-117-le-caire-nid-d-espions-2006",
+    "date": "2006-04-19",
+    "title": {
+      "fr": "OSS 117 : Le Caire, nid d'espions"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/OSS_117_:_Le_Caire,_nid_d'espions",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1189436 : pas de date française."
+  },
+  {
+    "id": "film-camping-2006",
+    "date": "2006-04-26",
+    "title": {
+      "fr": "Camping"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Camping_(film,_2006)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2935509 : pas de date française."
+  },
+  {
+    "id": "film-bienvenue-chez-les-ch-tis-2008",
+    "date": "2008-02-27",
+    "title": {
+      "fr": "Bienvenue chez les Ch'tis"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bienvenue_chez_les_Ch'tis",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1144330 : même date."
+  },
+  {
+    "id": "film-les-tuche-2011",
+    "date": "2011-07-01",
+    "title": {
+      "fr": "Les Tuche"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Tuche_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3235944 : même date."
+  },
+  {
+    "id": "film-intouchables-2011",
+    "date": "2011-11-02",
+    "title": {
+      "fr": "Intouchables"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Intouchables_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q595 : pas de date française."
+  },
+  {
+    "id": "film-qu-est-ce-qu-on-a-fait-au-bon-dieu-2014",
+    "date": "2014-04-16",
+    "title": {
+      "fr": "Qu'est-ce qu'on a fait au Bon Dieu ?"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qu'est-ce_qu'on_a_fait_au_Bon_Dieu_%3F",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q16671761 : même date."
+  }
+]

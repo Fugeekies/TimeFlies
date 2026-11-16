@@ -1,0 +1,46 @@
+[
+  {
+    "id": "single-pray-take-that-1993",
+    "date": "1993-07-05",
+    "title": {
+      "fr": "Pray (Take That)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pray_(chanson_de_Take_That)",
+    "note": "Sortie au Royaume-Uni selon l'infobox. Wikidata Q3909988 : mois seulement (juillet 1993)."
+  },
+  {
+    "id": "single-back-for-good-1995",
+    "date": "1995-03-27",
+    "title": {
+      "fr": "Back for Good (Take That)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Back_for_Good_(chanson)",
+    "note": "Sortie au Royaume-Uni selon l'infobox. Wikidata Q2574121 : même date."
+  },
+  {
+    "id": "single-what-makes-you-beautiful-2011",
+    "date": "2011-09-11",
+    "title": {
+      "fr": "What Makes You Beautiful (One Direction)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/What_Makes_You_Beautiful",
+    "note": "Sortie selon l'infobox. Wikidata Q27979 : même date."
+  },
+  {
+    "id": "single-story-of-my-life-2013",
+    "date": "2013-10-28",
+    "title": {
+      "fr": "Story of My Life (One Direction)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Story_of_My_Life_(chanson_de_One_Direction)",
+    "note": "Sortie selon l'infobox. Wikidata Q15221456 : même date."
+  }
+]

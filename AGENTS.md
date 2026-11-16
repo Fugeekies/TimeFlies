@@ -32,6 +32,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 
 - Base d'événements intégrée à l'application, sans compte. Aucune donnée personnelle ne quitte l'appareil. Seule connexion : la recherche d'une nouvelle version sur GitHub, une fois par jour au plus, désactivable (décision du 16/11/2026).
 - Chaque événement a une date **au jour près** et un **type** précis (sitcom culte, star du foot, mort d'une star de la musique, console…), qui sert à apparier les équivalences.
+- Les événements sont rangés à part du code, dans `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json` (décision du 16/11/2026, `docs/EVENTS_DATA.md`) : un fichier par groupe, qui sert aussi au filtre de Réglages. Le type vient du dossier.
 - Une date doit être vérifiée avant d'être ajoutée : ne jamais inventer une date ou un événement.
 
 ## Distribution

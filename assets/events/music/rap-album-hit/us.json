@@ -1,0 +1,68 @@
+[
+  {
+    "id": "album-it-takes-a-nation-1988",
+    "date": "1988-06-28",
+    "title": {
+      "fr": "It Takes a Nation of Millions to Hold Us Back (Public Enemy)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/It_Takes_a_Nation_of_Millions_to_Hold_Us_Back",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q926127 donne une autre date : 1988-06-30."
+  },
+  {
+    "id": "album-ready-to-die-1994",
+    "date": "1994-09-13",
+    "title": {
+      "fr": "Ready to Die (The Notorious B.I.G.)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ready_to_Die",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q529999 : même date."
+  },
+  {
+    "id": "album-all-eyez-on-me-1996",
+    "date": "1996-02-13",
+    "title": {
+      "fr": "All Eyez on Me (Tupac Shakur)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/All_Eyez_on_Me",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q498054 : même date."
+  },
+  {
+    "id": "album-2001-1999",
+    "date": "1999-11-16",
+    "title": {
+      "fr": "2001 (Dr. Dre)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/2001_(album_de_Dr._Dre)",
+    "note": "Sortie aux États-Unis selon l'infobox et l'introduction. Wikidata Q182280 : même date."
+  },
+  {
+    "id": "album-the-marshall-mathers-lp-2000",
+    "date": "2000-05-23",
+    "title": {
+      "fr": "The Marshall Mathers LP (Eminem)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Marshall_Mathers_LP",
+    "note": "Sortie selon l'infobox. Wikidata Q153607 : même date."
+  },
+  {
+    "id": "album-the-college-dropout-2004",
+    "date": "2004-02-10",
+    "title": {
+      "fr": "The College Dropout (Kanye West)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_College_Dropout",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q747526 : même date."
+  }
+]

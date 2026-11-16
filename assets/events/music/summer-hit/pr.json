@@ -1,0 +1,24 @@
+[
+  {
+    "id": "single-livin-la-vida-loca-1999",
+    "date": "1999-03-23",
+    "title": {
+      "fr": "Livin' la Vida Loca (Ricky Martin)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Livin'_la_Vida_Loca",
+    "note": "Sortie selon l'infobox. Wikidata Q2604345 : même date."
+  },
+  {
+    "id": "single-despacito-2017",
+    "date": "2017-01-13",
+    "title": {
+      "fr": "Despacito (Luis Fonsi)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Despacito",
+    "note": "Sortie selon l'infobox. Wikidata Q28572509 donne une autre date : 2017-01-12."
+  }
+]

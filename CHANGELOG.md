@@ -11,13 +11,16 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Filtre des événements : Réglages › Événements, un arbre famille › type › origine › sous-catégorie à cocher (exemple : garder le rap français sans le rap US) ; ce qui est décoché n'apparaît plus nulle part (Aujourd'hui, widget, notification Windows, Équivalences, « Quel âge ? »).
+- Premier lancement : « Ce qui t'intéresse », une pastille par thème et par origine pour écarter d'emblée un thème ou un pays.
 - Nouvelles versions : quand une version plus récente est publiée sur GitHub, un bandeau sur Aujourd'hui l'annonce, avec « Télécharger » et « Plus tard ». GitHub est interrogé une fois par jour au plus, sans aucune donnée personnelle ; la case « Chercher les nouvelles versions au démarrage » de Réglages › À propos le désactive.
 - Windows : une seule instance de TimeFlies ; l'ouvrir de nouveau ramène la fenêtre de celle qui tourne déjà au lieu d'en lancer une seconde.
 
 ### Changed
 
 - Android : la permission Internet, pour la seule recherche de nouvelles versions.
-- `settings.json` passe en version 4 (objet `releaseCheck`).
+- `settings.json` passe en version 4 (objet `releaseCheck`), puis en version 5 (`excludedEventGroups`).
+- Base d'événements sortie du code : `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json`, 52 fichiers pour les 192 événements (origine : pays de l'artiste, du joueur ou du studio ; sous-catégorie : genre des morts d'icônes, discipline des records). Le type vient du dossier.
 
 ### Performance
 

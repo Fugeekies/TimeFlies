@@ -150,6 +150,7 @@ fun main(args: Array<String>) {
                 updateSettings = graph.updateSettings,
                 completeOnboarding = graph.completeOnboarding,
                 countEvents = graph.countEvents,
+                getEventGroups = graph.getEventGroups,
                 clock = graph.clock,
                 debugTools = graph.debugTools,
                 // Given by the release build only (desktopApp/build.gradle.kts); null says "version de développement".

@@ -17,7 +17,8 @@ import kotlinx.serialization.Serializable
  *
  * Version 2 (milestone 7) renamed `youngAge` to [otherAge] (the other person can be older, decision of 15/11/2026):
  * a version 1 file is read through [youngAge], which is never written again. Version 3 (milestone 10) added the
- * Windows panel ([windows]); version 4 the check for new versions ([releaseCheck]). An older file gets their defaults.
+ * Windows panel ([windows]); version 4 the check for new versions ([releaseCheck]); version 5 the event filter
+ * ([excludedEventGroups]). An older file gets their defaults.
  */
 @Serializable
 internal data class SettingsDto(
@@ -37,6 +38,8 @@ internal data class SettingsDto(
     val windows: WindowsSettingsDto = WindowsSettingsDto(),
     /** Version 4: the check for new versions. */
     val releaseCheck: ReleaseCheckDto = ReleaseCheckDto(),
+    /** Version 5: paths of the unticked event groups ("music/rap-album-hit/us"). */
+    val excludedEventGroups: List<String> = emptyList(),
 ) {
     /** The domain settings; values edited by hand outside their range fall back to safe ones. */
     fun toDomain(): Settings = Settings(
@@ -49,10 +52,11 @@ internal data class SettingsDto(
         equivalenceFamilies = equivalenceFamilies?.mapNotNull(::familyOf)?.toSet() ?: Family.entries.toSet(),
         windows = windows.toDomain(),
         releaseCheck = releaseCheck.toDomain(),
+        excludedEventGroups = excludedEventGroups.toSet(),
     )
 
     companion object {
-        const val CURRENT_VERSION = 4
+        const val CURRENT_VERSION = 5
 
         fun of(settings: Settings) = SettingsDto(
             birthYear = settings.birth?.year,
@@ -64,10 +68,11 @@ internal data class SettingsDto(
             equivalenceFamilies = Family.entries.filter { it in settings.equivalenceFamilies }.map(::idOf),
             windows = WindowsSettingsDto.of(settings.windows),
             releaseCheck = ReleaseCheckDto.of(settings.releaseCheck),
+            excludedEventGroups = settings.excludedEventGroups.sorted(),
         )
 
         /** "series", "cinema", "games-tech"…: the name of the family's event file, readable by hand. */
-        private fun idOf(family: Family): String = family.fileName.removeSuffix(".json")
+        private fun idOf(family: Family): String = family.id
 
         private fun familyOf(id: String): Family? = Family.entries.firstOrNull { idOf(it) == id }
     }

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "film-la-guerre-des-etoiles-1977",
+    "date": "1977-10-19",
+    "title": {
+      "fr": "La Guerre des étoiles"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_IV_:_Un_nouvel_espoir",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q17738 : même date."
+  },
+  {
+    "id": "film-l-empire-contre-attaque-1980",
+    "date": "1980-08-20",
+    "title": {
+      "fr": "L'Empire contre-attaque"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_V_:_L'Empire_contre-attaque",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q181795 : même date."
+  },
+  {
+    "id": "film-les-aventuriers-de-l-arche-perdue-1981",
+    "date": "1981-09-16",
+    "title": {
+      "fr": "Les Aventuriers de l'arche perdue"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Aventuriers_de_l'arche_perdue",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q174284 : pas de date française."
+  },
+  {
+    "id": "film-le-retour-du-jedi-1983",
+    "date": "1983-10-19",
+    "title": {
+      "fr": "Le Retour du Jedi"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_VI_:_Le_Retour_du_Jedi",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q181803 : pas de date française."
+  },
+  {
+    "id": "film-retour-vers-le-futur-1985",
+    "date": "1985-10-30",
+    "title": {
+      "fr": "Retour vers le futur"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Retour_vers_le_futur",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q91540 : même date."
+  },
+  {
+    "id": "film-batman-1989",
+    "date": "1989-09-13",
+    "title": {
+      "fr": "Batman"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Batman_(film,_1989)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q116852 : même date."
+  },
+  {
+    "id": "film-matrix-1999",
+    "date": "1999-06-23",
+    "title": {
+      "fr": "Matrix"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Matrix_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q83495 : pas de date française."
+  },
+  {
+    "id": "film-star-wars-episode-i-la-menace-fantome-1999",
+    "date": "1999-10-13",
+    "title": {
+      "fr": "Star Wars, épisode I : La Menace fantôme"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_I_:_La_Menace_fant%C3%B4me",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q165713 : même date."
+  },
+  {
+    "id": "film-fast-and-furious-2001",
+    "date": "2001-09-26",
+    "title": {
+      "fr": "Fast and Furious"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fast_and_Furious",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q155476 : pas de date française."
+  },
+  {
+    "id": "film-harry-potter-a-l-ecole-des-sorciers-2001",
+    "date": "2001-12-05",
+    "title": {
+      "fr": "Harry Potter à l'école des sorciers"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_%C3%A0_l'%C3%A9cole_des_sorciers_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q102438 : même date."
+  },
+  {
+    "id": "film-le-seigneur-des-anneaux-la-communaute-de-l-anneau-2001",
+    "date": "2001-12-19",
+    "title": {
+      "fr": "Le Seigneur des anneaux : La Communauté de l'anneau"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Seigneur_des_anneaux_:_La_Communaut%C3%A9_de_l'anneau",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q127367 : même date."
+  },
+  {
+    "id": "film-spider-man-2002",
+    "date": "2002-06-12",
+    "title": {
+      "fr": "Spider-Man"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Spider-Man_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q484442 : même date."
+  },
+  {
+    "id": "film-pirates-des-caraibes-la-malediction-du-black-pearl-2003",
+    "date": "2003-08-13",
+    "title": {
+      "fr": "Pirates des Caraïbes : La Malédiction du Black Pearl"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Pirates_des_Cara%C3%AFbes_:_La_Mal%C3%A9diction_du_Black_Pearl",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q46717 : même date."
+  },
+  {
+    "id": "film-the-dark-knight-le-chevalier-noir-2008",
+    "date": "2008-08-13",
+    "title": {
+      "fr": "The Dark Knight : Le Chevalier noir"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/The_Dark_Knight_:_Le_Chevalier_noir",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q163872 : même date."
+  },
+  {
+    "id": "film-twilight-chapitre-i-fascination-2009",
+    "date": "2009-01-07",
+    "title": {
+      "fr": "Twilight, chapitre I : Fascination"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Twilight,_chapitre_I_:_Fascination",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q160071 : pas de date française."
+  },
+  {
+    "id": "film-hunger-games-2012",
+    "date": "2012-03-21",
+    "title": {
+      "fr": "Hunger Games"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hunger_Games_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q212965 : même date."
+  },
+  {
+    "id": "film-avengers-2012",
+    "date": "2012-04-25",
+    "title": {
+      "fr": "Avengers"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avengers_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q182218 : même date."
+  },
+  {
+    "id": "film-star-wars-episode-vii-le-reveil-de-la-force-2015",
+    "date": "2015-12-16",
+    "title": {
+      "fr": "Star Wars, épisode VII : Le Réveil de la Force"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_VII_:_Le_R%C3%A9veil_de_la_Force",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6074 : même date."
+  },
+  {
+    "id": "film-avengers-endgame-2019",
+    "date": "2019-04-24",
+    "title": {
+      "fr": "Avengers: Endgame"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avengers:_Endgame",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q23781155 : même date."
+  }
+]

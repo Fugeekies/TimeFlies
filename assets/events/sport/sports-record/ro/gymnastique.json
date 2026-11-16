@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-nadia-comaneci-10-1976",
+    "date": "1976-07-18",
+    "title": {
+      "fr": "Le premier 10 de Nadia Comăneci aux Jeux olympiques"
+    },
+    "kind": "sport",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Nadia_Com%C4%83neci",
+    "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

@@ -2,29 +2,34 @@ package io.github.fugeekies.timeflies.data.events
 
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.EventKind
-import io.github.fugeekies.timeflies.domain.model.EventType
-import io.github.fugeekies.timeflies.domain.model.Family
+import io.github.fugeekies.timeflies.domain.model.EventGroup
 import io.github.fugeekies.timeflies.domain.model.Region
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 
-/** Result of reading one family file: the valid events and the rejected entries. */
+/** Result of reading one file of the base: the valid events and the rejected entries. */
 data class ParsedFile(val events: List<Event>, val rejections: List<Rejection>)
 
 /**
- * Reads and validates one event file (docs/EVENTS_DATA.md, "Validation automatique").
+ * Reads and validates one event file (docs/EVENTS_DATA.md, "Validation automatique"). Its path gives the family,
+ * the type, the origin and the subcategory of every event in it.
  * An invalid entry is left out and reported; it never stops the other entries from loading.
  */
 class EventParser(private val today: LocalDate) {
 
-    fun parse(family: Family, bytes: ByteArray): ParsedFile {
+    /** @param file the path of the file in the base, without ".json" ("music/rap-album-hit/us"). */
+    fun parse(file: String, bytes: ByteArray): ParsedFile {
+        val group = when (val result = EventGroup.parse(file)) {
+            is EventGroup.Result.Valid -> result.group
+            is EventGroup.Result.Invalid -> return ParsedFile(emptyList(), listOf(Rejection(file, -1, null, result.reasons)))
+        }
         val array = try {
             json.parseToJsonElement(bytes.decodeToString()) as? JsonArray
         } catch (e: SerializationException) {
             null
-        } ?: return ParsedFile(emptyList(), listOf(Rejection(family, -1, null, listOf("le fichier n'est pas un tableau JSON valide"))))
+        } ?: return ParsedFile(emptyList(), listOf(Rejection(file, -1, null, listOf("le fichier n'est pas un tableau JSON valide"))))
 
         val events = mutableListOf<Event>()
         val rejections = mutableListOf<Rejection>()
@@ -32,15 +37,15 @@ class EventParser(private val today: LocalDate) {
             val dto = try {
                 json.decodeFromJsonElement(EventDto.serializer(), element)
             } catch (e: SerializationException) {
-                rejections += Rejection(family, index, null, listOf("entrée illisible : ${e.message?.lineSequence()?.firstOrNull()}"))
+                rejections += Rejection(file, index, null, listOf("entrée illisible : ${e.message?.lineSequence()?.firstOrNull()}"))
                 return@forEachIndexed
             } catch (e: IllegalArgumentException) {
-                rejections += Rejection(family, index, null, listOf("entrée illisible : ${e.message?.lineSequence()?.firstOrNull()}"))
+                rejections += Rejection(file, index, null, listOf("entrée illisible : ${e.message?.lineSequence()?.firstOrNull()}"))
                 return@forEachIndexed
             }
-            when (val result = validate(family, dto)) {
+            when (val result = validate(group, dto)) {
                 is Validation.Valid -> events += result.event
-                is Validation.Invalid -> rejections += Rejection(family, index, dto.id, result.reasons)
+                is Validation.Invalid -> rejections += Rejection(file, index, dto.id, result.reasons)
             }
         }
         return ParsedFile(events, rejections)
@@ -51,7 +56,7 @@ class EventParser(private val today: LocalDate) {
         data class Invalid(val reasons: List<String>) : Validation
     }
 
-    private fun validate(family: Family, dto: EventDto): Validation {
+    private fun validate(group: EventGroup, dto: EventDto): Validation {
         val reasons = mutableListOf<String>()
 
         val id = dto.id
@@ -73,8 +78,8 @@ class EventParser(private val today: LocalDate) {
 
         val kind = dto.kind.let { if (it == null) { reasons += "kind manquant"; null } else EventKind.fromId(it) ?: run { reasons += "kind « $it » inconnu"; null } }
 
-        val type = dto.type.let { if (it == null) { reasons += "type manquant"; null } else EventType.fromId(it) ?: run { reasons += "type « $it » inconnu"; null } }
-        if (type != null && type.family != family) reasons += "type « ${type.id} » de la famille ${type.family}, rangé dans ${family.fileName}"
+        // The type comes from the folder; one still written in the entry must agree with it.
+        dto.type?.let { if (it != group.type.id) reasons += "type « $it » rangé dans le dossier « ${group.type.id} »" }
 
         val importance = dto.importance
         if (importance == null) reasons += "importance manquante" else if (importance !in 1..3) reasons += "importance $importance hors de 1 à 3"
@@ -90,7 +95,7 @@ class EventParser(private val today: LocalDate) {
                 regionalDates = regionalDates,
                 titles = titles,
                 kind = kind!!,
-                type = type!!,
+                group = group,
                 importance = importance!!,
                 source = source!!,
             ),

@@ -1,0 +1,189 @@
+[
+  {
+    "id": "film-les-dents-de-la-mer-1976",
+    "date": "1976-01-28",
+    "title": {
+      "fr": "Les Dents de la mer"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Dents_de_la_mer",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q189505 : pas de date française."
+  },
+  {
+    "id": "film-e-t-l-extra-terrestre-1982",
+    "date": "1982-12-01",
+    "title": {
+      "fr": "E.T., l'extra-terrestre"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/E.T.,_l'extra-terrestre",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q11621 : même date."
+  },
+  {
+    "id": "film-sos-fantomes-1984",
+    "date": "1984-12-12",
+    "title": {
+      "fr": "SOS Fantômes"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/SOS_Fant%C3%B4mes",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108745 : pas de date française."
+  },
+  {
+    "id": "film-top-gun-1986",
+    "date": "1986-09-17",
+    "title": {
+      "fr": "Top Gun"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Top_Gun_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q110138 : pas de date française."
+  },
+  {
+    "id": "film-terminator-2-le-jugement-dernier-1991",
+    "date": "1991-10-16",
+    "title": {
+      "fr": "Terminator 2 : Le Jugement dernier"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Terminator_2_:_Le_Jugement_dernier",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170564 : pas de date française."
+  },
+  {
+    "id": "film-jurassic-park-1993",
+    "date": "1993-10-20",
+    "title": {
+      "fr": "Jurassic Park"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jurassic_Park",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q167726 : même date."
+  },
+  {
+    "id": "film-forrest-gump-1994",
+    "date": "1994-10-05",
+    "title": {
+      "fr": "Forrest Gump"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Forrest_Gump",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q134773 : même date."
+  },
+  {
+    "id": "film-independence-day-1996",
+    "date": "1996-10-02",
+    "title": {
+      "fr": "Independence Day"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Independence_Day_(film,_1996)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q105387 : même date."
+  },
+  {
+    "id": "film-men-in-black-1997",
+    "date": "1997-08-06",
+    "title": {
+      "fr": "Men in Black"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Men_in_Black_(film,_1997)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q51416 : même date."
+  },
+  {
+    "id": "film-titanic-1998",
+    "date": "1998-01-07",
+    "title": {
+      "fr": "Titanic"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Titanic_(film,_1997)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q44578 : même date."
+  },
+  {
+    "id": "film-armageddon-1998",
+    "date": "1998-08-05",
+    "title": {
+      "fr": "Armageddon"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Armageddon_(film,_1998)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q208344 : pas de date française."
+  },
+  {
+    "id": "film-gladiator-2000",
+    "date": "2000-06-20",
+    "title": {
+      "fr": "Gladiator"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Gladiator_(film,_2000)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q128518 : pas de date française."
+  },
+  {
+    "id": "film-avatar-2009",
+    "date": "2009-12-16",
+    "title": {
+      "fr": "Avatar"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Avatar_(film,_2009)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q24871 : même date."
+  },
+  {
+    "id": "film-inception-2010",
+    "date": "2010-07-21",
+    "title": {
+      "fr": "Inception"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Inception",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q25188 : même date."
+  },
+  {
+    "id": "film-interstellar-2014",
+    "date": "2014-11-05",
+    "title": {
+      "fr": "Interstellar"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Interstellar",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q13417189 : même date."
+  },
+  {
+    "id": "film-oppenheimer-2023",
+    "date": "2023-07-19",
+    "title": {
+      "fr": "Oppenheimer"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Oppenheimer_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108839994 : pas de date française."
+  },
+  {
+    "id": "film-barbie-2023",
+    "date": "2023-07-19",
+    "title": {
+      "fr": "Barbie"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Barbie_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q55436290 : même date."
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-ballon-d-or-modric-2018",
+    "date": "2018-12-03",
+    "title": {
+      "fr": "Ballon d'or de Luka Modrić"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2018",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q57140031 : même date."
+  }
+]

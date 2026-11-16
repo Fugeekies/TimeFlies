@@ -21,8 +21,14 @@ class RealEventFilesTest {
     @Test
     fun everyShippedEntryIsValid() = runTest {
         assertTrue(eventsDir.isDirectory, "missing folder $eventsDir")
+        // The index the build writes: every JSON file of assets/events, by its path.
+        val index = eventsDir.walkTopDown().filter { it.isFile && it.extension == "json" }
+            .joinToString("\n") { it.relativeTo(eventsDir).invariantSeparatorsPath.removeSuffix(".json") }
         val repository = JsonEventRepository(
-            readFile = { path -> File(eventsDir, path.removePrefix("files/events/")).takeIf { it.isFile }?.readBytes() },
+            readFile = { path ->
+                val relative = path.removePrefix("files/events/")
+                if (relative == JsonEventRepository.INDEX) index.encodeToByteArray() else File(eventsDir, relative).takeIf { it.isFile }?.readBytes()
+            },
             clock = Clock { SystemClock.System.todayIn(TimeZone.currentSystemDefault()) },
         )
         val report = repository.load()

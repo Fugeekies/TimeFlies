@@ -1,0 +1,79 @@
+[
+  {
+    "id": "single-respect-aretha-franklin-1967",
+    "date": "1967-04-29",
+    "title": {
+      "fr": "Respect (Aretha Franklin)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Respect_(chanson_d'Otis_Redding)",
+    "note": "Sortie de la reprise d'Aretha Franklin selon la seconde infobox de l'article. Wikidata Q2030651 décrit la version d'Otis Redding (1965) : pas de date pour la reprise."
+  },
+  {
+    "id": "single-like-a-virgin-1984",
+    "date": "1984-11-06",
+    "title": {
+      "fr": "Like a Virgin (Madonna)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Like_a_Virgin_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q542497 : même date."
+  },
+  {
+    "id": "single-i-will-always-love-you-1992",
+    "date": "1992-11-03",
+    "title": {
+      "fr": "I Will Always Love You (Whitney Houston)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/I_Will_Always_Love_You",
+    "note": "Sortie de la version de Whitney Houston selon la seconde infobox de l'article. Wikidata Q666856 : année de la version originale seulement (1974)."
+  },
+  {
+    "id": "single-believe-1998",
+    "date": "1998-10-19",
+    "title": {
+      "fr": "Believe (Cher)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Believe_(chanson_de_Cher)",
+    "note": "Sortie selon l'infobox. Wikidata Q2639231 donne une autre date : 1998-10-18."
+  },
+  {
+    "id": "single-baby-one-more-time-1998",
+    "date": "1998-10-23",
+    "title": {
+      "fr": "…Baby One More Time (Britney Spears)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/...Baby_One_More_Time_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q155016 : même date."
+  },
+  {
+    "id": "single-crazy-in-love-2003",
+    "date": "2003-05-14",
+    "title": {
+      "fr": "Crazy in Love (Beyoncé)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Crazy_in_Love",
+    "note": "Sortie selon l'infobox. Wikidata Q148511 : mois seulement (mai 2003)."
+  },
+  {
+    "id": "single-single-ladies-2008",
+    "date": "2008-10-08",
+    "title": {
+      "fr": "Single Ladies (Put a Ring on It) (Beyoncé)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Single_Ladies_(Put_a_Ring_on_It)",
+    "note": "Première sortie (radio) selon l'infobox. Wikidata Q147409 : année seulement."
+  }
+]

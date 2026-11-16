@@ -33,7 +33,7 @@
 
 Les benchmarks mesurent le chargement de la base et le calcul de chaque page, sur les fichiers réels et sur des jeux synthétiques de 500 à 10 000 événements. Le rapport s'écrit dans `src/benchmarks/build/reports/benchmarks/performance-report.md` ; une PR qui touche au chargement des données ou au calcul d'une page en committe une copie dans `docs/benchmarks/`. Les durées dépendent de la machine : comparer des rapports faits sur le même PC (ou sur la CI).
 
-Le test `RealEventFilesTest` lit les vrais fichiers de `src/ui/src/commonMain/composeResources/files/events/` : une entrée invalide le fait échouer, avec la liste des raisons ; la couverture (événements par thème, jours sans anniversaire, types trop pauvres) s'affiche dans la sortie du test.
+Le test `RealEventFilesTest` lit les vrais fichiers de `assets/events/` (chemins compris : famille, type, origine) : une entrée invalide le fait échouer, avec la liste des raisons ; la couverture (événements par thème, jours sans anniversaire, types trop pauvres) s'affiche dans la sortie du test.
 
 Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut afficher « Failed to choose DirectX12 adapter » puis « Fallback to next API » : il bascule simplement vers un autre moteur graphique, sans conséquence.
 

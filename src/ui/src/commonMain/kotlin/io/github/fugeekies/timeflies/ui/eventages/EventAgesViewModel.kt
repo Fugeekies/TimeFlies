@@ -59,9 +59,9 @@ class EventAgesViewModel(
 
     private val query = MutableStateFlow("")
 
-    /** Every event by family for [cachedRegion], read once per region. */
+    /** Every event by family for [cachedKey], read once per region and event filter. */
     private var cachedByFamily: Map<Family, List<Event>>? = null
-    private var cachedRegion: Region? = null
+    private var cachedKey: Pair<Region, Set<String>>? = null
 
     init {
         start()
@@ -77,9 +77,11 @@ class EventAgesViewModel(
 
     private suspend fun load(people: GenerationsUiState, text: String) {
         val region = people.settings.region
-        val byFamily = cachedByFamily.takeIf { cachedRegion == region } ?: runCatchingLogged { searchEvents.byFamily(region) }?.also {
+        // The event filter changes the list too: unticked groups are no longer in it (decision of 16/11/2026).
+        val key = region to people.settings.excludedEventGroups
+        val byFamily = cachedByFamily.takeIf { cachedKey == key } ?: runCatchingLogged { searchEvents.byFamily(region) }?.also {
             cachedByFamily = it
-            cachedRegion = region
+            cachedKey = key
         }
         val results = if (text.trim().length < SearchEvents.MIN_QUERY_LENGTH) null else runCatchingLogged { searchEvents.search(text, region) }
         fun line(event: Event) = EventLine(event, people.userBirth?.let { getEventAges(event, it, people.otherBirth, region) })

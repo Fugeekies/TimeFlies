@@ -1,0 +1,13 @@
+[
+  {
+    "id": "film-le-voyage-de-chihiro-2002",
+    "date": "2002-04-10",
+    "title": {
+      "fr": "Le Voyage de Chihiro"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Voyage_de_Chihiro",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q155653 : pas de date française."
+  }
+]

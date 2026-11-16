@@ -1,0 +1,24 @@
+[
+  {
+    "id": "single-coco-jamboo-1996",
+    "date": "1996-03-29",
+    "title": {
+      "fr": "Coco Jamboo (Mr. President)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coco_Jamboo",
+    "note": "Sortie selon l'infobox. Wikidata Q2918656 : même date."
+  },
+  {
+    "id": "single-mambo-no-5-1999",
+    "date": "1999-04-19",
+    "title": {
+      "fr": "Mambo No. 5 (Lou Bega)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mambo_No._5",
+    "note": "Première sortie (Allemagne) de la version de Lou Bega selon l'infobox. Wikidata Q705575 décrit l'original de Pérez Prado (1949)."
+  }
+]

@@ -28,6 +28,7 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
+import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
@@ -120,6 +121,7 @@ fun App(
     updateSettings: UpdateSettings,
     completeOnboarding: CompleteOnboarding,
     countEvents: CountEvents,
+    getEventGroups: GetEventGroups,
     clock: Clock,
     appVersion: String? = null,
     debugTools: DebugTools? = null,
@@ -139,11 +141,11 @@ fun App(
                 // A screen asked from the tray waits for nothing: the first launch screen comes first.
                 LaunchedEffect(platform.screenRequest) { if (platform.screenRequest != null) platform.onScreenRequestHandled() }
                 Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
-                    OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
+                    OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, getEventGroups, clock) }, content)
                 }
             } else {
                 MainScreens(
-                    getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock,
+                    getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, getEventGroups, clock,
                     appVersion, debugTools, platform, releaseUpdates, themeMode, onThemeMode = { themeMode = it },
                 )
             }
@@ -160,6 +162,7 @@ private fun MainScreens(
     observeSettings: ObserveSettings,
     updateSettings: UpdateSettings,
     countEvents: CountEvents,
+    getEventGroups: GetEventGroups,
     clock: Clock,
     appVersion: String?,
     debugTools: DebugTools?,
@@ -210,7 +213,7 @@ private fun MainScreens(
                 )
             }
             Destination.SETTINGS -> SettingsScreen(
-                viewModel { SettingsViewModel(observeSettings, updateSettings, countEvents, clock) },
+                viewModel { SettingsViewModel(observeSettings, updateSettings, countEvents, getEventGroups, clock) },
                 appVersion,
                 content,
                 showWindowsPanel = platform.showWindowsPanel,

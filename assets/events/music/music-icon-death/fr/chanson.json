@@ -1,0 +1,79 @@
+[
+  {
+    "id": "death-edith-piaf-1963",
+    "date": "1963-10-10",
+    "title": {
+      "fr": "Édith Piaf"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/%C3%89dith_Piaf",
+    "note": "Date de décès de l'infobox. Wikidata Q1631 donne deux dates : 1963-10-10 et 1963-10-11 (annonce officielle le 11)."
+  },
+  {
+    "id": "death-claude-francois-1978",
+    "date": "1978-03-11",
+    "title": {
+      "fr": "Claude François"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Claude_Fran%C3%A7ois",
+    "note": "Date de décès de l'infobox. Wikidata Q365985 : même date."
+  },
+  {
+    "id": "death-daniel-balavoine-1986",
+    "date": "1986-01-14",
+    "title": {
+      "fr": "Daniel Balavoine"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Daniel_Balavoine",
+    "note": "Date de décès de l'infobox. Wikidata Q1802 : même date."
+  },
+  {
+    "id": "death-dalida-1987",
+    "date": "1987-05-03",
+    "title": {
+      "fr": "Dalida"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Dalida",
+    "note": "Date de décès de l'infobox. Wikidata Q539171 : même date."
+  },
+  {
+    "id": "death-serge-gainsbourg-1991",
+    "date": "1991-03-02",
+    "title": {
+      "fr": "Serge Gainsbourg"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Serge_Gainsbourg",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q1698 : même date."
+  },
+  {
+    "id": "death-france-gall-2018",
+    "date": "2018-01-07",
+    "title": {
+      "fr": "France Gall"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/France_Gall",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q208258 : même date."
+  },
+  {
+    "id": "death-charles-aznavour-2018",
+    "date": "2018-10-01",
+    "title": {
+      "fr": "Charles Aznavour"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Charles_Aznavour",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q1785 : même date."
+  }
+]

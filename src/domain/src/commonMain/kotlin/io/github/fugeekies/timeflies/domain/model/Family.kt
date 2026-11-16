@@ -1,14 +1,21 @@
 package io.github.fugeekies.timeflies.domain.model
 
 /**
- * Theme an event belongs to. Drives the theme filters of the Equivalences screen and the
- * split of the event files (one file per family, see docs/EVENTS_DATA.md).
+ * Theme an event belongs to. Drives the theme filters of the Equivalences screen and the first folder of the event
+ * base (assets/events/<family>/…, docs/EVENTS_DATA.md).
+ *
+ * @property id the folder name: "series", "cinema", "games-tech"…
  */
-enum class Family(val fileName: String) {
-    SERIES_TV("series.json"),
-    CINEMA("cinema.json"),
-    MUSIC("music.json"),
-    SPORT("sport.json"),
-    GAMES_TECH("games-tech.json"),
-    HISTORY("history.json"),
+enum class Family(val id: String) {
+    SERIES_TV("series"),
+    CINEMA("cinema"),
+    MUSIC("music"),
+    SPORT("sport"),
+    GAMES_TECH("games-tech"),
+    HISTORY("history"),
+    ;
+
+    companion object {
+        fun fromId(id: String): Family? = entries.firstOrNull { it.id == id }
+    }
 }

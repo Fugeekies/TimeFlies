@@ -37,15 +37,17 @@ class PerformanceBenchmarks {
     private fun repository(files: Map<String, ByteArray>) =
         JsonEventRepository(readFile = { path -> files[path] }, clock = clock)
 
+    /** The real base of assets/events, with the index the build writes. */
     private fun realFiles(): Map<String, ByteArray> {
         val dir = File(System.getProperty("timeflies.eventsDir") ?: error("timeflies.eventsDir is not set"))
-        return Family.entries.mapNotNull { family ->
-            File(dir, family.fileName).takeIf { it.isFile }?.let { "files/events/${family.fileName}" to it.readBytes() }
-        }.toMap()
+        val paths = dir.walkTopDown().filter { it.isFile && it.extension == "json" }
+            .map { it.relativeTo(dir).invariantSeparatorsPath.removeSuffix(".json") }.sorted().toList()
+        return paths.associate { "files/events/$it.json" to File(dir, "$it.json").readBytes() } +
+            ("files/events/index.txt" to paths.joinToString("\n").encodeToByteArray())
     }
 
     private fun syntheticFiles(count: Int): Map<String, ByteArray> =
-        SyntheticEvents.files(count).mapKeys { (family, _) -> "files/events/${family.fileName}" }
+        SyntheticEvents.files(count)
 
     private class Section(val title: String, val details: String, val rows: List<Measurement>)
 

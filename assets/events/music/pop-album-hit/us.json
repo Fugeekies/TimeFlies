@@ -1,0 +1,57 @@
+[
+  {
+    "id": "album-thriller-1982",
+    "date": "1982-11-30",
+    "title": {
+      "fr": "Thriller (Michael Jackson)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Thriller_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q44320 : même date."
+  },
+  {
+    "id": "album-born-in-the-usa-1984",
+    "date": "1984-06-04",
+    "title": {
+      "fr": "Born in the U.S.A. (Bruce Springsteen)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Born_in_the_U.S.A.",
+    "note": "Sortie selon l'infobox. Wikidata Q40425 : même date."
+  },
+  {
+    "id": "album-like-a-prayer-1989",
+    "date": "1989-03-21",
+    "title": {
+      "fr": "Like a Prayer (Madonna)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Like_a_Prayer_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q252447 : même date."
+  },
+  {
+    "id": "album-nevermind-1991",
+    "date": "1991-09-24",
+    "title": {
+      "fr": "Nevermind (Nirvana)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nevermind",
+    "note": "Sortie selon l'infobox. Wikidata Q17444 : même date."
+  },
+  {
+    "id": "album-1989-2014",
+    "date": "2014-10-27",
+    "title": {
+      "fr": "1989 (Taylor Swift)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/1989_(album)",
+    "note": "Sortie selon l'infobox et l'introduction. Wikidata Q17544553 : même date."
+  }
+]

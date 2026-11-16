@@ -1,0 +1,13 @@
+[
+  {
+    "id": "album-random-access-memories-2013",
+    "date": "2013-05-17",
+    "title": {
+      "fr": "Random Access Memories (Daft Punk)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Random_Access_Memories",
+    "note": "Première sortie selon l'infobox. Wikidata Q8119033 : même date pour les premiers pays (2013-05-20 en France)."
+  }
+]

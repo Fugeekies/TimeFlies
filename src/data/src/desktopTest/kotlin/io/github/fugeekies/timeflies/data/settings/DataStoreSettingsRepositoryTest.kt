@@ -77,7 +77,7 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 4" in text, text)
+        assertTrue("\"version\": 5" in text, text)
         assertTrue("youngAge" !in text, "the version 1 field is no longer written")
     }
 
@@ -99,6 +99,16 @@ class DataStoreSettingsRepositoryTest {
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
         assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")
+    }
+
+    @Test
+    fun keepsTheEventFilter() = runBlocking {
+        val excluded = setOf("music/rap-album-hit/us", "music/music-icon-death/us/rap")
+        open().update { it.copy(excludedEventGroups = excluded) }
+        assertEquals(excluded, open().settings.first().excludedEventGroups)
+        // A version 4 file (before the filter) shows everything.
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 4, "onboardingDone": true}""") }
+        assertEquals(emptySet(), open().settings.first().excludedEventGroups)
     }
 
     @Test

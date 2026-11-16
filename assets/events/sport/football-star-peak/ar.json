@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sport-maradona-argentine-angleterre-1986",
+    "date": "1986-06-22",
+    "title": {
+      "fr": "La « main de Dieu » de Maradona (Argentine-Angleterre, Coupe du monde 1986)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Match_de_football_Argentine_-_Angleterre_(1986)",
+    "note": "Date du match donnée par l'infobox. Wikidata Q4493724 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2009",
+    "date": "2009-12-01",
+    "title": {
+      "fr": "Premier Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2009",
+    "note": "Date de l'annonce donnée par l'article. Wikidata Q805316 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2012",
+    "date": "2013-01-07",
+    "title": {
+      "fr": "Quatrième Ballon d'or de Lionel Messi (édition 2012)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2012",
+    "note": "Date de la cérémonie donnée par l'article. Wikidata Q218551 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2015",
+    "date": "2016-01-11",
+    "title": {
+      "fr": "Cinquième Ballon d'or de Lionel Messi (édition 2015)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2015",
+    "note": "Date de la cérémonie donnée par l'infobox et l'article. Wikidata Q20978666 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2019",
+    "date": "2019-12-02",
+    "title": {
+      "fr": "Sixième Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2019",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q67165185 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2021",
+    "date": "2021-11-29",
+    "title": {
+      "fr": "Septième Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2021",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q108839629 : même date."
+  },
+  {
+    "id": "sport-messi-champion-du-monde-2022",
+    "date": "2022-12-18",
+    "title": {
+      "fr": "Messi champion du monde (finale de la Coupe du monde 2022)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2022",
+    "note": "Date du match donnée par l'infobox. Wikidata Q55620455 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-messi-2023",
+    "date": "2023-10-30",
+    "title": {
+      "fr": "Huitième Ballon d'or de Lionel Messi"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2023",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q118525481 : même date."
+  }
+]

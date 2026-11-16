@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2008",
+    "date": "2008-12-02",
+    "title": {
+      "fr": "Premier Ballon d'or de Cristiano Ronaldo"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2008",
+    "note": "Date d'attribution donnée par l'article. Wikidata Q805311 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2013",
+    "date": "2014-01-13",
+    "title": {
+      "fr": "Deuxième Ballon d'or de Cristiano Ronaldo (édition 2013)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2013",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q15114097 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2014",
+    "date": "2015-01-12",
+    "title": {
+      "fr": "Troisième Ballon d'or de Cristiano Ronaldo (édition 2014)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2014",
+    "note": "Date de la cérémonie donnée par l'infobox et l'article. Wikidata Q18346574 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2016",
+    "date": "2016-12-12",
+    "title": {
+      "fr": "Quatrième Ballon d'or de Cristiano Ronaldo"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2016",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q27534060 : année seulement."
+  },
+  {
+    "id": "sport-ballon-d-or-cristiano-ronaldo-2017",
+    "date": "2017-12-07",
+    "title": {
+      "fr": "Cinquième Ballon d'or de Cristiano Ronaldo"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2017",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q41737689 : même date."
+  }
+]

@@ -36,8 +36,8 @@ class TrayUpdater(
 ) {
     private val log = Logger.withTag("Tray")
 
-    /** Day and region of the tooltip shown, to recompute it only when one of them changes. */
-    private var tooltipFor: Pair<LocalDate, Region>? = null
+    /** Day, region and event filter of the tooltip shown, to recompute it only when one of them changes. */
+    private var tooltipFor: Triple<LocalDate, Region, Set<String>>? = null
 
     /** Runs until cancelled, when the app quits. */
     suspend fun run(tray: WindowsTray) {
@@ -52,7 +52,8 @@ class TrayUpdater(
 
     private suspend fun check(tray: WindowsTray) {
         guarded("L'icône n'a pas pu être mise à jour") {
-            val key = clock.today() to observeSettings().first().region
+            val settings = observeSettings().first()
+            val key = Triple(clock.today(), settings.region, settings.excludedEventGroups)
             if (key != tooltipFor) {
                 tray.setTooltip(ShockMessages.tooltip(sendMorningNotification.now()))
                 tooltipFor = key

@@ -1,18 +1,17 @@
 package io.github.fugeekies.timeflies.data.events
 
-import io.github.fugeekies.timeflies.domain.model.Family
-
 /**
  * An entry of an event file that was left out, with every reason found.
  *
- * @property index position of the entry in its file, starting at 0 (-1 when the whole file is unreadable).
+ * @property file path of the file in the base, without ".json" ("music/rap-album-hit/us").
+ * @property index position of the entry in its file, starting at 0 (-1 when the whole file is rejected).
  */
 data class Rejection(
-    val family: Family,
+    val file: String,
     val index: Int,
     val id: String?,
     val reasons: List<String>,
 ) {
     override fun toString(): String =
-        "${family.fileName}[${index}]${id?.let { " ($it)" } ?: ""}: ${reasons.joinToString("; ")}"
+        "$file.json[${index}]${id?.let { " ($it)" } ?: ""}: ${reasons.joinToString("; ")}"
 }

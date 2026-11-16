@@ -1,0 +1,13 @@
+[
+  {
+    "id": "single-gangnam-style-2012",
+    "date": "2012-07-15",
+    "title": {
+      "fr": "Gangnam Style (Psy)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Gangnam_Style",
+    "note": "Sortie selon l'infobox. Wikidata Q890 : même date."
+  }
+]

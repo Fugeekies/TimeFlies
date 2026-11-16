@@ -17,6 +17,8 @@ import kotlinx.datetime.YearMonth
  *   left, true puts the user on the left.
  * @property equivalenceFamilies themes ticked on the Equivalences screen (all by default).
  * @property windows the Windows panel: notification, startup and tray.
+ * @property excludedEventGroups paths of the event groups the user unticked ("music/rap-album-hit/us", see
+ *   [EventGroup.path]): left out everywhere, as if not in the base (decision of 16/11/2026). Empty: everything.
  */
 data class Settings(
     val birth: YearMonth? = null,
@@ -27,6 +29,7 @@ data class Settings(
     val equivalenceFamilies: Set<Family> = Family.entries.toSet(),
     val windows: WindowsSettings = WindowsSettings(),
     val releaseCheck: ReleaseCheck = ReleaseCheck(),
+    val excludedEventGroups: Set<String> = emptySet(),
 )
 
 /**
