@@ -20,13 +20,22 @@ dependencies {
     implementation(libs.kotlinx.coroutines.swing)
 }
 
+// Version of a release, given by release.yml (`-Ptimeflies.version=1.2.3`); none for a local build.
+val releaseVersion: String? = providers.gradleProperty("timeflies.version").orNull
+
 compose.desktop {
     application {
         mainClass = "io.github.fugeekies.timeflies.desktop.MainKt"
+        // Shown in Settings › À propos ("TimeFlies v1.2.3"); absent from a local build.
+        releaseVersion?.let { jvmArgs += "-Dtimeflies.version=$it" }
         nativeDistributions {
-            targetFormats(TargetFormat.Msi)
+            // `createDistributable` only: an app folder (jpackage app-image, its own Java inside), packed by
+            // Inno Setup (scripts/installer.iss) as for LMU-DeltaRacing. No .msi, so no WiX.
+            targetFormats(TargetFormat.Exe)
             packageName = "TimeFlies"
-            packageVersion = "1.0.0"
+            // jpackage wants numbers: a local build, without a release version, is 1.0.0 and says
+            // "version de développement" in Settings since it gets no jpackage.app-version from a release.
+            packageVersion = releaseVersion ?: "1.0.0"
             windows {
                 // Installer, shortcuts and executable: the winged hourglass (assets/icon/, docs/UI_DESIGN_SPEC.md).
                 iconFile.set(rootProject.file("assets/icon/timeflies.ico"))

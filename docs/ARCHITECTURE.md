@@ -154,12 +154,14 @@ Kermit : Logcat sur Android ; console et fichier `%APPDATA%\TimeFlies\logs\` sur
   - « Tests et compilation » : `./gradlew check` (tests de `domain` et `data`, dont la validation de la base), puis compilation de `desktopApp` et de l'APK de débogage (installe la plateforme Android 37) ;
   - « Benchmarks » : `./gradlew :benchmarks:benchmark`, rapport dans le résumé du run et en artefact.
 - **Benchmarks** (`src/benchmarks`, module JVM, hors de `check`) : chargement complet de la base, requêtes de l'`EventRepository`, calcul de chaque page (Aujourd'hui pour l'instant), sur les fichiers réels et sur des jeux synthétiques de 500 à 10 000 événements. Purement informatifs : aucun seuil ne fait échouer la CI. Ils serviront à la décision des 5 000 événements.
-- **`release.yml`**, sur un tag `vX.Y.Z` :
-  - exécuteur Ubuntu : **APK** signée (`assembleRelease`), clé stable dans les secrets du dépôt (`ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`) ;
-  - exécuteur Windows : **installeur** `.msi` (`packageMsi` de Compose Desktop, basé sur jpackage), qui embarque son propre Java. jpackage a besoin de WiX pour un `.msi` : sa présence sur l'exécuteur GitHub est à vérifier au jalon ;
-  - publication des deux fichiers dans la release.
-- Le numéro de version vient du tag ; une compilation locale reste en `0.0.0-dev`.
-- L'installeur Windows n'est pas signé par un éditeur reconnu : Windows affiche « éditeur inconnu » au premier lancement. Le README l'explique.
+- **`release.yml`** (jalon 13, décision du 16/11/2026 : même méthode que LMU-DeltaRacing, sans WiX), **lancé à la main** depuis l'onglet Actions, sur `main`, avec le type de version (Majeur, Mineur, Patch) :
+  - la version suivante est calculée à partir du dernier tag `vX.Y.Z` ;
+  - exécuteur Ubuntu : `./gradlew check`, puis **APK** signée (`assembleRelease`), clé stable dans les secrets du dépôt (`ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`), signature vérifiée par `apksigner` ;
+  - exécuteur Windows : dossier de l'application par `createDistributable` de Compose Desktop (jpackage, avec son propre Java, sans WiX), empaqueté par **Inno Setup** (`scripts/installer.iss`) en `TimeFlies-X.Y.Z-Setup.exe`. Installation par utilisateur dans `%LOCALAPPDATA%\Programs\TimeFlies`, sans droits administrateur ; la désinstallation retire la valeur de démarrage Windows et garde `%APPDATA%\TimeFlies` ;
+  - publication : tag, release et notes tirées des PR fusionnées depuis la version précédente. Décocher « Publier » ne garde que les fichiers en artefacts, pour essayer.
+- **Numéro de version** : passé à Gradle par `-Ptimeflies.version=X.Y.Z`. Android : `versionName` X.Y.Z et `versionCode` X × 10 000 + Y × 100 + Z (toujours croissant, Android installe par-dessus et garde les réglages). Windows : version du lanceur et de l'installeur ; l'`AppId` fixe d'Inno Setup fait qu'une nouvelle version remplace l'ancienne. Une compilation locale n'a pas de version : Réglages affiche « version de développement ».
+- **Mises à jour** : à la main, depuis les Releases GitHub. Une vérification au démarrage reste une idée à prioriser (`ROADMAP.md`, « Liste d'idées »).
+- L'installeur Windows n'est pas signé par un éditeur reconnu : SmartScreen affiche « Windows a protégé votre ordinateur » au premier lancement. Le README et les notes de version l'expliquent.
 
 ## Versions minimales (décision du 13/11/2026)
 
