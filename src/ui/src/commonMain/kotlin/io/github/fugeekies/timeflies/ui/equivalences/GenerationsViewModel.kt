@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.onStart
+import io.github.fugeekies.timeflies.ui.dayChanges
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
 
@@ -86,7 +86,8 @@ abstract class GenerationsViewModel(
     /** Starts listening to the settings and the temporary ages; called by the subclass once it is built. */
     protected fun start() {
         viewModelScope.launch {
-            combine(observeSettings(), temporaryAges.ages, clock.manualChanges().onStart { emit(Unit) }) { settings, temporary, _ ->
+            // Ages and target dates move with the day: recomputed at midnight too, not only at the opening.
+            combine(observeSettings(), temporaryAges.ages, clock.dayChanges()) { settings, temporary, _ ->
                 generations(settings, temporary, clock.today())
             }
                 .catch { e -> log.e(e) { "Settings could not be read" } }

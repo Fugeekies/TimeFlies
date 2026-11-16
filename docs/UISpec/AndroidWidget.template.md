@@ -25,7 +25,7 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 * Couleurs du thème de l'application, clair ou sombre selon le système. Sur Android 12 et plus, coins arrondis du système.
 
 #### Mise à jour
-* Recalcul **chaque jour juste après minuit** (heure locale), par une tâche WorkManager périodique, plus un recalcul au démarrage du téléphone, au changement de date ou de fuseau horaire, et quand les réglages changent dans l'application.
+* Recalcul **chaque jour juste après minuit** (heure locale), par une tâche WorkManager unique replanifiée chaque nuit, plus un recalcul au démarrage du téléphone, au changement de date ou de fuseau horaire, et quand les réglages changent dans l'application.
 * Aucun accès réseau : la base est dans l'application.
 * Si Android retarde la tâche (économie de batterie), le widget se met à jour au plus tard à l'ouverture suivante de l'application.
 

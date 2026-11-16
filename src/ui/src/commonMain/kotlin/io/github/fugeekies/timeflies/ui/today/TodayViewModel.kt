@@ -9,25 +9,16 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.ui.dayChanges
 import kotlinx.coroutines.CancellationException
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
-import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.atStartOfDayIn
-import kotlinx.datetime.plus
-import kotlinx.datetime.todayIn
-import kotlin.time.Clock as KotlinClock
-import kotlin.time.Duration.Companion.seconds
 
 sealed interface TodayUiState {
     data object Loading : TodayUiState
@@ -52,20 +43,12 @@ class TodayViewModel(
 
     init {
         viewModelScope.launch {
-            combine(observeSettings(), days(), clock.manualChanges().onStart { emit(Unit) }) { settings, _, _ -> settings }
+            combine(observeSettings(), clock.dayChanges()) { settings, _ -> settings }
                 .catch { e ->
                     log.e(e) { "Settings could not be read" }
                     _state.value = TodayUiState.Error
                 }
                 .collectLatest { load(it) }
-        }
-    }
-
-    /** Today's date, then the new date one second past each midnight. */
-    private fun days() = flow<LocalDate> {
-        while (true) {
-            emit(clock.today())
-            delay(untilNextDay())
         }
     }
 
@@ -87,13 +70,5 @@ class TodayViewModel(
 
     fun onDeveloped(day: LocalDate) {
         developedOn = day
-    }
-
-    private fun untilNextDay() = run {
-        val zone = TimeZone.currentSystemDefault()
-        // The system midnight, not the one of clock.today(): a fake date of the debug panel does not move on its own.
-        val nextMidnight = KotlinClock.System.todayIn(zone).plus(1, DateTimeUnit.DAY).atStartOfDayIn(zone)
-        // One second past midnight, and never less than a second, so the new day is always seen.
-        maxOf((nextMidnight - KotlinClock.System.now()) + 1.seconds, 1.seconds)
     }
 }

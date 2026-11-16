@@ -22,13 +22,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
-import kotlinx.datetime.DateTimeUnit
+import io.github.fugeekies.timeflies.domain.rules.Midnight
 import kotlinx.datetime.TimeZone
-import kotlinx.datetime.atStartOfDayIn
-import kotlinx.datetime.plus
-import kotlinx.datetime.todayIn
 import java.util.concurrent.TimeUnit
 import kotlin.time.Clock as KotlinClock
+import kotlin.time.Duration.Companion.minutes
 
 /** Declared in the manifest: the system asks it to draw the widget. */
 class TimeFliesWidgetReceiver : GlanceAppWidgetReceiver() {
@@ -73,9 +71,7 @@ object WidgetUpdates {
      * REPLACE moves it (date or time zone changed), APPEND_OR_REPLACE chains it after the running one (the worker).
      */
     fun scheduleMidnight(context: Context, policy: ExistingWorkPolicy) {
-        val zone = TimeZone.currentSystemDefault()
-        val next = KotlinClock.System.todayIn(zone).plus(1, DateTimeUnit.DAY).atStartOfDayIn(zone)
-        val delayMillis = (next - KotlinClock.System.now()).inWholeMilliseconds + 60_000
+        val delayMillis = Midnight.delayUntilNext(KotlinClock.System.now(), TimeZone.currentSystemDefault(), margin = 1.minutes).inWholeMilliseconds
         val request = OneTimeWorkRequestBuilder<MidnightWorker>().setInitialDelay(delayMillis, TimeUnit.MILLISECONDS).build()
         WorkManager.getInstance(context).enqueueUniqueWork(MIDNIGHT_WORK, policy, request)
     }

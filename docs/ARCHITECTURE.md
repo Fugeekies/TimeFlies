@@ -26,8 +26,8 @@ Les cinq modules sont rangés dans `src/` (`src/domain`, `src/data`, `src/ui`, `
                 ▼                                 ▼ (implémente)
    ┌──────────────────────────── domain ────────────────────────────┐
    │ entités : Event, EventType, Settings, Generations              │
-   │ cas d'usage : GetDailyShock, GetEquivalences, FindEquivalent,  │
-   │               UpdateSettings                                    │
+   │ cas d'usage : GetDailyShock, GetEquivalences, GetEventAges,    │
+   │               SearchEvents, UpdateSettings…                     │
    │ ports (interfaces) : EventRepository, SettingsRepository, Clock │
    └─────────────────────────────────────────────────────────────────┘
 ```
@@ -36,7 +36,7 @@ Les cinq modules sont rangés dans `src/` (`src/domain`, `src/data`, `src/ui`, `
 
 | Module | Contient | Dépend de |
 |---|---|---|
-| `domain` | Entités (`Event`, `EventType`, `Family`, `Settings`, `Generations`), **ports** (`EventRepository`, `SettingsRepository`, `Clock`, `DebugTools` pour le panneau de débogage), **cas d'usage** (`GetDailyShock`, `GetEquivalences`, `FindEquivalent`, `UpdateSettings`, `ObserveSettings`, `CompleteOnboarding`, `CountEvents`, `SendMorningNotification` pour Windows) et fonctions pures des règles (`Ages`, `Anniversaries`, `Equivalences`, `MorningNotification`, `WidgetSheets`). | `kotlinx-datetime`, `kotlinx-coroutines-core` |
+| `domain` | Entités (`Event`, `EventType`, `Family`, `Settings`, `Generations`), **ports** (`EventRepository`, `SettingsRepository`, `Clock`, `DebugTools` pour le panneau de débogage), **cas d'usage** (`GetDailyShock`, `GetEquivalences`, `GetEventAges`, `SearchEvents`, `UpdateSettings`, `ObserveSettings`, `CompleteOnboarding`, `CountEvents`, `SendMorningNotification` pour Windows) et fonctions pures des règles (`Ages`, `Anniversaries`, `Equivalences`, `MorningNotification`, `WidgetSheets`, `Midnight`). | `kotlinx-datetime`, `kotlinx-coroutines-core` |
 | `data` | Implémentations des ports : `JsonEventRepository` (lecture, validation, index), `DataStoreSettingsRepository`, `SystemClock`, et pour les versions de débogage seulement `AdjustableClock` (fausse date) et `DataDebugTools`. Tout en `commonMain`. | `domain`, `kotlinx-serialization-json`, DataStore |
 | `ui` | Écrans Compose, ViewModels, thème (jetons par style), ressources (`composeResources/` : textes, polices, fichiers d'événements). Les ViewModels n'appellent **que des cas d'usage**. | `domain`, Compose Multiplatform |
 | `androidApp` | `AppGraph` (assemblage), `MainActivity`, widget Glance, Workers, `BroadcastReceiver` de date et de démarrage. | `domain`, `data`, `ui` |
@@ -70,9 +70,9 @@ Les versions sont celles de la dernière stable au moment du jalon, figées dans
 
 ## Flux de données
 
-1. Au démarrage, `JsonEventRepository` lit les fichiers d'événements sur `Dispatchers.Default`, valide chaque entrée et construit les index en mémoire (voir « Base d'événements »). Une entrée invalide fait échouer les tests ; en production, elle est écartée et journalisée.
+1. Au premier usage, `JsonEventRepository` lit les fichiers d'événements sur `Dispatchers.Default` (jamais sur le thread de l'interface, test `JsonEventRepositoryThreadTest`), valide chaque entrée et construit les index en mémoire (voir « Base d'événements »). Une entrée invalide fait échouer les tests ; en production, elle est écartée et journalisée.
 2. `SettingsRepository.settings: Flow<Settings>` fournit les réglages.
-3. `Clock.today()` donne la date du jour, dans le **fuseau horaire de l'appareil** ; chaque ViewModel concerné attend le minuit local suivant (de l'horloge système) pour recalculer, et `Clock.manualChanges()` signale une fausse date changée à la main dans le panneau de débogage (jalon 6, 15/11/2026).
+3. `Clock.today()` donne la date du jour, dans le **fuseau horaire de l'appareil** ; chaque ViewModel qui dépend de la date (Aujourd'hui, Équivalences, « Quel âge ? », Réglages) recalcule une seconde après chaque minuit local de l'horloge système (`dayChanges()` dans `ui`, règle `Midnight` de `domain`), et `Clock.manualChanges()` signale une fausse date changée à la main dans le panneau de débogage (jalon 6, 15/11/2026).
 4. Chaque ViewModel combine réglages, date du jour et **âges à la volée** (un `MutableStateFlow` gardé par `AppGraph`, jamais écrit sur disque) et appelle les cas d'usage.
 
 Exemple, le coup de vieux du jour :
@@ -128,7 +128,7 @@ Une seule implémentation pour les deux plateformes : DataStore (`datastore-core
 | Plateforme | Fichier | Contenu |
 |---|---|---|
 | Android | `settings.json` dans le dossier privé de l'application | mois et année de naissance, âge de l'autre personne, région, style, thèmes et sens de l'écran Équivalences, premier lancement terminé |
-| Windows | `%APPDATA%\TimeFlies\settings.json` | les mêmes, plus l'heure de la notification, le lancement au démarrage, la taille et la position de la fenêtre, la date de la dernière notification |
+| Windows | `%APPDATA%\TimeFlies\settings.json` | les mêmes, plus le panneau Windows (objet `windows`, version 3) : lancement au démarrage, notification du matin et son heure, garder dans la barre des tâches, date de la dernière notification. La taille et la position de la fenêtre ne sont pas encore gardées |
 
 Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APPDATA%\TimeFlies` reste après une désinstallation : une réinstallation retrouve les réglages (décision du 13/11/2026).
 
@@ -141,8 +141,8 @@ Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APP
 
 ## Parties propres à chaque plateforme
 
-- **Widget Android (Glance)** : une tâche WorkManager unique replanifiée chaque jour juste après minuit local ; des `BroadcastReceiver` (`BOOT_COMPLETED`, `TIME_SET`, `TIMEZONE_CHANGED`) qui appellent `updateAll()` ; le bouton « suivant » est un `ActionCallback` qui garde la position dans l'état du widget.
-- **Windows** : `Tray` de Compose Desktop (icône, infobulle, menu) et `TrayState.sendNotification`. La notification du matin est planifiée par une coroutine qui attend la prochaine heure choisie ; au réveil du PC, la date de la dernière notification (dans les réglages) garantit un seul envoi par jour. Lancement au démarrage par la clé `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`, écrite avec `reg.exe`, sans droits administrateur.
+- **Widget Android (Glance, jalon 11)** : une tâche WorkManager unique (`widget-midnight`), planifiée une minute après le minuit local et replanifiée à chaque exécution ; un `BroadcastReceiver` (`BOOT_COMPLETED`, `TIME_SET`, `TIMEZONE_CHANGED`) qui recalcule le widget et replanifie minuit ; un recalcul quand les réglages ou la fausse date changent, et à chaque démarrage de l'application ; le bouton « suivant » est un `ActionCallback` qui garde la position dans l'état du widget.
+- **Windows (jalon 10)** : icône écrite sur le `TrayIcon` d'AWT (`WindowsTray`), que le `Tray` de Compose enveloppe, pour ouvrir la fenêtre d'un clic gauche simple ; notifications par `displayMessage`. `TrayUpdater` vérifie chaque minute si la notification du matin est due : après une veille, elle part dans la minute du réveil, et la date du dernier envoi (dans les réglages) garantit un seul envoi par jour. Lancement au démarrage par la valeur `TimeFlies` de `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`, écrite avec `reg.exe` par l'application installée, sans droits administrateur.
 
 ## Logs
 
