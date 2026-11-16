@@ -30,7 +30,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 
 ## Données
 
-- Base d'événements intégrée à l'application, sans connexion ni compte. Aucune donnée ne quitte l'appareil.
+- Base d'événements intégrée à l'application, sans compte. Aucune donnée personnelle ne quitte l'appareil. Seule connexion : la recherche d'une nouvelle version sur GitHub, une fois par jour au plus, désactivable (décision du 16/11/2026).
 - Chaque événement a une date **au jour près** et un **type** précis (sitcom culte, star du foot, mort d'une star de la musique, console…), qui sert à apparier les équivalences.
 - Une date doit être vérifiée avant d'être ajoutée : ne jamais inventer une date ou un événement.
 

@@ -49,7 +49,14 @@ android {
             applicationIdSuffix = ".debug"
         }
         release {
-            signingConfigs.findByName("release")?.let { signingConfig = it }
+            // R8 removes the unused code of the libraries: an APK of 11 MB in v0.1.0, mostly code (decision of
+            // 16/11/2026, docs/ARCHITECTURE.md "Distribution"). The libraries bring their own keep rules.
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            // Without the release key (a local build), the debug key: the reduced APK can be installed and tried
+            // on an emulator. release.yml stops before building when the key is missing.
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
 

@@ -10,6 +10,8 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
+import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
+import io.github.fugeekies.timeflies.data.release.GitHubReleases
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
@@ -54,6 +56,8 @@ class AppGraph(debug: Boolean) {
     val updateSettings = UpdateSettings(settings, clock)
     val completeOnboarding = CompleteOnboarding(settings, clock)
     val countEvents = CountEvents(events)
+    // New versions on GitHub (decision of 16/11/2026); a local build has no version and never asks.
+    val releaseUpdates = ReleaseUpdates(GitHubReleases(::httpText), settings, clock, System.getProperty("timeflies.version"))
     val sendMorningNotification = SendMorningNotification(getDailyShock, settings, clock)
     val debugTools: DebugTools? = adjustableClock?.let { DataDebugTools(it, settings, events) }
 }

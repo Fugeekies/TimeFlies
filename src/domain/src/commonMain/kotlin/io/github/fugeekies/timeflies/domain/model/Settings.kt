@@ -26,7 +26,27 @@ data class Settings(
     val equivalencesReversed: Boolean = false,
     val equivalenceFamilies: Set<Family> = Family.entries.toSet(),
     val windows: WindowsSettings = WindowsSettings(),
+    val releaseCheck: ReleaseCheck = ReleaseCheck(),
 )
+
+/**
+ * Looking for a new version at start (decision of 16/11/2026): one request to GitHub a day at most, without any
+ * personal data, and a banner on Today when a newer version exists.
+ *
+ * @property enabled the user can turn it off in Settings › À propos.
+ * @property lastCheck the day GitHub was last asked.
+ * @property latest the latest version GitHub gave, kept so the banner shows without asking again.
+ * @property dismissedVersion "Plus tard" on the banner of this version: it comes back with the next one only.
+ */
+data class ReleaseCheck(
+    val enabled: Boolean = true,
+    val lastCheck: LocalDate? = null,
+    val latest: AppRelease? = null,
+    val dismissedVersion: String? = null,
+)
+
+/** A published version: "1.2.0" and the page of its release. */
+data class AppRelease(val version: String, val url: String)
 
 /**
  * Settings of the Windows tray icon and morning notification (docs/UISpec/WindowsTray.template.md), defaults

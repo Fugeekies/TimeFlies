@@ -87,13 +87,14 @@ Une destination « Débogage » (icône de clé), présente uniquement dans les 
 ### 5 bis. Icône de la barre des tâches et démarrage Windows (jalon 10)
 - L'icône et la notification marchent aussi lancées depuis Gradle. En débogage (`-Dtimeflies.debug=true`, donc F5), **fermer la fenêtre quitte l'application** : cachée dans la barre des tâches, elle garderait le port 5005 du débogueur et le lancement suivant échouerait aussitôt. Lancée sans cette option, elle suit le réglage « Garder TimeFlies dans la barre des tâches » : clic gauche sur l'icône pour la rouvrir, clic droit › Quitter pour l'arrêter.
 - Si F5 ne lance plus rien, une ancienne instance tient sans doute le port : `Get-NetTCPConnection -LocalPort 5005` donne son numéro de processus, à arrêter avec `Stop-Process -Id <numéro>`.
+- **Une seule instance** (décision du 16/11/2026) : un TimeFlies installé et lancé (dans la barre des tâches) empêche le lancement de débogage, qui se contente de ramener sa fenêtre et s'arrête. Quitter TimeFlies (clic droit sur l'icône › Quitter) avant F5. Le verrou est `%APPDATA%TimeFliesinstance.lock`.
 - **Lancement au démarrage** : la valeur `TimeFlies` de `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` n'est écrite (ou retirée) que par l'application installée, qui connaît le chemin de son exécutable (`jpackage.app-path`) ; lancée depuis Gradle, elle l'écrit seulement dans les logs. Windows la lance avec l'argument `--background` : fenêtre cachée, icône seule. Vérifier avec `reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v TimeFlies`.
 - Notification du matin : vérifiée chaque minute ; la date du dernier envoi est dans `settings.json` (`windows.lastNotificationDate`). La supprimer à la main, ou choisir une heure déjà passée après avoir effacé cette date, fait repartir la notification du jour.
 
 ### 6. Logs et plantages
 - Kermit : Logcat sur Android ; console et `%APPDATA%\TimeFlies\logs\timeflies-AAAA-MM-JJ.log` sur Windows (un fichier par jour, les 7 derniers jours gardés). Niveau `Debug` en débogage, `Info` sinon.
 - **Aucune donnée personnelle** dans les logs (ni mois ni année de naissance) : un fichier de réglages illisible est signalé par le nom de l'erreur seulement, son message pouvant citer le fichier.
-- Pas d'outil de rapport de plantage en ligne (l'application n'a aucune connexion) : une exception non rattrapée est écrite dans les logs (étiquette `Crash`) avant l'arrêt, à joindre à la main à une issue GitHub.
+- Pas d'outil de rapport de plantage en ligne (aucune donnée n'est envoyée, la seule connexion cherche les nouvelles versions) : une exception non rattrapée est écrite dans les logs (étiquette `Crash`) avant l'arrêt, à joindre à la main à une issue GitHub.
 - La console Windows peut afficher les accents de travers (page de code) ; le fichier est en UTF-8.
 
 ## Releases
@@ -109,11 +110,13 @@ Avant de publier, passer la section `## [Unreleased]` du `CHANGELOG.md` sous le 
 
 ### Construire en local
 ```bash
-./gradlew :androidApp:assembleRelease -Ptimeflies.version=0.1.0     # APK non signée sans les variables de la clé
+./gradlew :androidApp:assembleRelease -Ptimeflies.version=0.1.0     # APK réduite par R8, signée avec la clé de débogage sans les variables de la clé
 ./gradlew :desktopApp:createDistributable -Ptimeflies.version=0.1.0 # src/desktopApp/build/compose/binaries/main/app/TimeFlies/
 iscc /DAppVersion=0.1.0 scripts\installer.iss                       # output\TimeFlies-Setup.exe (Inno Setup 6 installé)
 ```
-Sans `-Ptimeflies.version`, l'application affiche « version de développement ».
+Sans `-Ptimeflies.version`, l'application affiche « version de développement » et ne cherche jamais de nouvelle version. Avec une version plus ancienne que la dernière publiée (`-Ptimeflies.version=0.0.9`), le bandeau « Nouvelle version » apparaît sur Aujourd'hui : c'est ainsi qu'il se teste.
+
+L'APK de release passe par **R8** (réduction du code, décision du 16/11/2026 : 11 Mo → 2,7 Mo). Après un changement de bibliothèque, l'installer sur l'émulateur (`adb install -r src/androidApp/build/outputs/apk/release/androidApp-release.apk`) et parcourir les écrans et le widget : une classe retirée à tort ne se voit qu'à l'exécution. Les règles propres à TimeFlies sont dans `src/androidApp/proguard-rules.pro`.
 
 ### Clé de signature Android (une seule fois)
 La même clé doit signer toutes les versions : sans elle, Android refuse d'installer une mise à jour par-dessus. Elle n'est jamais dans le dépôt.

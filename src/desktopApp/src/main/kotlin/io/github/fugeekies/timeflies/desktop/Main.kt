@@ -23,7 +23,9 @@ import io.github.fugeekies.timeflies.ui.AppScreen
 import io.github.fugeekies.timeflies.ui.PlatformHooks
 import io.github.fugeekies.timeflies.ui.text.ShockMessages
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -44,8 +46,11 @@ fun main(args: Array<String>) {
     val background = WindowsStartup.BACKGROUND_ARGUMENT in args
     Logging.setUp(debug)
     Logger.withTag("App").i { "TimeFlies démarre${if (debug) " (débogage)" else ""}${if (background) " (au démarrage de Windows)" else ""}" }
+    // One instance only, checked before anything opens the settings file (decision of 16/11/2026).
+    val showRequests = MutableStateFlow(0)
+    if (!SingleInstance.acquire(AppFolder.path().toFile(), showWindow = !background) { showRequests.update { it + 1 } }) return
     val graph = AppGraph(debug)
-    val trayUpdater = TrayUpdater(graph.sendMorningNotification, graph.observeSettings, graph.clock)
+    val trayUpdater = TrayUpdater(graph.sendMorningNotification, graph.observeSettings, graph.clock, graph.releaseUpdates)
     application {
         val scope = rememberCoroutineScope()
         val settings by remember { graph.observeSettings() }.collectAsState(initial = null)
@@ -77,8 +82,18 @@ fun main(args: Array<String>) {
             )
             trayReady = true
         }
-        // Without a notification area, the window must never stay hidden.
-        LaunchedEffect(trayReady) { if (trayReady && tray == null) visible = true }
+        // TimeFlies opened again from the Start menu or a shortcut: this window comes back instead of a second app.
+        LaunchedEffect(Unit) {
+            showRequests.collect { if (it > 0) show(if (visible) null else AppScreen.TODAY) }
+        }
+        // Without a notification area, the window must never stay hidden, and the tray loop does not look for
+        // new versions: the app does it once here.
+        LaunchedEffect(trayReady) {
+            if (trayReady && tray == null) {
+                visible = true
+                runCatching { graph.releaseUpdates.checkIfDue() }
+            }
+        }
         DisposableEffect(tray) {
             // The icon of this key: reading the state in onDispose would give the new icon and remove it at once.
             val current = tray
@@ -139,6 +154,7 @@ fun main(args: Array<String>) {
                 debugTools = graph.debugTools,
                 // Given by the release build only (desktopApp/build.gradle.kts); null says "version de développement".
                 appVersion = System.getProperty("timeflies.version"),
+                releaseUpdates = graph.releaseUpdates,
                 platform = PlatformHooks(
                     screenRequest = screenRequest,
                     onScreenRequestHandled = { screenRequest = null },

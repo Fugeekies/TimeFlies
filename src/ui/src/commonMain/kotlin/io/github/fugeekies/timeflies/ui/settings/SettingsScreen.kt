@@ -63,6 +63,8 @@ import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup_hel
 import io.github.fugeekies.timeflies.ui.resources.settings_morning_notification
 import io.github.fugeekies.timeflies.ui.resources.settings_notification_time
 import io.github.fugeekies.timeflies.ui.resources.settings_windows
+import io.github.fugeekies.timeflies.ui.resources.settings_release_check
+import io.github.fugeekies.timeflies.ui.resources.settings_release_check_help
 import io.github.fugeekies.timeflies.ui.resources.settings_widget
 import io.github.fugeekies.timeflies.ui.resources.settings_widget_add
 import io.github.fugeekies.timeflies.ui.resources.settings_widget_manual
@@ -136,7 +138,7 @@ fun SettingsScreen(
                 Panel { WindowsPanel(current.windows, viewModel) }
             }
             Eyebrow(stringResource(Res.string.settings_about))
-            Panel { AboutPanel(appVersion, current.eventCount) }
+            Panel { AboutPanel(appVersion, current.eventCount, current.releaseCheck, viewModel::onReleaseCheck) }
         }
     }
 }
@@ -252,7 +254,7 @@ private fun CheckRow(label: String, checked: Boolean, onChange: (Boolean) -> Uni
 }
 
 @Composable
-private fun AboutPanel(appVersion: String?, eventCount: Int?) {
+private fun AboutPanel(appVersion: String?, eventCount: Int?, releaseCheck: Boolean, onReleaseCheck: (Boolean) -> Unit) {
     val colors = MaterialTheme.colorScheme
     val uriHandler = LocalUriHandler.current
     Text(
@@ -285,5 +287,7 @@ private fun AboutPanel(appVersion: String?, eventCount: Int?) {
             TextButton(onClick = { uriHandler.openUri(url) }) { Text("${stringResource(label)} ›") }
         }
     }
+    CheckRow(stringResource(Res.string.settings_release_check), releaseCheck, onReleaseCheck)
+    Text(stringResource(Res.string.settings_release_check_help), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant, modifier = Modifier.padding(start = 48.dp))
     Text(stringResource(Res.string.about_privacy), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
 }

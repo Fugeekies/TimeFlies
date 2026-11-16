@@ -13,7 +13,7 @@ TimeFlies est une application **Android et Windows** qui donne des coups de vieu
 
 <p align="center"><img src="docs/maquettes/android/TodayPolaroid.png" alt="Aperçu de l'écran Aujourd'hui" width="260"> <img src="docs/maquettes/android/Equivalences.png" alt="Aperçu de l'écran Équivalences" width="260"></p>
 
-Aucun compte, aucune connexion : les événements sont intégrés à l'application et tes réglages restent sur ton appareil.
+Aucun compte, aucune donnée personnelle envoyée : les événements sont intégrés à l'application et tes réglages restent sur ton appareil. La seule connexion cherche une nouvelle version sur GitHub, une fois par jour au plus ; elle se désactive dans Réglages.
 
 ## État
 

@@ -9,6 +9,8 @@ import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.job
 import kotlinx.coroutines.runBlocking
+import io.github.fugeekies.timeflies.domain.model.AppRelease
+import io.github.fugeekies.timeflies.domain.model.ReleaseCheck
 import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
@@ -75,7 +77,7 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 3" in text, text)
+        assertTrue("\"version\": 4" in text, text)
         assertTrue("youngAge" !in text, "the version 1 field is no longer written")
     }
 
@@ -97,6 +99,21 @@ class DataStoreSettingsRepositoryTest {
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
         assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")
+    }
+
+    @Test
+    fun keepsTheCheckForNewVersions() = runBlocking {
+        val check = ReleaseCheck(
+            enabled = false,
+            lastCheck = LocalDate(2026, 11, 16),
+            latest = AppRelease("0.2.0", "https://github.com/Fugeekies/TimeFlies/releases/tag/v0.2.0"),
+            dismissedVersion = "0.2.0",
+        )
+        open().update { it.copy(releaseCheck = check) }
+        assertEquals(check, open().settings.first().releaseCheck)
+        // A version 3 file (before the check) gets it turned on, never asked yet.
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 3, "onboardingDone": true}""") }
+        assertEquals(ReleaseCheck(), open().settings.first().releaseCheck)
     }
 
     @Test

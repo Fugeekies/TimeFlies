@@ -83,7 +83,6 @@ La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [
 - Partager un coup de vieux en image.
 - Ajouter ses propres événements (souvenirs personnels).
 - Page de présentation sur GitHub Pages, comme LMU-DeltaRacing. Icône et favicon à reprendre d'`assets/icon/` (`timeflies-icon.svg` en favicon SVG, `timeflies-512.png`, `timeflies.ico`), image d'aperçu des réseaux sociaux comme celle du dépôt.
-- Vérification des nouvelles versions au démarrage (une seule requête vers GitHub, désactivable).
 
 ## Terminés
 
@@ -181,3 +180,10 @@ Décrire l'application avant de coder.
 - [x] Questions ouvertes tranchées (13/11/2026) ; maquettes Android et Windows (`docs/maquettes/`) ; style Polaroïd en V1.
 - [x] Clean Architecture, événements en JSON jusqu'à 5 000, guide de débogage (14/11/2026).
 - [x] Feuille de route : jalons courts, données par thème, releases à la fin (14/11/2026).
+### Jalon — Optimisations, instance unique et nouvelles versions — 16/11/2026 · PR [#25](https://github.com/Fugeekies/TimeFlies/pull/25)
+Issu de l'analyse du 16/11/2026 (corrections dans la PR [#24](https://github.com/Fugeekies/TimeFlies/pull/24)).
+- [x] APK de release réduite par R8 : 2,7 Mo au lieu de 11 Mo, vérifiée sur l'émulateur (écrans, réglages, widget, tâche de minuit).
+- [x] Widget recalculé seulement quand la naissance, la région ou le premier lancement changent.
+- [x] Mémoire de l'application Windows mesurée (≈ 140 Mo fenêtre cachée, venant du rendu natif de Compose) : ni limite de tas ni fenêtre détruite ne font gagner assez, rien n'est changé.
+- [x] Décision du 16/11/2026 : une seule instance sur Windows, un second lancement ramène la fenêtre (`SingleInstance`).
+- [x] Décision du 16/11/2026 : recherche des nouvelles versions sur GitHub, une fois par jour au plus, bandeau sur Aujourd'hui, désactivable dans Réglages › À propos (`ReleaseUpdates`, `GitHubReleases`, `settings.json` en version 4).

@@ -6,6 +6,7 @@ import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SendMorningNotification
+import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
 import io.github.fugeekies.timeflies.ui.text.ShockMessages
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
@@ -22,7 +23,7 @@ import kotlin.time.Duration.Companion.minutes
 
 /**
  * Keeps the tray icon up to date (docs/UISpec/WindowsTray.template.md): the tooltip when the day or the region
- * changes, and the morning notification once its time has come.
+ * changes, the morning notification once its time has come, and the daily look for a new version.
  *
  * It checks every minute rather than sleeping until the chosen time: after a sleep or with the PC turned on late,
  * the notification goes out within a minute of the wake-up, once a day ([SendMorningNotification.ifDue]).
@@ -31,6 +32,7 @@ class TrayUpdater(
     private val sendMorningNotification: SendMorningNotification,
     private val observeSettings: ObserveSettings,
     private val clock: Clock,
+    private val releaseUpdates: ReleaseUpdates,
 ) {
     private val log = Logger.withTag("Tray")
 
@@ -60,6 +62,8 @@ class TrayUpdater(
                 notify(tray, it)
             }
         }
+        // A new version on GitHub, once a day at most: the app may stay in the tray for weeks.
+        guarded("Les nouvelles versions n'ont pas pu être cherchées") { releaseUpdates.checkIfDue() }
     }
 
     private suspend fun notify(tray: WindowsTray, shock: DailyShock) {

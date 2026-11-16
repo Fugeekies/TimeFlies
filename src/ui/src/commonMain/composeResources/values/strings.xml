@@ -188,7 +188,13 @@
     <string name="about_report">Signaler une erreur de date</string>
     <string name="about_license">Licence GPL v3</string>
     <string name="about_third_party">Licences des polices et bibliothèques</string>
-    <string name="about_privacy">Aucune donnée ne quitte cet appareil.</string>
+    <string name="about_privacy">Aucune donnée personnelle ne quitte cet appareil.</string>
+    <!-- New versions (decision of 16/11/2026) -->
+    <string name="settings_release_check">Chercher les nouvelles versions au démarrage</string>
+    <string name="settings_release_check_help">Une fois par jour au plus, TimeFlies demande à GitHub la dernière version publiée. Rien d'autre n'est envoyé.</string>
+    <string name="update_available">Nouvelle version : TimeFlies %1$s</string>
+    <string name="update_download">Télécharger</string>
+    <string name="update_later">Plus tard</string>
     <!-- Windows panel (docs/UISpec/Settings.template.md, "Notification et démarrage") -->
     <string name="settings_windows">WINDOWS</string>
     <string name="settings_launch_at_startup">Lancer TimeFlies au démarrage de Windows</string>

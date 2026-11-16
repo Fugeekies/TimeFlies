@@ -6,7 +6,7 @@
 
 - **Un seul code, deux plateformes.** Kotlin Multiplatform (cibles `androidTarget()` et `jvm("desktop")`) et Compose Multiplatform : règles, données et écrans sont écrits une fois pour Android et Windows. Seul ce qui n'existe que sur une plateforme est écrit à part : widget Android, icône de barre des tâches et notification Windows.
 - **Clean Architecture** (décision du 14/11/2026) : les règles métier ne dépendent de rien ; les écrans, le widget et l'icône Windows appellent les mêmes cas d'usage ; les briques techniques (JSON, DataStore, horloge) sont branchées par chaque application.
-- **Hors ligne, sans compte.** La base d'événements est livrée dans l'application. Aucune donnée ne quitte l'appareil.
+- **Hors ligne, sans compte.** La base d'événements est livrée dans l'application. Aucune donnée personnelle ne quitte l'appareil. Seule exception réseau (décision du 16/11/2026) : une requête anonyme par jour au plus vers l'API GitHub pour connaître la dernière version, désactivable dans Réglages › À propos.
 - **Testable sans interface ni appareil.** La date du jour est toujours injectée : chaque règle se teste sur une date fixe.
 
 ## Couches et modules (décision du 14/11/2026)
@@ -160,7 +160,7 @@ Kermit : Logcat sur Android ; console et fichier `%APPDATA%\TimeFlies\logs\` sur
   - exécuteur Windows : dossier de l'application par `createDistributable` de Compose Desktop (jpackage, avec son propre Java, sans WiX), empaqueté par **Inno Setup** (`scripts/installer.iss`) en `TimeFlies-X.Y.Z-Setup.exe`. Installation par utilisateur dans `%LOCALAPPDATA%\Programs\TimeFlies`, sans droits administrateur ; la désinstallation retire la valeur de démarrage Windows et garde `%APPDATA%\TimeFlies` ;
   - publication : tag, release et notes tirées des PR fusionnées depuis la version précédente. Décocher « Publier » ne garde que les fichiers en artefacts, pour essayer.
 - **Numéro de version** : passé à Gradle par `-Ptimeflies.version=X.Y.Z`. Android : `versionName` X.Y.Z et `versionCode` X × 10 000 + Y × 100 + Z (toujours croissant, Android installe par-dessus et garde les réglages). Windows : version du lanceur et de l'installeur ; l'`AppId` fixe d'Inno Setup fait qu'une nouvelle version remplace l'ancienne. Une compilation locale n'a pas de version : Réglages affiche « version de développement ».
-- **Mises à jour** : à la main, depuis les Releases GitHub. Une vérification au démarrage reste une idée à prioriser (`ROADMAP.md`, « Liste d'idées »).
+- **Mises à jour** (décision du 16/11/2026) : installées à la main depuis les Releases GitHub ; l'application le signale. Port `ReleaseSource` (`GitHubReleases` dans `data`, lecture HTTP fournie par chaque application), cas d'usage `ReleaseUpdates` : au démarrage (Android : à l'ouverture, jamais depuis le widget ; Windows : boucle de l'icône, donc chaque jour même si l'application reste ouverte), GitHub est interrogé une fois par jour au plus ; la dernière version connue est gardée dans `settings.json` (version 4, objet `releaseCheck`) ; un bandeau « Nouvelle version : TimeFlies X.Y.Z » au-dessus d'Aujourd'hui ouvre la page de la release (seules les pages de ce dépôt sont acceptées) ; « Plus tard » le masque jusqu'à la version suivante. Une compilation locale n'a pas de version et ne cherche jamais.
 - L'installeur Windows n'est pas signé par un éditeur reconnu : SmartScreen affiche « Windows a protégé votre ordinateur » au premier lancement. Le README et les notes de version l'expliquent.
 
 ## Versions minimales (décision du 13/11/2026)
