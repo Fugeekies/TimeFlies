@@ -17,7 +17,7 @@
 - Gradle n'est pas à installer : le wrapper (`gradlew`) télécharge la bonne version.
 - **Pendant le développement** : tout se compile et se lance en local, en débogage, depuis l'IDE ou Gradle.
 - **CI** : chaque PR prête (pas en brouillon) lance les tests, la compilation des deux applications et les benchmarks sur GitHub Actions (`.github/workflows/ci.yml`).
-- **Publier une version** : à la fin du projet (jalon 13), GitHub Actions produira l'APK et le `.msi` (voir [`ARCHITECTURE.md`](ARCHITECTURE.md), « Distribution »).
+- **Publier une version** : workflow « Release » lancé à la main, qui produit l'APK et l'installeur Windows (voir « Releases » plus bas et [`ARCHITECTURE.md`](ARCHITECTURE.md), « Distribution »).
 - **Développer et déboguer** : un IDE en local. **Android Studio** (gratuit) est recommandé : il gère Kotlin Multiplatform, l'émulateur, Logcat et la cible PC. IntelliJ IDEA convient aussi.
 
 ## Commandes
@@ -90,3 +90,38 @@ Une destination « Débogage » (icône de clé), présente uniquement dans les 
 - **Aucune donnée personnelle** dans les logs (ni mois ni année de naissance) : un fichier de réglages illisible est signalé par le nom de l'erreur seulement, son message pouvant citer le fichier.
 - Pas d'outil de rapport de plantage en ligne (l'application n'a aucune connexion) : une exception non rattrapée est écrite dans les logs (étiquette `Crash`) avant l'arrêt, à joindre à la main à une issue GitHub.
 - La console Windows peut afficher les accents de travers (page de code) ; le fichier est en UTF-8.
+
+## Releases
+
+Méthode reprise de LMU-DeltaRacing (décision du 16/11/2026) : pas de WiX, un installeur **Inno Setup**.
+
+### Publier une version
+1. Sur GitHub : **Actions › Release › Run workflow**, branche `main`, type de version **Majeur**, **Mineur** ou **Patch** (la première version, sans tag, devient `v0.1.0` en Mineur).
+2. Le workflow lance les tests, compile l'APK signée et l'installeur Windows, puis crée le tag `vX.Y.Z` et la release avec les deux fichiers et les notes tirées des PR fusionnées.
+3. Pour essayer sans rien publier : décocher **Publier** ; les deux fichiers restent en artefacts du run (une branche autre que `main` est alors permise).
+
+Avant de publier, passer la section `## [Unreleased]` du `CHANGELOG.md` sous le numéro de la version, dans une PR.
+
+### Construire en local
+```bash
+./gradlew :androidApp:assembleRelease -Ptimeflies.version=0.1.0     # APK non signée sans les variables de la clé
+./gradlew :desktopApp:createDistributable -Ptimeflies.version=0.1.0 # src/desktopApp/build/compose/binaries/main/app/TimeFlies/
+iscc /DAppVersion=0.1.0 scripts\installer.iss                       # output\TimeFlies-Setup.exe (Inno Setup 6 installé)
+```
+Sans `-Ptimeflies.version`, l'application affiche « version de développement ».
+
+### Clé de signature Android (une seule fois)
+La même clé doit signer toutes les versions : sans elle, Android refuse d'installer une mise à jour par-dessus. Elle n'est jamais dans le dépôt.
+1. Générer la clé (validité de 30 ans), hors du dépôt :
+   ```bash
+   keytool -genkeypair -v -keystore timeflies-release.keystore -alias timeflies -keyalg RSA -keysize 4096 -validity 10950
+   ```
+2. La ranger avec ses mots de passe dans un gestionnaire de mots de passe ou une sauvegarde hors du PC.
+3. La donner aux secrets du dépôt :
+   ```bash
+   base64 -w0 timeflies-release.keystore | gh secret set ANDROID_KEYSTORE_BASE64
+   gh secret set ANDROID_KEYSTORE_PASSWORD
+   gh secret set ANDROID_KEY_ALIAS --body timeflies
+   gh secret set ANDROID_KEY_PASSWORD
+   ```
+Sans ces secrets, le job « APK Android » s'arrête avec un message clair.

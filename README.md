@@ -17,14 +17,16 @@ Aucun compte, aucune connexion : les événements sont intégrés à l'applicati
 
 ## État
 
-Projet en démarrage : aucune version n'est encore publiée. Les spécifications sont dans [`docs/`](docs/), les maquettes dans [`docs/maquettes/`](docs/maquettes/README.md), et la suite dans la [feuille de route](docs/ROADMAP.md).
+Aucune version n'est encore publiée. Les spécifications sont dans [`docs/`](docs/), les maquettes dans [`docs/maquettes/`](docs/maquettes/README.md), et la suite dans la [feuille de route](docs/ROADMAP.md).
 
-## Installation (à venir)
+## Installation
 
-Chaque version publiera dans l'onglet **Releases** :
+Chaque version est publiée dans l'onglet [**Releases**](https://github.com/Fugeekies/TimeFlies/releases) avec deux fichiers :
 
-- l'**APK** Android, à télécharger depuis le téléphone ;
-- l'**installeur Windows** (`.msi`).
+- **Android** (8.0 et plus) : télécharge `TimeFlies-X.Y.Z.apk` depuis le téléphone et ouvre-le. Android demande d'autoriser l'installation d'applications depuis ton navigateur : c'est normal pour une application qui ne passe pas par le Play Store.
+- **Windows** (10 et 11, 64 bits) : télécharge et lance `TimeFlies-X.Y.Z-Setup.exe`. L'installeur n'est pas signé par un éditeur reconnu : si Windows affiche « Windows a protégé votre ordinateur », clique sur **Informations complémentaires** puis **Exécuter quand même**. TimeFlies s'installe pour ton compte, sans droits administrateur.
+
+Pour mettre à jour, installe la nouvelle version par-dessus l'ancienne : tes réglages sont gardés.
 
 ## Technique
 

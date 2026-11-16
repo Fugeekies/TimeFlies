@@ -135,6 +135,8 @@ fun main(args: Array<String>) {
                 countEvents = graph.countEvents,
                 clock = graph.clock,
                 debugTools = graph.debugTools,
+                // Given by the release build only (desktopApp/build.gradle.kts); null says "version de développement".
+                appVersion = System.getProperty("timeflies.version"),
                 platform = PlatformHooks(
                     screenRequest = screenRequest,
                     onScreenRequestHandled = { screenRequest = null },

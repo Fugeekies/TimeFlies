@@ -26,3 +26,6 @@ keystore.properties
 # OS
 .DS_Store
 Thumbs.db
+
+# Windows installer built by scripts/installer.iss
+output/

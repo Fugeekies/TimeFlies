@@ -39,6 +39,7 @@ class MainActivity : ComponentActivity() {
                 countEvents = graph.countEvents,
                 clock = graph.clock,
                 debugTools = graph.debugTools,
+                appVersion = BuildConfig.RELEASE_VERSION,
                 platform = PlatformHooks(
                     screenRequest = screenRequest,
                     onScreenRequestHandled = { screenRequest = null },

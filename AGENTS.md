@@ -36,7 +36,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 
 ## Distribution
 
-- La **CI** (`.github/workflows/ci.yml`) lance les tests, la compilation des deux applications et les benchmarks sur chaque PR prête et sur `main` (décision du 14/11/2026). Les **releases** viennent **à la fin** (jalon 13) : GitHub Actions compilera alors l'**APK** Android et l'**installeur Windows** (`.msi`) et les publiera dans les Releases.
+- La **CI** (`.github/workflows/ci.yml`) lance les tests, la compilation des deux applications et les benchmarks sur chaque PR prête et sur `main` (décision du 14/11/2026). Les **releases** viennent **à la fin** (jalon 13) : le workflow « Release » (`.github/workflows/release.yml`), lancé à la main, compile l'**APK** Android signée et l'**installeur Windows** Inno Setup (`TimeFlies-X.Y.Z-Setup.exe`, sans WiX, comme LMU-DeltaRacing, décision du 16/11/2026) et les publie dans les Releases.
 - L'APK est signée avec une clé stable, gardée dans les secrets du dépôt, jamais dans le code.
 
 ## Règles Git & PR
