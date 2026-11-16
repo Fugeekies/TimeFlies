@@ -75,13 +75,25 @@ enum class AppScreen { TODAY, SETTINGS }
  * @property screenRequest a screen to open, asked from outside the window; [onScreenRequestHandled] clears it.
  * @property showWindowsPanel Settings shows the "Notification et démarrage" panel.
  * @property sendMorningNotification the debug panel offers to send the morning notification at once.
+ * @property widget Android: Settings shows the "Écran d'accueil" panel; null elsewhere.
+ * @property refreshWidget the debug panel offers to update the Android widget at once.
  */
 data class PlatformHooks(
     val screenRequest: AppScreen? = null,
     val onScreenRequestHandled: () -> Unit = {},
     val showWindowsPanel: Boolean = false,
     val sendMorningNotification: (() -> Unit)? = null,
+    val widget: WidgetPinning? = null,
+    val refreshWidget: (() -> Unit)? = null,
 )
+
+/**
+ * The "Ajouter le widget" button of Settings (docs/UISpec/Settings.template.md, "Widget").
+ *
+ * @property pin asks the launcher to pin the widget; null when the launcher does not allow it (the screen then
+ *   explains how to add it by hand).
+ */
+data class WidgetPinning(val pin: (() -> Unit)?)
 
 /**
  * Root composable shared by the Android and Windows apps: the first launch screen until it is completed or
@@ -190,6 +202,7 @@ private fun MainScreens(
                 appVersion,
                 content,
                 showWindowsPanel = platform.showWindowsPanel,
+                widget = platform.widget,
             )
             // Their reduced mode (without birth) also offers ages picked on the fly.
             Destination.EQUIVALENCES -> EquivalencesScreen(
@@ -212,6 +225,7 @@ private fun MainScreens(
                     onThemeMode,
                     content,
                     onSendMorningNotification = platform.sendMorningNotification,
+                    onRefreshWidget = platform.refreshWidget,
                 )
             }
         }

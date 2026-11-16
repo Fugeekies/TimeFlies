@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Texts read by Android outside of the app (widget picker); the interface texts are in the ui module.
+     Android resources need a backslash before an apostrophe, unlike the Compose resources. -->
+<resources>
+    <string name="widget_description">Ton coup de vieux du jour, sur l\'écran d\'accueil.</string>
+</resources>

@@ -1,5 +1,6 @@
 # Versions stables figées au jalon 1 (14/11/2026), toutes publiées depuis au moins deux semaines.
 # DataStore 1.3.0 et Okio 3.18.2 ajoutés au jalon 4, Kermit 2.2.0 au jalon 6 (15/11/2026).
+# Glance 1.2.0 et WorkManager 2.12.0 ajoutés au jalon 11 (16/11/2026), publiés les 26/08 et 23/09/2026.
 [versions]
 kotlin = "2.4.21"
 compose-multiplatform = "1.12.2"
@@ -14,6 +15,8 @@ kotlinx-serialization = "1.12.0"
 androidx-datastore = "1.3.0"
 okio = "3.18.2"
 kermit = "2.2.0"
+glance = "1.2.0"
+androidx-work = "2.12.0"
 
 android-compileSdk = "37"
 android-targetSdk = "36"
@@ -34,6 +37,8 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 androidx-datastore-core-okio = { module = "androidx.datastore:datastore-core-okio", version.ref = "androidx-datastore" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "glance" }
+androidx-work-runtime = { module = "androidx.work:work-runtime-ktx", version.ref = "androidx-work" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 [plugins]

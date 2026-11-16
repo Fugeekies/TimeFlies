@@ -63,6 +63,12 @@ import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup_hel
 import io.github.fugeekies.timeflies.ui.resources.settings_morning_notification
 import io.github.fugeekies.timeflies.ui.resources.settings_notification_time
 import io.github.fugeekies.timeflies.ui.resources.settings_windows
+import io.github.fugeekies.timeflies.ui.resources.settings_widget
+import io.github.fugeekies.timeflies.ui.resources.settings_widget_add
+import io.github.fugeekies.timeflies.ui.resources.settings_widget_manual
+import io.github.fugeekies.timeflies.ui.resources.settings_widget_text
+import io.github.fugeekies.timeflies.ui.WidgetPinning
+import androidx.compose.material3.Button
 import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.rules.MorningNotification
 import io.github.fugeekies.timeflies.ui.components.BirthFields
@@ -84,14 +90,20 @@ private const val LICENSE_URL = "$REPOSITORY_URL/blob/main/LICENSE"
 private const val THIRD_PARTY_LICENSES_URL = "$REPOSITORY_URL/tree/main/licenses"
 
 /**
- * The Settings screen (docs/UISpec/Settings.template.md). The Android widget panel comes with its milestone; the
- * style choice comes with the Éphéméride.
+ * The Settings screen (docs/UISpec/Settings.template.md). The style choice comes with the Éphéméride.
  *
  * @param appVersion version shown in "À propos"; null for a local development build.
  * @param showWindowsPanel the Windows app shows the "Notification et démarrage" panel.
+ * @param widget the Android app shows the "Écran d'accueil" panel.
  */
 @Composable
-fun SettingsScreen(viewModel: SettingsViewModel, appVersion: String?, modifier: Modifier = Modifier, showWindowsPanel: Boolean = false) {
+fun SettingsScreen(
+    viewModel: SettingsViewModel,
+    appVersion: String?,
+    modifier: Modifier = Modifier,
+    showWindowsPanel: Boolean = false,
+    widget: WidgetPinning? = null,
+) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val current = state ?: return
     Box(modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
@@ -115,6 +127,10 @@ fun SettingsScreen(viewModel: SettingsViewModel, appVersion: String?, modifier: 
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
             Panel { DisplayPanel(current.region) }
+            if (widget != null) {
+                Eyebrow(stringResource(Res.string.settings_widget))
+                Panel { WidgetPanel(widget) }
+            }
             if (showWindowsPanel) {
                 Eyebrow(stringResource(Res.string.settings_windows))
                 Panel { WindowsPanel(current.windows, viewModel) }
@@ -180,6 +196,18 @@ private fun DisplayPanel(region: Region) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Text(stringResource(Res.string.settings_region), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f))
         Text(regionName, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    }
+}
+
+/** Android only: the button that asks the launcher to pin the widget, or how to add it by hand. */
+@Composable
+private fun ColumnScope.WidgetPanel(widget: WidgetPinning) {
+    Text(stringResource(Res.string.settings_widget_text), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurface)
+    val pin = widget.pin
+    if (pin != null) {
+        Button(onClick = pin, modifier = Modifier.align(Alignment.End)) { Text(stringResource(Res.string.settings_widget_add)) }
+    } else {
+        Text(stringResource(Res.string.settings_widget_manual), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 

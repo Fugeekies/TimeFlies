@@ -90,9 +90,10 @@ Pour tester tous les cas sans attendre le bon jour.
 - [ ] Vérifier sur l'application installée (jalon 13) : valeur `Run` écrite au chemin de l'exécutable, démarrage avec Windows fenêtre cachée, nom de l'application dans l'en-tête de la notification.
 
 ### Jalon 11 — Widget Android
-- [ ] Widget en trois tailles avec le bouton « suivant », mis à jour juste après minuit ([`AndroidWidget.template.md`](UISpec/AndroidWidget.template.md)).
-- [ ] Panneau « Écran d'accueil » des Réglages.
-- [ ] Panneau de débogage : forcer tout de suite la mise à jour du widget.
+- [x] Widget en trois tailles avec le bouton « suivant », mis à jour juste après minuit ([`AndroidWidget.template.md`](UISpec/AndroidWidget.template.md)). `domain` : règle `WidgetSheets` (feuilles du jour, lignes compactes, retour au premier), tests. `ui` : `WidgetTexts`, `WidgetPalette`. `androidApp` : Glance 1.2.0 (`TimeFliesWidget`, âge manuscrit dessiné en image avec Caveat), WorkManager 2.12.0 (`MidnightWorker`), `WidgetEventsReceiver` (démarrage, heure, fuseau), recalcul quand les réglages changent.
+- [x] Panneau « Écran d'accueil » des Réglages.
+- [x] Panneau de débogage : forcer tout de suite la mise à jour du widget.
+- [ ] Voir le widget sur un téléphone ou un émulateur (aucun des deux n'est encore installé, voir le jalon 1) : trois tailles, bouton « suivant », thème sombre, mise à jour après minuit.
 
 ### Jalon 12 — Nom et icône définitifs
 - [x] Nom affiché sous l'icône et dans les menus : **TimeFlies**, comme le dépôt (décision du 15/11/2026).

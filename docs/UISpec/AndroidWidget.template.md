@@ -33,6 +33,13 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 * Toucher le widget ouvre l'application sur **Aujourd'hui**.
 * **Bouton « suivant »** (›, décision du 13/11/2026), en bas à droite : affiche l'anniversaire suivant du jour, dans l'ordre habituel, puis revient au premier après le dernier. Masqué s'il n'y a qu'un anniversaire. Le widget revient au coup de vieux principal à chaque nouveau jour. En 4 × 3 et plus, les lignes compactes suivent le défilement.
 
+#### Choix d'implémentation (jalon 11, 16/11/2026)
+* Un widget ne peut pas employer les polices de l'application dans ses textes : le nombre d'années est dessiné en image avec Caveat (le même fichier de police), en 30 sp. Les autres textes sont dans la police du système.
+* Eyebrow : la date du jour en capitales (« LUNDI 2 NOVEMBRE ») ou « DANS 3 JOURS » quand l'anniversaire affiché est à venir.
+* Lignes compactes en 4 × 3 : « 20 ans · Matrix », précédées de « dans 2 jours · » pour un autre jour que celui de la feuille.
+* Rien dans les 7 prochains jours : la phrase d'Aujourd'hui, « Rien aujourd'hui. Profite, tu ne vieillis pas. »
+* Ordre du bouton « suivant » : le coup de vieux principal, puis les autres anniversaires du même jour (règle `WidgetSheets` de `domain`).
+
 ### Wireframe ASCII
 ```text
 4 × 2 (par défaut)                          2 × 2

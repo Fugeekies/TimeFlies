@@ -11,6 +11,11 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Widget Android : le coup de vieux du jour sur un petit Polaroïd (âge écrit à la main, cadre de la couleur de la décennie), en 2 × 2, 4 × 2 et 4 × 3 avec les deux anniversaires suivants ; bouton « › » pour passer aux autres anniversaires du jour ; le toucher ouvre Aujourd'hui. Clair ou sombre selon le système.
+- Widget Android : mis à jour juste après minuit, au démarrage du téléphone, au changement d'heure ou de fuseau, et quand les réglages changent.
+- Réglages (Android) : panneau « Écran d'accueil » avec le bouton « Ajouter le widget », ou la marche à suivre si le lanceur ne le permet pas.
+- Panneau de débogage (Android) : mettre à jour le widget tout de suite.
+
 - Windows : icône dans la zone de notification, avec le coup de vieux du jour en infobulle, clic gauche pour ouvrir la fenêtre et menu « Ouvrir TimeFlies », « Coup de vieux du jour », « Réglages », « Quitter ». Fermer la fenêtre la garde dans la barre des tâches (expliqué par une notification la première fois).
 - Windows : notification du coup de vieux chaque matin (9:00 par défaut), une seule fois par jour, envoyée au premier réveil quand le PC était éteint ou en veille ; la toucher ouvre Aujourd'hui.
 - Windows : lancement au démarrage de Windows, fenêtre cachée (clé `Run` de l'utilisateur, sans droits administrateur).

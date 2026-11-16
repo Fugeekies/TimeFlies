@@ -1,4 +1,4 @@
-// Android app: composition root, and later the Glance widget and its daily worker.
+// Android app: composition root, the Glance widget and its daily worker.
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.multiplatform)
@@ -49,4 +49,7 @@ dependencies {
     implementation(projects.data)
     implementation(projects.ui)
     implementation(libs.androidx.activity.compose)
+    // Home screen widget and its daily update (docs/UISpec/AndroidWidget.template.md).
+    implementation(libs.glance.appwidget)
+    implementation(libs.androidx.work.runtime)
 }

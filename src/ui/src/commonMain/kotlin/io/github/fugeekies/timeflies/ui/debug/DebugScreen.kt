@@ -74,6 +74,9 @@ import io.github.fugeekies.timeflies.ui.resources.debug_title
 import io.github.fugeekies.timeflies.ui.resources.debug_send_notification
 import io.github.fugeekies.timeflies.ui.resources.debug_send_notification_note
 import io.github.fugeekies.timeflies.ui.resources.debug_windows
+import io.github.fugeekies.timeflies.ui.resources.debug_refresh_widget
+import io.github.fugeekies.timeflies.ui.resources.debug_refresh_widget_note
+import io.github.fugeekies.timeflies.ui.resources.debug_widget
 import io.github.fugeekies.timeflies.ui.resources.settings_birth
 import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.text.familyLabel
@@ -90,6 +93,7 @@ import org.jetbrains.compose.resources.stringResource
  *
  * @param themeMode light or dark forced for this session; [onThemeMode] changes it.
  * @param onSendMorningNotification Windows: sends the morning notification at once; null elsewhere (no panel).
+ * @param onRefreshWidget Android: updates the widget at once; null elsewhere (no panel).
  */
 @Composable
 fun DebugScreen(
@@ -98,6 +102,7 @@ fun DebugScreen(
     onThemeMode: (ThemeMode) -> Unit,
     modifier: Modifier = Modifier,
     onSendMorningNotification: (() -> Unit)? = null,
+    onRefreshWidget: (() -> Unit)? = null,
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val current = state ?: return
@@ -120,6 +125,13 @@ fun DebugScreen(
             Panel { SettingsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.debug_theme))
             Panel { ThemePanel(themeMode, onThemeMode) }
+            if (onRefreshWidget != null) {
+                Eyebrow(stringResource(Res.string.debug_widget))
+                Panel {
+                    OutlinedButton(onClick = onRefreshWidget) { Text(stringResource(Res.string.debug_refresh_widget)) }
+                    Text(stringResource(Res.string.debug_refresh_widget_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
             if (onSendMorningNotification != null) {
                 Eyebrow(stringResource(Res.string.debug_windows))
                 Panel {
