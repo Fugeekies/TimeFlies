@@ -9,6 +9,21 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Added
+
+- Nouvelles versions : quand une version plus récente est publiée sur GitHub, un bandeau sur Aujourd'hui l'annonce, avec « Télécharger » et « Plus tard ». GitHub est interrogé une fois par jour au plus, sans aucune donnée personnelle ; la case « Chercher les nouvelles versions au démarrage » de Réglages › À propos le désactive.
+- Windows : une seule instance de TimeFlies ; l'ouvrir de nouveau ramène la fenêtre de celle qui tourne déjà au lieu d'en lancer une seconde.
+
+### Changed
+
+- Android : la permission Internet, pour la seule recherche de nouvelles versions.
+- `settings.json` passe en version 4 (objet `releaseCheck`).
+
+### Performance
+
+- APK Android réduite par R8 : 2,7 Mo au lieu de 11 Mo.
+- Widget Android : recalculé seulement quand ce qu'il affiche change (naissance, région, premier lancement), plus à chaque réglage d'Équivalences.
+
 ### Fixed
 
 - Les événements se chargent hors du fil de l'interface : le premier écran ne se fige plus pendant la lecture de la base, qui grossira jusqu'à 5 000 événements.

@@ -38,6 +38,7 @@ data class SettingsUiState(
     val region: Region,
     val eventCount: Int?,
     val windows: WindowsSettings,
+    val releaseCheck: Boolean,
 ) {
     val birthYears: IntRange get() = Generations.birthYears(today)
     val userAge: Int? get() = birth?.let { Generations.userAge(it, today) }
@@ -89,6 +90,7 @@ class SettingsViewModel(
         region = settings.region,
         eventCount = count,
         windows = settings.windows,
+        releaseCheck = settings.releaseCheck.enabled,
     )
 
     fun onMonthPicked(month: Month) = onBirthPicked(month = month)
@@ -125,6 +127,10 @@ class SettingsViewModel(
 
     fun onNotificationTime(time: LocalTime) {
         viewModelScope.launch { updateSettings.setNotificationTime(time) }
+    }
+
+    fun onReleaseCheck(enabled: Boolean) {
+        viewModelScope.launch { updateSettings.setReleaseCheck(enabled) }
     }
 
     fun onKeepInTray(enabled: Boolean) {

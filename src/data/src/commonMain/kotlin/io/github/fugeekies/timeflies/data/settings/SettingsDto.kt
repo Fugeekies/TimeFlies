@@ -17,7 +17,7 @@ import kotlinx.serialization.Serializable
  *
  * Version 2 (milestone 7) renamed `youngAge` to [otherAge] (the other person can be older, decision of 15/11/2026):
  * a version 1 file is read through [youngAge], which is never written again. Version 3 (milestone 10) added the
- * Windows panel ([windows]); an older file gets its defaults.
+ * Windows panel ([windows]); version 4 the check for new versions ([releaseCheck]). An older file gets their defaults.
  */
 @Serializable
 internal data class SettingsDto(
@@ -35,6 +35,8 @@ internal data class SettingsDto(
     val equivalenceFamilies: List<String>? = null,
     /** Version 3: the Windows panel, ignored on Android. */
     val windows: WindowsSettingsDto = WindowsSettingsDto(),
+    /** Version 4: the check for new versions. */
+    val releaseCheck: ReleaseCheckDto = ReleaseCheckDto(),
 ) {
     /** The domain settings; values edited by hand outside their range fall back to safe ones. */
     fun toDomain(): Settings = Settings(
@@ -46,10 +48,11 @@ internal data class SettingsDto(
         equivalencesReversed = equivalencesReversed,
         equivalenceFamilies = equivalenceFamilies?.mapNotNull(::familyOf)?.toSet() ?: Family.entries.toSet(),
         windows = windows.toDomain(),
+        releaseCheck = releaseCheck.toDomain(),
     )
 
     companion object {
-        const val CURRENT_VERSION = 3
+        const val CURRENT_VERSION = 4
 
         fun of(settings: Settings) = SettingsDto(
             birthYear = settings.birth?.year,
@@ -60,6 +63,7 @@ internal data class SettingsDto(
             equivalencesReversed = settings.equivalencesReversed,
             equivalenceFamilies = Family.entries.filter { it in settings.equivalenceFamilies }.map(::idOf),
             windows = WindowsSettingsDto.of(settings.windows),
+            releaseCheck = ReleaseCheckDto.of(settings.releaseCheck),
         )
 
         /** "series", "cinema", "games-tech"…: the name of the family's event file, readable by hand. */

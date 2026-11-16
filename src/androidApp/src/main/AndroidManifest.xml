@@ -3,6 +3,8 @@
 
     <!-- Recomputes the widget after the phone restarts. -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Only to look for a new version on GitHub, once a day at most (decision of 16/11/2026). -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".TimeFliesApplication"

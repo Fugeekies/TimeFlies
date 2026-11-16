@@ -10,6 +10,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
@@ -45,7 +47,9 @@ class TimeFliesApplication : Application() {
     private fun keepWidgetUpToDate() {
         WidgetUpdates.scheduleMidnight(this, ExistingWorkPolicy.KEEP)
         scope.launch {
-            combine(graph.observeSettings(), graph.clock.manualChanges().onStart { emit(Unit) }) { _, _ -> }
+            // Only what the widget shows: ticking a theme of Equivalences does not recompute it.
+            val shown = graph.observeSettings().map { Triple(it.birth, it.region, it.onboardingDone) }.distinctUntilChanged()
+            combine(shown, graph.clock.manualChanges().onStart { emit(Unit) }) { _, _ -> }
                 .collect {
                     try {
                         WidgetUpdates.refresh(this@TimeFliesApplication)

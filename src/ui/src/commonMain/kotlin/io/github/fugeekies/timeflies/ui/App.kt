@@ -2,6 +2,11 @@ package io.github.fugeekies.timeflies.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
+import io.github.fugeekies.timeflies.ui.update.UpdateBanner
+import io.github.fugeekies.timeflies.ui.update.UpdateViewModel
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Icon
@@ -102,7 +107,8 @@ data class WidgetPinning(val pin: (() -> Unit)?)
  *
  * @param appVersion version shown in Settings › À propos; null for a local development build.
  * @param debugTools tools of the debug panel; null in a release, where the panel does not exist.
- * @param platform what only one platform adds (the Windows tray, for now).
+ * @param platform what only one platform adds (Windows tray, Android widget).
+ * @param releaseUpdates the banner of a new version on Today; null where nothing is looked for (tests, previews).
  */
 @Composable
 fun App(
@@ -118,6 +124,7 @@ fun App(
     appVersion: String? = null,
     debugTools: DebugTools? = null,
     platform: PlatformHooks = PlatformHooks(),
+    releaseUpdates: ReleaseUpdates? = null,
 ) {
     // Forced light or dark from the debug panel, for this session only.
     var themeMode by rememberSaveable { mutableStateOf(ThemeMode.SYSTEM) }
@@ -137,7 +144,7 @@ fun App(
             } else {
                 MainScreens(
                     getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock,
-                    appVersion, debugTools, platform, themeMode, onThemeMode = { themeMode = it },
+                    appVersion, debugTools, platform, releaseUpdates, themeMode, onThemeMode = { themeMode = it },
                 )
             }
         }
@@ -157,6 +164,7 @@ private fun MainScreens(
     appVersion: String?,
     debugTools: DebugTools?,
     platform: PlatformHooks,
+    releaseUpdates: ReleaseUpdates?,
     themeMode: ThemeMode,
     onThemeMode: (ThemeMode) -> Unit,
 ) {
@@ -192,11 +200,15 @@ private fun MainScreens(
     ) {
         val content = Modifier.fillMaxSize().safeDrawingPadding()
         when (current) {
-            Destination.TODAY -> TodayScreen(
-                viewModel { TodayViewModel(getDailyShock, observeSettings, clock) },
-                onOpenEvent = openEvent,
-                modifier = content,
-            )
+            Destination.TODAY -> Column(content) {
+                // A newer version than the running one: above the sheet of the day (decision of 16/11/2026).
+                releaseUpdates?.let { UpdateBanner(viewModel { UpdateViewModel(it) }) }
+                TodayScreen(
+                    viewModel { TodayViewModel(getDailyShock, observeSettings, clock) },
+                    onOpenEvent = openEvent,
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                )
+            }
             Destination.SETTINGS -> SettingsScreen(
                 viewModel { SettingsViewModel(observeSettings, updateSettings, countEvents, clock) },
                 appVersion,

@@ -27,6 +27,8 @@ class MainActivity : ComponentActivity() {
         val graph = app.graph
         val widget = WidgetPinning(pin = if (WidgetUpdates.canPin(this)) ({ WidgetUpdates.pin(this) }) else null)
         val refreshWidget = graph.debugTools?.let { { app.scope.launch { WidgetUpdates.refresh(app) }; Unit } }
+        // At most once a day, on opening the app (never from the widget): a new version on GitHub?
+        app.scope.launch { graph.releaseUpdates.checkIfDue() }
         setContent {
             App(
                 getDailyShock = graph.getDailyShock,
@@ -40,6 +42,7 @@ class MainActivity : ComponentActivity() {
                 clock = graph.clock,
                 debugTools = graph.debugTools,
                 appVersion = BuildConfig.RELEASE_VERSION,
+                releaseUpdates = graph.releaseUpdates,
                 platform = PlatformHooks(
                     screenRequest = screenRequest,
                     onScreenRequestHandled = { screenRequest = null },

@@ -29,6 +29,10 @@
 * Anniversaires des 7 jours suivants (sans ceux du jour), groupés par jour : en-tête « Mercredi 4 novembre · dans 2 jours », puis les cartes compactes avec « fêtera ses 18 ans ».
 * 10 cartes au maximum, triées par jour puis dans l'ordre habituel.
 
+#### Bandeau de nouvelle version (décision du 16/11/2026)
+* Quand GitHub publie une version plus récente que celle qui tourne : un bandeau en haut de l'écran, « Nouvelle version : TimeFlies 0.2.0 », avec **Télécharger** (la page de la release dans le navigateur) et **Plus tard** (le bandeau ne revient qu'avec la version suivante).
+* Rien sans version plus récente, sans connexion, avec la case décochée dans Réglages › À propos, ni dans une compilation locale.
+
 #### Interactions
 * Toucher une carte (ou la feuille) ouvre **« Quel âge ? »** sur cet événement, pour voir l'âge des deux personnes à sa date (décision du 15/11/2026, qui remplace « Mon équivalent » du 13/11/2026).
 * Glisser vers le bas (Android) ou `F5` (Windows) recalcule l'écran ; il se recalcule aussi seul quand le jour change pendant que l'application est ouverte.

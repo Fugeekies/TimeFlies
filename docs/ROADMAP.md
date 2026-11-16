@@ -83,7 +83,6 @@ La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [
 - Partager un coup de vieux en image.
 - Ajouter ses propres événements (souvenirs personnels).
 - Page de présentation sur GitHub Pages, comme LMU-DeltaRacing. Icône et favicon à reprendre d'`assets/icon/` (`timeflies-icon.svg` en favicon SVG, `timeflies-512.png`, `timeflies.ico`), image d'aperçu des réseaux sociaux comme celle du dépôt.
-- Vérification des nouvelles versions au démarrage (une seule requête vers GitHub, désactivable).
 
 ## Terminés
 

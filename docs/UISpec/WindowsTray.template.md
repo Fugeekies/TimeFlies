@@ -24,6 +24,10 @@ Sur Windows, TimeFlies peut rester ouvert en arrière-plan, avec une icône dans
 #### Lancement au démarrage de Windows
 * Avec la case cochée (Réglages), TimeFlies démarre avec Windows **fenêtre cachée**, seulement dans la zone de notification.
 
+#### Une seule instance (décision du 16/11/2026)
+* TimeFlies déjà lancé (au démarrage de Windows, par exemple), l'ouvrir de nouveau depuis le menu Démarrer ou un raccourci ne lance pas une seconde application : la fenêtre de la première revient au premier plan, sur Aujourd'hui si elle était cachée. Un lancement au démarrage de Windows alors que TimeFlies tourne déjà s'arrête sans rien afficher.
+* Implémentation : un verrou `instance.lock` dans `%APPDATA%\TimeFlies` et un port local (boucle locale seulement, jamais le réseau) noté dans `instance.port`, par lequel le second lancement demande la fenêtre.
+
 #### Notification du matin
 * Chaque jour à l'heure choisie (9:00 par défaut), une notification Windows : titre « 15 ans aujourd'hui », texte « Intouchables · Sortie au cinéma, 2 novembre 2011. Tu avais 20 ans. »
 * Sans anniversaire du jour : titre « Dans 3 jours », texte avec le prochain anniversaire.

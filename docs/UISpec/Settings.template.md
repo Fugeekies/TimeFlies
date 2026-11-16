@@ -41,7 +41,8 @@ Valeurs par défaut décidées le 13/11/2026.
 * « Inspiré de l'épisode *Bloqués #108 - On est les vieux des jeunes*. »
 * Nombre d'événements de la base (« 412 événements »).
 * Liens : code source (GitHub), signaler une erreur de date (page des issues GitHub), licence GPL v3, licences des polices et bibliothèques.
-* « Aucune donnée ne quitte cet appareil. »
+* Case « Chercher les nouvelles versions au démarrage » (cochée par défaut), avec « Une fois par jour au plus, TimeFlies demande à GitHub la dernière version publiée. Rien d'autre n'est envoyé. » (décision du 16/11/2026).
+* « Aucune donnée personnelle ne quitte cet appareil. »
 
 ### Wireframe ASCII (téléphone, Android)
 ```text
