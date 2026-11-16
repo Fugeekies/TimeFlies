@@ -66,7 +66,7 @@ Au lancement de la version PC, Skiko (le moteur de rendu de Compose) peut affich
 ### 3. Android : téléphone ou émulateur
 - Téléphone en USB ou en Wi-Fi, ou émulateur d'Android Studio : débogueur, **Logcat**, **App Inspection** (tâches WorkManager du widget : état et prochaine exécution).
 - La version de débogage a son propre identifiant (suffixe `.debug`) : elle s'installe à côté de la version publiée sans l'écraser.
-- Widget : aperçu dans l'IDE avec des données fictives, et mise à jour forcée depuis le panneau de débogage.
+- Widget : mise à jour forcée depuis le panneau de débogage. La tâche de minuit (`widget-midnight`) se voit dans **App Inspection › Background Task Inspector** d'Android Studio, ou avec `adb shell dumpsys jobscheduler | grep timeflies`.
 
 ### 4. Aperçus d'écrans
 Aperçus `@Preview` nourris de données fictives, pour voir chaque écran dans tous ses états sans lancer l'application : vide, sans mois et année de naissance, pas d'anniversaire aujourd'hui, texte agrandi à 200 %.
@@ -77,7 +77,8 @@ Une destination « Débogage » (icône de clé), présente uniquement dans les 
 - forcer les réglages sans les contrôles des écrans : mois et année de naissance (ou les effacer), région (code de pays à deux lettres), **revoir le premier lancement**, remettre les réglages par défaut. L'âge de l'autre génération n'y est pas (décision du 15/11/2026) ;
 - **forcer le thème** clair ou sombre, ou revenir au thème du système, pour essayer les deux palettes du Polaroïd sans changer le réglage du système. Pas enregistré : chaque lancement repart sur le thème du système. Sur Android, la barre d'état et le fond de la fenêtre suivent toujours le système ;
 - statistiques de la base : nombre d'événements, par thème, jours de l'année sans anniversaire, types trop pauvres, entrées écartées par la validation ;
-- Windows : **envoyer tout de suite la notification du matin** (jalon 10), sans marquer le jour : la vraie notification du matin part quand même à son heure. La mise à jour forcée du widget Android viendra avec le jalon 11.
+- Windows : **envoyer tout de suite la notification du matin** (jalon 10), sans marquer le jour : la vraie notification du matin part quand même à son heure.
+- Android : **mettre à jour le widget** tout de suite (jalon 11), avec la date du jour du panneau, vraie ou fausse. Changer la fausse date ou les réglages met aussi le widget à jour, comme en vrai.
 
 ### 5 bis. Icône de la barre des tâches et démarrage Windows (jalon 10)
 - L'icône et la notification marchent aussi lancées depuis Gradle. Fermer la fenêtre la cache (réglage par défaut) : clic gauche sur l'icône pour la rouvrir, clic droit › Quitter pour arrêter, sinon la tâche Gradle ne se termine pas.

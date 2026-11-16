@@ -111,6 +111,33 @@ internal val PolaroidDarkExtras = PolaroidExtras(userColor = Color(0xFFF08A55), 
  */
 internal val PhotoPaper = Color(0xFFFBFAF7)
 
+/**
+ * Colours of the Android widget, taken from the Polaroïd tokens so it matches the app: Glance draws with its own
+ * views and cannot use the Compose theme (docs/UISpec/AndroidWidget.template.md).
+ */
+data class WidgetPalette(
+    val background: Color,
+    val onBackground: Color,
+    val secondary: Color,
+    val accent: Color,
+    val paper: Color,
+    val ink: Color,
+) {
+    companion object {
+        fun of(dark: Boolean): WidgetPalette {
+            val scheme = if (dark) PolaroidDark else PolaroidLight
+            return WidgetPalette(
+                background = scheme.surface,
+                onBackground = scheme.onSurface,
+                secondary = scheme.onSurfaceVariant,
+                accent = scheme.primary,
+                paper = PhotoPaper,
+                ink = PolaroidLight.onSurface,
+            )
+        }
+    }
+}
+
 /** The family colour slightly faded, like an old print. */
 fun StyleTokens.photoColor(family: Family): Color = lerp(familyColors.getValue(family), photoFade, 0.12f)
 

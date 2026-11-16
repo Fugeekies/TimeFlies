@@ -85,14 +85,14 @@ object ShockMessages {
     )
 
     /** "Dans 3 jours", capitalised at the start of a title. */
-    private suspend fun inDays(days: Int) = getPluralString(Res.plurals.in_days, days, days).capitalized()
+    internal suspend fun inDays(days: Int) = getPluralString(Res.plurals.in_days, days, days).capitalized()
 
     private suspend fun willTurn(anniversary: Anniversary) = getPluralString(Res.plurals.will_turn, anniversary.years, anniversary.years)
 
     private suspend fun longDate(anniversary: Anniversary): String =
         DateTexts(getStringArray(Res.array.months), getStringArray(Res.array.days), getString(Res.string.first_of_month)).long(anniversary.eventDate)
 
-    private suspend fun userAge(age: UserAge?): String? = when (age) {
+    internal suspend fun userAge(age: UserAge?): String? = when (age) {
         null -> null
         is UserAge.Years -> getPluralString(Res.plurals.user_age_years, age.years, age.years)
         UserAge.UnderOne -> getString(Res.string.user_age_under_one)

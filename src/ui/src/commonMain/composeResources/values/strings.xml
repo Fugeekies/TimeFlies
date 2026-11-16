@@ -156,6 +156,9 @@
     <string name="debug_refresh">Actualiser</string>
     <string name="debug_windows">WINDOWS</string>
     <string name="debug_send_notification">Envoyer la notification du matin</string>
+    <string name="debug_widget">WIDGET</string>
+    <string name="debug_refresh_widget">Mettre à jour le widget</string>
+    <string name="debug_refresh_widget_note">Recalcule tout de suite chaque widget posé, avec la date du jour (vraie ou fausse).</string>
     <string name="debug_send_notification_note">Tout de suite, sans attendre l'heure ; la notification du matin partira quand même.</string>
 
     <!-- Settings (docs/UISpec/Settings.template.md) -->
@@ -193,6 +196,18 @@
     <string name="settings_morning_notification">Notification du coup de vieux chaque matin</string>
     <string name="settings_notification_time">Heure de la notification</string>
     <string name="settings_keep_in_tray">Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre</string>
+
+    <!-- Android home screen panel (docs/UISpec/Settings.template.md, "Widget") -->
+    <string name="settings_widget">ÉCRAN D'ACCUEIL</string>
+    <string name="settings_widget_text">Ajoute le widget TimeFlies sur ton écran d'accueil pour voir ton coup de vieux chaque jour.</string>
+    <string name="settings_widget_add">Ajouter le widget</string>
+    <string name="settings_widget_manual">Appui long sur l'écran d'accueil › Widgets › TimeFlies</string>
+
+    <!-- Android widget (docs/UISpec/AndroidWidget.template.md) -->
+    <string name="widget_open_app">Ouvre TimeFlies pour commencer.</string>
+    <string name="widget_next">Anniversaire suivant</string>
+    <!-- Compact line in 4 × 3: "20 ans · Matrix"; an upcoming day adds "dans 2 jours · " in front. -->
+    <string name="widget_compact">%1$s · %2$s</string>
 
     <!-- Windows tray icon and notification (docs/UISpec/WindowsTray.template.md) -->
     <!-- Tooltip: "TimeFlies — Intouchables : 15 ans aujourd'hui"; %2$s is "15 ans". -->
