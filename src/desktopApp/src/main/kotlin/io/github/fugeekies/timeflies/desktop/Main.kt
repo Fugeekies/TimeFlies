@@ -79,7 +79,11 @@ fun main(args: Array<String>) {
         }
         // Without a notification area, the window must never stay hidden.
         LaunchedEffect(trayReady) { if (trayReady && tray == null) visible = true }
-        DisposableEffect(tray) { onDispose { tray?.remove() } }
+        DisposableEffect(tray) {
+            // The icon of this key: reading the state in onDispose would give the new icon and remove it at once.
+            val current = tray
+            onDispose { current?.remove() }
+        }
         LaunchedEffect(tray) {
             val current = tray ?: return@LaunchedEffect
             withContext(Dispatchers.Default) { trayUpdater.run(current) }

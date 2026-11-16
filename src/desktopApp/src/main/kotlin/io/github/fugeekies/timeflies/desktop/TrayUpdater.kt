@@ -44,6 +44,7 @@ class TrayUpdater(
 
     /** "Coup de vieux du jour" in the menu and the debug panel: today's notification at once, the morning one still due. */
     suspend fun sendNow(tray: WindowsTray) {
+        log.d { "Coup de vieux du jour demandé" }
         guarded("La notification n'a pas pu être envoyée") { notify(tray, sendMorningNotification.now()) }
     }
 
@@ -62,7 +63,10 @@ class TrayUpdater(
     }
 
     private suspend fun notify(tray: WindowsTray, shock: DailyShock) {
+        log.d { "Texte de la notification…" }
         val message = ShockMessages.notification(shock)
+        // The title only: the text may give the user's age.
+        log.d { "Notification envoyée : ${message.title}" }
         tray.notify(message.title, message.text)
     }
 
