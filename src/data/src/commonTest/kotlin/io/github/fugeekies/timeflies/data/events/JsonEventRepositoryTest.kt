@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.data.events
 
+import io.github.fugeekies.timeflies.domain.model.EventGroup
 import io.github.fugeekies.timeflies.domain.model.EventType
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.MonthDay
@@ -11,58 +12,52 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-// Test-only data set: made-up titles covering a regional date, a 29 February and two families.
+// Test-only data set: made-up titles covering a regional date, a 29 February, two families and a duplicate id.
 class JsonEventRepositoryTest {
 
-    private val cinema = """
-        [
-          {"id":"film-a","date":"2011-09-23","regionalDates":{"FR":"2011-11-02"},"title":{"fr":"Film A"},
-           "kind":"film-release","type":"french-comedy-hit","importance":3,"source":"https://example.org/a"},
-          {"id":"film-b","date":"1994-11-09","title":{"fr":"Le Roi Écureuil"},
-           "kind":"film-release","type":"animated-feature","importance":3,"source":"https://example.org/b"},
-          {"id":"film-c","date":"2013-12-04","title":{"fr":"La Reine des glaçons"},
-           "kind":"film-release","type":"animated-feature","importance":2,"source":"https://example.org/c"},
-          {"id":"film-d","date":"2000-02-29","title":{"fr":"Film du 29 février"},
-           "kind":"film-release","type":"blockbuster","importance":1,"source":"https://example.org/d"},
-          {"id":"film-e","date":"1997-11-02","title":{"fr":"Film E"},
-           "kind":"film-release","type":"blockbuster","importance":2,"source":"https://example.org/e"}
-        ]
-    """.trimIndent()
-
-    private val music = """
-        [
-          {"id":"film-a","date":"1977-08-16","title":{"fr":"Doublon"},
-           "kind":"death","type":"music-icon-death","importance":3,"source":"https://example.org/x"},
-          {"id":"music-a","date":"2017-12-05","title":{"fr":"Chanteur A"},
-           "kind":"death","type":"music-icon-death","importance":3,"source":"https://example.org/m"}
-        ]
-    """.trimIndent()
+    private fun entry(id: String, date: String, title: String, kind: String = "film-release", importance: Int = 2, extra: String = "") =
+        """{"id":"$id","date":"$date",$extra"title":{"fr":"$title"},"kind":"$kind","importance":$importance,"source":"https://example.org/$id"}"""
 
     private val files = mapOf(
-        "files/events/cinema.json" to cinema,
-        "files/events/music.json" to music,
-    )
+        "cinema/french-comedy-hit/fr" to listOf(entry("film-a", "2011-09-23", "Film A", importance = 3, extra = """"regionalDates":{"FR":"2011-11-02"},""")),
+        "cinema/animated-feature/us" to listOf(
+            entry("film-b", "1994-11-09", "Le Roi Écureuil", importance = 3),
+            entry("film-c", "2013-12-04", "La Reine des glaçons"),
+        ),
+        "cinema/blockbuster/us" to listOf(
+            entry("film-d", "2000-02-29", "Film du 29 février", importance = 1),
+            entry("film-e", "1997-11-02", "Film E"),
+        ),
+        "music/music-icon-death/us/rock" to listOf(
+            entry("film-a", "1977-08-16", "Doublon", kind = "death", importance = 3),
+            entry("music-a", "2017-12-05", "Chanteur A", kind = "death", importance = 3),
+        ),
+    ).mapKeys { (path, _) -> "files/events/$path.json" }.mapValues { (_, entries) -> entries.joinToString(",", "[", "]") } +
+        ("files/events/index.txt" to "cinema/french-comedy-hit/fr\ncinema/animated-feature/us\ncinema/blockbuster/us\nmusic/music-icon-death/us/rock\n")
 
     private val readPaths = mutableListOf<String>()
+    private var excluded = emptySet<String>()
 
     private fun repository() = JsonEventRepository(
         readFile = { path -> readPaths += path; files[path]?.encodeToByteArray() },
         clock = Clock { LocalDate(2026, 11, 14) },
+        excludedGroups = { excluded },
     )
 
     private val us = Region.of("US")!!
 
     @Test
-    fun loadsEveryFamilyFileAndSkipsMissingOnes() = runTest {
+    fun loadsEveryFileOfTheIndex() = runTest {
         val report = repository().load()
         assertEquals(listOf("film-a", "film-b", "film-c", "film-d", "film-e", "music-a"), report.events.map { it.id })
-        assertEquals(Family.entries.size, readPaths.size)
+        assertEquals(1 + 4, readPaths.size, "the index, then each file once")
+        assertEquals(EventGroup(EventType.MUSIC_ICON_DEATH, "us", "rock"), report.events.last().group)
     }
 
     @Test
     fun rejectsADuplicateIdAcrossFiles() = runTest {
         val rejection = repository().load().rejections.single()
-        assertEquals(Family.MUSIC, rejection.family)
+        assertEquals("music/music-icon-death/us/rock", rejection.file)
         assertEquals("film-a", rejection.id)
     }
 
@@ -72,7 +67,33 @@ class JsonEventRepositoryTest {
         repository.count()
         repository.onMonthDay(MonthDay(11, 2), Region.FRANCE)
         repository.search("film", 10)
-        assertEquals(Family.entries.size, readPaths.size)
+        assertEquals(1 + 4, readPaths.size)
+    }
+
+    @Test
+    fun leavesTheUntickedGroupsOutOfEveryQuery() = runTest {
+        val repository = repository()
+        assertEquals(listOf("film-a", "film-e"), repository.onMonthDay(MonthDay(11, 2), Region.FRANCE).map { it.id })
+        excluded = setOf("cinema/blockbuster/us")
+        assertEquals(listOf("film-a"), repository.onMonthDay(MonthDay(11, 2), Region.FRANCE).map { it.id })
+        assertTrue(repository.ofType(EventType.BLOCKBUSTER, LocalDate(1900, 1, 1), LocalDate(2026, 1, 1), Region.FRANCE).isEmpty())
+        assertTrue(repository.search("29 février", 10).isEmpty())
+        assertEquals(4, repository.count())
+        assertEquals(6, repository.groups().sumOf { it.count }, "the filter tree still lists every group")
+        excluded = emptySet()
+        assertEquals(6, repository.count(), "ticked again, the group comes back")
+    }
+
+    @Test
+    fun listsTheGroupsWithTheirCount() = runTest {
+        val groups = repository().groups().associate { it.group.path to it.count }
+        assertEquals(mapOf("cinema/animated-feature/us" to 2, "cinema/blockbuster/us" to 2, "cinema/french-comedy-hit/fr" to 1, "music/music-icon-death/us/rock" to 1), groups)
+    }
+
+    @Test
+    fun givesAnEmptyBaseWithoutIndex() = runTest {
+        val repository = JsonEventRepository(readFile = { null }, clock = Clock { LocalDate(2026, 11, 14) })
+        assertEquals(0, repository.count())
     }
 
     @Test

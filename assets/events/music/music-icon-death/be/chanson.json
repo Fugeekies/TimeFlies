@@ -1,0 +1,13 @@
+[
+  {
+    "id": "death-jacques-brel-1978",
+    "date": "1978-10-09",
+    "title": {
+      "fr": "Jacques Brel"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jacques_Brel",
+    "note": "Date de décès de l'infobox. Wikidata Q1666 : même date."
+  }
+]

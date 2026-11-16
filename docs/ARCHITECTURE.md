@@ -96,18 +96,19 @@ class GetDailyShock(
 ## Base d'événements (décision du 14/11/2026)
 
 - **Fichiers JSON chargés en mémoire**, pas de base SQL : la base est en lecture seule et petite au départ. Format dans [`EVENTS_DATA.md`](EVENTS_DATA.md).
-- **Un fichier par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`) dans `src/ui/src/commonMain/composeResources/files/events/`, pour des PR de saisie petites et faciles à relire.
+- **Un fichier par groupe** (décision du 16/11/2026, qui remplace « un fichier par famille ») : `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json`, à part du code, copié dans les ressources de `ui` à la compilation avec un `index.txt` (tâche `gatherResources`). Rangement et règles dans [`EVENTS_DATA.md`](EVENTS_DATA.md), « Fichiers et stockage ». Chaque fichier est un groupe du **filtre** : les groupes décochés (`Settings.excludedEventGroups`) sont écartés de toutes les requêtes par `JsonEventRepository`, qui lit les réglages à chaque requête.
 - **Port** `EventRepository` dans `domain` :
 
   ```kotlin
   interface EventRepository {
+      suspend fun groups(): List<EventGroupCount>   // tous les groupes, décochés compris, pour le filtre
       suspend fun onMonthDay(monthDay: MonthDay, region: Region): List<Event>
       suspend fun ofType(type: EventType, from: LocalDate, to: LocalDate, region: Region): List<Event>
       suspend fun search(query: String, limit: Int): List<Event>
       suspend fun count(): Int
   }
   ```
-- **Index en mémoire** construits au chargement : `byMonthDay` (coup de vieux du jour) et `byType` trié par date (équivalences : recherche binaire de la date cible, puis parcours à ±2 ans). Ils sont calculés avec les dates de la région choisie et reconstruits quand elle change.
+- **Index en mémoire** construits au chargement : `byMonthDay` (coup de vieux du jour) et `byType` trié par date (équivalences : recherche binaire de la date cible, puis parcours à ±2 ans). Ils sont calculés avec les dates de la région choisie, sans les groupes décochés, et reconstruits quand l'une ou l'autre change.
 - **Seuil de 5 000 événements** : arrivé là, on mesure et on décide s'il faut passer à une **base SQLite précompilée** (SQLDelight ; base construite à la compilation à partir des mêmes fichiers sources, index `(mois, jour)` et `(type, date)`, recherche FTS5). Seule la classe `JsonEventRepository` serait remplacée : `domain` et `ui` ne changent pas.
 
 ## Règles de calcul

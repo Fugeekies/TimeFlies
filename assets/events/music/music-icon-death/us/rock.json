@@ -1,0 +1,46 @@
+[
+  {
+    "id": "death-jimi-hendrix-1970",
+    "date": "1970-09-18",
+    "title": {
+      "fr": "Jimi Hendrix"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jimi_Hendrix",
+    "note": "Date de décès de l'infobox. Wikidata Q5928 : même date."
+  },
+  {
+    "id": "death-janis-joplin-1970",
+    "date": "1970-10-04",
+    "title": {
+      "fr": "Janis Joplin"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Janis_Joplin",
+    "note": "Date de décès de l'introduction de l'article. Wikidata Q1514 : même date."
+  },
+  {
+    "id": "death-jim-morrison-1971",
+    "date": "1971-07-03",
+    "title": {
+      "fr": "Jim Morrison"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jim_Morrison",
+    "note": "Date de décès de l'infobox. Wikidata Q44301 : même date."
+  },
+  {
+    "id": "death-elvis-presley-1977",
+    "date": "1977-08-16",
+    "title": {
+      "fr": "Elvis Presley"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Elvis_Presley",
+    "note": "Date de décès de l'infobox. Wikidata Q303 : même date."
+  }
+]

@@ -15,18 +15,19 @@ class CompleteOnboarding(
     private val clock: Clock,
 ) {
     /**
-     * "C'est parti": saves the birth month and year and marks the first launch as done, in one write.
+     * "C'est parti": saves the birth month and year, the event groups unticked on the first launch screen, and
+     * marks the first launch as done, in one write.
      *
      * @return false, and nothing saved, when the birth year is outside the list.
      */
-    suspend fun start(birth: YearMonth): Boolean {
+    suspend fun start(birth: YearMonth, excludedEventGroups: Set<String> = emptySet()): Boolean {
         if (birth.year !in Generations.birthYears(clock.today())) return false
-        settings.update { it.copy(birth = birth, onboardingDone = true) }
+        settings.update { it.copy(birth = birth, excludedEventGroups = excludedEventGroups, onboardingDone = true) }
         return true
     }
 
-    /** "Plus tard": marks the first launch as done without a birth (reduced mode). */
-    suspend fun later() {
-        settings.update { it.copy(birth = null, onboardingDone = true) }
+    /** "Plus tard": marks the first launch as done without a birth (reduced mode), keeping the unticked groups. */
+    suspend fun later(excludedEventGroups: Set<String> = emptySet()) {
+        settings.update { it.copy(birth = null, excludedEventGroups = excludedEventGroups, onboardingDone = true) }
     }
 }

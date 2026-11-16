@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-record-renaud-lavillenie-2014",
+    "date": "2014-02-15",
+    "title": {
+      "fr": "Record du monde de saut à la perche de Renaud Lavillenie (6,16 m)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Renaud_Lavillenie",
+    "note": "Date donnée par l'article Renaud Lavillenie et par l'article Sergueï Bubka. Wikidata : pas de date pour l'exploit."
+  }
+]

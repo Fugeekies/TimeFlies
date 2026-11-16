@@ -1,0 +1,13 @@
+[
+  {
+    "id": "album-jagged-little-pill-1995",
+    "date": "1995-06-13",
+    "title": {
+      "fr": "Jagged Little Pill (Alanis Morissette)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jagged_Little_Pill",
+    "note": "Sortie selon l'infobox. Wikidata Q750084 donne une autre date : 1995-06-09."
+  }
+]

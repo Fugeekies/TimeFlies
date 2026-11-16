@@ -18,7 +18,6 @@ La base d'événements est le cœur de l'application : le coup de vieux du jour,
   "date": "2011-11-02",
   "title": { "fr": "Intouchables" },
   "kind": "film-release",
-  "type": "french-comedy-hit",
   "importance": 3,
   "source": "https://fr.wikipedia.org/wiki/Intouchables_(film)",
   "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q595 : pas de date française."
@@ -32,7 +31,7 @@ La base d'événements est le cœur de l'application : le coup de vieux du jour,
 | `regionalDates` | non | Dates par pays (code ISO 3166-1 à deux lettres : `FR`, `BE`, `US`, `JP`…) quand elles diffèrent de `date`. Chacune doit être sourcée (dans `source` ou `note`). |
 | `title` | oui | Nom affiché, par langue. Le français (`fr`) est obligatoire ; les autres langues s'ajoutent au jalon « Traductions ». Les noms propres et les titres d'œuvre restent dans leur forme connue dans la langue affichée. |
 | `kind` | oui | Nature de l'événement, qui donne le libellé affiché sous le titre (voir « Natures »). |
-| `type` | oui | Type qui sert à apparier les équivalences (voir « Types »). |
+| `type` | non | Donné par le dossier du fichier (voir « Fichiers et stockage ») : plus écrit dans les entrées depuis le 16/11/2026. Une entrée qui l'écrit encore doit avoir le type de son dossier. |
 | `importance` | oui | 1 (anecdotique), 2 (connu), 3 (que tout le monde connaît). Départage les anniversaires d'un même jour. |
 | `source` | oui | Lien qui confirme la date. Jamais affiché dans l'application, sauf dans « À propos » sous forme de crédit global. |
 | `note` | non | Précision pour les relecteurs (pays de la première sortie, sources des dates régionales). |
@@ -110,9 +109,23 @@ Notations : deux personnes `A` et `B` (l'utilisateur et l'autre personne, dans u
 
 Environ **400 événements**, pour que presque chaque jour de l'année ait au moins un anniversaire, et que chaque type ait assez d'événements répartis des années 1950 à aujourd'hui pour que les équivalences marchent quel que soit l'écart d'âge. Une vérification automatique (test) compte les jours de l'année sans anniversaire et les types qui ont moins de 4 événements.
 
-## Fichiers et stockage (décision du 14/11/2026)
+## Fichiers et stockage (décision du 16/11/2026, qui remplace « un fichier par famille » du 14/11/2026)
 
-- **Un fichier JSON par famille** (`series.json`, `cinema.json`, `music.json`, `sport.json`, `games-tech.json`, `history.json`), dans `src/ui/src/commonMain/composeResources/files/events/`. Chaque fichier est un tableau d'événements au format ci-dessus.
+- La base vit **à part du code**, dans `assets/events/`, rangée finement pour pouvoir **filtrer** ce qui est chargé (exemple : pas de rap US) :
+
+  ```
+  assets/events/<famille>/<type>/<origine>.json
+  assets/events/<famille>/<type>/<origine>/<sous-catégorie>.json
+  ```
+
+  - **famille** : `series`, `cinema`, `music`, `sport`, `games-tech`, `history` ;
+  - **type** : le type des équivalences (voir « Types »), forcément de cette famille ;
+  - **origine** : le pays de l'artiste, du groupe, du joueur ou de l'athlète, du studio pour un film, en code ISO 3166-1 en minuscules (`fr`, `us`, `gb`, `jm`, `pr`…). Un pays par fichier. `international` est réservé aux très gros événements qui mélangent les pays ;
+  - **sous-catégorie** (facultative) : un découpage plus fin quand il a du sens. Aujourd'hui : le **genre musical** des morts d'icônes (`chanson`, `rock`, `pop`, `soul`, `rap`, `reggae`, `electro`) et la **discipline** des records sportifs (`athletisme`, `natation`, `gymnastique`). Les autres types de musique ont déjà un genre par leur type (`rap-album-hit`).
+- Exemples : `music/rap-album-hit/us.json` (Dr. Dre, Eminem…), `music/music-icon-death/fr/chanson.json` (Piaf, Aznavour… ; Brel est en `be`), `sport/football-star-peak/fr.json` (Zidane, Platini…).
+- **Règles d'origine** pour les cas mixtes (16/11/2026) : un groupe prend le pays où il s'est formé (Kaoma → `fr`, Fleetwood Mac → `gb`) ; un film prend le pays du studio qui le porte (Harry Potter et Le Seigneur des anneaux → `us`, Casino Royale, produit par Eon → `gb`) ; Porto Rico a son propre code (`pr`).
+- Chaque fichier est un tableau d'événements au format ci-dessus, **sans** `type` (le dossier le donne). À la compilation, `assets/events/` est copié dans les ressources de l'application (`files/events/`), avec `index.txt` qui liste les fichiers : une application ne peut pas lister un dossier de ses ressources.
+- **Filtre** : chaque fichier est un « groupe » qu'on peut décocher dans Réglages › Événements (arbre famille › type › origine › sous-catégorie) ou, plus largement, au premier lancement (thèmes et origines). Un groupe décoché n'apparaît plus nulle part : Aujourd'hui, widget, notification Windows, Équivalences, « Quel âge ? ». Les chemins des groupes décochés sont gardés dans `settings.json` (`excludedEventGroups`).
 - Les fichiers sont lus au démarrage et gardés **en mémoire**, avec des index par jour de l'année et par type (voir [`ARCHITECTURE.md`](ARCHITECTURE.md), « Base d'événements »).
 - **À 5 000 événements**, on mesure et on décide s'il faut passer à une base SQLite précompilée, construite à la compilation à partir des mêmes fichiers. Les fichiers JSON restent alors la source éditée par les humains.
 
@@ -120,8 +133,9 @@ Environ **400 événements**, pour que presque chaque jour de l'année ait au mo
 
 - `id` uniques dans toute la base (tous fichiers confondus), au format attendu (minuscules, chiffres et tirets).
 - `date` et `regionalDates` valides, au format `AAAA-MM-JJ`, strictement avant aujourd'hui ; codes de pays de deux lettres majuscules.
-- `kind` et `type` connus, `type` rangé dans le fichier de sa famille, `importance` entre 1 et 3, `title.fr` non vide, `source` en `https://`.
-- Une entrée invalide est écartée avec toutes ses raisons ; les autres entrées du fichier se chargent quand même. Un fichier absent est une famille vide (les thèmes arrivent un par un).
+- Chemin du fichier valide : famille connue, type connu et de cette famille, origine en code de pays à deux lettres minuscules ou `international`, sous-catégorie en minuscules et tirets. Un fichier mal rangé est écarté en entier.
+- `kind` connu, `type` éventuel égal à celui du dossier, `importance` entre 1 et 3, `title.fr` non vide, `source` en `https://`.
+- Une entrée invalide est écartée avec toutes ses raisons ; les autres entrées du fichier se chargent quand même. Un fichier listé dans l'index mais absent est signalé.
 - Le test `RealEventFilesTest` valide les vrais fichiers livrés : **une seule entrée rejetée fait échouer `./gradlew check`**.
 - Statistiques de couverture (jours sans anniversaire, types trop pauvres) écrites dans le rapport de test, sans faire échouer la compilation.
 

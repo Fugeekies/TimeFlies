@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-ballon-d-or-rodri-2024",
+    "date": "2024-10-28",
+    "title": {
+      "fr": "Ballon d'or de Rodri"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2024",
+    "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q126488939 : même date."
+  }
+]

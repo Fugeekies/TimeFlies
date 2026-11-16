@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-record-eliud-kipchoge-2018",
+    "date": "2018-09-16",
+    "title": {
+      "fr": "Record du monde du marathon d'Eliud Kipchoge à Berlin"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Eliud_Kipchoge",
+    "note": "Date donnée par l'article Eliud Kipchoge et par l'article Record du monde du marathon. Wikidata : pas de date pour l'exploit."
+  }
+]

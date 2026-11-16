@@ -1,6 +1,7 @@
 package io.github.fugeekies.timeflies.domain
 
 import io.github.fugeekies.timeflies.domain.model.Event
+import io.github.fugeekies.timeflies.domain.model.EventGroup
 import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.EventType
 import io.github.fugeekies.timeflies.domain.model.Region
@@ -12,6 +13,7 @@ internal fun testEvent(
     date: String,
     importance: Int = 2,
     type: EventType = EventType.BLOCKBUSTER,
+    origin: String = "us",
     regionalDates: Map<Region, LocalDate> = emptyMap(),
 ) = Event(
     id = id,
@@ -19,7 +21,7 @@ internal fun testEvent(
     regionalDates = regionalDates,
     titles = mapOf(Event.FRENCH to "Titre $id"),
     kind = EventKind.FILM_RELEASE,
-    type = type,
+    group = EventGroup(type, origin),
     importance = importance,
     source = "https://example.org/$id",
 )

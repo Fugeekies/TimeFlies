@@ -17,6 +17,11 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 * **Naissance de l'autre personne** : **aujourd'hui moins son âge**, au jour près (une personne « de 15 ans » est née il y a exactement 15 ans). Elle peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
 * **Écart** : différence entre les deux dates de naissance, au jour près, dans un sens ou dans l'autre ; un écart de moins de 5 ans est permis avec un avertissement (voir `Equivalences.template.md`). Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
 
+#### Panneau « Événements » (eyebrow « ÉVÉNEMENTS », décision du 16/11/2026)
+* « Décoche ce qui ne t'intéresse pas : ces événements n'apparaissent plus nulle part, ni sur Aujourd'hui, ni dans le widget, ni dans les équivalences. »
+* Arbre famille › type › origine › sous-catégorie, replié au départ : chaque ligne a une case à trois états (cochée, décochée, en partie) et son nombre d'événements ; « ▸ » la déplie. Toucher une case coche ou décoche tout ce qu'elle contient. Tout est coché par défaut.
+* Un groupe décoché n'est plus chargé nulle part (Aujourd'hui, widget, notification Windows, Équivalences, « Quel âge ? ») ; le nombre d'événements de « À propos » suit. Rangement des groupes : [`EVENTS_DATA.md`](../EVENTS_DATA.md), « Fichiers et stockage ».
+
 #### Panneau « Affichage » (eyebrow « AFFICHAGE »)
 * **Style** : **absent en V1**, qui n'a que le Polaroïd (décision du 13/11/2026). Il apparaît avec le jalon « Style Éphéméride » : un choix par style livré, avec un aperçu miniature de la feuille du jour (voir `UI_DESIGN_SPEC.md` § 1). La maquette ci-dessous montre ce futur choix :
   * **Polaroïd** (par défaut) ;

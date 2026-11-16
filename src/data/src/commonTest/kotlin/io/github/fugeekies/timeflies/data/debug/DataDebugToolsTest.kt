@@ -46,7 +46,13 @@ class DataDebugToolsTest {
     private val clock = AdjustableClock(system)
     private val settings = InMemorySettings()
     private val events = JsonEventRepository(
-        readFile = { path -> if (path == "files/events/cinema.json") cinema.encodeToByteArray() else null },
+        readFile = { path ->
+            when (path) {
+                "files/events/index.txt" -> "cinema/blockbuster/us".encodeToByteArray()
+                "files/events/cinema/blockbuster/us.json" -> cinema.encodeToByteArray()
+                else -> null
+            }
+        },
         clock = system,
     )
     private val tools = DataDebugTools(clock, settings, events)

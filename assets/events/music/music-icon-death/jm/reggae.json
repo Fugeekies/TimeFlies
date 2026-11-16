@@ -1,0 +1,13 @@
+[
+  {
+    "id": "death-bob-marley-1981",
+    "date": "1981-05-11",
+    "title": {
+      "fr": "Bob Marley"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Bob_Marley",
+    "note": "Date de décès de l'infobox. Wikidata Q409 : même date (et une seconde valeur erronée, 1981-04-11)."
+  }
+]

@@ -63,6 +63,9 @@ import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup_hel
 import io.github.fugeekies.timeflies.ui.resources.settings_morning_notification
 import io.github.fugeekies.timeflies.ui.resources.settings_notification_time
 import io.github.fugeekies.timeflies.ui.resources.settings_windows
+import io.github.fugeekies.timeflies.ui.resources.settings_events
+import io.github.fugeekies.timeflies.ui.resources.settings_events_help
+import io.github.fugeekies.timeflies.ui.events.EventFilterTree
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check_help
 import io.github.fugeekies.timeflies.ui.resources.settings_widget
@@ -129,6 +132,14 @@ fun SettingsScreen(
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
             Panel { DisplayPanel(current.region) }
+            // What is shown at all: unticked groups disappear everywhere (decision of 16/11/2026).
+            if (current.eventGroups.isNotEmpty()) {
+                Eyebrow(stringResource(Res.string.settings_events))
+                Panel {
+                    Text(stringResource(Res.string.settings_events_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    EventFilterTree(current.eventGroups, current.excludedEventGroups, viewModel::onExcludedEventGroups)
+                }
+            }
             if (widget != null) {
                 Eyebrow(stringResource(Res.string.settings_widget))
                 Panel { WidgetPanel(widget) }

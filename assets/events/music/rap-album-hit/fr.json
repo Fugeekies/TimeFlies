@@ -1,0 +1,68 @@
+[
+  {
+    "id": "album-qui-seme-le-vent-1991",
+    "date": "1991-10-15",
+    "title": {
+      "fr": "Qui sème le vent récolte le tempo (MC Solaar)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qui_s%C3%A8me_le_vent_r%C3%A9colte_le_tempo",
+    "note": "Sortie selon l'infobox. Wikidata Q617517 : même date."
+  },
+  {
+    "id": "album-paris-sous-les-bombes-1995",
+    "date": "1995-03-28",
+    "title": {
+      "fr": "Paris sous les bombes (Suprême NTM)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Paris_sous_les_bombes",
+    "note": "Sortie selon l'infobox. Wikidata Q3100880 : même date."
+  },
+  {
+    "id": "album-l-ecole-du-micro-d-argent-1997",
+    "date": "1997-03-18",
+    "title": {
+      "fr": "L'École du micro d'argent (IAM)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'%C3%89cole_du_micro_d'argent",
+    "note": "Sortie selon l'infobox. Wikidata Q920654 : même date."
+  },
+  {
+    "id": "album-temps-mort-2002",
+    "date": "2002-01-22",
+    "title": {
+      "fr": "Temps mort (Booba)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Temps_mort_(album)",
+    "note": "Sortie originale selon l'infobox. Wikidata Q288411 : même date."
+  },
+  {
+    "id": "album-feu-2015",
+    "date": "2015-06-08",
+    "title": {
+      "fr": "Feu (Nekfeu)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Feu_(album)",
+    "note": "Sortie selon l'infobox et l'introduction. Wikidata Q20668963 : même date."
+  },
+  {
+    "id": "album-dans-la-legende-2016",
+    "date": "2016-09-16",
+    "title": {
+      "fr": "Dans la légende (PNL)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dans_la_l%C3%A9gende",
+    "note": "Sortie selon l'infobox. Wikidata Q28494258 : même date en France."
+  }
+]

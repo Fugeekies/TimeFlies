@@ -39,6 +39,7 @@ class MainActivity : ComponentActivity() {
                 updateSettings = graph.updateSettings,
                 completeOnboarding = graph.completeOnboarding,
                 countEvents = graph.countEvents,
+                getEventGroups = graph.getEventGroups,
                 clock = graph.clock,
                 debugTools = graph.debugTools,
                 appVersion = BuildConfig.RELEASE_VERSION,

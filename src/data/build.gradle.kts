@@ -31,8 +31,8 @@ kotlin {
     }
 }
 
-// The JVM tests also validate the real event files shipped with the app.
-val eventsDir = rootProject.layout.projectDirectory.dir("src/ui/src/commonMain/composeResources/files/events")
+// The JVM tests also validate the real event files shipped with the app (assets/events, docs/EVENTS_DATA.md).
+val eventsDir = rootProject.layout.projectDirectory.dir("assets/events")
 tasks.withType<Test>().configureEach {
     inputs.dir(eventsDir).withPathSensitivity(PathSensitivity.RELATIVE).optional()
     systemProperty("timeflies.eventsDir", eventsDir.asFile.absolutePath)

@@ -74,6 +74,11 @@ class UpdateSettings(
     /** Windows: the notification explaining that TimeFlies stays in the taskbar was shown; it does not come back. */
     suspend fun markTrayHintShown() = updateWindows { it.copy(trayHintShown = true) }
 
+    /** Settings › Événements: the groups left out everywhere (paths, see [io.github.fugeekies.timeflies.domain.model.EventGroup.path]). */
+    suspend fun setExcludedEventGroups(paths: Set<String>) {
+        settings.update { it.copy(excludedEventGroups = paths) }
+    }
+
     /** Settings › À propos: look for new versions at start, or never (decision of 16/11/2026). */
     suspend fun setReleaseCheck(enabled: Boolean) {
         settings.update { it.copy(releaseCheck = it.releaseCheck.copy(enabled = enabled)) }

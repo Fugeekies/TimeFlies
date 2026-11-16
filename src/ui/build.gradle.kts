@@ -36,6 +36,30 @@ kotlin {
     }
 }
 
+// The event base lives apart from the code, in assets/events/<family>/<type>/<origin>[/<subcategory>].json
+// (docs/EVENTS_DATA.md, decision of 16/11/2026). It is copied into the app resources as files/events/, with
+// index.txt listing every file: an app cannot list a folder of its resources. A custom directory replaces the
+// module's composeResources folder, so both are gathered into one generated folder.
+val eventsSource = rootProject.layout.projectDirectory.dir("assets/events")
+val moduleResources = layout.projectDirectory.dir("src/commonMain/composeResources")
+val gatheredResources = layout.buildDirectory.dir("generated/composeResources")
+val gatherResources = tasks.register<Sync>("gatherResources") {
+    from(moduleResources)
+    from(eventsSource) {
+        include("**/*.json")
+        into("files/events")
+    }
+    into(gatheredResources)
+    val source = eventsSource.asFile
+    doLast {
+        val index = source.walkTopDown().filter { it.isFile && it.extension == "json" }
+            .map { it.relativeTo(source).invariantSeparatorsPath.removeSuffix(".json") }
+            .sorted().joinToString("\n", postfix = "\n")
+        destinationDir.resolve("files/events/index.txt").writeText(index)
+    }
+}
+
 compose.resources {
     packageOfResClass = "io.github.fugeekies.timeflies.ui.resources"
+    customDirectory(sourceSetName = "commonMain", directoryProvider = gatherResources.map { gatheredResources.get() })
 }

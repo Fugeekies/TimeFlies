@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sport-record-armand-duplantis-2020",
+    "date": "2020-02-08",
+    "title": {
+      "fr": "Premier record du monde de saut à la perche d'Armand Duplantis (6,17 m)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Armand_Duplantis",
+    "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

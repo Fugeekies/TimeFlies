@@ -15,7 +15,7 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
-val eventsDir = rootProject.layout.projectDirectory.dir("src/ui/src/commonMain/composeResources/files/events")
+val eventsDir = rootProject.layout.projectDirectory.dir("assets/events")
 val reportFile = layout.buildDirectory.file("reports/benchmarks/performance-report.md")
 
 // The regular test task stays empty so that `check` does not run the benchmarks.

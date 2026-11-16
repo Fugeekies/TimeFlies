@@ -1,0 +1,57 @@
+[
+  {
+    "id": "single-quit-playing-games-1996",
+    "date": "1996-10-14",
+    "title": {
+      "fr": "Quit Playing Games (with My Heart) (Backstreet Boys)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Quit_Playing_Games_(With_My_Heart)",
+    "note": "Première sortie (Royaume-Uni) selon l'infobox. Wikidata Q2454853 : année seulement."
+  },
+  {
+    "id": "single-tearin-up-my-heart-1997",
+    "date": "1997-02-10",
+    "title": {
+      "fr": "Tearin' Up My Heart (*NSYNC)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tearin'_Up_My_Heart",
+    "note": "Première sortie (Allemagne) selon l'infobox. Wikidata Q5841534 : même date."
+  },
+  {
+    "id": "single-everybody-backstreets-back-1997",
+    "date": "1997-07-14",
+    "title": {
+      "fr": "Everybody (Backstreet's Back) (Backstreet Boys)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Everybody_(Backstreet's_Back)",
+    "note": "Sortie selon l'infobox. Wikidata Q2302917 : même date."
+  },
+  {
+    "id": "single-i-want-it-that-way-1999",
+    "date": "1999-04-12",
+    "title": {
+      "fr": "I Want It That Way (Backstreet Boys)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/I_Want_It_That_Way",
+    "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q338796 : même date."
+  },
+  {
+    "id": "single-bye-bye-bye-2000",
+    "date": "2000-01-11",
+    "title": {
+      "fr": "Bye Bye Bye (*NSYNC)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Bye_Bye_Bye",
+    "note": "Sortie selon l'infobox. Wikidata Q3647850 : mois seulement (janvier 2000)."
+  }
+]

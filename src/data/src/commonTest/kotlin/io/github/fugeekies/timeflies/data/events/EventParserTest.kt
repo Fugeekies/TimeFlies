@@ -2,7 +2,7 @@ package io.github.fugeekies.timeflies.data.events
 
 import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.EventType
-import io.github.fugeekies.timeflies.domain.model.Family
+import io.github.fugeekies.timeflies.domain.model.EventGroup
 import io.github.fugeekies.timeflies.domain.model.Region
 import kotlinx.datetime.LocalDate
 import kotlin.test.Test
@@ -14,10 +14,10 @@ class EventParserTest {
 
     private val parser = EventParser(today = LocalDate(2026, 11, 14))
 
-    private fun parse(json: String, family: Family = Family.CINEMA) = parser.parse(family, json.encodeToByteArray())
+    private fun parse(json: String, file: String = "cinema/french-comedy-hit/fr") = parser.parse(file, json.encodeToByteArray())
 
-    private fun reasonsOf(entry: String, family: Family = Family.CINEMA): List<String> {
-        val result = parse("[$entry]", family)
+    private fun reasonsOf(entry: String, file: String = "cinema/french-comedy-hit/fr"): List<String> {
+        val result = parse("[$entry]", file)
         assertEquals(0, result.events.size, "the entry should be rejected")
         return result.rejections.single().reasons
     }
@@ -78,14 +78,27 @@ class EventParserTest {
     }
 
     @Test
-    fun rejectsUnknownKindAndType() {
-        assertTrue(reasonsOf(valid.replace("film-release", "movie")).contains("kind « movie » inconnu"))
-        assertTrue(reasonsOf(valid.replace("french-comedy-hit", "comedy")).contains("type « comedy » inconnu"))
+    fun takesTheGroupFromTheFolder() {
+        val withoutType = valid.replace(""""type":"french-comedy-hit",""", "")
+        val event = parse("[$withoutType]").events.single()
+        assertEquals(EventType.FRENCH_COMEDY_HIT, event.type)
+        assertEquals("fr", event.group.origin)
+        val death = parse("[${withoutType.replace("film-release", "death")}]", "music/music-icon-death/us/rap").events.single()
+        assertEquals(EventGroup(EventType.MUSIC_ICON_DEATH, "us", "rap"), death.group)
     }
 
     @Test
-    fun rejectsATypeFiledInTheWrongFamily() {
-        assertTrue(reasonsOf(valid, Family.MUSIC).any { "rangé dans music.json" in it })
+    fun rejectsAnUnknownKindOrATypeThatDisagreesWithItsFolder() {
+        assertTrue(reasonsOf(valid.replace("film-release", "movie")).contains("kind « movie » inconnu"))
+        assertTrue(reasonsOf(valid.replace("french-comedy-hit", "blockbuster")).any { "rangé dans le dossier « french-comedy-hit »" in it })
+    }
+
+    @Test
+    fun rejectsAFileOutsideTheTree() {
+        val result = parse("[$valid]", "music/french-comedy-hit/fr")
+        assertEquals(0, result.events.size)
+        assertTrue(result.rejections.single().reasons.any { "rangé dans la famille « music »" in it })
+        assertEquals(-1, parse("[$valid]", "cinema/french-comedy-hit").rejections.single().index, "origin missing")
     }
 
     @Test

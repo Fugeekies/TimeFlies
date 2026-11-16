@@ -1,0 +1,13 @@
+[
+  {
+    "id": "film-casino-royale-2006",
+    "date": "2006-11-22",
+    "title": {
+      "fr": "Casino Royale"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Casino_Royale_(film,_2006)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q151904 : pas de date française."
+  }
+]

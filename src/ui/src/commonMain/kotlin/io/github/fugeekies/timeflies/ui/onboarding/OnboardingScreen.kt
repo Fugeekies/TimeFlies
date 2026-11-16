@@ -40,6 +40,15 @@ import io.github.fugeekies.timeflies.ui.resources.onboarding_intro_happy_days
 import io.github.fugeekies.timeflies.ui.resources.onboarding_later
 import io.github.fugeekies.timeflies.ui.resources.onboarding_privacy
 import io.github.fugeekies.timeflies.ui.resources.onboarding_start
+import io.github.fugeekies.timeflies.ui.resources.onboarding_events
+import io.github.fugeekies.timeflies.ui.resources.onboarding_events_families
+import io.github.fugeekies.timeflies.ui.resources.onboarding_events_more
+import io.github.fugeekies.timeflies.ui.resources.onboarding_events_origins
+import io.github.fugeekies.timeflies.ui.events.rememberOriginNames
+import io.github.fugeekies.timeflies.ui.text.familyLabel
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.material3.FilterChip
 import io.github.fugeekies.timeflies.ui.resources.onboarding_title
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import org.jetbrains.compose.resources.stringResource
@@ -81,6 +90,7 @@ fun OnboardingScreen(viewModel: OnboardingViewModel, modifier: Modifier = Modifi
                 modifier = Modifier.padding(top = 8.dp),
             )
             BirthFields(state.month, state.year, state.birthYears, viewModel::onMonthPicked, viewModel::onYearPicked)
+            EventChoices(state, viewModel)
 
             Button(
                 onClick = viewModel::onStart,
@@ -123,4 +133,40 @@ private fun Intro() {
         style = MaterialTheme.typography.bodyLarge,
         color = MaterialTheme.colorScheme.onBackground,
     )
+}
+
+/**
+ * "Ce qui t'intéresse": a chip per theme and per origin, all ticked. Unticking one leaves out every group of it
+ * (decision of 16/11/2026); the fine choice is in Settings › Événements.
+ */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun EventChoices(state: OnboardingUiState, viewModel: OnboardingViewModel) {
+    if (state.groups.isEmpty()) return
+    val originName = rememberOriginNames()
+    val colors = MaterialTheme.colorScheme
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(stringResource(Res.string.onboarding_events), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant, modifier = Modifier.semantics { heading() })
+        Text(stringResource(Res.string.onboarding_events_families), style = MaterialTheme.typography.titleSmall, color = colors.onBackground)
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            state.families.forEach { family ->
+                FilterChip(
+                    selected = family !in state.excludedFamilies,
+                    onClick = { viewModel.onFamilyToggled(family) },
+                    label = { Text(familyLabel(family)) },
+                )
+            }
+        }
+        Text(stringResource(Res.string.onboarding_events_origins), style = MaterialTheme.typography.titleSmall, color = colors.onBackground)
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            state.origins.forEach { origin ->
+                FilterChip(
+                    selected = origin !in state.excludedOrigins,
+                    onClick = { viewModel.onOriginToggled(origin) },
+                    label = { Text(originName(origin)) },
+                )
+            }
+        }
+        Text(stringResource(Res.string.onboarding_events_more), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
+    }
 }

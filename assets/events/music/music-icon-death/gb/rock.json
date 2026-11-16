@@ -1,0 +1,35 @@
+[
+  {
+    "id": "death-john-lennon-1980",
+    "date": "1980-12-08",
+    "title": {
+      "fr": "John Lennon"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/John_Lennon",
+    "note": "Date de décès de l'infobox. Wikidata Q1203 : même date."
+  },
+  {
+    "id": "death-freddie-mercury-1991",
+    "date": "1991-11-24",
+    "title": {
+      "fr": "Freddie Mercury"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Freddie_Mercury",
+    "note": "Date de décès de l'infobox. Wikidata Q15869 : même date."
+  },
+  {
+    "id": "death-david-bowie-2016",
+    "date": "2016-01-10",
+    "title": {
+      "fr": "David Bowie"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/David_Bowie",
+    "note": "Date de décès de l'infobox. Wikidata Q5383 : même date."
+  }
+]

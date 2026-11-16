@@ -187,3 +187,8 @@ Issu de l'analyse du 16/11/2026 (corrections dans la PR [#24](https://github.com
 - [x] Mémoire de l'application Windows mesurée (≈ 140 Mo fenêtre cachée, venant du rendu natif de Compose) : ni limite de tas ni fenêtre détruite ne font gagner assez, rien n'est changé.
 - [x] Décision du 16/11/2026 : une seule instance sur Windows, un second lancement ramène la fenêtre (`SingleInstance`).
 - [x] Décision du 16/11/2026 : recherche des nouvelles versions sur GitHub, une fois par jour au plus, bandeau sur Aujourd'hui, désactivable dans Réglages › À propos (`ReleaseUpdates`, `GitHubReleases`, `settings.json` en version 4).
+
+### Jalon — Base d'événements rangée et filtre — 16/11/2026 · PR [#26](https://github.com/Fugeekies/TimeFlies/pull/26)
+- [x] Décision du 16/11/2026 : base sortie du code, `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json` ; un pays par fichier, `international` pour les très gros événements mixtes ; sous-catégories : genre des morts d'icônes, discipline des records ([`EVENTS_DATA.md`](EVENTS_DATA.md), « Fichiers et stockage »).
+- [x] 192 événements classés en 52 fichiers ; le type vient du dossier ; validation du chemin (`EventGroup`).
+- [x] Filtre appliqué partout : arbre de Réglages › Événements, pastilles thèmes et origines au premier lancement, `settings.json` en version 5.

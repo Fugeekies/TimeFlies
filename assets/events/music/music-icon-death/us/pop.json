@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-michael-jackson-2009",
+    "date": "2009-06-25",
+    "title": {
+      "fr": "Michael Jackson"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Michael_Jackson",
+    "note": "Date de décès de l'infobox. Wikidata Q2831 : même date."
+  },
+  {
+    "id": "death-prince-2016",
+    "date": "2016-04-21",
+    "title": {
+      "fr": "Prince"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Prince_(musicien)",
+    "note": "Date de décès de l'infobox. Wikidata Q7542 : même date."
+  }
+]

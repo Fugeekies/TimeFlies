@@ -1,0 +1,57 @@
+[
+  {
+    "id": "album-sgt-peppers-1967",
+    "date": "1967-06-01",
+    "title": {
+      "fr": "Sgt. Pepper's Lonely Hearts Club Band (The Beatles)"
+    },
+    "kind": "album-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Sgt._Pepper's_Lonely_Hearts_Club_Band_(album)",
+    "note": "Sortie au Royaume-Uni et en France selon l'infobox et l'introduction. Wikidata Q169226 donne une autre date au Royaume-Uni : 1967-05-26."
+  },
+  {
+    "id": "album-abbey-road-1969",
+    "date": "1969-09-26",
+    "title": {
+      "fr": "Abbey Road (The Beatles)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Abbey_Road_(album)",
+    "note": "Sortie au Royaume-Uni selon l'infobox (qui donne aussi la France le 12 septembre 1969). Wikidata Q173643 : même date."
+  },
+  {
+    "id": "album-the-dark-side-of-the-moon-1973",
+    "date": "1973-03-01",
+    "title": {
+      "fr": "The Dark Side of the Moon (Pink Floyd)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Dark_Side_of_the_Moon",
+    "note": "Première sortie (États-Unis) selon l'infobox. Wikidata Q150901 : même date aux États-Unis."
+  },
+  {
+    "id": "album-rumours-1977",
+    "date": "1977-02-04",
+    "title": {
+      "fr": "Rumours (Fleetwood Mac)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rumours",
+    "note": "Sortie selon l'infobox. Wikidata Q695405 : même date."
+  },
+  {
+    "id": "album-21-2011",
+    "date": "2011-01-24",
+    "title": {
+      "fr": "21 (Adele)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/21_(album_d'Adele)",
+    "note": "Première sortie (Europe) selon l'infobox. Wikidata Q155169 : même date."
+  }
+]

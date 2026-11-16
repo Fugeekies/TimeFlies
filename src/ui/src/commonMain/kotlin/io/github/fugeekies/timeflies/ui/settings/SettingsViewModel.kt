@@ -8,6 +8,11 @@ import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
+import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
+import io.github.fugeekies.timeflies.ui.events.FilterNode
+import io.github.fugeekies.timeflies.ui.events.filterTree
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import kotlinx.coroutines.CancellationException
@@ -28,7 +33,8 @@ import kotlinx.datetime.YearMonth
  *
  * @property month month picked while the birth is not saved yet (both lists are needed to save it).
  * @property year year picked while the birth is not saved yet.
- * @property eventCount number of events in the base; null until counted or when the base cannot be read.
+ * @property eventCount number of events shown (the event filter applied); null until counted or when unreadable.
+ * @property eventGroups the tree of the event filter; empty until read.
  */
 data class SettingsUiState(
     val today: LocalDate,
@@ -39,6 +45,8 @@ data class SettingsUiState(
     val eventCount: Int?,
     val windows: WindowsSettings,
     val releaseCheck: Boolean,
+    val eventGroups: List<FilterNode>,
+    val excludedEventGroups: Set<String>,
 ) {
     val birthYears: IntRange get() = Generations.birthYears(today)
     val userAge: Int? get() = birth?.let { Generations.userAge(it, today) }
@@ -52,6 +60,7 @@ class SettingsViewModel(
     observeSettings: ObserveSettings,
     private val updateSettings: UpdateSettings,
     countEvents: CountEvents,
+    getEventGroups: GetEventGroups,
     private val clock: Clock,
 ) : ViewModel() {
 
@@ -59,30 +68,44 @@ class SettingsViewModel(
 
     private val draft = MutableStateFlow(Draft())
     private val eventCount = MutableStateFlow<Int?>(null)
+    private val eventGroups = MutableStateFlow<List<FilterNode>>(emptyList())
 
     val state: StateFlow<SettingsUiState?> = combine(
         observeSettings(),
         draft,
         eventCount,
+        eventGroups,
         // The age shown next to the birth changes with the day.
         clock.dayChanges(),
-    ) { settings, draft, count, _ ->
-        uiState(settings, draft, count)
+    ) { settings, draft, count, groups, _ ->
+        uiState(settings, draft, count, groups)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     init {
+        // Counted again when the event filter changes: "192 événements" follows what is shown.
         viewModelScope.launch {
-            eventCount.value = try {
-                countEvents()
+            observeSettings().map { it.excludedEventGroups }.distinctUntilChanged().collect {
+                eventCount.value = try {
+                    countEvents()
+                } catch (e: CancellationException) {
+                    throw e
+                } catch (e: Exception) {
+                    null
+                }
+            }
+        }
+        viewModelScope.launch {
+            eventGroups.value = try {
+                filterTree(getEventGroups())
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                null
+                emptyList()
             }
         }
     }
 
-    private fun uiState(settings: Settings, draft: Draft, count: Int?) = SettingsUiState(
+    private fun uiState(settings: Settings, draft: Draft, count: Int?, groups: List<FilterNode>) = SettingsUiState(
         today = clock.today(),
         birth = settings.birth,
         month = settings.birth?.month ?: draft.month,
@@ -91,6 +114,8 @@ class SettingsViewModel(
         eventCount = count,
         windows = settings.windows,
         releaseCheck = settings.releaseCheck.enabled,
+        eventGroups = groups,
+        excludedEventGroups = settings.excludedEventGroups,
     )
 
     fun onMonthPicked(month: Month) = onBirthPicked(month = month)
@@ -127,6 +152,11 @@ class SettingsViewModel(
 
     fun onNotificationTime(time: LocalTime) {
         viewModelScope.launch { updateSettings.setNotificationTime(time) }
+    }
+
+    /** The new set of unticked event groups, from the filter tree. */
+    fun onExcludedEventGroups(paths: Set<String>) {
+        viewModelScope.launch { updateSettings.setExcludedEventGroups(paths) }
     }
 
     fun onReleaseCheck(enabled: Boolean) {

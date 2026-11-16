@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-tupac-shakur-1996",
+    "date": "1996-09-13",
+    "title": {
+      "fr": "Tupac Shakur"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Tupac_Shakur",
+    "note": "Date de décès de l'infobox. Wikidata Q6107 : même date."
+  },
+  {
+    "id": "death-the-notorious-big-1997",
+    "date": "1997-03-09",
+    "title": {
+      "fr": "The Notorious B.I.G."
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Notorious_B.I.G.",
+    "note": "Date de décès de l'infobox. Wikidata Q179157 : même date."
+  }
+]
