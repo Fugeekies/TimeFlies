@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -65,6 +66,23 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
     DEBUG(Res.string.nav_debug, TimeFliesIcons.Debug),
 }
 
+/** A screen another part of the app asks to open (the Windows tray icon and its menu). */
+enum class AppScreen { TODAY, SETTINGS }
+
+/**
+ * What only one platform adds to the shared screens; the defaults add nothing (Android for now).
+ *
+ * @property screenRequest a screen to open, asked from outside the window; [onScreenRequestHandled] clears it.
+ * @property showWindowsPanel Settings shows the "Notification et démarrage" panel.
+ * @property sendMorningNotification the debug panel offers to send the morning notification at once.
+ */
+data class PlatformHooks(
+    val screenRequest: AppScreen? = null,
+    val onScreenRequestHandled: () -> Unit = {},
+    val showWindowsPanel: Boolean = false,
+    val sendMorningNotification: (() -> Unit)? = null,
+)
+
 /**
  * Root composable shared by the Android and Windows apps: the first launch screen until it is completed or
  * skipped, then the theme and adaptive navigation (bottom bar on a phone, rail on a wide window). The use cases
@@ -72,6 +90,7 @@ private enum class Destination(val label: StringResource, val icon: ImageVector)
  *
  * @param appVersion version shown in Settings › À propos; null for a local development build.
  * @param debugTools tools of the debug panel; null in a release, where the panel does not exist.
+ * @param platform what only one platform adds (the Windows tray, for now).
  */
 @Composable
 fun App(
@@ -86,6 +105,7 @@ fun App(
     clock: Clock,
     appVersion: String? = null,
     debugTools: DebugTools? = null,
+    platform: PlatformHooks = PlatformHooks(),
 ) {
     // Forced light or dark from the debug panel, for this session only.
     var themeMode by rememberSaveable { mutableStateOf(ThemeMode.SYSTEM) }
@@ -97,13 +117,15 @@ fun App(
             // Settings not read yet (a few milliseconds): a plain background rather than a flash of the wrong screen.
             null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
             else -> if (!current.onboardingDone) {
+                // A screen asked from the tray waits for nothing: the first launch screen comes first.
+                LaunchedEffect(platform.screenRequest) { if (platform.screenRequest != null) platform.onScreenRequestHandled() }
                 Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
                     OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, clock) }, content)
                 }
             } else {
                 MainScreens(
                     getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, clock,
-                    appVersion, debugTools, themeMode, onThemeMode = { themeMode = it },
+                    appVersion, debugTools, platform, themeMode, onThemeMode = { themeMode = it },
                 )
             }
         }
@@ -122,10 +144,19 @@ private fun MainScreens(
     clock: Clock,
     appVersion: String?,
     debugTools: DebugTools?,
+    platform: PlatformHooks,
     themeMode: ThemeMode,
     onThemeMode: (ThemeMode) -> Unit,
 ) {
     var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
+    LaunchedEffect(platform.screenRequest) {
+        when (platform.screenRequest) {
+            AppScreen.TODAY -> current = Destination.TODAY
+            AppScreen.SETTINGS -> current = Destination.SETTINGS
+            null -> return@LaunchedEffect
+        }
+        platform.onScreenRequestHandled()
+    }
     // Ages picked on the fly, shared by Equivalences and "Quel âge ?", forgotten when the app closes.
     val temporaryAges = remember { TemporaryAgesStore() }
     // A card touched on Today or Equivalences: "Quel âge ?" opens on its event.
@@ -158,6 +189,7 @@ private fun MainScreens(
                 viewModel { SettingsViewModel(observeSettings, updateSettings, countEvents, clock) },
                 appVersion,
                 content,
+                showWindowsPanel = platform.showWindowsPanel,
             )
             // Their reduced mode (without birth) also offers ages picked on the fly.
             Destination.EQUIVALENCES -> EquivalencesScreen(
@@ -174,7 +206,13 @@ private fun MainScreens(
                 modifier = content,
             )
             Destination.DEBUG -> debugTools?.let { tools ->
-                DebugScreen(viewModel { DebugViewModel(tools, observeSettings, clock) }, themeMode, onThemeMode, content)
+                DebugScreen(
+                    viewModel { DebugViewModel(tools, observeSettings, clock) },
+                    themeMode,
+                    onThemeMode,
+                    content,
+                    onSendMorningNotification = platform.sendMorningNotification,
+                )
             }
         }
     }

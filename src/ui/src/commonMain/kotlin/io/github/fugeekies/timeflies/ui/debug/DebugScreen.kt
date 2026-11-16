@@ -71,6 +71,9 @@ import io.github.fugeekies.timeflies.ui.resources.debug_stats_poor_types
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_rejections
 import io.github.fugeekies.timeflies.ui.resources.debug_system_clock
 import io.github.fugeekies.timeflies.ui.resources.debug_title
+import io.github.fugeekies.timeflies.ui.resources.debug_send_notification
+import io.github.fugeekies.timeflies.ui.resources.debug_send_notification_note
+import io.github.fugeekies.timeflies.ui.resources.debug_windows
 import io.github.fugeekies.timeflies.ui.resources.settings_birth
 import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.text.familyLabel
@@ -86,9 +89,16 @@ import org.jetbrains.compose.resources.stringResource
  * The debug panel (docs/DEVELOPMENT.md, "Panneau de débogage"), debug builds only.
  *
  * @param themeMode light or dark forced for this session; [onThemeMode] changes it.
+ * @param onSendMorningNotification Windows: sends the morning notification at once; null elsewhere (no panel).
  */
 @Composable
-fun DebugScreen(viewModel: DebugViewModel, themeMode: ThemeMode, onThemeMode: (ThemeMode) -> Unit, modifier: Modifier = Modifier) {
+fun DebugScreen(
+    viewModel: DebugViewModel,
+    themeMode: ThemeMode,
+    onThemeMode: (ThemeMode) -> Unit,
+    modifier: Modifier = Modifier,
+    onSendMorningNotification: (() -> Unit)? = null,
+) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val current = state ?: return
     Box(modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
@@ -110,6 +120,13 @@ fun DebugScreen(viewModel: DebugViewModel, themeMode: ThemeMode, onThemeMode: (T
             Panel { SettingsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.debug_theme))
             Panel { ThemePanel(themeMode, onThemeMode) }
+            if (onSendMorningNotification != null) {
+                Eyebrow(stringResource(Res.string.debug_windows))
+                Panel {
+                    OutlinedButton(onClick = onSendMorningNotification) { Text(stringResource(Res.string.debug_send_notification)) }
+                    Text(stringResource(Res.string.debug_send_notification_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
             Eyebrow(stringResource(Res.string.debug_stats))
             Panel { StatsPanel(current, viewModel) }
         }

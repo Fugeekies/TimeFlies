@@ -77,7 +77,9 @@ import org.jetbrains.compose.resources.stringResource
 
 /** Label shown under an event title (docs/EVENTS_DATA.md, "Natures"). */
 @Composable
-fun kindLabel(kind: EventKind): String = stringResource(
+fun kindLabel(kind: EventKind): String = stringResource(kindResource(kind))
+
+internal fun kindResource(kind: EventKind): StringResource =
     when (kind) {
         EventKind.FILM_RELEASE -> Res.string.kind_film_release
         EventKind.SERIES_PREMIERE -> Res.string.kind_series_premiere
@@ -90,8 +92,7 @@ fun kindLabel(kind: EventKind): String = stringResource(
         EventKind.SPORT -> Res.string.kind_sport
         EventKind.HISTORY -> Res.string.kind_history
         EventKind.ELECTION -> Res.string.kind_election
-    },
-)
+    }
 
 /** "Tu avais 20 ans.", or null when the user's birth is unknown (the line is not shown). */
 @Composable

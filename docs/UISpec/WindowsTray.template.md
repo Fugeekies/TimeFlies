@@ -29,7 +29,8 @@ Sur Windows, TimeFlies peut rester ouvert en arrière-plan, avec une icône dans
 * Sans anniversaire du jour : titre « Dans 3 jours », texte avec le prochain anniversaire.
 * PC éteint ou en veille à l'heure prévue : la notification part au premier réveil de la journée, une seule fois par jour.
 * Cliquer sur la notification ouvre la fenêtre sur Aujourd'hui.
-* Implémentation : notification de la zone de notification (`TrayState.sendNotification`), sans bibliothèque en plus : une notification simple, titre et texte (décision du 13/11/2026).
+* Implémentation : notification de la zone de notification, sans bibliothèque en plus : une notification simple, titre et texte (décision du 13/11/2026). Au jalon 10, l'icône est écrite directement sur le `TrayIcon` d'AWT (`displayMessage`), que le `Tray` de Compose Desktop enveloppe : celui de Compose n'ouvre la fenêtre qu'au double clic, alors que cette spec demande un clic gauche simple. AWT signale de la même façon un clic sur la notification et un double clic sur l'icône : les deux ouvrent Aujourd'hui.
+* Sans anniversaire dans les 7 jours : titre « TimeFlies », texte « Rien aujourd'hui. Profite, tu ne vieillis pas. » (la phrase d'Aujourd'hui).
 
 ### Wireframe ASCII
 ```text

@@ -64,24 +64,34 @@ fun BirthFields(
     }
 }
 
-/** A button that opens a list of choices: [value] once picked, otherwise the field [name]. */
+/** A button that opens a list of choices: [value] once picked, otherwise the field [name]. Also used for the time of the Windows notification. */
 @Composable
-private fun <T> ChoiceField(
+internal fun <T> ChoiceField(
     name: String,
     value: String?,
     options: List<T>,
     optionLabel: (T) -> String,
     onPick: (T) -> Unit,
     modifier: Modifier = Modifier,
+    enabled: Boolean = true,
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box(modifier) {
         OutlinedButton(
             onClick = { expanded = true },
+            enabled = enabled,
             shape = RoundedCornerShape(6.dp),
             modifier = Modifier.fillMaxWidth().semantics { contentDescription = if (value == null) name else "$name : $value" },
         ) {
-            Text(value ?: name, modifier = Modifier.weight(1f), color = if (value == null) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface)
+            Text(
+                value ?: name,
+                modifier = Modifier.weight(1f),
+                color = when {
+                    !enabled -> MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
+                    value == null -> MaterialTheme.colorScheme.onSurfaceVariant
+                    else -> MaterialTheme.colorScheme.onSurface
+                },
+            )
             Text("▾", color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }, modifier = Modifier.heightIn(max = 320.dp)) {

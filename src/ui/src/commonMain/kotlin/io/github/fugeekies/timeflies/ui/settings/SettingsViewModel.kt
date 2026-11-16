@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.model.Settings
+import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
@@ -19,6 +20,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.Month
+import kotlinx.datetime.LocalTime
 import kotlinx.datetime.YearMonth
 
 /**
@@ -35,6 +37,7 @@ data class SettingsUiState(
     val year: Int?,
     val region: Region,
     val eventCount: Int?,
+    val windows: WindowsSettings,
 ) {
     val birthYears: IntRange get() = Generations.birthYears(today)
     val userAge: Int? get() = birth?.let { Generations.userAge(it, today) }
@@ -84,6 +87,7 @@ class SettingsViewModel(
         year = settings.birth?.year ?: draft.year,
         region = settings.region,
         eventCount = count,
+        windows = settings.windows,
     )
 
     fun onMonthPicked(month: Month) = onBirthPicked(month = month)
@@ -107,5 +111,22 @@ class SettingsViewModel(
     fun onClearBirth() {
         draft.value = Draft()
         viewModelScope.launch { updateSettings.clearBirth() }
+    }
+
+    // Windows panel: the app writes or removes its startup entry when the setting changes.
+    fun onLaunchAtStartup(enabled: Boolean) {
+        viewModelScope.launch { updateSettings.setLaunchAtStartup(enabled) }
+    }
+
+    fun onMorningNotification(enabled: Boolean) {
+        viewModelScope.launch { updateSettings.setMorningNotification(enabled) }
+    }
+
+    fun onNotificationTime(time: LocalTime) {
+        viewModelScope.launch { updateSettings.setNotificationTime(time) }
+    }
+
+    fun onKeepInTray(enabled: Boolean) {
+        viewModelScope.launch { updateSettings.setKeepInTray(enabled) }
     }
 }

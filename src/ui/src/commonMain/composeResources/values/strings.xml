@@ -154,6 +154,9 @@
     <string name="debug_stats_poor_types">Types avec moins de %1$d événements : %2$d</string>
     <string name="debug_stats_rejections">Entrées écartées par la validation : %1$d</string>
     <string name="debug_refresh">Actualiser</string>
+    <string name="debug_windows">WINDOWS</string>
+    <string name="debug_send_notification">Envoyer la notification du matin</string>
+    <string name="debug_send_notification_note">Tout de suite, sans attendre l'heure ; la notification du matin partira quand même.</string>
 
     <!-- Settings (docs/UISpec/Settings.template.md) -->
     <string name="settings_title">Réglages</string>
@@ -183,6 +186,29 @@
     <string name="about_license">Licence GPL v3</string>
     <string name="about_third_party">Licences des polices et bibliothèques</string>
     <string name="about_privacy">Aucune donnée ne quitte cet appareil.</string>
+    <!-- Windows panel (docs/UISpec/Settings.template.md, "Notification et démarrage") -->
+    <string name="settings_windows">WINDOWS</string>
+    <string name="settings_launch_at_startup">Lancer TimeFlies au démarrage de Windows</string>
+    <string name="settings_launch_at_startup_help">Nécessaire pour l'icône de la barre des tâches et la notification du matin.</string>
+    <string name="settings_morning_notification">Notification du coup de vieux chaque matin</string>
+    <string name="settings_notification_time">Heure de la notification</string>
+    <string name="settings_keep_in_tray">Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre</string>
+
+    <!-- Windows tray icon and notification (docs/UISpec/WindowsTray.template.md) -->
+    <!-- Tooltip: "TimeFlies — Intouchables : 15 ans aujourd'hui"; %2$s is "15 ans". -->
+    <string name="tray_tooltip_today">TimeFlies — %1$s : %2$s aujourd'hui</string>
+    <!-- "TimeFlies — Dans 3 jours : Intouchables fêtera ses 25 ans"; %1$s is "Dans 3 jours", %3$s "fêtera ses 25 ans". -->
+    <string name="tray_tooltip_upcoming">TimeFlies — %1$s : %2$s %3$s</string>
+    <string name="tray_open">Ouvrir TimeFlies</string>
+    <string name="tray_daily_shock">Coup de vieux du jour</string>
+    <string name="tray_quit">Quitter</string>
+    <string name="tray_hint">TimeFlies reste dans la barre des tâches. Clic droit sur l'icône › Quitter pour le fermer.</string>
+    <!-- Notification title: "15 ans aujourd'hui"; %1$s is "15 ans". -->
+    <string name="notification_title_today">%1$s aujourd'hui</string>
+    <!-- "Intouchables · Sortie au cinéma, 2 novembre 2011." -->
+    <string name="notification_event">%1$s · %2$s, %3$s.</string>
+    <!-- Before an upcoming anniversary: "Intouchables fêtera ses 25 ans". -->
+    <string name="notification_upcoming_title">%1$s %2$s</string>
 
     <!-- Natures (docs/EVENTS_DATA.md, "Natures") -->
     <string name="kind_film_release">Sortie au cinéma</string>
