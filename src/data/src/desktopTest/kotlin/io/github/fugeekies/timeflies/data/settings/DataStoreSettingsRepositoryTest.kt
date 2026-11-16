@@ -9,6 +9,9 @@ import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.job
 import kotlinx.coroutines.runBlocking
+import io.github.fugeekies.timeflies.domain.model.WindowsSettings
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 import okio.FileSystem
@@ -72,7 +75,7 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 2" in text, text)
+        assertTrue("\"version\": 3" in text, text)
         assertTrue("youngAge" !in text, "the version 1 field is no longer written")
     }
 
@@ -93,5 +96,32 @@ class DataStoreSettingsRepositoryTest {
         assertEquals(99, settings.otherAge)
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
+        assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")
+    }
+
+    @Test
+    fun keepsTheWindowsPanel() = runBlocking {
+        val windows = WindowsSettings(
+            launchAtStartup = false,
+            morningNotification = false,
+            notificationTime = LocalTime(7, 45),
+            keepInTray = false,
+            trayHintShown = true,
+            lastNotification = LocalDate(2026, 11, 16),
+        )
+        open().update { it.copy(windows = windows) }
+        val text = FileSystem.SYSTEM.read(file) { readUtf8() }
+        assertTrue("\"notificationTime\": \"07:45\"" in text, text)
+        assertTrue("\"lastNotificationDate\": \"2026-11-16\"" in text, text)
+        assertEquals(windows, open().settings.first().windows)
+    }
+
+    @Test
+    fun givesTheDefaultTimeForAnUnreadableOne() = runBlocking {
+        FileSystem.SYSTEM.createDirectories(file.parent!!)
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 3, "windows": {"notificationTime": "9h10", "lastNotificationDate": "hier"}}""") }
+        val windows = open().settings.first().windows
+        assertEquals(LocalTime(9, 0), windows.notificationTime)
+        assertNull(windows.lastNotification)
     }
 }

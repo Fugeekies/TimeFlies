@@ -77,7 +77,12 @@ Une destination « Débogage » (icône de clé), présente uniquement dans les 
 - forcer les réglages sans les contrôles des écrans : mois et année de naissance (ou les effacer), région (code de pays à deux lettres), **revoir le premier lancement**, remettre les réglages par défaut. L'âge de l'autre génération n'y est pas (décision du 15/11/2026) ;
 - **forcer le thème** clair ou sombre, ou revenir au thème du système, pour essayer les deux palettes du Polaroïd sans changer le réglage du système. Pas enregistré : chaque lancement repart sur le thème du système. Sur Android, la barre d'état et le fond de la fenêtre suivent toujours le système ;
 - statistiques de la base : nombre d'événements, par thème, jours de l'année sans anniversaire, types trop pauvres, entrées écartées par la validation ;
-- déclencher tout de suite la notification Windows ou la mise à jour du widget : ajouté avec les jalons 10 et 11.
+- Windows : **envoyer tout de suite la notification du matin** (jalon 10), sans marquer le jour : la vraie notification du matin part quand même à son heure. La mise à jour forcée du widget Android viendra avec le jalon 11.
+
+### 5 bis. Icône de la barre des tâches et démarrage Windows (jalon 10)
+- L'icône et la notification marchent aussi lancées depuis Gradle. Fermer la fenêtre la cache (réglage par défaut) : clic gauche sur l'icône pour la rouvrir, clic droit › Quitter pour arrêter, sinon la tâche Gradle ne se termine pas.
+- **Lancement au démarrage** : la valeur `TimeFlies` de `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` n'est écrite (ou retirée) que par l'application installée, qui connaît le chemin de son exécutable (`jpackage.app-path`) ; lancée depuis Gradle, elle l'écrit seulement dans les logs. Windows la lance avec l'argument `--background` : fenêtre cachée, icône seule. Vérifier avec `reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v TimeFlies`.
+- Notification du matin : vérifiée chaque minute ; la date du dernier envoi est dans `settings.json` (`windows.lastNotificationDate`). La supprimer à la main, ou choisir une heure déjà passée après avoir effacé cette date, fait repartir la notification du jour.
 
 ### 6. Logs et plantages
 - Kermit : Logcat sur Android ; console et `%APPDATA%\TimeFlies\logs\timeflies-AAAA-MM-JJ.log` sur Windows (un fichier par jour, les 7 derniers jours gardés). Niveau `Debug` en débogage, `Info` sinon.

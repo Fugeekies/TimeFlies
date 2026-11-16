@@ -1,6 +1,8 @@
 package io.github.fugeekies.timeflies.domain.model
 
 import io.github.fugeekies.timeflies.domain.rules.Generations
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.LocalTime
 import kotlinx.datetime.YearMonth
 
 /**
@@ -14,6 +16,7 @@ import kotlinx.datetime.YearMonth
  * @property equivalencesReversed reading direction of the Equivalences screen: false puts the other person on the
  *   left, true puts the user on the left.
  * @property equivalenceFamilies themes ticked on the Equivalences screen (all by default).
+ * @property windows the Windows panel: notification, startup and tray.
  */
 data class Settings(
     val birth: YearMonth? = null,
@@ -22,4 +25,29 @@ data class Settings(
     val onboardingDone: Boolean = false,
     val equivalencesReversed: Boolean = false,
     val equivalenceFamilies: Set<Family> = Family.entries.toSet(),
+    val windows: WindowsSettings = WindowsSettings(),
 )
+
+/**
+ * Settings of the Windows tray icon and morning notification (docs/UISpec/WindowsTray.template.md), defaults
+ * decided on 13/11/2026. Ignored on Android.
+ *
+ * @property launchAtStartup TimeFlies starts with Windows, window hidden, in the notification area only.
+ * @property morningNotification the "coup de vieux" is sent as a notification each morning at [notificationTime].
+ * @property notificationTime a quarter of an hour (9:00 by default).
+ * @property keepInTray closing the window hides it instead of quitting the app.
+ * @property trayHintShown the notification explaining that TimeFlies stays in the taskbar was already shown once.
+ * @property lastNotification the day the morning notification was last sent: at most once a day, even after a sleep.
+ */
+data class WindowsSettings(
+    val launchAtStartup: Boolean = true,
+    val morningNotification: Boolean = true,
+    val notificationTime: LocalTime = DEFAULT_NOTIFICATION_TIME,
+    val keepInTray: Boolean = true,
+    val trayHintShown: Boolean = false,
+    val lastNotification: LocalDate? = null,
+) {
+    companion object {
+        val DEFAULT_NOTIFICATION_TIME = LocalTime(9, 0)
+    }
+}

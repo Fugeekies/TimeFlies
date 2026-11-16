@@ -57,7 +57,20 @@ import io.github.fugeekies.timeflies.ui.resources.settings_generations
 import io.github.fugeekies.timeflies.ui.resources.settings_region
 import io.github.fugeekies.timeflies.ui.resources.settings_title
 import io.github.fugeekies.timeflies.ui.resources.years_count
+import io.github.fugeekies.timeflies.ui.resources.settings_keep_in_tray
+import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup
+import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup_help
+import io.github.fugeekies.timeflies.ui.resources.settings_morning_notification
+import io.github.fugeekies.timeflies.ui.resources.settings_notification_time
+import io.github.fugeekies.timeflies.ui.resources.settings_windows
+import io.github.fugeekies.timeflies.domain.model.WindowsSettings
+import io.github.fugeekies.timeflies.domain.rules.MorningNotification
 import io.github.fugeekies.timeflies.ui.components.BirthFields
+import io.github.fugeekies.timeflies.ui.components.ChoiceField
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.material3.Checkbox
+import androidx.compose.ui.semantics.Role
+import kotlinx.datetime.LocalTime
 import io.github.fugeekies.timeflies.ui.text.capitalized
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import kotlinx.datetime.number
@@ -71,13 +84,14 @@ private const val LICENSE_URL = "$REPOSITORY_URL/blob/main/LICENSE"
 private const val THIRD_PARTY_LICENSES_URL = "$REPOSITORY_URL/tree/main/licenses"
 
 /**
- * The Settings screen (docs/UISpec/Settings.template.md). The Android widget and Windows panels come with
- * their milestones; the style choice comes with the Éphéméride.
+ * The Settings screen (docs/UISpec/Settings.template.md). The Android widget panel comes with its milestone; the
+ * style choice comes with the Éphéméride.
  *
  * @param appVersion version shown in "À propos"; null for a local development build.
+ * @param showWindowsPanel the Windows app shows the "Notification et démarrage" panel.
  */
 @Composable
-fun SettingsScreen(viewModel: SettingsViewModel, appVersion: String?, modifier: Modifier = Modifier) {
+fun SettingsScreen(viewModel: SettingsViewModel, appVersion: String?, modifier: Modifier = Modifier, showWindowsPanel: Boolean = false) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val current = state ?: return
     Box(modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
@@ -101,6 +115,10 @@ fun SettingsScreen(viewModel: SettingsViewModel, appVersion: String?, modifier: 
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
             Panel { DisplayPanel(current.region) }
+            if (showWindowsPanel) {
+                Eyebrow(stringResource(Res.string.settings_windows))
+                Panel { WindowsPanel(current.windows, viewModel) }
+            }
             Eyebrow(stringResource(Res.string.settings_about))
             Panel { AboutPanel(appVersion, current.eventCount) }
         }
@@ -162,6 +180,46 @@ private fun DisplayPanel(region: Region) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Text(stringResource(Res.string.settings_region), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f))
         Text(regionName, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    }
+}
+
+/** Windows only: startup, morning notification and tray (defaults decided on 13/11/2026). */
+@Composable
+private fun WindowsPanel(windows: WindowsSettings, viewModel: SettingsViewModel) {
+    CheckRow(stringResource(Res.string.settings_launch_at_startup), windows.launchAtStartup, viewModel::onLaunchAtStartup)
+    Text(
+        stringResource(Res.string.settings_launch_at_startup_help),
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(start = 48.dp),
+    )
+    CheckRow(stringResource(Res.string.settings_morning_notification), windows.morningNotification, viewModel::onMorningNotification)
+    val timeName = stringResource(Res.string.settings_notification_time)
+    ChoiceField(
+        name = timeName,
+        value = timeText(windows.notificationTime),
+        options = MorningNotification.TIMES,
+        optionLabel = ::timeText,
+        onPick = viewModel::onNotificationTime,
+        enabled = windows.morningNotification,
+        modifier = Modifier.padding(start = 48.dp).widthIn(max = 160.dp),
+    )
+    CheckRow(stringResource(Res.string.settings_keep_in_tray), windows.keepInTray, viewModel::onKeepInTray)
+}
+
+/** "09:00", as in the time list of the wireframe. */
+private fun timeText(time: LocalTime): String =
+    "${time.hour.toString().padStart(2, '0')}:${time.minute.toString().padStart(2, '0')}"
+
+/** A check box and its label, the whole row clickable. */
+@Composable
+private fun CheckRow(label: String, checked: Boolean, onChange: (Boolean) -> Unit) {
+    Row(
+        Modifier.fillMaxWidth().toggleable(value = checked, role = Role.Checkbox, onValueChange = onChange),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Checkbox(checked = checked, onCheckedChange = null, modifier = Modifier.padding(12.dp))
+        Text(label, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f))
     }
 }
 

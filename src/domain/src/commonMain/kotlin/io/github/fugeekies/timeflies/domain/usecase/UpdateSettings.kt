@@ -3,7 +3,10 @@ package io.github.fugeekies.timeflies.domain.usecase
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
+import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.rules.Generations
+import io.github.fugeekies.timeflies.domain.rules.MorningNotification
+import kotlinx.datetime.LocalTime
 import kotlinx.datetime.YearMonth
 
 /** Changes the settings; each change is saved at once (docs/UISpec/Settings.template.md). */
@@ -47,5 +50,31 @@ class UpdateSettings(
     /** Saves the themes ticked on the Equivalences screen. */
     suspend fun setEquivalenceFamilies(families: Set<Family>) {
         settings.update { it.copy(equivalenceFamilies = families) }
+    }
+
+    /** Windows: start TimeFlies with Windows, window hidden (the app writes or removes its startup entry). */
+    suspend fun setLaunchAtStartup(enabled: Boolean) = updateWindows { it.copy(launchAtStartup = enabled) }
+
+    /** Windows: send the "coup de vieux" as a notification each morning. */
+    suspend fun setMorningNotification(enabled: Boolean) = updateWindows { it.copy(morningNotification = enabled) }
+
+    /**
+     * Windows: time of the morning notification.
+     *
+     * @throws IllegalArgumentException if [time] is not a quarter of an hour.
+     */
+    suspend fun setNotificationTime(time: LocalTime) {
+        require(MorningNotification.isQuarterHour(time)) { "Not a quarter of an hour: $time" }
+        updateWindows { it.copy(notificationTime = time) }
+    }
+
+    /** Windows: closing the window hides it in the notification area instead of quitting. */
+    suspend fun setKeepInTray(enabled: Boolean) = updateWindows { it.copy(keepInTray = enabled) }
+
+    /** Windows: the notification explaining that TimeFlies stays in the taskbar was shown; it does not come back. */
+    suspend fun markTrayHintShown() = updateWindows { it.copy(trayHintShown = true) }
+
+    private suspend fun updateWindows(transform: (WindowsSettings) -> WindowsSettings) {
+        settings.update { it.copy(windows = transform(it.windows)) }
     }
 }

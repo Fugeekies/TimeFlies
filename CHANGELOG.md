@@ -11,6 +11,11 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Windows : icône dans la zone de notification, avec le coup de vieux du jour en infobulle, clic gauche pour ouvrir la fenêtre et menu « Ouvrir TimeFlies », « Coup de vieux du jour », « Réglages », « Quitter ». Fermer la fenêtre la garde dans la barre des tâches (expliqué par une notification la première fois).
+- Windows : notification du coup de vieux chaque matin (9:00 par défaut), une seule fois par jour, envoyée au premier réveil quand le PC était éteint ou en veille ; la toucher ouvre Aujourd'hui.
+- Windows : lancement au démarrage de Windows, fenêtre cachée (clé `Run` de l'utilisateur, sans droits administrateur).
+- Réglages : panneau « Windows » (lancement au démarrage, notification du matin et son heure au quart d'heure, garder dans la barre des tâches) ; `settings.json` passe en version 3.
+- Panneau de débogage (Windows) : envoyer tout de suite la notification du matin.
 - Données : palier 1 du Sport, 38 événements vérifiés (Ballons d'or et matchs de légende, victoires des Bleus en Coupe du monde, Jeux olympiques en France, records).
 - Données : palier 1 de la Musique, 78 événements vérifiés (morts d'icônes, albums pop et rap, tubes de divas, de boys bands et de l'été).
 - Version sombre du style Polaroïd, « chambre noire » (brun nuit, crème, cuivre clair) : l'application suit le thème du système ; sur Android, la fenêtre prend aussi le fond sombre avant la première image.

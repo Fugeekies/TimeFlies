@@ -84,9 +84,10 @@ Pour tester tous les cas sans attendre le bon jour.
 - [x] Panneau de débogage : forcer le thème clair ou sombre, pour la session.
 
 ### Jalon 10 — Barre des tâches et notification Windows
-- [ ] Icône, infobulle et menu ; notification du matin ; fenêtre fermée qui reste dans la barre des tâches ; lancement au démarrage ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)).
-- [ ] Panneau Windows des Réglages.
-- [ ] Panneau de débogage : envoyer tout de suite la notification du matin.
+- [x] Icône, infobulle et menu ; notification du matin ; fenêtre fermée qui reste dans la barre des tâches ; lancement au démarrage ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)). `domain` : `WindowsSettings`, règle `MorningNotification` (heure atteinte, une fois par jour, au premier réveil), cas d'usage `SendMorningNotification`, tests. `data` : `settings.json` en version 3 (objet `windows`), tests. `desktopApp` : `WindowsTray` (sur le `TrayIcon` d'AWT pour le clic gauche simple), `TrayUpdater` (infobulle, vérification chaque minute), `WindowsStartup` (`reg.exe`, argument `--background`).
+- [x] Panneau Windows des Réglages.
+- [x] Panneau de débogage : envoyer tout de suite la notification du matin.
+- [ ] Vérifier sur l'application installée (jalon 13) : valeur `Run` écrite au chemin de l'exécutable, démarrage avec Windows fenêtre cachée, nom de l'application dans l'en-tête de la notification.
 
 ### Jalon 11 — Widget Android
 - [ ] Widget en trois tailles avec le bouton « suivant », mis à jour juste après minuit ([`AndroidWidget.template.md`](UISpec/AndroidWidget.template.md)).
