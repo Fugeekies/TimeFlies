@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Guide d'utilisation en cinq langues (anglais, français, allemand, italien, espagnol) dans `docs/guide/`, comme celui de LMU-DeltaRacing, et README avec une section par langue ; `UserGuideTest` vérifie les pages, le sélecteur de langue et les liens.
 - « Quel âge ? » et Équivalences : jusqu'à 3 âges à ajouter à côté du tien avec « + », chacun avec sa couleur de pictogramme ; toucher un âge le change ou le retire. Les âges ajoutés sont partagés par les deux écrans et oubliés à la fermeture de l'application.
 - Style Éphéméride, comme sur la maquette : Aujourd'hui en page de calendrier à arracher (anneaux de reliure, ligne de perforation, grand chiffre rouge en Big Shoulders Display), la feuille de la veille arrachée vers le haut une fois par jour, cartes à bordure fine ; clair ou sombre selon le système. Troisième choix de Réglages › Affichage et du widget Android.
 - Style VHS, comme sur la maquette : Aujourd'hui en cassette (« ● REC », compteur de bande, bobines, étiquette inclinée à lignes de balayage), âges en Bungee, titres de section « » BIENTÔT… », couleurs saturées sur fond sombre. Le VHS est toujours sombre.
