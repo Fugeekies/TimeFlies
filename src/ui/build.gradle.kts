@@ -63,3 +63,10 @@ compose.resources {
     packageOfResClass = "io.github.fugeekies.timeflies.ui.resources"
     customDirectory(sourceSetName = "commonMain", directoryProvider = gatherResources.map { gatheredResources.get() })
 }
+
+// UserGuideTest reads the user guide and the README (AGENTS.md, "Guide d'utilisation multilingue"): a change there
+// must run the tests again.
+tasks.named<Test>("desktopTest") {
+    inputs.dir(rootProject.layout.projectDirectory.dir("docs/guide")).withPathSensitivity(PathSensitivity.RELATIVE).withPropertyName("userGuide")
+    inputs.file(rootProject.layout.projectDirectory.file("README.md")).withPathSensitivity(PathSensitivity.RELATIVE).withPropertyName("readme")
+}
