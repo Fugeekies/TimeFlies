@@ -52,7 +52,6 @@ import io.github.fugeekies.timeflies.android.MainActivity
 import io.github.fugeekies.timeflies.android.TimeFliesApplication
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.rules.Generations
-import io.github.fugeekies.timeflies.ui.polaroid.Era
 import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.ui.text.WidgetContent
 import io.github.fugeekies.timeflies.ui.text.apply
@@ -167,13 +166,13 @@ class TimeFliesWidget : GlanceAppWidget() {
     }
 
     /**
-     * The little sheet of the day: a Polaroïd in the colour of the decade with the years written by hand, or the
+     * The little sheet of the day: a white Polaroïd with the years written by hand, or the
      * white label of the VHS tape with the years in magenta, or a calendar page with the years in red.
      */
     @Composable
     private fun MiniSheet(sheet: WidgetSheet, number: Bitmap, style: DisplayStyle) {
         val paper: androidx.glance.unit.ColorProvider = when (style) {
-            DisplayStyle.POLAROID -> FixedColorProvider(Era.of(sheet.eventYear).frame)
+            DisplayStyle.POLAROID -> FixedColorProvider(WidgetPalette.of(false, style).paper)
             DisplayStyle.VHS -> FixedColorProvider(WidgetPalette.of(true, style).paper)
             // The white page, dark in the dark theme like the app.
             DisplayStyle.EPHEMERIS -> ColorProvider(WidgetPalette.of(false, style).paper, WidgetPalette.of(true, style).paper)
