@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.today
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -42,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Anniversary
 import io.github.fugeekies.timeflies.domain.model.DailyShock
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.UpcomingDay
 import io.github.fugeekies.timeflies.ui.resources.Res
@@ -58,6 +60,7 @@ import io.github.fugeekies.timeflies.ui.resources.loading
 import io.github.fugeekies.timeflies.ui.resources.nothing_soon
 import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.upcoming
+import io.github.fugeekies.timeflies.ui.resources.vhs_play
 import io.github.fugeekies.timeflies.ui.resources.will_turn
 import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.resources.years_unit
@@ -68,8 +71,11 @@ import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.text.userAgeText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.accent
 import io.github.fugeekies.timeflies.ui.theme.rememberReducedMotion
 import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
+import io.github.fugeekies.timeflies.ui.vhs.VhsTape
+import io.github.fugeekies.timeflies.ui.vhs.VhsYellow
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -137,15 +143,20 @@ fun TodayContent(shock: DailyShock, modifier: Modifier = Modifier) {
 
 @Composable
 private fun Header(today: String) {
+    val style = LocalStyle.current
+    val vhs = style.displayStyle == DisplayStyle.VHS
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
         Text(
             stringResource(Res.string.app_name),
-            fontFamily = LocalStyle.current.handwriting,
-            fontWeight = FontWeight.Bold,
-            fontSize = 34.sp,
-            color = MaterialTheme.colorScheme.onBackground,
+            style = style.accent(34f),
+            color = if (vhs) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onBackground,
         )
-        Text(today, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        if (vhs) {
+            // The date is on the tape label: the header only plays the tape, as on the mock-up.
+            Text(stringResource(Res.string.vhs_play), fontFamily = style.section, fontSize = 22.sp, color = VhsYellow, modifier = Modifier.clearAndSetSemantics {})
+        } else {
+            Text(today, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
     }
 }
 
@@ -192,10 +203,17 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
     val description = describe(anniversary, dates, userAge)
     val open = LocalOpenEvent.current
     val develop = LocalDevelop.current
-    PolaroidCard(
-        anniversary, legend, userAge, description, Modifier.clickable(role = Role.Button) { open(event) },
-        develop = develop.enabled, onDeveloped = develop.onDeveloped,
-    )
+    val click = Modifier.clickable(role = Role.Button) { open(event) }
+    when (style.displayStyle) {
+        DisplayStyle.POLAROID -> PolaroidCard(
+            anniversary, legend, userAge, description, click,
+            develop = develop.enabled, onDeveloped = develop.onDeveloped,
+        )
+        DisplayStyle.VHS -> VhsTape(
+            anniversary, dates.withDayName(anniversary.day).uppercase(), legend, userAge, description, click,
+            rewind = develop.enabled, onRewound = develop.onDeveloped,
+        )
+    }
 }
 
 @Composable
@@ -212,14 +230,23 @@ private fun Lists(shock: DailyShock, dates: DateTexts) {
 
 @Composable
 private fun SectionTitle(text: String) {
-    Text(
-        text,
-        fontFamily = LocalStyle.current.handwriting,
-        fontWeight = FontWeight.Bold,
-        fontSize = 26.sp,
-        color = MaterialTheme.colorScheme.onBackground,
-        modifier = Modifier.semantics { heading() },
-    )
+    val style = LocalStyle.current
+    when (style.displayStyle) {
+        DisplayStyle.POLAROID -> Text(
+            text,
+            style = style.accent(26f),
+            color = style.sectionColor,
+            modifier = Modifier.semantics { heading() },
+        )
+        // "» BIENTÔT…" in the font of the tape counter, as on the mock-up; the chevrons are not read.
+        DisplayStyle.VHS -> Text(
+            "» ${text.uppercase()}",
+            fontFamily = style.section,
+            fontSize = 24.sp,
+            color = style.sectionColor,
+            modifier = Modifier.semantics { heading(); contentDescription = text },
+        )
+    }
 }
 
 @Composable
@@ -242,10 +269,13 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
     val open = LocalOpenEvent.current
+    // Polaroïd: an off-white card with a light shadow. VHS: a dark card with a thin border, as on the mock-up.
+    val vhs = style.displayStyle == DisplayStyle.VHS
     Surface(
         color = colors.surface,
-        shape = RoundedCornerShape(6.dp),
-        shadowElevation = 1.dp,
+        shape = RoundedCornerShape(if (vhs) 10.dp else 6.dp),
+        shadowElevation = if (vhs) 0.dp else 1.dp,
+        border = if (vhs) BorderStroke(1.dp, colors.outline) else null,
         modifier = Modifier
             .fillMaxWidth()
             .clickable(role = Role.Button) { open(event) }
@@ -257,7 +287,7 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
         Row(Modifier.padding(horizontal = 14.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             Text(
                 pluralStringResource(Res.plurals.years_count, anniversary.years, anniversary.years),
-                fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 30.sp, color = colors.primary,
+                style = style.accent(30f), color = colors.primary,
                 maxLines = 1, softWrap = false, modifier = Modifier.widthIn(min = 76.dp),
             )
             Column(Modifier.weight(1f)) {

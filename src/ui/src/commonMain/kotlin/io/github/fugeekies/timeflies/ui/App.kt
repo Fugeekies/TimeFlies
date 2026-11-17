@@ -56,6 +56,8 @@ import io.github.fugeekies.timeflies.ui.settings.SettingsViewModel
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
 import io.github.fugeekies.timeflies.ui.theme.ThemeMode
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesTheme
+import io.github.fugeekies.timeflies.ui.theme.isDark
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.ui.today.TodayScreen
 import io.github.fugeekies.timeflies.ui.today.TodayViewModel
 import org.jetbrains.compose.resources.StringResource
@@ -83,6 +85,8 @@ enum class AppScreen { TODAY, SETTINGS }
  * @property sendMorningNotification the debug panel offers to send the morning notification at once.
  * @property widget Android: Settings shows the "Écran d'accueil" panel; null elsewhere.
  * @property refreshWidget the debug panel offers to update the Android widget at once.
+ * @property onDarkTheme the colours shown became dark or light (the VHS is always dark): Android sets the icons of its
+ *   system bars to match.
  */
 data class PlatformHooks(
     val screenRequest: AppScreen? = null,
@@ -91,6 +95,7 @@ data class PlatformHooks(
     val sendMorningNotification: (() -> Unit)? = null,
     val widget: WidgetPinning? = null,
     val refreshWidget: (() -> Unit)? = null,
+    val onDarkTheme: (Boolean) -> Unit = {},
 )
 
 /**
@@ -130,9 +135,14 @@ fun App(
 ) {
     // Forced light or dark from the debug panel, for this session only.
     var themeMode by rememberSaveable { mutableStateOf(ThemeMode.SYSTEM) }
-    TimeFliesTheme(darkTheme = themeMode.isDark()) {
-        val settingsFlow = remember(observeSettings) { observeSettings() }
-        val settings by settingsFlow.collectAsStateWithLifecycle(initialValue = null)
+    val settingsFlow = remember(observeSettings) { observeSettings() }
+    val settings by settingsFlow.collectAsStateWithLifecycle(initialValue = null)
+    // The style chosen in Settings › Affichage; the Polaroïd until the settings are read.
+    val style = settings?.displayStyle ?: DisplayStyle.POLAROID
+    val systemDark = themeMode.isDark()
+    val dark = style.isDark(systemDark)
+    LaunchedEffect(dark) { platform.onDarkTheme(dark) }
+    TimeFliesTheme(style = style, darkTheme = systemDark) {
         val content = Modifier.fillMaxSize().safeDrawingPadding()
         when (val current = settings) {
             // Settings not read yet (a few milliseconds): a plain background rather than a flash of the wrong screen.

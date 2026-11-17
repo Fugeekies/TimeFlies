@@ -47,8 +47,8 @@ class TimeFliesApplication : Application() {
     private fun keepWidgetUpToDate() {
         WidgetUpdates.scheduleMidnight(this, ExistingWorkPolicy.KEEP)
         scope.launch {
-            // Only what the widget shows (the event filter included): ticking a theme of Equivalences does not.
-            val shown = graph.observeSettings().map { listOf(it.birth, it.region, it.onboardingDone, it.excludedEventGroups) }.distinctUntilChanged()
+            // Only what the widget shows (the event filter and the style included): ticking a theme of Equivalences does not.
+            val shown = graph.observeSettings().map { listOf(it.birth, it.region, it.onboardingDone, it.excludedEventGroups, it.displayStyle) }.distinctUntilChanged()
             combine(shown, graph.clock.manualChanges().onStart { emit(Unit) }) { _, _ -> }
                 .collect {
                     try {

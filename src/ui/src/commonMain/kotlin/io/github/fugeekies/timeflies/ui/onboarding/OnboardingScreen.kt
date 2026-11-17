@@ -51,6 +51,7 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.material3.FilterChip
 import io.github.fugeekies.timeflies.ui.resources.onboarding_title
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.accent
 import org.jetbrains.compose.resources.stringResource
 
 /**
@@ -74,10 +75,8 @@ fun OnboardingScreen(viewModel: OnboardingViewModel, modifier: Modifier = Modifi
         ) {
             Text(
                 stringResource(Res.string.onboarding_title),
-                fontFamily = LocalStyle.current.handwriting,
-                fontWeight = FontWeight.Bold,
-                fontSize = 48.sp,
-                lineHeight = 48.sp,
+                style = LocalStyle.current.accent(48f, lineHeight = 48f),
+                
                 color = colors.primary,
                 modifier = Modifier.semantics { heading() },
             )

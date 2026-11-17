@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Region
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.about_dev_version
 import io.github.fugeekies.timeflies.ui.resources.about_event_count
@@ -55,6 +56,8 @@ import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.resources.settings_display
 import io.github.fugeekies.timeflies.ui.resources.settings_generations
 import io.github.fugeekies.timeflies.ui.resources.settings_region
+import io.github.fugeekies.timeflies.ui.resources.settings_style
+import io.github.fugeekies.timeflies.ui.resources.settings_style_help
 import io.github.fugeekies.timeflies.ui.resources.settings_title
 import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.resources.settings_keep_in_tray
@@ -84,6 +87,7 @@ import androidx.compose.ui.semantics.Role
 import kotlinx.datetime.LocalTime
 import io.github.fugeekies.timeflies.ui.text.capitalized
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.accent
 import kotlinx.datetime.number
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
@@ -95,7 +99,7 @@ private const val LICENSE_URL = "$REPOSITORY_URL/blob/main/LICENSE"
 private const val THIRD_PARTY_LICENSES_URL = "$REPOSITORY_URL/tree/main/licenses"
 
 /**
- * The Settings screen (docs/UISpec/Settings.template.md). The style choice comes with the Éphéméride.
+ * The Settings screen (docs/UISpec/Settings.template.md).
  *
  * @param appVersion version shown in "À propos"; null for a local development build.
  * @param showWindowsPanel the Windows app shows the "Notification et démarrage" panel.
@@ -122,16 +126,14 @@ fun SettingsScreen(
         ) {
             Text(
                 stringResource(Res.string.settings_title),
-                fontFamily = LocalStyle.current.handwriting,
-                fontWeight = FontWeight.Bold,
-                fontSize = 34.sp,
+                style = LocalStyle.current.accent(34f),
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.semantics { heading() },
             )
             Eyebrow(stringResource(Res.string.settings_generations))
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
-            Panel { DisplayPanel(current.region) }
+            Panel { DisplayPanel(current.displayStyle, viewModel::onDisplayStyle, current.region) }
             // What is shown at all: unticked groups disappear everywhere (decision of 16/11/2026).
             if (current.eventGroups.isNotEmpty()) {
                 Eyebrow(stringResource(Res.string.settings_events))
@@ -203,7 +205,11 @@ private fun ColumnScope.GenerationsPanel(state: SettingsUiState, viewModel: Sett
 }
 
 @Composable
-private fun DisplayPanel(region: Region) {
+private fun ColumnScope.DisplayPanel(style: DisplayStyle, onStyle: (DisplayStyle) -> Unit, region: Region) {
+    // Polaroïd by default, VHS since milestone 14 (decision of 17/11/2026): applied at once, widget included.
+    Text(stringResource(Res.string.settings_style), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface)
+    Text(stringResource(Res.string.settings_style_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    StylePicker(style, onStyle)
     // France only for now (decision of 15/11/2026): shown, not editable. Other regions come with the translations.
     val regionName = if (region == Region.FRANCE) stringResource(Res.string.region_fr) else region.code
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {

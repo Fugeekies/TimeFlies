@@ -17,21 +17,40 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.atkinson_bold
 import io.github.fugeekies.timeflies.ui.resources.atkinson_regular
+import io.github.fugeekies.timeflies.ui.resources.bungee
 import io.github.fugeekies.timeflies.ui.resources.caveat
+import io.github.fugeekies.timeflies.ui.resources.permanent_marker
+import io.github.fugeekies.timeflies.ui.resources.vt323
 import org.jetbrains.compose.resources.Font
 
 /**
- * Tokens of a display style (docs/UI_DESIGN_SPEC.md, § 1 and 2). V1 ships the Polaroïd style only;
- * Éphéméride will be another instance of this class, without touching the screens.
+ * Tokens of a display style (docs/UI_DESIGN_SPEC.md, § 1 and 2): Polaroïd or VHS, the layout of the screens being
+ * the same in both. Éphéméride will be another instance of this class, without touching the screens.
+ *
+ * @property handwriting the hand-written font of the sheet of the day: Caveat on the Polaroïd, Permanent Marker on
+ *   the label of the VHS tape.
+ * @property accent font of the numbers of years, the gaps and the screen titles (Caveat or Bungee); see [accent].
+ * @property accentScale size of [accent] for the same role: Bungee is much wider than Caveat.
+ * @property accentWeight Caveat is written bold, Bungee has a single weight.
+ * @property section font of the section titles ("Bientôt…"): Caveat, or VT323 like the tape counter.
+ * @property sectionColor colour of the section titles.
  */
 @Immutable
 data class StyleTokens(
+    val displayStyle: DisplayStyle,
     val handwriting: FontFamily,
+    val accent: FontFamily,
+    val accentScale: Float,
+    val accentWeight: FontWeight,
+    val section: FontFamily,
+    val sectionColor: Color,
     val familyColors: Map<Family, Color>,
     val photoFade: Color,
     /** Pictogram colours of the two people of the Equivalences screen, instead of names (decision of 15/11/2026). */
@@ -40,6 +59,17 @@ data class StyleTokens(
 )
 
 val LocalStyle = staticCompositionLocalOf<StyleTokens> { error("TimeFliesTheme is missing") }
+
+/**
+ * The accent text of the style, for a role that is [size] sp in the Polaroïd (numbers of years, gaps, screen titles):
+ * Caveat bold, or Bungee about a quarter smaller so it takes the same room.
+ */
+fun StyleTokens.accent(size: Float, lineHeight: Float? = null): TextStyle = TextStyle(
+    fontFamily = accent,
+    fontWeight = accentWeight,
+    fontSize = (size * accentScale).sp,
+    lineHeight = lineHeight?.let { (it * accentScale).sp } ?: TextUnit.Unspecified,
+)
 
 /** Family colours (docs/UI_DESIGN_SPEC.md, § 3), shared by every style. */
 internal val FamilyColors = mapOf(
@@ -52,12 +82,12 @@ internal val FamilyColors = mapOf(
 )
 
 /**
- * Colours of the Polaroïd style that are not Material roles (docs/UI_DESIGN_SPEC.md, § 2), one set per theme.
+ * Colours of a style that are not Material roles (docs/UI_DESIGN_SPEC.md, § 2), one set per theme.
  *
  * @property userColor pictogram colour of the user on the Equivalences and "Quel âge ?" screens (decision of 15/11/2026).
  * @property otherColor pictogram colour of the other person.
  */
-internal data class PolaroidExtras(val userColor: Color, val otherColor: Color)
+internal data class StyleExtras(val userColor: Color, val otherColor: Color)
 
 // Polaroïd, light (docs/UI_DESIGN_SPEC.md, § 2).
 internal val PolaroidLight: ColorScheme = lightColorScheme(
@@ -80,7 +110,7 @@ internal val PolaroidLight: ColorScheme = lightColorScheme(
     outlineVariant = Color(0xFFD6CBBC),
 )
 
-internal val PolaroidLightExtras = PolaroidExtras(userColor = Color(0xFFB4501E), otherColor = Color(0xFF0E7C7B))
+internal val PolaroidLightExtras = StyleExtras(userColor = Color(0xFFB4501E), otherColor = Color(0xFF0E7C7B))
 
 // Polaroïd, dark: "chambre noire", a warm darkroom brown with a lighter copper (decision of 15/11/2026).
 internal val PolaroidDark: ColorScheme = darkColorScheme(
@@ -103,7 +133,34 @@ internal val PolaroidDark: ColorScheme = darkColorScheme(
     outlineVariant = Color(0xFF4A3F37),
 )
 
-internal val PolaroidDarkExtras = PolaroidExtras(userColor = Color(0xFFF08A55), otherColor = Color(0xFF4FC3C0))
+internal val PolaroidDarkExtras = StyleExtras(userColor = Color(0xFFF08A55), otherColor = Color(0xFF4FC3C0))
+
+// VHS, dark only: the colours of the mock-up (docs/maquettes/android/TodayVhs.html, decision of 17/11/2026).
+internal val VhsDark: ColorScheme = darkColorScheme(
+    background = Color(0xFF0E0B16),
+    onBackground = Color(0xFFF2ECFF),
+    surface = Color(0xFF1B1824),
+    onSurface = Color(0xFFF2ECFF),
+    surfaceVariant = Color(0xFF1B1824),
+    onSurfaceVariant = Color(0xFFB9B0CC),
+    surfaceContainerLowest = Color(0xFF0E0B16),
+    surfaceContainerLow = Color(0xFF151220),
+    surfaceContainer = Color(0xFF151220),
+    surfaceContainerHigh = Color(0xFF1B1824),
+    surfaceContainerHighest = Color(0xFF241F33),
+    primary = Color(0xFFFF3EA5),
+    onPrimary = Color(0xFF0E0B16),
+    // The magenta at 20 % on the background, like the active tab of the mock-up.
+    secondaryContainer = Color(0xFF3E1533),
+    onSecondaryContainer = Color(0xFFF2ECFF),
+    outline = Color(0xFF2E2940),
+    outlineVariant = Color(0xFF2E2940),
+)
+
+internal val VhsExtras = StyleExtras(userColor = Color(0xFFFFE14D), otherColor = Color(0xFF3EE6FF))
+
+/** The cyan of the tape counter and of the section titles of the VHS. */
+internal val VhsCyan = Color(0xFF3EE6FF)
 
 /**
  * The photo paper. A Polaroïd stays a light print in both themes, so the handwriting on its frame keeps a dark ink
@@ -111,9 +168,23 @@ internal val PolaroidDarkExtras = PolaroidExtras(userColor = Color(0xFFF08A55), 
  */
 internal val PhotoPaper = Color(0xFFFBFAF7)
 
+/** The white label stuck on the VHS tape, and its ink (docs/UI_DESIGN_SPEC.md, § 1). */
+internal val VhsLabel = Color(0xFFF4F1E8)
+internal val VhsLabelInk = Color(0xFF16121F)
+
+/** The VHS has no light version (docs/UI_DESIGN_SPEC.md, § 1): it is always dark. */
+fun DisplayStyle.isDark(systemDark: Boolean): Boolean = when (this) {
+    DisplayStyle.POLAROID -> systemDark
+    DisplayStyle.VHS -> true
+}
+
 /**
- * Colours of the Android widget, taken from the Polaroïd tokens so it matches the app: Glance draws with its own
- * views and cannot use the Compose theme (docs/UISpec/AndroidWidget.template.md).
+ * Colours of the Android widget, taken from the tokens of the chosen style so it matches the app: Glance draws with
+ * its own views and cannot use the Compose theme (docs/UISpec/AndroidWidget.template.md).
+ *
+ * @property paper the sheet of the day: the Polaroïd photo paper, or the label of the VHS tape.
+ * @property ink the writing on [paper].
+ * @property number colour of the big number on [paper].
  */
 data class WidgetPalette(
     val background: Color,
@@ -122,21 +193,37 @@ data class WidgetPalette(
     val accent: Color,
     val paper: Color,
     val ink: Color,
+    val number: Color,
 ) {
     companion object {
-        fun of(dark: Boolean): WidgetPalette {
-            val scheme = if (dark) PolaroidDark else PolaroidLight
-            return WidgetPalette(
-                background = scheme.surface,
-                onBackground = scheme.onSurface,
-                secondary = scheme.onSurfaceVariant,
-                accent = scheme.primary,
-                paper = PhotoPaper,
-                ink = PolaroidLight.onSurface,
+        fun of(dark: Boolean, style: DisplayStyle = DisplayStyle.POLAROID): WidgetPalette = when (style) {
+            DisplayStyle.POLAROID -> {
+                val scheme = if (dark) PolaroidDark else PolaroidLight
+                WidgetPalette(
+                    background = scheme.surface,
+                    onBackground = scheme.onSurface,
+                    secondary = scheme.onSurfaceVariant,
+                    accent = scheme.primary,
+                    paper = PhotoPaper,
+                    ink = PolaroidLight.onSurface,
+                    number = PolaroidLight.onSurface,
+                )
+            }
+            DisplayStyle.VHS -> WidgetPalette(
+                background = VhsDark.surface,
+                onBackground = VhsDark.onSurface,
+                secondary = VhsDark.onSurfaceVariant,
+                accent = VhsDark.primary,
+                paper = VhsLabel,
+                ink = VhsLabelInk,
+                number = VhsNumber,
             )
         }
     }
 }
+
+/** The big number on the VHS label, a deeper magenta than the accent so it reads on the white label. */
+internal val VhsNumber = Color(0xFFE0177F)
 
 /** The family colour slightly faded, like an old print. */
 fun StyleTokens.photoColor(family: Family): Color = lerp(familyColors.getValue(family), photoFade, 0.12f)
@@ -152,19 +239,21 @@ fun bestInkOn(background: Color, first: Color, second: Color): Color =
     if (contrastRatio(first, background) >= contrastRatio(second, background)) first else second
 
 /**
- * The theme of the app: the Polaroïd style, light or dark following the system (docs/UI_DESIGN_SPEC.md, § 2).
+ * The theme of the app: the chosen style, light or dark following the system (docs/UI_DESIGN_SPEC.md, § 2). The VHS
+ * is always dark.
  *
- * @param darkTheme dark colours; the system setting by default.
+ * @param style the display style chosen in Settings › Affichage.
+ * @param darkTheme dark colours; the system setting by default. Ignored by the VHS.
  */
 @Composable
-fun TimeFliesTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun TimeFliesTheme(
+    style: DisplayStyle = DisplayStyle.POLAROID,
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit,
+) {
     val atkinson = FontFamily(
         Font(Res.font.atkinson_regular, FontWeight.Normal),
         Font(Res.font.atkinson_bold, FontWeight.Bold),
-    )
-    val caveat = FontFamily(
-        Font(Res.font.caveat, FontWeight.SemiBold, variationSettings = FontVariation.Settings(FontVariation.weight(600))),
-        Font(Res.font.caveat, FontWeight.Bold, variationSettings = FontVariation.Settings(FontVariation.weight(700))),
     )
     val base = Typography()
     val typography = Typography(
@@ -179,16 +268,45 @@ fun TimeFliesTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composa
         labelMedium = base.labelMedium.copy(fontFamily = atkinson),
         labelSmall = TextStyle(fontFamily = atkinson, fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 0.8.sp),
     )
-    val extras = if (darkTheme) PolaroidDarkExtras else PolaroidLightExtras
-    val tokens = StyleTokens(
-        handwriting = caveat,
-        familyColors = FamilyColors,
-        photoFade = PhotoPaper,
-        userColor = extras.userColor,
-        otherColor = extras.otherColor,
-    )
+    val dark = style.isDark(darkTheme)
+    val (scheme, tokens) = when (style) {
+        DisplayStyle.POLAROID -> {
+            val caveat = FontFamily(
+                Font(Res.font.caveat, FontWeight.SemiBold, variationSettings = FontVariation.Settings(FontVariation.weight(600))),
+                Font(Res.font.caveat, FontWeight.Bold, variationSettings = FontVariation.Settings(FontVariation.weight(700))),
+            )
+            val scheme = if (dark) PolaroidDark else PolaroidLight
+            val extras = if (dark) PolaroidDarkExtras else PolaroidLightExtras
+            scheme to StyleTokens(
+                displayStyle = style,
+                handwriting = caveat,
+                accent = caveat,
+                accentScale = 1f,
+                accentWeight = FontWeight.Bold,
+                section = caveat,
+                sectionColor = scheme.onBackground,
+                familyColors = FamilyColors,
+                photoFade = PhotoPaper,
+                userColor = extras.userColor,
+                otherColor = extras.otherColor,
+            )
+        }
+        DisplayStyle.VHS -> VhsDark to StyleTokens(
+            displayStyle = style,
+            handwriting = FontFamily(Font(Res.font.permanent_marker, FontWeight.Normal)),
+            accent = FontFamily(Font(Res.font.bungee, FontWeight.Normal)),
+            accentScale = 0.72f,
+            accentWeight = FontWeight.Normal,
+            section = FontFamily(Font(Res.font.vt323, FontWeight.Normal)),
+            sectionColor = VhsCyan,
+            familyColors = FamilyColors,
+            photoFade = VhsLabel,
+            userColor = VhsExtras.userColor,
+            otherColor = VhsExtras.otherColor,
+        )
+    }
     CompositionLocalProvider(LocalStyle provides tokens) {
-        MaterialTheme(colorScheme = if (darkTheme) PolaroidDark else PolaroidLight, typography = typography, content = content)
+        MaterialTheme(colorScheme = scheme, typography = typography, content = content)
     }
 }
 

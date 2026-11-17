@@ -65,6 +65,7 @@ import io.github.fugeekies.timeflies.ui.text.DateTexts
 import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.personAgeText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.accent
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
@@ -121,9 +122,7 @@ internal fun GenerationsBanner(
                 val gap = generations.gap ?: 0
                 Text(
                     if (gap == 0) stringResource(Res.string.equivalences_gap_none) else pluralStringResource(Res.plurals.equivalences_gap, gap, gap),
-                    fontFamily = LocalStyle.current.handwriting,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 30.sp,
+                    style = LocalStyle.current.accent(30f),
                     color = colors.primary,
                     modifier = Modifier.weight(1f),
                 )
@@ -262,9 +261,7 @@ internal fun EventSide(person: Person, side: EquivalenceSide, dates: DateTexts, 
             PersonIcon(person, size = 18)
             Text(
                 personAgeText(side.age),
-                fontFamily = LocalStyle.current.handwriting,
-                fontWeight = FontWeight.Bold,
-                fontSize = 20.sp,
+                style = LocalStyle.current.accent(20f),
                 color = person.color(),
             )
         }

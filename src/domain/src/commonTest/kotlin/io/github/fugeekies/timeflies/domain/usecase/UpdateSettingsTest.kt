@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
@@ -112,5 +113,12 @@ class UpdateSettingsTest {
     fun rejectsANotificationTimeOffTheQuarters() = runTest {
         assertFailsWith<IllegalArgumentException> { update.setNotificationTime(LocalTime(9, 10)) }
         assertEquals(LocalTime(9, 0), repository.state.value.windows.notificationTime)
+    }
+
+    @Test
+    fun savesTheDisplayStyle() = runTest {
+        assertEquals(DisplayStyle.POLAROID, repository.state.value.displayStyle, "Polaroïd by default")
+        update.setDisplayStyle(DisplayStyle.VHS)
+        assertEquals(DisplayStyle.VHS, repository.state.value.displayStyle)
     }
 }
