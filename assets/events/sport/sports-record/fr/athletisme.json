@@ -3,7 +3,11 @@
     "id": "sport-record-renaud-lavillenie-2014",
     "date": "2014-02-15",
     "title": {
-      "fr": "Record du monde de saut à la perche de Renaud Lavillenie (6,16 m)"
+      "fr": "Record du monde de saut à la perche de Renaud Lavillenie (6,16 m)",
+      "en": "Renaud Lavillenie's pole vault world record (6.16 m)",
+      "de": "Stabhochsprung-Weltrekord von Renaud Lavillenie (6,16 m)",
+      "it": "Record del mondo di salto con l'asta di Renaud Lavillenie (6,16 m)",
+      "es": "Récord del mundo de salto con pértiga de Renaud Lavillenie (6,16 m)"
     },
     "kind": "sport",
     "importance": 2,

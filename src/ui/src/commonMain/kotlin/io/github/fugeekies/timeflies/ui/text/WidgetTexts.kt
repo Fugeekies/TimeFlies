@@ -60,7 +60,7 @@ object WidgetTexts {
                 WidgetSheet(
                     eyebrow = eyebrow.uppercase(),
                     years = years(anniversary),
-                    title = anniversary.event.title("fr"),
+                    title = anniversary.event.shownTitle,
                     detail = getString(Res.string.kind_and_year, getString(kindResource(anniversary.event.kind)), anniversary.eventDate.year),
                     userAge = ShockMessages.userAge(anniversary.userAge),
                     eventYear = anniversary.eventDate.year,
@@ -76,7 +76,7 @@ object WidgetTexts {
 
     /** "20 ans · Matrix", with "dans 2 jours · " in front when it is not on the day of the sheets. */
     private suspend fun compact(anniversary: Anniversary, shock: DailyShock, first: Anniversary): String {
-        val line = getString(Res.string.widget_compact, years(anniversary), anniversary.event.title("fr"))
+        val line = getString(Res.string.widget_compact, years(anniversary), anniversary.event.shownTitle)
         if (anniversary.day == first.day) return line
         val inDays = shock.today.daysUntil(anniversary.day)
         return getString(Res.string.widget_compact, getPluralString(Res.plurals.in_days, inDays, inDays), line)

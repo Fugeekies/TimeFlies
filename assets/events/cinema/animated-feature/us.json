@@ -3,7 +3,11 @@
     "id": "film-blanche-neige-et-les-sept-nains-1938",
     "date": "1938-05-06",
     "title": {
-      "fr": "Blanche-Neige et les Sept Nains"
+      "fr": "Blanche-Neige et les Sept Nains",
+      "en": "Snow White and the Seven Dwarfs",
+      "de": "Schneewittchen und die sieben Zwerge",
+      "it": "Biancaneve e i sette nani",
+      "es": "Snow White and the Seven Dwarfs"
     },
     "kind": "film-release",
     "importance": 3,
@@ -14,7 +18,11 @@
     "id": "film-le-livre-de-la-jungle-1968",
     "date": "1968-12-04",
     "title": {
-      "fr": "Le Livre de la jungle"
+      "fr": "Le Livre de la jungle",
+      "en": "The Jungle Book",
+      "de": "Das Dschungelbuch",
+      "it": "Il libro della giungla",
+      "es": "El libro de la selva"
     },
     "kind": "film-release",
     "importance": 3,
@@ -25,7 +33,11 @@
     "id": "film-la-petite-sirene-1990",
     "date": "1990-11-28",
     "title": {
-      "fr": "La Petite Sirène"
+      "fr": "La Petite Sirène",
+      "en": "The Little Mermaid",
+      "de": "Arielle, die Meerjungfrau",
+      "it": "La sirenetta",
+      "es": "La sirenita"
     },
     "kind": "film-release",
     "importance": 3,
@@ -36,7 +48,11 @@
     "id": "film-la-belle-et-la-bete-1992",
     "date": "1992-10-21",
     "title": {
-      "fr": "La Belle et la Bête"
+      "fr": "La Belle et la Bête",
+      "en": "Beauty and the Beast",
+      "de": "Die Schöne und das Biest",
+      "it": "La bella e la bestia",
+      "es": "La bella y la bestia"
     },
     "kind": "film-release",
     "importance": 3,
@@ -47,7 +63,8 @@
     "id": "film-aladdin-1993",
     "date": "1993-11-24",
     "title": {
-      "fr": "Aladdin"
+      "fr": "Aladdin",
+      "es": "Aladdín"
     },
     "kind": "film-release",
     "importance": 3,
@@ -58,7 +75,11 @@
     "id": "film-le-roi-lion-1994",
     "date": "1994-11-23",
     "title": {
-      "fr": "Le Roi lion"
+      "fr": "Le Roi lion",
+      "en": "The Lion King",
+      "de": "Der König der Löwen",
+      "it": "Il re leone",
+      "es": "El rey león"
     },
     "kind": "film-release",
     "importance": 3,
@@ -69,7 +90,8 @@
     "id": "film-toy-story-1996",
     "date": "1996-03-27",
     "title": {
-      "fr": "Toy Story"
+      "fr": "Toy Story",
+      "it": "Toy Story - Il mondo dei giocattoli"
     },
     "kind": "film-release",
     "importance": 3,
@@ -91,7 +113,8 @@
     "id": "film-shrek-2001",
     "date": "2001-07-04",
     "title": {
-      "fr": "Shrek"
+      "fr": "Shrek",
+      "de": "Shrek – Der tollkühne Held"
     },
     "kind": "film-release",
     "importance": 3,
@@ -102,7 +125,11 @@
     "id": "film-monstres-et-cie-2002",
     "date": "2002-03-20",
     "title": {
-      "fr": "Monstres et Cie"
+      "fr": "Monstres et Cie",
+      "en": "Monsters, Inc.",
+      "de": "Die Monster AG",
+      "it": "Monsters & Co.",
+      "es": "Monsters, Inc."
     },
     "kind": "film-release",
     "importance": 3,
@@ -113,7 +140,11 @@
     "id": "film-le-monde-de-nemo-2003",
     "date": "2003-11-26",
     "title": {
-      "fr": "Le Monde de Nemo"
+      "fr": "Le Monde de Nemo",
+      "en": "Finding Nemo",
+      "de": "Findet Nemo",
+      "it": "Alla ricerca di Nemo",
+      "es": "Buscando a Nemo"
     },
     "kind": "film-release",
     "importance": 3,
@@ -124,7 +155,11 @@
     "id": "film-les-indestructibles-2004",
     "date": "2004-11-24",
     "title": {
-      "fr": "Les Indestructibles"
+      "fr": "Les Indestructibles",
+      "en": "The Incredibles",
+      "de": "Die Unglaublichen – The Incredibles",
+      "it": "Gli Incredibili - Una \"normale\" famiglia di supereroi",
+      "es": "Los Increíbles"
     },
     "kind": "film-release",
     "importance": 3,
@@ -146,7 +181,11 @@
     "id": "film-la-haut-2009",
     "date": "2009-07-29",
     "title": {
-      "fr": "Là-haut"
+      "fr": "Là-haut",
+      "en": "Up",
+      "de": "Oben",
+      "it": "Up",
+      "es": "Up"
     },
     "kind": "film-release",
     "importance": 3,
@@ -157,7 +196,11 @@
     "id": "film-moi-moche-et-mechant-2010",
     "date": "2010-10-06",
     "title": {
-      "fr": "Moi, moche et méchant"
+      "fr": "Moi, moche et méchant",
+      "en": "Despicable Me",
+      "de": "Ich – Einfach unverbesserlich",
+      "it": "Cattivissimo me",
+      "es": "Despicable Me"
     },
     "kind": "film-release",
     "importance": 2,
@@ -168,7 +211,11 @@
     "id": "film-raiponce-2010",
     "date": "2010-12-01",
     "title": {
-      "fr": "Raiponce"
+      "fr": "Raiponce",
+      "en": "Tangled",
+      "de": "Rapunzel – Neu verföhnt",
+      "it": "Rapunzel - L'intreccio della torre",
+      "es": "Enredados"
     },
     "kind": "film-release",
     "importance": 3,
@@ -179,7 +226,11 @@
     "id": "film-la-reine-des-neiges-2013",
     "date": "2013-12-04",
     "title": {
-      "fr": "La Reine des neiges"
+      "fr": "La Reine des neiges",
+      "en": "Frozen",
+      "de": "Die Eiskönigin – Völlig unverfroren",
+      "it": "Frozen - Il regno di ghiaccio",
+      "es": "Frozen"
     },
     "kind": "film-release",
     "importance": 3,
@@ -190,7 +241,11 @@
     "id": "film-vice-versa-2015",
     "date": "2015-06-17",
     "title": {
-      "fr": "Vice-versa"
+      "fr": "Vice-versa",
+      "en": "Inside Out",
+      "de": "Alles steht Kopf",
+      "it": "Inside Out",
+      "es": "Inside Out"
     },
     "kind": "film-release",
     "importance": 3,
@@ -201,7 +256,8 @@
     "id": "film-coco-2017",
     "date": "2017-11-29",
     "title": {
-      "fr": "Coco"
+      "fr": "Coco",
+      "de": "Coco – Lebendiger als das Leben!"
     },
     "kind": "film-release",
     "importance": 2,

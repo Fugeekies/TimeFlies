@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Titres des événements dans la langue de l'interface : titres des films tels qu'ils sont sortis dans chaque pays (d'après les liens entre les Wikipédias), titres du sport traduits ; les chansons et les artistes gardent leur nom. Sans titre dans une langue, le titre français s'affiche. Un titre dans une langue inconnue fait rejeter l'événement.
 - Polaroïd : un dessin au trait pour chacun des 32 types dans la photo (canapé pour les sitcoms, micro pour les divas, urne pour les présidentielles…), au lieu du dessin commun du thème.
 - Interface en anglais, allemand, italien et espagnol, en plus du français : choix dans Réglages › Affichage › Langue (la langue du système par défaut, le français si elle n'est pas proposée), appliqué aussitôt à l'application, au widget, à l'icône et à la notification Windows. Dates dans l'ordre de chaque langue. Les titres des événements restent en français pour l'instant.
 - Guide d'utilisation en cinq langues (anglais, français, allemand, italien, espagnol) dans `docs/guide/`, comme celui de LMU-DeltaRacing, et README avec une section par langue ; `UserGuideTest` vérifie les pages, le sélecteur de langue et les liens.

@@ -3,7 +3,11 @@
     "id": "film-les-dents-de-la-mer-1976",
     "date": "1976-01-28",
     "title": {
-      "fr": "Les Dents de la mer"
+      "fr": "Les Dents de la mer",
+      "en": "Jaws",
+      "de": "Der weiße Hai",
+      "it": "Lo squalo",
+      "es": "Tiburón"
     },
     "kind": "film-release",
     "importance": 2,
@@ -14,7 +18,11 @@
     "id": "film-e-t-l-extra-terrestre-1982",
     "date": "1982-12-01",
     "title": {
-      "fr": "E.T., l'extra-terrestre"
+      "fr": "E.T., l'extra-terrestre",
+      "en": "E.T. the Extra-Terrestrial",
+      "de": "E.T. – Der Außerirdische",
+      "it": "E.T. l'extra-terrestre",
+      "es": "E.T., el extraterrestre"
     },
     "kind": "film-release",
     "importance": 2,
@@ -25,7 +33,11 @@
     "id": "film-sos-fantomes-1984",
     "date": "1984-12-12",
     "title": {
-      "fr": "SOS Fantômes"
+      "fr": "SOS Fantômes",
+      "en": "Ghostbusters",
+      "de": "Ghostbusters – Die Geisterjäger",
+      "it": "Ghostbusters - Acchiappafantasmi",
+      "es": "Los cazafantasmas"
     },
     "kind": "film-release",
     "importance": 2,
@@ -36,7 +48,8 @@
     "id": "film-top-gun-1986",
     "date": "1986-09-17",
     "title": {
-      "fr": "Top Gun"
+      "fr": "Top Gun",
+      "de": "Top Gun – Sie fürchten weder Tod noch Teufel"
     },
     "kind": "film-release",
     "importance": 2,
@@ -47,7 +60,11 @@
     "id": "film-terminator-2-le-jugement-dernier-1991",
     "date": "1991-10-16",
     "title": {
-      "fr": "Terminator 2 : Le Jugement dernier"
+      "fr": "Terminator 2 : Le Jugement dernier",
+      "en": "Terminator 2: Judgment Day",
+      "de": "Terminator 2 – Tag der Abrechnung",
+      "it": "Terminator 2 - Il giorno del giudizio",
+      "es": "Terminator 2: el juicio final"
     },
     "kind": "film-release",
     "importance": 3,
@@ -58,7 +75,8 @@
     "id": "film-jurassic-park-1993",
     "date": "1993-10-20",
     "title": {
-      "fr": "Jurassic Park"
+      "fr": "Jurassic Park",
+      "es": "Parque Jurásico"
     },
     "kind": "film-release",
     "importance": 3,
@@ -91,7 +109,8 @@
     "id": "film-men-in-black-1997",
     "date": "1997-08-06",
     "title": {
-      "fr": "Men in Black"
+      "fr": "Men in Black",
+      "es": "Hombres de negro"
     },
     "kind": "film-release",
     "importance": 2,
@@ -113,7 +132,9 @@
     "id": "film-armageddon-1998",
     "date": "1998-08-05",
     "title": {
-      "fr": "Armageddon"
+      "fr": "Armageddon",
+      "de": "Armageddon – Das jüngste Gericht",
+      "it": "Armageddon - Giudizio finale"
     },
     "kind": "film-release",
     "importance": 2,
@@ -124,7 +145,8 @@
     "id": "film-gladiator-2000",
     "date": "2000-06-20",
     "title": {
-      "fr": "Gladiator"
+      "fr": "Gladiator",
+      "it": "Il gladiatore"
     },
     "kind": "film-release",
     "importance": 3,
@@ -135,7 +157,8 @@
     "id": "film-avatar-2009",
     "date": "2009-12-16",
     "title": {
-      "fr": "Avatar"
+      "fr": "Avatar",
+      "de": "Avatar – Aufbruch nach Pandora"
     },
     "kind": "film-release",
     "importance": 3,

@@ -3,7 +3,11 @@
     "id": "film-la-guerre-des-etoiles-1977",
     "date": "1977-10-19",
     "title": {
-      "fr": "La Guerre des étoiles"
+      "fr": "La Guerre des étoiles",
+      "en": "Star Wars",
+      "de": "Krieg der Sterne",
+      "it": "Guerre stellari",
+      "es": "Star Wars: Episodio IV - Una nueva esperanza"
     },
     "kind": "film-release",
     "importance": 3,
@@ -14,7 +18,11 @@
     "id": "film-l-empire-contre-attaque-1980",
     "date": "1980-08-20",
     "title": {
-      "fr": "L'Empire contre-attaque"
+      "fr": "L'Empire contre-attaque",
+      "en": "The Empire Strikes Back",
+      "de": "Das Imperium schlägt zurück",
+      "it": "L'Impero colpisce ancora",
+      "es": "Star Wars: Episodio V - El Imperio contraataca"
     },
     "kind": "film-release",
     "importance": 3,
@@ -25,7 +33,11 @@
     "id": "film-les-aventuriers-de-l-arche-perdue-1981",
     "date": "1981-09-16",
     "title": {
-      "fr": "Les Aventuriers de l'arche perdue"
+      "fr": "Les Aventuriers de l'arche perdue",
+      "en": "Raiders of the Lost Ark",
+      "de": "Jäger des verlorenen Schatzes",
+      "it": "I predatori dell'arca perduta",
+      "es": "Raiders of the Lost Ark"
     },
     "kind": "film-release",
     "importance": 3,
@@ -36,7 +48,11 @@
     "id": "film-le-retour-du-jedi-1983",
     "date": "1983-10-19",
     "title": {
-      "fr": "Le Retour du Jedi"
+      "fr": "Le Retour du Jedi",
+      "en": "Return of the Jedi",
+      "de": "Die Rückkehr der Jedi-Ritter",
+      "it": "Il ritorno dello Jedi",
+      "es": "Star Wars: Episode VI - Return of the Jedi"
     },
     "kind": "film-release",
     "importance": 3,
@@ -47,7 +63,11 @@
     "id": "film-retour-vers-le-futur-1985",
     "date": "1985-10-30",
     "title": {
-      "fr": "Retour vers le futur"
+      "fr": "Retour vers le futur",
+      "en": "Back to the Future",
+      "de": "Zurück in die Zukunft",
+      "it": "Ritorno al futuro",
+      "es": "Back to the Future"
     },
     "kind": "film-release",
     "importance": 3,
@@ -69,7 +89,9 @@
     "id": "film-matrix-1999",
     "date": "1999-06-23",
     "title": {
-      "fr": "Matrix"
+      "fr": "Matrix",
+      "en": "The Matrix",
+      "es": "The Matrix"
     },
     "kind": "film-release",
     "importance": 3,
@@ -80,7 +102,11 @@
     "id": "film-star-wars-episode-i-la-menace-fantome-1999",
     "date": "1999-10-13",
     "title": {
-      "fr": "Star Wars, épisode I : La Menace fantôme"
+      "fr": "Star Wars, épisode I : La Menace fantôme",
+      "en": "Star Wars: Episode I – The Phantom Menace",
+      "de": "Star Wars: Episode I – Die dunkle Bedrohung",
+      "it": "Star Wars - Episodio I - La minaccia fantasma",
+      "es": "Star Wars: Episodio I - La amenaza fantasma"
     },
     "kind": "film-release",
     "importance": 3,
@@ -91,7 +117,10 @@
     "id": "film-fast-and-furious-2001",
     "date": "2001-09-26",
     "title": {
-      "fr": "Fast and Furious"
+      "fr": "Fast and Furious",
+      "en": "The Fast and the Furious",
+      "de": "The Fast and the Furious",
+      "es": "The Fast and the Furious"
     },
     "kind": "film-release",
     "importance": 2,
@@ -102,7 +131,11 @@
     "id": "film-harry-potter-a-l-ecole-des-sorciers-2001",
     "date": "2001-12-05",
     "title": {
-      "fr": "Harry Potter à l'école des sorciers"
+      "fr": "Harry Potter à l'école des sorciers",
+      "en": "Harry Potter and the Philosopher's Stone",
+      "de": "Harry Potter und der Stein der Weisen",
+      "it": "Harry Potter e la pietra filosofale",
+      "es": "Harry Potter y la piedra filosofal"
     },
     "kind": "film-release",
     "importance": 3,
@@ -113,7 +146,11 @@
     "id": "film-le-seigneur-des-anneaux-la-communaute-de-l-anneau-2001",
     "date": "2001-12-19",
     "title": {
-      "fr": "Le Seigneur des anneaux : La Communauté de l'anneau"
+      "fr": "Le Seigneur des anneaux : La Communauté de l'anneau",
+      "en": "The Lord of the Rings: The Fellowship of the Ring",
+      "de": "Der Herr der Ringe: Die Gefährten",
+      "it": "Il Signore degli Anelli - La Compagnia dell'Anello",
+      "es": "El Señor de los Anillos: la Comunidad del Anillo"
     },
     "kind": "film-release",
     "importance": 3,
@@ -135,7 +172,11 @@
     "id": "film-pirates-des-caraibes-la-malediction-du-black-pearl-2003",
     "date": "2003-08-13",
     "title": {
-      "fr": "Pirates des Caraïbes : La Malédiction du Black Pearl"
+      "fr": "Pirates des Caraïbes : La Malédiction du Black Pearl",
+      "en": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "de": "Fluch der Karibik",
+      "it": "La maledizione della prima luna",
+      "es": "Pirates of the Caribbean: The Curse of the Black Pearl"
     },
     "kind": "film-release",
     "importance": 3,
@@ -146,7 +187,11 @@
     "id": "film-the-dark-knight-le-chevalier-noir-2008",
     "date": "2008-08-13",
     "title": {
-      "fr": "The Dark Knight : Le Chevalier noir"
+      "fr": "The Dark Knight : Le Chevalier noir",
+      "en": "The Dark Knight",
+      "de": "The Dark Knight",
+      "it": "Il cavaliere oscuro",
+      "es": "The Dark Knight"
     },
     "kind": "film-release",
     "importance": 3,
@@ -157,7 +202,11 @@
     "id": "film-twilight-chapitre-i-fascination-2009",
     "date": "2009-01-07",
     "title": {
-      "fr": "Twilight, chapitre I : Fascination"
+      "fr": "Twilight, chapitre I : Fascination",
+      "en": "Twilight",
+      "de": "Twilight – Biss zum Morgengrauen",
+      "it": "Twilight",
+      "es": "Crepúsculo"
     },
     "kind": "film-release",
     "importance": 2,
@@ -168,7 +217,10 @@
     "id": "film-hunger-games-2012",
     "date": "2012-03-21",
     "title": {
-      "fr": "Hunger Games"
+      "fr": "Hunger Games",
+      "en": "The Hunger Games",
+      "de": "Die Tribute von Panem – The Hunger Games",
+      "es": "Los juegos del hambre"
     },
     "kind": "film-release",
     "importance": 2,
@@ -179,7 +231,11 @@
     "id": "film-avengers-2012",
     "date": "2012-04-25",
     "title": {
-      "fr": "Avengers"
+      "fr": "Avengers",
+      "en": "The Avengers",
+      "de": "Marvel’s The Avengers",
+      "it": "The Avengers",
+      "es": "The Avengers"
     },
     "kind": "film-release",
     "importance": 3,
@@ -190,7 +246,11 @@
     "id": "film-star-wars-episode-vii-le-reveil-de-la-force-2015",
     "date": "2015-12-16",
     "title": {
-      "fr": "Star Wars, épisode VII : Le Réveil de la Force"
+      "fr": "Star Wars, épisode VII : Le Réveil de la Force",
+      "en": "Star Wars: The Force Awakens",
+      "de": "Star Wars: Das Erwachen der Macht",
+      "it": "Star Wars - Il risveglio della Forza",
+      "es": "Star Wars: Episodio VII - El despertar de la Fuerza"
     },
     "kind": "film-release",
     "importance": 2,

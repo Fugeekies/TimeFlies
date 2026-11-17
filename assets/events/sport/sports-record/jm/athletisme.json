@@ -3,7 +3,11 @@
     "id": "sport-record-usain-bolt-100-m-2009",
     "date": "2009-08-16",
     "title": {
-      "fr": "Record du monde du 100 m d'Usain Bolt (9 s 58)"
+      "fr": "Record du monde du 100 m d'Usain Bolt (9 s 58)",
+      "en": "Usain Bolt's 100 m world record (9.58 s)",
+      "de": "100-m-Weltrekord von Usain Bolt (9,58 s)",
+      "it": "Record del mondo dei 100 m di Usain Bolt (9,58 s)",
+      "es": "Récord del mundo de los 100 m de Usain Bolt (9,58 s)"
     },
     "kind": "sport",
     "importance": 3,

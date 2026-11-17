@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.equivalences
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -302,7 +303,7 @@ internal fun EventSide(person: Person, side: EquivalenceSide, dates: DateTexts, 
     val colors = MaterialTheme.colorScheme
     Column(modifier, verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Text(
-            side.event.title("fr"),
+            side.event.shownTitle,
             style = if (compact) MaterialTheme.typography.labelLarge else MaterialTheme.typography.titleMedium,
             color = colors.onSurface,
             maxLines = 3,
@@ -339,7 +340,7 @@ internal fun describeSide(person: Person, side: EquivalenceSide?, dates: DateTex
         stringResource(
             Res.string.equivalences_a11y_side,
             person.spokenName(),
-            side.event.title("fr"),
+            side.event.shownTitle,
             "${kindLabel(side.event.kind)}, ${dates.long(side.date)}",
             personAgeText(side.age),
         )

@@ -3,7 +3,11 @@
     "id": "sport-ballon-d-or-modric-2018",
     "date": "2018-12-03",
     "title": {
-      "fr": "Ballon d'or de Luka Modrić"
+      "fr": "Ballon d'or de Luka Modrić",
+      "en": "Luka Modrić's Ballon d'Or",
+      "de": "Luka Modrićs Ballon d'Or",
+      "it": "Pallone d'oro di Luka Modrić",
+      "es": "Balón de Oro de Luka Modrić"
     },
     "kind": "sport",
     "importance": 1,

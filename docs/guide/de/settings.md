@@ -16,7 +16,7 @@ Jede Einstellung wird gespeichert, sobald sie sich ändert, ohne Bestätigungssc
   - **Abreißkalender**: ein Kalenderblatt, mit der Zahl der Jahre als großer roter Ziffer.
   - Polaroid und Abreißkalender folgen dem hellen oder dunklen Design deines Geräts.
 - **Region**: vorerst Frankreich; sie bestimmt die verwendeten Erscheinungsdaten.
-- **Sprache**: Français, English, Deutsch, Italiano oder Español, jede in ihrer eigenen Sprache geschrieben. Standardmäßig die Sprache deines Geräts, wenn sie angeboten wird, sonst Französisch. Sie ändert sofort die ganze App, das Widget und unter Windows das Symbol und die Benachrichtigung. Die Titel der Ereignisse bleiben vorerst auf Französisch.
+- **Sprache**: Français, English, Deutsch, Italiano oder Español, jede in ihrer eigenen Sprache geschrieben. Standardmäßig die Sprache deines Geräts, wenn sie angeboten wird, sonst Französisch. Sie ändert sofort die ganze App, das Widget und unter Windows das Symbol und die Benachrichtigung. Die Titel von Filmen und Sportereignissen folgen ebenfalls der Sprache; Songs und Künstler behalten ihren Namen.
 
 ## Ereignisse
 

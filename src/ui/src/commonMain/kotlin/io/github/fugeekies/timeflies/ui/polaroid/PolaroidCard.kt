@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.polaroid
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -133,7 +134,7 @@ fun PolaroidCard(
             }
             Box(Modifier.fillMaxWidth().alpha(inkAlpha)) {
                 Column(Modifier.padding(top = 12.dp, bottom = 18.dp, start = 4.dp, end = 4.dp)) {
-                    Text(event.title("fr"), fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 36.sp, lineHeight = 38.sp, color = FrameInk)
+                    Text(event.shownTitle, fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 36.sp, lineHeight = 38.sp, color = FrameInk)
                     Text(legend, fontFamily = style.handwriting, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, color = FrameInkSoft)
                     if (userAgeLine != null) {
                         Text(userAgeLine, fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 24.sp, color = FrameInk)

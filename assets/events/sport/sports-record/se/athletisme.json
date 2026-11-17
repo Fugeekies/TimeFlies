@@ -3,7 +3,11 @@
     "id": "sport-record-armand-duplantis-2020",
     "date": "2020-02-08",
     "title": {
-      "fr": "Premier record du monde de saut à la perche d'Armand Duplantis (6,17 m)"
+      "fr": "Premier record du monde de saut à la perche d'Armand Duplantis (6,17 m)",
+      "en": "Armand Duplantis's first pole vault world record (6.17 m)",
+      "de": "Erster Stabhochsprung-Weltrekord von Armand Duplantis (6,17 m)",
+      "it": "Primo record del mondo di salto con l'asta di Armand Duplantis (6,17 m)",
+      "es": "Primer récord del mundo de salto con pértiga de Armand Duplantis (6,17 m)"
     },
     "kind": "sport",
     "importance": 2,

@@ -3,7 +3,11 @@
     "id": "sport-ballon-d-or-kopa-1958",
     "date": "1958-12-16",
     "title": {
-      "fr": "Ballon d'or de Raymond Kopa"
+      "fr": "Ballon d'or de Raymond Kopa",
+      "en": "Raymond Kopa's Ballon d'Or",
+      "de": "Raymond Kopas Ballon d'Or",
+      "it": "Pallone d'oro di Raymond Kopa",
+      "es": "Balón de Oro de Raymond Kopa"
     },
     "kind": "sport",
     "importance": 2,
@@ -14,7 +18,11 @@
     "id": "sport-platini-champion-d-europe-1984",
     "date": "1984-06-27",
     "title": {
-      "fr": "Platini champion d'Europe (finale de l'Euro 1984)"
+      "fr": "Platini champion d'Europe (finale de l'Euro 1984)",
+      "en": "Platini European champion (Euro 1984 final)",
+      "de": "Platini Europameister (EM-Finale 1984)",
+      "it": "Platini campione d'Europa (finale degli Europei 1984)",
+      "es": "Platini campeón de Europa (final de la Eurocopa 1984)"
     },
     "kind": "sport",
     "importance": 2,
@@ -25,7 +33,11 @@
     "id": "sport-zidane-finale-ligue-des-champions-2002",
     "date": "2002-05-15",
     "title": {
-      "fr": "Zidane vainqueur de la Ligue des champions (finale 2002)"
+      "fr": "Zidane vainqueur de la Ligue des champions (finale 2002)",
+      "en": "Zidane wins the Champions League (2002 final)",
+      "de": "Zidane gewinnt die Champions League (Finale 2002)",
+      "it": "Zidane vince la Champions League (finale 2002)",
+      "es": "Zidane gana la Liga de Campeones (final de 2002)"
     },
     "kind": "sport",
     "importance": 2,
@@ -36,7 +48,11 @@
     "id": "sport-ballon-d-or-benzema-2022",
     "date": "2022-10-17",
     "title": {
-      "fr": "Ballon d'or de Karim Benzema"
+      "fr": "Ballon d'or de Karim Benzema",
+      "en": "Karim Benzema's Ballon d'Or",
+      "de": "Karim Benzemas Ballon d'Or",
+      "it": "Pallone d'oro di Karim Benzema",
+      "es": "Balón de Oro de Karim Benzema"
     },
     "kind": "sport",
     "importance": 2,
@@ -47,7 +63,11 @@
     "id": "sport-ballon-d-or-dembele-2025",
     "date": "2025-09-22",
     "title": {
-      "fr": "Ballon d'or d'Ousmane Dembélé"
+      "fr": "Ballon d'or d'Ousmane Dembélé",
+      "en": "Ousmane Dembélé's Ballon d'Or",
+      "de": "Ousmane Dembélés Ballon d'Or",
+      "it": "Pallone d'oro di Ousmane Dembélé",
+      "es": "Balón de Oro de Ousmane Dembélé"
     },
     "kind": "sport",
     "importance": 2,

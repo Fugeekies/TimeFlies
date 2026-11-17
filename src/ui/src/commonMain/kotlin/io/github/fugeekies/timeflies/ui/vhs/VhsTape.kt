@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.vhs
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -128,7 +129,7 @@ fun VhsTape(
                 pluralStringResource(Res.plurals.years_count, anniversary.years, anniversary.years).uppercase(),
                 fontFamily = style.accent, fontSize = bigNumber, lineHeight = bigNumber, color = VhsNumber,
             )
-            Text(event.title("fr"), fontFamily = style.handwriting, fontSize = 30.sp, lineHeight = 34.sp, color = VhsLabelInk)
+            Text(event.shownTitle, fontFamily = style.handwriting, fontSize = 30.sp, lineHeight = 34.sp, color = VhsLabelInk)
             Text(legend, style = MaterialTheme.typography.bodyMedium, fontSize = 15.sp, color = VhsLabelSoft)
             if (userAgeLine != null || anniversary.isRound) {
                 Row(Modifier.fillMaxWidth().padding(top = 6.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
