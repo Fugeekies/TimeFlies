@@ -77,14 +77,23 @@ class OnboardingViewModel(
 
     fun onYearPicked(year: Int) = _state.update { it.copy(year = year) }
 
-    /** "C'est parti": the app then opens Today, as soon as the saved settings say the first launch is done. */
+    /**
+     * "C'est parti": the app then opens Today, as soon as the saved settings say the first launch is done.
+     *
+     * The buttons are disabled while saving only: this view model lives as long as the app, and the screen can come
+     * back in the same session ("Revoir le premier lancement" of the debug panel), where it must answer again.
+     */
     fun onStart() {
         val current = _state.value
         val birth = current.birth ?: return
         if (!current.canStart) return
         _state.update { it.copy(saving = true) }
         viewModelScope.launch {
-            if (!completeOnboarding.start(birth, current.excludedGroups)) _state.update { it.copy(saving = false) }
+            try {
+                completeOnboarding.start(birth, current.excludedGroups)
+            } finally {
+                _state.update { it.copy(saving = false) }
+            }
         }
     }
 
@@ -93,6 +102,12 @@ class OnboardingViewModel(
         if (_state.value.saving) return
         _state.update { it.copy(saving = true) }
         val excluded = _state.value.excludedGroups
-        viewModelScope.launch { completeOnboarding.later(excluded) }
+        viewModelScope.launch {
+            try {
+                completeOnboarding.later(excluded)
+            } finally {
+                _state.update { it.copy(saving = false) }
+            }
+        }
     }
 }

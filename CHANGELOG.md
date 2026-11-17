@@ -42,6 +42,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Fixed
 
+- Premier lancement : quand l'écran revenait dans la même session (« Revoir le premier lancement » du panneau de débogage), « C'est parti » et « Plus tard » restaient désactivés.
 - Les événements se chargent hors du fil de l'interface : le premier écran ne se fige plus pendant la lecture de la base, qui grossira jusqu'à 5 000 événements.
 - Équivalences, « Quel âge ? » et Réglages se recalculent aussi à minuit quand l'application reste ouverte, comme Aujourd'hui.
 - Windows, en débogage : fermer la fenêtre quitte l'application, au lieu de la cacher en gardant le port du débogueur (F5 ne relançait plus rien).
