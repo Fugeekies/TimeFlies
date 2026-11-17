@@ -3,7 +3,11 @@
     "id": "sport-pele-champion-du-monde-1958",
     "date": "1958-06-29",
     "title": {
-      "fr": "Pelé champion du monde à 17 ans (finale de la Coupe du monde 1958)"
+      "fr": "Pelé champion du monde à 17 ans (finale de la Coupe du monde 1958)",
+      "en": "Pelé world champion at 17 (1958 World Cup final)",
+      "de": "Pelé mit 17 Weltmeister (WM-Finale 1958)",
+      "it": "Pelé campione del mondo a 17 anni (finale dei Mondiali 1958)",
+      "es": "Pelé campeón del mundo a los 17 años (final del Mundial 1958)"
     },
     "kind": "sport",
     "importance": 1,
@@ -14,7 +18,11 @@
     "id": "sport-pele-finale-coupe-du-monde-1970",
     "date": "1970-06-21",
     "title": {
-      "fr": "Troisième titre mondial de Pelé (finale de la Coupe du monde 1970)"
+      "fr": "Troisième titre mondial de Pelé (finale de la Coupe du monde 1970)",
+      "en": "Pelé's third world title (1970 World Cup final)",
+      "de": "Pelés dritter WM-Titel (WM-Finale 1970)",
+      "it": "Terzo titolo mondiale di Pelé (finale dei Mondiali 1970)",
+      "es": "Tercer título mundial de Pelé (final del Mundial 1970)"
     },
     "kind": "sport",
     "importance": 1,
@@ -25,7 +33,11 @@
     "id": "sport-ballon-d-or-kaka-2007",
     "date": "2007-12-02",
     "title": {
-      "fr": "Ballon d'or de Kaká"
+      "fr": "Ballon d'or de Kaká",
+      "en": "Kaká's Ballon d'Or",
+      "de": "Kakás Ballon d'Or",
+      "it": "Pallone d'oro di Kaká",
+      "es": "Balón de Oro de Kaká"
     },
     "kind": "sport",
     "importance": 1,

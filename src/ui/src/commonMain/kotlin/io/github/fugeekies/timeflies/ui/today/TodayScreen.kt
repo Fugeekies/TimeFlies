@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.today
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -317,7 +318,7 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
                 maxLines = 1, softWrap = false, modifier = Modifier.widthIn(min = 76.dp),
             )
             Column(Modifier.weight(1f)) {
-                Text(event.title("fr"), style = MaterialTheme.typography.titleMedium, color = colors.onSurface, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(event.shownTitle, style = MaterialTheme.typography.titleMedium, color = colors.onSurface, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(
                     stringResource(Res.string.kind_and_year, kindLabel(event.kind), anniversary.eventDate.year),
                     style = MaterialTheme.typography.bodySmall,
@@ -337,7 +338,7 @@ private fun describe(anniversary: Anniversary, dates: DateTexts, userAge: String
     val event = anniversary.event
     val base = pluralStringResource(
         Res.plurals.a11y_anniversary, anniversary.years, anniversary.years,
-        event.title("fr"), stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(anniversary.eventDate)),
+        event.shownTitle, stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(anniversary.eventDate)),
     )
     return if (userAge == null) base else "$base $userAge"
 }

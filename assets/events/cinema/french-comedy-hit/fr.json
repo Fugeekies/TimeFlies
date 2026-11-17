@@ -3,7 +3,10 @@
     "id": "film-le-corniaud-1965",
     "date": "1965-03-24",
     "title": {
-      "fr": "Le Corniaud"
+      "fr": "Le Corniaud",
+      "en": "The Sucker",
+      "de": "Scharfe Sachen für Monsieur",
+      "it": "Colpo grosso ma non troppo"
     },
     "kind": "film-release",
     "importance": 2,
@@ -14,7 +17,10 @@
     "id": "film-la-grande-vadrouille-1966",
     "date": "1966-12-08",
     "title": {
-      "fr": "La Grande Vadrouille"
+      "fr": "La Grande Vadrouille",
+      "de": "Drei Bruchpiloten in Paris",
+      "it": "Tre uomini in fuga",
+      "es": "La gran juerga"
     },
     "kind": "film-release",
     "importance": 3,
@@ -25,7 +31,9 @@
     "id": "film-la-cage-aux-folles-1978",
     "date": "1978-10-25",
     "title": {
-      "fr": "La Cage aux folles"
+      "fr": "La Cage aux folles",
+      "de": "Ein Käfig voller Narren",
+      "it": "Il vizietto"
     },
     "kind": "film-release",
     "importance": 2,
@@ -36,7 +44,9 @@
     "id": "film-les-bronzes-1978",
     "date": "1978-11-22",
     "title": {
-      "fr": "Les Bronzés"
+      "fr": "Les Bronzés",
+      "en": "French Fried Vacation",
+      "de": "Die Strandflitzer"
     },
     "kind": "film-release",
     "importance": 2,
@@ -47,7 +57,8 @@
     "id": "film-les-bronzes-font-du-ski-1979",
     "date": "1979-11-21",
     "title": {
-      "fr": "Les Bronzés font du ski"
+      "fr": "Les Bronzés font du ski",
+      "en": "French Fried Vacation 2"
     },
     "kind": "film-release",
     "importance": 2,
@@ -58,7 +69,9 @@
     "id": "film-le-pere-noel-est-une-ordure-1982",
     "date": "1982-08-25",
     "title": {
-      "fr": "Le père Noël est une ordure"
+      "fr": "Le père Noël est une ordure",
+      "en": "Santa Claus Is a Stinker",
+      "de": "Da graust sich ja der Weihnachtsmann"
     },
     "kind": "film-release",
     "importance": 2,
@@ -69,7 +82,10 @@
     "id": "film-les-visiteurs-1993",
     "date": "1993-01-27",
     "title": {
-      "fr": "Les Visiteurs"
+      "fr": "Les Visiteurs",
+      "de": "Die Besucher",
+      "it": "I visitatori",
+      "es": "Los visitantes"
     },
     "kind": "film-release",
     "importance": 2,
@@ -80,7 +96,9 @@
     "id": "film-la-verite-si-je-mens-1997",
     "date": "1997-04-30",
     "title": {
-      "fr": "La Vérité si je mens !"
+      "fr": "La Vérité si je mens !",
+      "en": "Would I Lie to You?",
+      "it": "La verità sull'amore"
     },
     "kind": "film-release",
     "importance": 2,
@@ -91,7 +109,8 @@
     "id": "film-taxi-1998",
     "date": "1998-04-08",
     "title": {
-      "fr": "Taxi"
+      "fr": "Taxi",
+      "it": "Taxxi"
     },
     "kind": "film-release",
     "importance": 3,
@@ -102,7 +121,11 @@
     "id": "film-le-diner-de-cons-1998",
     "date": "1998-04-15",
     "title": {
-      "fr": "Le Dîner de cons"
+      "fr": "Le Dîner de cons",
+      "en": "The Dinner Game",
+      "de": "Dinner für Spinner",
+      "it": "La cena dei cretini",
+      "es": "La cena de los idiotas"
     },
     "kind": "film-release",
     "importance": 2,
@@ -113,7 +136,11 @@
     "id": "film-le-fabuleux-destin-d-amelie-poulain-2001",
     "date": "2001-04-25",
     "title": {
-      "fr": "Le Fabuleux Destin d'Amélie Poulain"
+      "fr": "Le Fabuleux Destin d'Amélie Poulain",
+      "en": "Amélie",
+      "de": "Die fabelhafte Welt der Amélie",
+      "it": "Il favoloso mondo di Amélie",
+      "es": "Amélie"
     },
     "kind": "film-release",
     "importance": 3,
@@ -124,7 +151,11 @@
     "id": "film-asterix-et-obelix-mission-cleopatre-2002",
     "date": "2002-01-30",
     "title": {
-      "fr": "Astérix et Obélix : Mission Cléopâtre"
+      "fr": "Astérix et Obélix : Mission Cléopâtre",
+      "en": "Asterix & Obelix: Mission Cleopatra",
+      "de": "Asterix & Obelix: Mission Kleopatra",
+      "it": "Asterix & Obelix - Missione Cleopatra",
+      "es": "Astérix y Obélix: Misión Cleopatra"
     },
     "kind": "film-release",
     "importance": 3,
@@ -135,7 +166,8 @@
     "id": "film-brice-de-nice-2005",
     "date": "2005-04-06",
     "title": {
-      "fr": "Brice de Nice"
+      "fr": "Brice de Nice",
+      "de": "Cool Waves – Brice de Nice"
     },
     "kind": "film-release",
     "importance": 2,
@@ -146,7 +178,10 @@
     "id": "film-oss-117-le-caire-nid-d-espions-2006",
     "date": "2006-04-19",
     "title": {
-      "fr": "OSS 117 : Le Caire, nid d'espions"
+      "fr": "OSS 117 : Le Caire, nid d'espions",
+      "en": "OSS 117: Cairo, Nest of Spies",
+      "de": "OSS 117 – Der Spion, der sich liebte",
+      "it": "Agente speciale 117 al servizio della Repubblica - Missione Cairo"
     },
     "kind": "film-release",
     "importance": 2,
@@ -168,7 +203,10 @@
     "id": "film-bienvenue-chez-les-ch-tis-2008",
     "date": "2008-02-27",
     "title": {
-      "fr": "Bienvenue chez les Ch'tis"
+      "fr": "Bienvenue chez les Ch'tis",
+      "en": "Welcome to the Sticks",
+      "de": "Willkommen bei den Sch’tis",
+      "it": "Giù al Nord"
     },
     "kind": "film-release",
     "importance": 2,
@@ -190,7 +228,10 @@
     "id": "film-intouchables-2011",
     "date": "2011-11-02",
     "title": {
-      "fr": "Intouchables"
+      "fr": "Intouchables",
+      "en": "The Intouchables",
+      "de": "Ziemlich beste Freunde",
+      "it": "Quasi amici - Intouchables"
     },
     "kind": "film-release",
     "importance": 3,
@@ -201,7 +242,11 @@
     "id": "film-qu-est-ce-qu-on-a-fait-au-bon-dieu-2014",
     "date": "2014-04-16",
     "title": {
-      "fr": "Qu'est-ce qu'on a fait au Bon Dieu ?"
+      "fr": "Qu'est-ce qu'on a fait au Bon Dieu ?",
+      "en": "Serial (Bad) Weddings",
+      "de": "Monsieur Claude und seine Töchter",
+      "it": "Non sposate le mie figlie!",
+      "es": "Dios mío, ¿pero qué te hemos hecho?"
     },
     "kind": "film-release",
     "importance": 2,

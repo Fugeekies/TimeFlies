@@ -73,6 +73,11 @@ class EventParserTest {
     }
 
     @Test
+    fun rejectsATitleInALanguageTheInterfaceDoesNotHave() {
+        assertTrue(reasonsOf(valid.replace(""""en":"Test movie A"""", """"en-US":"Test movie A"""")).any { "langue inconnue en-US" in it })
+    }
+
+    @Test
     fun rejectsAMissingFrenchTitle() {
         assertTrue(reasonsOf(valid.replace(""""fr":"Film test A",""", "")).contains("title.fr manquant ou vide"))
     }

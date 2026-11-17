@@ -16,7 +16,7 @@ Ogni impostazione viene salvata appena cambia, senza pulsante di conferma.
   - **Calendario a strappo**: un foglio di calendario, con il numero di anni in una grande cifra rossa.
   - Polaroid e Calendario a strappo seguono il tema chiaro o scuro del dispositivo.
 - **Regione**: per ora la Francia; sceglie le date di uscita usate.
-- **Lingua**: Français, English, Deutsch, Italiano o Español, ognuna scritta nella sua lingua. Per impostazione predefinita, quella del dispositivo se è disponibile, altrimenti il francese. Cambia subito tutta l'app, il widget e, su Windows, l'icona e la notifica. I titoli degli eventi restano per ora in francese.
+- **Lingua**: Français, English, Deutsch, Italiano o Español, ognuna scritta nella sua lingua. Per impostazione predefinita, quella del dispositivo se è disponibile, altrimenti il francese. Cambia subito tutta l'app, il widget e, su Windows, l'icona e la notifica. Anche i titoli dei film e degli eventi sportivi seguono la lingua; canzoni e artisti mantengono il loro nome.
 
 ## Eventi
 

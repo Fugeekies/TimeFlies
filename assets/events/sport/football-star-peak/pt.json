@@ -3,7 +3,11 @@
     "id": "sport-ballon-d-or-cristiano-ronaldo-2008",
     "date": "2008-12-02",
     "title": {
-      "fr": "Premier Ballon d'or de Cristiano Ronaldo"
+      "fr": "Premier Ballon d'or de Cristiano Ronaldo",
+      "en": "Cristiano Ronaldo's first Ballon d'Or",
+      "de": "Cristiano Ronaldos erster Ballon d'Or",
+      "it": "Primo Pallone d'oro di Cristiano Ronaldo",
+      "es": "Primer Balón de Oro de Cristiano Ronaldo"
     },
     "kind": "sport",
     "importance": 1,
@@ -14,7 +18,11 @@
     "id": "sport-ballon-d-or-cristiano-ronaldo-2013",
     "date": "2014-01-13",
     "title": {
-      "fr": "Deuxième Ballon d'or de Cristiano Ronaldo (édition 2013)"
+      "fr": "Deuxième Ballon d'or de Cristiano Ronaldo (édition 2013)",
+      "en": "Cristiano Ronaldo's second Ballon d'Or (2013 edition)",
+      "de": "Cristiano Ronaldos zweiter Ballon d'Or (Ausgabe 2013)",
+      "it": "Secondo Pallone d'oro di Cristiano Ronaldo (edizione 2013)",
+      "es": "Segundo Balón de Oro de Cristiano Ronaldo (edición 2013)"
     },
     "kind": "sport",
     "importance": 1,
@@ -25,7 +33,11 @@
     "id": "sport-ballon-d-or-cristiano-ronaldo-2014",
     "date": "2015-01-12",
     "title": {
-      "fr": "Troisième Ballon d'or de Cristiano Ronaldo (édition 2014)"
+      "fr": "Troisième Ballon d'or de Cristiano Ronaldo (édition 2014)",
+      "en": "Cristiano Ronaldo's third Ballon d'Or (2014 edition)",
+      "de": "Cristiano Ronaldos dritter Ballon d'Or (Ausgabe 2014)",
+      "it": "Terzo Pallone d'oro di Cristiano Ronaldo (edizione 2014)",
+      "es": "Tercer Balón de Oro de Cristiano Ronaldo (edición 2014)"
     },
     "kind": "sport",
     "importance": 1,
@@ -36,7 +48,11 @@
     "id": "sport-ballon-d-or-cristiano-ronaldo-2016",
     "date": "2016-12-12",
     "title": {
-      "fr": "Quatrième Ballon d'or de Cristiano Ronaldo"
+      "fr": "Quatrième Ballon d'or de Cristiano Ronaldo",
+      "en": "Cristiano Ronaldo's fourth Ballon d'Or",
+      "de": "Cristiano Ronaldos vierter Ballon d'Or",
+      "it": "Quarto Pallone d'oro di Cristiano Ronaldo",
+      "es": "Cuarto Balón de Oro de Cristiano Ronaldo"
     },
     "kind": "sport",
     "importance": 1,
@@ -47,7 +63,11 @@
     "id": "sport-ballon-d-or-cristiano-ronaldo-2017",
     "date": "2017-12-07",
     "title": {
-      "fr": "Cinquième Ballon d'or de Cristiano Ronaldo"
+      "fr": "Cinquième Ballon d'or de Cristiano Ronaldo",
+      "en": "Cristiano Ronaldo's fifth Ballon d'Or",
+      "de": "Cristiano Ronaldos fünfter Ballon d'Or",
+      "it": "Quinto Pallone d'oro di Cristiano Ronaldo",
+      "es": "Quinto Balón de Oro de Cristiano Ronaldo"
     },
     "kind": "sport",
     "importance": 1,

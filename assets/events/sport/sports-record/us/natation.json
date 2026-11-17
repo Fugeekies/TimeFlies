@@ -3,7 +3,11 @@
     "id": "sport-michael-phelps-8-medailles-2008",
     "date": "2008-08-17",
     "title": {
-      "fr": "Huitième médaille d'or de Michael Phelps à Pékin"
+      "fr": "Huitième médaille d'or de Michael Phelps à Pékin",
+      "en": "Michael Phelps's eighth gold medal in Beijing",
+      "de": "Michael Phelps' achte Goldmedaille in Peking",
+      "it": "Ottava medaglia d'oro di Michael Phelps a Pechino",
+      "es": "Octava medalla de oro de Michael Phelps en Pekín"
     },
     "kind": "sport",
     "importance": 3,

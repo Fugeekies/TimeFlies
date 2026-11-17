@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.eventages
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -158,7 +159,7 @@ private fun LineRow(line: EventLine, region: Region) {
     val event = line.event
     val date = line.ages?.date ?: event.dateFor(region)
     val dates = rememberDateTexts()
-    val base = "${event.title("fr")}, ${stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(date))}."
+    val base = "${event.shownTitle}, ${stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(date))}."
     val ages = line.ages
     val spoken = ages?.ages?.mapIndexed { index, years ->
         stringResource(Res.string.event_ages_a11y_line, Person(index).spokenName(), signedYearsText(years))
@@ -172,7 +173,7 @@ private fun LineRow(line: EventLine, region: Region) {
         ) {
             Box(Modifier.padding(top = 7.dp).size(10.dp).background(LocalStyle.current.familyColors.getValue(event.family), CircleShape))
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                Text(event.title("fr"), style = MaterialTheme.typography.titleMedium, color = colors.onSurface, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(event.shownTitle, style = MaterialTheme.typography.titleMedium, color = colors.onSurface, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(
                     stringResource(Res.string.kind_and_year, kindLabel(event.kind), date.year),
                     style = MaterialTheme.typography.bodySmall,

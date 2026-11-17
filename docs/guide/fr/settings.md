@@ -16,7 +16,7 @@ Chaque réglage est enregistré dès qu'il change, sans bouton à valider.
   - **Éphéméride** : une page de calendrier à arracher, avec le nombre d'années en grand chiffre rouge.
   - Polaroïd et Éphéméride suivent le thème clair ou sombre de ton appareil.
 - **Région** : France pour l'instant ; elle choisit les dates de sortie utilisées.
-- **Langue** : Français, English, Deutsch, Italiano ou Español, chaque langue écrite dans sa langue. Par défaut, celle de ton appareil si elle est proposée, sinon le français. Elle change aussitôt toute l'application, le widget et, sur Windows, l'icône et la notification. Les titres des événements restent pour l'instant en français.
+- **Langue** : Français, English, Deutsch, Italiano ou Español, chaque langue écrite dans sa langue. Par défaut, celle de ton appareil si elle est proposée, sinon le français. Elle change aussitôt toute l'application, le widget et, sur Windows, l'icône et la notification. Les titres des films et des événements sportifs suivent aussi la langue ; les chansons et les artistes gardent leur nom.
 
 ## Événements
 

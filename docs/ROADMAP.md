@@ -72,7 +72,7 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 
 ### Jalon — Traductions et régions
 - [x] Interface en anglais, en plus du français de référence : fait au jalon 17, avec l'allemand, l'italien et l'espagnol.
-- [ ] Titres des événements traduits quand ils diffèrent (anglais, allemand, italien, espagnol), dans une PR à part du jalon 17.
+- [x] Titres des événements traduits quand ils diffèrent (anglais, allemand, italien, espagnol) : PR [#35](https://github.com/Fugeekies/TimeFlies/pull/35), films par les liens interlangues de Wikipédia, titres du sport traduits, chansons et artistes inchangés.
 - [ ] Événements pour d'autres régions du monde : dates régionales (`regionalDates`) sourcées pour les pays visés, et événements propres à ces pays.
 - [ ] Choix de la région dans Réglages (liste des pays dans la langue de l'interface, région du système par défaut) : en V1, France seulement (décision du 15/11/2026).
 

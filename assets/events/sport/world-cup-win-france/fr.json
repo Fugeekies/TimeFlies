@@ -3,7 +3,11 @@
     "id": "sport-france-championne-du-monde-1998",
     "date": "1998-07-12",
     "title": {
-      "fr": "La France championne du monde (finale de la Coupe du monde 1998)"
+      "fr": "La France championne du monde (finale de la Coupe du monde 1998)",
+      "en": "France world champions (1998 World Cup final)",
+      "de": "Frankreich Weltmeister (WM-Finale 1998)",
+      "it": "La Francia campione del mondo (finale dei Mondiali 1998)",
+      "es": "Francia campeona del mundo (final del Mundial 1998)"
     },
     "kind": "sport",
     "importance": 2,
@@ -14,7 +18,11 @@
     "id": "sport-france-championne-du-monde-2018",
     "date": "2018-07-15",
     "title": {
-      "fr": "La France championne du monde (finale de la Coupe du monde 2018)"
+      "fr": "La France championne du monde (finale de la Coupe du monde 2018)",
+      "en": "France world champions (2018 World Cup final)",
+      "de": "Frankreich Weltmeister (WM-Finale 2018)",
+      "it": "La Francia campione del mondo (finale dei Mondiali 2018)",
+      "es": "Francia campeona del mundo (final del Mundial 2018)"
     },
     "kind": "sport",
     "importance": 3,

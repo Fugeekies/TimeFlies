@@ -41,7 +41,7 @@ object ShockMessages {
     /** "TimeFlies — Intouchables : 15 ans aujourd'hui", "TimeFlies — Dans 3 jours : … fêtera ses 25 ans", or "TimeFlies". */
     suspend fun tooltip(shock: DailyShock): String {
         val main = shock.main ?: return getString(Res.string.app_name)
-        val title = main.event.title("fr")
+        val title = main.event.shownTitle
         return if (shock.mainInDays == 0) {
             getString(Res.string.tray_tooltip_today, title, getPluralString(Res.plurals.years_count, main.years, main.years))
         } else {
@@ -62,9 +62,9 @@ object ShockMessages {
             inDays(shock.mainInDays)
         }
         val eventTitle = if (shock.mainInDays == 0) {
-            main.event.title("fr")
+            main.event.shownTitle
         } else {
-            getString(Res.string.notification_upcoming_title, main.event.title("fr"), willTurn(main))
+            getString(Res.string.notification_upcoming_title, main.event.shownTitle, willTurn(main))
         }
         val event = getString(Res.string.notification_event, eventTitle, getString(kindResource(main.event.kind)), longDate(main))
         val text = listOfNotNull(event, userAge(main.userAge)).joinToString(" ")

@@ -3,7 +3,11 @@
     "id": "sport-nadia-comaneci-10-1976",
     "date": "1976-07-18",
     "title": {
-      "fr": "Le premier 10 de Nadia Comăneci aux Jeux olympiques"
+      "fr": "Le premier 10 de Nadia Comăneci aux Jeux olympiques",
+      "en": "Nadia Comăneci's first perfect 10 at the Olympic Games",
+      "de": "Nadia Comănecis erste 10,0 bei Olympischen Spielen",
+      "it": "Il primo 10 di Nadia Comăneci ai Giochi olimpici",
+      "es": "El primer 10 de Nadia Comăneci en los Juegos Olímpicos"
     },
     "kind": "sport",
     "importance": 3,

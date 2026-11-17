@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.ephemeris
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.tween
@@ -123,7 +124,7 @@ fun EphemerisSheet(
                         color = colors.primary, modifier = Modifier.padding(bottom = 14.dp),
                     )
                 }
-                Text(event.title("fr"), style = MaterialTheme.typography.titleLarge, fontSize = 28.sp, lineHeight = 34.sp, color = colors.onSurface)
+                Text(event.shownTitle, style = MaterialTheme.typography.titleLarge, fontSize = 28.sp, lineHeight = 34.sp, color = colors.onSurface)
                 Text(legend, style = MaterialTheme.typography.bodyLarge, color = colors.onSurfaceVariant)
                 if (userAgeLine != null || anniversary.isRound) {
                     Row(Modifier.fillMaxWidth().padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {

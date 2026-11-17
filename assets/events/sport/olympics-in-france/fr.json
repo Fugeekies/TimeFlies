@@ -3,7 +3,11 @@
     "id": "sport-jeux-olympiques-paris-1900",
     "date": "1900-05-14",
     "title": {
-      "fr": "Ouverture des Jeux olympiques de Paris"
+      "fr": "Ouverture des Jeux olympiques de Paris",
+      "en": "Opening of the Paris Olympic Games",
+      "de": "Eröffnung der Olympischen Spiele in Paris",
+      "it": "Apertura dei Giochi olimpici di Parigi",
+      "es": "Apertura de los Juegos Olímpicos de París"
     },
     "kind": "history",
     "importance": 3,
@@ -14,7 +18,11 @@
     "id": "sport-jeux-olympiques-paris-1924",
     "date": "1924-07-05",
     "title": {
-      "fr": "Cérémonie d'ouverture des Jeux olympiques de Paris"
+      "fr": "Cérémonie d'ouverture des Jeux olympiques de Paris",
+      "en": "Opening ceremony of the Paris Olympic Games",
+      "de": "Eröffnungsfeier der Olympischen Spiele in Paris",
+      "it": "Cerimonia di apertura dei Giochi olimpici di Parigi",
+      "es": "Ceremonia de apertura de los Juegos Olímpicos de París"
     },
     "kind": "history",
     "importance": 3,
@@ -25,7 +33,11 @@
     "id": "sport-jeux-olympiques-grenoble-1968",
     "date": "1968-02-06",
     "title": {
-      "fr": "Ouverture des Jeux olympiques d'hiver de Grenoble"
+      "fr": "Ouverture des Jeux olympiques d'hiver de Grenoble",
+      "en": "Opening of the Grenoble Winter Olympics",
+      "de": "Eröffnung der Olympischen Winterspiele in Grenoble",
+      "it": "Apertura dei Giochi olimpici invernali di Grenoble",
+      "es": "Apertura de los Juegos Olímpicos de Invierno de Grenoble"
     },
     "kind": "history",
     "importance": 3,
@@ -36,7 +48,11 @@
     "id": "sport-jeux-olympiques-albertville-1992",
     "date": "1992-02-08",
     "title": {
-      "fr": "Ouverture des Jeux olympiques d'hiver d'Albertville"
+      "fr": "Ouverture des Jeux olympiques d'hiver d'Albertville",
+      "en": "Opening of the Albertville Winter Olympics",
+      "de": "Eröffnung der Olympischen Winterspiele in Albertville",
+      "it": "Apertura dei Giochi olimpici invernali di Albertville",
+      "es": "Apertura de los Juegos Olímpicos de Invierno de Albertville"
     },
     "kind": "history",
     "importance": 3,
@@ -47,7 +63,11 @@
     "id": "sport-jeux-olympiques-paris-2024",
     "date": "2024-07-26",
     "title": {
-      "fr": "Cérémonie d'ouverture des Jeux olympiques de Paris"
+      "fr": "Cérémonie d'ouverture des Jeux olympiques de Paris",
+      "en": "Opening ceremony of the Paris Olympic Games",
+      "de": "Eröffnungsfeier der Olympischen Spiele in Paris",
+      "it": "Cerimonia di apertura dei Giochi olimpici di Parigi",
+      "es": "Ceremonia de apertura de los Juegos Olímpicos de París"
     },
     "kind": "history",
     "importance": 3,

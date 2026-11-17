@@ -3,7 +3,8 @@
     "id": "film-casino-royale-2006",
     "date": "2006-11-22",
     "title": {
-      "fr": "Casino Royale"
+      "fr": "Casino Royale",
+      "de": "James Bond 007: Casino Royale"
     },
     "kind": "film-release",
     "importance": 2,

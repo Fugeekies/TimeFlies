@@ -3,7 +3,11 @@
     "id": "sport-ballon-d-or-rodri-2024",
     "date": "2024-10-28",
     "title": {
-      "fr": "Ballon d'or de Rodri"
+      "fr": "Ballon d'or de Rodri",
+      "en": "Rodri's Ballon d'Or",
+      "de": "Rodris Ballon d'Or",
+      "it": "Pallone d'oro di Rodri",
+      "es": "Balón de Oro de Rodri"
     },
     "kind": "sport",
     "importance": 1,

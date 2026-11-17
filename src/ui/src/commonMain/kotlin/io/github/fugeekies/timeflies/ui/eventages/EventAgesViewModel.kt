@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.eventages
 
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.lifecycle.viewModelScope
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.EventAges
@@ -110,5 +111,5 @@ class EventAgesViewModel(
     }
 
     /** Opened from a card of Today or Equivalences: the event's title in the search, so its line shows at once. */
-    fun open(event: Event) = onQueryChange(event.title("fr"))
+    fun open(event: Event) = onQueryChange(event.shownTitle)
 }

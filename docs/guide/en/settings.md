@@ -16,7 +16,7 @@ Every setting is saved as soon as it changes, with no button to confirm.
   - **Tear-off calendar**: a calendar page, with the number of years as a big red figure.
   - Polaroid and Tear-off calendar follow the light or dark theme of your device.
 - **Region**: France for now; it chooses the release dates used.
-- **Language**: Français, English, Deutsch, Italiano or Español, each written in its own language. By default, your device's language when it is offered, otherwise French. It changes the whole app, the widget and, on Windows, the icon and the notification at once. Event titles stay in French for now.
+- **Language**: Français, English, Deutsch, Italiano or Español, each written in its own language. By default, your device's language when it is offered, otherwise French. It changes the whole app, the widget and, on Windows, the icon and the notification at once. Film and sports event titles follow the language too; songs and artists keep their names.
 
 ## Events
 

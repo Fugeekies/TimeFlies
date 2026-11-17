@@ -3,7 +3,11 @@
     "id": "sport-record-eliud-kipchoge-2018",
     "date": "2018-09-16",
     "title": {
-      "fr": "Record du monde du marathon d'Eliud Kipchoge à Berlin"
+      "fr": "Record du monde du marathon d'Eliud Kipchoge à Berlin",
+      "en": "Eliud Kipchoge's marathon world record in Berlin",
+      "de": "Marathon-Weltrekord von Eliud Kipchoge in Berlin",
+      "it": "Record del mondo di maratona di Eliud Kipchoge a Berlino",
+      "es": "Récord del mundo de maratón de Eliud Kipchoge en Berlín"
     },
     "kind": "sport",
     "importance": 2,

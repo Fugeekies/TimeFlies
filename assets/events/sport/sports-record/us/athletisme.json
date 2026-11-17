@@ -3,7 +3,11 @@
     "id": "sport-record-bob-beamon-1968",
     "date": "1968-10-18",
     "title": {
-      "fr": "Le saut de Bob Beamon à 8,90 m"
+      "fr": "Le saut de Bob Beamon à 8,90 m",
+      "en": "Bob Beamon's 8.90 m jump",
+      "de": "Bob Beamons Sprung auf 8,90 m",
+      "it": "Il salto di Bob Beamon a 8,90 m",
+      "es": "El salto de Bob Beamon de 8,90 m"
     },
     "kind": "sport",
     "importance": 2,
@@ -14,7 +18,11 @@
     "id": "sport-record-florence-griffith-joyner-1988",
     "date": "1988-07-16",
     "title": {
-      "fr": "Record du monde du 100 m de Florence Griffith-Joyner"
+      "fr": "Record du monde du 100 m de Florence Griffith-Joyner",
+      "en": "Florence Griffith-Joyner's 100 m world record",
+      "de": "100-m-Weltrekord von Florence Griffith-Joyner",
+      "it": "Record del mondo dei 100 m di Florence Griffith-Joyner",
+      "es": "Récord del mundo de los 100 m de Florence Griffith-Joyner"
     },
     "kind": "sport",
     "importance": 2,
