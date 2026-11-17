@@ -38,13 +38,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.fugeekies.timeflies.domain.model.Anniversary
 import io.github.fugeekies.timeflies.ui.resources.Res
-import io.github.fugeekies.timeflies.ui.resources.decade_label
-import io.github.fugeekies.timeflies.ui.resources.decade_number
 import io.github.fugeekies.timeflies.ui.resources.family_and_year
 import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.years_unit
 import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.PhotoPaper
 import io.github.fugeekies.timeflies.ui.theme.bestInkOn
 import io.github.fugeekies.timeflies.ui.theme.photoColor
 import org.jetbrains.compose.resources.pluralStringResource
@@ -61,8 +60,8 @@ private const val COLOR_PART = 0.7f
 private const val INK_START = 0.6f
 
 /**
- * A Polaroïd of an anniversary (docs/UI_DESIGN_SPEC.md, § 1): the frame takes the colour of the event's
- * decade with the decade written in the corner of the bottom band; the photo keeps the family colour, with the
+ * A Polaroïd of an anniversary (docs/UI_DESIGN_SPEC.md, § 1), as on the mock-up: an off-white frame for every event
+ * (decision of 17/11/2026, the decade colours are gone); the photo keeps the family colour, with the
  * type drawing in the background and the handwritten number of years on top.
  *
  * @param legend handwritten line under the title.
@@ -81,7 +80,6 @@ fun PolaroidCard(
 ) {
     val style = LocalStyle.current
     val event = anniversary.event
-    val era = Era.of(anniversary.eventDate.year)
     val photo = style.photoColor(event.family)
     // White or ink, whichever reads best on the family colour: 3:1 at least for the big number (docs/UI_DESIGN_SPEC.md).
     val photoInk = bestInkOn(photo, PhotoInk, FrameInk)
@@ -111,7 +109,7 @@ fun PolaroidCard(
                 .widthIn(max = 340.dp)
                 .rotate(-2.5f)
                 .shadow(10.dp, RoundedCornerShape(2.dp))
-                .background(era.frame)
+                .background(PhotoPaper)
                 .padding(start = 16.dp, end = 16.dp, top = 16.dp),
         ) {
             Box(Modifier.fillMaxWidth().height(236.dp).background(shownPhoto)) {
@@ -134,14 +132,13 @@ fun PolaroidCard(
                 }
             }
             Box(Modifier.fillMaxWidth().alpha(inkAlpha)) {
-                Column(Modifier.padding(top = 12.dp, bottom = 18.dp, start = 4.dp, end = 72.dp)) {
+                Column(Modifier.padding(top = 12.dp, bottom = 18.dp, start = 4.dp, end = 4.dp)) {
                     Text(event.title("fr"), fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 36.sp, lineHeight = 38.sp, color = FrameInk)
                     Text(legend, fontFamily = style.handwriting, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, color = FrameInkSoft)
                     if (userAgeLine != null) {
                         Text(userAgeLine, fontFamily = style.handwriting, fontWeight = FontWeight.Bold, fontSize = 24.sp, color = FrameInk)
                     }
                 }
-                DecadeStamp(anniversary.eventDate.year, era, Modifier.align(Alignment.BottomEnd).padding(bottom = 10.dp))
             }
         }
         // Tape holding the photo.
@@ -164,12 +161,3 @@ fun PolaroidCard(
     }
 }
 
-/** The decade written by hand in the corner of the frame, like a stamp: "années" above "70". */
-@Composable
-private fun DecadeStamp(year: Int, era: Era, modifier: Modifier = Modifier) {
-    val handwriting = LocalStyle.current.handwriting
-    Column(modifier.rotate(-8f), horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(stringResource(Res.string.decade_label), fontFamily = handwriting, fontWeight = FontWeight.SemiBold, fontSize = 20.sp, lineHeight = 20.sp, color = era.stamp)
-        Text(stringResource(Res.string.decade_number, Era.decadeNumber(year)), fontFamily = handwriting, fontWeight = FontWeight.Bold, fontSize = 38.sp, lineHeight = 36.sp, color = era.stamp)
-    }
-}

@@ -11,7 +11,7 @@ Every setting is saved as soon as it changes, with no button to confirm.
 ## Display
 
 - **Style**: the style of the whole app and of the widget, with a preview of each.
-  - **Polaroid** (default): a photo whose frame has the colour of the decade, ages written by hand.
+  - **Polaroid** (default): a white-framed photo in the colour of the event's theme, ages written by hand.
   - **VHS**: a tape and its label, always dark.
   - **Tear-off calendar**: a calendar page, with the number of years as a big red figure.
   - Polaroid and Tear-off calendar follow the light or dark theme of your device.

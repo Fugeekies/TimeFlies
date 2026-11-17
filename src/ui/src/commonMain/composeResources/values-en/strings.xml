@@ -15,8 +15,6 @@
     <string name="vhs_play">▶ PLAY</string>
     <string name="vhs_rec">● REC</string>
     <string name="vhs_label_date">%1$s · SP</string>
-    <string name="decade_label">the</string>
-    <string name="decade_number">%1$ss</string>
     <string name="also_today">Also today</string>
     <string name="upcoming">Coming up…</string>
     <string name="nothing_soon">Nothing today. Enjoy it, you are not getting older.</string>

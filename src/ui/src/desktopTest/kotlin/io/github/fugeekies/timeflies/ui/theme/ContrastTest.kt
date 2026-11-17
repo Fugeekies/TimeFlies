@@ -3,7 +3,6 @@ package io.github.fugeekies.timeflies.ui.theme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
-import io.github.fugeekies.timeflies.ui.polaroid.Era
 import io.github.fugeekies.timeflies.ui.polaroid.FrameInk
 import io.github.fugeekies.timeflies.ui.polaroid.FrameInkSoft
 import io.github.fugeekies.timeflies.ui.polaroid.PhotoInk
@@ -86,12 +85,10 @@ class ContrastTest {
     }
 
     @Test
-    fun theWritingOnEveryFrameIsReadable() {
-        for (era in Era.entries) {
-            assertContrast(text, FrameInk, era.frame, "ink on $era")
-            assertContrast(text, FrameInkSoft, era.frame, "soft ink on $era")
-            assertContrast(large, era.stamp, era.frame, "decade stamp on $era")
-        }
+    fun theWritingOnTheFrameIsReadable() {
+        // The off-white frame of the mock-up, the same for every event (decision of 17/11/2026).
+        assertContrast(text, FrameInk, PhotoPaper, "ink on the frame")
+        assertContrast(text, FrameInkSoft, PhotoPaper, "soft ink on the frame")
     }
 
     @Test

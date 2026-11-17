@@ -11,7 +11,7 @@ Cada ajuste se guarda en cuanto cambia, sin botón de confirmar.
 ## Visualización
 
 - **Estilo**: el estilo de toda la app y del widget, con una vista previa de cada uno.
-  - **Polaroid** (predeterminado): una foto cuyo marco tiene el color de la década, las edades escritas a mano.
+  - **Polaroid** (predeterminado): una foto de marco blanco, del color del tema del acontecimiento, las edades escritas a mano.
   - **VHS**: una cinta con su etiqueta, siempre oscura.
   - **Calendario de taco**: una hoja de calendario, con el número de años en una gran cifra roja.
   - Polaroid y Calendario de taco siguen el tema claro u oscuro de tu dispositivo.

@@ -18,10 +18,6 @@
     <string name="vhs_play">▶ PLAY</string>
     <string name="vhs_rec">● REC</string>
     <string name="vhs_label_date">%1$s · SP</string>
-    <!-- Written above the decade number on the Polaroïd frame ("années" / "70"). -->
-    <string name="decade_label">années</string>
-    <!-- The decade under the label: "70", "70s" in English, "70er" in German. -->
-    <string name="decade_number">%1$s</string>
     <string name="also_today">Aussi aujourd'hui</string>
     <string name="upcoming">Bientôt…</string>
     <string name="nothing_soon">Rien aujourd'hui. Profite, tu ne vieillis pas.</string>

@@ -11,7 +11,7 @@ Ogni impostazione viene salvata appena cambia, senza pulsante di conferma.
 ## Visualizzazione
 
 - **Stile**: lo stile di tutta l'app e del widget, con un'anteprima di ciascuno.
-  - **Polaroid** (predefinito): una foto la cui cornice ha il colore del decennio, le età scritte a mano.
+  - **Polaroid** (predefinito): una foto con la cornice bianca, del colore del tema dell'evento, le età scritte a mano.
   - **VHS**: una cassetta con la sua etichetta, sempre scura.
   - **Calendario a strappo**: un foglio di calendario, con il numero di anni in una grande cifra rossa.
   - Polaroid e Calendario a strappo seguono il tema chiaro o scuro del dispositivo.

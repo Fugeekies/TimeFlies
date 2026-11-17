@@ -11,7 +11,7 @@ Chaque réglage est enregistré dès qu'il change, sans bouton à valider.
 ## Affichage
 
 - **Style** : le style de toute l'application et du widget, avec un aperçu de chacun.
-  - **Polaroïd** (par défaut) : une photo dont le cadre a la couleur de la décennie, les âges écrits à la main.
+  - **Polaroïd** (par défaut) : une photo au cadre blanc, de la couleur du thème de l'événement, les âges écrits à la main.
   - **VHS** : une cassette et son étiquette, toujours en sombre.
   - **Éphéméride** : une page de calendrier à arracher, avec le nombre d'années en grand chiffre rouge.
   - Polaroïd et Éphéméride suivent le thème clair ou sombre de ton appareil.

@@ -11,7 +11,7 @@ Jede Einstellung wird gespeichert, sobald sie sich ändert, ohne Bestätigungssc
 ## Anzeige
 
 - **Stil**: der Stil der ganzen App und des Widgets, mit einer Vorschau von jedem.
-  - **Polaroid** (Standard): ein Foto, dessen Rahmen die Farbe des Jahrzehnts hat, die Altersangaben von Hand geschrieben.
+  - **Polaroid** (Standard): ein weiß gerahmtes Foto in der Farbe des Themas des Ereignisses, die Altersangaben von Hand geschrieben.
   - **VHS**: eine Kassette mit ihrem Etikett, immer dunkel.
   - **Abreißkalender**: ein Kalenderblatt, mit der Zahl der Jahre als großer roter Ziffer.
   - Polaroid und Abreißkalender folgen dem hellen oder dunklen Design deines Geräts.
