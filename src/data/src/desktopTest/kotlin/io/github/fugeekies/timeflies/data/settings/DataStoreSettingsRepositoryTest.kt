@@ -62,12 +62,10 @@ class DataStoreSettingsRepositoryTest {
 
     @Test
     fun keepsTheSettingsAfterARestart() = runBlocking {
-        open().update { it.copy(birth = YearMonth(1991, Month.MAY), otherAge = 66, onboardingDone = true, equivalencesReversed = true, equivalenceFamilies = setOf(Family.MUSIC)) }
+        open().update { it.copy(birth = YearMonth(1991, Month.MAY), onboardingDone = true, equivalenceFamilies = setOf(Family.MUSIC)) }
         assertTrue(FileSystem.SYSTEM.exists(file), "the parent folder is created")
         val reread = open().settings.first()
         assertEquals(YearMonth(1991, Month.MAY), reread.birth)
-        assertEquals(66, reread.otherAge)
-        assertTrue(reread.equivalencesReversed)
         assertEquals(setOf(Family.MUSIC), reread.equivalenceFamilies)
         assertTrue(reread.onboardingDone)
     }
@@ -78,8 +76,9 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 6" in text, text)
-        assertTrue("youngAge" !in text, "the version 1 field is no longer written")
+        assertTrue("\"version\": 7" in text, text)
+        // Version 7: the other ages are forgotten when the app closes, nothing of them is written.
+        assertTrue("otherAge" !in text && "youngAge" !in text && "equivalencesReversed" !in text, text)
     }
 
     @Test
@@ -92,11 +91,11 @@ class DataStoreSettingsRepositoryTest {
     @Test
     fun readsAnOlderOrHandEditedFile() = runBlocking {
         FileSystem.SYSTEM.createDirectories(file.parent!!)
-        // Missing fields take their default, unknown ones are ignored, out-of-range values are made safe.
-        FileSystem.SYSTEM.write(file) { writeUtf8("""{"birthYear": 1980, "birthMonth": 13, "youngAge": 99, "region": "france", "future": true}""") }
+        // Missing fields take their default, unknown or dropped ones (otherAge, version 7) are ignored, out-of-range
+        // values are made safe.
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 6, "birthYear": 1980, "birthMonth": 13, "otherAge": 99, "equivalencesReversed": true, "region": "france", "future": true}""") }
         val settings = open().settings.first()
         assertNull(settings.birth)
-        assertEquals(99, settings.otherAge)
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
         assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")

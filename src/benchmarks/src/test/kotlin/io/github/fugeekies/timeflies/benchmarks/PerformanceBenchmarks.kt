@@ -116,17 +116,22 @@ class PerformanceBenchmarks {
                 }
             }
         }
-        // Equivalences: the user born in May 1991, the other person 15 (younger) or 66 (older), all themes.
+        // Equivalences: the user born in May 1991 and one other age, 15 (younger) or 66 (older), or three side by side
+        // (15, 66 and 8, the most since milestone 16), all themes.
         val getEquivalences = GetEquivalences(loaded, clock)
         val user = Generations.userBirth(YearMonth(1991, Month.MAY))
         val child = Generations.birthFromAge(today, 15)
         val parent = Generations.birthFromAge(today, 66)
         val allFamilies = Family.entries.toSet()
-        rows += measure("Page Équivalences, autre personne plus jeune (GetEquivalences)", iterations = 100) {
-            runBlocking { getEquivalences(child, user, allFamilies, region) }
+        rows += measure("Page Équivalences, un âge plus jeune (GetEquivalences)", iterations = 100) {
+            runBlocking { getEquivalences(user, listOf(child), allFamilies, region) }
         }
-        rows += measure("Page Équivalences, autre personne plus âgée (GetEquivalences)", iterations = 100) {
-            runBlocking { getEquivalences(user, parent, allFamilies, region) }
+        rows += measure("Page Équivalences, un âge plus âgé (GetEquivalences)", iterations = 100) {
+            runBlocking { getEquivalences(user, listOf(parent), allFamilies, region) }
+        }
+        val toddler = Generations.birthFromAge(today, 8)
+        rows += measure("Page Équivalences, trois âges côte à côte (GetEquivalences)", iterations = 100) {
+            runBlocking { getEquivalences(user, listOf(child, parent, toddler), allFamilies, region) }
         }
         // "Quel âge ?": the list by family when the screen opens, and a search.
         val searchEvents = SearchEvents(loaded, clock)

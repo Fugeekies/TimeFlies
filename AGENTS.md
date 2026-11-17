@@ -14,7 +14,7 @@ Ce fichier est la **source unique** des instructions pour les agents IA : GitHub
 | `docs/DEVELOPMENT.md` | Outils, commandes, débogage (version PC, tests, Android, panneau de débogage, logs). |
 | `docs/EVENTS_DATA.md` | Format de la base d'événements, natures, types, règles d'appariement et du coup de vieux du jour. |
 | `docs/UI_DESIGN_SPEC.md` | Identité visuelle, palette, polices, navigation, langues, accessibilité. |
-| `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `Equivalences`, `EventAges` (« Quel âge ? »), `Settings`, `AndroidWidget`, `WindowsTray`. |
+| `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `EventAges` (« Quel âge ? »), `Equivalences`, `Settings`, `AndroidWidget`, `WindowsTray`. |
 | `docs/maquettes/` | Maquettes visuelles (HTML et PNG) des écrans Android et Windows. En cas d'écart, les specs `UISpec/` font foi. |
 | `docs/ROADMAP.md` | Jalons à faire et terminés. |
 
@@ -23,9 +23,9 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 ## Fonctionnalités prévues
 
 - **Aujourd'hui** (écran d'ouverture) : le coup de vieux du jour, c'est-à-dire les anniversaires d'événements du jour, chiffres ronds en premier (10, 15, 20, 25 ans…), avec l'âge qu'avait l'utilisateur. À défaut, l'anniversaire le plus proche des jours suivants.
-- **Équivalences** : à partir de l'âge de l'utilisateur et de celui d'une autre personne, plus jeune ou plus âgée (15 ans par défaut, décision du 15/11/2026), les paires d'événements de **même type** décalées de l'écart d'âge (Friends ↔ Happy Days). Pas de phrase générée : les deux événements, leurs dates et l'âge de chacun.
-- **Quel âge ?** : un événement choisi et l'âge des deux personnes à sa date, négatif avant une naissance (« −14 ans »), décision du 15/11/2026 qui remplace « Mon équivalent ».
-- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026) et région, gardés sur l'appareil. L'âge de l'autre personne est gardé aussi, mais ne se règle que dans Équivalences, ni dans Réglages ni au premier lancement (décision du 15/11/2026). À l'écran, aucune des deux personnes n'a de nom : un pictogramme de personne de couleur devant chaque âge (décision du 15/11/2026). Styles d'affichage au choix dans Réglages › Affichage : **Polaroïd** par défaut (âges écrits à la main, seul style de la V1, décision du 13/11/2026), **VHS**, toujours sombre (jalon 14, décision du 17/11/2026), et **Éphéméride** (jalon 15) ; maquettes dans `docs/maquettes/`.
+- **Quel âge ?** (deuxième écran, décision du 17/11/2026) : un événement choisi et l'âge de chaque personne à sa date, côte à côte, négatif avant une naissance (« −14 ans »), décision du 15/11/2026 qui remplace « Mon équivalent ». Ton âge seul par défaut, et jusqu'à 3 âges à ajouter, chacun avec sa couleur, partagés avec Équivalences et oubliés à la fermeture (décision du 17/11/2026).
+- **Équivalences** : à partir de l'âge de l'utilisateur et de chaque âge ajouté, plus jeune ou plus âgé (15 ans au départ, décision du 15/11/2026), les événements de **même type** décalés de l'écart d'âge (Friends ↔ Happy Days), une carte par événement de l'utilisateur avec l'équivalent de chaque âge côte à côte (décision du 17/11/2026). Pas de phrase générée : les événements, leurs dates et l'âge de chacun.
+- **Réglages** : mois et année de naissance de l'utilisateur (jamais le jour, décision du 13/11/2026) et région, gardés sur l'appareil. Les autres âges ne se règlent ni dans Réglages ni au premier lancement, et ne sont pas enregistrés (décisions du 15/11/2026 et du 17/11/2026). À l'écran, aucune personne n'a de nom : un pictogramme de personne de couleur devant chaque âge (décision du 15/11/2026). Styles d'affichage au choix dans Réglages › Affichage : **Polaroïd** par défaut (âges écrits à la main, seul style de la V1, décision du 13/11/2026), **VHS**, toujours sombre (jalon 14, décision du 17/11/2026), et **Éphéméride** (jalon 15) ; maquettes dans `docs/maquettes/`.
 - **Widget Android** (mis à jour chaque jour) ; sur Windows, **icône de barre des tâches** et **notification** le matin.
 
 ## Données

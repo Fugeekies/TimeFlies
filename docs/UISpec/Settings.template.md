@@ -10,11 +10,11 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 #### Panneau « Toi » (eyebrow « GÉNÉRATIONS »)
 * **Ton mois et ton année de naissance** : deux listes, comme au premier lancement (de 1920 à l'année en cours moins 5), **sans le jour** (décision du 13/11/2026). Libellé de la valeur : « Mai 1991 · 35 ans ». Non renseigné : « Non renseigné » et le texte « Sans cette information, TimeFlies affiche les anniversaires sans ton âge et ne peut pas calculer d'équivalences. »
 * Lien **« Effacer »** : retire le mois et l'année enregistrés (retour au mode réduit).
-* **Pas d'âge de l'autre personne dans Réglages** (décision du 15/11/2026) : il se règle là où il sert, avec le bouton « Modifier » d'Équivalences (voir `Equivalences.template.md`), pas au premier lancement non plus. La valeur reste enregistrée avec les réglages.
+* **Pas d'autres âges dans Réglages** (décision du 15/11/2026) : ils s'ajoutent là où ils servent, avec « + » dans le bandeau de « Quel âge ? » et d'Équivalences (voir `Equivalences.template.md`), pas au premier lancement non plus. Depuis le 17/11/2026, ils ne sont **plus enregistrés** : jusqu'à 3, oubliés à la fermeture de l'application ; au lancement, seul ton âge s'affiche.
 
 #### Calcul des âges et de l'écart (décision du 13/11/2026)
 * **Naissance de l'utilisateur** : le **1er jour** du mois choisi. L'âge affiché peut donc avoir un an d'avance seulement pendant le mois de son anniversaire, avant le jour exact.
-* **Naissance de l'autre personne** : **aujourd'hui moins son âge**, au jour près (une personne « de 15 ans » est née il y a exactement 15 ans). Elle peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
+* **Naissance d'un âge ajouté** : **aujourd'hui moins cet âge**, au jour près (une personne « de 15 ans » est née il y a exactement 15 ans). Elle peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
 * **Écart** : différence entre les deux dates de naissance, au jour près, dans un sens ou dans l'autre ; un écart de moins de 5 ans est permis avec un avertissement (voir `Equivalences.template.md`). Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
 
 #### Panneau « Événements » (eyebrow « ÉVÉNEMENTS », décision du 16/11/2026)
@@ -28,7 +28,7 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
   * **VHS** ;
   * **Éphéméride**.
   Les trois choix sont côte à côte quand ils tiennent, l'un sous l'autre sur un téléphone étroit.
-  Le style s'applique aussitôt à toute l'application et au widget, et il est gardé dans `settings.json` (champ `style`, version 6).
+  Le style s'applique aussitôt à toute l'application et au widget, et il est gardé dans `settings.json` (champ `style`, version 6 ; version 7 depuis le jalon 16, sans l'âge de l'autre personne ni le sens de lecture d'Équivalences).
 * **Région** : liste des pays, chacun écrit dans la langue de l'interface. Par défaut, la région du système (décision du 13/11/2026). Elle choisit les dates régionales des événements (voir `EVENTS_DATA.md`, « Dates par région »). **En V1, France seulement** (décision du 15/11/2026) : la ligne affiche « Région : France » sans liste ; le choix des pays arrive avec le jalon « Traductions et régions ».
 * **Langue** : liste des langues disponibles, chacune écrite dans sa langue. Au départ, Français seulement : la ligne est masquée tant qu'il n'y a qu'une langue. Par défaut, la langue du système si elle est disponible, le français sinon.
 

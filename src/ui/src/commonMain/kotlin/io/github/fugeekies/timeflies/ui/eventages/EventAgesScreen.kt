@@ -3,6 +3,7 @@ package io.github.fugeekies.timeflies.ui.eventages
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -68,7 +69,7 @@ import org.jetbrains.compose.resources.stringResource
 
 /**
  * The "Quel âge ?" screen (docs/UISpec/EventAges.template.md, decision of 15/11/2026): every event of the list shows
- * how old the two people were on its date, negative before a birth ("−14 ans"), without having to touch it.
+ * how old the user and each added age were on its date, negative before a birth ("−14 ans"), without having to touch it.
  *
  * @param request an event to show, from a card of Today or Equivalences; [onRequestHandled] is called once it is taken.
  */
@@ -147,7 +148,10 @@ private fun LazyListScope.eventList(state: EventAgesUiState) {
     }
 }
 
-/** Family dot, title, "nature · année", and on the right the two ages: "👤 6 ans" / "👤 −14 ans". */
+/**
+ * Family dot, title, "nature · année", and under them the ages side by side in the order of the banner (decision of
+ * 17/11/2026): "👤 6 ans  👤 −14 ans  👤 36 ans".
+ */
 @Composable
 private fun LineRow(line: EventLine, region: Region) {
     val colors = MaterialTheme.colorScheme
@@ -156,32 +160,28 @@ private fun LineRow(line: EventLine, region: Region) {
     val dates = rememberDateTexts()
     val base = "${event.title("fr")}, ${stringResource(Res.string.kind_and_date, kindLabel(event.kind), dates.long(date))}."
     val ages = line.ages
-    val description = if (ages == null) base else buildString {
-        append(base)
-        append(' ')
-        append(stringResource(Res.string.event_ages_a11y_line, Person.USER.spokenName(), signedYearsText(ages.userAge)))
-        append(' ')
-        append(stringResource(Res.string.event_ages_a11y_line, Person.OTHER.spokenName(), signedYearsText(ages.otherAge)))
+    val spoken = ages?.ages?.mapIndexed { index, years ->
+        stringResource(Res.string.event_ages_a11y_line, Person(index).spokenName(), signedYearsText(years))
     }
+    val description = if (spoken == null) base else (listOf(base) + spoken).joinToString(" ")
     Column {
         Row(
             Modifier.fillMaxWidth().padding(vertical = 8.dp).clearAndSetSemantics { contentDescription = description },
-            verticalAlignment = Alignment.CenterVertically,
+            verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Box(Modifier.size(10.dp).background(LocalStyle.current.familyColors.getValue(event.family), CircleShape))
-            Column(Modifier.weight(1f)) {
+            Box(Modifier.padding(top = 7.dp).size(10.dp).background(LocalStyle.current.familyColors.getValue(event.family), CircleShape))
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(event.title("fr"), style = MaterialTheme.typography.titleMedium, color = colors.onSurface, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(
                     stringResource(Res.string.kind_and_year, kindLabel(event.kind), date.year),
                     style = MaterialTheme.typography.bodySmall,
                     color = colors.onSurfaceVariant,
                 )
-            }
-            if (ages != null) {
-                Column(horizontalAlignment = Alignment.End) {
-                    AgeAtEvent(Person.USER, ages.userAge)
-                    AgeAtEvent(Person.OTHER, ages.otherAge)
+                if (ages != null) {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        ages.ages.forEachIndexed { index, years -> AgeAtEvent(Person(index), years) }
+                    }
                 }
             }
         }

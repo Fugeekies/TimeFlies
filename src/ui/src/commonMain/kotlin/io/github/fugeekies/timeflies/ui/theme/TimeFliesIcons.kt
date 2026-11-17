@@ -26,6 +26,12 @@ object TimeFliesIcons {
         moveTo(10f, 12f); lineTo(6f, 16f); lineTo(10f, 20f)
     }
 
+    /** "Ajouter un âge" in the banner of "Quel âge ?" and Equivalences. */
+    val Plus: ImageVector = strokeIcon("Plus") {
+        moveTo(12f, 5f); lineTo(12f, 19f)
+        moveTo(5f, 12f); lineTo(19f, 12f)
+    }
+
     val Search: ImageVector = strokeIcon("Search") {
         moveTo(18f, 11f); arcTo(7f, 7f, 0f, true, true, 4f, 11f); arcTo(7f, 7f, 0f, true, true, 18f, 11f); close()
         moveTo(20f, 20f); lineTo(16f, 16f)

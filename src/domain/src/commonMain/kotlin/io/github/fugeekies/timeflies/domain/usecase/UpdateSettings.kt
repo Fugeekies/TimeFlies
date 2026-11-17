@@ -31,23 +31,6 @@ class UpdateSettings(
         settings.update { it.copy(birth = null) }
     }
 
-    /**
-     * Saves the other person's age if it is allowed ([Generations.isOtherAgeAllowed]): from 1 to 100, younger or
-     * older than the user. A small gap is allowed too, the screen warns (decision of 15/11/2026).
-     *
-     * @return true when saved, false when rejected (the stored value does not change).
-     */
-    suspend fun setOtherAge(age: Int): Boolean {
-        if (!Generations.isOtherAgeAllowed(age)) return false
-        settings.update { it.copy(otherAge = age) }
-        return true
-    }
-
-    /** Saves the reading direction of the Equivalences screen (true: the user on the left). */
-    suspend fun setEquivalencesReversed(reversed: Boolean) {
-        settings.update { it.copy(equivalencesReversed = reversed) }
-    }
-
     /** Saves the themes ticked on the Equivalences screen. */
     suspend fun setEquivalenceFamilies(families: Set<Family>) {
         settings.update { it.copy(equivalenceFamilies = families) }

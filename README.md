@@ -8,8 +8,8 @@
 TimeFlies est une application **Android et Windows** qui donne des coups de vieux :
 
 - **Le coup de vieux du jour** : « Ça fait 15 ans qu'*Intouchables* est sorti. Tu avais 20 ans. » Sur Android, il s'affiche dans un widget de l'écran d'accueil ; sur Windows, dans une icône de la barre des tâches avec une notification le matin.
-- **Les équivalences** : selon ton âge et celui d'un jeune, les événements qui ont la même place dans vos deux vies (Friends ↔ Happy Days, la mort de Tupac ↔ la mort d'Elvis, Zidane ↔ Platini…).
-- **Quel âge ?** : choisis un événement et vois quel âge vous aviez tous les deux à cette date (« −14 ans » si l'autre n'était pas encore né).
+- **Quel âge ?** : choisis un événement et vois quel âge tu avais à cette date, et jusqu'à 3 autres personnes à côté (« −14 ans » si quelqu'un n'était pas encore né).
+- **Les équivalences** : selon ton âge et celui d'un jeune (ou de trois personnes à la fois), les événements qui ont la même place dans vos vies (Friends ↔ Happy Days, la mort de Tupac ↔ la mort d'Elvis, Zidane ↔ Platini…).
 
 <p align="center"><img src="docs/maquettes/android/TodayPolaroid.png" alt="Aperçu de l'écran Aujourd'hui" width="260"> <img src="docs/maquettes/android/Equivalences.png" alt="Aperçu de l'écran Équivalences" width="260"></p>
 

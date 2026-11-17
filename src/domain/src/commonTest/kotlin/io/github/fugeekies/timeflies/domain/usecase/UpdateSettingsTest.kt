@@ -37,8 +37,6 @@ class UpdateSettingsTest {
     fun startsWithTheFirstLaunchDefaults() = runTest {
         val settings = ObserveSettings(repository)().first()
         assertNull(settings.birth)
-        assertEquals(15, settings.otherAge)
-        assertFalse(settings.equivalencesReversed)
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
     }
@@ -59,27 +57,8 @@ class UpdateSettingsTest {
     }
 
     @Test
-    fun savesAnOtherAgeYoungerOrOlderThanTheUser() = runTest {
-        update.setBirth(YearMonth(1991, Month.MAY))
-        assertTrue(update.setOtherAge(65))
-        assertEquals(65, repository.state.value.otherAge)
-        // A small gap is allowed, the screen warns (decision of 15/11/2026).
-        assertTrue(update.setOtherAge(34))
-        assertEquals(34, repository.state.value.otherAge)
-    }
-
-    @Test
-    fun rejectsAnOtherAgeOutOfRange() = runTest {
-        assertFalse(update.setOtherAge(0))
-        assertFalse(update.setOtherAge(101))
-        assertEquals(15, repository.state.value.otherAge)
-    }
-
-    @Test
-    fun savesTheDirectionAndThemesOfTheEquivalences() = runTest {
-        update.setEquivalencesReversed(true)
+    fun savesTheThemesOfTheEquivalences() = runTest {
         update.setEquivalenceFamilies(setOf(Family.MUSIC, Family.SPORT))
-        assertTrue(repository.state.value.equivalencesReversed)
         assertEquals(setOf(Family.MUSIC, Family.SPORT), repository.state.value.equivalenceFamilies)
     }
 

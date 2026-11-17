@@ -9,7 +9,6 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
-import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsUiState
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.TemporaryAgesStore
@@ -23,11 +22,11 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-/** One line of the list: an event and the two people's ages on its date; [ages] is null in reduced mode. */
+/** One line of the list: an event and the people's ages on its date, in the banner's order; [ages] is null in reduced mode. */
 data class EventLine(val event: Event, val ages: EventAges?)
 
 /**
- * What the "Quel âge ?" screen shows (docs/UISpec/EventAges.template.md): every line carries the two ages, no need to
+ * What the "Quel âge ?" screen shows (docs/UISpec/EventAges.template.md): every line carries the ages side by side, no need to
  * touch it (decision of 15/11/2026).
  *
  * @property results search results; null while the query has fewer than 2 characters (the list by family shows).
@@ -49,10 +48,9 @@ class EventAgesViewModel(
     private val searchEvents: SearchEvents,
     private val getEventAges: GetEventAges,
     observeSettings: ObserveSettings,
-    updateSettings: UpdateSettings,
     clock: Clock,
     temporaryAges: TemporaryAgesStore,
-) : GenerationsViewModel(observeSettings, updateSettings, clock, temporaryAges) {
+) : GenerationsViewModel(observeSettings, clock, temporaryAges) {
 
     private val _state = MutableStateFlow(EventAgesUiState())
     val state: StateFlow<EventAgesUiState> = _state.asStateFlow()
@@ -84,7 +82,8 @@ class EventAgesViewModel(
             cachedKey = key
         }
         val results = if (text.trim().length < SearchEvents.MIN_QUERY_LENGTH) null else runCatchingLogged { searchEvents.search(text, region) }
-        fun line(event: Event) = EventLine(event, people.userBirth?.let { getEventAges(event, it, people.otherBirth, region) })
+        val births = people.births
+        fun line(event: Event) = EventLine(event, births.takeIf { it.isNotEmpty() }?.let { getEventAges(event, it, region) })
         _state.update {
             it.copy(
                 region = region,

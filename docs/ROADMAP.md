@@ -23,6 +23,7 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 13) `v0.1.0` installée sur un téléphone et sur un PC : icône dans l'assistant d'installation et dans « Applications installées », mise à jour par-dessus en gardant les réglages, désinstallation.
 - [ ] (Jalon 14) Widget en style VHS à voir sur l'émulateur, et les deux styles sur l'application installée.
 - [ ] (Jalon 15) Widget en style Éphéméride à voir sur l'émulateur (clair et sombre), et l'arrachage de la feuille à juger à l'écran.
+- [ ] (Jalon 16) Les quatre âges à voir sur un téléphone : cartes d'Équivalences à quatre colonnes et âges de « Quel âge ? » aux grandes tailles de police.
 
 ## À faire : les données, par thème
 
@@ -209,3 +210,12 @@ La feuille du jour en page d'éphéméride, comme sur la maquette ([`maquettes/a
 - [x] Éphéméride ajoutée au choix de Réglages › Affichage avec son aperçu ; les trois choix passent l'un sous l'autre sur un téléphone étroit.
 - [x] Widget Android en petite page blanche (sombre dans le thème sombre), nombre en Big Shoulders Display rouge.
 - [x] `ContrastTest` étendu aux jetons de l'Éphéméride, clairs et sombres, et au nombre du widget.
+
+### Jalon 16 — Jusqu'à quatre âges — 17/11/2026 · PR [#29](https://github.com/Fugeekies/TimeFlies/pull/29)
+Décisions du 17/11/2026 : « Quel âge ? » passe en deuxième position, devant Équivalences ; ton âge seul par défaut, et jusqu'à 3 autres âges à ajouter, chacun avec sa couleur, partagés par « Quel âge ? » et Équivalences et oubliés à la fermeture de l'application.
+- [x] Navigation : Aujourd'hui, Quel âge ?, Équivalences, Réglages.
+- [x] Bandeau des âges : ton âge, puis « + Ajouter un âge » (3 au plus, 15 ans au départ) ; toucher un âge le change ou le retire (« Retirer ») ; l'écart avec chacun. Quatre couleurs de pictogramme par style, vérifiées par `ContrastTest`.
+- [x] « Quel âge ? » : sur chaque ligne, les âges côte à côte sous le titre, dans l'ordre du bandeau.
+- [x] Équivalences : une carte par événement de l'utilisateur, avec l'équivalent de chaque âge ajouté côte à côte (« — » s'il n'y en a pas), colonnes compactes à partir de trois ; tri par tes événements, « Inverser » et « Modifier » disparaissent.
+- [x] `domain` : `GetEquivalences(userBirth, otherBirths, …)`, `Equivalence(user, others)`, `GetEventAges(event, births)`, `Generations.MAX_OTHER_PEOPLE`. `data` : `settings.json` en version 7, sans `otherAge` ni `equivalencesReversed`. Tests.
+- [x] Benchmark d'Équivalences avec trois âges ([rapport du 17/11/2026](benchmarks/performance-2026-11-17.md) : 0,8 ms sur la base réelle, 16 ms à 5 000 événements).

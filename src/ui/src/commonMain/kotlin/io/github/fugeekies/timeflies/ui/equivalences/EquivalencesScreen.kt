@@ -20,8 +20,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
@@ -52,7 +50,7 @@ import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.equivalences_check_all
 import io.github.fugeekies.timeflies.ui.resources.equivalences_empty
-import io.github.fugeekies.timeflies.ui.resources.equivalences_reverse
+import io.github.fugeekies.timeflies.ui.resources.equivalences_no_other
 import io.github.fugeekies.timeflies.ui.resources.equivalences_themes
 import io.github.fugeekies.timeflies.ui.resources.equivalences_themes_summary
 import io.github.fugeekies.timeflies.ui.resources.equivalences_title
@@ -66,16 +64,15 @@ import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.text.typeLabel
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.accent
-import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /**
- * The Equivalences screen (docs/UISpec/Equivalences.template.md): the two people shown by a coloured pictogram and
- * their age, no name (decision of 15/11/2026).
+ * The Equivalences screen (docs/UISpec/Equivalences.template.md): the user and up to three added ages, each shown by
+ * a coloured pictogram and their age, no name (decisions of 15/11/2026 and 17/11/2026).
  *
  * @param onOpenSettings "Ouvrir les réglages", in reduced mode.
- * @param onOpenEvent a card touched: "Quel âge ?" on the left event.
+ * @param onOpenEvent a card touched: "Quel âge ?" on the user's event.
  */
 @Composable
 fun EquivalencesScreen(
@@ -100,9 +97,9 @@ fun EquivalencesScreen(
     }
 
     val dates = rememberDateTexts()
-    val leftPerson = if (list.reversed) Person.USER else Person.OTHER
     BoxWithConstraints(modifier.fillMaxSize()) {
-        val columns = if (maxWidth >= 840.dp) 2 else 1
+        // Two cards side by side on a wide window, when each card has only two columns.
+        val columns = if (maxWidth >= 840.dp && people.otherAges.size <= 1) 2 else 1
         LazyVerticalGrid(
             columns = GridCells.Fixed(columns),
             modifier = Modifier.fillMaxSize(),
@@ -115,11 +112,6 @@ fun EquivalencesScreen(
                 GenerationsBanner(
                     viewModel,
                     people,
-                    trailing = {
-                        IconButton(onClick = viewModel::reverse) {
-                            Icon(TimeFliesIcons.Compare, contentDescription = stringResource(Res.string.equivalences_reverse), tint = MaterialTheme.colorScheme.onSurface)
-                        }
-                    },
                     footer = {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                             OutlinedButton(onClick = { themesOpen = true }) { Text(stringResource(Res.string.equivalences_themes)) }
@@ -132,13 +124,14 @@ fun EquivalencesScreen(
                     },
                 )
             }
-            val pairs = list.pairs
+            val cards = list.cards
             when {
+                people.otherAges.isEmpty() -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.equivalences_no_other)) }
                 list.error -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.load_error)) }
-                pairs == null -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.loading)) }
-                pairs.isEmpty() -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.equivalences_empty)) }
-                else -> items(pairs, key = { "${it.left.event.id}>${it.right.event.id}" }) { pair ->
-                    PairCard(pair, leftPerson, dates, onClick = { onOpenEvent(pair.left.event) })
+                cards == null -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.loading)) }
+                cards.isEmpty() -> item(span = { GridItemSpan(maxLineSpan) }) { Message(stringResource(Res.string.equivalences_empty)) }
+                else -> items(cards, key = { it.user.event.id }) { card ->
+                    EquivalenceCard(card, dates, onClick = { onOpenEvent(card.user.event) })
                 }
             }
         }
@@ -186,10 +179,19 @@ internal fun TypeHeader(event: Event) {
     }
 }
 
+/**
+ * One event of the user and, side by side in the order of the banner, the equivalent of each added age ("—" when
+ * there is none, decision of 17/11/2026).
+ */
 @Composable
-private fun PairCard(pair: Equivalence, leftPerson: Person, dates: DateTexts, onClick: () -> Unit) {
+private fun EquivalenceCard(card: Equivalence, dates: DateTexts, onClick: () -> Unit) {
     val colors = MaterialTheme.colorScheme
-    val description = "${typeLabel(pair.type)}. ${describeSide(leftPerson, pair.left, dates)} ${describeSide(leftPerson.other, pair.right, dates)}"
+    val description = buildString {
+        append(typeLabel(card.type)).append(". ").append(describeSide(Person.USER, card.user, dates))
+        card.others.forEachIndexed { index, side -> append(' ').append(describeSide(Person.other(index), side, dates)) }
+    }
+    // Up to four columns: from three on, the compact sides (smaller title, short date).
+    val compact = card.others.size > 1
     Surface(
         color = colors.surface,
         shape = RoundedCornerShape(6.dp),
@@ -203,11 +205,14 @@ private fun PairCard(pair: Equivalence, leftPerson: Person, dates: DateTexts, on
             },
     ) {
         Column(Modifier.padding(horizontal = 14.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            TypeHeader(pair.left.event)
+            TypeHeader(card.user.event)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                EventSide(leftPerson, pair.left, dates, Modifier.weight(1f))
-                Text("⇄", style = MaterialTheme.typography.titleMedium, color = colors.onSurfaceVariant, modifier = Modifier.padding(top = 2.dp))
-                EventSide(leftPerson.other, pair.right, dates, Modifier.weight(1f))
+                EventSide(Person.USER, card.user, dates, Modifier.weight(1f), compact)
+                card.others.forEachIndexed { index, side ->
+                    // The arrow between the two columns of a pair, as before; not between three or four.
+                    if (!compact) Text("⇄", style = MaterialTheme.typography.titleMedium, color = colors.onSurfaceVariant, modifier = Modifier.padding(top = 2.dp))
+                    if (side == null) MissingSide(Person.other(index), Modifier.weight(1f)) else EventSide(Person.other(index), side, dates, Modifier.weight(1f), compact)
+                }
             }
         }
     }
