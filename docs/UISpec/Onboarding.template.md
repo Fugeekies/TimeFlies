@@ -7,10 +7,10 @@
 
 ### Spécifications fonctionnelles
 
-* **Titre :** « Le jeu le plus triste du monde ».
-* **Texte d'introduction :** « Pour un jeune de 15 ans, Friends, c'est ce que Happy Days était pour toi. TimeFlies te le rappelle chaque jour. »
+* **Titre :** « Ça ne nous rajeunit pas » (décision du 17/11/2026, qui remplace « Le jeu le plus triste du monde »).
+* **Texte d'introduction :** « Chaque jour, TimeFlies te rappelle depuis combien de temps tes films, séries, chansons et grands moments sont arrivés, et l'âge que tu avais. Pour commencer, il nous faut ton mois et ton année de naissance. » (décision du 17/11/2026)
 * **Champ « Ton mois et ton année de naissance »** : deux listes, mois (janvier à décembre) et année (de 1920 à l'année en cours moins 5), vides par défaut. **Ni jour ni date complète** (décision du 13/11/2026) : moins intrusif, et le jour ne change presque rien aux âges affichés.
-* **« Ce qui t'intéresse »** (décision du 16/11/2026) : une pastille par thème et par origine présents dans la base (« Cinéma », « France », « États-Unis »…), toutes cochées. Décocher une pastille écarte tout ce thème ou tout ce pays ; le détail (le rap US sans le rap français) se règle ensuite dans Réglages › Événements. Enregistré avec « C'est parti » comme avec « Plus tard ».
+* **« Ce qui t'intéresse »** (décisions du 16/11/2026 et du 17/11/2026) : « Décoche ce qui ne te parle pas. Tu pourras affiner plus tard dans Réglages › Événements. », puis **une ligne par thème** présent dans la base, toutes cochées : la pastille de couleur de la famille, son nom, ce qu'il contient en quelques mots (« Blockbusters, films d'animation, comédies françaises, sagas ») et son nombre d'événements, avec une case à cocher ; toute la ligne se touche. Décocher un thème l'écarte entièrement. **Pas de choix par pays** sur cet écran (décision du 17/11/2026, qui remplace les pastilles d'origine) : il se fait dans Réglages › Événements. Enregistré avec « C'est parti » comme avec « Plus tard ».
 * **Bouton « C'est parti »** (principal) : enregistre le mois et l'année de naissance, marque le premier lancement comme terminé et ouvre Aujourd'hui. Désactivé tant que le mois ou l'année manque.
 * **Bouton « Plus tard »** (secondaire, décision du 13/11/2026) : marque le premier lancement comme terminé sans date de naissance et ouvre Aujourd'hui. L'application fonctionne alors en mode réduit :
   * Aujourd'hui et le widget affichent les anniversaires sans la ligne « Tu avais N ans » ;
@@ -22,16 +22,32 @@
 ```text
 ┌────────────────────────────────────────┐
 │                                        │
-│  Le jeu le plus triste                 │
-│  du monde                              │
+│  Ça ne nous rajeunit                   │
+│  pas                                   │
 │                                        │
-│  Pour un jeune de 15 ans, Friends,     │
-│  c'est ce que Happy Days était pour    │
-│  toi. TimeFlies te le rappelle chaque  │
-│  jour.                                 │
+│  Chaque jour, TimeFlies te rappelle    │
+│  depuis combien de temps tes films,    │
+│  séries, chansons et grands moments    │
+│  sont arrivés, et l'âge que tu avais.  │
+│  Pour commencer, il nous faut ton mois │
+│  et ton année de naissance.            │
 │                                        │
 │  TON MOIS ET TON ANNÉE DE NAISSANCE    │
 │  [ Mai            ▼ ] [ 1991       ▼ ] │
+│                                        │
+│  CE QUI T'INTÉRESSE                    │
+│  Décoche ce qui ne te parle pas. Tu    │
+│  pourras affiner plus tard dans        │
+│  Réglages › Événements.                │
+│  ● Séries & télé                  [x]  │
+│    Sitcoms, séries cultes, téléréalité │
+│    … · 40 événements                   │
+│  ● Cinéma                         [x]  │
+│    Blockbusters, films d'animation,    │
+│    comédies françaises, sagas          │
+│    · 76 événements                     │
+│  ● Musique                        [ ]  │
+│    …                                   │
 │                                        │
 │  [          C'est parti           ]    │
 │               Plus tard                │
