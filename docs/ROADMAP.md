@@ -24,6 +24,15 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 14) Widget en style VHS à voir sur l'émulateur, et les deux styles sur l'application installée.
 - [ ] (Jalon 15) Widget en style Éphéméride à voir sur l'émulateur (clair et sombre), et l'arrachage de la feuille à juger à l'écran.
 
+### Jalon 16 — Jusqu'à quatre âges
+Décisions du 17/11/2026 : « Quel âge ? » passe en deuxième position, devant Équivalences ; ton âge seul par défaut, et jusqu'à 3 autres âges à ajouter, chacun avec sa couleur, partagés par « Quel âge ? » et Équivalences et oubliés à la fermeture de l'application.
+- [ ] Navigation : Aujourd'hui, Quel âge ?, Équivalences, Réglages.
+- [ ] Bandeau des âges : ton âge, puis « + » pour ajouter un âge (3 au plus) ; toucher un âge le change ou le retire ; une couleur de pictogramme par personne dans chaque style.
+- [ ] « Quel âge ? » : sur chaque ligne, les âges côte à côte, dans l'ordre du bandeau.
+- [ ] Équivalences : une carte par événement de l'utilisateur, avec l'équivalent de chaque âge ajouté côte à côte (« — » s'il n'y en a pas) ; tri par tes événements, le bouton « Inverser » disparaît.
+- [ ] `settings.json` en version 7 : l'âge enregistré de l'autre personne et le sens de lecture disparaissent.
+- [ ] Benchmark d'Équivalences à jour.
+
 ## À faire : les données, par thème
 
 Chaque thème est un jalon à part, mené en parallèle du code dès que le jalon 2 (lecture des données) est terminé. Une PR par lot d'une cinquantaine d'événements, pour que les dates restent faciles à relire. Chaque événement est réel, daté au jour près et sourcé ([`EVENTS_DATA.md`](EVENTS_DATA.md)).
