@@ -17,6 +17,7 @@ Ce fichier est la **source unique** des instructions pour les agents IA : GitHub
 | `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `EventAges` (« Quel âge ? »), `Equivalences`, `Settings`, `AndroidWidget`, `WindowsTray`. |
 | `docs/maquettes/` | Maquettes visuelles (HTML et PNG) des écrans Android et Windows. En cas d'écart, les specs `UISpec/` font foi. |
 | `docs/ROADMAP.md` | Jalons à faire et terminés. |
+| `docs/guide/<langue>/` | Guide d'utilisation en cinq langues (`en`, `fr`, `de`, `it`, `es`), une page courte par sujet, comme LMU-DeltaRacing (décision du 17/11/2026). |
 
 Les points marqués **À valider** et les « Questions ouvertes » de ces documents ne sont pas tranchés : poser la question avant de coder un comportement qui en dépend. Une décision prise est datée dans le document (« décision du JJ/MM/AAAA »).
 
@@ -46,6 +47,7 @@ Les points marqués **À valider** et les « Questions ouvertes » de ces docume
 - **PR créées en brouillon** (`gh pr create --draft`) : la CI ignore les brouillons. Les passer en « Ready for review » (`gh pr ready`) quand elles sont terminées, ce qui lance la CI, et attendre qu'elle soit verte avant d'annoncer la PR prête.
 - Toute PR qui modifie le chargement des données (`data/events`) ou le calcul d'une page committe un rapport de benchmark à jour dans `docs/benchmarks/` (`./gradlew :benchmarks:benchmark`, rapport dans `src/benchmarks/build/reports/benchmarks/`).
 - Toute PR touchant le code, la configuration ou les fonctionnalités met à jour `CHANGELOG.md` sous `## [Unreleased]`, catégories Keep a Changelog : `Added`, `Changed`, `Fixed`, `Performance`, `Security`. Entrées en français, concises.
+- **Guide d'utilisation multilingue** (décision du 17/11/2026, comme LMU-DeltaRacing) : `README.md` est une courte page d'accueil avec une section par langue ; le guide est dans `docs/guide/<langue>/` (`en`, `fr`, `de`, `it`, `es`), une page courte par sujet, avec les mêmes noms de fichiers dans chaque langue. Toute PR qui change ce que voit l'utilisateur met à jour la page concernée **dans les cinq langues** (le français sert de référence). Chaque page commence par le sélecteur de langue vers la même page ; chaque guide cite les libellés de l'écran traduits dans sa langue (l'interface sera traduite). `UserGuideTest` (module `ui`) vérifie les pages, le sélecteur et les liens. Les autres documents de `docs/` restent en français.
 
 ## Méthode de travail
 
