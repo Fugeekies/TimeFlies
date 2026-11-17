@@ -24,6 +24,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Installeur Windows en anglais seulement ; l'application démarre dans la langue de Windows quand elle la propose.
 - Réglages : `settings.json` passe en version 8 (`language`).
 - « Quel âge ? » passe en deuxième position dans la navigation, devant Équivalences.
 - « Quel âge ? » : les âges de chaque ligne sont côte à côte sous le titre, dans l'ordre du bandeau ; au lancement, seul ton âge s'affiche.
