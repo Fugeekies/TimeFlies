@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Polaroïd : un dessin au trait pour chacun des 32 types dans la photo (canapé pour les sitcoms, micro pour les divas, urne pour les présidentielles…), au lieu du dessin commun du thème.
 - Interface en anglais, allemand, italien et espagnol, en plus du français : choix dans Réglages › Affichage › Langue (la langue du système par défaut, le français si elle n'est pas proposée), appliqué aussitôt à l'application, au widget, à l'icône et à la notification Windows. Dates dans l'ordre de chaque langue. Les titres des événements restent en français pour l'instant.
 - Guide d'utilisation en cinq langues (anglais, français, allemand, italien, espagnol) dans `docs/guide/`, comme celui de LMU-DeltaRacing, et README avec une section par langue ; `UserGuideTest` vérifie les pages, le sélecteur de langue et les liens.
 - « Quel âge ? » et Équivalences : jusqu'à 3 âges à ajouter à côté du tien avec « + », chacun avec sa couleur de pictogramme ; toucher un âge le change ou le retire. Les âges ajoutés sont partagés par les deux écrans et oubliés à la fermeture de l'application.
