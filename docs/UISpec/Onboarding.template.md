@@ -40,8 +40,8 @@
 │  pourras affiner plus tard dans        │
 │  Réglages › Événements.                │
 │  ● Séries & télé                  [x]  │
-│    Sitcoms, séries cultes, téléréalité │
-│    … · 40 événements                   │
+│    Sitcoms, séries cultes,             │
+│    téléréalité… · N événements         │
 │  ● Cinéma                         [x]  │
 │    Blockbusters, films d'animation,    │
 │    comédies françaises, sagas          │

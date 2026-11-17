@@ -16,10 +16,10 @@ Jede Version wird auf der Seite [Releases](https://github.com/Fugeekies/TimeFlie
 
 ## Erster Start
 
-Der Bildschirm **Das traurigste Spiel der Welt** erscheint nur einmal:
+Der Bildschirm **Wir werden nicht jünger** erscheint nur einmal:
 
 - **Dein Geburtsmonat und -jahr**: nie der Tag, mit Absicht. Damit wird dein Alter bei jedem Ereignis berechnet; die Angaben bleiben auf deinem Gerät.
-- **Was dich interessiert**: ein Chip pro Thema (Kino, Musik…) und pro Herkunft (Frankreich, Vereinigte Staaten…), alle angehakt. Entferne den Haken bei dem, was dich nicht interessiert; die Details stellst du später unter [Einstellungen › Ereignisse](settings.md#ereignisse) ein.
+- **Was dich interessiert**: eine Zeile pro Thema (Serien & TV, Kino, Musik…), mit seinem Inhalt und seiner Zahl an Ereignissen, alle angehakt. Entferne den Haken bei den Themen, die dich nicht ansprechen; die Details, etwa ein Land oder ein Genre, stellst du später unter [Einstellungen › Ereignisse](settings.md#ereignisse) ein.
 - **Los geht's** speichert alles und öffnet [Heute](today.md).
 - **Später** öffnet die App ohne Geburtsdatum: Die Jahrestage erscheinen ohne dein Alter. Du kannst es jederzeit in den [Einstellungen](settings.md) angeben.
 

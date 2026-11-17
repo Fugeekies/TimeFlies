@@ -21,34 +21,33 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.ui.components.BirthFields
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.onboarding_birth
-import io.github.fugeekies.timeflies.ui.resources.onboarding_intro_1
-import io.github.fugeekies.timeflies.ui.resources.onboarding_intro_2
-import io.github.fugeekies.timeflies.ui.resources.onboarding_intro_3
-import io.github.fugeekies.timeflies.ui.resources.onboarding_intro_friends
-import io.github.fugeekies.timeflies.ui.resources.onboarding_intro_happy_days
 import io.github.fugeekies.timeflies.ui.resources.onboarding_later
 import io.github.fugeekies.timeflies.ui.resources.onboarding_privacy
 import io.github.fugeekies.timeflies.ui.resources.onboarding_start
 import io.github.fugeekies.timeflies.ui.resources.onboarding_events
-import io.github.fugeekies.timeflies.ui.resources.onboarding_events_families
-import io.github.fugeekies.timeflies.ui.resources.onboarding_events_more
-import io.github.fugeekies.timeflies.ui.resources.onboarding_events_origins
-import io.github.fugeekies.timeflies.ui.events.rememberOriginNames
 import io.github.fugeekies.timeflies.ui.text.familyLabel
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.material3.FilterChip
+import io.github.fugeekies.timeflies.ui.text.familyContents
+import io.github.fugeekies.timeflies.ui.resources.onboarding_intro
+import io.github.fugeekies.timeflies.ui.resources.onboarding_events_help
+import io.github.fugeekies.timeflies.ui.resources.event_count
+import io.github.fugeekies.timeflies.domain.model.Family
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Surface
+import androidx.compose.ui.semantics.Role
+import org.jetbrains.compose.resources.pluralStringResource
 import io.github.fugeekies.timeflies.ui.resources.onboarding_title
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.accent
@@ -89,7 +88,7 @@ fun OnboardingScreen(viewModel: OnboardingViewModel, modifier: Modifier = Modifi
                 modifier = Modifier.padding(top = 8.dp),
             )
             BirthFields(state.month, state.year, state.birthYears, viewModel::onMonthPicked, viewModel::onYearPicked)
-            EventChoices(state, viewModel)
+            ThemeChoices(state, viewModel)
 
             Button(
                 onClick = viewModel::onStart,
@@ -115,57 +114,62 @@ fun OnboardingScreen(viewModel: OnboardingViewModel, modifier: Modifier = Modifi
 
 @Composable
 private fun Intro() {
-    val bold = SpanStyle(fontWeight = FontWeight.Bold)
-    val part1 = stringResource(Res.string.onboarding_intro_1)
-    val friends = stringResource(Res.string.onboarding_intro_friends)
-    val part2 = stringResource(Res.string.onboarding_intro_2)
-    val happyDays = stringResource(Res.string.onboarding_intro_happy_days)
-    val part3 = stringResource(Res.string.onboarding_intro_3)
     Text(
-        buildAnnotatedString {
-            append(part1)
-            withStyle(bold) { append(friends) }
-            append(part2)
-            withStyle(bold) { append(happyDays) }
-            append(part3)
-        },
+        stringResource(Res.string.onboarding_intro),
         style = MaterialTheme.typography.bodyLarge,
         color = MaterialTheme.colorScheme.onBackground,
     )
 }
 
 /**
- * "Ce qui t'intéresse": a chip per theme and per origin, all ticked. Unticking one leaves out every group of it
- * (decision of 16/11/2026); the fine choice is in Settings › Événements.
+ * "Ce qui t'intéresse" (decisions of 16/11/2026 and 17/11/2026): one line per theme of the base, all ticked, with
+ * its colour, what it holds and its number of events. Unticking one leaves out every group of it; the choice by
+ * country is only in Settings › Événements.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun EventChoices(state: OnboardingUiState, viewModel: OnboardingViewModel) {
+private fun ThemeChoices(state: OnboardingUiState, viewModel: OnboardingViewModel) {
     if (state.groups.isEmpty()) return
-    val originName = rememberOriginNames()
     val colors = MaterialTheme.colorScheme
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text(stringResource(Res.string.onboarding_events), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant, modifier = Modifier.semantics { heading() })
-        Text(stringResource(Res.string.onboarding_events_families), style = MaterialTheme.typography.titleSmall, color = colors.onBackground)
-        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            state.families.forEach { family ->
-                FilterChip(
-                    selected = family !in state.excludedFamilies,
-                    onClick = { viewModel.onFamilyToggled(family) },
-                    label = { Text(familyLabel(family)) },
-                )
+    val counts = state.familyCounts
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Text(
+            stringResource(Res.string.onboarding_events),
+            style = MaterialTheme.typography.labelSmall,
+            color = colors.onSurfaceVariant,
+            modifier = Modifier.padding(top = 8.dp).semantics { heading() },
+        )
+        Text(stringResource(Res.string.onboarding_events_help), style = MaterialTheme.typography.bodyMedium, color = colors.onSurfaceVariant)
+        Surface(color = colors.surface, shape = RoundedCornerShape(12.dp), modifier = Modifier.fillMaxWidth().padding(top = 4.dp)) {
+            Column {
+                state.families.forEachIndexed { index, family ->
+                    if (index > 0) HorizontalDivider(color = colors.outlineVariant, modifier = Modifier.padding(start = 36.dp, end = 14.dp))
+                    ThemeLine(family, counts[family] ?: 0, checked = family !in state.excludedFamilies) { viewModel.onFamilyToggled(family) }
+                }
             }
         }
-        Text(stringResource(Res.string.onboarding_events_origins), style = MaterialTheme.typography.titleSmall, color = colors.onBackground)
-        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            state.origins.forEach { origin ->
-                FilterChip(
-                    selected = origin !in state.excludedOrigins,
-                    onClick = { viewModel.onOriginToggled(origin) },
-                    label = { Text(originName(origin)) },
-                )
+    }
+}
+
+/** A theme: its colour dot, its name, what it holds and its number of events, and a check box; the whole line toggles. */
+@Composable
+private fun ThemeLine(family: Family, count: Int, checked: Boolean, onToggle: () -> Unit) {
+    val colors = MaterialTheme.colorScheme
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .toggleable(value = checked, role = Role.Checkbox, onValueChange = { onToggle() })
+            .padding(start = 14.dp, end = 4.dp, top = 10.dp, bottom = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Box(Modifier.size(12.dp).background(LocalStyle.current.familyColors.getValue(family), CircleShape))
+                Text(familyLabel(family), style = MaterialTheme.typography.titleMedium, color = colors.onSurface, modifier = Modifier.weight(1f, fill = false))
+                Text(pluralStringResource(Res.plurals.event_count, count, count), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
             }
+            Text(familyContents(family), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant, modifier = Modifier.padding(start = 22.dp))
         }
-        Text(stringResource(Res.string.onboarding_events_more), style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
+        Checkbox(checked = checked, onCheckedChange = null, modifier = Modifier.padding(12.dp))
     }
 }

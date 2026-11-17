@@ -24,6 +24,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Premier lancement revu : titre « Ça ne nous rajeunit pas », texte qui explique l'application, une ligne claire par thème (contenu et nombre d'événements, case à cocher) ; plus de choix par pays sur cet écran, il reste dans Réglages › Événements.
 - Installeur Windows en anglais seulement ; l'application démarre dans la langue de Windows quand elle la propose.
 - Réglages : `settings.json` passe en version 8 (`language`).
 - « Quel âge ? » passe en deuxième position dans la navigation, devant Équivalences.

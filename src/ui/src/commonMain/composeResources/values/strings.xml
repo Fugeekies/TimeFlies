@@ -64,13 +64,8 @@
     </plurals>
 
     <!-- First launch (docs/UISpec/Onboarding.template.md) -->
-    <string name="onboarding_title">Le jeu le plus triste du monde</string>
-    <!-- Intro in three parts so that the two titles can be bold. -->
-    <string name="onboarding_intro_1">Pour un jeune de 15 ans, </string>
-    <string name="onboarding_intro_friends">Friends</string>
-    <string name="onboarding_intro_2">, c'est ce que </string>
-    <string name="onboarding_intro_happy_days">Happy Days</string>
-    <string name="onboarding_intro_3"> était pour toi. TimeFlies te le rappelle chaque jour.</string>
+    <string name="onboarding_title">Ça ne nous rajeunit pas</string>
+    <string name="onboarding_intro">Chaque jour, TimeFlies te rappelle depuis combien de temps tes films, séries, chansons et grands moments sont arrivés, et l'âge que tu avais. Pour commencer, il nous faut ton mois et ton année de naissance.</string>
     <string name="onboarding_birth">TON MOIS ET TON ANNÉE DE NAISSANCE</string>
     <string name="onboarding_start">C'est parti</string>
     <string name="onboarding_later">Plus tard</string>
@@ -228,9 +223,7 @@
     <string name="settings_events_expand">Déplier %1$s</string>
     <string name="settings_events_collapse">Replier %1$s</string>
     <string name="onboarding_events">CE QUI T'INTÉRESSE</string>
-    <string name="onboarding_events_families">Thèmes</string>
-    <string name="onboarding_events_origins">Origines</string>
-    <string name="onboarding_events_more">Le détail (le rap US sans le rap français, par exemple) se règle dans Réglages › Événements.</string>
+    <string name="onboarding_events_help">Décoche ce qui ne te parle pas. Tu pourras affiner plus tard dans Réglages › Événements.</string>
     <!-- Origins of the events: ISO codes in lower case and their names, in the same order. -->
     <string-array name="origin_codes">
         <item>international</item>
@@ -350,6 +343,13 @@
     <string name="family_sport">Sport</string>
     <string name="family_games_tech">Jeux vidéo &amp; tech</string>
     <string name="family_history">Politique &amp; histoire</string>
+    <!-- What each theme holds, on the first launch screen (decision of 17/11/2026). -->
+    <string name="family_contents_series_tv">Sitcoms, séries cultes, téléréalité, émissions jeunesse, dessins animés</string>
+    <string name="family_contents_cinema">Blockbusters, films d'animation, comédies françaises, sagas</string>
+    <string name="family_contents_music">Tubes, albums cultes, boys bands, icônes disparues</string>
+    <string name="family_contents_sport">Stars du foot, Coupe du monde, Jeux olympiques, records</string>
+    <string name="family_contents_games_tech">Consoles, jeux phénomènes, téléphones, réseaux sociaux</string>
+    <string name="family_contents_history">Élections, grands événements, familles royales</string>
 
     <!-- Types, shown at the top of an equivalence card (docs/EVENTS_DATA.md, "Types") -->
     <string name="type_sitcom_hit">Sitcom culte</string>

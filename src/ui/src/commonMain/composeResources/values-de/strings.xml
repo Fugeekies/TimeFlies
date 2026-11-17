@@ -56,12 +56,8 @@
         <item quantity="other">Du warst %1$s.</item>
     </plurals>
 
-    <string name="onboarding_title">Das traurigste Spiel der Welt</string>
-    <string name="onboarding_intro_1">Für einen 15-Jährigen ist </string>
-    <string name="onboarding_intro_friends">Friends</string>
-    <string name="onboarding_intro_2"> das, was </string>
-    <string name="onboarding_intro_happy_days">Happy Days</string>
-    <string name="onboarding_intro_3"> für dich war. TimeFlies erinnert dich jeden Tag daran.</string>
+    <string name="onboarding_title">Wir werden nicht jünger</string>
+    <string name="onboarding_intro">Jeden Tag erinnert dich TimeFlies daran, wie lange deine Filme, Serien, Songs und großen Momente schon her sind, und wie alt du damals warst. Zuerst brauchen wir deinen Geburtsmonat und dein Geburtsjahr.</string>
     <string name="onboarding_birth">DEIN GEBURTSMONAT UND -JAHR</string>
     <string name="onboarding_start">Los geht's</string>
     <string name="onboarding_later">Später</string>
@@ -206,9 +202,7 @@
     <string name="settings_events_expand">%1$s aufklappen</string>
     <string name="settings_events_collapse">%1$s zuklappen</string>
     <string name="onboarding_events">WAS DICH INTERESSIERT</string>
-    <string name="onboarding_events_families">Themen</string>
-    <string name="onboarding_events_origins">Herkunft</string>
-    <string name="onboarding_events_more">Die Details (zum Beispiel US-Rap ohne französischen Rap) stellst du unter Einstellungen › Ereignisse ein.</string>
+    <string name="onboarding_events_help">Entferne den Haken bei dem, was dich nicht anspricht. Feiner einstellen kannst du es später unter Einstellungen › Ereignisse.</string>
     <string-array name="origin_names">
         <item>International</item>
         <item>Argentinien</item>
@@ -281,6 +275,13 @@
     <string name="family_sport">Sport</string>
     <string name="family_games_tech">Videospiele &amp; Technik</string>
     <string name="family_history">Politik &amp; Geschichte</string>
+    <!-- What each theme holds, on the first launch screen (decision of 17/11/2026). -->
+    <string name="family_contents_series_tv">Sitcoms, Kultserien, Reality-TV, Kindersendungen, Zeichentrick</string>
+    <string name="family_contents_cinema">Blockbuster, Animationsfilme, französische Komödien, Sagas</string>
+    <string name="family_contents_music">Hits, Kultalben, Boybands, verstorbene Musikikonen</string>
+    <string name="family_contents_sport">Fußballstars, Weltmeisterschaft, Olympische Spiele, Rekorde</string>
+    <string name="family_contents_games_tech">Konsolen, Spielphänomene, Handys, soziale Netzwerke</string>
+    <string name="family_contents_history">Wahlen, große Ereignisse, Königshäuser</string>
 
     <string name="type_sitcom_hit">Kult-Sitcom</string>
     <string name="type_drama_series_hit">Kult-Dramaserie</string>
