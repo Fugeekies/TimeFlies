@@ -15,11 +15,9 @@ Maquettes visuelles de TimeFlies, dessinées le 13/11/2026 à partir des spécif
 
 Décision du 13/11/2026 : la V1 n'a que le style **Polaroïd**, pour ses âges écrits à la main. Décision du 17/11/2026 : le **VHS** est fait au jalon 14, comme sur sa maquette, avant l'**Éphéméride**, faite au jalon 15.
 
-### Polaroïd : le cadre de la décennie (14/11/2026)
+### Polaroïd : retour au cadre blanc de la maquette (17/11/2026)
 
-Capture de l'application (jalon 3), qui remplace le cadre blanc de la maquette ci-dessus : le cadre prend la couleur de la décennie avec son chiffre écrit à la main, la photo garde la couleur de la famille avec le dessin du type (détails dans [`UI_DESIGN_SPEC.md`](../UI_DESIGN_SPEC.md) § 1).
-
-![Huit Polaroïds, un par décennie](polaroid-decennies.png)
+Les cadres de la couleur de la décennie, avec leur chiffre écrit à la main (14/11/2026), sont abandonnés : le Polaroïd reprend le cadre blanc cassé de la maquette ci-dessus. La photo garde la couleur de la famille et le dessin au trait du type (détails dans [`UI_DESIGN_SPEC.md`](../UI_DESIGN_SPEC.md) § 1).
 
 Les écrans ci-dessous sont dessinés en Éphéméride. Leur **mise en page** vaut pour la V1 ; en V1, ils prennent les couleurs du Polaroïd et ses âges manuscrits sur le bandeau de gauche des cartes (voir [`UI_DESIGN_SPEC.md`](../UI_DESIGN_SPEC.md) § 1). Ils ne seront pas redessinés avant le code.
 

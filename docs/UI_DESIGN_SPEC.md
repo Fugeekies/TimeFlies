@@ -40,7 +40,7 @@ Règles du style VHS dans toute l'application :
 - Les ornements (« ● REC », « ▶ PLAY », chevrons) ne sont pas lus par TalkBack et le Narrateur.
 
 #### Polaroïd (V1, maquette validée le 13/11/2026)
-La feuille du jour devient un **Polaroïd** : cadre (de la couleur de la décennie, voir plus bas) avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
+La feuille du jour devient un **Polaroïd** : cadre blanc cassé (`#FBFAF7`, comme sur la maquette) avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
 
 Règles du style Polaroïd dans toute l'application :
 - **Écriture manuscrite** (`Caveat`) pour le nombre d'années partout où il apparaît : la photo du jour, et le **bandeau de gauche des cartes** des listes (« 18 ans », « 37 ans »), en accent. Aussi pour le titre de la photo, sa légende et les titres de section (« Bientôt… »).
@@ -49,24 +49,9 @@ Règles du style Polaroïd dans toute l'application :
 
 Jetons de la maquette (clair) : fond `#E8DFD2`, cartes `#FBFAF7`, encre `#2B2420`, texte secondaire `#6A5D52`, accent `#9A4E1C`. Version sombre « chambre noire » et contrastes vérifiés au jalon 9 (décision du 15/11/2026, § 2 et « Accessibilité »). Le Polaroïd reste un tirage clair dans les deux thèmes : son cadre et sa photo gardent leurs couleurs, l'encre manuscrite reste foncée.
 
-##### Le cadre dit *quand*, la photo dit *quoi* (décision du 14/11/2026)
+##### Le cadre et la photo (décision du 17/11/2026, qui remplace celle du 14/11/2026)
 
-![Huit Polaroïds, un par décennie](maquettes/polaroid-decennies.png)
-
-- **Le cadre** prend la couleur de la **décennie** de l'événement (teintes claires, pour garder l'encre foncée) :
-
-  | Décennie | Cadre |
-  |---|---|
-  | Avant 1960 | `#EFE3C4` crème jauni |
-  | Années 60 | `#CFE8DC` vert d'eau |
-  | Années 70 | `#F2D3A0` moutarde clair |
-  | Années 80 | `#F6C6D9` rose adouci |
-  | Années 90 | `#BFE6E3` turquoise clair |
-  | Années 2000 | `#DADDE2` argenté |
-  | Années 2010 | `#FBFAF7` blanc |
-  | Années 2020 | `#DDD3F0` lavande |
-
-- **Le chiffre de la décennie** est écrit à la main dans le coin bas droit du cadre, comme un tampon incliné : « années » en petit, puis « 70 » (« 2000 », « 2010 » à partir de 2000), dans la couleur du cadre assombrie de 45 % vers l'encre. Le chiffre suit la vraie décennie (« 30 » pour 1938), même quand la couleur du cadre regroupe tout ce qui précède 1960.
+- **Le cadre** est blanc cassé pour tous les événements, comme sur la maquette. Les cadres de la couleur de la décennie et le chiffre de la décennie écrit dans le coin (décision du 14/11/2026) sont abandonnés : ce n'était pas beau.
 - **La photo** garde la couleur de la famille, avec en filigrane (blanc à 42 %), en haut à droite, **un dessin au trait par type** : pop-corn (blockbuster), crayon et étincelle (film d'animation), masques de théâtre (comédie française), planète et étoiles (épisode de saga). Un type sans dessin prend celui de sa famille : clap, télévision, vinyle, ballon, manette, monument. Les dessins des autres types arrivent avec leurs données.
 - Tout est dessiné par l'application (vectoriel) : aucune image, aucun droit, aucun poids ajouté.
 
@@ -83,7 +68,7 @@ L'application suit le thème du système (clair ou sombre). Toutes les couleurs 
 | Jeton | Clair | Sombre | Usage |
 |---|---|---|---|
 | `background` | `#E8DFD2` papier kraft | `#1C1714` brun nuit | fond des écrans |
-| `surface` | `#FBFAF7` blanc cassé | `#2A231F` | cartes (le cadre de la photo garde sa couleur de décennie) |
+| `surface` | `#FBFAF7` blanc cassé | `#2A231F` | cartes (le cadre de la photo reste blanc cassé dans les deux thèmes) |
 | `onSurface` | `#2B2420` encre | `#F1E8DD` crème | texte principal |
 | `onSurfaceVariant` | `#6A5D52` | `#BFAF9F` | libellés, dates, textes secondaires |
 | `primary` | `#9A4E1C` brun cuivré | `#E39A62` cuivre clair | âges manuscrits, onglet actif, boutons principaux |
@@ -206,7 +191,7 @@ Quatre destinations, dans cet ordre (« Quel âge ? » avant Équivalences, déc
 
 ## ♿ Accessibilité
 
-* Contraste AA au minimum sur les deux thèmes (texte 4,5:1, grand chiffre 3:1), vérifié par un test (`ContrastTest`, module `ui`) : jetons clairs et sombres, silhouettes, encres des cadres de chaque décennie, tampon de la décennie. Sur la photo, le grand chiffre et l'étiquette prennent, du blanc ou de l'encre, celle qui se lit le mieux sur la couleur de la famille (jalon 9).
+* Contraste AA au minimum sur les deux thèmes (texte 4,5:1, grand chiffre 3:1), vérifié par un test (`ContrastTest`, module `ui`) : jetons clairs et sombres, silhouettes, encres du cadre blanc cassé du Polaroïd. Sur la photo, le grand chiffre et l'étiquette prennent, du blanc ou de l'encre, celle qui se lit le mieux sur la couleur de la famille (jalon 9).
 * Les tailles de police suivent le réglage du système ; à 200 %, les cartes passent sur plusieurs lignes au lieu de couper le texte. Seul le grand chiffre de la photo garde sa taille (il fait déjà 120 dp et la photo ne pourrait pas le contenir), le nombre d'années étant aussi lu par la description.
 * Chaque carte a une description pour TalkBack et le Narrateur Windows, par exemple : « Intouchables, sortie au cinéma le 2 novembre 2011, il y a 15 ans. Tu avais 20 ans. »
 * Zones tactiles de 48 dp minimum. Sur Windows, tout se fait aussi au clavier (Tab, Entrée, flèches dans les listes).
