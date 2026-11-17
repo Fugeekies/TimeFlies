@@ -22,6 +22,15 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 12) Image d'aperçu du dépôt GitHub (1280 × 640, à partir de `assets/icon/`) : à téléverser à la main dans les réglages du dépôt, GitHub n'ayant pas d'API pour ça.
 - [ ] (Jalon 13) `v0.1.0` installée sur un téléphone et sur un PC : icône dans l'assistant d'installation et dans « Applications installées », mise à jour par-dessus en gardant les réglages, désinstallation.
 
+### Jalon 14 — Style VHS
+Décision du 17/11/2026 : le style VHS est avancé avant l'Éphéméride, comme sur la maquette ([`maquettes/android/TodayVhs.png`](maquettes/android/TodayVhs.png)).
+- [ ] Jetons du style VHS, sombre seulement (`docs/UI_DESIGN_SPEC.md` § 2) ; polices embarquées Bungee, VT323 (SIL OFL) et Permanent Marker (Apache 2.0).
+- [ ] Aujourd'hui : la cassette (« ● REC », compteur de bande, bobines) et son étiquette inclinée à lignes de balayage ; cartes des listes avec l'âge en Bungee, titres de section « » PROCHAINEMENT ».
+- [ ] Autres écrans aux couleurs et polices du VHS (âges, titres), sans changer leur mise en page.
+- [ ] Choix du style dans Réglages › Affichage (Polaroïd par défaut), avec un aperçu de chaque feuille ; `settings.json` en version 6.
+- [ ] Widget Android aux couleurs du style choisi.
+- [ ] `ContrastTest` étendu aux jetons du VHS.
+
 ## À faire : les données, par thème
 
 Chaque thème est un jalon à part, mené en parallèle du code dès que le jalon 2 (lecture des données) est terminé. Une PR par lot d'une cinquantaine d'événements, pour que les dates restent faciles à relire. Chaque événement est réel, daté au jour près et sourcé ([`EVENTS_DATA.md`](EVENTS_DATA.md)).
@@ -69,7 +78,7 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 ### Jalon — Style Éphéméride
 La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [`maquettes/`](maquettes/README.md).
 - [ ] Jetons du style (palette claire et sombre déjà définies, `docs/UI_DESIGN_SPEC.md` § 2).
-- [ ] Ajouter le choix du style dans Réglages (Polaroïd par défaut) et l'appliquer au widget.
+- [ ] Ajouter l'Éphéméride au choix du style de Réglages (arrivé avec le jalon 14) et au widget.
 
 ### Jalon — Traductions et régions
 - [ ] Interface en anglais, en plus du français de référence.
@@ -78,7 +87,6 @@ La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [
 - [ ] Choix de la région dans Réglages (liste des pays dans la langue de l'interface, région du système par défaut) : en V1, France seulement (décision du 15/11/2026).
 
 ### Liste d'idées à prioriser
-- Style VHS (cassette, étiquette au feutre, compteur de bande), maquette dans [`maquettes/`](maquettes/README.md).
 - Notification du matin sur Android quand un anniversaire rond tombe.
 - Partager un coup de vieux en image.
 - Ajouter ses propres événements (souvenirs personnels).
