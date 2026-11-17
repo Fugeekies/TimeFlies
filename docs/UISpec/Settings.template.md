@@ -30,7 +30,7 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
   Les trois choix sont côte à côte quand ils tiennent, l'un sous l'autre sur un téléphone étroit.
   Le style s'applique aussitôt à toute l'application et au widget, et il est gardé dans `settings.json` (champ `style`, version 6 ; version 7 depuis le jalon 16, sans l'âge de l'autre personne ni le sens de lecture d'Équivalences).
 * **Région** : liste des pays, chacun écrit dans la langue de l'interface. Par défaut, la région du système (décision du 13/11/2026). Elle choisit les dates régionales des événements (voir `EVENTS_DATA.md`, « Dates par région »). **En V1, France seulement** (décision du 15/11/2026) : la ligne affiche « Région : France » sans liste ; le choix des pays arrive avec le jalon « Traductions et régions ».
-* **Langue** : liste des langues disponibles, chacune écrite dans sa langue. Au départ, Français seulement : la ligne est masquée tant qu'il n'y a qu'une langue. Par défaut, la langue du système si elle est disponible, le français sinon.
+* **Langue** (jalon 17, décision du 17/11/2026) : Français, English, Deutsch, Italiano, Español, chacune écrite dans sa langue ; toucher la ligne ouvre la liste. Par défaut, la langue du système si elle est disponible, le français sinon. Le choix est gardé dans `settings.json` (`language`, version 8) et s'applique aussitôt à toute l'application, au widget, à l'icône et à la notification Windows, sans changer l'écran affiché. Les titres des événements restent en français pour l'instant (PR à part).
 
 #### Panneau « Widget » (Android uniquement, eyebrow « ÉCRAN D'ACCUEIL »)
 * Texte : « Ajoute le widget TimeFlies sur ton écran d'accueil pour voir ton coup de vieux chaque jour. »

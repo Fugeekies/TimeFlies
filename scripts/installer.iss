@@ -37,12 +37,11 @@ WizardStyle=modern
 ; TimeFlies may be running in the notification area: the setup closes it before replacing its files.
 CloseApplications=yes
 RestartApplications=no
-ShowLanguageDialog=auto
-LanguageDetectionMethod=uilanguage
+ShowLanguageDialog=no
 
 [Languages]
-; French first, as the interface; English for the other Windows languages.
-Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
+; English only (decision of 17/11/2026): the app itself starts in the Windows language when it has it
+; (Settings › Affichage › Langue, milestone 17).
 Name: "en"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]

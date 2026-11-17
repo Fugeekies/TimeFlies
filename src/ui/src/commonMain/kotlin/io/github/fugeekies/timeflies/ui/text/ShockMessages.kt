@@ -6,9 +6,7 @@ import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.app_name
 import io.github.fugeekies.timeflies.ui.resources.days
-import io.github.fugeekies.timeflies.ui.resources.first_of_month
 import io.github.fugeekies.timeflies.ui.resources.in_days
-import io.github.fugeekies.timeflies.ui.resources.months
 import io.github.fugeekies.timeflies.ui.resources.nav_settings
 import io.github.fugeekies.timeflies.ui.resources.nothing_soon
 import io.github.fugeekies.timeflies.ui.resources.notification_event
@@ -28,7 +26,6 @@ import io.github.fugeekies.timeflies.ui.resources.will_turn
 import io.github.fugeekies.timeflies.ui.resources.years_count
 import org.jetbrains.compose.resources.getPluralString
 import org.jetbrains.compose.resources.getString
-import org.jetbrains.compose.resources.getStringArray
 
 /** A notification: a title and a text (docs/UISpec/WindowsTray.template.md, "Notification du matin"). */
 data class ShockMessage(val title: String, val text: String)
@@ -90,7 +87,7 @@ object ShockMessages {
     private suspend fun willTurn(anniversary: Anniversary) = getPluralString(Res.plurals.will_turn, anniversary.years, anniversary.years)
 
     private suspend fun longDate(anniversary: Anniversary): String =
-        DateTexts(getStringArray(Res.array.months), getStringArray(Res.array.days), getString(Res.string.first_of_month)).long(anniversary.eventDate)
+        loadDateTexts().long(anniversary.eventDate)
 
     internal suspend fun userAge(age: UserAge?): String? = when (age) {
         null -> null

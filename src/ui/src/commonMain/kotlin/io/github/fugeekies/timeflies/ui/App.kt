@@ -58,6 +58,10 @@ import io.github.fugeekies.timeflies.ui.theme.ThemeMode
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesTheme
 import io.github.fugeekies.timeflies.ui.theme.isDark
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
+import io.github.fugeekies.timeflies.ui.text.AppLocale
+import io.github.fugeekies.timeflies.ui.text.apply
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import io.github.fugeekies.timeflies.ui.today.TodayScreen
 import io.github.fugeekies.timeflies.ui.today.TodayViewModel
 import org.jetbrains.compose.resources.StringResource
@@ -142,22 +146,31 @@ fun App(
     val systemDark = themeMode.isDark()
     val dark = style.isDark(systemDark)
     LaunchedEffect(dark) { platform.onDarkTheme(dark) }
-    TimeFliesTheme(style = style, darkTheme = systemDark) {
-        val content = Modifier.fillMaxSize().safeDrawingPadding()
-        when (val current = settings) {
-            // Settings not read yet (a few milliseconds): a plain background rather than a flash of the wrong screen.
-            null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
-            else -> if (!current.onboardingDone) {
-                // A screen asked from the tray waits for nothing: the first launch screen comes first.
-                LaunchedEffect(platform.screenRequest) { if (platform.screenRequest != null) platform.onScreenRequestHandled() }
-                Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
-                    OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, getEventGroups, clock) }, content)
+    // The language of the texts (milestone 17): set before any text is read; when it changes, the key below reads
+    // every text again. The screen shown and the ages added are kept above it, so they stay.
+    val language = AppLocale.apply(settings?.language)
+    val destination = rememberSaveable { mutableStateOf(Destination.TODAY) }
+    // Ages picked on the fly, shared by Equivalences and "Quel âge ?", forgotten when the app closes.
+    val temporaryAges = remember { TemporaryAgesStore() }
+    key(language) {
+        TimeFliesTheme(style = style, darkTheme = systemDark) {
+            val content = Modifier.fillMaxSize().safeDrawingPadding()
+            when (val current = settings) {
+                // Settings not read yet (a few milliseconds): a plain background rather than a flash of the wrong screen.
+                null -> Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background))
+                else -> if (!current.onboardingDone) {
+                    // A screen asked from the tray waits for nothing: the first launch screen comes first.
+                    LaunchedEffect(platform.screenRequest) { if (platform.screenRequest != null) platform.onScreenRequestHandled() }
+                    Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
+                        OnboardingScreen(viewModel { OnboardingViewModel(completeOnboarding, getEventGroups, clock) }, content)
+                    }
+                } else {
+                    MainScreens(
+                        getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, getEventGroups, clock,
+                        appVersion, debugTools, platform, releaseUpdates, themeMode, onThemeMode = { themeMode = it },
+                        destination = destination, temporaryAges = temporaryAges,
+                    )
                 }
-            } else {
-                MainScreens(
-                    getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, getEventGroups, clock,
-                    appVersion, debugTools, platform, releaseUpdates, themeMode, onThemeMode = { themeMode = it },
-                )
             }
         }
     }
@@ -180,8 +193,10 @@ private fun MainScreens(
     releaseUpdates: ReleaseUpdates?,
     themeMode: ThemeMode,
     onThemeMode: (ThemeMode) -> Unit,
+    destination: MutableState<Destination>,
+    temporaryAges: TemporaryAgesStore,
 ) {
-    var current by rememberSaveable { mutableStateOf(Destination.TODAY) }
+    var current by destination
     LaunchedEffect(platform.screenRequest) {
         when (platform.screenRequest) {
             AppScreen.TODAY -> current = Destination.TODAY
@@ -190,8 +205,6 @@ private fun MainScreens(
         }
         platform.onScreenRequestHandled()
     }
-    // Ages picked on the fly, shared by Equivalences and "Quel âge ?", forgotten when the app closes.
-    val temporaryAges = remember { TemporaryAgesStore() }
     // A card touched on Today or Equivalences: "Quel âge ?" opens on its event.
     var eventRequest by remember { mutableStateOf<Event?>(null) }
     val openEvent = { event: Event ->

@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.data.settings
 
+import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
@@ -76,7 +77,7 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 7" in text, text)
+        assertTrue("\"version\": 8" in text, text)
         // Version 7: the other ages are forgotten when the app closes, nothing of them is written.
         assertTrue("otherAge" !in text && "youngAge" !in text && "equivalencesReversed" !in text, text)
     }
@@ -99,6 +100,17 @@ class DataStoreSettingsRepositoryTest {
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
         assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")
+    }
+
+    @Test
+    fun keepsTheLanguage() = runBlocking {
+        assertNull(open().settings.first().language, "the system language without a choice")
+        open().update { it.copy(language = AppLanguage.ITALIAN) }
+        assertTrue("\"language\": \"it\"" in FileSystem.SYSTEM.read(file) { readUtf8() })
+        assertEquals(AppLanguage.ITALIAN, open().settings.first().language)
+        // A language the interface does not have (a file edited by hand) falls back to the system language.
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 8, "language": "pt"}""") }
+        assertNull(open().settings.first().language)
     }
 
     @Test

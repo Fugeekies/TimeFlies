@@ -3,7 +3,9 @@ package io.github.fugeekies.timeflies.ui.settings
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.fugeekies.timeflies.domain.model.Region
+import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
+import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.port.Clock
@@ -49,6 +51,8 @@ data class SettingsUiState(
     val eventGroups: List<FilterNode>,
     val excludedEventGroups: Set<String>,
     val displayStyle: DisplayStyle,
+    /** The language shown: the one chosen, else the system's when available, else French (milestone 17). */
+    val language: AppLanguage,
 ) {
     val birthYears: IntRange get() = Generations.birthYears(today)
     val userAge: Int? get() = birth?.let { Generations.userAge(it, today) }
@@ -119,6 +123,7 @@ class SettingsViewModel(
         eventGroups = groups,
         excludedEventGroups = settings.excludedEventGroups,
         displayStyle = settings.displayStyle,
+        language = AppLanguage.resolve(settings.language, AppLocale.systemTag()),
     )
 
     fun onMonthPicked(month: Month) = onBirthPicked(month = month)
@@ -163,6 +168,11 @@ class SettingsViewModel(
     }
 
     /** Settings › Affichage: applied at once to the whole app and to the widget. */
+    /** Settings › Affichage › Langue: saved, then applied by the app root to every text. */
+    fun onLanguage(language: AppLanguage) {
+        viewModelScope.launch { updateSettings.setLanguage(language) }
+    }
+
     fun onDisplayStyle(style: DisplayStyle) {
         viewModelScope.launch { updateSettings.setDisplayStyle(style) }
     }

@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import io.github.fugeekies.timeflies.domain.model.Anniversary
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.decade_label
+import io.github.fugeekies.timeflies.ui.resources.decade_number
 import io.github.fugeekies.timeflies.ui.resources.family_and_year
 import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.years_unit
@@ -169,6 +170,6 @@ private fun DecadeStamp(year: Int, era: Era, modifier: Modifier = Modifier) {
     val handwriting = LocalStyle.current.handwriting
     Column(modifier.rotate(-8f), horizontalAlignment = Alignment.CenterHorizontally) {
         Text(stringResource(Res.string.decade_label), fontFamily = handwriting, fontWeight = FontWeight.SemiBold, fontSize = 20.sp, lineHeight = 20.sp, color = era.stamp)
-        Text(Era.decadeNumber(year), fontFamily = handwriting, fontWeight = FontWeight.Bold, fontSize = 38.sp, lineHeight = 36.sp, color = era.stamp)
+        Text(stringResource(Res.string.decade_number, Era.decadeNumber(year)), fontFamily = handwriting, fontWeight = FontWeight.Bold, fontSize = 38.sp, lineHeight = 36.sp, color = era.stamp)
     }
 }

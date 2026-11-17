@@ -21,11 +21,14 @@ import co.touchlab.kermit.Logger
 import io.github.fugeekies.timeflies.ui.App
 import io.github.fugeekies.timeflies.ui.AppScreen
 import io.github.fugeekies.timeflies.ui.PlatformHooks
+import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.ui.text.ShockMessages
+import io.github.fugeekies.timeflies.ui.text.apply
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -70,6 +73,8 @@ fun main(args: Array<String>) {
         }
 
         LaunchedEffect(Unit) {
+            // The menu is written in the language chosen in Settings (milestone 17), read before the icon is made.
+            AppLocale.apply(graph.observeSettings().first().language)
             tray = WindowsTray.create(
                 texts = ShockMessages.trayMenu(),
                 tooltip = "TimeFlies",
@@ -102,6 +107,13 @@ fun main(args: Array<String>) {
         LaunchedEffect(tray) {
             val current = tray ?: return@LaunchedEffect
             withContext(Dispatchers.Default) { trayUpdater.run(current) }
+        }
+        // Another language chosen in Settings: the menu follows (the tooltip follows in the tray loop).
+        val language = settings?.language
+        LaunchedEffect(tray, language) {
+            val current = tray ?: return@LaunchedEffect
+            AppLocale.apply(language)
+            current.setMenuTexts(ShockMessages.trayMenu())
         }
         // The startup entry follows the setting, rewritten at each launch in case the app moved.
         LaunchedEffect(Unit) {

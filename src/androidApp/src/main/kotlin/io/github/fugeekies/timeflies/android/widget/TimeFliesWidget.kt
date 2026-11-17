@@ -53,7 +53,9 @@ import io.github.fugeekies.timeflies.android.TimeFliesApplication
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.ui.polaroid.Era
+import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.ui.text.WidgetContent
+import io.github.fugeekies.timeflies.ui.text.apply
 import io.github.fugeekies.timeflies.ui.text.WidgetSheet
 import io.github.fugeekies.timeflies.ui.text.WidgetTexts
 import io.github.fugeekies.timeflies.ui.theme.WidgetPalette
@@ -87,6 +89,8 @@ class TimeFliesWidget : GlanceAppWidget() {
     private suspend fun load(context: Context, app: TimeFliesApplication): Loaded? = try {
         val graph = app.graph
         val settings = graph.observeSettings().first()
+        // The widget may be computed before any window: its texts follow the language chosen in Settings too.
+        AppLocale.apply(settings.language)
         val shock = graph.getDailyShock(settings.region, settings.birth?.let(Generations::userBirth))
         val content = WidgetTexts.of(shock, settings.onboardingDone)
         val style = settings.displayStyle

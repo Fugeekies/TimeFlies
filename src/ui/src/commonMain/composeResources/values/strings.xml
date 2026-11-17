@@ -20,6 +20,8 @@
     <string name="vhs_label_date">%1$s · SP</string>
     <!-- Written above the decade number on the Polaroïd frame ("années" / "70"). -->
     <string name="decade_label">années</string>
+    <!-- The decade under the label: "70", "70s" in English, "70er" in German. -->
+    <string name="decade_number">%1$s</string>
     <string name="also_today">Aussi aujourd'hui</string>
     <string name="upcoming">Bientôt…</string>
     <string name="nothing_soon">Rien aujourd'hui. Profite, tu ne vieillis pas.</string>
@@ -185,6 +187,7 @@
     <string name="style_vhs">VHS</string>
     <string name="style_ephemeris">Éphéméride</string>
     <string name="settings_region">Région</string>
+    <string name="settings_language">Langue</string>
     <string name="region_fr">France</string>
     <string name="settings_about">À PROPOS</string>
     <string name="about_version">TimeFlies v%1$s</string>
@@ -383,6 +386,12 @@
     <string name="type_royal_event">Événement royal</string>
 
     <!-- Dates -->
+    <!-- Order of the parts of a date (DatePatterns): {d} day, {m} month, {y} year, {w} day of the week, {date} the long
+         date, {dd} and {mm} day and month on two digits. -->
+    <string name="date_long">{d} {m} {y}</string>
+    <string name="date_day_and_month">{w} {d} {m}</string>
+    <string name="date_with_day_name">{w} {date}</string>
+    <string name="date_short">{dd}/{mm}/{y}</string>
     <string name="first_of_month">1er</string>
     <string-array name="months">
         <item>janvier</item>

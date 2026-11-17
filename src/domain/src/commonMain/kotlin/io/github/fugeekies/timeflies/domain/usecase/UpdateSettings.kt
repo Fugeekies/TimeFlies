@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.port.Clock
@@ -71,6 +72,11 @@ class UpdateSettings(
     /** Settings › Affichage: the style of the whole app and of the widget (decision of 17/11/2026). */
     suspend fun setDisplayStyle(style: DisplayStyle) {
         settings.update { it.copy(displayStyle = style) }
+    }
+
+    /** Settings › Affichage › Langue: the language of the interface, applied at once (milestone 17). */
+    suspend fun setLanguage(language: AppLanguage) {
+        settings.update { it.copy(language = language) }
     }
 
     private suspend fun updateWindows(transform: (WindowsSettings) -> WindowsSettings) {

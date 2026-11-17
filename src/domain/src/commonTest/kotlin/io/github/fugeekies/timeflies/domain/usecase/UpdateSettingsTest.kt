@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
@@ -101,5 +102,12 @@ class UpdateSettingsTest {
         assertEquals(DisplayStyle.VHS, repository.state.value.displayStyle)
         update.setDisplayStyle(DisplayStyle.EPHEMERIS)
         assertEquals(DisplayStyle.EPHEMERIS, repository.state.value.displayStyle)
+    }
+
+    @Test
+    fun savesTheLanguage() = runTest {
+        assertEquals(null, repository.state.value.language, "the system language by default")
+        update.setLanguage(AppLanguage.GERMAN)
+        assertEquals(AppLanguage.GERMAN, repository.state.value.language)
     }
 }

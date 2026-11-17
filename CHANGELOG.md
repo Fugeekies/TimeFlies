@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Interface en anglais, allemand, italien et espagnol, en plus du français : choix dans Réglages › Affichage › Langue (la langue du système par défaut, le français si elle n'est pas proposée), appliqué aussitôt à l'application, au widget, à l'icône et à la notification Windows. Dates dans l'ordre de chaque langue. Les titres des événements restent en français pour l'instant.
 - Guide d'utilisation en cinq langues (anglais, français, allemand, italien, espagnol) dans `docs/guide/`, comme celui de LMU-DeltaRacing, et README avec une section par langue ; `UserGuideTest` vérifie les pages, le sélecteur de langue et les liens.
 - « Quel âge ? » et Équivalences : jusqu'à 3 âges à ajouter à côté du tien avec « + », chacun avec sa couleur de pictogramme ; toucher un âge le change ou le retire. Les âges ajoutés sont partagés par les deux écrans et oubliés à la fermeture de l'application.
 - Style Éphéméride, comme sur la maquette : Aujourd'hui en page de calendrier à arracher (anneaux de reliure, ligne de perforation, grand chiffre rouge en Big Shoulders Display), la feuille de la veille arrachée vers le haut une fois par jour, cartes à bordure fine ; clair ou sombre selon le système. Troisième choix de Réglages › Affichage et du widget Android.
@@ -23,6 +24,8 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Installeur Windows en anglais seulement ; l'application démarre dans la langue de Windows quand elle la propose.
+- Réglages : `settings.json` passe en version 8 (`language`).
 - « Quel âge ? » passe en deuxième position dans la navigation, devant Équivalences.
 - « Quel âge ? » : les âges de chaque ligne sont côte à côte sous le titre, dans l'ordre du bandeau ; au lancement, seul ton âge s'affiche.
 - Équivalences : une carte par événement de ta vie, avec l'équivalent de chaque âge ajouté côte à côte (« — » s'il n'y en a pas) ; le bouton « Inverser » et « Modifier » disparaissent.

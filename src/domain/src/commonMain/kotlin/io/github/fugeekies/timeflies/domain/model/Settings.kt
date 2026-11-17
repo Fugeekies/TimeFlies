@@ -17,6 +17,8 @@ import kotlinx.datetime.YearMonth
  * @property excludedEventGroups paths of the event groups the user unticked ("music/rap-album-hit/us", see
  *   [EventGroup.path]): left out everywhere, as if not in the base (decision of 16/11/2026). Empty: everything.
  * @property displayStyle the display style of the app and the widget, Polaroïd by default (decision of 17/11/2026).
+ * @property language the language chosen in Settings › Affichage; null: the system language when available, else
+ *   French (milestone 17).
  */
 data class Settings(
     val birth: YearMonth? = null,
@@ -27,6 +29,7 @@ data class Settings(
     val releaseCheck: ReleaseCheck = ReleaseCheck(),
     val excludedEventGroups: Set<String> = emptySet(),
     val displayStyle: DisplayStyle = DisplayStyle.POLAROID,
+    val language: AppLanguage? = null,
 )
 
 /**
