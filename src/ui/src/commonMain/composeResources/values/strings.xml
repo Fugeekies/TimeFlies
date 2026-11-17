@@ -14,6 +14,10 @@
     <string name="loading">Chargement…</string>
     <string name="load_error">Impossible de lire les événements.</string>
     <string name="round_chip">Chiffre rond</string>
+    <!-- Ornaments of the VHS tape (docs/UI_DESIGN_SPEC.md, § 1), not read by screen readers. -->
+    <string name="vhs_play">▶ PLAY</string>
+    <string name="vhs_rec">● REC</string>
+    <string name="vhs_label_date">%1$s · SP</string>
     <!-- Written above the decade number on the Polaroïd frame ("années" / "70"). -->
     <string name="decade_label">années</string>
     <string name="also_today">Aussi aujourd'hui</string>
@@ -172,6 +176,10 @@
     <string name="settings_year">Année</string>
     <string name="settings_clear">Effacer</string>
     <string name="settings_display">AFFICHAGE</string>
+    <string name="settings_style">Style</string>
+    <string name="settings_style_help">Le style de toute l'application et du widget. Le VHS est toujours sombre.</string>
+    <string name="style_polaroid">Polaroïd</string>
+    <string name="style_vhs">VHS</string>
     <string name="settings_region">Région</string>
     <string name="region_fr">France</string>
     <string name="settings_about">À PROPOS</string>

@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.data.settings
 
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
 import kotlinx.coroutines.CoroutineScope
@@ -77,7 +78,7 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 5" in text, text)
+        assertTrue("\"version\": 6" in text, text)
         assertTrue("youngAge" !in text, "the version 1 field is no longer written")
     }
 
@@ -99,6 +100,18 @@ class DataStoreSettingsRepositoryTest {
         assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
         assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")
+    }
+
+    @Test
+    fun keepsTheDisplayStyle() = runBlocking {
+        open().update { it.copy(displayStyle = DisplayStyle.VHS) }
+        assertTrue("\"style\": \"vhs\"" in FileSystem.SYSTEM.read(file) { readUtf8() })
+        assertEquals(DisplayStyle.VHS, open().settings.first().displayStyle)
+        // A version 5 file (before the choice) and an unknown style both get the Polaroïd.
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 5, "onboardingDone": true}""") }
+        assertEquals(DisplayStyle.POLAROID, open().settings.first().displayStyle)
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 6, "style": "betamax"}""") }
+        assertEquals(DisplayStyle.POLAROID, open().settings.first().displayStyle)
     }
 
     @Test

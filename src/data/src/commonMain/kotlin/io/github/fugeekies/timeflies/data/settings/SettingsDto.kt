@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.data.settings
 
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.model.Settings
@@ -18,7 +19,8 @@ import kotlinx.serialization.Serializable
  * Version 2 (milestone 7) renamed `youngAge` to [otherAge] (the other person can be older, decision of 15/11/2026):
  * a version 1 file is read through [youngAge], which is never written again. Version 3 (milestone 10) added the
  * Windows panel ([windows]); version 4 the check for new versions ([releaseCheck]); version 5 the event filter
- * ([excludedEventGroups]). An older file gets their defaults.
+ * ([excludedEventGroups]); version 6 the display style ([style], decision of 17/11/2026). An older file gets their
+ * defaults.
  */
 @Serializable
 internal data class SettingsDto(
@@ -40,6 +42,8 @@ internal data class SettingsDto(
     val releaseCheck: ReleaseCheckDto = ReleaseCheckDto(),
     /** Version 5: paths of the unticked event groups ("music/rap-album-hit/us"). */
     val excludedEventGroups: List<String> = emptyList(),
+    /** Version 6: the display style ("polaroid", "vhs"); an unknown value falls back to the Polaroïd. */
+    val style: String = DisplayStyle.POLAROID.id,
 ) {
     /** The domain settings; values edited by hand outside their range fall back to safe ones. */
     fun toDomain(): Settings = Settings(
@@ -53,10 +57,11 @@ internal data class SettingsDto(
         windows = windows.toDomain(),
         releaseCheck = releaseCheck.toDomain(),
         excludedEventGroups = excludedEventGroups.toSet(),
+        displayStyle = DisplayStyle.of(style) ?: DisplayStyle.POLAROID,
     )
 
     companion object {
-        const val CURRENT_VERSION = 5
+        const val CURRENT_VERSION = 6
 
         fun of(settings: Settings) = SettingsDto(
             birthYear = settings.birth?.year,
@@ -69,6 +74,7 @@ internal data class SettingsDto(
             windows = WindowsSettingsDto.of(settings.windows),
             releaseCheck = ReleaseCheckDto.of(settings.releaseCheck),
             excludedEventGroups = settings.excludedEventGroups.sorted(),
+            style = settings.displayStyle.id,
         )
 
         /** "series", "cinema", "games-tech"…: the name of the family's event file, readable by hand. */

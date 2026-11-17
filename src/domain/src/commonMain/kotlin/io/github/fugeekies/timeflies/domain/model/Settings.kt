@@ -19,6 +19,7 @@ import kotlinx.datetime.YearMonth
  * @property windows the Windows panel: notification, startup and tray.
  * @property excludedEventGroups paths of the event groups the user unticked ("music/rap-album-hit/us", see
  *   [EventGroup.path]): left out everywhere, as if not in the base (decision of 16/11/2026). Empty: everything.
+ * @property displayStyle the display style of the app and the widget, Polaroïd by default (decision of 17/11/2026).
  */
 data class Settings(
     val birth: YearMonth? = null,
@@ -30,6 +31,7 @@ data class Settings(
     val windows: WindowsSettings = WindowsSettings(),
     val releaseCheck: ReleaseCheck = ReleaseCheck(),
     val excludedEventGroups: Set<String> = emptySet(),
+    val displayStyle: DisplayStyle = DisplayStyle.POLAROID,
 )
 
 /**

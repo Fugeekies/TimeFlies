@@ -1,6 +1,6 @@
 # Spécification visuelle & design UI - TimeFlies
 
-> Document de conception écrit avant le code (13/11/2026). L'ordre des styles est décidé (Polaroïd en V1, puis Éphéméride, VHS en idée) ; les détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
+> Document de conception écrit avant le code (13/11/2026). L'ordre des styles est décidé (Polaroïd en V1, puis VHS au jalon 14, décision du 17/11/2026, puis Éphéméride) ; les détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
 
 Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de **TimeFlies**, sur Android et sur Windows. Les maquettes et les règles de chaque écran sont dans `UISpec/`.
 
@@ -15,9 +15,9 @@ Trois styles sont prévus. Chaque style a son propre jeu de jetons (couleurs, po
 |---|---|---|
 | **Polaroïd** | **V1**, seul style livré (décision du 13/11/2026, qui remplace celle donnant l'Éphéméride en V1) | Le plus beau pour la feuille du jour ; les âges écrits à la main sur les bandeaux. |
 | **Éphéméride** | Jalon « Style Éphéméride », juste après la V1 | Le plus clair pour les menus et les listes. |
-| **VHS** | Idée, peut-être plus tard | — |
+| **VHS** | Jalon 14, avancé avant l'Éphéméride (décision du 17/11/2026) | L'ambiance cassette des années 80-90, comme sur la maquette. |
 
-Tant qu'il n'y a qu'un style, Réglages ne propose pas de choix. À partir de l'Éphéméride, l'utilisateur choisit dans **Réglages › Affichage** (Polaroïd par défaut), et le style s'applique à toute l'application et au widget. Le code prévoit dès la V1 des jetons de thème séparés par style, pour que l'ajout de l'Éphéméride ne touche pas aux écrans.
+Depuis le VHS (jalon 14), l'utilisateur choisit dans **Réglages › Affichage** (Polaroïd par défaut), et le style s'applique aussitôt à toute l'application et au widget. Chaque style est un jeu de jetons (`StyleTokens`, `ColorScheme`) : l'ajout de l'Éphéméride ne touchera pas à la mise en page des écrans.
 
 Les maquettes des écrans autres qu'Aujourd'hui sont dessinées en Éphéméride (`maquettes/`) : leur **mise en page** vaut pour la V1, mais leurs couleurs et leurs polices sont celles du Polaroïd (voir plus bas). Elles ne seront pas redessinées avant le code (décision du 13/11/2026).
 
@@ -29,8 +29,15 @@ Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on
 - Le reste (listes, réglages) utilise des cartes simples, sans perforation.
 - Palette et polices : § 2 et § 5 ci-dessous.
 
-#### VHS (idée, peut-être plus tard)
-La feuille du jour devient une **jaquette de cassette VHS** : étiquette blanche collée de travers, nombre d'années écrit comme un titre de film enregistré, petit « ▶ REC » et compteur de bande `00:15:00` en guise d'ornement. Ambiance sombre par défaut, couleurs saturées (magenta, cyan, jaune), léger effet de lignes de balayage sur la feuille seulement.
+#### VHS (jalon 14, comme sur la maquette, décision du 17/11/2026)
+La feuille du jour devient une **cassette VHS** ([`maquettes/android/TodayVhs.png`](maquettes/android/TodayVhs.png)) : en haut « ● REC » en rouge et le compteur de bande en cyan (le nombre d'années en minutes, `00:15:00`), les deux bobines, puis l'**étiquette blanche collée de travers** (−1,5°) avec de légères lignes de balayage, sur l'étiquette seulement. L'étiquette porte le jour (« LUNDI 2 NOVEMBRE 2026 · SP »), le nombre d'années en grand (« 15 ANS », magenta), le titre écrit au feutre, la légende, « Tu avais 20 ans. » et la puce « CHIFFRE ROND » jaune sur fond d'encre.
+
+Règles du style VHS dans toute l'application :
+- **Toujours sombre** (les règles communes le permettent) : le style ignore le thème clair du système et le thème forcé du panneau de débogage ; sur Android, les icônes des barres système passent en clair.
+- En-tête d'Aujourd'hui : « TIMEFLIES » en magenta et « ▶ PLAY » en jaune ; la date est sur l'étiquette.
+- Nombres d'années, écarts et titres d'écran en **Bungee** (environ 0,72 fois la taille du Caveat, pour la même place) ; titres de section en **VT323** cyan, en capitales, précédés de « » » (« » BIENTÔT… ») ; titre de l'étiquette en **Permanent Marker**.
+- Cartes des listes : fond `#1B1824`, bordure fine `#2E2940`, coins de 10 dp, sans ombre.
+- Les ornements (« ● REC », « ▶ PLAY », chevrons) ne sont pas lus par TalkBack et le Narrateur.
 
 #### Polaroïd (V1, maquette validée le 13/11/2026)
 La feuille du jour devient un **Polaroïd** : cadre (de la couleur de la décennie, voir plus bas) avec bande épaisse en bas, où le titre et la légende (« sorti le 2 novembre 2011, tu avais 20 ans ») sont écrits à la main ; à la place de la photo, un aplat de la couleur de la famille de l'événement, légèrement passé, qui porte le nombre d'années en grand et en blanc. La photo est inclinée, un ruban adhésif la tient en haut. Ambiance claire et chaude.
@@ -89,6 +96,25 @@ Palette sombre « chambre noire » : décision du 15/11/2026. L'application suit
 
 La photo du jour prend la couleur de la famille de l'événement (§ 3), légèrement passée.
 
+#### VHS (jalon 14, sombre seulement)
+
+Couleurs de la maquette ([`maquettes/android/TodayVhs.html`](maquettes/android/TodayVhs.html)), vérifiées par `ContrastTest`.
+
+| Jeton | Sombre | Usage |
+|---|---|---|
+| `background` | `#0E0B16` nuit violette | fond des écrans |
+| `surface` | `#1B1824` | coque de la cassette, cartes |
+| `surfaceContainer` | `#151220` | barre de navigation |
+| `onSurface` | `#F2ECFF` | texte principal |
+| `onSurfaceVariant` | `#B9B0CC` | libellés, dates, textes secondaires |
+| `primary` | `#FF3EA5` magenta | nombres d'années, nom de l'application, onglet actif, boutons principaux |
+| `outline` | `#2E2940` | bordures des cartes, bobines |
+| `secondaryContainer` | `#3E1533` (magenta à 20 %) | onglet actif, pastille « Chiffre rond » |
+| silhouette de l'utilisateur | `#FFE14D` jaune | Équivalences, « Quel âge ? » |
+| silhouette de l'autre personne | `#3EE6FF` cyan | Équivalences, « Quel âge ? » |
+| ornements | `#FF4D4D` « ● REC », `#3EE6FF` compteur et titres de section, `#FFE14D` « ▶ PLAY » | |
+| étiquette | papier `#F4F1E8`, encre `#16121F`, date `#6B5F7A`, légende `#4A4158`, grand nombre `#E0177F` | |
+
 #### Éphéméride (jalon après la V1)
 
 | Jeton | Clair | Sombre | Usage |
@@ -120,6 +146,7 @@ Les polices sont **embarquées** dans l'application (ressources Compose, licence
 
 * **Interface et textes (tous les styles) :** `Atkinson Hyperlegible`, conçue pour la lisibilité, y compris aux grandes tailles de police du système.
 * **Polaroïd (V1) :** `Caveat` (manuscrite) pour les nombres d'années, le titre et la légende de la photo, le nom de l'application et les titres de section. Jamais en dessous de 20 sp, pour rester lisible.
+* **VHS (jalon 14) :** `Bungee` (capitales d'enseigne) pour les nombres d'années, le nom de l'application et les titres d'écran ; `VT323` (police de terminal) pour le compteur, « ● REC », « ▶ PLAY », la date de l'étiquette, la puce « CHIFFRE ROND » et les titres de section ; `Permanent Marker` (feutre) pour le titre de l'étiquette. Bungee et VT323 sous licence SIL OFL, Permanent Marker sous licence Apache 2.0 (`licenses/`).
 * **Éphéméride (après la V1) :** `Big Shoulders Display` (gras, condensée), le style des chiffres d'éphéméride, pour le grand chiffre, les nombres d'années et les titres d'écran.
 * **Échelle (sp)** : grand chiffre 96 (téléphone) / 120 (PC) ; titre d'écran 28 ; titre d'événement 20 ; texte 16 ; libellé 13 (majuscules, espacement des lettres 0,06 em).
 
@@ -186,6 +213,7 @@ Quatre destinations, dans cet ordre :
 
 Une seule animation marquante, à l'ouverture de l'écran Aujourd'hui, une fois par jour (pas à chaque retour sur l'écran) :
 * **Polaroïd (V1)** : la photo du jour **se développe** en 1,6 s : l'aplat de couleur apparaît peu à peu sur le blanc, puis l'écriture (décision du 15/11/2026, codée au jalon 9, à juger à l'écran). Une fois par jour et par lancement de l'application.
+* **VHS (jalon 14)** : le compteur de bande défile de `00:00:00` jusqu'au nombre d'années en 1,6 s, aux mêmes conditions que la photo du Polaroïd.
 * **Éphéméride (après la V1)** : la feuille de la veille s'arrache vers le haut et laisse apparaître celle du jour.
 
 Le reste se limite aux transitions standard de Material 3.

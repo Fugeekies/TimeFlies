@@ -63,6 +63,7 @@ import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.text.signedYearsText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.accent
 import org.jetbrains.compose.resources.stringResource
 
 /**
@@ -193,7 +194,7 @@ private fun LineRow(line: EventLine, region: Region) {
 private fun AgeAtEvent(person: Person, years: Int) {
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
         PersonIcon(person, size = 16)
-        Text(signedYearsText(years), fontFamily = LocalStyle.current.handwriting, fontWeight = FontWeight.Bold, fontSize = 20.sp, color = person.color())
+        Text(signedYearsText(years), style = LocalStyle.current.accent(20f), color = person.color())
     }
 }
 

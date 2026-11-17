@@ -65,6 +65,7 @@ import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.text.typeLabel
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
+import io.github.fugeekies.timeflies.ui.theme.accent
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
@@ -152,9 +153,7 @@ fun EquivalencesScreen(
 internal fun ScreenTitle(text: String) {
     Text(
         text,
-        fontFamily = LocalStyle.current.handwriting,
-        fontWeight = FontWeight.Bold,
-        fontSize = 34.sp,
+        style = LocalStyle.current.accent(34f),
         color = MaterialTheme.colorScheme.onBackground,
         modifier = Modifier.semantics { heading() },
     )

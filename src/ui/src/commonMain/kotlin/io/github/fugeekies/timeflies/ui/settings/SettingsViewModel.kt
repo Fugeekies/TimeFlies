@@ -3,6 +3,7 @@ package io.github.fugeekies.timeflies.ui.settings
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.fugeekies.timeflies.domain.model.Region
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.port.Clock
@@ -47,6 +48,7 @@ data class SettingsUiState(
     val releaseCheck: Boolean,
     val eventGroups: List<FilterNode>,
     val excludedEventGroups: Set<String>,
+    val displayStyle: DisplayStyle,
 ) {
     val birthYears: IntRange get() = Generations.birthYears(today)
     val userAge: Int? get() = birth?.let { Generations.userAge(it, today) }
@@ -116,6 +118,7 @@ class SettingsViewModel(
         releaseCheck = settings.releaseCheck.enabled,
         eventGroups = groups,
         excludedEventGroups = settings.excludedEventGroups,
+        displayStyle = settings.displayStyle,
     )
 
     fun onMonthPicked(month: Month) = onBirthPicked(month = month)
@@ -157,6 +160,11 @@ class SettingsViewModel(
     /** The new set of unticked event groups, from the filter tree. */
     fun onExcludedEventGroups(paths: Set<String>) {
         viewModelScope.launch { updateSettings.setExcludedEventGroups(paths) }
+    }
+
+    /** Settings › Affichage: applied at once to the whole app and to the widget. */
+    fun onDisplayStyle(style: DisplayStyle) {
+        viewModelScope.launch { updateSettings.setDisplayStyle(style) }
     }
 
     fun onReleaseCheck(enabled: Boolean) {

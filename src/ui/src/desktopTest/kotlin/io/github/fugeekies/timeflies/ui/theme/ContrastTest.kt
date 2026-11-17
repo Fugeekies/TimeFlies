@@ -8,11 +8,15 @@ import io.github.fugeekies.timeflies.ui.polaroid.FrameInk
 import io.github.fugeekies.timeflies.ui.polaroid.FrameInkSoft
 import io.github.fugeekies.timeflies.ui.polaroid.PhotoInk
 import io.github.fugeekies.timeflies.ui.polaroid.PhotoLabel
+import io.github.fugeekies.timeflies.ui.vhs.VhsLabelDate
+import io.github.fugeekies.timeflies.ui.vhs.VhsLabelSoft
+import io.github.fugeekies.timeflies.ui.vhs.VhsRed
+import io.github.fugeekies.timeflies.ui.vhs.VhsYellow
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-/** WCAG AA contrast of the Polaroïd tokens, light and dark (docs/UI_DESIGN_SPEC.md, "Accessibilité"). */
+/** WCAG AA contrast of the Polaroïd tokens, light and dark, and of the VHS tokens (docs/UI_DESIGN_SPEC.md, "Accessibilité"). */
 class ContrastTest {
 
     private val text = 4.5f
@@ -23,7 +27,7 @@ class ContrastTest {
         assertTrue(ratio >= min, "$what: ${"%.2f".format(ratio)} < $min")
     }
 
-    private fun checkScheme(name: String, scheme: ColorScheme, extras: PolaroidExtras) {
+    private fun checkScheme(name: String, scheme: ColorScheme, extras: StyleExtras) {
         for ((bgName, bg) in listOf("background" to scheme.background, "surface" to scheme.surface, "surfaceContainerHigh" to scheme.surfaceContainerHigh)) {
             assertContrast(text, scheme.onSurface, bg, "$name onSurface on $bgName")
             assertContrast(text, scheme.onSurfaceVariant, bg, "$name onSurfaceVariant on $bgName")
@@ -45,6 +49,22 @@ class ContrastTest {
 
     @Test
     fun darkTokensAreAA() = checkScheme("dark", PolaroidDark, PolaroidDarkExtras)
+
+    @Test
+    fun vhsTokensAreAA() = checkScheme("vhs", VhsDark, VhsExtras)
+
+    @Test
+    fun theWritingOnTheVhsTapeIsReadable() {
+        assertContrast(text, VhsLabelInk, VhsLabel, "ink on the label")
+        assertContrast(text, VhsLabelDate, VhsLabel, "date line on the label")
+        assertContrast(text, VhsLabelSoft, VhsLabel, "legend on the label")
+        assertContrast(large, VhsNumber, VhsLabel, "big number on the label")
+        assertContrast(text, VhsYellow, VhsLabelInk, "round chip on the label")
+        assertContrast(text, VhsRed, VhsDark.surface, "REC on the tape")
+        assertContrast(text, VhsCyan, VhsDark.surface, "tape counter on the tape")
+        assertContrast(text, VhsCyan, VhsDark.background, "section titles")
+        assertContrast(text, VhsYellow, VhsDark.background, "PLAY in the header")
+    }
 
     @Test
     fun theWritingOnEveryFrameIsReadable() {

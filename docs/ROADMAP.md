@@ -21,15 +21,7 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 11) Widget vu en 4 × 3 sur l'émulateur (16/11/2026) ; reste à voir le bouton « suivant », la taille 2 × 2, le thème sombre et la mise à jour après minuit.
 - [ ] (Jalon 12) Image d'aperçu du dépôt GitHub (1280 × 640, à partir de `assets/icon/`) : à téléverser à la main dans les réglages du dépôt, GitHub n'ayant pas d'API pour ça.
 - [ ] (Jalon 13) `v0.1.0` installée sur un téléphone et sur un PC : icône dans l'assistant d'installation et dans « Applications installées », mise à jour par-dessus en gardant les réglages, désinstallation.
-
-### Jalon 14 — Style VHS
-Décision du 17/11/2026 : le style VHS est avancé avant l'Éphéméride, comme sur la maquette ([`maquettes/android/TodayVhs.png`](maquettes/android/TodayVhs.png)).
-- [ ] Jetons du style VHS, sombre seulement (`docs/UI_DESIGN_SPEC.md` § 2) ; polices embarquées Bungee, VT323 (SIL OFL) et Permanent Marker (Apache 2.0).
-- [ ] Aujourd'hui : la cassette (« ● REC », compteur de bande, bobines) et son étiquette inclinée à lignes de balayage ; cartes des listes avec l'âge en Bungee, titres de section « » PROCHAINEMENT ».
-- [ ] Autres écrans aux couleurs et polices du VHS (âges, titres), sans changer leur mise en page.
-- [ ] Choix du style dans Réglages › Affichage (Polaroïd par défaut), avec un aperçu de chaque feuille ; `settings.json` en version 6.
-- [ ] Widget Android aux couleurs du style choisi.
-- [ ] `ContrastTest` étendu aux jetons du VHS.
+- [ ] (Jalon 14) Widget en style VHS à voir sur l'émulateur, et les deux styles sur l'application installée.
 
 ## À faire : les données, par thème
 
@@ -200,3 +192,13 @@ Issu de l'analyse du 16/11/2026 (corrections dans la PR [#24](https://github.com
 - [x] Décision du 16/11/2026 : base sortie du code, `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json` ; un pays par fichier, `international` pour les très gros événements mixtes ; sous-catégories : genre des morts d'icônes, discipline des records ([`EVENTS_DATA.md`](EVENTS_DATA.md), « Fichiers et stockage »).
 - [x] 192 événements classés en 52 fichiers ; le type vient du dossier ; validation du chemin (`EventGroup`).
 - [x] Filtre appliqué partout : arbre de Réglages › Événements, pastilles thèmes et origines au premier lancement, `settings.json` en version 5.
+
+### Jalon 14 — Style VHS — 17/11/2026 · PR [#27](https://github.com/Fugeekies/TimeFlies/pull/27)
+Décision du 17/11/2026 : le style VHS est avancé avant l'Éphéméride, comme sur la maquette ([`maquettes/android/TodayVhs.png`](maquettes/android/TodayVhs.png)).
+- [x] Jetons du style VHS, toujours sombre ([`UI_DESIGN_SPEC.md`](UI_DESIGN_SPEC.md) § 1, 2 et 5) ; polices embarquées Bungee, VT323 (SIL OFL) et Permanent Marker (Apache 2.0). `StyleTokens` porte les polices de chaque rôle (`accent`, `section`, `handwriting`), les écrans ne connaissent plus le Caveat.
+- [x] Aujourd'hui : la cassette (« ● REC », compteur de bande qui défile une fois par jour, bobines) et son étiquette inclinée à lignes de balayage ; en-tête « TIMEFLIES » et « ▶ PLAY » ; cartes des listes avec l'âge en Bungee, titres de section « » BIENTÔT… » (`VhsTape`).
+- [x] Autres écrans aux couleurs et polices du VHS (âges, écarts, titres), sans changer leur mise en page ; sur Android, icônes des barres système claires en VHS même quand le système est clair.
+- [x] `domain` : `DisplayStyle`, `Settings.displayStyle`, `UpdateSettings.setDisplayStyle`. `data` : `settings.json` en version 6 (`style`, valeur inconnue lue comme Polaroïd). Tests.
+- [x] Choix du style dans Réglages › Affichage (Polaroïd par défaut), avec un aperçu de chaque feuille dans ses propres couleurs (`StylePicker`).
+- [x] Widget Android aux couleurs du style choisi (étiquette blanche et nombre en Bungee magenta), recalculé quand le style change.
+- [x] `ContrastTest` étendu aux jetons et aux ornements du VHS.

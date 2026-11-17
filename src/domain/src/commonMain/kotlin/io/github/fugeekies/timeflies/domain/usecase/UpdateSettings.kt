@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.domain.usecase
 
+import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
@@ -82,6 +83,11 @@ class UpdateSettings(
     /** Settings › À propos: look for new versions at start, or never (decision of 16/11/2026). */
     suspend fun setReleaseCheck(enabled: Boolean) {
         settings.update { it.copy(releaseCheck = it.releaseCheck.copy(enabled = enabled)) }
+    }
+
+    /** Settings › Affichage: the style of the whole app and of the widget (decision of 17/11/2026). */
+    suspend fun setDisplayStyle(style: DisplayStyle) {
+        settings.update { it.copy(displayStyle = style) }
     }
 
     private suspend fun updateWindows(transform: (WindowsSettings) -> WindowsSettings) {

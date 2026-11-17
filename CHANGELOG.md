@@ -11,6 +11,8 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Style VHS, comme sur la maquette : Aujourd'hui en cassette (« ● REC », compteur de bande, bobines, étiquette inclinée à lignes de balayage), âges en Bungee, titres de section « » BIENTÔT… », couleurs saturées sur fond sombre. Le VHS est toujours sombre.
+- Réglages › Affichage : choix du style, Polaroïd ou VHS, avec un aperçu de chaque feuille ; il s'applique aussitôt à toute l'application et au widget Android.
 - Filtre des événements : Réglages › Événements, un arbre famille › type › origine › sous-catégorie à cocher (exemple : garder le rap français sans le rap US) ; ce qui est décoché n'apparaît plus nulle part (Aujourd'hui, widget, notification Windows, Équivalences, « Quel âge ? »).
 - Premier lancement : « Ce qui t'intéresse », une pastille par thème et par origine pour écarter d'emblée un thème ou un pays.
 - Nouvelles versions : quand une version plus récente est publiée sur GitHub, un bandeau sur Aujourd'hui l'annonce, avec « Télécharger » et « Plus tard ». GitHub est interrogé une fois par jour au plus, sans aucune donnée personnelle ; la case « Chercher les nouvelles versions au démarrage » de Réglages › À propos le désactive.
@@ -19,13 +21,13 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 ### Changed
 
 - Android : la permission Internet, pour la seule recherche de nouvelles versions.
-- `settings.json` passe en version 4 (objet `releaseCheck`), puis en version 5 (`excludedEventGroups`).
+- `settings.json` passe en version 4 (objet `releaseCheck`), puis en version 5 (`excludedEventGroups`), puis en version 6 (`style`).
 - Base d'événements sortie du code : `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json`, 52 fichiers pour les 192 événements (origine : pays de l'artiste, du joueur ou du studio ; sous-catégorie : genre des morts d'icônes, discipline des records). Le type vient du dossier.
 
 ### Performance
 
 - APK Android réduite par R8 : 2,7 Mo au lieu de 11 Mo.
-- Widget Android : recalculé seulement quand ce qu'il affiche change (naissance, région, premier lancement), plus à chaque réglage d'Équivalences.
+- Widget Android : recalculé seulement quand ce qu'il affiche change (naissance, région, premier lancement, style), plus à chaque réglage d'Équivalences.
 
 ### Fixed
 
