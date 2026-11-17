@@ -24,6 +24,7 @@ import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.atkinson_bold
 import io.github.fugeekies.timeflies.ui.resources.atkinson_regular
+import io.github.fugeekies.timeflies.ui.resources.big_shoulders_display
 import io.github.fugeekies.timeflies.ui.resources.bungee
 import io.github.fugeekies.timeflies.ui.resources.caveat
 import io.github.fugeekies.timeflies.ui.resources.permanent_marker
@@ -31,15 +32,17 @@ import io.github.fugeekies.timeflies.ui.resources.vt323
 import org.jetbrains.compose.resources.Font
 
 /**
- * Tokens of a display style (docs/UI_DESIGN_SPEC.md, § 1 and 2): Polaroïd or VHS, the layout of the screens being
- * the same in both. Éphéméride will be another instance of this class, without touching the screens.
+ * Tokens of a display style (docs/UI_DESIGN_SPEC.md, § 1 and 2): Polaroïd, VHS or Éphéméride, the layout of the
+ * screens being the same in all of them.
  *
  * @property handwriting the hand-written font of the sheet of the day: Caveat on the Polaroïd, Permanent Marker on
- *   the label of the VHS tape.
- * @property accent font of the numbers of years, the gaps and the screen titles (Caveat or Bungee); see [accent].
+ *   the label of the VHS tape; the readable font on the Éphéméride, which has no handwriting.
+ * @property accent font of the numbers of years, the gaps and the screen titles (Caveat, Bungee or Big Shoulders
+ *   Display); see [accent].
  * @property accentScale size of [accent] for the same role: Bungee is much wider than Caveat.
- * @property accentWeight Caveat is written bold, Bungee has a single weight.
- * @property section font of the section titles ("Bientôt…"): Caveat, or VT323 like the tape counter.
+ * @property accentWeight Caveat is written bold, Bungee has a single weight, Big Shoulders Display is black.
+ * @property section font of the section titles ("Bientôt…"): Caveat, VT323 like the tape counter, or the readable
+ *   font in small capitals.
  * @property sectionColor colour of the section titles.
  */
 @Immutable
@@ -162,6 +165,59 @@ internal val VhsExtras = StyleExtras(userColor = Color(0xFFFFE14D), otherColor =
 /** The cyan of the tape counter and of the section titles of the VHS. */
 internal val VhsCyan = Color(0xFF3EE6FF)
 
+// Éphéméride, light (docs/UI_DESIGN_SPEC.md, § 2). The red is a shade darker than the #D7263D of the mock-up, so
+// that it reads at 4.5:1 on the paper-grey background too (4.42:1 before).
+internal val EphemerisLight: ColorScheme = lightColorScheme(
+    background = Color(0xFFF3F2EE),
+    onBackground = Color(0xFF1F1B24),
+    surface = Color(0xFFFFFFFF),
+    onSurface = Color(0xFF1F1B24),
+    surfaceVariant = Color(0xFFFFFFFF),
+    onSurfaceVariant = Color(0xFF5E5866),
+    surfaceContainerLowest = Color(0xFFFFFFFF),
+    surfaceContainerLow = Color(0xFFFFFFFF),
+    surfaceContainer = Color(0xFFFFFFFF),
+    surfaceContainerHigh = Color(0xFFF3F2EE),
+    surfaceContainerHighest = Color(0xFFEAE8E3),
+    primary = Color(0xFFD3243B),
+    onPrimary = Color(0xFFFFFFFF),
+    // The red at 14 % on white, like the active tab of the mock-up; its ink is the deeper red of the round chip.
+    secondaryContainer = Color(0xFFF9E1E4),
+    onSecondaryContainer = Color(0xFFB01F33),
+    outline = Color(0xFFD9D5DE),
+    outlineVariant = Color(0xFFD9D5DE),
+)
+
+internal val EphemerisLightExtras = StyleExtras(userColor = Color(0xFFD3243B), otherColor = Color(0xFF1F6FB2))
+
+// Éphéméride, dark (docs/UI_DESIGN_SPEC.md, § 2).
+internal val EphemerisDark: ColorScheme = darkColorScheme(
+    background = Color(0xFF16141A),
+    onBackground = Color(0xFFEDEAF2),
+    surface = Color(0xFF221F27),
+    onSurface = Color(0xFFEDEAF2),
+    surfaceVariant = Color(0xFF221F27),
+    onSurfaceVariant = Color(0xFFA8A1B2),
+    surfaceContainerLowest = Color(0xFF16141A),
+    surfaceContainerLow = Color(0xFF1C1A21),
+    surfaceContainer = Color(0xFF221F27),
+    surfaceContainerHigh = Color(0xFF2A2630),
+    surfaceContainerHighest = Color(0xFF322D39),
+    primary = Color(0xFFFF5C6C),
+    onPrimary = Color(0xFF16141A),
+    // The red at 20 % on the background.
+    secondaryContainer = Color(0xFF45222A),
+    onSecondaryContainer = Color(0xFFEDEAF2),
+    outline = Color(0xFF3A3542),
+    outlineVariant = Color(0xFF3A3542),
+)
+
+internal val EphemerisDarkExtras = StyleExtras(userColor = Color(0xFFFF5C6C), otherColor = Color(0xFF6CB4FF))
+
+/** The binding rings at the top of the sheet of the day: a grey rim on the colour of the background. */
+internal val EphemerisRingLight = Color(0xFFC9C4CF)
+internal val EphemerisRingDark = Color(0xFF4A4452)
+
 /**
  * The photo paper. A Polaroïd stays a light print in both themes, so the handwriting on its frame keeps a dark ink
  * (docs/UI_DESIGN_SPEC.md, § 1).
@@ -172,9 +228,9 @@ internal val PhotoPaper = Color(0xFFFBFAF7)
 internal val VhsLabel = Color(0xFFF4F1E8)
 internal val VhsLabelInk = Color(0xFF16121F)
 
-/** The VHS has no light version (docs/UI_DESIGN_SPEC.md, § 1): it is always dark. */
+/** The VHS has no light version (docs/UI_DESIGN_SPEC.md, § 1): it is always dark. The others follow the system. */
 fun DisplayStyle.isDark(systemDark: Boolean): Boolean = when (this) {
-    DisplayStyle.POLAROID -> systemDark
+    DisplayStyle.POLAROID, DisplayStyle.EPHEMERIS -> systemDark
     DisplayStyle.VHS -> true
 }
 
@@ -218,6 +274,19 @@ data class WidgetPalette(
                 ink = VhsLabelInk,
                 number = VhsNumber,
             )
+            DisplayStyle.EPHEMERIS -> {
+                val scheme = if (dark) EphemerisDark else EphemerisLight
+                WidgetPalette(
+                    background = scheme.background,
+                    onBackground = scheme.onSurface,
+                    secondary = scheme.onSurfaceVariant,
+                    accent = scheme.primary,
+                    paper = scheme.surface,
+                    ink = scheme.onSurface,
+                    // Drawn once into an image for both themes: the light red, which reads on both sheets.
+                    number = EphemerisLight.primary,
+                )
+            }
         }
     }
 }
@@ -304,6 +373,29 @@ fun TimeFliesTheme(
             userColor = VhsExtras.userColor,
             otherColor = VhsExtras.otherColor,
         )
+        DisplayStyle.EPHEMERIS -> {
+            val shoulders = FontFamily(
+                Font(Res.font.big_shoulders_display, FontWeight.Bold, variationSettings = FontVariation.Settings(FontVariation.weight(700))),
+                Font(Res.font.big_shoulders_display, FontWeight.Black, variationSettings = FontVariation.Settings(FontVariation.weight(900))),
+            )
+            val scheme = if (dark) EphemerisDark else EphemerisLight
+            val extras = if (dark) EphemerisDarkExtras else EphemerisLightExtras
+            scheme to StyleTokens(
+                displayStyle = style,
+                // No handwriting on a calendar page: the readable font.
+                handwriting = atkinson,
+                accent = shoulders,
+                accentScale = 1f,
+                accentWeight = FontWeight.Black,
+                // Section titles are small capitals in the readable font, as on the mock-up.
+                section = atkinson,
+                sectionColor = scheme.onSurfaceVariant,
+                familyColors = FamilyColors,
+                photoFade = scheme.surface,
+                userColor = extras.userColor,
+                otherColor = extras.otherColor,
+            )
+        }
     }
     CompositionLocalProvider(LocalStyle provides tokens) {
         MaterialTheme(colorScheme = scheme, typography = typography, content = content)

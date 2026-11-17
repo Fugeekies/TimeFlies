@@ -22,6 +22,7 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 12) Image d'aperçu du dépôt GitHub (1280 × 640, à partir de `assets/icon/`) : à téléverser à la main dans les réglages du dépôt, GitHub n'ayant pas d'API pour ça.
 - [ ] (Jalon 13) `v0.1.0` installée sur un téléphone et sur un PC : icône dans l'assistant d'installation et dans « Applications installées », mise à jour par-dessus en gardant les réglages, désinstallation.
 - [ ] (Jalon 14) Widget en style VHS à voir sur l'émulateur, et les deux styles sur l'application installée.
+- [ ] (Jalon 15) Widget en style Éphéméride à voir sur l'émulateur (clair et sombre), et l'arrachage de la feuille à juger à l'écran.
 
 ## À faire : les données, par thème
 
@@ -66,11 +67,6 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 - [ ] Décider comment tenir le rythme de saisie au-delà du palier 2 : à la main, ou import depuis Wikidata relu par PR.
 
 ## Après la V1
-
-### Jalon — Style Éphéméride
-La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [`maquettes/`](maquettes/README.md).
-- [ ] Jetons du style (palette claire et sombre déjà définies, `docs/UI_DESIGN_SPEC.md` § 2).
-- [ ] Ajouter l'Éphéméride au choix du style de Réglages (arrivé avec le jalon 14) et au widget.
 
 ### Jalon — Traductions et régions
 - [ ] Interface en anglais, en plus du français de référence.
@@ -202,3 +198,14 @@ Décision du 17/11/2026 : le style VHS est avancé avant l'Éphéméride, comme 
 - [x] Choix du style dans Réglages › Affichage (Polaroïd par défaut), avec un aperçu de chaque feuille dans ses propres couleurs (`StylePicker`).
 - [x] Widget Android aux couleurs du style choisi (étiquette blanche et nombre en Bungee magenta), recalculé quand le style change.
 - [x] `ContrastTest` étendu aux jetons et aux ornements du VHS.
+
+### Jalon 15 — Style Éphéméride — 17/11/2026 · PR [#28](https://github.com/Fugeekies/TimeFlies/pull/28)
+La feuille du jour en page d'éphéméride, comme sur la maquette ([`maquettes/android/Today.png`](maquettes/android/Today.png)), troisième style après le Polaroïd et le VHS.
+- [x] Jetons du style Éphéméride, clair et sombre selon le thème du système ([`UI_DESIGN_SPEC.md`](UI_DESIGN_SPEC.md) § 2) ; rouge clair assombri d'un cran (`#D3243B`) pour lire à 4,5:1 sur le fond ; police embarquée Big Shoulders Display (SIL OFL).
+- [x] Aujourd'hui : la page (anneaux de reliure, ligne de perforation, jour, grand chiffre rouge et « ans », titre, légende, puce « Chiffre rond », famille) ; cartes des listes à bordure fine avec l'âge en Big Shoulders Display, titres de section en petites capitales (`EphemerisSheet`).
+- [x] Animation : la feuille de la veille s'arrache vers le haut depuis la perforation, une fois par jour, comme le Polaroïd et le VHS.
+- [x] Autres écrans aux couleurs et polices de l'Éphéméride, sans changer leur mise en page.
+- [x] `domain` : `DisplayStyle.EPHEMERIS` (`"ephemeride"` dans `settings.json`, toujours en version 6). Tests.
+- [x] Éphéméride ajoutée au choix de Réglages › Affichage avec son aperçu ; les trois choix passent l'un sous l'autre sur un téléphone étroit.
+- [x] Widget Android en petite page blanche (sombre dans le thème sombre), nombre en Big Shoulders Display rouge.
+- [x] `ContrastTest` étendu aux jetons de l'Éphéméride, clairs et sombres, et au nombre du widget.

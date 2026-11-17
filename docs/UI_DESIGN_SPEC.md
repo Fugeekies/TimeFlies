@@ -1,6 +1,6 @@
 # Spécification visuelle & design UI - TimeFlies
 
-> Document de conception écrit avant le code (13/11/2026). L'ordre des styles est décidé (Polaroïd en V1, puis VHS au jalon 14, décision du 17/11/2026, puis Éphéméride) ; les détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
+> Document de conception écrit avant le code (13/11/2026). L'ordre des styles est décidé (Polaroïd en V1, puis VHS au jalon 14, décision du 17/11/2026, puis Éphéméride au jalon 15) ; les détails et les règles d'ergonomie restent des propositions **à valider** tant qu'ils ne sont pas cochés dans la feuille de route.
 
 Ce document définit l'identité visuelle, la charte graphique et l'ergonomie de **TimeFlies**, sur Android et sur Windows. Les maquettes et les règles de chaque écran sont dans `UISpec/`.
 
@@ -14,14 +14,14 @@ Trois styles sont prévus. Chaque style a son propre jeu de jetons (couleurs, po
 | Style | Version | Pourquoi |
 |---|---|---|
 | **Polaroïd** | **V1**, seul style livré (décision du 13/11/2026, qui remplace celle donnant l'Éphéméride en V1) | Le plus beau pour la feuille du jour ; les âges écrits à la main sur les bandeaux. |
-| **Éphéméride** | Jalon « Style Éphéméride », juste après la V1 | Le plus clair pour les menus et les listes. |
+| **Éphéméride** | Jalon 15, après le VHS | Le plus clair pour les menus et les listes. |
 | **VHS** | Jalon 14, avancé avant l'Éphéméride (décision du 17/11/2026) | L'ambiance cassette des années 80-90, comme sur la maquette. |
 
-Depuis le VHS (jalon 14), l'utilisateur choisit dans **Réglages › Affichage** (Polaroïd par défaut), et le style s'applique aussitôt à toute l'application et au widget. Chaque style est un jeu de jetons (`StyleTokens`, `ColorScheme`) : l'ajout de l'Éphéméride ne touchera pas à la mise en page des écrans.
+Depuis le VHS (jalon 14), l'utilisateur choisit dans **Réglages › Affichage** (Polaroïd par défaut), et le style s'applique aussitôt à toute l'application et au widget. Chaque style est un jeu de jetons (`StyleTokens`, `ColorScheme`) : l'ajout de l'Éphéméride (jalon 15) n'a pas touché à la mise en page des écrans.
 
 Les maquettes des écrans autres qu'Aujourd'hui sont dessinées en Éphéméride (`maquettes/`) : leur **mise en page** vaut pour la V1, mais leurs couleurs et leurs polices sont celles du Polaroïd (voir plus bas). Elles ne seront pas redessinées avant le code (décision du 13/11/2026).
 
-#### Éphéméride (jalon après la V1)
+#### Éphéméride (jalon 15)
 Le coup de vieux du jour est une page d'**éphéméride**, ce calendrier dont on arrache une feuille chaque matin : un grand chiffre rouge, le jour en dessous, du papier. L'écran Aujourd'hui et le widget reprennent cette feuille ; le reste de l'application reste sobre pour la laisser au premier plan.
 
 - Le **grand chiffre** n'est pas le jour du mois mais le **nombre d'années** écoulées (« 15 ans »), en rouge éphéméride.
@@ -115,7 +115,7 @@ Couleurs de la maquette ([`maquettes/android/TodayVhs.html`](maquettes/android/T
 | ornements | `#FF4D4D` « ● REC », `#3EE6FF` compteur et titres de section, `#FFE14D` « ▶ PLAY » | |
 | étiquette | papier `#F4F1E8`, encre `#16121F`, date `#6B5F7A`, légende `#4A4158`, grand nombre `#E0177F` | |
 
-#### Éphéméride (jalon après la V1)
+#### Éphéméride (jalon 15, clair et sombre selon le système)
 
 | Jeton | Clair | Sombre | Usage |
 |---|---|---|---|
@@ -123,8 +123,15 @@ Couleurs de la maquette ([`maquettes/android/TodayVhs.html`](maquettes/android/T
 | `surface` | `#FFFFFF` | `#221F27` | cartes, feuille d'éphéméride |
 | `onSurface` | `#1F1B24` encre | `#EDEAF2` | texte principal |
 | `onSurfaceVariant` | `#5E5866` | `#A8A1B2` | libellés, dates, textes secondaires |
-| `primary` | `#D7263D` rouge éphéméride | `#FF5C6C` | grand chiffre, onglet actif, boutons principaux |
+| `primary` | `#D3243B` rouge éphéméride (`#D7263D` sur la maquette, assombri d'un cran pour lire à 4,5:1 sur le fond, 4,42:1 avant) | `#FF5C6C` | grand chiffre, onglet actif, boutons principaux |
+| `secondaryContainer` | `#F9E1E4` (rouge à 14 %) | `#45222A` (rouge à 20 %) | onglet actif, puce « Chiffre rond » |
+| `onSecondaryContainer` | `#B01F33` | `#EDEAF2` | texte de la puce « Chiffre rond » |
+| silhouette de l'utilisateur | `#D3243B` | `#FF5C6C` | Équivalences, « Quel âge ? » (rouge comme le grand chiffre) |
+| silhouette de l'autre personne | `#1F6FB2` | `#6CB4FF` | Équivalences, « Quel âge ? » |
+| anneaux de reliure | `#C9C4CF` | `#4A4452` | ornement de la feuille du jour |
 | `outline` | `#D9D5DE` | `#3A3542` | bordures fines, perforation |
+
+Contrastes vérifiés par `ContrastTest`. Sur le widget, le nombre est dessiné une fois en `#D3243B`, lisible sur la feuille claire et la feuille sombre (au moins 3:1).
 
 ### 3. Couleurs des familles d'événements
 Une pastille de couleur (point de 8 dp et puce de filtre) indique la famille de chaque événement. Couleurs choisies pour rester lisibles sur les deux fonds et ne pas reprendre le rouge `primary`.
@@ -147,7 +154,7 @@ Les polices sont **embarquées** dans l'application (ressources Compose, licence
 * **Interface et textes (tous les styles) :** `Atkinson Hyperlegible`, conçue pour la lisibilité, y compris aux grandes tailles de police du système.
 * **Polaroïd (V1) :** `Caveat` (manuscrite) pour les nombres d'années, le titre et la légende de la photo, le nom de l'application et les titres de section. Jamais en dessous de 20 sp, pour rester lisible.
 * **VHS (jalon 14) :** `Bungee` (capitales d'enseigne) pour les nombres d'années, le nom de l'application et les titres d'écran ; `VT323` (police de terminal) pour le compteur, « ● REC », « ▶ PLAY », la date de l'étiquette, la puce « CHIFFRE ROND » et les titres de section ; `Permanent Marker` (feutre) pour le titre de l'étiquette. Bungee et VT323 sous licence SIL OFL, Permanent Marker sous licence Apache 2.0 (`licenses/`).
-* **Éphéméride (après la V1) :** `Big Shoulders Display` (gras, condensée), le style des chiffres d'éphéméride, pour le grand chiffre, les nombres d'années et les titres d'écran.
+* **Éphéméride (jalon 15) :** `Big Shoulders Display` (noire pour les chiffres, grasse pour « ans », condensée), le style des chiffres d'éphéméride, pour le grand chiffre, les nombres d'années et les titres d'écran ; les titres de section en `Atkinson Hyperlegible`, petites capitales espacées. Sous licence SIL OFL (`licenses/`).
 * **Échelle (sp)** : grand chiffre 96 (téléphone) / 120 (PC) ; titre d'écran 28 ; titre d'événement 20 ; texte 16 ; libellé 13 (majuscules, espacement des lettres 0,06 em).
 
 ### 6. Nom et icône (décision du 15/11/2026)
@@ -214,7 +221,7 @@ Quatre destinations, dans cet ordre :
 Une seule animation marquante, à l'ouverture de l'écran Aujourd'hui, une fois par jour (pas à chaque retour sur l'écran) :
 * **Polaroïd (V1)** : la photo du jour **se développe** en 1,6 s : l'aplat de couleur apparaît peu à peu sur le blanc, puis l'écriture (décision du 15/11/2026, codée au jalon 9, à juger à l'écran). Une fois par jour et par lancement de l'application.
 * **VHS (jalon 14)** : le compteur de bande défile de `00:00:00` jusqu'au nombre d'années en 1,6 s, aux mêmes conditions que la photo du Polaroïd.
-* **Éphéméride (après la V1)** : la feuille de la veille s'arrache vers le haut et laisse apparaître celle du jour.
+* **Éphéméride (jalon 15)** : la feuille de la veille (avec sa date) s'arrache vers le haut depuis la ligne de perforation, en tournant un peu et en s'effaçant, et laisse apparaître celle du jour : 0,3 s d'attente puis 1,3 s, aux mêmes conditions que la photo du Polaroïd.
 
 Le reste se limite aux transitions standard de Material 3.
 

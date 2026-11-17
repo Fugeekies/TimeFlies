@@ -180,6 +180,7 @@
     <string name="settings_style_help">Le style de toute l'application et du widget. Le VHS est toujours sombre.</string>
     <string name="style_polaroid">Polaroïd</string>
     <string name="style_vhs">VHS</string>
+    <string name="style_ephemeris">Éphéméride</string>
     <string name="settings_region">Région</string>
     <string name="region_fr">France</string>
     <string name="settings_about">À PROPOS</string>

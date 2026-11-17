@@ -62,7 +62,7 @@ import kotlinx.coroutines.flow.first
 
 /**
  * The home screen widget (docs/UISpec/AndroidWidget.template.md): the same "coup de vieux" as the Today screen,
- * on a little Polaroïd or VHS label (the chosen style), in three sizes. Its state keeps the sheet shown by the "next"
+ * on a little Polaroïd, VHS label or calendar page (the chosen style), in three sizes. Its state keeps the sheet shown by the "next"
  * button and a refresh counter.
  */
 class TimeFliesWidget : GlanceAppWidget() {
@@ -91,8 +91,12 @@ class TimeFliesWidget : GlanceAppWidget() {
         val content = WidgetTexts.of(shock, settings.onboardingDone)
         val style = settings.displayStyle
         val palette = WidgetPalette.of(false, style)
-        // Bungee is much wider than Caveat: smaller for the same room.
-        val size = if (style == DisplayStyle.VHS) VHS_NUMBER_SIZE else NUMBER_SIZE
+        // Bungee is much wider than Caveat, Big Shoulders Display much narrower: each its own size for the same room.
+        val size = when (style) {
+            DisplayStyle.POLAROID -> NUMBER_SIZE
+            DisplayStyle.VHS -> VHS_NUMBER_SIZE
+            DisplayStyle.EPHEMERIS -> EPHEMERIS_NUMBER_SIZE
+        }
         Loaded(content, content.sheets.map { Handwriting.bitmap(context, it.years, size.value, palette.number, style) }, style)
     } catch (e: CancellationException) {
         throw e
@@ -160,16 +164,18 @@ class TimeFliesWidget : GlanceAppWidget() {
 
     /**
      * The little sheet of the day: a Polaroïd in the colour of the decade with the years written by hand, or the
-     * white label of the VHS tape with the years in magenta.
+     * white label of the VHS tape with the years in magenta, or a calendar page with the years in red.
      */
     @Composable
     private fun MiniSheet(sheet: WidgetSheet, number: Bitmap, style: DisplayStyle) {
-        val paper = when (style) {
-            DisplayStyle.POLAROID -> Era.of(sheet.eventYear).frame
-            DisplayStyle.VHS -> WidgetPalette.of(true, style).paper
+        val paper: androidx.glance.unit.ColorProvider = when (style) {
+            DisplayStyle.POLAROID -> FixedColorProvider(Era.of(sheet.eventYear).frame)
+            DisplayStyle.VHS -> FixedColorProvider(WidgetPalette.of(true, style).paper)
+            // The white page, dark in the dark theme like the app.
+            DisplayStyle.EPHEMERIS -> ColorProvider(WidgetPalette.of(false, style).paper, WidgetPalette.of(true, style).paper)
         }
         Box(
-            GlanceModifier.background(FixedColorProvider(paper)).cornerRadius(4.dp).padding(horizontal = 8.dp, vertical = 4.dp),
+            GlanceModifier.background(paper).cornerRadius(4.dp).padding(horizontal = 8.dp, vertical = 4.dp),
             contentAlignment = Alignment.Center,
         ) {
             Image(ImageProvider(number), contentDescription = sheet.years)
@@ -189,7 +195,7 @@ class TimeFliesWidget : GlanceAppWidget() {
         }
     }
 
-    /** Colours of the chosen style: the Polaroïd light or dark following the system, the VHS always dark. */
+    /** Colours of the chosen style: the Polaroïd and the Éphéméride light or dark following the system, the VHS always dark. */
     private class Colors private constructor(light: WidgetPalette, dark: WidgetPalette) {
         val background = ColorProvider(light.background, dark.background)
         val onBackground = ColorProvider(light.onBackground, dark.onBackground)
@@ -199,10 +205,12 @@ class TimeFliesWidget : GlanceAppWidget() {
         companion object {
             private val polaroid = Colors(WidgetPalette.of(false), WidgetPalette.of(true))
             private val vhs = WidgetPalette.of(true, DisplayStyle.VHS).let { Colors(it, it) }
+            private val ephemeris = Colors(WidgetPalette.of(false, DisplayStyle.EPHEMERIS), WidgetPalette.of(true, DisplayStyle.EPHEMERIS))
 
             fun of(style: DisplayStyle): Colors = when (style) {
                 DisplayStyle.POLAROID -> polaroid
                 DisplayStyle.VHS -> vhs
+                DisplayStyle.EPHEMERIS -> ephemeris
             }
         }
     }
@@ -218,6 +226,9 @@ class TimeFliesWidget : GlanceAppWidget() {
 
         /** Size of the number in Bungee on the VHS label. */
         private val VHS_NUMBER_SIZE = 22.sp
+
+        /** Size of the number in Big Shoulders Display on the Éphéméride page. */
+        private val EPHEMERIS_NUMBER_SIZE = 34.sp
 
         /** Sheet shown by the "next" button; it grows and is read modulo the number of sheets. */
         val SHEET = intPreferencesKey("sheet")

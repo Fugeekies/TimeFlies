@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Style Éphéméride, comme sur la maquette : Aujourd'hui en page de calendrier à arracher (anneaux de reliure, ligne de perforation, grand chiffre rouge en Big Shoulders Display), la feuille de la veille arrachée vers le haut une fois par jour, cartes à bordure fine ; clair ou sombre selon le système. Troisième choix de Réglages › Affichage et du widget Android.
 - Style VHS, comme sur la maquette : Aujourd'hui en cassette (« ● REC », compteur de bande, bobines, étiquette inclinée à lignes de balayage), âges en Bungee, titres de section « » BIENTÔT… », couleurs saturées sur fond sombre. Le VHS est toujours sombre.
 - Réglages › Affichage : choix du style, Polaroïd ou VHS, avec un aperçu de chaque feuille ; il s'applique aussitôt à toute l'application et au widget Android.
 - Filtre des événements : Réglages › Événements, un arbre famille › type › origine › sous-catégorie à cocher (exemple : garder le rap français sans le rap US) ; ce qui est décoché n'apparaît plus nulle part (Aujourd'hui, widget, notification Windows, Équivalences, « Quel âge ? »).

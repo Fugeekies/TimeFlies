@@ -9,11 +9,11 @@ Maquettes visuelles de TimeFlies, dessinées le 13/11/2026 à partir des spécif
 
 ## Styles d'affichage
 
-| Polaroïd (V1) | Éphéméride (après le VHS) | VHS (jalon 14) |
+| Polaroïd (V1) | Éphéméride (jalon 15) | VHS (jalon 14) |
 |---|---|---|
 | ![Aujourd'hui, Polaroïd](android/TodayPolaroid.png) | ![Aujourd'hui, Éphéméride](android/Today.png) | ![Aujourd'hui, VHS](android/TodayVhs.png) |
 
-Décision du 13/11/2026 : la V1 n'a que le style **Polaroïd**, pour ses âges écrits à la main. Décision du 17/11/2026 : le **VHS** est fait au jalon 14, comme sur sa maquette, avant l'**Éphéméride**.
+Décision du 13/11/2026 : la V1 n'a que le style **Polaroïd**, pour ses âges écrits à la main. Décision du 17/11/2026 : le **VHS** est fait au jalon 14, comme sur sa maquette, avant l'**Éphéméride**, faite au jalon 15.
 
 ### Polaroïd : le cadre de la décennie (14/11/2026)
 
@@ -29,7 +29,7 @@ Les écrans ci-dessous sont dessinés en Éphéméride. Leur **mise en page** va
 |---|---|---|---|---|
 | ![Premier lancement](android/Onboarding.png) | ![Équivalences](android/Equivalences.png) | ![Mon équivalent](android/MyEquivalent.png) | ![Réglages](android/Settings.png) | ![Widget](android/Widget.png) |
 
-La maquette Réglages montre le choix des trois styles : depuis le jalon 14, il propose le Polaroïd et le VHS (voir [`Settings.template.md`](../UISpec/Settings.template.md)).
+La maquette Réglages montre le choix des trois styles : depuis le jalon 14, il propose le Polaroïd et le VHS, et l'Éphéméride depuis le jalon 15 (voir [`Settings.template.md`](../UISpec/Settings.template.md)).
 
 ## Windows (mise en page, dessinée en Éphéméride)
 

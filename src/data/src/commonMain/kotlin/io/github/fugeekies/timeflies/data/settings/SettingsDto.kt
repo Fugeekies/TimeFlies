@@ -42,7 +42,7 @@ internal data class SettingsDto(
     val releaseCheck: ReleaseCheckDto = ReleaseCheckDto(),
     /** Version 5: paths of the unticked event groups ("music/rap-album-hit/us"). */
     val excludedEventGroups: List<String> = emptyList(),
-    /** Version 6: the display style ("polaroid", "vhs"); an unknown value falls back to the Polaroïd. */
+    /** Version 6: the display style ("polaroid", "vhs", "ephemeride" since milestone 15); an unknown value falls back to the Polaroïd. */
     val style: String = DisplayStyle.POLAROID.id,
 ) {
     /** The domain settings; values edited by hand outside their range fall back to safe ones. */

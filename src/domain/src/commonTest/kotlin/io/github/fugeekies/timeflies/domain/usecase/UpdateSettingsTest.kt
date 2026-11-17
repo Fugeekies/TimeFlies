@@ -120,5 +120,7 @@ class UpdateSettingsTest {
         assertEquals(DisplayStyle.POLAROID, repository.state.value.displayStyle, "Polaroïd by default")
         update.setDisplayStyle(DisplayStyle.VHS)
         assertEquals(DisplayStyle.VHS, repository.state.value.displayStyle)
+        update.setDisplayStyle(DisplayStyle.EPHEMERIS)
+        assertEquals(DisplayStyle.EPHEMERIS, repository.state.value.displayStyle)
     }
 }
