@@ -25,6 +25,13 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 15) Widget en style Éphéméride à voir sur l'émulateur (clair et sombre), et l'arrachage de la feuille à juger à l'écran.
 - [ ] (Jalon 16) Les quatre âges à voir sur un téléphone : cartes d'Équivalences à quatre colonnes et âges de « Quel âge ? » aux grandes tailles de police.
 
+### Jalon 17 — Interface traduite
+Décision du 17/11/2026 : l'interface est traduite dans les langues du guide d'utilisation (anglais, allemand, italien, espagnol, en plus du français de référence) ; les titres des événements viendront dans une PR à part.
+- [ ] Textes de l'interface dans `values-en`, `values-de`, `values-it` et `values-es`, avec les libellés du guide.
+- [ ] Dates longues et courtes dans l'ordre de chaque langue (« 2 November 2011 », « 2. November 2011 », « 2 de noviembre de 2011 »).
+- [ ] Réglages › Affichage › Langue : chaque langue écrite dans sa langue, la langue du système par défaut (le français si elle n'est pas disponible) ; appliquée aussitôt à l'application, au widget, à l'icône et à la notification Windows.
+- [ ] Guide d'utilisation : la ligne Langue dans les cinq langues.
+
 ## À faire : les données, par thème
 
 Chaque thème est un jalon à part, mené en parallèle du code dès que le jalon 2 (lecture des données) est terminé. Une PR par lot d'une cinquantaine d'événements, pour que les dates restent faciles à relire. Chaque événement est réel, daté au jour près et sourcé ([`EVENTS_DATA.md`](EVENTS_DATA.md)).
