@@ -16,6 +16,7 @@ Cada ajuste se guarda en cuanto cambia, sin botón de confirmar.
   - **Calendario de taco**: una hoja de calendario, con el número de años en una gran cifra roja.
   - Polaroid y Calendario de taco siguen el tema claro u oscuro de tu dispositivo.
 - **Región**: por ahora Francia; elige las fechas de estreno utilizadas.
+- **Idioma**: Français, English, Deutsch, Italiano o Español, cada uno escrito en su idioma. Por defecto, el de tu dispositivo si está disponible; si no, el francés. Cambia al momento toda la app, el widget y, en Windows, el icono y la notificación. Los títulos de los acontecimientos siguen por ahora en francés.
 
 ## Acontecimientos
 

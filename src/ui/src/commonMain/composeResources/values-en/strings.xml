@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Interface texts in English (milestone 17). French is the reference: values/strings.xml, same names and
+     placeholders. Compose resources take apostrophes as they are: no backslash before them. -->
+<resources>
+    <string name="app_name">TimeFlies</string>
+
+    <string name="nav_today">Today</string>
+    <string name="nav_equivalences">Equivalences</string>
+    <string name="nav_event_ages">How old?</string>
+    <string name="nav_settings">Settings</string>
+
+    <string name="loading">Loading…</string>
+    <string name="load_error">The events could not be read.</string>
+    <string name="round_chip">Round number</string>
+    <string name="vhs_play">▶ PLAY</string>
+    <string name="vhs_rec">● REC</string>
+    <string name="vhs_label_date">%1$s · SP</string>
+    <string name="decade_label">the</string>
+    <string name="decade_number">%1$ss</string>
+    <string name="also_today">Also today</string>
+    <string name="upcoming">Coming up…</string>
+    <string name="nothing_soon">Nothing today. Enjoy it, you are not getting older.</string>
+    <string name="kind_and_date">%1$s · %2$s</string>
+    <string name="kind_and_year">%1$s · %2$d</string>
+    <string name="family_and_year">%1$s · %2$d</string>
+    <string name="day_and_delay">%1$s · %2$s</string>
+    <plurals name="years_unit">
+        <item quantity="one">year</item>
+        <item quantity="other">years</item>
+    </plurals>
+    <plurals name="years_count">
+        <item quantity="one">%1$d year</item>
+        <item quantity="other">%1$d years</item>
+    </plurals>
+    <plurals name="in_days">
+        <item quantity="one">in %1$d day</item>
+        <item quantity="other">in %1$d days</item>
+    </plurals>
+    <plurals name="will_turn">
+        <item quantity="one">turns 1</item>
+        <item quantity="other">turns %1$d</item>
+    </plurals>
+    <plurals name="a11y_anniversary">
+        <item quantity="one">%2$s, %3$s, %1$d year ago.</item>
+        <item quantity="other">%2$s, %3$s, %1$d years ago.</item>
+    </plurals>
+
+    <plurals name="user_age_years">
+        <item quantity="one">You were %1$d.</item>
+        <item quantity="other">You were %1$d.</item>
+    </plurals>
+    <string name="user_age_under_one">You were less than a year old.</string>
+    <string name="user_age_birth_year">It was the year you were born.</string>
+    <plurals name="user_age_before_birth">
+        <item quantity="one">You were %1$s.</item>
+        <item quantity="other">You were %1$s.</item>
+    </plurals>
+
+    <string name="onboarding_title">The saddest game in the world</string>
+    <string name="onboarding_intro_1">For a 15-year-old, </string>
+    <string name="onboarding_intro_friends">Friends</string>
+    <string name="onboarding_intro_2"> is what </string>
+    <string name="onboarding_intro_happy_days">Happy Days</string>
+    <string name="onboarding_intro_3"> was for you. TimeFlies reminds you every day.</string>
+    <string name="onboarding_birth">YOUR BIRTH MONTH AND YEAR</string>
+    <string name="onboarding_start">Let's go</string>
+    <string name="onboarding_later">Later</string>
+    <string name="onboarding_privacy">Your birth month and year stay on this device.</string>
+
+    <string name="reduced_mode_message">Give your birth month and year to see your equivalences.</string>
+    <string name="open_settings">Open settings</string>
+
+    <string name="equivalences_title">Equivalences</string>
+    <string name="person_user">You</string>
+    <string name="person_number">Person %1$d</string>
+    <plurals name="equivalences_gap">
+        <item quantity="one">%1$d year apart</item>
+        <item quantity="other">%1$d years apart</item>
+    </plurals>
+    <string name="equivalences_gap_none">Less than a year apart</string>
+    <string name="equivalences_themes">Themes</string>
+    <plurals name="equivalences_themes_summary">
+        <item quantity="one">%1$d theme out of %2$d</item>
+        <item quantity="other">%1$d themes out of %2$d</item>
+    </plurals>
+    <string name="equivalences_check_all">Check all</string>
+    <string name="equivalences_uncheck_all">Uncheck all</string>
+    <string name="equivalences_temporary">Temporary ages</string>
+    <string name="equivalences_back_to_settings">Back to my settings</string>
+    <string name="equivalences_choose_ages">Choose ages</string>
+    <string name="equivalences_empty">No equivalence for these themes. Tick other themes or try another age.</string>
+    <string name="equivalences_small_gap">Careful: with such a small gap, the equivalences may not be representative.</string>
+    <string name="equivalences_age_temporary">Temporary age, not saved</string>
+    <string name="people_add">Add an age</string>
+    <string name="people_remove">Remove</string>
+    <string name="people_add_hint">Add up to 3 ages to compare, each with its own colour.</string>
+    <string name="equivalences_no_other">Add an age with "+" to see your equivalences.</string>
+    <string name="equivalences_a11y_none">%1$s: no equivalent.</string>
+    <string name="equivalences_a11y_person_age">%1$s, %2$s</string>
+    <string name="equivalences_a11y_side">%1$s: %2$s, %3$s, %4$s.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="person_age_under_one">less than a year old</string>
+    <string name="person_age_birth_year">the year they were born</string>
+
+    <string name="event_ages_title">How old?</string>
+    <string name="event_ages_search_hint">Search for a film, a series, an artist…</string>
+    <string name="event_ages_no_results">No event matches this search.</string>
+    <string name="event_ages_reduced">Give your birth month and year to see your age at each event.</string>
+    <string name="event_ages_a11y_line">%1$s: %2$s.</string>
+    <plurals name="years_signed">
+        <item quantity="one">%1$s year</item>
+        <item quantity="other">%1$s years</item>
+    </plurals>
+
+    <string name="nav_debug">Debug</string>
+    <string name="debug_title">Debug</string>
+    <string name="debug_date">TODAY'S DATE</string>
+    <string name="debug_date_system">%1$s (system clock)</string>
+    <string name="debug_date_fake">%1$s (fake date)</string>
+    <string name="debug_previous_day">− 1 day</string>
+    <string name="debug_next_day">+ 1 day</string>
+    <string name="debug_feb29">29 February 2028</string>
+    <string name="debug_feb28">28 February 2027</string>
+    <string name="debug_next_empty_day">Next day without an anniversary</string>
+    <string name="debug_date_input">YYYY-MM-DD</string>
+    <string name="debug_apply">Apply</string>
+    <string name="debug_invalid_date">Invalid date (YYYY-MM-DD).</string>
+    <string name="debug_system_clock">Back to the system clock</string>
+    <string name="debug_settings">FORCED SETTINGS</string>
+    <string name="debug_region_input">Region (ISO code, e.g. BE)</string>
+    <string name="debug_invalid_region">Invalid country code: two capital letters.</string>
+    <string name="debug_current_region">Region: %1$s</string>
+    <string name="debug_redo_onboarding">See the first launch again</string>
+    <string name="debug_reset_settings">Reset the settings to their defaults</string>
+    <string name="debug_theme">THEME</string>
+    <string name="debug_theme_system">System</string>
+    <string name="debug_theme_light">Light</string>
+    <string name="debug_theme_dark">Dark</string>
+    <string name="debug_theme_note">To try both themes: not saved, the app goes back to the system theme at the next launch.</string>
+    <string name="debug_stats">EVENT BASE</string>
+    <string name="debug_stats_count">Events: %1$d</string>
+    <string name="debug_stats_family">%1$s: %2$d</string>
+    <string name="debug_stats_empty_days">Days of the year without an anniversary: %1$d / 366</string>
+    <string name="debug_stats_poor_types">Types with fewer than %1$d events: %2$d</string>
+    <string name="debug_stats_rejections">Entries rejected by the validation: %1$d</string>
+    <string name="debug_refresh">Refresh</string>
+    <string name="debug_windows">WINDOWS</string>
+    <string name="debug_send_notification">Send the morning notification</string>
+    <string name="debug_widget">WIDGET</string>
+    <string name="debug_refresh_widget">Update the widget</string>
+    <string name="debug_refresh_widget_note">Recomputes every widget on the home screen right away, with today's date (real or fake).</string>
+    <string name="debug_send_notification_note">Right away, without waiting for the time; the morning notification will still be sent.</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_generations">GENERATIONS</string>
+    <string name="settings_birth">Your birth month and year</string>
+    <string name="settings_birth_value">%1$s %2$d · %3$s</string>
+    <string name="settings_birth_unset">Not given</string>
+    <string name="settings_birth_unset_help">Without it, TimeFlies shows the anniversaries without your age and cannot work out equivalences.</string>
+    <string name="settings_month">Month</string>
+    <string name="settings_year">Year</string>
+    <string name="settings_clear">Clear</string>
+    <string name="settings_display">DISPLAY</string>
+    <string name="settings_style">Style</string>
+    <string name="settings_style_help">The style of the whole app and of the widget. VHS is always dark.</string>
+    <string name="style_polaroid">Polaroid</string>
+    <string name="style_vhs">VHS</string>
+    <string name="style_ephemeris">Tear-off calendar</string>
+    <string name="settings_region">Region</string>
+    <string name="settings_language">Language</string>
+    <string name="region_fr">France</string>
+    <string name="settings_about">ABOUT</string>
+    <string name="about_version">TimeFlies v%1$s</string>
+    <string name="about_dev_version">TimeFlies · development version</string>
+    <string name="about_inspired_before">Inspired by the episode </string>
+    <string name="about_inspired_episode">Bloqués #108 - On est les vieux des jeunes</string>
+    <string name="about_inspired_after">.</string>
+    <plurals name="about_event_count">
+        <item quantity="one">%1$d event</item>
+        <item quantity="other">%1$d events</item>
+    </plurals>
+    <string name="about_source">Source code</string>
+    <string name="about_report">Report a wrong date</string>
+    <string name="about_license">GPL v3 licence</string>
+    <string name="about_third_party">Font and library licences</string>
+    <string name="about_privacy">No personal data leaves this device.</string>
+    <string name="settings_release_check">Check for new versions at startup</string>
+    <string name="settings_release_check_help">Once a day at most, TimeFlies asks GitHub for the latest published version. Nothing else is sent.</string>
+    <string name="update_available">New version: TimeFlies %1$s</string>
+    <string name="update_download">Download</string>
+    <string name="update_later">Later</string>
+    <string name="settings_windows">WINDOWS</string>
+    <string name="settings_launch_at_startup">Start TimeFlies when Windows starts</string>
+    <string name="settings_launch_at_startup_help">Needed for the taskbar icon and the morning notification.</string>
+    <string name="settings_morning_notification">Morning notification every day</string>
+    <string name="settings_notification_time">Notification time</string>
+    <string name="settings_keep_in_tray">Keep TimeFlies in the taskbar when I close the window</string>
+
+    <string name="settings_events">EVENTS</string>
+    <string name="settings_events_help">Untick what does not interest you: those events no longer appear anywhere, not on Today, not in the widget, not in the equivalences.</string>
+    <plurals name="event_count">
+        <item quantity="one">%1$d event</item>
+        <item quantity="other">%1$d events</item>
+    </plurals>
+    <string name="settings_events_expand">Expand %1$s</string>
+    <string name="settings_events_collapse">Collapse %1$s</string>
+    <string name="onboarding_events">WHAT INTERESTS YOU</string>
+    <string name="onboarding_events_families">Themes</string>
+    <string name="onboarding_events_origins">Origins</string>
+    <string name="onboarding_events_more">The details (US rap without French rap, for instance) are set in Settings › Events.</string>
+    <string-array name="origin_names">
+        <item>International</item>
+        <item>Argentina</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Canada</item>
+        <item>Germany</item>
+        <item>Spain</item>
+        <item>France</item>
+        <item>United Kingdom</item>
+        <item>Croatia</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Kenya</item>
+        <item>South Korea</item>
+        <item>Moldova</item>
+        <item>Puerto Rico</item>
+        <item>Portugal</item>
+        <item>Romania</item>
+        <item>Sweden</item>
+        <item>United States</item>
+    </string-array>
+    <string-array name="subcategory_names">
+        <item>Athletics</item>
+        <item>French chanson</item>
+        <item>Electro</item>
+        <item>Gymnastics</item>
+        <item>Swimming</item>
+        <item>Pop</item>
+        <item>Rap</item>
+        <item>Reggae</item>
+        <item>Rock</item>
+        <item>Soul</item>
+    </string-array>
+
+    <string name="settings_widget">HOME SCREEN</string>
+    <string name="settings_widget_text">Add the TimeFlies widget to your home screen to see how old you are getting, every day.</string>
+    <string name="settings_widget_add">Add the widget</string>
+    <string name="settings_widget_manual">Long press on the home screen › Widgets › TimeFlies</string>
+
+    <string name="widget_open_app">Open TimeFlies to get started.</string>
+    <string name="widget_next">Next anniversary</string>
+    <string name="widget_compact">%1$s · %2$s</string>
+
+    <string name="tray_tooltip_today">TimeFlies — %1$s: %2$s today</string>
+    <string name="tray_tooltip_upcoming">TimeFlies — %1$s: %2$s %3$s</string>
+    <string name="tray_open">Open TimeFlies</string>
+    <string name="tray_daily_shock">Today's reminder</string>
+    <string name="tray_quit">Quit</string>
+    <string name="tray_hint">TimeFlies stays in the taskbar. Right click on the icon › Quit to close it.</string>
+    <string name="notification_title_today">%1$s today</string>
+    <string name="notification_event">%1$s · %2$s, %3$s.</string>
+    <string name="notification_upcoming_title">%1$s %2$s</string>
+
+    <string name="kind_film_release">Cinema release</string>
+    <string name="kind_series_premiere">First broadcast</string>
+    <string name="kind_series_finale">Last episode</string>
+    <string name="kind_album_release">Album release</string>
+    <string name="kind_single_release">Single release</string>
+    <string name="kind_death">Death</string>
+    <string name="kind_product_launch">Release</string>
+    <string name="kind_game_release">Game release</string>
+    <string name="kind_sport">Victory</string>
+    <string name="kind_history">Event</string>
+    <string name="kind_election">Election</string>
+
+    <string name="family_series_tv">Series &amp; TV</string>
+    <string name="family_cinema">Cinema</string>
+    <string name="family_music">Music</string>
+    <string name="family_sport">Sport</string>
+    <string name="family_games_tech">Video games &amp; tech</string>
+    <string name="family_history">Politics &amp; history</string>
+
+    <string name="type_sitcom_hit">Cult sitcom</string>
+    <string name="type_drama_series_hit">Cult drama series</string>
+    <string name="type_french_series_hit">Cult French series</string>
+    <string name="type_reality_tv">Reality TV</string>
+    <string name="type_kids_tv_show">Children's TV show</string>
+    <string name="type_cartoon_on_tv">Cult TV cartoon</string>
+    <string name="type_blockbuster">Blockbuster</string>
+    <string name="type_animated_feature">Family animated film</string>
+    <string name="type_french_comedy_hit">Hit French comedy</string>
+    <string name="type_saga_episode">Episode of a cult saga</string>
+    <string name="type_music_icon_death">Death of a music icon</string>
+    <string name="type_diva_hit">Diva's hit</string>
+    <string name="type_boy_band_hit">Boy band hit</string>
+    <string name="type_rap_album_hit">Cult rap album</string>
+    <string name="type_summer_hit">Summer hit</string>
+    <string name="type_pop_album_hit">Cult pop album</string>
+    <string name="type_football_star_peak">Football star at their peak</string>
+    <string name="type_world_cup_win_france">France wins the World Cup</string>
+    <string name="type_olympics_in_france">Olympic Games in France</string>
+    <string name="type_sports_record">Sports record</string>
+    <string name="type_nintendo_console">Nintendo console</string>
+    <string name="type_playstation_console">PlayStation console</string>
+    <string name="type_handheld_console">Handheld console</string>
+    <string name="type_video_game_phenomenon">Video game phenomenon</string>
+    <string name="type_phone_launch">Phone launch</string>
+    <string name="type_social_network_launch">Social network launch</string>
+    <string name="type_music_format">Music format</string>
+    <string name="type_french_president_elected">French presidential election</string>
+    <string name="type_us_president_elected">US presidential election</string>
+    <string name="type_actor_turned_politician">Actor turned politician</string>
+    <string name="type_world_event">Major world event</string>
+    <string name="type_royal_event">Royal event</string>
+
+    <string name="date_long">{d} {m} {y}</string>
+    <string name="date_day_and_month">{w} {d} {m}</string>
+    <string name="date_with_day_name">{w} {date}</string>
+    <string name="date_short">{dd}/{mm}/{y}</string>
+    <string name="first_of_month">1</string>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+</resources>

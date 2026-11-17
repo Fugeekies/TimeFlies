@@ -5,6 +5,10 @@ import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.ui.resources.Res
+import io.github.fugeekies.timeflies.ui.resources.date_day_and_month
+import io.github.fugeekies.timeflies.ui.resources.date_long
+import io.github.fugeekies.timeflies.ui.resources.date_short
+import io.github.fugeekies.timeflies.ui.resources.date_with_day_name
 import io.github.fugeekies.timeflies.ui.resources.days
 import io.github.fugeekies.timeflies.ui.resources.family_cinema
 import io.github.fugeekies.timeflies.ui.resources.family_games_tech
@@ -71,6 +75,8 @@ import kotlinx.datetime.LocalDate
 import kotlinx.datetime.isoDayNumber
 import kotlinx.datetime.number
 import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.getString
+import org.jetbrains.compose.resources.getStringArray
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
 import org.jetbrains.compose.resources.stringResource
@@ -118,23 +124,48 @@ private fun familyResource(family: Family): StringResource = when (family) {
 }
 
 /**
- * Long dates in the interface language: "2 novembre 2011", "lundi 2 novembre 2026", "1er mai 1991".
- * Names come from the string resources, so the same code serves every language (docs/ARCHITECTURE.md).
+ * The order of the parts of a date in one language, from the string resources (milestone 17): `{d}` the day of the
+ * month ("1er" for the first in French), `{m}` the month, `{y}` the year, `{w}` the day of the week, `{date}` the long
+ * date, `{dd}` and `{mm}` the day and month on two digits.
+ *
+ * @property long "2 novembre 2011", "2 November 2011", "2. November 2011", "2 de noviembre de 2011".
+ * @property dayAndMonth "lundi 2 novembre", "Montag, 2. November".
+ * @property withDayName "lundi 2 novembre 2026", "Montag, 2. November 2026".
+ * @property short the lists: "02/11/2011", "02.11.2011".
  */
-class DateTexts(private val months: List<String>, private val days: List<String>, private val firstOfMonth: String) {
-    fun long(date: LocalDate): String = "${dayNumber(date)} ${months[date.month.number - 1]} ${date.year}"
+data class DatePatterns(val long: String, val dayAndMonth: String, val withDayName: String, val short: String) {
+    companion object {
+        /** The French reference, the default of the tests. */
+        val FRENCH = DatePatterns(long = "{d} {m} {y}", dayAndMonth = "{w} {d} {m}", withDayName = "{w} {date}", short = "{dd}/{mm}/{y}")
+    }
+}
+
+/**
+ * Dates in the interface language: "2 novembre 2011", "lundi 2 novembre 2026", "1er mai 1991". Names and the order of
+ * the parts come from the string resources, so the same code serves every language (docs/ARCHITECTURE.md).
+ */
+class DateTexts(
+    private val months: List<String>,
+    private val days: List<String>,
+    private val firstOfMonth: String,
+    private val patterns: DatePatterns = DatePatterns.FRENCH,
+) {
+    fun long(date: LocalDate): String = fill(patterns.long, date)
 
     /** Short date of the lists: "02/11/2011" (docs/UI_DESIGN_SPEC.md, "Langues et formats"). */
-    fun short(date: LocalDate): String =
-        "${date.day.toString().padStart(2, '0')}/${date.month.number.toString().padStart(2, '0')}/${date.year}"
+    fun short(date: LocalDate): String = fill(patterns.short, date)
 
-    fun dayAndMonth(date: LocalDate): String = "${dayName(date)} ${dayNumber(date)} ${months[date.month.number - 1]}"
+    fun dayAndMonth(date: LocalDate): String = fill(patterns.dayAndMonth, date)
 
-    fun withDayName(date: LocalDate): String = "${dayName(date)} ${long(date)}"
+    fun withDayName(date: LocalDate): String = fill(patterns.withDayName.replace("{date}", patterns.long), date)
 
-    private fun dayName(date: LocalDate) = days[date.dayOfWeek.isoDayNumber - 1]
-
-    private fun dayNumber(date: LocalDate) = if (date.day == 1) firstOfMonth else date.day.toString()
+    private fun fill(pattern: String, date: LocalDate): String = pattern
+        .replace("{dd}", date.day.toString().padStart(2, '0'))
+        .replace("{mm}", date.month.number.toString().padStart(2, '0'))
+        .replace("{d}", if (date.day == 1) firstOfMonth else date.day.toString())
+        .replace("{m}", months[date.month.number - 1])
+        .replace("{w}", days[date.dayOfWeek.isoDayNumber - 1])
+        .replace("{y}", date.year.toString())
 }
 
 @Composable
@@ -142,6 +173,25 @@ fun rememberDateTexts(): DateTexts = DateTexts(
     months = stringArrayResource(Res.array.months),
     days = stringArrayResource(Res.array.days),
     firstOfMonth = stringResource(Res.string.first_of_month),
+    patterns = DatePatterns(
+        long = stringResource(Res.string.date_long),
+        dayAndMonth = stringResource(Res.string.date_day_and_month),
+        withDayName = stringResource(Res.string.date_with_day_name),
+        short = stringResource(Res.string.date_short),
+    ),
+)
+
+/** The same outside a screen (widget, tray, notifications), in the current language. */
+suspend fun loadDateTexts(): DateTexts = DateTexts(
+    months = getStringArray(Res.array.months),
+    days = getStringArray(Res.array.days),
+    firstOfMonth = getString(Res.string.first_of_month),
+    patterns = DatePatterns(
+        long = getString(Res.string.date_long),
+        dayAndMonth = getString(Res.string.date_day_and_month),
+        withDayName = getString(Res.string.date_with_day_name),
+        short = getString(Res.string.date_short),
+    ),
 )
 
 /** Capitalises the first letter, for a date at the start of a line ("Lundi 2 novembre"). */

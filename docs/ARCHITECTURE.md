@@ -137,8 +137,9 @@ Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APP
 
 - **Textes** : ressources Compose Multiplatform, français de référence dans `composeResources/values/strings.xml`, traductions dans `values-<langue>/strings.xml`. Accords avec `<plurals>` (« 1 an », « 15 ans ») et `pluralStringResource`. Aucun texte écrit en dur dans un écran.
 - **Titres des événements** : traduits dans le JSON (`title: {"fr": …, "en": …}`), avec repli sur `fr`.
-- **Dates longues** (« 2 novembre 2011 ») : petit formateur propre à l'application, avec les noms des jours et des mois dans les `strings.xml` et l'ordre des éléments par langue. Même rendu sur Android et Windows, et testable (`kotlinx-datetime` ne formate pas selon la langue).
-- **Changer de langue dans l'application** : inutile en V1 (français seulement). Au jalon « Traductions », la langue choisie s'appliquera au démarrage (API de langue par application sur Android, `Locale.setDefault` sur Windows), à détailler alors.
+- **Dates** (« 2 novembre 2011 », « 2. November 2011 », « 2 de noviembre de 2011 », « 02/11/2011 ») : petit formateur propre à l'application (`DateTexts`), avec les noms des jours et des mois et l'ordre des éléments par langue (`date_long`, `date_day_and_month`, `date_with_day_name`, `date_short`) dans les `strings.xml`. Même rendu sur Android et Windows, et testable (`kotlinx-datetime` ne formate pas selon la langue).
+- **Langues** (jalon 17, décision du 17/11/2026) : français de référence, anglais, allemand, italien et espagnol (`AppLanguage` dans `domain`). `TranslationTest` vérifie que chaque langue a tous les textes, avec les mêmes paramètres.
+- **Changer de langue dans l'application** (jalon 17) : Réglages › Affichage › Langue, gardé dans `settings.json` (`language`, version 8) ; sans choix, la langue du système si elle est proposée, sinon le français. Les ressources Compose lisent la langue par défaut du processus, à l'écran comme dans le widget, l'icône et la notification : `AppLocale` (une version par plateforme) la règle avec `Locale.setDefault` (et `LocaleList.setDefault` sur Android) avant toute lecture de texte, puis la racine de l'application relit tous les textes (`key(language)`) en gardant l'écran affiché et les âges ajoutés. Le changement s'applique aussitôt, sans redémarrer.
 
 ## Parties propres à chaque plateforme
 

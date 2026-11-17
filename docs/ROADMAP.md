@@ -24,13 +24,7 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 14) Widget en style VHS à voir sur l'émulateur, et les deux styles sur l'application installée.
 - [ ] (Jalon 15) Widget en style Éphéméride à voir sur l'émulateur (clair et sombre), et l'arrachage de la feuille à juger à l'écran.
 - [ ] (Jalon 16) Les quatre âges à voir sur un téléphone : cartes d'Équivalences à quatre colonnes et âges de « Quel âge ? » aux grandes tailles de police.
-
-### Jalon 17 — Interface traduite
-Décision du 17/11/2026 : l'interface est traduite dans les langues du guide d'utilisation (anglais, allemand, italien, espagnol, en plus du français de référence) ; les titres des événements viendront dans une PR à part.
-- [ ] Textes de l'interface dans `values-en`, `values-de`, `values-it` et `values-es`, avec les libellés du guide.
-- [ ] Dates longues et courtes dans l'ordre de chaque langue (« 2 November 2011 », « 2. November 2011 », « 2 de noviembre de 2011 »).
-- [ ] Réglages › Affichage › Langue : chaque langue écrite dans sa langue, la langue du système par défaut (le français si elle n'est pas disponible) ; appliquée aussitôt à l'application, au widget, à l'icône et à la notification Windows.
-- [ ] Guide d'utilisation : la ligne Langue dans les cinq langues.
+- [ ] (Jalon 17) Les cinq langues à voir sur un téléphone (widget compris) et sur l'application installée (menu de l'icône, notification) ; textes allemands et espagnols longs aux grandes tailles de police. Faire relire les traductions par des personnes dont c'est la langue.
 
 ## À faire : les données, par thème
 
@@ -77,8 +71,8 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 ## Après la V1
 
 ### Jalon — Traductions et régions
-- [ ] Interface en anglais, en plus du français de référence.
-- [ ] Titres des événements en anglais quand ils diffèrent.
+- [x] Interface en anglais, en plus du français de référence : fait au jalon 17, avec l'allemand, l'italien et l'espagnol.
+- [ ] Titres des événements traduits quand ils diffèrent (anglais, allemand, italien, espagnol), dans une PR à part du jalon 17.
 - [ ] Événements pour d'autres régions du monde : dates régionales (`regionalDates`) sourcées pour les pays visés, et événements propres à ces pays.
 - [ ] Choix de la région dans Réglages (liste des pays dans la langue de l'interface, région du système par défaut) : en V1, France seulement (décision du 15/11/2026).
 
@@ -226,3 +220,11 @@ Décisions du 17/11/2026 : « Quel âge ? » passe en deuxième position, devant
 - [x] Équivalences : une carte par événement de l'utilisateur, avec l'équivalent de chaque âge ajouté côte à côte (« — » s'il n'y en a pas), colonnes compactes à partir de trois ; tri par tes événements, « Inverser » et « Modifier » disparaissent.
 - [x] `domain` : `GetEquivalences(userBirth, otherBirths, …)`, `Equivalence(user, others)`, `GetEventAges(event, births)`, `Generations.MAX_OTHER_PEOPLE`. `data` : `settings.json` en version 7, sans `otherAge` ni `equivalencesReversed`. Tests.
 - [x] Benchmark d'Équivalences avec trois âges ([rapport du 17/11/2026](benchmarks/performance-2026-11-17.md) : 0,8 ms sur la base réelle, 16 ms à 5 000 événements).
+
+### Jalon 17 — Interface traduite — 17/11/2026 · PR [#31](https://github.com/Fugeekies/TimeFlies/pull/31)
+Décision du 17/11/2026 : l'interface est traduite dans les langues du guide d'utilisation (anglais, allemand, italien, espagnol, en plus du français de référence) ; les titres des événements viendront dans une PR à part.
+- [x] Textes de l'interface dans `values-en`, `values-de`, `values-it` et `values-es` (tous les textes, panneau de débogage compris), avec les libellés du guide ; description du widget Android traduite aussi. `TranslationTest` : mêmes textes, mêmes paramètres, listes de même longueur.
+- [x] Dates dans l'ordre de chaque langue (« 2 November 2011 », « 2. November 2011 », « 2 de noviembre de 2011 », « 02.11.2011 ») : `DatePatterns` lu dans les ressources, `DateTextsTest`. Tampon de décennie du Polaroïd traduisible (« the 70s », « die 70er »).
+- [x] `domain` : `AppLanguage` (choix, sinon langue du système si proposée, sinon français), `Settings.language`, `UpdateSettings.setLanguage`. `data` : `settings.json` en version 8 (`language`). Tests.
+- [x] Réglages › Affichage › Langue : chaque langue écrite dans sa langue ; appliquée aussitôt à l'application (écran affiché et âges ajoutés gardés), au widget, à l'icône et à la notification Windows (`AppLocale`).
+- [x] Guide d'utilisation : la ligne Langue dans les cinq langues.

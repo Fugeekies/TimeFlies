@@ -5,10 +5,8 @@ import io.github.fugeekies.timeflies.domain.model.DailyShock
 import io.github.fugeekies.timeflies.domain.rules.WidgetSheets
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.days
-import io.github.fugeekies.timeflies.ui.resources.first_of_month
 import io.github.fugeekies.timeflies.ui.resources.in_days
 import io.github.fugeekies.timeflies.ui.resources.kind_and_year
-import io.github.fugeekies.timeflies.ui.resources.months
 import io.github.fugeekies.timeflies.ui.resources.nothing_soon
 import io.github.fugeekies.timeflies.ui.resources.widget_compact
 import io.github.fugeekies.timeflies.ui.resources.widget_next
@@ -17,7 +15,6 @@ import io.github.fugeekies.timeflies.ui.resources.years_count
 import kotlinx.datetime.daysUntil
 import org.jetbrains.compose.resources.getPluralString
 import org.jetbrains.compose.resources.getString
-import org.jetbrains.compose.resources.getStringArray
 
 /**
  * One sheet of the Android widget (docs/UISpec/AndroidWidget.template.md, "Contenu").
@@ -56,7 +53,7 @@ object WidgetTexts {
         if (!onboardingDone) return WidgetContent(emptyList(), getString(Res.string.widget_open_app), nextLabel)
         val sheets = WidgetSheets.of(shock)
         if (sheets.isEmpty()) return WidgetContent(emptyList(), getString(Res.string.nothing_soon), nextLabel)
-        val dates = DateTexts(getStringArray(Res.array.months), getStringArray(Res.array.days), getString(Res.string.first_of_month))
+        val dates = loadDateTexts()
         val eyebrow = if (shock.mainInDays == 0) dates.dayAndMonth(shock.today) else ShockMessages.inDays(shock.mainInDays)
         return WidgetContent(
             sheets = sheets.mapIndexed { index, anniversary ->

@@ -2,19 +2,19 @@ package io.github.fugeekies.timeflies.desktop
 
 import co.touchlab.kermit.Logger
 import io.github.fugeekies.timeflies.domain.model.DailyShock
-import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SendMorningNotification
 import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
+import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.ui.text.ShockMessages
+import io.github.fugeekies.timeflies.ui.text.apply
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.merge
-import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -36,8 +36,8 @@ class TrayUpdater(
 ) {
     private val log = Logger.withTag("Tray")
 
-    /** Day, region and event filter of the tooltip shown, to recompute it only when one of them changes. */
-    private var tooltipFor: Triple<LocalDate, Region, Set<String>>? = null
+    /** Day, region, event filter and language of the tooltip shown, to recompute it only when one of them changes. */
+    private var tooltipFor: List<Any?>? = null
 
     /** Runs until cancelled, when the app quits. */
     suspend fun run(tray: WindowsTray) {
@@ -47,13 +47,18 @@ class TrayUpdater(
     /** "Coup de vieux du jour" in the menu and the debug panel: today's notification at once, the morning one still due. */
     suspend fun sendNow(tray: WindowsTray) {
         log.d { "Coup de vieux du jour demandé" }
-        guarded("La notification n'a pas pu être envoyée") { notify(tray, sendMorningNotification.now()) }
+        guarded("La notification n'a pas pu être envoyée") {
+            AppLocale.apply(observeSettings().first().language)
+            notify(tray, sendMorningNotification.now())
+        }
     }
 
     private suspend fun check(tray: WindowsTray) {
         guarded("L'icône n'a pas pu être mise à jour") {
             val settings = observeSettings().first()
-            val key = Triple(clock.today(), settings.region, settings.excludedEventGroups)
+            // The tray may run before any window: its texts follow the language chosen in Settings too (milestone 17).
+            AppLocale.apply(settings.language)
+            val key = listOf(clock.today(), settings.region, settings.excludedEventGroups, settings.language)
             if (key != tooltipFor) {
                 tray.setTooltip(ShockMessages.tooltip(sendMorningNotification.now()))
                 tooltipFor = key

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Interface texts in Spanish (milestone 17). French is the reference: values/strings.xml, same names and
+     placeholders. Compose resources take apostrophes as they are: no backslash before them. -->
+<resources>
+    <string name="app_name">TimeFlies</string>
+
+    <string name="nav_today">Hoy</string>
+    <string name="nav_equivalences">Equivalencias</string>
+    <string name="nav_event_ages">¿Qué edad?</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <string name="loading">Cargando…</string>
+    <string name="load_error">No se han podido leer los acontecimientos.</string>
+    <string name="round_chip">Número redondo</string>
+    <string name="vhs_play">▶ PLAY</string>
+    <string name="vhs_rec">● REC</string>
+    <string name="vhs_label_date">%1$s · SP</string>
+    <string name="decade_label">años</string>
+    <string name="decade_number">%1$s</string>
+    <string name="also_today">También hoy</string>
+    <string name="upcoming">Próximamente…</string>
+    <string name="nothing_soon">Nada hoy. Disfruta, no te haces mayor.</string>
+    <string name="kind_and_date">%1$s · %2$s</string>
+    <string name="kind_and_year">%1$s · %2$d</string>
+    <string name="family_and_year">%1$s · %2$d</string>
+    <string name="day_and_delay">%1$s · %2$s</string>
+    <plurals name="years_unit">
+        <item quantity="one">año</item>
+        <item quantity="other">años</item>
+    </plurals>
+    <plurals name="years_count">
+        <item quantity="one">%1$d año</item>
+        <item quantity="other">%1$d años</item>
+    </plurals>
+    <plurals name="in_days">
+        <item quantity="one">dentro de %1$d día</item>
+        <item quantity="other">dentro de %1$d días</item>
+    </plurals>
+    <plurals name="will_turn">
+        <item quantity="one">cumplirá 1 año</item>
+        <item quantity="other">cumplirá %1$d años</item>
+    </plurals>
+    <plurals name="a11y_anniversary">
+        <item quantity="one">%2$s, %3$s, hace %1$d año.</item>
+        <item quantity="other">%2$s, %3$s, hace %1$d años.</item>
+    </plurals>
+
+    <plurals name="user_age_years">
+        <item quantity="one">Tenías %1$d año.</item>
+        <item quantity="other">Tenías %1$d años.</item>
+    </plurals>
+    <string name="user_age_under_one">Tenías menos de un año.</string>
+    <string name="user_age_birth_year">Fue el año de tu nacimiento.</string>
+    <plurals name="user_age_before_birth">
+        <item quantity="one">Tenías %1$s año.</item>
+        <item quantity="other">Tenías %1$s años.</item>
+    </plurals>
+
+    <string name="onboarding_title">El juego más triste del mundo</string>
+    <string name="onboarding_intro_1">Para un chaval de 15 años, </string>
+    <string name="onboarding_intro_friends">Friends</string>
+    <string name="onboarding_intro_2"> es lo que </string>
+    <string name="onboarding_intro_happy_days">Happy Days</string>
+    <string name="onboarding_intro_3"> era para ti. TimeFlies te lo recuerda cada día.</string>
+    <string name="onboarding_birth">TU MES Y AÑO DE NACIMIENTO</string>
+    <string name="onboarding_start">¡Vamos!</string>
+    <string name="onboarding_later">Más tarde</string>
+    <string name="onboarding_privacy">Tu mes y año de nacimiento se quedan en este dispositivo.</string>
+
+    <string name="reduced_mode_message">Indica tu mes y año de nacimiento para ver tus equivalencias.</string>
+    <string name="open_settings">Abrir los ajustes</string>
+
+    <string name="equivalences_title">Equivalencias</string>
+    <string name="person_user">Tú</string>
+    <string name="person_number">Persona %1$d</string>
+    <plurals name="equivalences_gap">
+        <item quantity="one">%1$d año de diferencia</item>
+        <item quantity="other">%1$d años de diferencia</item>
+    </plurals>
+    <string name="equivalences_gap_none">Menos de un año de diferencia</string>
+    <string name="equivalences_themes">Temas</string>
+    <plurals name="equivalences_themes_summary">
+        <item quantity="one">%1$d tema de %2$d</item>
+        <item quantity="other">%1$d temas de %2$d</item>
+    </plurals>
+    <string name="equivalences_check_all">Marcar todo</string>
+    <string name="equivalences_uncheck_all">Desmarcar todo</string>
+    <string name="equivalences_temporary">Edades temporales</string>
+    <string name="equivalences_back_to_settings">Volver a mis ajustes</string>
+    <string name="equivalences_choose_ages">Elegir edades</string>
+    <string name="equivalences_empty">Ninguna equivalencia para estos temas. Marca otros temas o prueba otra edad.</string>
+    <string name="equivalences_small_gap">Atención: con una diferencia tan pequeña, las equivalencias pueden no ser representativas.</string>
+    <string name="equivalences_age_temporary">Edad temporal, no guardada</string>
+    <string name="people_add">Añadir una edad</string>
+    <string name="people_remove">Quitar</string>
+    <string name="people_add_hint">Añade hasta 3 edades para comparar, cada una con su color.</string>
+    <string name="equivalences_no_other">Añade una edad con «+» para ver tus equivalencias.</string>
+    <string name="equivalences_a11y_none">%1$s: sin equivalente.</string>
+    <string name="equivalences_a11y_person_age">%1$s, %2$s</string>
+    <string name="equivalences_a11y_side">%1$s: %2$s, %3$s, %4$s.</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="person_age_under_one">menos de un año</string>
+    <string name="person_age_birth_year">el año de su nacimiento</string>
+
+    <string name="event_ages_title">¿Qué edad?</string>
+    <string name="event_ages_search_hint">Busca una película, una serie, un artista…</string>
+    <string name="event_ages_no_results">Ningún acontecimiento coincide con esta búsqueda.</string>
+    <string name="event_ages_reduced">Indica tu mes y año de nacimiento para ver tu edad en cada acontecimiento.</string>
+    <string name="event_ages_a11y_line">%1$s: %2$s.</string>
+    <plurals name="years_signed">
+        <item quantity="one">%1$s año</item>
+        <item quantity="other">%1$s años</item>
+    </plurals>
+
+    <string name="nav_debug">Depuración</string>
+    <string name="debug_title">Depuración</string>
+    <string name="debug_date">FECHA DE HOY</string>
+    <string name="debug_date_system">%1$s (reloj del sistema)</string>
+    <string name="debug_date_fake">%1$s (fecha falsa)</string>
+    <string name="debug_previous_day">− 1 día</string>
+    <string name="debug_next_day">+ 1 día</string>
+    <string name="debug_feb29">29 de febrero de 2028</string>
+    <string name="debug_feb28">28 de febrero de 2027</string>
+    <string name="debug_next_empty_day">Próximo día sin aniversarios</string>
+    <string name="debug_date_input">AAAA-MM-DD</string>
+    <string name="debug_apply">Aplicar</string>
+    <string name="debug_invalid_date">Fecha no válida (AAAA-MM-DD).</string>
+    <string name="debug_system_clock">Volver al reloj del sistema</string>
+    <string name="debug_settings">AJUSTES FORZADOS</string>
+    <string name="debug_region_input">Región (código ISO, p. ej. BE)</string>
+    <string name="debug_invalid_region">Código de país no válido: dos letras mayúsculas.</string>
+    <string name="debug_current_region">Región: %1$s</string>
+    <string name="debug_redo_onboarding">Volver a ver el primer inicio</string>
+    <string name="debug_reset_settings">Restablecer los ajustes predeterminados</string>
+    <string name="debug_theme">TEMA</string>
+    <string name="debug_theme_system">Sistema</string>
+    <string name="debug_theme_light">Claro</string>
+    <string name="debug_theme_dark">Oscuro</string>
+    <string name="debug_theme_note">Para probar los dos temas: no se guarda, la app vuelve al tema del sistema en el próximo inicio.</string>
+    <string name="debug_stats">BASE DE ACONTECIMIENTOS</string>
+    <string name="debug_stats_count">Acontecimientos: %1$d</string>
+    <string name="debug_stats_family">%1$s: %2$d</string>
+    <string name="debug_stats_empty_days">Días del año sin aniversarios: %1$d / 366</string>
+    <string name="debug_stats_poor_types">Tipos con menos de %1$d acontecimientos: %2$d</string>
+    <string name="debug_stats_rejections">Entradas descartadas por la validación: %1$d</string>
+    <string name="debug_refresh">Actualizar</string>
+    <string name="debug_windows">WINDOWS</string>
+    <string name="debug_send_notification">Enviar la notificación de la mañana</string>
+    <string name="debug_widget">WIDGET</string>
+    <string name="debug_refresh_widget">Actualizar el widget</string>
+    <string name="debug_refresh_widget_note">Recalcula enseguida cada widget colocado, con la fecha de hoy (real o falsa).</string>
+    <string name="debug_send_notification_note">Enseguida, sin esperar la hora; la notificación de la mañana se enviará igualmente.</string>
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_generations">GENERACIONES</string>
+    <string name="settings_birth">Tu mes y año de nacimiento</string>
+    <string name="settings_birth_value">%1$s %2$d · %3$s</string>
+    <string name="settings_birth_unset">Sin indicar</string>
+    <string name="settings_birth_unset_help">Sin este dato, TimeFlies muestra los aniversarios sin tu edad y no puede calcular equivalencias.</string>
+    <string name="settings_month">Mes</string>
+    <string name="settings_year">Año</string>
+    <string name="settings_clear">Borrar</string>
+    <string name="settings_display">VISUALIZACIÓN</string>
+    <string name="settings_style">Estilo</string>
+    <string name="settings_style_help">El estilo de toda la app y del widget. El VHS siempre es oscuro.</string>
+    <string name="style_polaroid">Polaroid</string>
+    <string name="style_vhs">VHS</string>
+    <string name="style_ephemeris">Calendario de taco</string>
+    <string name="settings_region">Región</string>
+    <string name="settings_language">Idioma</string>
+    <string name="region_fr">Francia</string>
+    <string name="settings_about">ACERCA DE</string>
+    <string name="about_version">TimeFlies v%1$s</string>
+    <string name="about_dev_version">TimeFlies · versión de desarrollo</string>
+    <string name="about_inspired_before">Inspirado en el episodio </string>
+    <string name="about_inspired_episode">Bloqués #108 - On est les vieux des jeunes</string>
+    <string name="about_inspired_after">.</string>
+    <plurals name="about_event_count">
+        <item quantity="one">%1$d acontecimiento</item>
+        <item quantity="other">%1$d acontecimientos</item>
+    </plurals>
+    <string name="about_source">Código fuente</string>
+    <string name="about_report">Informar de una fecha errónea</string>
+    <string name="about_license">Licencia GPL v3</string>
+    <string name="about_third_party">Licencias de las fuentes y bibliotecas</string>
+    <string name="about_privacy">Ningún dato personal sale de este dispositivo.</string>
+    <string name="settings_release_check">Buscar nuevas versiones al iniciar</string>
+    <string name="settings_release_check_help">Como mucho una vez al día, TimeFlies pregunta a GitHub por la última versión publicada. No se envía nada más.</string>
+    <string name="update_available">Nueva versión: TimeFlies %1$s</string>
+    <string name="update_download">Descargar</string>
+    <string name="update_later">Más tarde</string>
+    <string name="settings_windows">WINDOWS</string>
+    <string name="settings_launch_at_startup">Iniciar TimeFlies al arrancar Windows</string>
+    <string name="settings_launch_at_startup_help">Necesario para el icono de la barra de tareas y la notificación de la mañana.</string>
+    <string name="settings_morning_notification">Notificación cada mañana</string>
+    <string name="settings_notification_time">Hora de la notificación</string>
+    <string name="settings_keep_in_tray">Mantener TimeFlies en la barra de tareas al cerrar la ventana</string>
+
+    <string name="settings_events">ACONTECIMIENTOS</string>
+    <string name="settings_events_help">Desmarca lo que no te interese: esos acontecimientos ya no aparecen en ningún sitio, ni en Hoy, ni en el widget, ni en las equivalencias.</string>
+    <plurals name="event_count">
+        <item quantity="one">%1$d acontecimiento</item>
+        <item quantity="other">%1$d acontecimientos</item>
+    </plurals>
+    <string name="settings_events_expand">Desplegar %1$s</string>
+    <string name="settings_events_collapse">Plegar %1$s</string>
+    <string name="onboarding_events">LO QUE TE INTERESA</string>
+    <string name="onboarding_events_families">Temas</string>
+    <string name="onboarding_events_origins">Orígenes</string>
+    <string name="onboarding_events_more">El detalle (el rap de EE. UU. sin el rap francés, por ejemplo) se ajusta en Ajustes › Acontecimientos.</string>
+    <string-array name="origin_names">
+        <item>Internacional</item>
+        <item>Argentina</item>
+        <item>Bélgica</item>
+        <item>Brasil</item>
+        <item>Canadá</item>
+        <item>Alemania</item>
+        <item>España</item>
+        <item>Francia</item>
+        <item>Reino Unido</item>
+        <item>Croacia</item>
+        <item>Jamaica</item>
+        <item>Japón</item>
+        <item>Kenia</item>
+        <item>Corea del Sur</item>
+        <item>Moldavia</item>
+        <item>Puerto Rico</item>
+        <item>Portugal</item>
+        <item>Rumanía</item>
+        <item>Suecia</item>
+        <item>Estados Unidos</item>
+    </string-array>
+    <string-array name="subcategory_names">
+        <item>Atletismo</item>
+        <item>Chanson</item>
+        <item>Electrónica</item>
+        <item>Gimnasia</item>
+        <item>Natación</item>
+        <item>Pop</item>
+        <item>Rap</item>
+        <item>Reggae</item>
+        <item>Rock</item>
+        <item>Soul</item>
+    </string-array>
+
+    <string name="settings_widget">PANTALLA DE INICIO</string>
+    <string name="settings_widget_text">Añade el widget de TimeFlies a tu pantalla de inicio para ver cada día cómo pasa el tiempo.</string>
+    <string name="settings_widget_add">Añadir el widget</string>
+    <string name="settings_widget_manual">Pulsación larga en la pantalla de inicio › Widgets › TimeFlies</string>
+
+    <string name="widget_open_app">Abre TimeFlies para empezar.</string>
+    <string name="widget_next">Siguiente aniversario</string>
+    <string name="widget_compact">%1$s · %2$s</string>
+
+    <string name="tray_tooltip_today">TimeFlies — %1$s: %2$s hoy</string>
+    <string name="tray_tooltip_upcoming">TimeFlies — %1$s: %2$s %3$s</string>
+    <string name="tray_open">Abrir TimeFlies</string>
+    <string name="tray_daily_shock">Recordatorio del día</string>
+    <string name="tray_quit">Salir</string>
+    <string name="tray_hint">TimeFlies se queda en la barra de tareas. Clic derecho en el icono › Salir para cerrarlo.</string>
+    <string name="notification_title_today">%1$s hoy</string>
+    <string name="notification_event">%1$s · %2$s, %3$s.</string>
+    <string name="notification_upcoming_title">%1$s %2$s</string>
+
+    <string name="kind_film_release">Estreno en cines</string>
+    <string name="kind_series_premiere">Primera emisión</string>
+    <string name="kind_series_finale">Último episodio</string>
+    <string name="kind_album_release">Lanzamiento del álbum</string>
+    <string name="kind_single_release">Lanzamiento del sencillo</string>
+    <string name="kind_death">Muerte</string>
+    <string name="kind_product_launch">Lanzamiento</string>
+    <string name="kind_game_release">Lanzamiento del juego</string>
+    <string name="kind_sport">Victoria</string>
+    <string name="kind_history">Acontecimiento</string>
+    <string name="kind_election">Elección</string>
+
+    <string name="family_series_tv">Series y TV</string>
+    <string name="family_cinema">Cine</string>
+    <string name="family_music">Música</string>
+    <string name="family_sport">Deporte</string>
+    <string name="family_games_tech">Videojuegos y tecnología</string>
+    <string name="family_history">Política e historia</string>
+
+    <string name="type_sitcom_hit">Sitcom de culto</string>
+    <string name="type_drama_series_hit">Serie dramática de culto</string>
+    <string name="type_french_series_hit">Serie francesa de culto</string>
+    <string name="type_reality_tv">Telerrealidad</string>
+    <string name="type_kids_tv_show">Programa infantil</string>
+    <string name="type_cartoon_on_tv">Dibujos animados de culto en la tele</string>
+    <string name="type_blockbuster">Superproducción</string>
+    <string name="type_animated_feature">Película de animación familiar</string>
+    <string name="type_french_comedy_hit">Comedia francesa de éxito</string>
+    <string name="type_saga_episode">Episodio de una saga de culto</string>
+    <string name="type_music_icon_death">Muerte de un icono de la música</string>
+    <string name="type_diva_hit">Éxito de una diva</string>
+    <string name="type_boy_band_hit">Éxito de una boy band</string>
+    <string name="type_rap_album_hit">Álbum de rap de culto</string>
+    <string name="type_summer_hit">Canción del verano</string>
+    <string name="type_pop_album_hit">Álbum pop de culto</string>
+    <string name="type_football_star_peak">Cumbre de una estrella del fútbol</string>
+    <string name="type_world_cup_win_france">Francia gana el Mundial</string>
+    <string name="type_olympics_in_france">Juegos Olímpicos en Francia</string>
+    <string name="type_sports_record">Récord deportivo</string>
+    <string name="type_nintendo_console">Consola Nintendo</string>
+    <string name="type_playstation_console">Consola PlayStation</string>
+    <string name="type_handheld_console">Consola portátil</string>
+    <string name="type_video_game_phenomenon">Videojuego fenómeno</string>
+    <string name="type_phone_launch">Lanzamiento de un teléfono</string>
+    <string name="type_social_network_launch">Lanzamiento de una red social</string>
+    <string name="type_music_format">Formato de música</string>
+    <string name="type_french_president_elected">Elección presidencial francesa</string>
+    <string name="type_us_president_elected">Elección presidencial estadounidense</string>
+    <string name="type_actor_turned_politician">Actor convertido en político</string>
+    <string name="type_world_event">Gran acontecimiento mundial</string>
+    <string name="type_royal_event">Acontecimiento real</string>
+
+    <string name="date_long">{d} de {m} de {y}</string>
+    <string name="date_day_and_month">{w}, {d} de {m}</string>
+    <string name="date_with_day_name">{w}, {date}</string>
+    <string name="date_short">{dd}/{mm}/{y}</string>
+    <string name="first_of_month">1</string>
+    <string-array name="months">
+        <item>enero</item>
+        <item>febrero</item>
+        <item>marzo</item>
+        <item>abril</item>
+        <item>mayo</item>
+        <item>junio</item>
+        <item>julio</item>
+        <item>agosto</item>
+        <item>septiembre</item>
+        <item>octubre</item>
+        <item>noviembre</item>
+        <item>diciembre</item>
+    </string-array>
+    <string-array name="days">
+        <item>lunes</item>
+        <item>martes</item>
+        <item>miércoles</item>
+        <item>jueves</item>
+        <item>viernes</item>
+        <item>sábado</item>
+        <item>domingo</item>
+    </string-array>
+</resources>

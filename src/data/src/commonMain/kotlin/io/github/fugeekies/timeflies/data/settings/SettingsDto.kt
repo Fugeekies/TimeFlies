@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.data.settings
 
+import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Region
@@ -18,7 +19,7 @@ import kotlinx.serialization.Serializable
  * version 5 the event filter ([excludedEventGroups]); version 6 the display style ([style], decision of 17/11/2026).
  * An older file gets their defaults. Version 7 (milestone 16, decision of 17/11/2026) dropped `otherAge` and `equivalencesReversed`: the other
  * ages are forgotten when the app closes and the user's column comes first; an older file still reads, those
- * fields being ignored.
+ * fields being ignored. Version 8 (milestone 17) added the language of the interface ([language]).
  */
 @Serializable
 internal data class SettingsDto(
@@ -37,6 +38,8 @@ internal data class SettingsDto(
     val excludedEventGroups: List<String> = emptyList(),
     /** Version 6: the display style ("polaroid", "vhs", "ephemeride" since milestone 15); an unknown value falls back to the Polaroïd. */
     val style: String = DisplayStyle.POLAROID.id,
+    /** Version 8: the language chosen in Settings ("fr", "en", "de", "it", "es"); null or unknown: the system's. */
+    val language: String? = null,
 ) {
     /** The domain settings; values edited by hand outside their range fall back to safe ones. */
     fun toDomain(): Settings = Settings(
@@ -48,10 +51,11 @@ internal data class SettingsDto(
         releaseCheck = releaseCheck.toDomain(),
         excludedEventGroups = excludedEventGroups.toSet(),
         displayStyle = DisplayStyle.of(style) ?: DisplayStyle.POLAROID,
+        language = language?.let(AppLanguage::of),
     )
 
     companion object {
-        const val CURRENT_VERSION = 7
+        const val CURRENT_VERSION = 8
 
         fun of(settings: Settings) = SettingsDto(
             birthYear = settings.birth?.year,
@@ -63,6 +67,7 @@ internal data class SettingsDto(
             releaseCheck = ReleaseCheckDto.of(settings.releaseCheck),
             excludedEventGroups = settings.excludedEventGroups.sorted(),
             style = settings.displayStyle.id,
+            language = settings.language?.tag,
         )
 
         /** "series", "cinema", "games-tech"…: the name of the family's event file, readable by hand. */

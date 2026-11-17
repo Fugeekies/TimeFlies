@@ -19,7 +19,12 @@ import javax.imageio.ImageIO
  * and notifications. Written on AWT's `TrayIcon`, which Compose's `Tray` wraps, because Compose's version
  * opens the window on a double click only, where the spec asks for a single left click.
  */
-class WindowsTray private constructor(private val icon: TrayIcon) {
+class WindowsTray private constructor(private val icon: TrayIcon, private val items: List<MenuItem>) {
+
+    /** The menu in another language (Settings › Affichage › Langue): open, today's reminder, settings, quit. */
+    fun setMenuTexts(texts: TrayMenuTexts) {
+        listOf(texts.open, texts.dailyShock, texts.settings, texts.quit).zip(items).forEach { (label, item) -> item.label = label }
+    }
 
     /** Updates the tooltip shown on hover. */
     fun setTooltip(text: String) {
@@ -59,12 +64,13 @@ class WindowsTray private constructor(private val icon: TrayIcon) {
                 log.w { "Pas de zone de notification : la fenêtre ne se cache pas" }
                 return null
             }
+            val items = listOf(item(texts.open, onOpen), item(texts.dailyShock, onDailyShock), item(texts.settings, onSettings), item(texts.quit, onQuit))
             val menu = PopupMenu().apply {
-                add(item(texts.open, onOpen))
-                add(item(texts.dailyShock, onDailyShock))
-                add(item(texts.settings, onSettings))
+                add(items[0])
+                add(items[1])
+                add(items[2])
                 addSeparator()
-                add(item(texts.quit, onQuit))
+                add(items[3])
             }
             val icon = TrayIcon(trayImage(), tooltip, menu).apply {
                 addActionListener { onNotificationClicked() }
@@ -76,7 +82,7 @@ class WindowsTray private constructor(private val icon: TrayIcon) {
             }
             return runCatching { SystemTray.getSystemTray().add(icon) }
                 .onFailure { log.w(it) { "L'icône n'a pas pu être ajoutée" } }
-                .map { WindowsTray(icon) }
+                .map { WindowsTray(icon, items) }
                 .getOrNull()
         }
 

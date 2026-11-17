@@ -32,7 +32,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Region
+import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
+import io.github.fugeekies.timeflies.ui.text.nativeName
+import io.github.fugeekies.timeflies.ui.resources.settings_language
+import io.github.fugeekies.timeflies.ui.resources.cancel
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.RadioButton
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.about_dev_version
 import io.github.fugeekies.timeflies.ui.resources.about_event_count
@@ -133,7 +145,7 @@ fun SettingsScreen(
             Eyebrow(stringResource(Res.string.settings_generations))
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
-            Panel { DisplayPanel(current.displayStyle, viewModel::onDisplayStyle, current.region) }
+            Panel { DisplayPanel(current.displayStyle, viewModel::onDisplayStyle, current.region, current.language, viewModel::onLanguage) }
             // What is shown at all: unticked groups disappear everywhere (decision of 16/11/2026).
             if (current.eventGroups.isNotEmpty()) {
                 Eyebrow(stringResource(Res.string.settings_events))
@@ -205,7 +217,13 @@ private fun ColumnScope.GenerationsPanel(state: SettingsUiState, viewModel: Sett
 }
 
 @Composable
-private fun ColumnScope.DisplayPanel(style: DisplayStyle, onStyle: (DisplayStyle) -> Unit, region: Region) {
+private fun ColumnScope.DisplayPanel(
+    style: DisplayStyle,
+    onStyle: (DisplayStyle) -> Unit,
+    region: Region,
+    language: AppLanguage,
+    onLanguage: (AppLanguage) -> Unit,
+) {
     // Polaroïd by default, VHS since milestone 14 (decision of 17/11/2026): applied at once, widget included.
     Text(stringResource(Res.string.settings_style), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface)
     Text(stringResource(Res.string.settings_style_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -215,6 +233,51 @@ private fun ColumnScope.DisplayPanel(style: DisplayStyle, onStyle: (DisplayStyle
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Text(stringResource(Res.string.settings_region), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f))
         Text(regionName, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    }
+    LanguageRow(language, onLanguage)
+}
+
+/**
+ * Settings › Affichage › Langue (docs/UISpec/Settings.template.md, milestone 17): the language shown, touched to pick
+ * another one, each written in its own language.
+ */
+@Composable
+private fun LanguageRow(language: AppLanguage, onLanguage: (AppLanguage) -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    val title = stringResource(Res.string.settings_language)
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .clickable(role = Role.Button) { open = true }
+            .padding(vertical = 8.dp)
+            .semantics(mergeDescendants = true) {},
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(title, style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f))
+        Text(language.nativeName, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.primary)
+    }
+    if (open) {
+        AlertDialog(
+            onDismissRequest = { open = false },
+            confirmButton = { TextButton(onClick = { open = false }) { Text(stringResource(Res.string.cancel)) } },
+            title = { Text(title) },
+            text = {
+                Column(Modifier.selectableGroup()) {
+                    AppLanguage.entries.forEach { choice ->
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .selectable(choice == language, role = Role.RadioButton) { open = false; onLanguage(choice) }
+                                .padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            RadioButton(selected = choice == language, onClick = null, modifier = Modifier.padding(12.dp))
+                            Text(choice.nativeName, style = MaterialTheme.typography.bodyLarge)
+                        }
+                    }
+                }
+            },
+        )
     }
 }
 

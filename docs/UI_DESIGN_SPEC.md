@@ -199,8 +199,8 @@ Quatre destinations, dans cet ordre (« Quel âge ? » avant Équivalences, déc
 
 ## 🌍 Langues et formats
 
-* Français d'abord, interface prévue pour la traduction : tous les textes dans les ressources (`strings.xml` de Compose Multiplatform), aucun texte écrit en dur dans un écran. Les maquettes de `UISpec/` gardent les libellés français, langue de référence.
-* Dates longues : « 2 novembre 2011 ». Dates courtes (listes) : « 02/11/2011 ».
+* Français d'abord, interface traduite en anglais, allemand, italien et espagnol (jalon 17, décision du 17/11/2026) : tous les textes dans les ressources (`strings.xml` de Compose Multiplatform), aucun texte écrit en dur dans un écran. Les maquettes de `UISpec/` gardent les libellés français, langue de référence ; le guide d'utilisation cite les libellés de chaque langue.
+* Dates longues : « 2 novembre 2011 » (« 2 November 2011 », « 2. November 2011 », « 2 novembre 2011 », « 2 de noviembre de 2011 »). Dates courtes (listes) : « 02/11/2011 » (« 02.11.2011 » en allemand).
 * Âges et durées : « 1 an », « 15 ans » ; avant une naissance, un âge négatif avec un vrai signe moins : « −3 ans » (décision du 15/11/2026).
 * Un texte traduit peut être plus long que le français : les mises en page ne supposent pas une largeur de texte fixe.
 
