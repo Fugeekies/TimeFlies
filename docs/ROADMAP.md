@@ -23,6 +23,16 @@ Points laissés ouverts par des jalons livrés, regroupés ici pour ne pas garde
 - [ ] (Jalon 13) `v0.1.0` installée sur un téléphone et sur un PC : icône dans l'assistant d'installation et dans « Applications installées », mise à jour par-dessus en gardant les réglages, désinstallation.
 - [ ] (Jalon 14) Widget en style VHS à voir sur l'émulateur, et les deux styles sur l'application installée.
 
+### Jalon 15 — Style Éphéméride
+La feuille du jour en page d'éphéméride, comme sur la maquette ([`maquettes/android/Today.png`](maquettes/android/Today.png)), troisième style après le Polaroïd et le VHS.
+- [ ] Jetons du style Éphéméride, clair et sombre selon le thème du système (`docs/UI_DESIGN_SPEC.md` § 2) ; police embarquée Big Shoulders Display (SIL OFL).
+- [ ] Aujourd'hui : la feuille d'éphéméride (anneaux de reliure, ligne de perforation, jour, grand chiffre rouge et « ans ») ; cartes des listes à bordure fine avec l'âge en Big Shoulders Display.
+- [ ] Autres écrans aux couleurs et polices de l'Éphéméride, sans changer leur mise en page.
+- [ ] Animation : la feuille de la veille s'arrache vers le haut, une fois par jour, comme le Polaroïd et le VHS.
+- [ ] Éphéméride ajoutée au choix du style de Réglages › Affichage, avec son aperçu ; `settings.json` lit la nouvelle valeur.
+- [ ] Widget Android en feuille d'éphéméride.
+- [ ] `ContrastTest` étendu aux jetons de l'Éphéméride.
+
 ## À faire : les données, par thème
 
 Chaque thème est un jalon à part, mené en parallèle du code dès que le jalon 2 (lecture des données) est terminé. Une PR par lot d'une cinquantaine d'événements, pour que les dates restent faciles à relire. Chaque événement est réel, daté au jour près et sourcé ([`EVENTS_DATA.md`](EVENTS_DATA.md)).
@@ -66,11 +76,6 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 - [ ] Décider comment tenir le rythme de saisie au-delà du palier 2 : à la main, ou import depuis Wikidata relu par PR.
 
 ## Après la V1
-
-### Jalon — Style Éphéméride
-La feuille du jour en page d'éphéméride, maquettes de tous les écrans dans [`maquettes/`](maquettes/README.md).
-- [ ] Jetons du style (palette claire et sombre déjà définies, `docs/UI_DESIGN_SPEC.md` § 2).
-- [ ] Ajouter l'Éphéméride au choix du style de Réglages (arrivé avec le jalon 14) et au widget.
 
 ### Jalon — Traductions et régions
 - [ ] Interface en anglais, en plus du français de référence.
