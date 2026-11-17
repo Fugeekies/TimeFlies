@@ -124,6 +124,10 @@ private fun familyResource(family: Family): StringResource = when (family) {
 class DateTexts(private val months: List<String>, private val days: List<String>, private val firstOfMonth: String) {
     fun long(date: LocalDate): String = "${dayNumber(date)} ${months[date.month.number - 1]} ${date.year}"
 
+    /** Short date of the lists: "02/11/2011" (docs/UI_DESIGN_SPEC.md, "Langues et formats"). */
+    fun short(date: LocalDate): String =
+        "${date.day.toString().padStart(2, '0')}/${date.month.number.toString().padStart(2, '0')}/${date.year}"
+
     fun dayAndMonth(date: LocalDate): String = "${dayName(date)} ${dayNumber(date)} ${months[date.month.number - 1]}"
 
     fun withDayName(date: LocalDate): String = "${dayName(date)} ${long(date)}"

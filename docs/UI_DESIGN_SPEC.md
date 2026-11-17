@@ -89,8 +89,7 @@ L'application suit le thème du système (clair ou sombre). Toutes les couleurs 
 | `primary` | `#9A4E1C` brun cuivré | `#E39A62` cuivre clair | âges manuscrits, onglet actif, boutons principaux |
 | `outline` | `#D6CBBC` | `#4A3F37` | séparateurs |
 | `secondaryContainer` | `#F1E1D3` | `#4A3426` | onglet actif, pastille « Chiffre rond » |
-| silhouette de l'utilisateur | `#B4501E` rouille | `#F08A55` | Équivalences, « Quel âge ? » |
-| silhouette de l'autre personne | `#0E7C7B` bleu canard | `#4FC3C0` | Équivalences, « Quel âge ? » |
+| silhouettes des personnes (toi, puis les 3 âges ajoutés, décision du 17/11/2026) | `#B4501E` rouille, `#0E7C7B` bleu canard, `#7A4A9E` prune, `#4F6B12` olive | `#F08A55`, `#4FC3C0`, `#C3A3F0`, `#B5D168` | « Quel âge ? », Équivalences |
 
 Palette sombre « chambre noire » : décision du 15/11/2026. L'application suit le thème du système ; sur Android, la fenêtre prend aussi le fond du thème avant la première image (`values-night/themes.xml`).
 
@@ -110,8 +109,7 @@ Couleurs de la maquette ([`maquettes/android/TodayVhs.html`](maquettes/android/T
 | `primary` | `#FF3EA5` magenta | nombres d'années, nom de l'application, onglet actif, boutons principaux |
 | `outline` | `#2E2940` | bordures des cartes, bobines |
 | `secondaryContainer` | `#3E1533` (magenta à 20 %) | onglet actif, pastille « Chiffre rond » |
-| silhouette de l'utilisateur | `#FFE14D` jaune | Équivalences, « Quel âge ? » |
-| silhouette de l'autre personne | `#3EE6FF` cyan | Équivalences, « Quel âge ? » |
+| silhouettes des personnes (toi, puis les 3 âges ajoutés) | `#FFE14D` jaune, `#3EE6FF` cyan, `#7CFF8A` vert, `#FF9F43` orange | « Quel âge ? », Équivalences |
 | ornements | `#FF4D4D` « ● REC », `#3EE6FF` compteur et titres de section, `#FFE14D` « ▶ PLAY » | |
 | étiquette | papier `#F4F1E8`, encre `#16121F`, date `#6B5F7A`, légende `#4A4158`, grand nombre `#E0177F` | |
 
@@ -126,8 +124,7 @@ Couleurs de la maquette ([`maquettes/android/TodayVhs.html`](maquettes/android/T
 | `primary` | `#D3243B` rouge éphéméride (`#D7263D` sur la maquette, assombri d'un cran pour lire à 4,5:1 sur le fond, 4,42:1 avant) | `#FF5C6C` | grand chiffre, onglet actif, boutons principaux |
 | `secondaryContainer` | `#F9E1E4` (rouge à 14 %) | `#45222A` (rouge à 20 %) | onglet actif, puce « Chiffre rond » |
 | `onSecondaryContainer` | `#B01F33` | `#EDEAF2` | texte de la puce « Chiffre rond » |
-| silhouette de l'utilisateur | `#D3243B` | `#FF5C6C` | Équivalences, « Quel âge ? » (rouge comme le grand chiffre) |
-| silhouette de l'autre personne | `#1F6FB2` | `#6CB4FF` | Équivalences, « Quel âge ? » |
+| silhouettes des personnes (toi, puis les 3 âges ajoutés) | `#D3243B` rouge, `#1F6FB2` bleu, `#2E7D32` vert, `#7B4FA0` violet | `#FF5C6C`, `#6CB4FF`, `#6FD47A`, `#C9A2FF` | « Quel âge ? », Équivalences |
 | anneaux de reliure | `#C9C4CF` | `#4A4452` | ornement de la feuille du jour |
 | `outline` | `#D9D5DE` | `#3A3542` | bordures fines, perforation |
 
@@ -180,13 +177,13 @@ Les polices sont **embarquées** dans l'application (ressources Compose, licence
 
 ## 🧭 Navigation
 
-Quatre destinations, dans cet ordre :
+Quatre destinations, dans cet ordre (« Quel âge ? » avant Équivalences, décision du 17/11/2026) :
 
 | Destination | Icône (Material Symbols) | Spécification |
 |---|---|---|
 | Aujourd'hui | `calendar_today` | [`Today.template.md`](UISpec/Today.template.md) |
-| Équivalences | `compare_arrows` | [`Equivalences.template.md`](UISpec/Equivalences.template.md) |
 | Quel âge ? | `search` | [`EventAges.template.md`](UISpec/EventAges.template.md) |
+| Équivalences | `compare_arrows` | [`Equivalences.template.md`](UISpec/Equivalences.template.md) |
 | Réglages | `settings` | [`Settings.template.md`](UISpec/Settings.template.md) |
 
 * **Navigation adaptative** (`NavigationSuiteScaffold`) : barre en bas sous 600 dp de large (téléphone), rail à gauche au-dessus (tablette, fenêtre Windows).

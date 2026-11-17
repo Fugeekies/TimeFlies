@@ -31,27 +31,29 @@ class EventAgesTest {
     private val child = LocalDate(2011, 11, 15)
 
     @Test
-    fun givesBothAgesNegativeBeforeABirth() {
-        val ages = GetEventAges()(testEvent("titanic", "1998-01-07"), userBirth = user, otherBirth = child)
-        assertEquals(6, ages.userAge)
+    fun givesEveryAgeInOrderNegativeBeforeABirth() {
+        val ages = GetEventAges()(testEvent("titanic", "1998-01-07"), listOf(user, child, LocalDate(1961, 5, 1)))
+        assertEquals(6, ages.ages[0])
         // 13 years and 10 months before the birth: "−14 ans".
-        assertEquals(-14, ages.otherAge)
+        assertEquals(-14, ages.ages[1])
+        assertEquals(36, ages.ages[2])
+        assertEquals(listOf(6), GetEventAges()(testEvent("titanic", "1998-01-07"), listOf(user)).ages, "the user alone")
         assertEquals(LocalDate(1998, 1, 7), ages.date)
     }
 
     @Test
     fun countsAFewMonthsBeforeTheBirthAsMinusOne() {
-        val ages = GetEventAges()(testEvent("spring", "2011-06-01"), userBirth = user, otherBirth = child)
-        assertEquals(-1, ages.otherAge)
-        assertEquals(20, ages.userAge)
+        val ages = GetEventAges()(testEvent("spring", "2011-06-01"), listOf(user, child))
+        assertEquals(-1, ages.ages[1])
+        assertEquals(20, ages.ages[0])
     }
 
     @Test
     fun usesTheRegionalDate() {
         val event = testEvent("regional", "2000-01-01", regionalDates = mapOf(Region.FRANCE to LocalDate(2012, 1, 1)))
-        val ages = GetEventAges()(event, userBirth = user, otherBirth = child, region = Region.FRANCE)
-        assertEquals(0, ages.otherAge)
-        assertEquals(20, ages.userAge)
+        val ages = GetEventAges()(event, listOf(user, child), region = Region.FRANCE)
+        assertEquals(0, ages.ages[1])
+        assertEquals(20, ages.ages[0])
     }
 
     @Test

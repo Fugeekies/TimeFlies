@@ -41,40 +41,49 @@ class GetEquivalencesTest {
     )
     private val getEquivalences = GetEquivalences(FakeRepository(events), Clock { today })
 
+    private fun ids(cards: List<io.github.fugeekies.timeflies.domain.model.Equivalence>) =
+        cards.map { card -> listOf(card.user.event.id) + card.others.map { it?.event?.id } }
+
     @Test
-    fun pairsTheEventsOfTheChildWithThoseOfTheUserMostRecentFirst() = runTest {
-        val pairs = getEquivalences(leftBirth = child, rightBirth = user, families = Family.entries.toSet())
-        assertEquals(listOf("death-2017" to "death-1997", "sitcom-2004" to "sitcom-1984"), pairs.map { it.left.event.id to it.right.event.id })
-        val death = pairs.first()
+    fun pairsTheEventsOfTheUserWithThoseOfAYoungerPersonMostRecentFirst() = runTest {
+        val cards = getEquivalences(user, listOf(child), Family.entries.toSet())
+        assertEquals(listOf(listOf("death-1997", "death-2017"), listOf("sitcom-1984", "sitcom-2004")), ids(cards))
+        val death = cards.first()
         assertEquals(EventType.MUSIC_ICON_DEATH, death.type)
-        assertEquals(UserAge.Years(6), death.left.age)
-        assertEquals(UserAge.Years(6), death.right.age)
-        // The child was not born yet in 2004: 7 years and 2 months before, "−8 ans".
-        assertEquals(UserAge.BeforeBirth(8), pairs[1].left.age)
+        assertEquals(UserAge.Years(6), death.user.age)
+        assertEquals(UserAge.Years(6), death.others.single()!!.age)
+        // The user was not born yet in January 1984: 7 years and 4 months before, "−8 ans".
+        assertEquals(UserAge.BeforeBirth(8), cards[1].user.age)
     }
 
     @Test
     fun worksWithAnOlderPerson() = runTest {
         // The user compares with a parent born 30 years earlier: their 1984 sitcom is the parent's 1954 one.
-        val pairs = getEquivalences(leftBirth = user, rightBirth = parent, families = setOf(Family.SERIES_TV))
-        assertTrue("sitcom-1984" to "sitcom-1954" in pairs.map { it.left.event.id to it.right.event.id })
-        // The other way round, the target of the 1954 sitcom is in 1984.
-        val reversed = getEquivalences(leftBirth = parent, rightBirth = user, families = setOf(Family.SERIES_TV))
-        assertTrue("sitcom-1954" to "sitcom-1984" in reversed.map { it.left.event.id to it.right.event.id })
+        val cards = getEquivalences(user, listOf(parent), setOf(Family.SERIES_TV))
+        assertEquals(listOf(listOf("sitcom-1984", "sitcom-1954")), ids(cards))
+    }
+
+    @Test
+    fun putsEveryOtherPersonSideBySideInTheirOrder() = runTest {
+        val series = getEquivalences(user, listOf(child, parent), setOf(Family.SERIES_TV))
+        assertEquals(listOf(listOf("sitcom-1984", "sitcom-2004", "sitcom-1954")), ids(series))
+        // A card shows as soon as one person has an equivalent; the others get null.
+        val music = getEquivalences(user, listOf(child, parent), setOf(Family.MUSIC))
+        assertEquals(listOf(listOf("death-1997", "death-2017", null)), ids(music))
     }
 
     @Test
     fun skipsEventsWhoseTargetIsInTheFuture() = runTest {
-        // Seen from the user, the 2017 death points to 2044 in the child's life: no pair.
-        val pairs = getEquivalences(leftBirth = user, rightBirth = child, families = setOf(Family.MUSIC))
-        assertEquals(listOf("death-1997" to "death-2017"), pairs.map { it.left.event.id to it.right.event.id })
+        // The 2017 death points to 2037 in the child's life: no card.
+        val cards = getEquivalences(user, listOf(child), setOf(Family.MUSIC))
+        assertEquals(listOf("death-1997"), cards.map { it.user.event.id })
     }
 
     @Test
-    fun keepsOnlyTheTickedFamilies() = runTest {
-        val pairs = getEquivalences(leftBirth = child, rightBirth = user, families = setOf(Family.MUSIC))
-        assertEquals(listOf("death-2017"), pairs.map { it.left.event.id })
-        assertTrue(getEquivalences(leftBirth = child, rightBirth = user, families = emptySet()).isEmpty())
+    fun keepsOnlyTheTickedFamiliesAndNeedsAnotherAge() = runTest {
+        assertEquals(listOf("death-1997"), getEquivalences(user, listOf(child), setOf(Family.MUSIC)).map { it.user.event.id })
+        assertTrue(getEquivalences(user, listOf(child), emptySet()).isEmpty())
+        assertTrue(getEquivalences(user, emptyList(), Family.entries.toSet()).isEmpty(), "the user alone has no equivalence")
     }
 
     @Test
@@ -84,7 +93,6 @@ class GetEquivalencesTest {
             FakeRepository(listOf(testEvent("a", "2000-01-01"), testEvent("b", "2001-01-01"))),
             Clock { today },
         )
-        val pairs = twins(leftBirth = user, rightBirth = user, families = setOf(Family.CINEMA))
-        assertEquals(listOf("b" to "a", "a" to "b"), pairs.map { it.left.event.id to it.right.event.id })
+        assertEquals(listOf(listOf("b", "a"), listOf("a", "b")), ids(twins(user, listOf(user), setOf(Family.CINEMA))))
     }
 }

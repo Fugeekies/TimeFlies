@@ -12,40 +12,42 @@ import io.github.fugeekies.timeflies.domain.rules.Ages
 import io.github.fugeekies.timeflies.domain.rules.Equivalences
 import kotlinx.datetime.LocalDate
 
-/** The pairs of the Equivalences screen (docs/UISpec/Equivalences.template.md). */
+/** The cards of the Equivalences screen (docs/UISpec/Equivalences.template.md). */
 class GetEquivalences(
     private val events: EventRepository,
     private val clock: Clock,
 ) {
     /**
-     * Every event of the ticked [families] that has an equivalent, as seen from the person born on [leftBirth]:
-     * each pair puts their event on the left and the equivalent in the life of the person born on [rightBirth] on
-     * the right. Sorted from the most recent left event to the oldest. Either person can be the older one.
+     * Every event of the ticked [families] in the life of the user born on [userBirth] that has an equivalent for
+     * at least one of the people born on [otherBirths] (up to three, side by side, decision of 17/11/2026). Sorted
+     * from the user's most recent event to the oldest. Each other person can be younger or older than the user.
      */
     suspend operator fun invoke(
-        leftBirth: LocalDate,
-        rightBirth: LocalDate,
+        userBirth: LocalDate,
+        otherBirths: List<LocalDate>,
         families: Set<Family>,
         region: Region = Region.FRANCE,
     ): List<Equivalence> {
+        if (otherBirths.isEmpty()) return emptyList()
         val today = clock.today()
-        val pairs = mutableListOf<Equivalence>()
+        val cards = mutableListOf<Equivalence>()
         for (type in EventType.entries.filter { it.family in families }) {
             // Sorted by date in the region, events younger than a year excluded.
             val ofType = events.ofType(type, EARLIEST, today, region).filter { Equivalences.isOldEnough(it.dateFor(region), today) }
             for (event in ofType) {
                 val date = event.dateFor(region)
-                val target = Equivalences.targetDate(date, leftBirth, rightBirth)
-                val match = Equivalences.bestMatch(event, target, around(ofType, target, region), region, today) ?: continue
-                val matchDate = match.dateFor(region)
-                pairs += Equivalence(
-                    type = type,
-                    left = EquivalenceSide(event, date, Ages.userAge(leftBirth, date)),
-                    right = EquivalenceSide(match, matchDate, Ages.userAge(rightBirth, matchDate)),
-                )
+                val others = otherBirths.map { otherBirth ->
+                    val target = Equivalences.targetDate(date, userBirth, otherBirth)
+                    Equivalences.bestMatch(event, target, around(ofType, target, region), region, today)?.let { match ->
+                        val matchDate = match.dateFor(region)
+                        EquivalenceSide(match, matchDate, Ages.userAge(otherBirth, matchDate))
+                    }
+                }
+                if (others.all { it == null }) continue
+                cards += Equivalence(type, EquivalenceSide(event, date, Ages.userAge(userBirth, date)), others)
             }
         }
-        return pairs.sortedWith(compareByDescending<Equivalence> { it.left.date }.thenBy { it.left.event.id })
+        return cards.sortedWith(compareByDescending<Equivalence> { it.user.date }.thenBy { it.user.event.id })
     }
 
     /** The events of [sorted] within the tolerance of [target], found by binary search. */

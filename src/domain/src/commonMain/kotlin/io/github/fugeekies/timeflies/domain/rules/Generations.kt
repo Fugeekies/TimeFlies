@@ -12,7 +12,12 @@ import kotlinx.datetime.minus
 object Generations {
     const val MIN_OTHER_AGE = 1
     const val MAX_OTHER_AGE = 100
+
+    /** Start value of an age added in the banner (15, decision of 15/11/2026). */
     const val DEFAULT_OTHER_AGE = 15
+
+    /** Ages that can be added next to the user's in "Quel âge ?" and Equivalences (decision of 17/11/2026). */
+    const val MAX_OTHER_PEOPLE = 3
 
     /** Range of the ages picked on the fly on the Equivalences screen, for both people. */
     val AGE_RANGE: IntRange = MIN_OTHER_AGE..MAX_OTHER_AGE
@@ -44,6 +49,6 @@ object Generations {
     /** Whether the gap between the two births is small enough for the screen to warn (decision of 15/11/2026). */
     fun isSmallGap(birthA: LocalDate, birthB: LocalDate): Boolean = gap(birthA, birthB) < SMALL_GAP
 
-    /** Whether [age] can be saved as the other person's age: from 1 to 100, younger or older than the user. */
+    /** Whether [age] can be given to another person: from 1 to 100, younger or older than the user. */
     fun isOtherAgeAllowed(age: Int): Boolean = age in AGE_RANGE
 }

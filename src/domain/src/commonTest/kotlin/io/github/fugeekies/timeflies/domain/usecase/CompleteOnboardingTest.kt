@@ -39,8 +39,6 @@ class CompleteOnboardingTest {
         val settings = repository.state.value
         assertEquals(YearMonth(1991, Month.MAY), settings.birth)
         assertTrue(settings.onboardingDone)
-        // The other generation's age is not asked here (decision of 15/11/2026).
-        assertEquals(Settings().otherAge, settings.otherAge)
     }
 
     @Test

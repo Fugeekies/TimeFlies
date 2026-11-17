@@ -56,9 +56,11 @@ data class StyleTokens(
     val sectionColor: Color,
     val familyColors: Map<Family, Color>,
     val photoFade: Color,
-    /** Pictogram colours of the two people of the Equivalences screen, instead of names (decision of 15/11/2026). */
-    val userColor: Color,
-    val otherColor: Color,
+    /**
+     * Pictogram colours of the people of "Quel âge ?" and Equivalences, instead of names (decision of 15/11/2026):
+     * the user first, then the three ages that can be added (decision of 17/11/2026).
+     */
+    val personColors: List<Color>,
 )
 
 val LocalStyle = staticCompositionLocalOf<StyleTokens> { error("TimeFliesTheme is missing") }
@@ -87,10 +89,10 @@ internal val FamilyColors = mapOf(
 /**
  * Colours of a style that are not Material roles (docs/UI_DESIGN_SPEC.md, § 2), one set per theme.
  *
- * @property userColor pictogram colour of the user on the Equivalences and "Quel âge ?" screens (decision of 15/11/2026).
- * @property otherColor pictogram colour of the other person.
+ * @property personColors pictogram colours on the "Quel âge ?" and Equivalences screens: the user, then the three
+ *   other ages (decisions of 15/11/2026 and 17/11/2026).
  */
-internal data class StyleExtras(val userColor: Color, val otherColor: Color)
+internal data class StyleExtras(val personColors: List<Color>)
 
 // Polaroïd, light (docs/UI_DESIGN_SPEC.md, § 2).
 internal val PolaroidLight: ColorScheme = lightColorScheme(
@@ -113,7 +115,7 @@ internal val PolaroidLight: ColorScheme = lightColorScheme(
     outlineVariant = Color(0xFFD6CBBC),
 )
 
-internal val PolaroidLightExtras = StyleExtras(userColor = Color(0xFFB4501E), otherColor = Color(0xFF0E7C7B))
+internal val PolaroidLightExtras = StyleExtras(listOf(Color(0xFFB4501E), Color(0xFF0E7C7B), Color(0xFF7A4A9E), Color(0xFF4F6B12)))
 
 // Polaroïd, dark: "chambre noire", a warm darkroom brown with a lighter copper (decision of 15/11/2026).
 internal val PolaroidDark: ColorScheme = darkColorScheme(
@@ -136,7 +138,7 @@ internal val PolaroidDark: ColorScheme = darkColorScheme(
     outlineVariant = Color(0xFF4A3F37),
 )
 
-internal val PolaroidDarkExtras = StyleExtras(userColor = Color(0xFFF08A55), otherColor = Color(0xFF4FC3C0))
+internal val PolaroidDarkExtras = StyleExtras(listOf(Color(0xFFF08A55), Color(0xFF4FC3C0), Color(0xFFC3A3F0), Color(0xFFB5D168)))
 
 // VHS, dark only: the colours of the mock-up (docs/maquettes/android/TodayVhs.html, decision of 17/11/2026).
 internal val VhsDark: ColorScheme = darkColorScheme(
@@ -160,7 +162,7 @@ internal val VhsDark: ColorScheme = darkColorScheme(
     outlineVariant = Color(0xFF2E2940),
 )
 
-internal val VhsExtras = StyleExtras(userColor = Color(0xFFFFE14D), otherColor = Color(0xFF3EE6FF))
+internal val VhsExtras = StyleExtras(listOf(Color(0xFFFFE14D), Color(0xFF3EE6FF), Color(0xFF7CFF8A), Color(0xFFFF9F43)))
 
 /** The cyan of the tape counter and of the section titles of the VHS. */
 internal val VhsCyan = Color(0xFF3EE6FF)
@@ -188,7 +190,7 @@ internal val EphemerisLight: ColorScheme = lightColorScheme(
     outlineVariant = Color(0xFFD9D5DE),
 )
 
-internal val EphemerisLightExtras = StyleExtras(userColor = Color(0xFFD3243B), otherColor = Color(0xFF1F6FB2))
+internal val EphemerisLightExtras = StyleExtras(listOf(Color(0xFFD3243B), Color(0xFF1F6FB2), Color(0xFF2E7D32), Color(0xFF7B4FA0)))
 
 // Éphéméride, dark (docs/UI_DESIGN_SPEC.md, § 2).
 internal val EphemerisDark: ColorScheme = darkColorScheme(
@@ -212,7 +214,7 @@ internal val EphemerisDark: ColorScheme = darkColorScheme(
     outlineVariant = Color(0xFF3A3542),
 )
 
-internal val EphemerisDarkExtras = StyleExtras(userColor = Color(0xFFFF5C6C), otherColor = Color(0xFF6CB4FF))
+internal val EphemerisDarkExtras = StyleExtras(listOf(Color(0xFFFF5C6C), Color(0xFF6CB4FF), Color(0xFF6FD47A), Color(0xFFC9A2FF)))
 
 /** The binding rings at the top of the sheet of the day: a grey rim on the colour of the background. */
 internal val EphemerisRingLight = Color(0xFFC9C4CF)
@@ -356,8 +358,7 @@ fun TimeFliesTheme(
                 sectionColor = scheme.onBackground,
                 familyColors = FamilyColors,
                 photoFade = PhotoPaper,
-                userColor = extras.userColor,
-                otherColor = extras.otherColor,
+                personColors = extras.personColors,
             )
         }
         DisplayStyle.VHS -> VhsDark to StyleTokens(
@@ -370,8 +371,7 @@ fun TimeFliesTheme(
             sectionColor = VhsCyan,
             familyColors = FamilyColors,
             photoFade = VhsLabel,
-            userColor = VhsExtras.userColor,
-            otherColor = VhsExtras.otherColor,
+            personColors = VhsExtras.personColors,
         )
         DisplayStyle.EPHEMERIS -> {
             val shoulders = FontFamily(
@@ -392,8 +392,7 @@ fun TimeFliesTheme(
                 sectionColor = scheme.onSurfaceVariant,
                 familyColors = FamilyColors,
                 photoFade = scheme.surface,
-                userColor = extras.userColor,
-                otherColor = extras.otherColor,
+                personColors = extras.personColors,
             )
         }
     }

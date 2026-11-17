@@ -41,10 +41,11 @@ class ContrastTest {
         assertContrast(text, scheme.onPrimary, scheme.primary, "$name onPrimary")
         assertContrast(text, scheme.onSecondaryContainer, scheme.secondaryContainer, "$name onSecondaryContainer")
         assertContrast(text, chipInk, scheme.secondaryContainer, "$name round chip on secondaryContainer")
-        // The two people's ages, handwritten (20 sp and more, bold) on cards and on the background.
-        for ((who, color) in listOf("user" to extras.userColor, "other" to extras.otherColor)) {
-            assertContrast(text, color, scheme.surface, "$name $who on surface")
-            assertContrast(large, color, scheme.background, "$name $who on background")
+        // The people's ages (20 sp and more, bold) on cards and on the background: four distinct colours per style.
+        assertEquals(4, extras.personColors.distinct().size, "$name: one colour per person")
+        for ((who, color) in extras.personColors.withIndex()) {
+            assertContrast(text, color, scheme.surface, "$name person $who on surface")
+            assertContrast(large, color, scheme.background, "$name person $who on background")
         }
     }
 

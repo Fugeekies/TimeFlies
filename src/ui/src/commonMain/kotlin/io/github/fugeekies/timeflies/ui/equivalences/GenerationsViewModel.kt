@@ -7,64 +7,69 @@ import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
-import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
+import io.github.fugeekies.timeflies.ui.dayChanges
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
-import io.github.fugeekies.timeflies.ui.dayChanges
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
 
 /**
- * Ages picked on the fly (docs/UISpec/Equivalences.template.md, "Âges à la volée"): never saved, forgotten when the
- * app closes.
+ * Ages picked in the banner, never saved and forgotten when the app closes (docs/UISpec/Equivalences.template.md,
+ * decisions of 13/11/2026 and 17/11/2026).
+ *
+ * @property user the user's age picked on the fly instead of their birth ("Âges temporaires"); null: the settings.
+ * @property others the ages added next to the user's, up to [Generations.MAX_OTHER_PEOPLE], in their order.
  */
-data class TemporaryAges(val user: Int, val other: Int)
+data class TemporaryAges(val user: Int? = null, val others: List<Int> = emptyList())
 
 /**
- * The temporary ages, shared by the Equivalences and "Quel âge ?" screens (docs/UISpec/EventAges.template.md).
+ * The ages of the banner, shared by the "Quel âge ?" and Equivalences screens (docs/UISpec/EventAges.template.md).
  * One instance per app, kept in memory only.
  */
 class TemporaryAgesStore {
-    val ages = MutableStateFlow<TemporaryAges?>(null)
+    val ages = MutableStateFlow(TemporaryAges())
 }
 
 /**
- * The two people of the banner (docs/UISpec/Equivalences.template.md, "Bandeau des générations").
+ * The people of the banner (docs/UISpec/Equivalences.template.md, "Bandeau des âges"): the user, then the ages added.
  *
- * @property userAge the user's age shown; null in reduced mode (no birth and no temporary ages).
- * @property otherAge the other person's age shown.
- * @property savedOtherAge the other person's saved age, the start value of "Modifier".
- * @property gap gap between the two births in completed years; null in reduced mode.
+ * @property userAge the user's age shown; null in reduced mode (no birth and no temporary age).
+ * @property temporary the user's age was picked on the fly.
+ * @property otherAges the ages added, in their order (empty by default, decision of 17/11/2026).
+ * @property gaps gap between the user's birth and each other birth, in completed years; empty in reduced mode.
  * @property userBirth the user's birth used for the computations; null in reduced mode.
+ * @property otherBirths the birth of each added age: today minus that age.
  * @property settings the saved settings these values come from.
  */
 data class GenerationsUiState(
     val userAge: Int?,
-    val otherAge: Int,
-    val savedOtherAge: Int,
     val temporary: Boolean,
-    val gap: Int?,
+    val otherAges: List<Int>,
+    val gaps: List<Int>,
     val userBirth: LocalDate?,
-    val otherBirth: LocalDate,
+    val otherBirths: List<LocalDate>,
     val settings: Settings,
 ) {
     val reducedMode: Boolean get() = userBirth == null
-    val isSmallGap: Boolean get() = gap != null && gap < Generations.SMALL_GAP
+    val isSmallGap: Boolean get() = gaps.any { it < Generations.SMALL_GAP }
+    val canAddAge: Boolean get() = otherAges.size < Generations.MAX_OTHER_PEOPLE
+
+    /** Every birth, the user first, in the order of the banner; empty in reduced mode. */
+    val births: List<LocalDate> get() = userBirth?.let { listOf(it) + otherBirths }.orEmpty()
 }
 
 /**
- * The banner logic shared by the Equivalences and "Quel âge ?" screens: the two people's ages from the settings or
- * from the temporary ages, "Modifier" (the only place where the other person's age is saved, decision of 15/11/2026)
- * and the small-gap warning. Subclasses call [start] at the end of their `init` and compute their page in
- * [onGenerations].
+ * The banner logic shared by the "Quel âge ?" and Equivalences screens: the user's age from the settings or picked
+ * on the fly, the ages added (up to three, forgotten when the app closes, decision of 17/11/2026) and the small-gap
+ * warning. Subclasses call [start] at the end of their `init` and compute their page in [onGenerations].
  */
 abstract class GenerationsViewModel(
     private val observeSettings: ObserveSettings,
-    private val updateSettings: UpdateSettings,
     protected val clock: Clock,
     private val temporaryAges: TemporaryAgesStore,
 ) : ViewModel() {
@@ -102,24 +107,23 @@ abstract class GenerationsViewModel(
     /** Recomputes the page for new ages or settings; cancelled when newer ones come. */
     protected abstract suspend fun onGenerations(generations: GenerationsUiState)
 
-    private fun generations(settings: Settings, temporary: TemporaryAges?, today: LocalDate): GenerationsUiState {
+    private fun generations(settings: Settings, temporary: TemporaryAges, today: LocalDate): GenerationsUiState {
         val userBirth = when {
-            temporary != null -> Generations.birthFromAge(today, temporary.user)
+            temporary.user != null -> Generations.birthFromAge(today, temporary.user)
             else -> settings.birth?.let(Generations::userBirth)
         }
-        val otherBirth = Generations.birthFromAge(today, temporary?.other ?: settings.otherAge)
+        val otherBirths = temporary.others.map { Generations.birthFromAge(today, it) }
         return GenerationsUiState(
             userAge = when {
-                temporary != null -> temporary.user
+                temporary.user != null -> temporary.user
                 settings.birth != null -> Generations.userAge(settings.birth!!, today)
                 else -> null
             },
-            otherAge = temporary?.other ?: settings.otherAge,
-            savedOtherAge = settings.otherAge,
-            temporary = temporary != null,
-            gap = userBirth?.let { Generations.gap(it, otherBirth) },
+            temporary = temporary.user != null,
+            otherAges = temporary.others,
+            gaps = if (userBirth == null) emptyList() else otherBirths.map { Generations.gap(userBirth, it) },
             userBirth = userBirth,
-            otherBirth = otherBirth,
+            otherBirths = otherBirths,
             settings = settings,
         )
     }
@@ -137,41 +141,35 @@ abstract class GenerationsViewModel(
         _smallGapWarning.value = false
     }
 
-    /** "Modifier": saves the other person's age. */
-    fun saveOtherAge(age: Int) {
-        val current = _generations.value ?: return
-        if (age == current.savedOtherAge) {
-            // Nothing changes, so no new state comes: warn now if needed.
-            if (current.isSmallGap && !current.temporary) _smallGapWarning.value = true
-            return
-        }
-        warnAfterChange = true
-        viewModelScope.launch {
-            if (!updateSettings.setOtherAge(age)) warnAfterChange = false
-        }
-    }
-
     /** Touching the user's age in the banner: a temporary age, not saved. */
-    fun setTemporaryUserAge(age: Int) = setTemporary { it.copy(user = age) }
+    fun setTemporaryUserAge(age: Int) = change { it.copy(user = age.coerceIn(Generations.AGE_RANGE)) }
 
-    /** Touching the other person's age in the banner: a temporary age, not saved. */
-    fun setTemporaryOtherAge(age: Int) = setTemporary { it.copy(other = age) }
-
-    /** "Choisir des âges" without a birth: starts the temporary ages (35, the mock-ups' example, and the saved age). */
-    fun startTemporaryAges() = setTemporary { it }
-
-    /** "Revenir à mes réglages". */
-    fun clearTemporaryAges() {
-        temporaryAges.ages.value = null
+    /** "+": adds an age after the others, up to three (decision of 17/11/2026). */
+    fun addOtherAge(age: Int) = change {
+        if (it.others.size >= Generations.MAX_OTHER_PEOPLE) it else it.copy(others = it.others + age.coerceIn(Generations.AGE_RANGE))
     }
 
-    private fun setTemporary(change: (TemporaryAges) -> TemporaryAges) {
+    /** Touching an added age: changes it, keeping its place and colour. */
+    fun setOtherAge(index: Int, age: Int) = change {
+        if (index !in it.others.indices) it else it.copy(others = it.others.toMutableList().apply { set(index, age.coerceIn(Generations.AGE_RANGE)) })
+    }
+
+    /** "Retirer": removes an added age; the next ones move up a place. */
+    fun removeOtherAge(index: Int) {
+        temporaryAges.ages.update { if (index !in it.others.indices) it else it.copy(others = it.others.filterIndexed { i, _ -> i != index }) }
+    }
+
+    /** "Choisir des âges" without a birth: a temporary age for the user (35, the mock-ups' example). */
+    fun startTemporaryAges() = change { it.copy(user = it.user ?: _generations.value?.userAge ?: DEFAULT_TEMPORARY_USER_AGE) }
+
+    /** "Revenir à mes réglages": the user's age comes from the settings again; the added ages stay. */
+    fun clearTemporaryAges() {
+        temporaryAges.ages.update { it.copy(user = null) }
+    }
+
+    private fun change(transform: (TemporaryAges) -> TemporaryAges) {
         val current = _generations.value ?: return
-        val start = temporaryAges.ages.value
-            ?: TemporaryAges(user = current.userAge ?: DEFAULT_TEMPORARY_USER_AGE, other = current.otherAge)
-        val next = change(start).let {
-            TemporaryAges(it.user.coerceIn(Generations.AGE_RANGE), it.other.coerceIn(Generations.AGE_RANGE))
-        }
+        val next = transform(temporaryAges.ages.value)
         if (next == temporaryAges.ages.value) {
             // Nothing changes, so no new state comes: warn now if needed.
             if (current.isSmallGap) _smallGapWarning.value = true

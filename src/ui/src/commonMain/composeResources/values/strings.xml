@@ -82,14 +82,13 @@
          person pictogram instead (decision of 15/11/2026); the names below are for screen readers only. -->
     <string name="equivalences_title">Équivalences</string>
     <string name="person_user">Toi</string>
-    <string name="person_other">L'autre personne</string>
+    <!-- Spoken name of an added age, for screen readers only: "Personne 2", "Personne 3", "Personne 4". -->
+    <string name="person_number">Personne %1$d</string>
     <plurals name="equivalences_gap">
         <item quantity="one">%1$d an d'écart</item>
         <item quantity="other">%1$d ans d'écart</item>
     </plurals>
     <string name="equivalences_gap_none">Moins d'un an d'écart</string>
-    <string name="equivalences_edit">Modifier</string>
-    <string name="equivalences_reverse">Inverser les colonnes</string>
     <string name="equivalences_themes">Thèmes</string>
     <plurals name="equivalences_themes_summary">
         <item quantity="one">%1$d thème sur %2$d</item>
@@ -102,8 +101,12 @@
     <string name="equivalences_choose_ages">Choisir des âges</string>
     <string name="equivalences_empty">Aucune équivalence pour ces thèmes. Coche d'autres thèmes ou essaie un autre âge.</string>
     <string name="equivalences_small_gap">Attention : avec un écart aussi petit, les équivalences ne sont pas forcément représentatives.</string>
-    <string name="equivalences_age_saved">Âge enregistré</string>
     <string name="equivalences_age_temporary">Âge temporaire, pas enregistré</string>
+    <string name="people_add">Ajouter un âge</string>
+    <string name="people_remove">Retirer</string>
+    <string name="people_add_hint">Ajoute jusqu'à 3 âges pour comparer, chacun avec sa couleur.</string>
+    <string name="equivalences_no_other">Ajoute un âge avec « + » pour voir tes équivalences.</string>
+    <string name="equivalences_a11y_none">%1$s : pas d'équivalent.</string>
     <string name="equivalences_a11y_person_age">%1$s, %2$s</string>
     <string name="equivalences_a11y_side">%1$s : %2$s, %3$s, %4$s.</string>
     <string name="ok">OK</string>

@@ -3,7 +3,7 @@ package io.github.fugeekies.timeflies.domain.model
 import kotlinx.datetime.LocalDate
 
 /**
- * One side of an equivalence: an event in the life of one of the two people.
+ * One side of an equivalence: an event in the life of one of the people.
  *
  * @property date date of the event in the chosen region.
  * @property age how old that person was on [date], told as on the Today screen (decision of 15/11/2026).
@@ -15,12 +15,16 @@ data class EquivalenceSide(
 )
 
 /**
- * Two events of the same type that hold the same place in the lives of two people (docs/EVENTS_DATA.md,
- * "Règles d'appariement des équivalences"). [left] belongs to the person whose events are listed, [right] to the
- * other one.
+ * An event in the user's life and, for each other age, the event of the same type that holds the same place in
+ * that person's life (docs/EVENTS_DATA.md, "Règles d'appariement des équivalences"; decision of 17/11/2026: up to
+ * three other ages side by side).
+ *
+ * @property user the user's event, which orders the list.
+ * @property others one entry per other age, in the order of the banner; null when that person has no equivalent.
+ *   At least one is not null.
  */
 data class Equivalence(
     val type: EventType,
-    val left: EquivalenceSide,
-    val right: EquivalenceSide,
+    val user: EquivalenceSide,
+    val others: List<EquivalenceSide?>,
 )

@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- « Quel âge ? » et Équivalences : jusqu'à 3 âges à ajouter à côté du tien avec « + », chacun avec sa couleur de pictogramme ; toucher un âge le change ou le retire. Les âges ajoutés sont partagés par les deux écrans et oubliés à la fermeture de l'application.
 - Style Éphéméride, comme sur la maquette : Aujourd'hui en page de calendrier à arracher (anneaux de reliure, ligne de perforation, grand chiffre rouge en Big Shoulders Display), la feuille de la veille arrachée vers le haut une fois par jour, cartes à bordure fine ; clair ou sombre selon le système. Troisième choix de Réglages › Affichage et du widget Android.
 - Style VHS, comme sur la maquette : Aujourd'hui en cassette (« ● REC », compteur de bande, bobines, étiquette inclinée à lignes de balayage), âges en Bungee, titres de section « » BIENTÔT… », couleurs saturées sur fond sombre. Le VHS est toujours sombre.
 - Réglages › Affichage : choix du style, Polaroïd ou VHS, avec un aperçu de chaque feuille ; il s'applique aussitôt à toute l'application et au widget Android.
@@ -21,6 +22,10 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- « Quel âge ? » passe en deuxième position dans la navigation, devant Équivalences.
+- « Quel âge ? » : les âges de chaque ligne sont côte à côte sous le titre, dans l'ordre du bandeau ; au lancement, seul ton âge s'affiche.
+- Équivalences : une carte par événement de ta vie, avec l'équivalent de chaque âge ajouté côte à côte (« — » s'il n'y en a pas) ; le bouton « Inverser » et « Modifier » disparaissent.
+- Réglages : `settings.json` passe en version 7, sans l'âge de l'autre personne ni le sens de lecture d'Équivalences (un ancien fichier se lit toujours).
 - Android : la permission Internet, pour la seule recherche de nouvelles versions.
 - `settings.json` passe en version 4 (objet `releaseCheck`), puis en version 5 (`excludedEventGroups`), puis en version 6 (`style`).
 - Base d'événements sortie du code : `assets/events/<famille>/<type>/<origine>[/<sous-catégorie>].json`, 52 fichiers pour les 192 événements (origine : pays de l'artiste, du joueur ou du studio ; sous-catégorie : genre des morts d'icônes, discipline des records). Le type vient du dossier.

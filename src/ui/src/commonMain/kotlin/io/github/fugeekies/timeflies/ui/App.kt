@@ -66,8 +66,8 @@ import org.jetbrains.compose.resources.stringResource
 /** The four destinations (docs/UI_DESIGN_SPEC.md, "Navigation"). */
 private enum class Destination(val label: StringResource, val icon: ImageVector) {
     TODAY(Res.string.nav_today, TimeFliesIcons.Calendar),
-    EQUIVALENCES(Res.string.nav_equivalences, TimeFliesIcons.Compare),
     EVENT_AGES(Res.string.nav_event_ages, TimeFliesIcons.Search),
+    EQUIVALENCES(Res.string.nav_equivalences, TimeFliesIcons.Compare),
     SETTINGS(Res.string.nav_settings, TimeFliesIcons.Tune),
 
     /** Debug builds only (docs/DEVELOPMENT.md, "Panneau de débogage"). */
@@ -237,7 +237,7 @@ private fun MainScreens(
                 modifier = content,
             )
             Destination.EVENT_AGES -> EventAgesScreen(
-                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, updateSettings, clock, temporaryAges) },
+                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, clock, temporaryAges) },
                 request = eventRequest,
                 onRequestHandled = { eventRequest = null },
                 onOpenSettings = { current = Destination.SETTINGS },
