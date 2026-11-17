@@ -12,7 +12,7 @@ Widget de l'écran d'accueil qui affiche le **coup de vieux du jour**, le même 
 * Aucun anniversaire aujourd'hui : le premier des 7 prochains jours, précédé de « Dans 3 jours ».
 * Premier lancement pas encore fait : « Ouvre TimeFlies pour commencer. »
 * Sans mois et année de naissance (premier lancement passé) : l'anniversaire s'affiche sans « Tu avais N ans ».
-* Le widget suit le style d'affichage de l'application (Polaroïd en V1 : âge écrit à la main sur un petit Polaroïd ; Éphéméride ensuite). Les maquettes ci-dessous sont dessinées en Éphéméride.
+* Le widget suit le style d'affichage de l'application : âge écrit à la main sur un petit Polaroïd, en Bungee magenta sur l'étiquette du VHS (jalon 14), ou en Big Shoulders Display rouge sur une petite page blanche, sombre dans le thème sombre, en Éphéméride (jalon 15). Les maquettes ci-dessous sont dessinées en Éphéméride.
 
 #### Tailles (décision du 13/11/2026)
 | Taille | Contenu |

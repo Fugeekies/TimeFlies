@@ -75,6 +75,9 @@ import io.github.fugeekies.timeflies.ui.theme.accent
 import io.github.fugeekies.timeflies.ui.theme.rememberReducedMotion
 import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import io.github.fugeekies.timeflies.ui.vhs.VhsTape
+import io.github.fugeekies.timeflies.ui.ephemeris.EphemerisSheet
+import kotlinx.datetime.DateTimeUnit
+import kotlinx.datetime.minus
 import io.github.fugeekies.timeflies.ui.vhs.VhsYellow
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
@@ -88,7 +91,7 @@ private class Develop(val enabled: Boolean, val onDeveloped: () -> Unit)
 private val LocalDevelop = staticCompositionLocalOf { Develop(false) {} }
 
 /**
- * The Today screen (docs/UISpec/Today.template.md), Polaroïd style.
+ * The Today screen (docs/UISpec/Today.template.md), in the chosen style: Polaroïd, VHS tape or Éphéméride page.
  *
  * @param onOpenEvent a card touched: "Quel âge ?" on its event.
  */
@@ -151,11 +154,12 @@ private fun Header(today: String) {
             style = style.accent(34f),
             color = if (vhs) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onBackground,
         )
-        if (vhs) {
+        when (style.displayStyle) {
             // The date is on the tape label: the header only plays the tape, as on the mock-up.
-            Text(stringResource(Res.string.vhs_play), fontFamily = style.section, fontSize = 22.sp, color = VhsYellow, modifier = Modifier.clearAndSetSemantics {})
-        } else {
-            Text(today, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            DisplayStyle.VHS -> Text(stringResource(Res.string.vhs_play), fontFamily = style.section, fontSize = 22.sp, color = VhsYellow, modifier = Modifier.clearAndSetSemantics {})
+            // The date is at the top of the calendar page.
+            DisplayStyle.EPHEMERIS -> Unit
+            DisplayStyle.POLAROID -> Text(today, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -213,6 +217,13 @@ private fun Polaroid(anniversary: Anniversary, isToday: Boolean, dates: DateText
             anniversary, dates.withDayName(anniversary.day).uppercase(), legend, userAge, description, click,
             rewind = develop.enabled, onRewound = develop.onDeveloped,
         )
+        DisplayStyle.EPHEMERIS -> EphemerisSheet(
+            anniversary,
+            dateLine = dates.withDayName(anniversary.day).uppercase(),
+            previousDateLine = dates.withDayName(anniversary.day.minus(1, DateTimeUnit.DAY)).uppercase(),
+            legend = legend, userAgeLine = userAge, description = description, modifier = click,
+            tear = develop.enabled, onTorn = develop.onDeveloped,
+        )
     }
 }
 
@@ -246,6 +257,14 @@ private fun SectionTitle(text: String) {
             color = style.sectionColor,
             modifier = Modifier.semantics { heading(); contentDescription = text },
         )
+        // "BIENTÔT…" in small spaced-out capitals, as on the mock-up.
+        DisplayStyle.EPHEMERIS -> Text(
+            text.uppercase(),
+            style = MaterialTheme.typography.labelSmall,
+            letterSpacing = 1.sp,
+            color = style.sectionColor,
+            modifier = Modifier.padding(top = 4.dp).semantics { heading(); contentDescription = text },
+        )
     }
 }
 
@@ -269,13 +288,20 @@ private fun AnniversaryCard(anniversary: Anniversary, dates: DateTexts) {
     val userAge = userAgeText(anniversary.userAge)
     val description = describe(anniversary, dates, userAge)
     val open = LocalOpenEvent.current
-    // Polaroïd: an off-white card with a light shadow. VHS: a dark card with a thin border, as on the mock-up.
-    val vhs = style.displayStyle == DisplayStyle.VHS
+    // Polaroïd: an off-white card with a light shadow. VHS and Éphéméride: a card with a thin border, as on their
+    // mock-ups, without a perforation (docs/UI_DESIGN_SPEC.md, § 1).
+    val bordered = style.displayStyle != DisplayStyle.POLAROID
     Surface(
         color = colors.surface,
-        shape = RoundedCornerShape(if (vhs) 10.dp else 6.dp),
-        shadowElevation = if (vhs) 0.dp else 1.dp,
-        border = if (vhs) BorderStroke(1.dp, colors.outline) else null,
+        shape = RoundedCornerShape(
+            when (style.displayStyle) {
+                DisplayStyle.POLAROID -> 6.dp
+                DisplayStyle.VHS -> 10.dp
+                DisplayStyle.EPHEMERIS -> 14.dp
+            },
+        ),
+        shadowElevation = if (bordered) 0.dp else 1.dp,
+        border = if (bordered) BorderStroke(1.dp, colors.outline) else null,
         modifier = Modifier
             .fillMaxWidth()
             .clickable(role = Role.Button) { open(event) }

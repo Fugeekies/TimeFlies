@@ -107,6 +107,9 @@ class DataStoreSettingsRepositoryTest {
         open().update { it.copy(displayStyle = DisplayStyle.VHS) }
         assertTrue("\"style\": \"vhs\"" in FileSystem.SYSTEM.read(file) { readUtf8() })
         assertEquals(DisplayStyle.VHS, open().settings.first().displayStyle)
+        open().update { it.copy(displayStyle = DisplayStyle.EPHEMERIS) }
+        assertTrue("\"style\": \"ephemeride\"" in FileSystem.SYSTEM.read(file) { readUtf8() })
+        assertEquals(DisplayStyle.EPHEMERIS, open().settings.first().displayStyle)
         // A version 5 file (before the choice) and an unknown style both get the Polaroïd.
         FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 5, "onboardingDone": true}""") }
         assertEquals(DisplayStyle.POLAROID, open().settings.first().displayStyle)

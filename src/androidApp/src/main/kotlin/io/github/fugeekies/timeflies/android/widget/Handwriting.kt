@@ -16,18 +16,19 @@ import kotlin.math.ceil
 /**
  * The number of years on the widget's sheet. A widget cannot use the app's fonts in its texts, so the number is
  * drawn into an image with the font of the chosen style, from the same font file as the app: Caveat written by hand
- * on the Polaroïd, Bungee on the VHS label.
+ * on the Polaroïd, Bungee on the VHS label, Big Shoulders Display on the Éphéméride page.
  */
 internal object Handwriting {
     /** Loaded fonts, by resource file name. */
     private val typefaces = java.util.concurrent.ConcurrentHashMap<String, Typeface>()
 
-    /** [text] in the font of [style] (Caveat bold or Bungee) at [sizeSp], in [color], on a transparent background. */
+    /** [text] in the font of [style] (Caveat bold, Bungee or Big Shoulders Display black) at [sizeSp], in [color], on a transparent background. */
     suspend fun bitmap(context: Context, text: String, sizeSp: Float, color: Color, style: DisplayStyle = DisplayStyle.POLAROID): Bitmap {
         val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             typeface = when (style) {
                 DisplayStyle.POLAROID -> font(context, "caveat.ttf", Typeface.BOLD)
                 DisplayStyle.VHS -> font(context, "bungee.ttf", Typeface.NORMAL)
+                DisplayStyle.EPHEMERIS -> font(context, "big_shoulders_display.ttf", Typeface.NORMAL, variation = "'wght' 900")
             }
             textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sizeSp, context.resources.displayMetrics)
             this.color = color.toArgb()
@@ -41,13 +42,14 @@ internal object Handwriting {
     }
 
     /** A font of the Compose resources, copied once to the cache folder (Typeface needs a file). */
-    private suspend fun font(context: Context, name: String, weight: Int): Typeface {
+    private suspend fun font(context: Context, name: String, weight: Int, variation: String? = null): Typeface {
         typefaces[name]?.let { return it }
         val bytes = readResourceFile("font/$name") ?: return Typeface.DEFAULT_BOLD
         val file = File(context.cacheDir, name)
         if (!file.exists() || file.length() != bytes.size.toLong()) file.writeBytes(bytes)
-        // Caveat is a variable font: bold as on the app's Polaroïd.
-        val loaded = Typeface.create(Typeface.createFromFile(file), weight)
+        // Caveat is a variable font: bold as on the app's Polaroïd. Big Shoulders Display too: black, set by its axis.
+        val base = if (variation != null) Typeface.Builder(file).setFontVariationSettings(variation).build() else Typeface.createFromFile(file)
+        val loaded = Typeface.create(base, weight)
         typefaces[name] = loaded
         return loaded
     }

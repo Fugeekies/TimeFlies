@@ -16,7 +16,10 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-/** WCAG AA contrast of the Polaroïd tokens, light and dark, and of the VHS tokens (docs/UI_DESIGN_SPEC.md, "Accessibilité"). */
+/**
+ * WCAG AA contrast of the Polaroïd and Éphéméride tokens, light and dark, and of the VHS tokens
+ * (docs/UI_DESIGN_SPEC.md, "Accessibilité").
+ */
 class ContrastTest {
 
     private val text = 4.5f
@@ -27,7 +30,8 @@ class ContrastTest {
         assertTrue(ratio >= min, "$what: ${"%.2f".format(ratio)} < $min")
     }
 
-    private fun checkScheme(name: String, scheme: ColorScheme, extras: StyleExtras) {
+    /** @param chipInk ink of the "Chiffre rond" chip on [ColorScheme.secondaryContainer]: the primary by default. */
+    private fun checkScheme(name: String, scheme: ColorScheme, extras: StyleExtras, chipInk: Color = scheme.primary) {
         for ((bgName, bg) in listOf("background" to scheme.background, "surface" to scheme.surface, "surfaceContainerHigh" to scheme.surfaceContainerHigh)) {
             assertContrast(text, scheme.onSurface, bg, "$name onSurface on $bgName")
             assertContrast(text, scheme.onSurfaceVariant, bg, "$name onSurfaceVariant on $bgName")
@@ -36,7 +40,7 @@ class ContrastTest {
         assertContrast(text, scheme.onBackground, scheme.background, "$name onBackground")
         assertContrast(text, scheme.onPrimary, scheme.primary, "$name onPrimary")
         assertContrast(text, scheme.onSecondaryContainer, scheme.secondaryContainer, "$name onSecondaryContainer")
-        assertContrast(text, scheme.primary, scheme.secondaryContainer, "$name primary on secondaryContainer (round chip)")
+        assertContrast(text, chipInk, scheme.secondaryContainer, "$name round chip on secondaryContainer")
         // The two people's ages, handwritten (20 sp and more, bold) on cards and on the background.
         for ((who, color) in listOf("user" to extras.userColor, "other" to extras.otherColor)) {
             assertContrast(text, color, scheme.surface, "$name $who on surface")
@@ -52,6 +56,20 @@ class ContrastTest {
 
     @Test
     fun vhsTokensAreAA() = checkScheme("vhs", VhsDark, VhsExtras)
+
+    // On the Éphéméride page, the round chip is written in onSecondaryContainer, the deeper red of the mock-up.
+    @Test
+    fun ephemerisLightTokensAreAA() = checkScheme("ephemeris light", EphemerisLight, EphemerisLightExtras, EphemerisLight.onSecondaryContainer)
+
+    @Test
+    fun ephemerisDarkTokensAreAA() = checkScheme("ephemeris dark", EphemerisDark, EphemerisDarkExtras, EphemerisDark.onSecondaryContainer)
+
+    @Test
+    fun theWidgetNumberReadsOnBothEphemerisPages() {
+        // Drawn once into an image in the light red, on the white or the dark page following the system.
+        assertContrast(large, EphemerisLight.primary, EphemerisLight.surface, "widget number on the light page")
+        assertContrast(large, EphemerisLight.primary, EphemerisDark.surface, "widget number on the dark page")
+    }
 
     @Test
     fun theWritingOnTheVhsTapeIsReadable() {

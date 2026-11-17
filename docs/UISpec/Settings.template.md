@@ -23,10 +23,11 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 * Un groupe décoché n'est plus chargé nulle part (Aujourd'hui, widget, notification Windows, Équivalences, « Quel âge ? ») ; le nombre d'événements de « À propos » suit. Rangement des groupes : [`EVENTS_DATA.md`](../EVENTS_DATA.md), « Fichiers et stockage ».
 
 #### Panneau « Affichage » (eyebrow « AFFICHAGE »)
-* **Style** (jalon 14, décision du 17/11/2026) : « Le style de toute l'application et du widget. Le VHS est toujours sombre. », puis un choix par style livré, chacun avec un aperçu miniature de sa feuille du jour dans ses propres couleurs (voir `UI_DESIGN_SPEC.md` § 1) :
+* **Style** (jalon 14, décision du 17/11/2026 ; Éphéméride au jalon 15) : « Le style de toute l'application et du widget. Le VHS est toujours sombre. », puis un choix par style livré, chacun avec un aperçu miniature de sa feuille du jour dans ses propres couleurs (voir `UI_DESIGN_SPEC.md` § 1) :
   * **Polaroïd** (par défaut) ;
   * **VHS** ;
-  * **Éphéméride**, avec son jalon.
+  * **Éphéméride**.
+  Les trois choix sont côte à côte quand ils tiennent, l'un sous l'autre sur un téléphone étroit.
   Le style s'applique aussitôt à toute l'application et au widget, et il est gardé dans `settings.json` (champ `style`, version 6).
 * **Région** : liste des pays, chacun écrit dans la langue de l'interface. Par défaut, la région du système (décision du 13/11/2026). Elle choisit les dates régionales des événements (voir `EVENTS_DATA.md`, « Dates par région »). **En V1, France seulement** (décision du 15/11/2026) : la ligne affiche « Région : France » sans liste ; le choix des pays arrive avec le jalon « Traductions et régions ».
 * **Langue** : liste des langues disponibles, chacune écrite dans sa langue. Au départ, Français seulement : la ligne est masquée tant qu'il n'y a qu'une langue. Par défaut, la langue du système si elle est disponible, le français sinon.
