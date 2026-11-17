@@ -56,12 +56,8 @@
         <item quantity="other">Tenías %1$s años.</item>
     </plurals>
 
-    <string name="onboarding_title">El juego más triste del mundo</string>
-    <string name="onboarding_intro_1">Para un chaval de 15 años, </string>
-    <string name="onboarding_intro_friends">Friends</string>
-    <string name="onboarding_intro_2"> es lo que </string>
-    <string name="onboarding_intro_happy_days">Happy Days</string>
-    <string name="onboarding_intro_3"> era para ti. TimeFlies te lo recuerda cada día.</string>
+    <string name="onboarding_title">Los años no perdonan</string>
+    <string name="onboarding_intro">Cada día, TimeFlies te recuerda cuánto hace que salieron tus películas, series, canciones y grandes momentos, y la edad que tenías. Para empezar, necesitamos tu mes y año de nacimiento.</string>
     <string name="onboarding_birth">TU MES Y AÑO DE NACIMIENTO</string>
     <string name="onboarding_start">¡Vamos!</string>
     <string name="onboarding_later">Más tarde</string>
@@ -206,9 +202,7 @@
     <string name="settings_events_expand">Desplegar %1$s</string>
     <string name="settings_events_collapse">Plegar %1$s</string>
     <string name="onboarding_events">LO QUE TE INTERESA</string>
-    <string name="onboarding_events_families">Temas</string>
-    <string name="onboarding_events_origins">Orígenes</string>
-    <string name="onboarding_events_more">El detalle (el rap de EE. UU. sin el rap francés, por ejemplo) se ajusta en Ajustes › Acontecimientos.</string>
+    <string name="onboarding_events_help">Desmarca lo que no te diga nada. Podrás afinarlo más tarde en Ajustes › Acontecimientos.</string>
     <string-array name="origin_names">
         <item>Internacional</item>
         <item>Argentina</item>
@@ -281,6 +275,13 @@
     <string name="family_sport">Deporte</string>
     <string name="family_games_tech">Videojuegos y tecnología</string>
     <string name="family_history">Política e historia</string>
+    <!-- What each theme holds, on the first launch screen (decision of 17/11/2026). -->
+    <string name="family_contents_series_tv">Sitcoms, series de culto, telerrealidad, programas infantiles, dibujos animados</string>
+    <string name="family_contents_cinema">Superproducciones, películas de animación, comedias francesas, sagas</string>
+    <string name="family_contents_music">Éxitos, álbumes de culto, boy bands, iconos de la música desaparecidos</string>
+    <string name="family_contents_sport">Estrellas del fútbol, Mundial, Juegos Olímpicos, récords</string>
+    <string name="family_contents_games_tech">Consolas, videojuegos fenómeno, teléfonos, redes sociales</string>
+    <string name="family_contents_history">Elecciones, grandes acontecimientos, familias reales</string>
 
     <string name="type_sitcom_hit">Sitcom de culto</string>
     <string name="type_drama_series_hit">Serie dramática de culto</string>

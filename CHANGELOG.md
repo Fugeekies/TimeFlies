@@ -24,6 +24,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Premier lancement revu : titre « Ça ne nous rajeunit pas », texte qui explique l'application, une ligne claire par thème (contenu et nombre d'événements, case à cocher) ; plus de choix par pays sur cet écran, il reste dans Réglages › Événements.
 - Installeur Windows en anglais seulement ; l'application démarre dans la langue de Windows quand elle la propose.
 - Réglages : `settings.json` passe en version 8 (`language`).
 - « Quel âge ? » passe en deuxième position dans la navigation, devant Équivalences.
@@ -41,6 +42,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Fixed
 
+- Premier lancement : quand l'écran revenait dans la même session (« Revoir le premier lancement » du panneau de débogage), « C'est parti » et « Plus tard » restaient désactivés.
 - Les événements se chargent hors du fil de l'interface : le premier écran ne se fige plus pendant la lecture de la base, qui grossira jusqu'à 5 000 événements.
 - Équivalences, « Quel âge ? » et Réglages se recalculent aussi à minuit quand l'application reste ouverte, comme Aujourd'hui.
 - Windows, en débogage : fermer la fenêtre quitte l'application, au lieu de la cacher en gardant le port du débogueur (F5 ne relançait plus rien).

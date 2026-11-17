@@ -16,10 +16,10 @@ Each version is published on the [Releases](https://github.com/Fugeekies/TimeFli
 
 ## First launch
 
-The **The saddest game in the world** screen opens only once:
+The **We're not getting any younger** screen opens only once:
 
 - **Your birth month and year**: never the day, on purpose. They are used to work out your age at each event and stay on your device.
-- **What interests you**: one chip per theme (Cinema, Music…) and per origin (France, United States…), all ticked. Untick what does not interest you; the details are set later in [Settings › Events](settings.md#events).
+- **What interests you**: one line per theme (Series & TV, Cinema, Music…), with what it holds and its number of events, all ticked. Untick the themes that do not speak to you; the details, such as a country or a genre, are set later in [Settings › Events](settings.md#events).
 - **Let's go** saves everything and opens [Today](today.md).
 - **Later** opens the app without a birth date: anniversaries are shown without your age. You can give it at any time in [Settings](settings.md).
 

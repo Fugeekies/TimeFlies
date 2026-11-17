@@ -11,6 +11,12 @@ import io.github.fugeekies.timeflies.ui.resources.date_short
 import io.github.fugeekies.timeflies.ui.resources.date_with_day_name
 import io.github.fugeekies.timeflies.ui.resources.days
 import io.github.fugeekies.timeflies.ui.resources.family_cinema
+import io.github.fugeekies.timeflies.ui.resources.family_contents_cinema
+import io.github.fugeekies.timeflies.ui.resources.family_contents_games_tech
+import io.github.fugeekies.timeflies.ui.resources.family_contents_history
+import io.github.fugeekies.timeflies.ui.resources.family_contents_music
+import io.github.fugeekies.timeflies.ui.resources.family_contents_series_tv
+import io.github.fugeekies.timeflies.ui.resources.family_contents_sport
 import io.github.fugeekies.timeflies.ui.resources.family_games_tech
 import io.github.fugeekies.timeflies.ui.resources.family_history
 import io.github.fugeekies.timeflies.ui.resources.family_music
@@ -113,6 +119,19 @@ fun userAgeText(age: UserAge?): String? = when (age) {
 
 @Composable
 fun familyLabel(family: Family): String = stringResource(familyResource(family))
+
+/** What a theme holds, in a few words, on the first launch screen (decision of 17/11/2026): its kinds of events. */
+@Composable
+fun familyContents(family: Family): String = stringResource(
+    when (family) {
+        Family.SERIES_TV -> Res.string.family_contents_series_tv
+        Family.CINEMA -> Res.string.family_contents_cinema
+        Family.MUSIC -> Res.string.family_contents_music
+        Family.SPORT -> Res.string.family_contents_sport
+        Family.GAMES_TECH -> Res.string.family_contents_games_tech
+        Family.HISTORY -> Res.string.family_contents_history
+    },
+)
 
 private fun familyResource(family: Family): StringResource = when (family) {
     Family.SERIES_TV -> Res.string.family_series_tv

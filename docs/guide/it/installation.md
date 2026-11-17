@@ -16,10 +16,10 @@ Ogni versione viene pubblicata nella pagina [Releases](https://github.com/Fugeek
 
 ## Primo avvio
 
-La schermata **Il gioco più triste del mondo** si apre una sola volta:
+La schermata **Gli anni passano per tutti** si apre una sola volta:
 
 - **Il tuo mese e anno di nascita**: mai il giorno, apposta. Servono a calcolare la tua età a ogni evento e restano sul tuo dispositivo.
-- **Cosa ti interessa**: un'etichetta per tema (Cinema, Musica…) e per origine (Francia, Stati Uniti…), tutte selezionate. Deseleziona ciò che non ti interessa; i dettagli si regolano poi in [Impostazioni › Eventi](settings.md#eventi).
+- **Cosa ti interessa**: una riga per tema (Serie & TV, Cinema, Musica…), con ciò che contiene e il suo numero di eventi, tutte selezionate. Deseleziona i temi che non ti dicono niente; i dettagli, come un paese o un genere, si regolano poi in [Impostazioni › Eventi](settings.md#eventi).
 - **Si parte** salva tutto e apre [Oggi](today.md).
 - **Più tardi** apre l'app senza data di nascita: gli anniversari compaiono senza la tua età. Potrai indicarla in qualsiasi momento nelle [Impostazioni](settings.md).
 

@@ -16,10 +16,10 @@ Cada versión se publica en la página [Releases](https://github.com/Fugeekies/T
 
 ## Primer inicio
 
-La pantalla **El juego más triste del mundo** se abre una sola vez:
+La pantalla **Los años no perdonan** se abre una sola vez:
 
 - **Tu mes y año de nacimiento**: nunca el día, a propósito. Sirven para calcular tu edad en cada acontecimiento y se quedan en tu dispositivo.
-- **Lo que te interesa**: una etiqueta por tema (Cine, Música…) y por origen (Francia, Estados Unidos…), todas marcadas. Desmarca lo que no te interese; el detalle se ajusta luego en [Ajustes › Acontecimientos](settings.md#acontecimientos).
+- **Lo que te interesa**: una línea por tema (Series y TV, Cine, Música…), con lo que contiene y su número de acontecimientos, todas marcadas. Desmarca los temas que no te digan nada; el detalle, como un país o un género, se ajusta luego en [Ajustes › Acontecimientos](settings.md#acontecimientos).
 - **¡Vamos!** guarda todo y abre [Hoy](today.md).
 - **Más tarde** abre la app sin fecha de nacimiento: los aniversarios aparecen sin tu edad. Podrás indicarla en cualquier momento en los [Ajustes](settings.md).
 

@@ -16,10 +16,10 @@ Chaque version est publiée sur la page [Releases](https://github.com/Fugeekies/
 
 ## Premier lancement
 
-L'écran **Le jeu le plus triste du monde** s'ouvre une seule fois :
+L'écran **Ça ne nous rajeunit pas** s'ouvre une seule fois :
 
 - **Ton mois et ton année de naissance** : jamais le jour, c'est voulu. Ils servent à calculer ton âge à chaque événement et restent sur ton appareil.
-- **Ce qui t'intéresse** : une pastille par thème (Cinéma, Musique…) et par origine (France, États-Unis…), toutes cochées. Décoche ce qui ne t'intéresse pas ; le détail se règle ensuite dans [Réglages › Événements](settings.md#événements).
+- **Ce qui t'intéresse** : une ligne par thème (Séries & télé, Cinéma, Musique…), avec ce qu'il contient et son nombre d'événements, toutes cochées. Décoche les thèmes qui ne te parlent pas ; le détail, par exemple un pays ou un genre, se règle ensuite dans [Réglages › Événements](settings.md#événements).
 - **C'est parti** enregistre tout et ouvre [Aujourd'hui](today.md).
 - **Plus tard** ouvre l'application sans date de naissance : les anniversaires s'affichent sans ton âge. Tu pourras la donner à tout moment dans les [Réglages](settings.md).
 
