@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- « Quel âge ? » : le bouton **Thèmes** d'Équivalences, au-dessus de la recherche. La liste et la recherche n'affichent que les thèmes cochés, et c'est le même choix, gardé, pour les deux écrans.
 - Base d'événements passée de 192 à 993 événements, au moins 150 par thème, chacun daté au jour près d'après Wikipédia et recoupé avec Wikidata. Nouveaux thèmes : Séries & télé (166 : sitcoms, séries dramatiques et françaises, téléréalité, émissions jeunesse, dessins animés), Jeux vidéo & tech (161 : consoles, jeux phénomènes, réseaux sociaux, formats de musique) et Politique & histoire (172 : présidentielles françaises et américaines, acteurs devenus politiciens, grands événements, familles royales). Cinéma (173) et Musique (171) complétés. Titres dans les cinq langues.
 - Sport (150) : trois nouveaux types, chacun avec son dessin au trait : titre mondial des autres nations (football, football féminin, rugby), titre du Grand Chelem au tennis et victoire au Tour de France, le premier et le dernier de chacun ; records du monde actuels de 14 disciplines et Ballons d'or féminins.
 - Réglages › Événements : noms de 38 nouveaux pays d'origine dans les cinq langues.
