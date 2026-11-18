@@ -1,0 +1,438 @@
+[
+  {
+    "id": "series-les-mysteres-de-l-ouest-1965",
+    "date": "1965-09-17",
+    "title": {
+      "fr": "Les Mystères de l'Ouest",
+      "en": "The Wild Wild West",
+      "de": "Verrückter wilder Westen",
+      "it": "Selvaggio west",
+      "es": "The Wild Wild West"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Les_Mystères_de_l'Ouest",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1278637 : même date."
+  },
+  {
+    "id": "series-star-trek-1966",
+    "date": "1966-09-08",
+    "title": {
+      "fr": "Star Trek",
+      "en": "Star Trek: The Original Series",
+      "de": "Raumschiff Enterprise",
+      "es": "Star Trek: la serie original"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Trek_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1077 : même date."
+  },
+  {
+    "id": "series-columbo-1968",
+    "date": "1968-02-20",
+    "title": {
+      "fr": "Columbo",
+      "it": "Colombo"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Columbo",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q371207 : même date."
+  },
+  {
+    "id": "series-les-feux-de-l-amour-1973",
+    "date": "1973-03-26",
+    "title": {
+      "fr": "Les Feux de l'amour",
+      "en": "The Young and the Restless",
+      "de": "Schatten der Leidenschaft",
+      "it": "Febbre d'amore",
+      "es": "The Young and the Restless"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Les_Feux_de_l'amour",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q849627 : même date."
+  },
+  {
+    "id": "series-starsky-et-hutch-1975",
+    "date": "1975-04-30",
+    "title": {
+      "fr": "Starsky et Hutch",
+      "en": "Starsky & Hutch",
+      "de": "Starsky & Hutch",
+      "it": "Starsky & Hutch",
+      "es": "Starsky y Hutch"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Starsky_et_Hutch",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q196226 : même date."
+  },
+  {
+    "id": "series-dallas-1978",
+    "date": "1978-04-02",
+    "title": {
+      "fr": "Dallas"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dallas_(série_télévisée,_1978)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q168708 : même date."
+  },
+  {
+    "id": "series-magnum-1980",
+    "date": "1980-12-11",
+    "title": {
+      "fr": "Magnum",
+      "en": "Magnum, P.I.",
+      "it": "Magnum, P.I.",
+      "es": "Magnum, P.I."
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Magnum_(série_télévisée,_1980)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q254689 : même date."
+  },
+  {
+    "id": "series-dynastie-1981",
+    "date": "1981-01-12",
+    "title": {
+      "fr": "Dynastie",
+      "en": "Dynasty",
+      "de": "Der Denver-Clan",
+      "it": "Dynasty",
+      "es": "Dinastía"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dynastie_(série_télévisée,_1981)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q584025 : même date."
+  },
+  {
+    "id": "series-k-2000-1982",
+    "date": "1982-09-26",
+    "title": {
+      "fr": "K 2000",
+      "en": "Knight Rider",
+      "de": "Knight Rider",
+      "it": "Supercar",
+      "es": "Knight Rider"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/K_2000_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q464009 : même date."
+  },
+  {
+    "id": "series-l-agence-tous-risques-1983",
+    "date": "1983-01-23",
+    "title": {
+      "fr": "L'Agence tous risques",
+      "en": "The A-Team",
+      "de": "Das A-Team",
+      "it": "A-Team",
+      "es": "The A-Team"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/L'Agence_tous_risques",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q464123 : même date."
+  },
+  {
+    "id": "series-alerte-a-malibu-1989",
+    "date": "1989-04-23",
+    "title": {
+      "fr": "Alerte à Malibu",
+      "en": "Baywatch",
+      "de": "Baywatch – Die Rettungsschwimmer von Malibu",
+      "it": "Baywatch",
+      "es": "Baywatch"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Alerte_à_Malibu",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q223320 : même date."
+  },
+  {
+    "id": "series-twin-peaks-1990",
+    "date": "1990-04-08",
+    "title": {
+      "fr": "Twin Peaks",
+      "it": "I segreti di Twin Peaks"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Twin_Peaks_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2085 : même date."
+  },
+  {
+    "id": "series-beverly-hills-90210-1990",
+    "date": "1990-10-04",
+    "title": {
+      "fr": "Beverly Hills 90210",
+      "en": "Beverly Hills, 90210",
+      "de": "Beverly Hills, 90210",
+      "es": "Beverly Hills, 90210"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Beverly_Hills_90210",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q117590 : même date."
+  },
+  {
+    "id": "series-x-files-aux-frontieres-du-reel-1993",
+    "date": "1993-09-10",
+    "title": {
+      "fr": "X-Files : Aux frontières du réel",
+      "en": "The X-Files",
+      "de": "Akte X – Die unheimlichen Fälle des FBI",
+      "it": "X-Files",
+      "es": "The X-Files"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/X-Files_:_Aux_frontières_du_réel",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2744 : même date."
+  },
+  {
+    "id": "series-urgences-1994",
+    "date": "1994-09-19",
+    "title": {
+      "fr": "Urgences",
+      "en": "ER",
+      "de": "Emergency Room – Die Notaufnahme",
+      "it": "E.R. - Medici in prima linea",
+      "es": "ER"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Urgences_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q207375 : même date."
+  },
+  {
+    "id": "series-buffy-contre-les-vampires-1997",
+    "date": "1997-03-10",
+    "title": {
+      "fr": "Buffy contre les vampires",
+      "en": "Buffy the Vampire Slayer",
+      "de": "Buffy – Im Bann der Dämonen",
+      "it": "Buffy l'ammazzavampiri",
+      "es": "Buffy the Vampire Slayer"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Buffy_contre_les_vampires",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q183513 : même date."
+  },
+  {
+    "id": "series-dawson-1998",
+    "date": "1998-01-20",
+    "title": {
+      "fr": "Dawson",
+      "en": "Dawson's Creek",
+      "de": "Dawson’s Creek",
+      "it": "Dawson's Creek",
+      "es": "Dawson's Creek"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dawson_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q461357 : même date."
+  },
+  {
+    "id": "series-les-soprano-1999",
+    "date": "1999-01-10",
+    "title": {
+      "fr": "Les Soprano",
+      "en": "The Sopranos",
+      "de": "Die Sopranos",
+      "it": "I Soprano",
+      "es": "Los Soprano"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Soprano",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23628 : même date."
+  },
+  {
+    "id": "series-les-experts-2000",
+    "date": "2000-10-06",
+    "title": {
+      "fr": "Les Experts",
+      "en": "CSI: Crime Scene Investigation",
+      "it": "CSI - Scena del crimine",
+      "es": "CSI: Crime Scene Investigation"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Experts_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q117396 : même date."
+  },
+  {
+    "id": "series-24-heures-chrono-2001",
+    "date": "2001-11-06",
+    "title": {
+      "fr": "24 Heures chrono",
+      "en": "24",
+      "de": "24",
+      "it": "24",
+      "es": "24"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/24_Heures_chrono",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q56194 : même date."
+  },
+  {
+    "id": "series-sur-ecoute-2002",
+    "date": "2002-06-02",
+    "title": {
+      "fr": "Sur écoute",
+      "en": "The Wire",
+      "de": "The Wire",
+      "it": "The Wire",
+      "es": "The Wire"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sur_écoute",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q478360 : même date."
+  },
+  {
+    "id": "series-lost-les-disparus-2004",
+    "date": "2004-09-22",
+    "title": {
+      "fr": "Lost : Les Disparus",
+      "en": "Lost",
+      "de": "Lost",
+      "it": "Lost",
+      "es": "Lost"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Lost_:_Les_Disparus",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23567 : même date."
+  },
+  {
+    "id": "series-desperate-housewives-2004",
+    "date": "2004-10-03",
+    "title": {
+      "fr": "Desperate Housewives"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Desperate_Housewives",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q131758 : même date."
+  },
+  {
+    "id": "series-dr-house-2004",
+    "date": "2004-11-16",
+    "title": {
+      "fr": "Dr House",
+      "en": "House",
+      "de": "Dr. House",
+      "it": "Dr. House - Medical Division",
+      "es": "House M. D."
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dr_House",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23558 : même date."
+  },
+  {
+    "id": "series-grey-s-anatomy-2005",
+    "date": "2005-03-27",
+    "title": {
+      "fr": "Grey's Anatomy",
+      "de": "Grey’s Anatomy"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Grey's_Anatomy",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q438406 : même date."
+  },
+  {
+    "id": "series-prison-break-2005",
+    "date": "2005-08-29",
+    "title": {
+      "fr": "Prison Break"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Prison_Break_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q80044 : même date."
+  },
+  {
+    "id": "series-mad-men-2007",
+    "date": "2007-07-19",
+    "title": {
+      "fr": "Mad Men"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mad_Men",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q223977 : même date."
+  },
+  {
+    "id": "series-breaking-bad-2008",
+    "date": "2008-01-20",
+    "title": {
+      "fr": "Breaking Bad"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Breaking_Bad",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1079 : même date."
+  },
+  {
+    "id": "series-the-walking-dead-2010",
+    "date": "2010-10-31",
+    "title": {
+      "fr": "The Walking Dead"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/The_Walking_Dead_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q232737 : même date."
+  },
+  {
+    "id": "series-game-of-thrones-2011",
+    "date": "2011-04-17",
+    "title": {
+      "fr": "Game of Thrones",
+      "it": "Il Trono di Spade"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Game_of_Thrones",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23572 : même date."
+  },
+  {
+    "id": "series-stranger-things-2016",
+    "date": "2016-07-15",
+    "title": {
+      "fr": "Stranger Things"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Stranger_Things",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q19798734 : même date."
+  },
+  {
+    "id": "series-mercredi-2022",
+    "date": "2022-11-23",
+    "title": {
+      "fr": "Mercredi",
+      "en": "Wednesday",
+      "de": "Wednesday",
+      "it": "Mercoledì",
+      "es": "Wednesday"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mercredi_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q105553568 : même date."
+  }
+]

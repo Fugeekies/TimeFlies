@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-alain-bashung-2009",
+    "date": "2009-03-14",
+    "title": {
+      "fr": "Alain Bashung"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Alain_Bashung",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q380045 : même date."
+  },
+  {
     "id": "death-johnny-hallyday-2017",
     "date": "2017-12-05",
     "title": {

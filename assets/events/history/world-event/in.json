@@ -1,0 +1,32 @@
+[
+  {
+    "id": "history-assassinat-d-indira-gandhi-1984",
+    "date": "1984-10-31",
+    "title": {
+      "fr": "Assassinat d'Indira Gandhi",
+      "en": "Assassination of Indira Gandhi",
+      "de": "Ermordung von Indira Gandhi",
+      "it": "Assassinio di Indira Gandhi",
+      "es": "Asesinato de Indira Gandhi"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Indira_Gandhi",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q1149 : même date."
+  },
+  {
+    "id": "history-mort-de-mere-teresa-1997",
+    "date": "1997-09-05",
+    "title": {
+      "fr": "Mort de mère Teresa",
+      "en": "Death of Mother Teresa",
+      "de": "Tod von Mutter Teresa",
+      "it": "Morte di Madre Teresa",
+      "es": "Muerte de Madre Teresa"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mère_Teresa",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q30547 : même date."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-accident-de-fukushima-2011",
+    "date": "2011-03-11",
+    "title": {
+      "fr": "Accident nucléaire de Fukushima",
+      "en": "Fukushima nuclear accident",
+      "de": "Nuklearkatastrophe von Fukushima",
+      "it": "Disastro di Fukushima",
+      "es": "Accidente nuclear de Fukushima"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Accident_nucléaire_de_Fukushima",
+    "note": "Date selon l'infobox. Wikidata Q171178 : même date."
+  }
+]

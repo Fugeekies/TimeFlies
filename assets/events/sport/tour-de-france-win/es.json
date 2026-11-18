@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sport-tour-de-france-federico-bahamontes-1959",
+    "date": "1959-07-18",
+    "title": {
+      "fr": "Victoire de Federico Bahamontes au Tour de France (1959)",
+      "en": "Federico Bahamontes wins the Tour de France (1959)",
+      "de": "Federico Bahamontes gewinnt die Tour de France (1959)",
+      "it": "Federico Bahamontes vince il Tour de France (1959)",
+      "es": "Federico Bahamontes gana el Tour de Francia (1959)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1959",
+    "note": "Arrivée à Paris le 1959-07-18 selon le texte de l'article (« du … au … ») et Wikidata Q580122 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-luis-ocana-1973",
+    "date": "1973-07-22",
+    "title": {
+      "fr": "Victoire de Luis Ocaña au Tour de France (1973)",
+      "en": "Luis Ocaña wins the Tour de France (1973)",
+      "de": "Luis Ocaña gewinnt die Tour de France (1973)",
+      "it": "Luis Ocaña vince il Tour de France (1973)",
+      "es": "Luis Ocaña gana el Tour de Francia (1973)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1973",
+    "note": "Arrivée à Paris le 1973-07-22 selon le texte de l'article (« du … au … ») et Wikidata Q612937 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-pedro-delgado-1988",
+    "date": "1988-07-24",
+    "title": {
+      "fr": "Victoire de Pedro Delgado au Tour de France (1988)",
+      "en": "Pedro Delgado wins the Tour de France (1988)",
+      "de": "Pedro Delgado gewinnt die Tour de France (1988)",
+      "it": "Pedro Delgado vince il Tour de France (1988)",
+      "es": "Pedro Delgado gana el Tour de Francia (1988)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1988",
+    "note": "Arrivée à Paris le 1988-07-24 selon le texte de l'article (« du … au … ») et Wikidata Q639587 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-miguel-indurain-1991",
+    "date": "1991-07-28",
+    "title": {
+      "fr": "Première victoire de Miguel Indurain au Tour de France (1991)",
+      "en": "Miguel Indurain's first Tour de France win (1991)",
+      "de": "Erster Tour-de-France-Sieg von Miguel Indurain (1991)",
+      "it": "Prima vittoria di Miguel Indurain al Tour de France (1991)",
+      "es": "Primera victoria de Miguel Indurain en el Tour de Francia (1991)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1991",
+    "note": "Arrivée à Paris le 1991-07-28 selon le texte de l'article (« du … au … ») et Wikidata Q754990 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-miguel-indurain-1995",
+    "date": "1995-07-23",
+    "title": {
+      "fr": "Dernière victoire de Miguel Indurain au Tour de France (1995)",
+      "en": "Miguel Indurain's last Tour de France win (1995)",
+      "de": "Letzter Tour-de-France-Sieg von Miguel Indurain (1995)",
+      "it": "Ultima vittoria di Miguel Indurain al Tour de France (1995)",
+      "es": "Última victoria de Miguel Indurain en el Tour de Francia (1995)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1995",
+    "note": "Arrivée à Paris le 1995-07-23 selon le texte de l'article (« du … au … ») et Wikidata Q614452 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-alberto-contador-2007",
+    "date": "2007-07-29",
+    "title": {
+      "fr": "Première victoire d'Alberto Contador au Tour de France (2007)",
+      "en": "Alberto Contador's first Tour de France win (2007)",
+      "de": "Erster Tour-de-France-Sieg von Alberto Contador (2007)",
+      "it": "Prima vittoria di Alberto Contador al Tour de France (2007)",
+      "es": "Primera victoria de Alberto Contador en el Tour de Francia (2007)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2007",
+    "note": "Arrivée à Paris le 2007-07-29 selon le texte de l'article (« du … au … ») et Wikidata Q329877 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-carlos-sastre-2008",
+    "date": "2008-07-27",
+    "title": {
+      "fr": "Victoire de Carlos Sastre au Tour de France (2008)",
+      "en": "Carlos Sastre wins the Tour de France (2008)",
+      "de": "Carlos Sastre gewinnt die Tour de France (2008)",
+      "it": "Carlos Sastre vince il Tour de France (2008)",
+      "es": "Carlos Sastre gana el Tour de Francia (2008)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2008",
+    "note": "Arrivée à Paris le 2008-07-27 selon le texte de l'article (« du … au … ») et Wikidata Q221530 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-alberto-contador-2009",
+    "date": "2009-07-26",
+    "title": {
+      "fr": "Dernière victoire d'Alberto Contador au Tour de France (2009)",
+      "en": "Alberto Contador's last Tour de France win (2009)",
+      "de": "Letzter Tour-de-France-Sieg von Alberto Contador (2009)",
+      "it": "Ultima vittoria di Alberto Contador al Tour de France (2009)",
+      "es": "Última victoria de Alberto Contador en el Tour de Francia (2009)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2009",
+    "note": "Arrivée à Paris le 2009-07-26 selon le texte de l'article (« du … au … ») et Wikidata Q217263 (même date) ; vainqueur selon l'infobox."
+  }
+]

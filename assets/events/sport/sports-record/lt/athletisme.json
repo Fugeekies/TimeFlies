@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-mykolas-alekna-2025",
+    "date": "2025-04-13",
+    "title": {
+      "fr": "Record du monde du lancer du disque de Mykolas Alekna",
+      "en": "Mykolas Alekna's discus throw world record",
+      "de": "Diskuswurf-Weltrekord von Mykolas Alekna",
+      "it": "Record del mondo di lancio del disco di Mykolas Alekna",
+      "es": "Récord del mundo de lanzamiento de disco de Mykolas Alekna"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_lancer_du_disque",
+    "note": "Date du record actuel selon l'infobox ; détenteur selon le texte de l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

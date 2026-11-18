@@ -32,6 +32,9 @@ enum class EventType(val id: String, val family: Family) {
     WORLD_CUP_WIN_FRANCE("world-cup-win-france", Family.SPORT),
     OLYMPICS_IN_FRANCE("olympics-in-france", Family.SPORT),
     SPORTS_RECORD("sports-record", Family.SPORT),
+    WORLD_CUP_WIN("world-cup-win", Family.SPORT),
+    TENNIS_GRAND_SLAM("tennis-grand-slam", Family.SPORT),
+    TOUR_DE_FRANCE_WIN("tour-de-france-win", Family.SPORT),
 
     // Video games & tech
     NINTENDO_CONSOLE("nintendo-console", Family.GAMES_TECH),

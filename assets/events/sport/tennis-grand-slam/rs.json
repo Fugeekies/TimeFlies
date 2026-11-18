@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-grand-chelem-novak-djokovic-ao-2008",
+    "date": "2008-01-27",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Novak Djokovic (Open d'Australie 2008)",
+      "en": "Novak Djokovic's first Grand Slam title (2008 Australian Open)",
+      "de": "Erster Grand-Slam-Titel von Novak Djokovic (Australian Open 2008)",
+      "it": "Primo titolo del Grande Slam di Novak Djokovic (Australian Open 2008)",
+      "es": "Primer título de Grand Slam de Novak Djokovic (Abierto de Australia 2008)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'Open_d'Australie_2008",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q777286 : année seulement."
+  }
+]

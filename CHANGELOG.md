@@ -11,6 +11,9 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Base d'événements passée de 192 à 993 événements, au moins 150 par thème, chacun daté au jour près d'après Wikipédia et recoupé avec Wikidata. Nouveaux thèmes : Séries & télé (166 : sitcoms, séries dramatiques et françaises, téléréalité, émissions jeunesse, dessins animés), Jeux vidéo & tech (161 : consoles, jeux phénomènes, réseaux sociaux, formats de musique) et Politique & histoire (172 : présidentielles françaises et américaines, acteurs devenus politiciens, grands événements, familles royales). Cinéma (173) et Musique (171) complétés. Titres dans les cinq langues.
+- Sport (150) : trois nouveaux types, chacun avec son dessin au trait : titre mondial des autres nations (football, football féminin, rugby), titre du Grand Chelem au tennis et victoire au Tour de France, le premier et le dernier de chacun ; records du monde actuels de 14 disciplines et Ballons d'or féminins.
+- Réglages › Événements : noms de 38 nouveaux pays d'origine dans les cinq langues.
 - Titres des événements dans la langue de l'interface : titres des films tels qu'ils sont sortis dans chaque pays (d'après les liens entre les Wikipédias), titres du sport traduits ; les chansons et les artistes gardent leur nom. Sans titre dans une langue, le titre français s'affiche. Un titre dans une langue inconnue fait rejeter l'événement.
 - Polaroïd : un dessin au trait pour chacun des 32 types dans la photo (canapé pour les sitcoms, micro pour les divas, urne pour les présidentielles…), au lieu du dessin commun du thème.
 - Interface en anglais, allemand, italien et espagnol, en plus du français : choix dans Réglages › Affichage › Langue (la langue du système par défaut, le français si elle n'est pas proposée), appliqué aussitôt à l'application, au widget, à l'icône et à la notification Windows. Dates dans l'ordre de chaque langue. Les titres des événements restent en français pour l'instant.
@@ -26,6 +29,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Sport sans répétition : le premier et le dernier Ballon d'or d'un même joueur seulement (Messi 2009 et 2023, Cristiano Ronaldo 2008 et 2017), et seulement le record du monde actuel de chaque discipline (Beamon, Lavillenie, Kipchoge et le premier record de Duplantis retirés).
 - Polaroïd : retour au cadre blanc cassé de la maquette pour tous les événements, sans couleur ni chiffre de décennie ; la photo garde la couleur du thème et le dessin du type. Widget Android aussi.
 - Premier lancement revu : titre « Ça ne nous rajeunit pas », texte qui explique l'application, une ligne claire par thème (contenu et nombre d'événements, case à cocher) ; plus de choix par pays sur cet écran, il reste dans Réglages › Événements.
 - Installeur Windows en anglais seulement ; l'application démarre dans la langue de Windows quand elle la propose.

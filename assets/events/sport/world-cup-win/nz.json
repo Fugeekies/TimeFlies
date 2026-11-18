@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-rugby-nz-1987",
+    "date": "1987-06-20",
+    "title": {
+      "fr": "Premier titre mondial de la Nouvelle-Zélande (Coupe du monde de rugby 1987)",
+      "en": "First world title for New Zealand (1987 Rugby World Cup)",
+      "de": "Erster Weltmeistertitel für Neuseeland (Rugby-WM 1987)",
+      "it": "Primo titolo mondiale per la Nuova Zelanda (Coppa del Mondo di rugby 1987)",
+      "es": "Primer título mundial para Nueva Zelanda (Copa Mundial de Rugby 1987)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_rugby_à_XV_1987",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q1322777 : date de la compétition seulement."
+  },
+  {
+    "id": "sport-coupe-du-monde-rugby-nz-2015",
+    "date": "2015-10-31",
+    "title": {
+      "fr": "Dernier titre mondial en date de la Nouvelle-Zélande (Coupe du monde de rugby 2015)",
+      "en": "Latest world title for New Zealand (2015 Rugby World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Neuseeland (Rugby-WM 2015)",
+      "it": "Ultimo titolo mondiale finora per la Nuova Zelanda (Coppa del Mondo di rugby 2015)",
+      "es": "Último título mundial hasta la fecha para Nueva Zelanda (Copa Mundial de Rugby 2015)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_rugby_à_XV_2015",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q393491 : date de la compétition seulement."
+  }
+]

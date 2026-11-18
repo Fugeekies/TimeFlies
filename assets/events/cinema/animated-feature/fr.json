@@ -1,0 +1,46 @@
+[
+  {
+    "id": "film-asterix-le-gaulois-1967",
+    "date": "1967-12-20",
+    "title": {
+      "fr": "Astérix le Gaulois",
+      "en": "Asterix the Gaul",
+      "de": "Asterix der Gallier",
+      "it": "Asterix il gallico",
+      "es": "Astérix el Galo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Astérix_le_Gaulois_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q748167 : même date."
+  },
+  {
+    "id": "film-les-douze-travaux-d-asterix-1976",
+    "date": "1976-10-20",
+    "title": {
+      "fr": "Les Douze Travaux d'Astérix",
+      "en": "The Twelve Tasks of Asterix",
+      "de": "Asterix erobert Rom",
+      "it": "Le 12 fatiche di Asterix",
+      "es": "Las doce pruebas de Astérix"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Douze_Travaux_d'Astérix",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q748186 : même date."
+  },
+  {
+    "id": "film-les-triplettes-de-belleville-2003",
+    "date": "2003-06-11",
+    "title": {
+      "fr": "Les Triplettes de Belleville",
+      "en": "The Triplets of Belleville",
+      "de": "Das große Rennen von Belleville",
+      "it": "Appuntamento a Belleville"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Triplettes_de_Belleville",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q779517 : même date."
+  }
+]

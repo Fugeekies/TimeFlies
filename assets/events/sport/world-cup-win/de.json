@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-de-1954",
+    "date": "1954-07-04",
+    "title": {
+      "fr": "Premier titre mondial de l'Allemagne (Coupe du monde de football 1954)",
+      "en": "First world title for Germany (1954 Football World Cup)",
+      "de": "Erster Weltmeistertitel für Deutschland (Fußball-WM 1954)",
+      "it": "Primo titolo mondiale per la Germania (Mondiali di calcio 1954)",
+      "es": "Primer título mundial para Alemania (Mundial de fútbol 1954)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1954",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q665946 : même date."
+  },
+  {
+    "id": "sport-coupe-du-monde-footf-de-2003",
+    "date": "2003-10-12",
+    "title": {
+      "fr": "Premier titre mondial de l'Allemagne (Coupe du monde féminine de football 2003)",
+      "en": "First world title for Germany (2003 Women's World Cup)",
+      "de": "Erster Weltmeistertitel für Deutschland (Frauen-Fußball-WM 2003)",
+      "it": "Primo titolo mondiale per la Germania (Mondiali di calcio femminile 2003)",
+      "es": "Primer título mundial para Alemania (Mundial femenino de fútbol 2003)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_féminine_de_football_2003",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q500308 : année seulement."
+  },
+  {
+    "id": "sport-coupe-du-monde-footf-de-2007",
+    "date": "2007-09-30",
+    "title": {
+      "fr": "Dernier titre mondial en date de l'Allemagne (Coupe du monde féminine de football 2007)",
+      "en": "Latest world title for Germany (2007 Women's World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Deutschland (Frauen-Fußball-WM 2007)",
+      "it": "Ultimo titolo mondiale finora per la Germania (Mondiali di calcio femminile 2007)",
+      "es": "Último título mundial hasta la fecha para Alemania (Mundial femenino de fútbol 2007)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_féminine_de_football_2007",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q367805 : année seulement."
+  },
+  {
+    "id": "sport-coupe-du-monde-foot-de-2014",
+    "date": "2014-07-13",
+    "title": {
+      "fr": "Dernier titre mondial en date de l'Allemagne (Coupe du monde de football 2014)",
+      "en": "Latest world title for Germany (2014 Football World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Deutschland (Fußball-WM 2014)",
+      "it": "Ultimo titolo mondiale finora per la Germania (Mondiali di calcio 2014)",
+      "es": "Último título mundial hasta la fecha para Alemania (Mundial de fútbol 2014)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2014",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q15926885 : même date."
+  }
+]

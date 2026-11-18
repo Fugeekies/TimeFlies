@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sport-tour-de-france-gino-bartali-1938",
+    "date": "1938-07-31",
+    "title": {
+      "fr": "Première victoire de Gino Bartali au Tour de France (1938)",
+      "en": "Gino Bartali's first Tour de France win (1938)",
+      "de": "Erster Tour-de-France-Sieg von Gino Bartali (1938)",
+      "it": "Prima vittoria di Gino Bartali al Tour de France (1938)",
+      "es": "Primera victoria de Gino Bartali en el Tour de Francia (1938)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1938",
+    "note": "Arrivée à Paris le 1938-07-31 selon le texte de l'article (« du … au … ») et Wikidata Q916886 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-gino-bartali-1948",
+    "date": "1948-07-25",
+    "title": {
+      "fr": "Dernière victoire de Gino Bartali au Tour de France (1948)",
+      "en": "Gino Bartali's last Tour de France win (1948)",
+      "de": "Letzter Tour-de-France-Sieg von Gino Bartali (1948)",
+      "it": "Ultima vittoria di Gino Bartali al Tour de France (1948)",
+      "es": "Última victoria de Gino Bartali en el Tour de Francia (1948)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1948",
+    "note": "Dates de l'épreuve dans le texte de l'article ; arrivée selon Wikidata Q586915, dont la date de départ concorde avec l'article ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-fausto-coppi-1949",
+    "date": "1949-07-24",
+    "title": {
+      "fr": "Première victoire de Fausto Coppi au Tour de France (1949)",
+      "en": "Fausto Coppi's first Tour de France win (1949)",
+      "de": "Erster Tour-de-France-Sieg von Fausto Coppi (1949)",
+      "it": "Prima vittoria di Fausto Coppi al Tour de France (1949)",
+      "es": "Primera victoria de Fausto Coppi en el Tour de Francia (1949)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1949",
+    "note": "Arrivée à Paris le 1949-07-24 selon le texte de l'article (« du … au … ») et Wikidata Q903211 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-fausto-coppi-1952",
+    "date": "1952-07-19",
+    "title": {
+      "fr": "Dernière victoire de Fausto Coppi au Tour de France (1952)",
+      "en": "Fausto Coppi's last Tour de France win (1952)",
+      "de": "Letzter Tour-de-France-Sieg von Fausto Coppi (1952)",
+      "it": "Ultima vittoria di Fausto Coppi al Tour de France (1952)",
+      "es": "Última victoria de Fausto Coppi en el Tour de Francia (1952)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1952",
+    "note": "Arrivée à Paris le 1952-07-19 selon le texte de l'article (« du … au … ») et Wikidata Q523804 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-gastone-nencini-1960",
+    "date": "1960-07-17",
+    "title": {
+      "fr": "Victoire de Gastone Nencini au Tour de France (1960)",
+      "en": "Gastone Nencini wins the Tour de France (1960)",
+      "de": "Gastone Nencini gewinnt die Tour de France (1960)",
+      "it": "Gastone Nencini vince il Tour de France (1960)",
+      "es": "Gastone Nencini gana el Tour de Francia (1960)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1960",
+    "note": "Arrivée à Paris le 1960-07-17 selon le texte de l'article (« du … au … ») et Wikidata Q907282 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-felice-gimondi-1965",
+    "date": "1965-07-14",
+    "title": {
+      "fr": "Victoire de Felice Gimondi au Tour de France (1965)",
+      "en": "Felice Gimondi wins the Tour de France (1965)",
+      "de": "Felice Gimondi gewinnt die Tour de France (1965)",
+      "it": "Felice Gimondi vince il Tour de France (1965)",
+      "es": "Felice Gimondi gana el Tour de Francia (1965)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1965",
+    "note": "Arrivée à Paris le 1965-07-14 selon le texte de l'article (« du … au … ») et Wikidata Q730402 (même date) ; vainqueur selon l'infobox."
+  }
+]

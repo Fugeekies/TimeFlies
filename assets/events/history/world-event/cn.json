@@ -1,0 +1,32 @@
+[
+  {
+    "id": "history-mort-de-mao-zedong-1976",
+    "date": "1976-09-09",
+    "title": {
+      "fr": "Mort de Mao Zedong",
+      "en": "Death of Mao Zedong",
+      "de": "Tod von Mao Zedong",
+      "it": "Morte di Mao Zedong",
+      "es": "Muerte de Mao Zedong"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mao_Zedong",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q5816 : même date."
+  },
+  {
+    "id": "history-repression-de-tian-anmen-1989",
+    "date": "1989-06-04",
+    "title": {
+      "fr": "Répression de la place Tian'anmen",
+      "en": "Tiananmen Square massacre",
+      "de": "Tian'anmen-Massaker",
+      "it": "Massacro di piazza Tienanmen",
+      "es": "Masacre de la plaza de Tiananmén"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Manifestations_de_la_place_Tian'anmen",
+    "note": "Jour de la répression selon l'infobox (manifestations du 15 avril au 4 juin 1989). Wikidata Q99717 : année seulement pour l'événement, début le 1989-04-15."
+  }
+]

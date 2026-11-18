@@ -1,0 +1,242 @@
+[
+  {
+    "id": "history-abdication-d-edouard-viii-1936",
+    "date": "1936-12-11",
+    "title": {
+      "fr": "Abdication d'Édouard VIII",
+      "en": "Abdication of Edward VIII",
+      "de": "Abdankung von Eduard VIII.",
+      "it": "Abdicazione di Edoardo VIII",
+      "es": "Abdicación de Eduardo VIII"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Édouard_VIII",
+    "note": "Fin du règne selon l'infobox de l'article (abdication). Wikidata Q590227 : pas de date pour cet événement."
+  },
+  {
+    "id": "history-mariage-d-elisabeth-et-philip-1947",
+    "date": "1947-11-20",
+    "title": {
+      "fr": "Mariage de la princesse Élisabeth et de Philip Mountbatten",
+      "en": "Wedding of Princess Elizabeth and Philip Mountbatten",
+      "de": "Hochzeit von Prinzessin Elisabeth und Philip Mountbatten",
+      "it": "Matrimonio della principessa Elisabetta e Filippo Mountbatten",
+      "es": "Boda de la princesa Isabel y Felipe Mountbatten"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_de_la_princesse_Élisabeth_du_Royaume-Uni_et_de_Philip_Mountbatten",
+    "note": "Date selon l'infobox. Wikidata Q7979114 : même date."
+  },
+  {
+    "id": "history-mort-de-george-vi-1952",
+    "date": "1952-02-06",
+    "title": {
+      "fr": "Mort de George VI",
+      "en": "Death of George VI",
+      "de": "Tod von Georg VI.",
+      "it": "Morte di Giorgio VI",
+      "es": "Muerte de Jorge VI"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/George_VI",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q280856 : même date."
+  },
+  {
+    "id": "history-couronnement-d-elisabeth-ii-1953",
+    "date": "1953-06-02",
+    "title": {
+      "fr": "Couronnement d'Élisabeth II",
+      "en": "Coronation of Elizabeth II",
+      "de": "Krönung von Elisabeth II.",
+      "it": "Incoronazione di Elisabetta II",
+      "es": "Coronación de Isabel II"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Couronnement_d'Élisabeth_II",
+    "note": "Date selon l'infobox. Wikidata Q3797766 : même date."
+  },
+  {
+    "id": "history-mariage-de-charles-et-diana-1981",
+    "date": "1981-07-29",
+    "title": {
+      "fr": "Mariage du prince Charles et de lady Diana",
+      "en": "Wedding of Prince Charles and Lady Diana Spencer",
+      "de": "Hochzeit von Prinz Charles und Lady Diana",
+      "it": "Matrimonio del principe Carlo e Lady Diana",
+      "es": "Boda del príncipe Carlos y lady Diana"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Charles_de_Galles_et_de_Diana_Spencer",
+    "note": "Date selon l'infobox. Wikidata Q1094155 : même date."
+  },
+  {
+    "id": "history-naissance-du-prince-william-1982",
+    "date": "1982-06-21",
+    "title": {
+      "fr": "Naissance du prince William",
+      "en": "Birth of Prince William",
+      "de": "Geburt von Prinz William",
+      "it": "Nascita del principe William",
+      "es": "Nacimiento del príncipe Guillermo"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/William_de_Galles",
+    "note": "Date de naissance selon l'infobox et le texte de l'article. Wikidata Q36812 : pas de date relevée."
+  },
+  {
+    "id": "history-naissance-du-prince-harry-1984",
+    "date": "1984-09-15",
+    "title": {
+      "fr": "Naissance du prince Harry",
+      "en": "Birth of Prince Harry",
+      "de": "Geburt von Prinz Harry",
+      "it": "Nascita del principe Harry",
+      "es": "Nacimiento del príncipe Enrique"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_de_Sussex",
+    "note": "Date de naissance selon l'infobox et le texte de l'article. Wikidata Q152316 : pas de date relevée."
+  },
+  {
+    "id": "history-mort-de-diana-1997",
+    "date": "1997-08-31",
+    "title": {
+      "fr": "Mort de Diana, princesse de Galles",
+      "en": "Death of Diana, Princess of Wales",
+      "de": "Tod von Diana, Prinzessin von Wales",
+      "it": "Morte di Diana, principessa del Galles",
+      "es": "Muerte de Diana, princesa de Gales"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mort_de_Diana_Spencer",
+    "note": "Date selon l'infobox. Wikidata Q2193276 : même date."
+  },
+  {
+    "id": "history-mort-de-la-reine-mere-2002",
+    "date": "2002-03-30",
+    "title": {
+      "fr": "Mort de la reine mère Elizabeth",
+      "en": "Death of Queen Elizabeth The Queen Mother",
+      "de": "Tod von Queen Mum",
+      "it": "Morte della regina madre Elisabetta",
+      "es": "Muerte de la reina madre Isabel"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Elizabeth_Bowes-Lyon",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q10633 : même date."
+  },
+  {
+    "id": "history-mariage-de-charles-et-camilla-2005",
+    "date": "2005-04-09",
+    "title": {
+      "fr": "Mariage du prince Charles et de Camilla Parker Bowles",
+      "en": "Wedding of Prince Charles and Camilla Parker Bowles",
+      "de": "Hochzeit von Prinz Charles und Camilla Parker Bowles",
+      "it": "Matrimonio del principe Carlo e Camilla Parker Bowles",
+      "es": "Boda del príncipe Carlos y Camilla Parker Bowles"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Charles_de_Galles_et_de_Camilla_Parker_Bowles",
+    "note": "Date selon l'infobox. Wikidata Q3291135 : même date."
+  },
+  {
+    "id": "history-mariage-de-william-et-catherine-2011",
+    "date": "2011-04-29",
+    "title": {
+      "fr": "Mariage du prince William et de Kate Middleton",
+      "en": "Wedding of Prince William and Catherine Middleton",
+      "de": "Hochzeit von Prinz William und Kate Middleton",
+      "it": "Matrimonio del principe William e Kate Middleton",
+      "es": "Boda del príncipe Guillermo y Kate Middleton"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_William_et_de_Catherine_Middleton",
+    "note": "Date selon l'infobox. Wikidata Q486814 : même date."
+  },
+  {
+    "id": "history-naissance-du-prince-george-2013",
+    "date": "2013-07-22",
+    "title": {
+      "fr": "Naissance du prince George",
+      "en": "Birth of Prince George",
+      "de": "Geburt von Prinz George",
+      "it": "Nascita del principe George",
+      "es": "Nacimiento del príncipe Jorge"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/George_de_Galles",
+    "note": "Date de naissance selon l'infobox. Wikidata Q13590412 : pas de date relevée."
+  },
+  {
+    "id": "history-mariage-de-harry-et-meghan-2018",
+    "date": "2018-05-19",
+    "title": {
+      "fr": "Mariage du prince Harry et de Meghan Markle",
+      "en": "Wedding of Prince Harry and Meghan Markle",
+      "de": "Hochzeit von Prinz Harry und Meghan Markle",
+      "it": "Matrimonio del principe Harry e Meghan Markle",
+      "es": "Boda del príncipe Enrique y Meghan Markle"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Harry_et_de_Meghan_Markle",
+    "note": "Date selon l'infobox. Wikidata Q43890449 : même date."
+  },
+  {
+    "id": "history-mort-du-prince-philip-2021",
+    "date": "2021-04-09",
+    "title": {
+      "fr": "Mort du prince Philip",
+      "en": "Death of Prince Philip",
+      "de": "Tod von Prinz Philip",
+      "it": "Morte del principe Filippo",
+      "es": "Muerte del príncipe Felipe"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Philip_Mountbatten",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q80976 : même date."
+  },
+  {
+    "id": "history-mort-d-elisabeth-ii-2022",
+    "date": "2022-09-08",
+    "title": {
+      "fr": "Mort d'Élisabeth II",
+      "en": "Death of Elizabeth II",
+      "de": "Tod von Elisabeth II.",
+      "it": "Morte di Elisabetta II",
+      "es": "Muerte de Isabel II"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mort_et_funérailles_d'Élisabeth_II",
+    "note": "Date selon l'infobox et le texte de l'article. Wikidata Q113846055 : même date."
+  },
+  {
+    "id": "history-couronnement-de-charles-iii-2023",
+    "date": "2023-05-06",
+    "title": {
+      "fr": "Couronnement de Charles III",
+      "en": "Coronation of Charles III",
+      "de": "Krönung von Charles III.",
+      "it": "Incoronazione di Carlo III",
+      "es": "Coronación de Carlos III"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Couronnement_de_Charles_III_et_de_Camilla",
+    "note": "Date selon l'infobox. Wikidata Q113857620 : même date."
+  }
+]

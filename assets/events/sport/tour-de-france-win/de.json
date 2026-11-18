@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-tour-de-france-jan-ullrich-1997",
+    "date": "1997-07-27",
+    "title": {
+      "fr": "Victoire de Jan Ullrich au Tour de France (1997)",
+      "en": "Jan Ullrich wins the Tour de France (1997)",
+      "de": "Jan Ullrich gewinnt die Tour de France (1997)",
+      "it": "Jan Ullrich vince il Tour de France (1997)",
+      "es": "Jan Ullrich gana el Tour de Francia (1997)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1997",
+    "note": "Arrivée à Paris le 1997-07-27 selon le texte de l'article (« du … au … ») et Wikidata Q757405 (même date) ; vainqueur selon l'infobox."
+  }
+]

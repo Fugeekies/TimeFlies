@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-grand-chelem-roger-federer-w-2003",
+    "date": "2003-07-06",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Roger Federer (Wimbledon 2003)",
+      "en": "Roger Federer's first Grand Slam title (2003 Wimbledon)",
+      "de": "Erster Grand-Slam-Titel von Roger Federer (Wimbledon 2003)",
+      "it": "Primo titolo del Grande Slam di Roger Federer (Wimbledon 2003)",
+      "es": "Primer título de Grand Slam de Roger Federer (Wimbledon 2003)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_du_tournoi_de_Wimbledon_2003",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q378627 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-roger-federer-ao-2018",
+    "date": "2018-01-28",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Roger Federer (Open d'Australie 2018)",
+      "en": "Roger Federer's last Grand Slam title (2018 Australian Open)",
+      "de": "Letzter Grand-Slam-Titel von Roger Federer (Australian Open 2018)",
+      "it": "Ultimo titolo del Grande Slam di Roger Federer (Australian Open 2018)",
+      "es": "Último título de Grand Slam de Roger Federer (Abierto de Australia 2018)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'Open_d'Australie_2018",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q46993124 : année seulement."
+  }
+]

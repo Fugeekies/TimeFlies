@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-execution-de-saddam-hussein-2006",
+    "date": "2006-12-30",
+    "title": {
+      "fr": "Exécution de Saddam Hussein",
+      "en": "Execution of Saddam Hussein",
+      "de": "Hinrichtung von Saddam Hussein",
+      "it": "Esecuzione di Saddam Hussein",
+      "es": "Ejecución de Saddam Hussein"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Saddam_Hussein",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q1316 : même date."
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "album-back-in-black-1980",
+    "date": "1980-07-25",
+    "title": {
+      "fr": "Back in Black (AC/DC)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Back_in_Black",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q155715 : même date."
+  }
+]

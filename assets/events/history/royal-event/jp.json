@@ -1,0 +1,47 @@
+[
+  {
+    "id": "history-mort-d-hirohito-1989",
+    "date": "1989-01-07",
+    "title": {
+      "fr": "Mort de l'empereur Hirohito",
+      "en": "Death of Emperor Hirohito",
+      "de": "Tod von Kaiser Hirohito",
+      "it": "Morte dell'imperatore Hirohito",
+      "es": "Muerte del emperador Hirohito"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Hirohito",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q34479 : même date."
+  },
+  {
+    "id": "history-abdication-d-akihito-2019",
+    "date": "2019-04-30",
+    "title": {
+      "fr": "Abdication de l'empereur Akihito",
+      "en": "Abdication of Emperor Akihito",
+      "de": "Abdankung von Kaiser Akihito",
+      "it": "Abdicazione dell'imperatore Akihito",
+      "es": "Abdicación del emperador Akihito"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Akihito",
+    "note": "Abdication selon l'infobox et le texte de l'article. Wikidata Q37979 : pas de date relevée."
+  },
+  {
+    "id": "history-avenement-de-naruhito-2019",
+    "date": "2019-05-01",
+    "title": {
+      "fr": "Naruhito devient empereur du Japon",
+      "en": "Naruhito becomes Emperor of Japan",
+      "de": "Naruhito wird Kaiser von Japan",
+      "it": "Naruhito diventa imperatore del Giappone",
+      "es": "Naruhito se convierte en emperador de Japón"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Naruhito",
+    "note": "Début du règne selon l'infobox de l'article. Wikidata Q217096 : pas de date relevée."
+  }
+]

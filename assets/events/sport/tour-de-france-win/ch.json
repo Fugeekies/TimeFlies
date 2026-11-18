@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-tour-de-france-hugo-koblet-1951",
+    "date": "1951-07-29",
+    "title": {
+      "fr": "Victoire de Hugo Koblet au Tour de France (1951)",
+      "en": "Hugo Koblet wins the Tour de France (1951)",
+      "de": "Hugo Koblet gewinnt die Tour de France (1951)",
+      "it": "Hugo Koblet vince il Tour de France (1951)",
+      "es": "Hugo Koblet gana el Tour de Francia (1951)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1951",
+    "note": "Arrivée à Paris le 1951-07-29 selon le texte de l'article (« du … au … ») et Wikidata Q849867 (même date) ; vainqueur selon l'infobox."
+  }
+]

@@ -1,0 +1,437 @@
+[
+  {
+    "id": "history-inauguration-de-la-tour-eiffel-1889",
+    "date": "1889-03-31",
+    "title": {
+      "fr": "Inauguration de la tour Eiffel",
+      "en": "Inauguration of the Eiffel Tower",
+      "de": "Einweihung des Eiffelturms",
+      "it": "Inaugurazione della Torre Eiffel",
+      "es": "Inauguración de la Torre Eiffel"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Tour_Eiffel",
+    "note": "Inauguration selon l'infobox et le texte de l'article. Wikidata Q243 : date du début des travaux seulement (1887-01-28)."
+  },
+  {
+    "id": "history-appel-du-18-juin-1940",
+    "date": "1940-06-18",
+    "title": {
+      "fr": "Appel du 18 Juin du général de Gaulle",
+      "en": "General de Gaulle's Appeal of 18 June",
+      "de": "Appell vom 18. Juni von General de Gaulle",
+      "it": "Appello del 18 giugno del generale de Gaulle",
+      "es": "Llamamiento del 18 de junio del general de Gaulle"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Appel_du_18_Juin",
+    "note": "Date selon l'infobox. Wikidata Q2078515 : même date."
+  },
+  {
+    "id": "history-rafle-du-vel-d-hiv-1942",
+    "date": "1942-07-16",
+    "title": {
+      "fr": "Rafle du Vél' d'Hiv",
+      "en": "Vel' d'Hiv Roundup",
+      "de": "Rafle du Vélodrome d’Hiver",
+      "it": "Rastrellamento del Velodromo d'Inverno",
+      "es": "Redada del Velódromo de Invierno"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rafle_du_Vélodrome_d'Hiver",
+    "note": "Premier jour de la rafle (16 et 17 juillet 1942) selon le texte de l'article. Wikidata Q675228 : même date."
+  },
+  {
+    "id": "history-debarquement-de-normandie-1944",
+    "date": "1944-06-06",
+    "title": {
+      "fr": "Débarquement de Normandie",
+      "en": "Normandy landings",
+      "de": "Landung in der Normandie",
+      "it": "Sbarco in Normandia",
+      "es": "Desembarco de Normandía"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Débarquement_de_Normandie",
+    "note": "Date selon l'infobox. Wikidata Q16470 : même date."
+  },
+  {
+    "id": "history-liberation-de-paris-1944",
+    "date": "1944-08-25",
+    "title": {
+      "fr": "Libération de Paris",
+      "en": "Liberation of Paris",
+      "de": "Befreiung von Paris",
+      "it": "Liberazione di Parigi",
+      "es": "Liberación de París"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Libération_de_Paris",
+    "note": "Date de la libération selon l'infobox (insurrection depuis le 19 août). Wikidata Q696835 : donne le 1944-08-19 (début de l'insurrection)."
+  },
+  {
+    "id": "history-constitution-de-la-ve-republique-1958",
+    "date": "1958-10-04",
+    "title": {
+      "fr": "Constitution de la Ve République",
+      "en": "Constitution of the Fifth Republic",
+      "de": "Verfassung der Fünften Republik",
+      "it": "Costituzione della Quinta Repubblica",
+      "es": "Constitución de la Quinta República"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Constitution_française_du_4_octobre_1958",
+    "note": "Date de la constitution, dans son titre ; même date dans Wikidata. Wikidata Q832508 : même date."
+  },
+  {
+    "id": "history-traite-de-l-elysee-1963",
+    "date": "1963-01-22",
+    "title": {
+      "fr": "Traité de l'Élysée (amitié franco-allemande)",
+      "en": "Élysée Treaty (Franco-German friendship)",
+      "de": "Élysée-Vertrag (deutsch-französische Freundschaft)",
+      "it": "Trattato dell'Eliseo (amicizia franco-tedesca)",
+      "es": "Tratado del Elíseo (amistad franco-alemana)"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Traité_de_l'Élysée",
+    "note": "Date de la signature selon l'infobox. Wikidata Q274811 : même date."
+  },
+  {
+    "id": "history-mort-de-charles-de-gaulle-1970",
+    "date": "1970-11-09",
+    "title": {
+      "fr": "Mort de Charles de Gaulle",
+      "en": "Death of Charles de Gaulle",
+      "de": "Tod von Charles de Gaulle",
+      "it": "Morte di Charles de Gaulle",
+      "es": "Muerte de Charles de Gaulle"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Charles_de_Gaulle",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q2042 : même date."
+  },
+  {
+    "id": "history-mort-de-georges-pompidou-1974",
+    "date": "1974-04-02",
+    "title": {
+      "fr": "Mort de Georges Pompidou",
+      "en": "Death of Georges Pompidou",
+      "de": "Tod von Georges Pompidou",
+      "it": "Morte di Georges Pompidou",
+      "es": "Muerte de Georges Pompidou"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Georges_Pompidou",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q2185 : même date."
+  },
+  {
+    "id": "history-loi-veil-1975",
+    "date": "1975-01-17",
+    "title": {
+      "fr": "Loi Veil sur l'IVG",
+      "en": "Veil Act legalising abortion in France",
+      "de": "Loi Veil (Legalisierung der Abtreibung in Frankreich)",
+      "it": "Legge Veil sull'aborto",
+      "es": "Ley Veil sobre el aborto"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Loi_Veil",
+    "note": "Promulgation de la loi selon l'infobox et le texte de l'article. Wikidata Q3258255 : pas de date."
+  },
+  {
+    "id": "history-premier-vol-commercial-du-concorde-1976",
+    "date": "1976-01-21",
+    "title": {
+      "fr": "Premier vol commercial du Concorde",
+      "en": "Concorde's first commercial flight",
+      "de": "Erster Linienflug der Concorde",
+      "it": "Primo volo commerciale del Concorde",
+      "es": "Primer vuelo comercial del Concorde"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Concorde_(avion)",
+    "note": "Début des vols commerciaux selon le texte de l'article. Wikidata Q6505 : pas de date."
+  },
+  {
+    "id": "history-inauguration-du-centre-pompidou-1977",
+    "date": "1977-01-31",
+    "title": {
+      "fr": "Inauguration du Centre Pompidou",
+      "en": "Opening of the Centre Pompidou",
+      "de": "Eröffnung des Centre Pompidou",
+      "it": "Inaugurazione del Centre Pompidou",
+      "es": "Inauguración del Centro Pompidou"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Centre_national_d'art_et_de_culture_Georges-Pompidou",
+    "note": "Inauguration selon le texte de l'article. Wikidata Q178065 : pas de date."
+  },
+  {
+    "id": "history-abolition-de-la-peine-de-mort-1981",
+    "date": "1981-10-09",
+    "title": {
+      "fr": "Abolition de la peine de mort en France",
+      "en": "Abolition of the death penalty in France",
+      "de": "Abschaffung der Todesstrafe in Frankreich",
+      "it": "Abolizione della pena di morte in Francia",
+      "es": "Abolición de la pena de muerte en Francia"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Abolition_de_la_peine_de_mort_en_France",
+    "note": "Promulgation de la loi selon le texte de l'article. Wikidata Q141860911 : pas de date."
+  },
+  {
+    "id": "history-ouverture-du-futuroscope-1987",
+    "date": "1987-05-31",
+    "title": {
+      "fr": "Ouverture du Futuroscope",
+      "en": "Opening of Futuroscope",
+      "de": "Eröffnung des Futuroscope",
+      "it": "Apertura del Futuroscope",
+      "es": "Apertura del Futuroscope"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Futuroscope",
+    "note": "Ouverture selon l'infobox. Wikidata Q1475660 : même date."
+  },
+  {
+    "id": "history-ouverture-du-parc-asterix-1989",
+    "date": "1989-04-30",
+    "title": {
+      "fr": "Ouverture du parc Astérix",
+      "en": "Opening of Parc Astérix",
+      "de": "Eröffnung des Parc Astérix",
+      "it": "Apertura del Parc Astérix",
+      "es": "Apertura del Parque Astérix"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Parc_Astérix",
+    "note": "Ouverture selon l'infobox. Wikidata Q377592 : même date."
+  },
+  {
+    "id": "history-ouverture-de-disneyland-paris-1992",
+    "date": "1992-04-12",
+    "title": {
+      "fr": "Ouverture de Disneyland Paris (Euro Disney)",
+      "en": "Opening of Disneyland Paris (Euro Disney)",
+      "de": "Eröffnung von Disneyland Paris (Euro Disney)",
+      "it": "Apertura di Disneyland Paris (Euro Disney)",
+      "es": "Apertura de Disneyland París (Euro Disney)"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Disneyland_Paris",
+    "note": "Ouverture du premier parc selon l'infobox. Wikidata Q206521 : même date."
+  },
+  {
+    "id": "history-mort-de-francois-mitterrand-1996",
+    "date": "1996-01-08",
+    "title": {
+      "fr": "Mort de François Mitterrand",
+      "en": "Death of François Mitterrand",
+      "de": "Tod von François Mitterrand",
+      "it": "Morte di François Mitterrand",
+      "es": "Muerte de François Mitterrand"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/François_Mitterrand",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2038 : même date."
+  },
+  {
+    "id": "history-mort-de-jacques-yves-cousteau-1997",
+    "date": "1997-06-25",
+    "title": {
+      "fr": "Mort de Jacques-Yves Cousteau",
+      "en": "Death of Jacques Cousteau",
+      "de": "Tod von Jacques-Yves Cousteau",
+      "it": "Morte di Jacques-Yves Cousteau",
+      "es": "Muerte de Jacques Cousteau"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jacques-Yves_Cousteau",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q83233 : même date."
+  },
+  {
+    "id": "history-inauguration-du-stade-de-france-1998",
+    "date": "1998-01-28",
+    "title": {
+      "fr": "Inauguration du Stade de France",
+      "en": "Opening of the Stade de France",
+      "de": "Eröffnung des Stade de France",
+      "it": "Inaugurazione dello Stade de France",
+      "es": "Inauguración del Stade de France"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Stade_de_France",
+    "note": "Inauguration selon le texte de l'article. Wikidata Q13205 : date du début des travaux seulement (1995-05-02)."
+  },
+  {
+    "id": "history-explosion-d-azf-2001",
+    "date": "2001-09-21",
+    "title": {
+      "fr": "Explosion de l'usine AZF à Toulouse",
+      "en": "AZF chemical plant explosion in Toulouse",
+      "de": "Explosion der AZF-Fabrik in Toulouse",
+      "it": "Esplosione dello stabilimento AZF di Tolosa",
+      "es": "Explosión de la fábrica AZF en Toulouse"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Explosion_de_l'usine_AZF_de_Toulouse",
+    "note": "Date selon l'infobox. Wikidata Q901315 : même date."
+  },
+  {
+    "id": "history-vol-air-france-447-2009",
+    "date": "2009-06-01",
+    "title": {
+      "fr": "Disparition du vol Air France 447 Rio-Paris",
+      "en": "Air France Flight 447 lost over the Atlantic",
+      "de": "Absturz von Air-France-Flug 447",
+      "it": "Incidente del volo Air France 447",
+      "es": "Accidente del vuelo 447 de Air France"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Vol_Air_France_447",
+    "note": "Date selon l'infobox. Wikidata Q185380 : même date."
+  },
+  {
+    "id": "history-attentat-contre-charlie-hebdo-2015",
+    "date": "2015-01-07",
+    "title": {
+      "fr": "Attentat contre Charlie Hebdo",
+      "en": "Charlie Hebdo shooting",
+      "de": "Anschlag auf Charlie Hebdo",
+      "it": "Attentato alla sede di Charlie Hebdo",
+      "es": "Atentado contra Charlie Hebdo"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attentat_contre_Charlie_Hebdo",
+    "note": "Date selon l'infobox. Wikidata Q18718876 : même date."
+  },
+  {
+    "id": "history-attentats-du-13-novembre-2015",
+    "date": "2015-11-13",
+    "title": {
+      "fr": "Attentats du 13 novembre 2015 à Paris et Saint-Denis",
+      "en": "November 2015 Paris attacks",
+      "de": "Terroranschläge am 13. November 2015 in Paris",
+      "it": "Attentati del 13 novembre 2015 a Parigi",
+      "es": "Atentados del 13 de noviembre de 2015 en París"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_du_13_novembre_2015_en_France",
+    "note": "Date selon l'infobox. Wikidata Q21479779 : même date."
+  },
+  {
+    "id": "history-attentat-de-nice-2016",
+    "date": "2016-07-14",
+    "title": {
+      "fr": "Attentat du 14 juillet à Nice",
+      "en": "Nice truck attack",
+      "de": "Anschlag von Nizza",
+      "it": "Strage di Nizza",
+      "es": "Atentado de Niza"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attentat_du_14_juillet_2016_à_Nice",
+    "note": "Date selon l'infobox. Wikidata Q25893254 : même date."
+  },
+  {
+    "id": "history-mort-de-simone-veil-2017",
+    "date": "2017-06-30",
+    "title": {
+      "fr": "Mort de Simone Veil",
+      "en": "Death of Simone Veil",
+      "de": "Tod von Simone Veil",
+      "it": "Morte di Simone Veil",
+      "es": "Muerte de Simone Veil"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Simone_Veil",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q298180 : même date."
+  },
+  {
+    "id": "history-incendie-de-notre-dame-2019",
+    "date": "2019-04-15",
+    "title": {
+      "fr": "Incendie de Notre-Dame de Paris",
+      "en": "Notre-Dame de Paris fire",
+      "de": "Brand von Notre-Dame de Paris",
+      "it": "Incendio di Notre-Dame de Paris",
+      "es": "Incendio de Notre Dame de París"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Incendie_de_Notre-Dame_de_Paris",
+    "note": "Début de l'incendie le 15 avril 2019 vers 18 h 20 selon l'article. Wikidata Q63167656 : même date."
+  },
+  {
+    "id": "history-mort-de-jacques-chirac-2019",
+    "date": "2019-09-26",
+    "title": {
+      "fr": "Mort de Jacques Chirac",
+      "en": "Death of Jacques Chirac",
+      "de": "Tod von Jacques Chirac",
+      "it": "Morte di Jacques Chirac",
+      "es": "Muerte de Jacques Chirac"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jacques_Chirac",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2105 : même date."
+  },
+  {
+    "id": "history-premier-confinement-2020",
+    "date": "2020-03-17",
+    "title": {
+      "fr": "Début du premier confinement en France (Covid-19)",
+      "en": "Start of the first lockdown in France (COVID-19)",
+      "de": "Beginn des ersten Lockdowns in Frankreich (COVID-19)",
+      "it": "Inizio del primo lockdown in Francia (COVID-19)",
+      "es": "Comienzo del primer confinamiento en Francia (COVID-19)"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Confinements_liés_à_la_pandémie_de_Covid-19_en_France",
+    "note": "Début du premier confinement, le 17 mars 2020 à midi, selon l'article. Wikidata Q88215531 : même date."
+  },
+  {
+    "id": "history-reouverture-de-notre-dame-2024",
+    "date": "2024-12-08",
+    "title": {
+      "fr": "Réouverture de Notre-Dame de Paris",
+      "en": "Reopening of Notre-Dame de Paris",
+      "de": "Wiedereröffnung von Notre-Dame de Paris",
+      "it": "Riapertura di Notre-Dame de Paris",
+      "es": "Reapertura de Notre Dame de París"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Réouverture_de_Notre-Dame_de_Paris",
+    "note": "Date selon l'infobox (cérémonie de réouverture la veille au soir). Wikidata Q131399738 : donne le 2024-12-07."
+  }
+]

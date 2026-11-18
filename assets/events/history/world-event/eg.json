@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-assassinat-d-anouar-el-sadate-1981",
+    "date": "1981-10-06",
+    "title": {
+      "fr": "Assassinat d'Anouar el-Sadate",
+      "en": "Assassination of Anwar Sadat",
+      "de": "Ermordung von Anwar as-Sadat",
+      "it": "Assassinio di Anwar al-Sadat",
+      "es": "Asesinato de Anwar el-Sadat"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Anouar_el-Sadate",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q42013 : même date."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-tour-de-france-stephen-roche-1987",
+    "date": "1987-07-26",
+    "title": {
+      "fr": "Victoire de Stephen Roche au Tour de France (1987)",
+      "en": "Stephen Roche wins the Tour de France (1987)",
+      "de": "Stephen Roche gewinnt die Tour de France (1987)",
+      "it": "Stephen Roche vince il Tour de France (1987)",
+      "es": "Stephen Roche gana el Tour de Francia (1987)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1987",
+    "note": "Arrivée à Paris le 1987-07-26 selon le texte de l'article (« du … au … ») et Wikidata Q478420 (même date) ; vainqueur selon l'infobox."
+  }
+]

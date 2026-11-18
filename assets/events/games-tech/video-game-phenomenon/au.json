@@ -1,0 +1,13 @@
+[
+  {
+    "id": "tech-hollow-knight-2017",
+    "date": "2017-02-24",
+    "title": {
+      "fr": "Hollow Knight"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hollow_Knight",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q29300592 : même date."
+  }
+]

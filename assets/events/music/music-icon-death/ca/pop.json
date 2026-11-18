@@ -1,0 +1,13 @@
+[
+  {
+    "id": "death-leonard-cohen-2016",
+    "date": "2016-11-07",
+    "title": {
+      "fr": "Leonard Cohen"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Leonard_Cohen",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q1276 : même date."
+  }
+]

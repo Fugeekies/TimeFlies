@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-footf-us-1991",
+    "date": "1991-11-30",
+    "title": {
+      "fr": "Premier titre mondial des États-Unis (Coupe du monde féminine de football 1991)",
+      "en": "First world title for the United States (1991 Women's World Cup)",
+      "de": "Erster Weltmeistertitel für die USA (Frauen-Fußball-WM 1991)",
+      "it": "Primo titolo mondiale per gli Stati Uniti (Mondiali di calcio femminile 1991)",
+      "es": "Primer título mundial para Estados Unidos (Mundial femenino de fútbol 1991)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_féminine_de_football_1991",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q459419 : année seulement."
+  },
+  {
+    "id": "sport-coupe-du-monde-footf-us-2019",
+    "date": "2019-07-07",
+    "title": {
+      "fr": "Dernier titre mondial en date des États-Unis (Coupe du monde féminine de football 2019)",
+      "en": "Latest world title for the United States (2019 Women's World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für die USA (Frauen-Fußball-WM 2019)",
+      "it": "Ultimo titolo mondiale finora per gli Stati Uniti (Mondiali di calcio femminile 2019)",
+      "es": "Último título mundial hasta la fecha para Estados Unidos (Mundial femenino de fútbol 2019)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_féminine_de_football_2019",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q4630361 : année seulement."
+  }
+]

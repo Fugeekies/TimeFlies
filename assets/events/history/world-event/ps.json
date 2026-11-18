@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-mort-de-yasser-arafat-2004",
+    "date": "2004-11-11",
+    "title": {
+      "fr": "Mort de Yasser Arafat",
+      "en": "Death of Yasser Arafat",
+      "de": "Tod von Jassir Arafat",
+      "it": "Morte di Yasser Arafat",
+      "es": "Muerte de Yasir Arafat"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Yasser_Arafat",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q34211 : même date."
+  }
+]

@@ -15,6 +15,17 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q189505 : pas de date française."
   },
   {
+    "id": "film-grease-1978",
+    "date": "1978-10-03",
+    "title": {
+      "fr": "Grease"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Grease_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q267721 : pas de date française."
+  },
+  {
     "id": "film-e-t-l-extra-terrestre-1982",
     "date": "1982-12-01",
     "title": {
@@ -28,6 +39,19 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/E.T.,_l'extra-terrestre",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q11621 : même date."
+  },
+  {
+    "id": "film-rambo-1983",
+    "date": "1983-03-02",
+    "title": {
+      "fr": "Rambo",
+      "en": "First Blood",
+      "es": "First Blood"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rambo_(film,_1982)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q244963 : pas de date française."
   },
   {
     "id": "film-sos-fantomes-1984",
@@ -45,6 +69,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108745 : pas de date française."
   },
   {
+    "id": "film-les-goonies-1985",
+    "date": "1985-12-04",
+    "title": {
+      "fr": "Les Goonies",
+      "en": "The Goonies",
+      "de": "Die Goonies",
+      "it": "I Goonies",
+      "es": "Los Goonies"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Goonies",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q636043 : même date."
+  },
+  {
     "id": "film-top-gun-1986",
     "date": "1986-09-17",
     "title": {
@@ -55,6 +94,83 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Top_Gun_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q110138 : pas de date française."
+  },
+  {
+    "id": "film-dirty-dancing-1987",
+    "date": "1987-12-09",
+    "title": {
+      "fr": "Dirty Dancing"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dirty_Dancing",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q253978 : pas de date française."
+  },
+  {
+    "id": "film-rain-man-1989",
+    "date": "1989-03-15",
+    "title": {
+      "fr": "Rain Man",
+      "it": "Rain Man - L'uomo della pioggia"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rain_Man",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q188845 : pas de date française."
+  },
+  {
+    "id": "film-pretty-woman-1990",
+    "date": "1990-10-09",
+    "title": {
+      "fr": "Pretty Woman"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pretty_Woman",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q207954 : pas de date française."
+  },
+  {
+    "id": "film-ghost-1990",
+    "date": "1990-11-07",
+    "title": {
+      "fr": "Ghost",
+      "de": "Ghost – Nachricht von Sam",
+      "it": "Ghost - Fantasma"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ghost_(film,_1990)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q49003 : même date."
+  },
+  {
+    "id": "film-maman-j-ai-rate-l-avion-1990",
+    "date": "1990-12-11",
+    "title": {
+      "fr": "Maman, j'ai raté l'avion !",
+      "en": "Home Alone",
+      "de": "Kevin – Allein zu Haus",
+      "it": "Mamma, ho perso l'aereo",
+      "es": "Home Alone"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Maman,_j'ai_raté_l'avion_!",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q105031 : pas de date française."
+  },
+  {
+    "id": "film-le-silence-des-agneaux-1991",
+    "date": "1991-04-10",
+    "title": {
+      "fr": "Le Silence des agneaux",
+      "en": "The Silence of the Lambs",
+      "de": "Das Schweigen der Lämmer",
+      "it": "Il silenzio degli innocenti",
+      "es": "The Silence of the Lambs"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Silence_des_agneaux_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q133654 : pas de date française."
   },
   {
     "id": "film-terminator-2-le-jugement-dernier-1991",
@@ -72,6 +188,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170564 : pas de date française."
   },
   {
+    "id": "film-le-fugitif-1993",
+    "date": "1993-09-01",
+    "title": {
+      "fr": "Le Fugitif",
+      "en": "The Fugitive",
+      "de": "Auf der Flucht",
+      "it": "Il fuggitivo",
+      "es": "El fugitivo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Fugitif_(film,_1993)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q156309 : pas de date française."
+  },
+  {
     "id": "film-jurassic-park-1993",
     "date": "1993-10-20",
     "title": {
@@ -84,6 +215,45 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q167726 : même date."
   },
   {
+    "id": "film-madame-doubtfire-1994",
+    "date": "1994-01-04",
+    "title": {
+      "fr": "Madame Doubtfire",
+      "en": "Mrs. Doubtfire",
+      "de": "Mrs. Doubtfire – Das stachelige Kindermädchen",
+      "it": "Mrs. Doubtfire - Mammo per sempre",
+      "es": "Mrs. Doubtfire"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Madame_Doubtfire",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q483852 : pas de date française."
+  },
+  {
+    "id": "film-speed-1994",
+    "date": "1994-08-24",
+    "title": {
+      "fr": "Speed"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Speed_(film,_1994)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q108006 : pas de date française."
+  },
+  {
+    "id": "film-the-mask-1994",
+    "date": "1994-09-28",
+    "title": {
+      "fr": "The Mask",
+      "de": "Die Maske",
+      "es": "La Máscara"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Mask_(film,_1994)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q219421 : pas de date française."
+  },
+  {
     "id": "film-forrest-gump-1994",
     "date": "1994-10-05",
     "title": {
@@ -93,6 +263,55 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Forrest_Gump",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q134773 : même date."
+  },
+  {
+    "id": "film-pulp-fiction-1994",
+    "date": "1994-10-26",
+    "title": {
+      "fr": "Pulp Fiction"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Pulp_Fiction",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q104123 : pas de date française."
+  },
+  {
+    "id": "film-seven-1996",
+    "date": "1996-01-31",
+    "title": {
+      "fr": "Seven",
+      "de": "Sieben"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Seven_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q190908 : pas de date française."
+  },
+  {
+    "id": "film-twister-1996",
+    "date": "1996-08-21",
+    "title": {
+      "fr": "Twister"
+    },
+    "kind": "film-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Twister_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q683663 : pas de date française."
+  },
+  {
+    "id": "film-mission-impossible-1996",
+    "date": "1996-09-25",
+    "title": {
+      "fr": "Mission impossible",
+      "en": "Mission: Impossible",
+      "de": "Mission: Impossible",
+      "it": "Mission: Impossible",
+      "es": "Misión imposible"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mission_impossible_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q1741232 : pas de date française."
   },
   {
     "id": "film-independence-day-1996",
@@ -154,6 +373,58 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q128518 : pas de date française."
   },
   {
+    "id": "film-pearl-harbor-2001",
+    "date": "2001-06-06",
+    "title": {
+      "fr": "Pearl Harbor"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pearl_Harbor_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q194413 : pas de date française."
+  },
+  {
+    "id": "film-kill-bill-volume-1-2003",
+    "date": "2003-11-26",
+    "title": {
+      "fr": "Kill Bill : Volume 1",
+      "en": "Kill Bill: Volume 1",
+      "de": "Kill Bill – Volume 1",
+      "it": "Kill Bill: Volume 1",
+      "es": "Kill Bill: Volumen 1"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Kill_Bill_:_Volume_1",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q165325 : pas de date française."
+  },
+  {
+    "id": "film-mamma-mia-2008",
+    "date": "2008-09-10",
+    "title": {
+      "fr": "Mamma Mia!"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mamma_Mia!_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q188850 : même date."
+  },
+  {
+    "id": "film-very-bad-trip-2009",
+    "date": "2009-06-24",
+    "title": {
+      "fr": "Very Bad Trip",
+      "en": "The Hangover",
+      "de": "Hangover",
+      "it": "Una notte da leoni",
+      "es": "The Hangover"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Very_Bad_Trip",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q219315 : pas de date française."
+  },
+  {
     "id": "film-avatar-2009",
     "date": "2009-12-16",
     "title": {
@@ -177,6 +448,32 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q25188 : même date."
   },
   {
+    "id": "film-gravity-2013",
+    "date": "2013-10-23",
+    "title": {
+      "fr": "Gravity"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Gravity_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q2579784 : même date."
+  },
+  {
+    "id": "film-le-loup-de-wall-street-2013",
+    "date": "2013-12-25",
+    "title": {
+      "fr": "Le Loup de Wall Street",
+      "en": "The Wolf of Wall Street",
+      "de": "The Wolf of Wall Street",
+      "it": "The Wolf of Wall Street",
+      "es": "El lobo de Wall Street"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Loup_de_Wall_Street",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q1392744 : pas de date française."
+  },
+  {
     "id": "film-interstellar-2014",
     "date": "2014-11-05",
     "title": {
@@ -188,15 +485,26 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q13417189 : même date."
   },
   {
-    "id": "film-oppenheimer-2023",
-    "date": "2023-07-19",
+    "id": "film-la-la-land-2017",
+    "date": "2017-01-25",
     "title": {
-      "fr": "Oppenheimer"
+      "fr": "La La Land"
     },
     "kind": "film-release",
-    "importance": 3,
-    "source": "https://fr.wikipedia.org/wiki/Oppenheimer_(film)",
-    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108839994 : pas de date française."
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_La_Land",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q20856802 : même date."
+  },
+  {
+    "id": "film-joker-2019",
+    "date": "2019-10-09",
+    "title": {
+      "fr": "Joker"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Joker_(film,_2019)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q42759035 : même date."
   },
   {
     "id": "film-barbie-2023",
@@ -208,5 +516,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Barbie_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q55436290 : même date."
+  },
+  {
+    "id": "film-oppenheimer-2023",
+    "date": "2023-07-19",
+    "title": {
+      "fr": "Oppenheimer"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Oppenheimer_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108839994 : pas de date française."
   }
 ]

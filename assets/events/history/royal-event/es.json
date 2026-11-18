@@ -1,0 +1,47 @@
+[
+  {
+    "id": "history-proclamation-de-juan-carlos-1975",
+    "date": "1975-11-22",
+    "title": {
+      "fr": "Proclamation de Juan Carlos Ier, roi d'Espagne",
+      "en": "Proclamation of Juan Carlos I as King of Spain",
+      "de": "Proklamation von Juan Carlos I. zum König von Spanien",
+      "it": "Proclamazione di Juan Carlos I re di Spagna",
+      "es": "Proclamación de Juan Carlos I como rey de España"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Juan_Carlos_Ier",
+    "note": "Début du règne selon l'infobox. Wikidata Q19943 : pas de date relevée."
+  },
+  {
+    "id": "history-mariage-de-felipe-et-letizia-2004",
+    "date": "2004-05-22",
+    "title": {
+      "fr": "Mariage du prince Felipe d'Espagne et de Letizia Ortiz",
+      "en": "Wedding of Felipe, Prince of Asturias, and Letizia Ortiz",
+      "de": "Hochzeit von Felipe von Spanien und Letizia Ortiz",
+      "it": "Matrimonio di Felipe di Spagna e Letizia Ortiz",
+      "es": "Boda de Felipe de Borbón y Letizia Ortiz"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Felipe_d'Espagne_et_de_Letizia_Ortiz",
+    "note": "Date selon l'infobox. Wikidata Q5488858 : même date."
+  },
+  {
+    "id": "history-proclamation-de-felipe-vi-2014",
+    "date": "2014-06-19",
+    "title": {
+      "fr": "Proclamation de Felipe VI, roi d'Espagne",
+      "en": "Proclamation of Felipe VI as King of Spain",
+      "de": "Proklamation von Felipe VI. zum König von Spanien",
+      "it": "Proclamazione di Felipe VI re di Spagna",
+      "es": "Proclamación de Felipe VI como rey de España"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Felipe_VI",
+    "note": "Proclamation selon l'infobox et le texte de l'article. Wikidata Q191045 : pas de date relevée."
+  }
+]

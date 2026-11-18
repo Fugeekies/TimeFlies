@@ -1,0 +1,72 @@
+[
+  {
+    "id": "tech-napster-1999",
+    "date": "1999-06-01",
+    "title": {
+      "fr": "Napster"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Napster",
+    "note": "Lancement selon l'infobox. Wikidata Q275141 : année seulement."
+  },
+  {
+    "id": "tech-ipod-2001",
+    "date": "2001-10-23",
+    "title": {
+      "fr": "iPod"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/IPod",
+    "note": "Lancement selon le texte de l'article. Wikidata Q9479 : même date."
+  },
+  {
+    "id": "tech-amazon-music-2007",
+    "date": "2007-09-25",
+    "title": {
+      "fr": "Amazon Music"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Amazon_Music",
+    "note": "Première version selon l'infobox. Wikidata Q4740860 : même date."
+  },
+  {
+    "id": "tech-google-play-musique-2011",
+    "date": "2011-11-16",
+    "title": {
+      "fr": "Google Play Musique",
+      "en": "Google Play Music",
+      "de": "Google Play Music",
+      "it": "Google Play Music",
+      "es": "Google Play Music"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Google_Play_Musique",
+    "note": "Première version selon l'infobox. Wikidata Q3238917 : même date."
+  },
+  {
+    "id": "tech-apple-music-2015",
+    "date": "2015-06-30",
+    "title": {
+      "fr": "Apple Music"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Apple_Music",
+    "note": "Première version selon l'infobox. Wikidata Q20056642 : même date."
+  },
+  {
+    "id": "tech-youtube-music-2015",
+    "date": "2015-11-12",
+    "title": {
+      "fr": "YouTube Music"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/YouTube_Music",
+    "note": "Lancement selon l'infobox. Wikidata Q28404534 : même date."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-joseph-estrada-president-1998",
+    "date": "1998-05-11",
+    "title": {
+      "fr": "Joseph Estrada élu président des Philippines",
+      "en": "Joseph Estrada elected President of the Philippines",
+      "de": "Joseph Estrada zum Präsidenten der Philippinen gewählt",
+      "it": "Joseph Estrada eletto presidente delle Filippine",
+      "es": "Joseph Estrada elegido presidente de Filipinas"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Joseph_Estrada",
+    "note": "Date de l'élection selon l'infobox de l'article. Wikidata : pas de date pour cet événement."
+  }
+]

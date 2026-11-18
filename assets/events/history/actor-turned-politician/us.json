@@ -1,0 +1,62 @@
+[
+  {
+    "id": "history-ronald-reagan-gouverneur-1966",
+    "date": "1966-11-08",
+    "title": {
+      "fr": "Ronald Reagan élu gouverneur de Californie",
+      "en": "Ronald Reagan elected Governor of California",
+      "de": "Ronald Reagan zum Gouverneur von Kalifornien gewählt",
+      "it": "Ronald Reagan eletto governatore della California",
+      "es": "Ronald Reagan elegido gobernador de California"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ronald_Reagan",
+    "note": "Date de l'élection de gouverneur selon l'infobox de l'article. Wikidata : pas de date pour cet événement."
+  },
+  {
+    "id": "history-jesse-ventura-gouverneur-1998",
+    "date": "1998-11-03",
+    "title": {
+      "fr": "Jesse Ventura élu gouverneur du Minnesota",
+      "en": "Jesse Ventura elected Governor of Minnesota",
+      "de": "Jesse Ventura zum Gouverneur von Minnesota gewählt",
+      "it": "Jesse Ventura eletto governatore del Minnesota",
+      "es": "Jesse Ventura elegido gobernador de Minnesota"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jesse_Ventura",
+    "note": "Date de l'élection selon l'infobox de l'article. Wikidata : pas de date pour cet événement."
+  },
+  {
+    "id": "history-arnold-schwarzenegger-gouverneur-2003",
+    "date": "2003-10-07",
+    "title": {
+      "fr": "Arnold Schwarzenegger élu gouverneur de Californie",
+      "en": "Arnold Schwarzenegger elected Governor of California",
+      "de": "Arnold Schwarzenegger zum Gouverneur von Kalifornien gewählt",
+      "it": "Arnold Schwarzenegger eletto governatore della California",
+      "es": "Arnold Schwarzenegger elegido gobernador de California"
+    },
+    "kind": "election",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Arnold_Schwarzenegger",
+    "note": "Date de l'élection selon l'infobox de l'article (le texte donne le 17 novembre 2003, jour de sa prise de fonction). Wikidata : pas de date pour cet événement."
+  },
+  {
+    "id": "history-al-franken-senateur-2008",
+    "date": "2008-11-04",
+    "title": {
+      "fr": "Al Franken élu sénateur du Minnesota",
+      "en": "Al Franken elected Senator from Minnesota",
+      "de": "Al Franken zum Senator von Minnesota gewählt",
+      "it": "Al Franken eletto senatore del Minnesota",
+      "es": "Al Franken elegido senador por Minnesota"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Al_Franken",
+    "note": "Date de l'élection selon l'infobox de l'article. Wikidata Q319084 : pas de date pour cet événement."
+  }
+]

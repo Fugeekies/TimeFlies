@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-ballon-d-or-feminin-megan-rapinoe-2019",
+    "date": "2019-12-02",
+    "title": {
+      "fr": "Ballon d'or féminin de Megan Rapinoe",
+      "en": "Megan Rapinoe's Ballon d'Or Féminin",
+      "de": "Ballon d'Or der Frauen für Megan Rapinoe",
+      "it": "Pallone d'oro femminile di Megan Rapinoe",
+      "es": "Balón de Oro femenino de Megan Rapinoe"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2019",
+    "note": "Date de la cérémonie et lauréate selon l'infobox. Wikidata Q67165185 : même date."
+  }
+]

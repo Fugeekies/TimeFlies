@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-mort-d-oussama-ben-laden-2011",
+    "date": "2011-05-02",
+    "title": {
+      "fr": "Mort d'Oussama ben Laden",
+      "en": "Death of Osama bin Laden",
+      "de": "Tod von Osama bin Laden",
+      "it": "Morte di Osama bin Laden",
+      "es": "Muerte de Osama bin Laden"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Oussama_ben_Laden",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q1317 : même date."
+  }
+]

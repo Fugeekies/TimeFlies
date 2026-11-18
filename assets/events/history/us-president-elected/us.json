@@ -1,0 +1,317 @@
+[
+  {
+    "id": "history-election-franklin-d-roosevelt-1932",
+    "date": "1932-11-08",
+    "title": {
+      "fr": "Élection de Franklin D. Roosevelt",
+      "en": "Election of Franklin D. Roosevelt",
+      "de": "Wahl von Franklin D. Roosevelt",
+      "it": "Elezione di Franklin D. Roosevelt",
+      "es": "Elección de Franklin D. Roosevelt"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1932",
+    "note": "Jour du vote selon l'infobox. Wikidata Q179868 : même date."
+  },
+  {
+    "id": "history-election-harry-s-truman-1948",
+    "date": "1948-11-02",
+    "title": {
+      "fr": "Élection de Harry S. Truman",
+      "en": "Election of Harry S. Truman",
+      "de": "Wahl von Harry S. Truman",
+      "it": "Elezione di Harry S. Truman",
+      "es": "Elección de Harry S. Truman"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1948",
+    "note": "Jour du vote selon l'infobox. Wikidata Q568973 : même date."
+  },
+  {
+    "id": "history-election-dwight-d-eisenhower-1952",
+    "date": "1952-11-04",
+    "title": {
+      "fr": "Élection de Dwight D. Eisenhower",
+      "en": "Election of Dwight D. Eisenhower",
+      "de": "Wahl von Dwight D. Eisenhower",
+      "it": "Elezione di Dwight D. Eisenhower",
+      "es": "Elección de Dwight D. Eisenhower"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1952",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699548 : même date."
+  },
+  {
+    "id": "history-election-dwight-d-eisenhower-1956",
+    "date": "1956-11-06",
+    "title": {
+      "fr": "Réélection de Dwight D. Eisenhower",
+      "en": "Re-election of Dwight D. Eisenhower",
+      "de": "Wiederwahl von Dwight D. Eisenhower",
+      "it": "Rielezione di Dwight D. Eisenhower",
+      "es": "Reelección de Dwight D. Eisenhower"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1956",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699567 : même date."
+  },
+  {
+    "id": "history-election-john-f-kennedy-1960",
+    "date": "1960-11-08",
+    "title": {
+      "fr": "Élection de John F. Kennedy",
+      "en": "Election of John F. Kennedy",
+      "de": "Wahl von John F. Kennedy",
+      "it": "Elezione di John F. Kennedy",
+      "es": "Elección de John F. Kennedy"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1960",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699590 : même date."
+  },
+  {
+    "id": "history-election-lyndon-b-johnson-1964",
+    "date": "1964-11-03",
+    "title": {
+      "fr": "Élection de Lyndon B. Johnson",
+      "en": "Election of Lyndon B. Johnson",
+      "de": "Wahl von Lyndon B. Johnson",
+      "it": "Elezione di Lyndon B. Johnson",
+      "es": "Elección de Lyndon B. Johnson"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1964",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699646 : même date."
+  },
+  {
+    "id": "history-election-richard-nixon-1968",
+    "date": "1968-11-05",
+    "title": {
+      "fr": "Élection de Richard Nixon",
+      "en": "Election of Richard Nixon",
+      "de": "Wahl von Richard Nixon",
+      "it": "Elezione di Richard Nixon",
+      "es": "Elección de Richard Nixon"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1968",
+    "note": "Jour du vote selon l'infobox. Wikidata Q693742 : même date."
+  },
+  {
+    "id": "history-election-richard-nixon-1972",
+    "date": "1972-11-07",
+    "title": {
+      "fr": "Réélection de Richard Nixon",
+      "en": "Re-election of Richard Nixon",
+      "de": "Wiederwahl von Richard Nixon",
+      "it": "Rielezione di Richard Nixon",
+      "es": "Reelección de Richard Nixon"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1972",
+    "note": "Jour du vote selon l'infobox. Wikidata Q644161 : même date."
+  },
+  {
+    "id": "history-election-jimmy-carter-1976",
+    "date": "1976-11-02",
+    "title": {
+      "fr": "Élection de Jimmy Carter",
+      "en": "Election of Jimmy Carter",
+      "de": "Wahl von Jimmy Carter",
+      "it": "Elezione di Jimmy Carter",
+      "es": "Elección de Jimmy Carter"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1976",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699693 : même date."
+  },
+  {
+    "id": "history-election-ronald-reagan-1980",
+    "date": "1980-11-04",
+    "title": {
+      "fr": "Élection de Ronald Reagan",
+      "en": "Election of Ronald Reagan",
+      "de": "Wahl von Ronald Reagan",
+      "it": "Elezione di Ronald Reagan",
+      "es": "Elección de Ronald Reagan"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1980",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699716 : même date."
+  },
+  {
+    "id": "history-election-ronald-reagan-1984",
+    "date": "1984-11-06",
+    "title": {
+      "fr": "Réélection de Ronald Reagan",
+      "en": "Re-election of Ronald Reagan",
+      "de": "Wiederwahl von Ronald Reagan",
+      "it": "Rielezione di Ronald Reagan",
+      "es": "Reelección de Ronald Reagan"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1984",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699744 : même date."
+  },
+  {
+    "id": "history-election-george-h-w-bush-1988",
+    "date": "1988-11-08",
+    "title": {
+      "fr": "Élection de George H. W. Bush",
+      "en": "Election of George H. W. Bush",
+      "de": "Wahl von George H. W. Bush",
+      "it": "Elezione di George H. W. Bush",
+      "es": "Elección de George H. W. Bush"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1988",
+    "note": "Jour du vote selon l'infobox. Wikidata Q643015 : même date."
+  },
+  {
+    "id": "history-election-bill-clinton-1992",
+    "date": "1992-11-03",
+    "title": {
+      "fr": "Élection de Bill Clinton",
+      "en": "Election of Bill Clinton",
+      "de": "Wahl von Bill Clinton",
+      "it": "Elezione di Bill Clinton",
+      "es": "Elección de Bill Clinton"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1992",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699776 : même date."
+  },
+  {
+    "id": "history-election-bill-clinton-1996",
+    "date": "1996-11-05",
+    "title": {
+      "fr": "Réélection de Bill Clinton",
+      "en": "Re-election of Bill Clinton",
+      "de": "Wiederwahl von Bill Clinton",
+      "it": "Rielezione di Bill Clinton",
+      "es": "Reelección de Bill Clinton"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1996",
+    "note": "Jour du vote selon l'infobox. Wikidata Q659166 : même date."
+  },
+  {
+    "id": "history-election-george-w-bush-2000",
+    "date": "2000-11-07",
+    "title": {
+      "fr": "Élection de George W. Bush",
+      "en": "Election of George W. Bush",
+      "de": "Wahl von George W. Bush",
+      "it": "Elezione di George W. Bush",
+      "es": "Elección de George W. Bush"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2000",
+    "note": "Jour du vote selon l'infobox. Wikidata Q327959 : même date."
+  },
+  {
+    "id": "history-election-george-w-bush-2004",
+    "date": "2004-11-02",
+    "title": {
+      "fr": "Réélection de George W. Bush",
+      "en": "Re-election of George W. Bush",
+      "de": "Wiederwahl von George W. Bush",
+      "it": "Rielezione di George W. Bush",
+      "es": "Reelección de George W. Bush"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2004",
+    "note": "Jour du vote selon l'infobox. Wikidata Q464075 : même date."
+  },
+  {
+    "id": "history-election-barack-obama-2008",
+    "date": "2008-11-04",
+    "title": {
+      "fr": "Élection de Barack Obama",
+      "en": "Election of Barack Obama",
+      "de": "Wahl von Barack Obama",
+      "it": "Elezione di Barack Obama",
+      "es": "Elección de Barack Obama"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2008",
+    "note": "Jour du vote selon l'infobox. Wikidata Q45578 : même date."
+  },
+  {
+    "id": "history-election-barack-obama-2012",
+    "date": "2012-11-06",
+    "title": {
+      "fr": "Réélection de Barack Obama",
+      "en": "Re-election of Barack Obama",
+      "de": "Wiederwahl von Barack Obama",
+      "it": "Rielezione di Barack Obama",
+      "es": "Reelección de Barack Obama"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2012",
+    "note": "Jour du vote selon l'infobox. Wikidata Q4226 : même date."
+  },
+  {
+    "id": "history-election-donald-trump-2016",
+    "date": "2016-11-08",
+    "title": {
+      "fr": "Élection de Donald Trump",
+      "en": "Election of Donald Trump",
+      "de": "Wahl von Donald Trump",
+      "it": "Elezione di Donald Trump",
+      "es": "Elección de Donald Trump"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2016",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699872 : même date."
+  },
+  {
+    "id": "history-election-joe-biden-2020",
+    "date": "2020-11-03",
+    "title": {
+      "fr": "Élection de Joe Biden",
+      "en": "Election of Joe Biden",
+      "de": "Wahl von Joe Biden",
+      "it": "Elezione di Joe Biden",
+      "es": "Elección de Joe Biden"
+    },
+    "kind": "election",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2020",
+    "note": "Jour du vote selon l'infobox. Wikidata Q22923830 : même date."
+  },
+  {
+    "id": "history-election-donald-trump-2024",
+    "date": "2024-11-05",
+    "title": {
+      "fr": "Élection de Donald Trump pour un second mandat",
+      "en": "Election of Donald Trump to a second term",
+      "de": "Wahl von Donald Trump für eine zweite Amtszeit",
+      "it": "Elezione di Donald Trump per un secondo mandato",
+      "es": "Elección de Donald Trump para un segundo mandato"
+    },
+    "kind": "election",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_2024",
+    "note": "Jour du vote selon l'infobox. Wikidata Q101110072 : même date."
+  }
+]

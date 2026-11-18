@@ -71,7 +71,7 @@ Catalogue initial, à compléter pendant la saisie de la base :
 | Séries & télé | `sitcom-hit` (sitcom culte), `drama-series-hit` (série dramatique culte), `french-series-hit`, `reality-tv` (téléréalité), `kids-tv-show` (émission jeunesse), `cartoon-on-tv` (dessin animé culte à la télé) |
 | Cinéma | `blockbuster`, `animated-feature` (film d'animation familial), `french-comedy-hit`, `saga-episode` (épisode d'une saga culte) |
 | Musique | `music-icon-death` (mort d'une icône de la musique, tous genres), `diva-hit`, `boy-band-hit`, `rap-album-hit`, `summer-hit` (tube de l'été), `pop-album-hit` |
-| Sport | `football-star-peak` (sommet d'une star du foot), `world-cup-win-france`, `olympics-in-france`, `sports-record` |
+| Sport | `football-star-peak` (sommet d'une star du foot), `world-cup-win-france`, `olympics-in-france`, `sports-record`, `world-cup-win` (titre mondial des autres nations : football, football féminin, rugby), `tennis-grand-slam` (titre du Grand Chelem en simple), `tour-de-france-win` (victoire au Tour de France) |
 | Jeux vidéo & tech | `nintendo-console`, `playstation-console`, `handheld-console`, `video-game-phenomenon`, `phone-launch`, `social-network-launch`, `music-format` (cassette, CD, MP3, streaming) |
 | Politique & histoire | `french-president-elected`, `us-president-elected`, `actor-turned-politician`, `world-event`, `royal-event` |
 
@@ -104,6 +104,28 @@ Notations : deux personnes `A` et `B` (l'utilisateur et l'autre personne, dans u
 - Aucun anniversaire aujourd'hui : on affiche le prochain dans les 7 jours qui suivent (même ordre), annoncé « Dans N jours ».
 - Un événement du 29 février est fêté le **28 février** les années non bissextiles (décision du 13/11/2026).
 - Sans date de naissance (premier lancement passé), les anniversaires s'affichent quand même, sans la ligne « Tu avais N ans » : « le 13/11/2026, les événements du 13/11/2000 ont 26 ans » (décision du 13/11/2026).
+
+## Méthode de saisie, toutes catégories (18/11/2026)
+
+Même méthode que le palier 1 des autres thèmes, avec ces décisions du 18/11/2026 :
+
+- **Séries** : `date` = **première diffusion dans le pays d'origine**, lue dans l'infobox de l'article en français (même exception que pour la musique : la diffusion française est rarement datée au jour près). La date française s'ajoutera en `regionalDates` si elle est sourcée.
+- **Consoles, téléphones et autres produits** : `date` = sortie en France ; quand l'article ne donne qu'une date « Europe », elle tient lieu de date française (noté dans `note`). Une date propre à la France reste prioritaire.
+- **Sport, pas de répétition** : un exploit qui s'est répété (Ballons d'or d'un même joueur, titres d'un même pays) n'entre que **deux fois au plus, le premier et le dernier**. Pour les **records du monde**, seul le **record actuel** de chaque discipline entre, pas chaque record battu ni le premier record de son détenteur. Règle appliquée aussi aux données déjà en place : retirés les Ballons d'or du milieu de Messi et de Cristiano Ronaldo, les records battus de Beamon, Lavillenie et Kipchoge, et le premier record de Duplantis.
+- **Jeux vidéo** : même règle que les consoles (France, ou Europe à défaut) ; une sortie mondiale le même jour (« INT ») vaut pour la France. Un jeu d'arcade ou un jeu sorti seulement au Japon ou aux États-Unis à une date connue n'entre pas (*Pong*, *Pac-Man*, *Space Invaders*, *Tetris*).
+- **Événement porté par l'article d'une personne** (libération de Mandela, avènement d'un roi, élection d'un acteur) : la date est lue dans l'infobox ou le texte de l'article de la personne, qui sert de source.
+- Écartés faute de jour ou pour un désaccord : téléphones (aucune date française au jour près dans les articles des iPhone, Nokia, Samsung), CD (mois seulement), Walkman (date japonaise seulement), YouTube (mois seulement), PSP (date française douteuse), *Le Prisonnier*, *Capitaine Marleau*, *Oggy et les Cafards*, *Miraculous*, *Bonne nuit les petits*, *L'amour est dans le pré*, *Les Brigades du Tigre*, *Les Schtroumpfs* (écart de plus d'une semaine), *Pokémon Go* (date française contradictoire), tunnel sous la Manche, Woodstock et Live Aid (date non relue dans l'article).
+
+### Deuxième passe : au moins 150 événements par thème (18/11/2026)
+
+Demande du 18/11/2026 : au moins 150 événements dans chacun des six thèmes. Résultat : 993 événements (Séries 166, Cinéma 173, Musique 171, Sport 150, Jeux vidéo & tech 161, Politique & histoire 172), et 40 jours de l'année sans anniversaire au lieu de 101.
+
+- **Infobox alimentées par Wikidata** : beaucoup d'articles (artistes, albums, chansons, Tour de France) n'écrivent plus la date dans l'infobox, qui l'affiche depuis Wikidata. La date est alors lue dans le **texte du résumé de l'article** (« mort le… », « sorti le… », « se déroule du … au … »), puis recoupée avec Wikidata comme d'habitude.
+- **Films** : date de la ligne « France » de la fiche technique, hors festivals, avant-premières, ressorties et sorties vidéo. Quand Wikidata ne donne pas de date française, cette date doit tomber l'année de la première sortie du film ou l'année suivante (une date plus tardive est une ressortie). Écarté : *Skyfall* (la fiche technique donne une avant-première, Wikidata la sortie trois jours plus tard).
+- **Jeux vidéo** : date que Wikidata attribue à la France, à l'Europe ou au monde entier, gardée seulement si l'infobox de l'article donne la même. Écartés : *Red Dead Redemption* et *Horizon Zero Dawn* (Wikidata ne donne que la réédition ou la sortie sur PC), *Tekken 3* et *Lineage* (sortie japonaise ou coréenne seulement), les variantes de consoles dont l'article renvoie à la console d'origine (Game Boy Pocket, PS4 Pro, PSone…).
+- **Nouveaux types de sport** (décision du 18/11/2026) : `world-cup-win` (titres mondiaux des autres nations en football, football féminin et rugby, le premier et le dernier de chaque pays ; les Bleus gardent leur type, le titre de l'Argentine en 2022 est déjà « Messi champion du monde »), `tennis-grand-slam` (le premier et le dernier titre du Grand Chelem en simple d'un joueur ou d'une joueuse ; « dernier » seulement pour une carrière terminée, sinon le premier seul) et `tour-de-france-win` (la première et la dernière victoire d'un coureur ; Lance Armstrong, déclassé, n'entre pas). Date : celle de la finale ou de l'arrivée à Paris, dans l'infobox de l'édition ou le texte de l'article.
+- **Grandes figures** : la mort ou l'assassinat d'une personnalité mondiale (de Gaulle, Mandela, Churchill…) entre en `world-event`, avec la date de décès de l'infobox, du texte et de Wikidata, toutes trois identiques.
+- Un événement de moins d'un an (Ballon d'or 2026, Tour de France 2026, records de 2026) est valide mais ne s'affiche qu'à partir de son premier anniversaire.
 
 ## Volume visé
 

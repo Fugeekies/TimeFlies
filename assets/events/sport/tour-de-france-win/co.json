@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-tour-de-france-egan-bernal-2019",
+    "date": "2019-07-28",
+    "title": {
+      "fr": "Victoire d'Egan Bernal au Tour de France (2019)",
+      "en": "Egan Bernal wins the Tour de France (2019)",
+      "de": "Egan Bernal gewinnt die Tour de France (2019)",
+      "it": "Egan Bernal vince il Tour de France (2019)",
+      "es": "Egan Bernal gana el Tour de Francia (2019)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2019",
+    "note": "Dates de l'épreuve dans le texte de l'article ; arrivée selon Wikidata Q30091668, dont la date de départ concorde avec l'article ; vainqueur selon l'infobox."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-tour-de-france-tadej-pogacar-2020",
+    "date": "2020-09-20",
+    "title": {
+      "fr": "Première victoire de Tadej Pogačar au Tour de France (2020)",
+      "en": "Tadej Pogačar's first Tour de France win (2020)",
+      "de": "Erster Tour-de-France-Sieg von Tadej Pogačar (2020)",
+      "it": "Prima vittoria di Tadej Pogačar al Tour de France (2020)",
+      "es": "Primera victoria de Tadej Pogačar en el Tour de Francia (2020)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2020",
+    "note": "Épreuve « du 29 août au 20 septembre 2020 » selon le texte de l'article ; même date de fin dans Wikidata Q50411777 ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-tadej-pogacar-2026",
+    "date": "2026-07-26",
+    "title": {
+      "fr": "Dernière victoire en date de Tadej Pogačar au Tour de France (2026)",
+      "en": "Tadej Pogačar's latest Tour de France win (2026)",
+      "de": "Bislang letzter Tour-de-France-Sieg von Tadej Pogačar (2026)",
+      "it": "Ultima vittoria finora di Tadej Pogačar al Tour de France (2026)",
+      "es": "Última victoria hasta la fecha de Tadej Pogačar en el Tour de Francia (2026)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2026",
+    "note": "Arrivée à Paris le 2026-07-26 selon le texte de l'article (« du … au … ») et Wikidata Q126721429 (même date) ; vainqueur selon l'infobox."
+  }
+]

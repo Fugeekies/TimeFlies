@@ -1,0 +1,390 @@
+[
+  {
+    "id": "series-les-cinq-dernieres-minutes-1958",
+    "date": "1958-01-01",
+    "title": {
+      "fr": "Les Cinq Dernières Minutes"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Cinq_Dernières_Minutes",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3231555 : même date."
+  },
+  {
+    "id": "series-thierry-la-fronde-1963",
+    "date": "1963-11-03",
+    "title": {
+      "fr": "Thierry la Fronde"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Thierry_la_Fronde",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1668270 : même date."
+  },
+  {
+    "id": "series-belphegor-ou-le-fantome-du-louvre-1965",
+    "date": "1965-03-06",
+    "title": {
+      "fr": "Belphégor ou le Fantôme du Louvre",
+      "en": "Belphegor, or Phantom of the Louvre",
+      "de": "Belphégor oder das Geheimnis des Louvre",
+      "it": "Belfagor o Il fantasma del Louvre"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Belphégor_ou_le_Fantôme_du_Louvre",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q816167 : même date."
+  },
+  {
+    "id": "series-les-rois-maudits-1972",
+    "date": "1972-12-21",
+    "title": {
+      "fr": "Les Rois maudits"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Rois_maudits_(mini-série,_1972)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q4380312 : même date."
+  },
+  {
+    "id": "series-commissaire-moulin-1976",
+    "date": "1976-08-04",
+    "title": {
+      "fr": "Commissaire Moulin",
+      "de": "Kommissar Moulin",
+      "it": "Il commissario Moulin"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Commissaire_Moulin",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q212576 : même date."
+  },
+  {
+    "id": "series-palace-1988",
+    "date": "1988-10-29",
+    "title": {
+      "fr": "Palace"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Palace_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3360747 : même date."
+  },
+  {
+    "id": "series-navarro-1989",
+    "date": "1989-10-26",
+    "title": {
+      "fr": "Navarro",
+      "de": "Kommissar Navarro",
+      "it": "Commissario Navarro"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Navarro",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1477218 : année seulement."
+  },
+  {
+    "id": "series-maigret-1991",
+    "date": "1991-12-01",
+    "title": {
+      "fr": "Maigret",
+      "it": "Il commissario Maigret"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Maigret_(série_télévisée,_1991)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3278089 : année seulement."
+  },
+  {
+    "id": "series-premiers-baisers-1991",
+    "date": "1991-12-23",
+    "title": {
+      "fr": "Premiers Baisers",
+      "it": "Primi baci"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Premiers_Baisers",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q678485 : même date."
+  },
+  {
+    "id": "series-julie-lescaut-1992",
+    "date": "1992-01-09",
+    "title": {
+      "fr": "Julie Lescaut"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Julie_Lescaut",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1712185 : même date."
+  },
+  {
+    "id": "series-helene-et-les-garcons-1992",
+    "date": "1992-05-11",
+    "title": {
+      "fr": "Hélène et les Garçons",
+      "it": "Hélène e i suoi amici"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hélène_et_les_Garçons",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1972066 : même date."
+  },
+  {
+    "id": "series-le-miel-et-les-abeilles-1992",
+    "date": "1992-12-21",
+    "title": {
+      "fr": "Le Miel et les Abeilles"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Miel_et_les_Abeilles",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2370165 : même date."
+  },
+  {
+    "id": "series-les-filles-d-a-cote-1993",
+    "date": "1993-12-20",
+    "title": {
+      "fr": "Les Filles d'à côté",
+      "it": "Le ragazze della porta accanto"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Filles_d'à_côté",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3232611 : même date."
+  },
+  {
+    "id": "series-sous-le-soleil-1996",
+    "date": "1996-03-13",
+    "title": {
+      "fr": "Sous le soleil",
+      "de": "St. Tropez",
+      "it": "Saint Tropez"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sous_le_soleil",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q942954 : même date."
+  },
+  {
+    "id": "series-josephine-ange-gardien-1997",
+    "date": "1997-12-15",
+    "title": {
+      "fr": "Joséphine, ange gardien",
+      "en": "Josephine, Guardian Angel"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Joséphine,_ange_gardien",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q787711 : même date."
+  },
+  {
+    "id": "series-plus-belle-la-vie-2004",
+    "date": "2004-08-30",
+    "title": {
+      "fr": "Plus belle la vie",
+      "it": "Bella è la vita"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Plus_belle_la_vie",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1381883 : même date."
+  },
+  {
+    "id": "series-kaamelott-2005",
+    "date": "2005-01-03",
+    "title": {
+      "fr": "Kaamelott"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Kaamelott",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q599996 : même date."
+  },
+  {
+    "id": "series-engrenages-2005",
+    "date": "2005-12-13",
+    "title": {
+      "fr": "Engrenages",
+      "en": "Spiral",
+      "it": "Spiral"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Engrenages_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2708868 : même date."
+  },
+  {
+    "id": "series-camping-paradis-2006",
+    "date": "2006-11-21",
+    "title": {
+      "fr": "Camping Paradis"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Camping_Paradis",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2935511 : même date."
+  },
+  {
+    "id": "series-fais-pas-ci-fais-pas-ca-2007",
+    "date": "2007-09-08",
+    "title": {
+      "fr": "Fais pas ci, fais pas ça"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fais_pas_ci,_fais_pas_ça",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3064592 : même date."
+  },
+  {
+    "id": "series-profilage-2009",
+    "date": "2009-04-23",
+    "title": {
+      "fr": "Profilage",
+      "de": "Profiling Paris",
+      "it": "Profiling"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Profilage_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3406889 : même date."
+  },
+  {
+    "id": "series-un-village-francais-2009",
+    "date": "2009-06-04",
+    "title": {
+      "fr": "Un village français",
+      "de": "Un Village Français – Überleben unter deutscher Besatzung"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Un_village_français",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3549122 : même date."
+  },
+  {
+    "id": "series-scenes-de-menages-2009",
+    "date": "2009-11-09",
+    "title": {
+      "fr": "Scènes de ménages"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Scènes_de_ménages",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3476602 : même date."
+  },
+  {
+    "id": "series-clem-2010",
+    "date": "2010-02-22",
+    "title": {
+      "fr": "Clem"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Clem_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2978788 : même date."
+  },
+  {
+    "id": "series-bref-2011",
+    "date": "2011-08-29",
+    "title": {
+      "fr": "Bref.",
+      "en": "Bref"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bref._(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2924296 : même date."
+  },
+  {
+    "id": "series-les-revenants-2012",
+    "date": "2012-11-26",
+    "title": {
+      "fr": "Les Revenants",
+      "en": "The Returned",
+      "de": "The Returned"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Revenants_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3853767 : même date."
+  },
+  {
+    "id": "series-le-bureau-des-legendes-2015",
+    "date": "2015-04-27",
+    "title": {
+      "fr": "Le Bureau des légendes",
+      "en": "The Bureau",
+      "de": "Büro der Legenden",
+      "it": "Le Bureau - Sotto copertura"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Bureau_des_légendes",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q19593743 : même date."
+  },
+  {
+    "id": "series-dix-pour-cent-2015",
+    "date": "2015-10-14",
+    "title": {
+      "fr": "Dix pour cent",
+      "en": "Call My Agent!",
+      "de": "Call My Agent!",
+      "it": "Chiami il mio agente!",
+      "es": "Call My Agent!"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dix_pour_cent",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q21008333 : même date."
+  },
+  {
+    "id": "series-demain-nous-appartient-2017",
+    "date": "2017-07-17",
+    "title": {
+      "fr": "Demain nous appartient",
+      "en": "Tomorrow Is Ours",
+      "it": "Tomorrow Is Ours - Il domani è nostro"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Demain_nous_appartient",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q30753456 : même date."
+  },
+  {
+    "id": "series-hippocrate-2018",
+    "date": "2018-11-26",
+    "title": {
+      "fr": "Hippocrate",
+      "it": "Ippocrate - Specializzandi in corsia"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hippocrate_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q60849545 : même date."
+  },
+  {
+    "id": "series-lupin-2021",
+    "date": "2021-01-08",
+    "title": {
+      "fr": "Lupin"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Lupin_(série_télévisée,_2021)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q104082429 : même date."
+  },
+  {
+    "id": "series-hpi-2021",
+    "date": "2021-04-29",
+    "title": {
+      "fr": "HPI",
+      "de": "HIP: Ermittlerin mit Mords-IQ",
+      "it": "Morgane - Detective geniale",
+      "es": "ACI"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/HPI_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q106648679 : donne une autre date : 2021-04-27."
+  }
+]

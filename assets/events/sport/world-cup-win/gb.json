@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-en-1966",
+    "date": "1966-07-30",
+    "title": {
+      "fr": "Titre mondial de l'Angleterre (Coupe du monde de football 1966)",
+      "en": "England win the 1966 Football World Cup",
+      "de": "England gewinnt die Fußball-WM 1966",
+      "it": "Titolo mondiale per l'Inghilterra (Mondiali di calcio 1966)",
+      "es": "Título mundial para Inglaterra (Mundial de fútbol 1966)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1966",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q1065912 : même date."
+  },
+  {
+    "id": "sport-coupe-du-monde-rugby-en-2003",
+    "date": "2003-11-22",
+    "title": {
+      "fr": "Titre mondial de l'Angleterre (Coupe du monde de rugby 2003)",
+      "en": "England win the 2003 Rugby World Cup",
+      "de": "England gewinnt die Rugby-WM 2003",
+      "it": "Titolo mondiale per l'Inghilterra (Coppa del Mondo di rugby 2003)",
+      "es": "Título mundial para Inglaterra (Copa Mundial de Rugby 2003)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_rugby_à_XV_2003",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q861018 : année seulement."
+  }
+]

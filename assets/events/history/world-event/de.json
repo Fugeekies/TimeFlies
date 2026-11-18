@@ -1,0 +1,47 @@
+[
+  {
+    "id": "history-catastrophe-du-hindenburg-1937",
+    "date": "1937-05-06",
+    "title": {
+      "fr": "Catastrophe du dirigeable Hindenburg",
+      "en": "Hindenburg disaster",
+      "de": "Katastrophe der Hindenburg",
+      "it": "Disastro dell'Hindenburg",
+      "es": "Desastre del Hindenburg"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Accident_du_Hindenburg",
+    "note": "Date selon l'infobox. Wikidata Q3182723 : même date."
+  },
+  {
+    "id": "history-chute-du-mur-de-berlin-1989",
+    "date": "1989-11-09",
+    "title": {
+      "fr": "Chute du mur de Berlin",
+      "en": "Fall of the Berlin Wall",
+      "de": "Fall der Berliner Mauer",
+      "it": "Caduta del muro di Berlino",
+      "es": "Caída del muro de Berlín"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Chute_du_mur_de_Berlin",
+    "note": "Date selon l'infobox. Wikidata Q69163529 : même date."
+  },
+  {
+    "id": "history-vol-germanwings-2015",
+    "date": "2015-03-24",
+    "title": {
+      "fr": "Crash du vol Germanwings 9525 dans les Alpes",
+      "en": "Crash of Germanwings Flight 9525 in the Alps",
+      "de": "Absturz von Germanwings-Flug 9525 in den Alpen",
+      "it": "Incidente del volo Germanwings 9525 sulle Alpi",
+      "es": "Accidente del vuelo 9525 de Germanwings en los Alpes"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Crash_de_l'A320_de_Germanwings",
+    "note": "Date selon l'infobox. Wikidata Q19671417 : même date."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-coup-d-etat-au-chili-1973",
+    "date": "1973-09-11",
+    "title": {
+      "fr": "Coup d'État au Chili contre Salvador Allende",
+      "en": "Chilean coup against Salvador Allende",
+      "de": "Putsch in Chile gegen Salvador Allende",
+      "it": "Colpo di Stato in Cile contro Salvador Allende",
+      "es": "Golpe de Estado en Chile contra Salvador Allende"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coup_d'État_de_1973_au_Chili",
+    "note": "Date selon l'infobox. Wikidata Q856670 : même date."
+  }
+]

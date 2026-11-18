@@ -1,0 +1,148 @@
+[
+  {
+    "id": "series-loft-story-2001",
+    "date": "2001-04-26",
+    "title": {
+      "fr": "Loft Story"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Loft_Story_(M6)",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3257839 : même date."
+  },
+  {
+    "id": "series-koh-lanta-2001",
+    "date": "2001-08-04",
+    "title": {
+      "fr": "Koh-Lanta"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Koh-Lanta",
+    "note": "Première diffusion selon l'infobox. Wikidata Q1707097 : même date."
+  },
+  {
+    "id": "series-popstars-2001",
+    "date": "2001-09-20",
+    "title": {
+      "fr": "Popstars"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Popstars_(France)",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3398000 : même date."
+  },
+  {
+    "id": "series-star-academy-2001",
+    "date": "2001-10-20",
+    "title": {
+      "fr": "Star Academy"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Academy_(France)",
+    "note": "Première diffusion selon l'infobox. Wikidata Q632179 : même date."
+  },
+  {
+    "id": "series-l-ile-de-la-tentation-2002",
+    "date": "2002-07-06",
+    "title": {
+      "fr": "L'Île de la tentation"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'Île_de_la_tentation",
+    "note": "Première diffusion selon l'infobox. Wikidata Q66552422 : même date."
+  },
+  {
+    "id": "series-nouvelle-star-2003",
+    "date": "2003-03-27",
+    "title": {
+      "fr": "Nouvelle Star"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nouvelle_Star",
+    "note": "Première diffusion selon l'infobox. Wikidata Q256520 : même date."
+  },
+  {
+    "id": "series-pekin-express-2006",
+    "date": "2006-01-15",
+    "title": {
+      "fr": "Pékin Express"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pékin_Express",
+    "note": "Première diffusion selon l'infobox. Wikidata Q18046240 : même date."
+  },
+  {
+    "id": "series-secret-story-2007",
+    "date": "2007-06-23",
+    "title": {
+      "fr": "Secret Story"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Secret_Story",
+    "note": "Première diffusion selon l'infobox. Wikidata Q13419757 : même date."
+  },
+  {
+    "id": "series-masterchef-2010",
+    "date": "2010-08-19",
+    "title": {
+      "fr": "MasterChef",
+      "en": "MasterChef France"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/MasterChef_(France)",
+    "note": "Première diffusion selon l'infobox. Wikidata Q4114407 : même date."
+  },
+  {
+    "id": "series-les-anges-de-la-telerealite-2011",
+    "date": "2011-01-10",
+    "title": {
+      "fr": "Les Anges de la téléréalité",
+      "en": "Les Anges"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Anges_(émission_de_téléréalité)",
+    "note": "Première diffusion selon l'infobox. Wikidata Q219061 : année seulement."
+  },
+  {
+    "id": "series-les-ch-tis-2011",
+    "date": "2011-09-05",
+    "title": {
+      "fr": "Les Ch'tis"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Ch'tis",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3231349 : même date."
+  },
+  {
+    "id": "series-the-voice-la-plus-belle-voix-2012",
+    "date": "2012-02-25",
+    "title": {
+      "fr": "The Voice : La Plus Belle Voix",
+      "en": "The Voice – La plus belle voix"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Voice_:_La_Plus_Belle_Voix",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3523241 : pas de date."
+  },
+  {
+    "id": "series-les-marseillais-2012",
+    "date": "2012-11-19",
+    "title": {
+      "fr": "Les Marseillais"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Marseillais",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3233728 : pas de date."
+  }
+]

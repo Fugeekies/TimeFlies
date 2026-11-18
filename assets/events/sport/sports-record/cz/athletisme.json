@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-jarmila-kratochvilova-1983",
+    "date": "1983-07-26",
+    "title": {
+      "fr": "Record du monde du 800 m de Jarmila Kratochvílová",
+      "en": "Jarmila Kratochvílová's 800 m world record",
+      "de": "800-m-Weltrekord von Jarmila Kratochvílová",
+      "it": "Record del mondo degli 800 m di Jarmila Kratochvílová",
+      "es": "Récord del mundo de los 800 m de Jarmila Kratochvílová"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_800_mètres",
+    "note": "Date du record féminin actuel selon l'infobox ; détentrice depuis 1983 selon l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

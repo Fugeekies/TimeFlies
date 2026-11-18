@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-grand-chelem-andy-murray-us-2012",
+    "date": "2012-09-09",
+    "title": {
+      "fr": "Premier titre du Grand Chelem d'Andy Murray (US Open 2012)",
+      "en": "Andy Murray's first Grand Slam title (2012 US Open)",
+      "de": "Erster Grand-Slam-Titel von Andy Murray (US Open 2012)",
+      "it": "Primo titolo del Grande Slam di Andy Murray (US Open 2012)",
+      "es": "Primer título de Grand Slam de Andy Murray (US Open 2012)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'US_Open_de_tennis_2012",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q430195 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-andy-murray-w-2016",
+    "date": "2016-07-10",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem d'Andy Murray (Wimbledon 2016)",
+      "en": "Andy Murray's last Grand Slam title (2016 Wimbledon)",
+      "de": "Letzter Grand-Slam-Titel von Andy Murray (Wimbledon 2016)",
+      "it": "Ultimo titolo del Grande Slam di Andy Murray (Wimbledon 2016)",
+      "es": "Último título de Grand Slam de Andy Murray (Wimbledon 2016)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_du_tournoi_de_Wimbledon_2016",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q24487405 : année seulement."
+  }
+]

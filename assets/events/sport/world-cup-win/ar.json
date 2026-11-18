@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-ar-1978",
+    "date": "1978-06-25",
+    "title": {
+      "fr": "Premier titre mondial de l'Argentine (Coupe du monde de football 1978)",
+      "en": "First world title for Argentina (1978 Football World Cup)",
+      "de": "Erster Weltmeistertitel für Argentinien (Fußball-WM 1978)",
+      "it": "Primo titolo mondiale per l'Argentina (Mondiali di calcio 1978)",
+      "es": "Primer título mundial para Argentina (Mundial de fútbol 1978)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1978",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q858415 : même date."
+  }
+]

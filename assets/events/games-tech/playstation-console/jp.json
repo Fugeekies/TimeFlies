@@ -1,0 +1,57 @@
+[
+  {
+    "id": "tech-playstation-1995",
+    "date": "1995-09-29",
+    "title": {
+      "fr": "PlayStation"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/PlayStation",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q10677 : date japonaise seulement."
+  },
+  {
+    "id": "tech-playstation-2-2000",
+    "date": "2000-11-24",
+    "title": {
+      "fr": "PlayStation 2"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/PlayStation_2",
+    "note": "Sortie en Europe selon l'infobox, en France le même jour selon l'article. Wikidata Q10680 : date japonaise seulement."
+  },
+  {
+    "id": "tech-playstation-3-2007",
+    "date": "2007-03-23",
+    "title": {
+      "fr": "PlayStation 3"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/PlayStation_3",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q10683 : date japonaise seulement."
+  },
+  {
+    "id": "tech-playstation-4-2013",
+    "date": "2013-11-29",
+    "title": {
+      "fr": "PlayStation 4"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/PlayStation_4",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q5014725 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-playstation-5-2020",
+    "date": "2020-11-19",
+    "title": {
+      "fr": "PlayStation 5"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/PlayStation_5",
+    "note": "Sortie dans le reste du monde, dont l'Europe, selon l'article. Wikidata Q63184502 : même date (reste du monde)."
+  }
+]

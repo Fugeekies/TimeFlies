@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-catastrophe-de-tchernobyl-1986",
+    "date": "1986-04-26",
+    "title": {
+      "fr": "Catastrophe nucléaire de Tchernobyl",
+      "en": "Chernobyl disaster",
+      "de": "Nuklearkatastrophe von Tschernobyl",
+      "it": "Disastro di Černobyl'",
+      "es": "Accidente de Chernóbil"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Catastrophe_nucléaire_de_Tchernobyl",
+    "note": "Date selon l'infobox. Wikidata Q486 : même date."
+  }
+]

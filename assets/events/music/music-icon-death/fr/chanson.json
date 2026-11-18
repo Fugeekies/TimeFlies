@@ -11,6 +11,28 @@
     "note": "Date de décès de l'infobox. Wikidata Q1631 donne deux dates : 1963-10-10 et 1963-10-11 (annonce officielle le 11)."
   },
   {
+    "id": "death-bourvil-1970",
+    "date": "1970-09-23",
+    "title": {
+      "fr": "Bourvil"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Bourvil",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2750 : même date."
+  },
+  {
+    "id": "death-mike-brant-1975",
+    "date": "1975-04-25",
+    "title": {
+      "fr": "Mike Brant"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mike_Brant",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q709215 : même date."
+  },
+  {
     "id": "death-claude-francois-1978",
     "date": "1978-03-11",
     "title": {
@@ -20,6 +42,39 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Claude_Fran%C3%A7ois",
     "note": "Date de décès de l'infobox. Wikidata Q365985 : même date."
+  },
+  {
+    "id": "death-joe-dassin-1980",
+    "date": "1980-08-20",
+    "title": {
+      "fr": "Joe Dassin"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Joe_Dassin",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q272943 : même date."
+  },
+  {
+    "id": "death-georges-brassens-1981",
+    "date": "1981-10-29",
+    "title": {
+      "fr": "Georges Brassens"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Georges_Brassens",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q449 : même date."
+  },
+  {
+    "id": "death-tino-rossi-1983",
+    "date": "1983-09-27",
+    "title": {
+      "fr": "Tino Rossi"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tino_Rossi",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q359026 : même date."
   },
   {
     "id": "death-daniel-balavoine-1986",
@@ -55,6 +110,116 @@
     "note": "Date de décès de l'introduction de l'article. Wikidata Q1698 : même date."
   },
   {
+    "id": "death-yves-montand-1991",
+    "date": "1991-11-09",
+    "title": {
+      "fr": "Yves Montand"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Yves_Montand",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q106057 : même date."
+  },
+  {
+    "id": "death-leo-ferre-1993",
+    "date": "1993-07-14",
+    "title": {
+      "fr": "Léo Ferré"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Léo_Ferré",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q320146 : même date."
+  },
+  {
+    "id": "death-charles-trenet-2001",
+    "date": "2001-02-19",
+    "title": {
+      "fr": "Charles Trenet"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Charles_Trenet",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q212549 : même date."
+  },
+  {
+    "id": "death-gilbert-becaud-2001",
+    "date": "2001-12-18",
+    "title": {
+      "fr": "Gilbert Bécaud"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Gilbert_Bécaud",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q160433 : même date."
+  },
+  {
+    "id": "death-sacha-distel-2004",
+    "date": "2004-07-22",
+    "title": {
+      "fr": "Sacha Distel"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sacha_Distel",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q370928 : même date."
+  },
+  {
+    "id": "death-henri-salvador-2008",
+    "date": "2008-02-13",
+    "title": {
+      "fr": "Henri Salvador"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Henri_Salvador",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q318060 : même date."
+  },
+  {
+    "id": "death-jean-ferrat-2010",
+    "date": "2010-03-13",
+    "title": {
+      "fr": "Jean Ferrat"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Jean_Ferrat",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q54885 : même date."
+  },
+  {
+    "id": "death-georges-moustaki-2013",
+    "date": "2013-05-23",
+    "title": {
+      "fr": "Georges Moustaki"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Georges_Moustaki",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q293985 : même date."
+  },
+  {
+    "id": "death-guy-beart-2015",
+    "date": "2015-09-16",
+    "title": {
+      "fr": "Guy Béart"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Guy_Béart",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q74042 : même date."
+  },
+  {
+    "id": "death-michel-delpech-2016",
+    "date": "2016-01-02",
+    "title": {
+      "fr": "Michel Delpech"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Michel_Delpech",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q972386 : même date."
+  },
+  {
     "id": "death-france-gall-2018",
     "date": "2018-01-07",
     "title": {
@@ -75,5 +240,38 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Charles_Aznavour",
     "note": "Date de décès de l'introduction de l'article. Wikidata Q1785 : même date."
+  },
+  {
+    "id": "death-michel-legrand-2019",
+    "date": "2019-01-26",
+    "title": {
+      "fr": "Michel Legrand"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Michel_Legrand",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q313281 : même date."
+  },
+  {
+    "id": "death-jane-birkin-2023",
+    "date": "2023-07-16",
+    "title": {
+      "fr": "Jane Birkin"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jane_Birkin",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q212873 : même date."
+  },
+  {
+    "id": "death-francoise-hardy-2024",
+    "date": "2024-06-11",
+    "title": {
+      "fr": "Françoise Hardy"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Françoise_Hardy",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q53939 : même date."
   }
 ]

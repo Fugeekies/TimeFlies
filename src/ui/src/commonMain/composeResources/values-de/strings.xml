@@ -204,24 +204,62 @@
     <string-array name="origin_names">
         <item>International</item>
         <item>Argentinien</item>
+        <item>Australien</item>
         <item>Belgien</item>
         <item>Brasilien</item>
         <item>Kanada</item>
+        <item>Schweiz</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Kolumbien</item>
+        <item>Kuba</item>
+        <item>Tschechien</item>
         <item>Deutschland</item>
+        <item>Dänemark</item>
+        <item>Ägypten</item>
         <item>Spanien</item>
+        <item>Finnland</item>
         <item>Frankreich</item>
         <item>Vereinigtes Königreich</item>
+        <item>Guatemala</item>
         <item>Kroatien</item>
+        <item>Haiti</item>
+        <item>Ungarn</item>
+        <item>Irland</item>
+        <item>Israel</item>
+        <item>Indien</item>
+        <item>Irak</item>
+        <item>Italien</item>
         <item>Jamaika</item>
         <item>Japan</item>
         <item>Kenia</item>
         <item>Südkorea</item>
+        <item>Litauen</item>
+        <item>Luxemburg</item>
+        <item>Marokko</item>
+        <item>Monaco</item>
         <item>Moldau</item>
+        <item>Niederlande</item>
+        <item>Norwegen</item>
+        <item>Neuseeland</item>
+        <item>Philippinen</item>
+        <item>Polen</item>
         <item>Puerto Rico</item>
+        <item>Palästina</item>
         <item>Portugal</item>
         <item>Rumänien</item>
+        <item>Serbien</item>
+        <item>Russland</item>
+        <item>Saudi-Arabien</item>
         <item>Schweden</item>
+        <item>Slowenien</item>
+        <item>Ukraine</item>
+        <item>Uganda</item>
         <item>Vereinigte Staaten</item>
+        <item>Uruguay</item>
+        <item>Vatikanstadt</item>
+        <item>Vietnam</item>
+        <item>Südafrika</item>
     </string-array>
     <string-array name="subcategory_names">
         <item>Leichtathletik</item>
@@ -301,6 +339,9 @@
     <string name="type_world_cup_win_france">Frankreich gewinnt die Weltmeisterschaft</string>
     <string name="type_olympics_in_france">Olympische Spiele in Frankreich</string>
     <string name="type_sports_record">Sportrekord</string>
+    <string name="type_world_cup_win">Weltmeistertitel</string>
+    <string name="type_tennis_grand_slam">Grand-Slam-Titel</string>
+    <string name="type_tour_de_france_win">Tour-de-France-Sieg</string>
     <string name="type_nintendo_console">Nintendo-Konsole</string>
     <string name="type_playstation_console">PlayStation-Konsole</string>
     <string name="type_handheld_console">Handheld-Konsole</string>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-tour-de-france-greg-lemond-1986",
+    "date": "1986-07-27",
+    "title": {
+      "fr": "Première victoire de Greg LeMond au Tour de France (1986)",
+      "en": "Greg LeMond's first Tour de France win (1986)",
+      "de": "Erster Tour-de-France-Sieg von Greg LeMond (1986)",
+      "it": "Prima vittoria di Greg LeMond al Tour de France (1986)",
+      "es": "Primera victoria de Greg LeMond en el Tour de Francia (1986)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1986",
+    "note": "Arrivée à Paris le 1986-07-27 selon le texte de l'article (« du … au … ») et Wikidata Q260299 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-greg-lemond-1990",
+    "date": "1990-07-22",
+    "title": {
+      "fr": "Dernière victoire de Greg LeMond au Tour de France (1990)",
+      "en": "Greg LeMond's last Tour de France win (1990)",
+      "de": "Letzter Tour-de-France-Sieg von Greg LeMond (1990)",
+      "it": "Ultima vittoria di Greg LeMond al Tour de France (1990)",
+      "es": "Última victoria de Greg LeMond en el Tour de Francia (1990)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1990",
+    "note": "Arrivée à Paris le 1990-07-22 selon le texte de l'article (« du … au … ») et Wikidata Q827936 (même date) ; vainqueur selon l'infobox."
+  }
+]

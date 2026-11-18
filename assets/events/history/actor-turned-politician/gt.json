@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-jimmy-morales-president-2015",
+    "date": "2015-10-25",
+    "title": {
+      "fr": "Jimmy Morales élu président du Guatemala",
+      "en": "Jimmy Morales elected President of Guatemala",
+      "de": "Jimmy Morales zum Präsidenten Guatemalas gewählt",
+      "it": "Jimmy Morales eletto presidente del Guatemala",
+      "es": "Jimmy Morales elegido presidente de Guatemala"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jimmy_Morales",
+    "note": "Date de l'élection selon l'infobox de l'article. Wikidata Q17995110 : pas de date pour cet événement."
+  }
+]

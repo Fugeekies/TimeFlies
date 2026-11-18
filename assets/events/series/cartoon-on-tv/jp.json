@@ -1,0 +1,139 @@
+[
+  {
+    "id": "series-heidi-1974",
+    "date": "1974-01-06",
+    "title": {
+      "fr": "Heidi",
+      "en": "Heidi, Girl of the Alps"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Heidi_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q715718 : même date."
+  },
+  {
+    "id": "series-goldorak-1975",
+    "date": "1975-10-05",
+    "title": {
+      "fr": "Goldorak",
+      "en": "Grendizer",
+      "it": "UFO Robot Goldrake",
+      "es": "UFO Robot Grendizer"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Goldorak",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q700424 : même date."
+  },
+  {
+    "id": "series-candy-candy-1976",
+    "date": "1976-10-01",
+    "title": {
+      "fr": "Candy Candy"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Candy_Candy",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q699643 : même date."
+  },
+  {
+    "id": "series-albator-le-corsaire-de-l-espace-1978",
+    "date": "1978-03-14",
+    "title": {
+      "fr": "Albator, le corsaire de l'espace"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Albator,_le_corsaire_de_l'espace",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q117302589 : même date."
+  },
+  {
+    "id": "series-capitaine-flam-1978",
+    "date": "1978-11-07",
+    "title": {
+      "fr": "Capitaine Flam",
+      "de": "Captain Future",
+      "it": "Capitan Futuro",
+      "es": "Capitán Futuro"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Capitaine_Flam",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q9046782 : même date."
+  },
+  {
+    "id": "series-olive-et-tom-1983",
+    "date": "1983-10-13",
+    "title": {
+      "fr": "Olive et Tom",
+      "de": "Die tollen Fußballstars",
+      "it": "Holly e Benji - Due fuoriclasse"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Olive_et_Tom",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q954612 : même date."
+  },
+  {
+    "id": "series-princesse-sarah-1985",
+    "date": "1985-01-06",
+    "title": {
+      "fr": "Princesse Sarah",
+      "en": "Princess Sara",
+      "de": "Die kleine Prinzessin Sara",
+      "it": "Lovely Sara",
+      "es": "La princesa Sara"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Princesse_Sarah",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q702071 : même date."
+  },
+  {
+    "id": "series-dragon-ball-1986",
+    "date": "1986-02-26",
+    "title": {
+      "fr": "Dragon Ball"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dragon_Ball_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q239506 : même date."
+  },
+  {
+    "id": "series-les-chevaliers-du-zodiaque-1986",
+    "date": "1986-10-11",
+    "title": {
+      "fr": "Les Chevaliers du Zodiaque",
+      "en": "Saint Seiya",
+      "it": "Saint Seiya"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Saint_Seiya_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3790110 : même date."
+  },
+  {
+    "id": "series-nicky-larson-1987",
+    "date": "1987-04-06",
+    "title": {
+      "fr": "Nicky Larson",
+      "en": "City Hunter"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Nicky_Larson_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3006142 : année seulement."
+  },
+  {
+    "id": "series-pokemon-1997",
+    "date": "1997-04-01",
+    "title": {
+      "fr": "Pokémon"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon,_la_série",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q239937 : même date."
+  }
+]

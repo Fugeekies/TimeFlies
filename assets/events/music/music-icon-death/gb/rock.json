@@ -1,5 +1,27 @@
 [
   {
+    "id": "death-keith-moon-1978",
+    "date": "1978-09-07",
+    "title": {
+      "fr": "Keith Moon"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Keith_Moon",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q211696 : même date."
+  },
+  {
+    "id": "death-john-bonham-1980",
+    "date": "1980-09-25",
+    "title": {
+      "fr": "John Bonham"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/John_Bonham",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q485490 : même date."
+  },
+  {
     "id": "death-john-lennon-1980",
     "date": "1980-12-08",
     "title": {
@@ -22,6 +44,29 @@
     "note": "Date de décès de l'infobox. Wikidata Q15869 : même date."
   },
   {
+    "id": "death-joe-strummer-2002",
+    "date": "2002-12-22",
+    "title": {
+      "fr": "Joe Strummer"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Joe_Strummer",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q310052 : même date."
+  },
+  {
+    "id": "death-lemmy-kilmister-2015",
+    "date": "2015-12-28",
+    "title": {
+      "fr": "Lemmy Kilmister",
+      "en": "Lemmy"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Lemmy_Kilmister",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q309926 : même date."
+  },
+  {
     "id": "death-david-bowie-2016",
     "date": "2016-01-10",
     "title": {
@@ -31,5 +76,27 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/David_Bowie",
     "note": "Date de décès de l'infobox. Wikidata Q5383 : même date."
+  },
+  {
+    "id": "death-charlie-watts-2021",
+    "date": "2021-08-24",
+    "title": {
+      "fr": "Charlie Watts"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Charlie_Watts",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q216051 : même date."
+  },
+  {
+    "id": "death-ozzy-osbourne-2025",
+    "date": "2025-07-22",
+    "title": {
+      "fr": "Ozzy Osbourne"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ozzy_Osbourne",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q133151 : même date."
   }
 ]

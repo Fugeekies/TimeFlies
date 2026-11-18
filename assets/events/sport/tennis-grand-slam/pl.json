@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-grand-chelem-iga-swiatek-rg-2020",
+    "date": "2020-10-10",
+    "title": {
+      "fr": "Premier titre du Grand Chelem d'Iga Świątek (Roland-Garros 2020)",
+      "en": "Iga Świątek's first Grand Slam title (2020 French Open)",
+      "de": "Erster Grand-Slam-Titel von Iga Świątek (French Open 2020)",
+      "it": "Primo titolo del Grande Slam di Iga Świątek (Roland Garros 2020)",
+      "es": "Primer título de Grand Slam de Iga Świątek (Roland Garros 2020)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_des_Internationaux_de_France_2020",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q63367916 : année seulement."
+  }
+]

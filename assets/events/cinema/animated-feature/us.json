@@ -15,6 +15,48 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q134430 : pas de date française."
   },
   {
+    "id": "film-cendrillon-1950",
+    "date": "1950-12-01",
+    "title": {
+      "fr": "Cendrillon",
+      "en": "Cinderella",
+      "de": "Cinderella",
+      "it": "Cenerentola",
+      "es": "La Cenicienta"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Cendrillon_(film,_1950)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q191753 : pas de date française."
+  },
+  {
+    "id": "film-peter-pan-1953",
+    "date": "1953-12-18",
+    "title": {
+      "fr": "Peter Pan",
+      "it": "Le avventure di Peter Pan"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Peter_Pan_(film,_1953)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q270470 : pas de date française."
+  },
+  {
+    "id": "film-la-belle-au-bois-dormant-1959",
+    "date": "1959-12-16",
+    "title": {
+      "fr": "La Belle au bois dormant",
+      "en": "Sleeping Beauty",
+      "de": "Dornröschen",
+      "it": "La bella addormentata nel bosco",
+      "es": "La bella durmiente"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/La_Belle_au_bois_dormant_(film,_1959)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q215617 : pas de date française."
+  },
+  {
     "id": "film-le-livre-de-la-jungle-1968",
     "date": "1968-12-04",
     "title": {
@@ -28,6 +70,36 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Le_Livre_de_la_jungle_(film,_1967)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q199839 donne une autre date française : 1968-12-11, 1979-11-28, 1988-03-16, 1993-03-31."
+  },
+  {
+    "id": "film-les-aristochats-1971",
+    "date": "1971-12-08",
+    "title": {
+      "fr": "Les Aristochats",
+      "en": "The Aristocats",
+      "de": "Aristocats",
+      "it": "Gli Aristogatti",
+      "es": "Los Aristogatos"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Aristochats",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q184701 : pas de date française."
+  },
+  {
+    "id": "film-robin-des-bois-1974",
+    "date": "1974-10-30",
+    "title": {
+      "fr": "Robin des Bois",
+      "en": "Robin Hood",
+      "de": "Robin Hood",
+      "it": "Robin Hood",
+      "es": "Robin Hood"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Robin_des_Bois_(film,_1973)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q19090 : pas de date française."
   },
   {
     "id": "film-la-petite-sirene-1990",
@@ -87,6 +159,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q36479 donne une autre date française : 1994-11-09."
   },
   {
+    "id": "film-pocahontas-une-legende-indienne-1995",
+    "date": "1995-11-08",
+    "title": {
+      "fr": "Pocahontas : Une légende indienne",
+      "en": "Pocahontas",
+      "de": "Pocahontas",
+      "it": "Pocahontas",
+      "es": "Pocahontas"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pocahontas_:_Une_légende_indienne",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q218894 : pas de date française."
+  },
+  {
     "id": "film-toy-story-1996",
     "date": "1996-03-27",
     "title": {
@@ -99,6 +186,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q171048 : pas de date française."
   },
   {
+    "id": "film-hercule-1997",
+    "date": "1997-11-26",
+    "title": {
+      "fr": "Hercule",
+      "en": "Hercules",
+      "de": "Hercules",
+      "it": "Hercules",
+      "es": "Hércules"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hercule_(film,_1997)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q271189 : pas de date française."
+  },
+  {
     "id": "film-mulan-1998",
     "date": "1998-11-25",
     "title": {
@@ -108,6 +210,18 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Mulan",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q537407 : pas de date française."
+  },
+  {
+    "id": "film-tarzan-1999",
+    "date": "1999-06-18",
+    "title": {
+      "fr": "Tarzan",
+      "es": "Tarzán"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tarzan_(film,_1999)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q208696 : pas de date française."
   },
   {
     "id": "film-shrek-2001",
@@ -135,6 +249,36 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Monstres_et_Cie",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q187726 : pas de date française."
+  },
+  {
+    "id": "film-l-age-de-glace-2002",
+    "date": "2002-06-26",
+    "title": {
+      "fr": "L'Âge de glace",
+      "en": "Ice Age",
+      "de": "Ice Age",
+      "it": "L'era glaciale",
+      "es": "Ice Age"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'Âge_de_glace",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q305250 : pas de date française."
+  },
+  {
+    "id": "film-lilo-et-stitch-2002",
+    "date": "2002-06-26",
+    "title": {
+      "fr": "Lilo et Stitch",
+      "en": "Lilo & Stitch",
+      "de": "Lilo & Stitch",
+      "it": "Lilo & Stitch",
+      "es": "Lilo & Stitch"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Lilo_et_Stitch_(film,_2002)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q36092 : pas de date française."
   },
   {
     "id": "film-le-monde-de-nemo-2003",
@@ -167,6 +311,17 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q213326 : même date."
   },
   {
+    "id": "film-madagascar-2005",
+    "date": "2005-06-22",
+    "title": {
+      "fr": "Madagascar"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Madagascar_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q174555 : pas de date française."
+  },
+  {
     "id": "film-ratatouille-2007",
     "date": "2007-08-01",
     "title": {
@@ -176,6 +331,31 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Ratatouille_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170035 : pas de date française."
+  },
+  {
+    "id": "film-kung-fu-panda-2008",
+    "date": "2008-07-09",
+    "title": {
+      "fr": "Kung Fu Panda"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Kung_Fu_Panda",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q129193 : pas de date française."
+  },
+  {
+    "id": "film-wall-e-2008",
+    "date": "2008-07-30",
+    "title": {
+      "fr": "WALL-E",
+      "de": "WALL·E – Der Letzte räumt die Erde auf",
+      "it": "WALL•E",
+      "es": "WALL·E"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/WALL-E",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q104905 : pas de date française."
   },
   {
     "id": "film-la-haut-2009",
@@ -253,6 +433,51 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6144664 : même date."
   },
   {
+    "id": "film-les-minions-2015",
+    "date": "2015-07-08",
+    "title": {
+      "fr": "Les Minions",
+      "en": "Minions",
+      "de": "Minions",
+      "it": "Minions",
+      "es": "Minions"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Minions",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q13619743 : même date."
+  },
+  {
+    "id": "film-zootopie-2016",
+    "date": "2016-02-17",
+    "title": {
+      "fr": "Zootopie",
+      "en": "Zootopia",
+      "de": "Zoomania",
+      "it": "Zootropolis",
+      "es": "Zootopia"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Zootopie",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q15270647 : même date."
+  },
+  {
+    "id": "film-vaiana-la-legende-du-bout-du-monde-2016",
+    "date": "2016-11-30",
+    "title": {
+      "fr": "Vaiana : La Légende du bout du monde",
+      "en": "Moana",
+      "de": "Vaiana",
+      "it": "Oceania",
+      "es": "Moana"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Vaiana_:_La_Légende_du_bout_du_monde",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q18647981 : même date."
+  },
+  {
     "id": "film-coco-2017",
     "date": "2017-11-29",
     "title": {
@@ -263,5 +488,35 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Coco_(film,_2017)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q5815826 : même date."
+  },
+  {
+    "id": "film-le-grinch-2018",
+    "date": "2018-11-28",
+    "title": {
+      "fr": "Le Grinch",
+      "en": "The Grinch",
+      "de": "Der Grinch",
+      "it": "Il Grinch",
+      "es": "El Grinch"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Grinch_(film,_2018)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q15632949 : pas de date française."
+  },
+  {
+    "id": "film-encanto-la-fantastique-famille-madrigal-2021",
+    "date": "2021-11-24",
+    "title": {
+      "fr": "Encanto : La Fantastique Famille Madrigal",
+      "en": "Encanto",
+      "de": "Encanto",
+      "it": "Encanto",
+      "es": "Encanto"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Encanto_:_La_Fantastique_Famille_Madrigal",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q103372692 : même date."
   }
 ]

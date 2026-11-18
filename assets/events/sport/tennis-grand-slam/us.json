@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sport-grand-chelem-chris-evert-rg-1974",
+    "date": "1974-06-16",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Chris Evert (Roland-Garros 1974)",
+      "en": "Chris Evert's first Grand Slam title (1974 French Open)",
+      "de": "Erster Grand-Slam-Titel von Chris Evert (French Open 1974)",
+      "it": "Primo titolo del Grande Slam di Chris Evert (Roland Garros 1974)",
+      "es": "Primer título de Grand Slam de Chris Evert (Roland Garros 1974)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_des_Internationaux_de_France_1974",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1455345 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-martina-navratilova-w-1978",
+    "date": "1978-07-08",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Martina Navrátilová (Wimbledon 1978)",
+      "en": "Martina Navrátilová's first Grand Slam title (1978 Wimbledon)",
+      "de": "Erster Grand-Slam-Titel von Martina Navrátilová (Wimbledon 1978)",
+      "it": "Primo titolo del Grande Slam di Martina Navrátilová (Wimbledon 1978)",
+      "es": "Primer título de Grand Slam de Martina Navrátilová (Wimbledon 1978)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_du_tournoi_de_Wimbledon_1978",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1189922 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-chris-evert-rg-1986",
+    "date": "1986-06-08",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Chris Evert (Roland-Garros 1986)",
+      "en": "Chris Evert's last Grand Slam title (1986 French Open)",
+      "de": "Letzter Grand-Slam-Titel von Chris Evert (French Open 1986)",
+      "it": "Ultimo titolo del Grande Slam di Chris Evert (Roland Garros 1986)",
+      "es": "Último título de Grand Slam de Chris Evert (Roland Garros 1986)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_des_Internationaux_de_France_1986",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1059700 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-martina-navratilova-w-1990",
+    "date": "1990-07-08",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Martina Navrátilová (Wimbledon 1990)",
+      "en": "Martina Navrátilová's last Grand Slam title (1990 Wimbledon)",
+      "de": "Letzter Grand-Slam-Titel von Martina Navrátilová (Wimbledon 1990)",
+      "it": "Ultimo titolo del Grande Slam di Martina Navrátilová (Wimbledon 1990)",
+      "es": "Último título de Grand Slam de Martina Navrátilová (Wimbledon 1990)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_du_tournoi_de_Wimbledon_1990",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1191040 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-serena-williams-us-1999",
+    "date": "1999-09-12",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Serena Williams (US Open 1999)",
+      "en": "Serena Williams's first Grand Slam title (1999 US Open)",
+      "de": "Erster Grand-Slam-Titel von Serena Williams (US Open 1999)",
+      "it": "Primo titolo del Grande Slam di Serena Williams (US Open 1999)",
+      "es": "Primer título de Grand Slam de Serena Williams (US Open 1999)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_de_l'US_Open_de_tennis_1999",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q478426 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-pete-sampras-us-2002",
+    "date": "2002-09-08",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Pete Sampras (US Open 2002)",
+      "en": "Pete Sampras's last Grand Slam title (2002 US Open)",
+      "de": "Letzter Grand-Slam-Titel von Pete Sampras (US Open 2002)",
+      "it": "Ultimo titolo del Grande Slam di Pete Sampras (US Open 2002)",
+      "es": "Último título de Grand Slam de Pete Sampras (US Open 2002)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'US_Open_de_tennis_2002",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1048938 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-andre-agassi-ao-2003",
+    "date": "2003-01-26",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem d'Andre Agassi (Open d'Australie 2003)",
+      "en": "Andre Agassi's last Grand Slam title (2003 Australian Open)",
+      "de": "Letzter Grand-Slam-Titel von Andre Agassi (Australian Open 2003)",
+      "it": "Ultimo titolo del Grande Slam di Andre Agassi (Australian Open 2003)",
+      "es": "Último título de Grand Slam de Andre Agassi (Abierto de Australia 2003)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'Open_d'Australie_2003",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q765693 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-serena-williams-ao-2017",
+    "date": "2017-01-29",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Serena Williams (Open d'Australie 2017)",
+      "en": "Serena Williams's last Grand Slam title (2017 Australian Open)",
+      "de": "Letzter Grand-Slam-Titel von Serena Williams (Australian Open 2017)",
+      "it": "Ultimo titolo del Grande Slam di Serena Williams (Australian Open 2017)",
+      "es": "Último título de Grand Slam de Serena Williams (Abierto de Australia 2017)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_de_l'Open_d'Australie_2017",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q22956221 : année seulement."
+  }
+]

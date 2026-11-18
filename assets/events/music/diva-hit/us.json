@@ -66,6 +66,17 @@
     "note": "Sortie selon l'infobox. Wikidata Q148511 : mois seulement (mai 2003)."
   },
   {
+    "id": "single-toxic-2004",
+    "date": "2004-01-13",
+    "title": {
+      "fr": "Toxic (Britney Spears)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Toxic_(chanson)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q379751 : même date."
+  },
+  {
     "id": "single-single-ladies-2008",
     "date": "2008-10-08",
     "title": {
@@ -75,5 +86,27 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Single_Ladies_(Put_a_Ring_on_It)",
     "note": "Première sortie (radio) selon l'infobox. Wikidata Q147409 : année seulement."
+  },
+  {
+    "id": "single-halo-2009",
+    "date": "2009-01-20",
+    "title": {
+      "fr": "Halo (Beyoncé)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Halo_(chanson_de_Beyoncé)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q147734 : même date."
+  },
+  {
+    "id": "single-flowers-2023",
+    "date": "2023-01-12",
+    "title": {
+      "fr": "Flowers (Miley Cyrus)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Flowers_(chanson_de_Miley_Cyrus)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q115945493 : même date."
   }
 ]

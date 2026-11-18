@@ -1,5 +1,16 @@
 [
   {
+    "id": "album-pet-sounds-1966",
+    "date": "1966-05-16",
+    "title": {
+      "fr": "Pet Sounds (The Beach Boys)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pet_Sounds",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q212863 : même date."
+  },
+  {
     "id": "album-thriller-1982",
     "date": "1982-11-30",
     "title": {
@@ -20,6 +31,28 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Born_in_the_U.S.A.",
     "note": "Sortie selon l'infobox. Wikidata Q40425 : même date."
+  },
+  {
+    "id": "album-purple-rain-1984",
+    "date": "1984-06-25",
+    "title": {
+      "fr": "Purple Rain (Prince)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Purple_Rain_(album)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q253004 : même date."
+  },
+  {
+    "id": "album-bad-1987",
+    "date": "1987-08-31",
+    "title": {
+      "fr": "Bad (Michael Jackson)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Bad_(album_de_Michael_Jackson)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q141859451 : pas de date."
   },
   {
     "id": "album-like-a-prayer-1989",
@@ -53,5 +86,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/1989_(album)",
     "note": "Sortie selon l'infobox et l'introduction. Wikidata Q17544553 : même date."
+  },
+  {
+    "id": "album-lemonade-2016",
+    "date": "2016-04-23",
+    "title": {
+      "fr": "Lemonade (Beyoncé)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Lemonade_(album)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q23905116 : même date."
   }
 ]

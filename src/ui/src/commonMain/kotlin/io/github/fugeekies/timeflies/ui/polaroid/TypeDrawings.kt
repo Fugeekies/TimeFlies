@@ -53,6 +53,9 @@ fun DrawScope.drawTypeDrawing(type: EventType, color: Color) {
             EventType.WORLD_CUP_WIN_FRANCE -> grid.trophy(this)
             EventType.OLYMPICS_IN_FRANCE -> grid.torch(this)
             EventType.SPORTS_RECORD -> grid.stopwatch(this)
+            EventType.WORLD_CUP_WIN -> grid.laurelStar(this)
+            EventType.TENNIS_GRAND_SLAM -> grid.racketAndBall(this)
+            EventType.TOUR_DE_FRANCE_WIN -> grid.bicycle(this)
             // Video games & tech
             EventType.NINTENDO_CONSOLE -> grid.controller(this)
             EventType.PLAYSTATION_CONSOLE -> grid.disc(this)
@@ -242,6 +245,35 @@ private class Grid(val unit: Float, val color: Color, val pen: Stroke) {
         line(32f, 48f, 68f, 48f)
         stroke(path { m(50f, 8f); q(70f, 26f, 60f, 42f); l(40f, 42f); q(30f, 26f, 50f, 8f); close() })
         stroke(path { m(50f, 24f); q(58f, 34f, 50f, 42f); q(42f, 34f, 50f, 24f) })
+    }
+
+
+    // World Cup win (other nations): the champion's star inside a laurel wreath.
+    fun laurelStar(scope: DrawScope) = with(scope) {
+        star(50f, 44f, 16f, 7f)
+        stroke(path { m(46f, 88f); q(14f, 76f, 18f, 30f) })
+        stroke(path { m(54f, 88f); q(86f, 76f, 82f, 30f) })
+        listOf(18f to 40f, 20f to 54f, 26f to 67f, 36f to 79f).forEach { (x, y) -> drawOval(color, p(x - 9f, y - 4f), s(9f, 6f), style = pen) }
+        listOf(82f to 40f, 80f to 54f, 74f to 67f, 64f to 79f).forEach { (x, y) -> drawOval(color, p(x, y - 4f), s(9f, 6f), style = pen) }
+    }
+    // Grand Slam tennis: a racket with its strings, and a ball.
+    fun racketAndBall(scope: DrawScope) = with(scope) {
+        drawOval(color, p(18f, 10f), s(44f, 54f), style = pen)
+        line(30f, 16f, 30f, 58f); line(40f, 11f, 40f, 63f); line(50f, 16f, 50f, 58f)
+        line(22f, 26f, 58f, 26f); line(19f, 37f, 61f, 37f); line(22f, 48f, 58f, 48f)
+        line(40f, 64f, 40f, 72f)
+        box(35f, 72f, 10f, 22f, 3f)
+        circle(76f, 76f, 10f)
+        stroke(path { m(68f, 70f); q(76f, 76f, 70f, 84f) })
+    }
+
+    // Tour de France win: a racing bicycle.
+    fun bicycle(scope: DrawScope) = with(scope) {
+        circle(24f, 68f, 18f); circle(76f, 68f, 18f)
+        stroke(path { m(24f, 68f); l(42f, 40f); l(68f, 40f); l(50f, 68f); close() })
+        line(50f, 68f, 38f, 30f); line(32f, 30f, 44f, 30f)
+        line(68f, 40f, 76f, 68f); line(68f, 40f, 66f, 30f); line(62f, 30f, 72f, 28f)
+        dot(50f, 68f, 3f)
     }
 
     // Sports record: a stopwatch.

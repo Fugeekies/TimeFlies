@@ -1,5 +1,33 @@
 [
   {
+    "id": "film-james-bond-007-contre-dr-no-1963",
+    "date": "1963-03-07",
+    "title": {
+      "fr": "James Bond 007 contre Dr No",
+      "en": "Dr. No",
+      "de": "James Bond – 007 jagt Dr. No",
+      "it": "Agente 007 - Licenza di uccidere",
+      "es": "Dr. No"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/James_Bond_007_contre_Dr_No",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102754 : pas de date française."
+  },
+  {
+    "id": "film-goldfinger-1965",
+    "date": "1965-02-18",
+    "title": {
+      "fr": "Goldfinger",
+      "de": "James Bond 007 – Goldfinger",
+      "it": "Agente 007 - Missione Goldfinger"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Goldfinger",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q106440 : pas de date française."
+  },
+  {
     "id": "film-casino-royale-2006",
     "date": "2006-11-22",
     "title": {

@@ -1,0 +1,340 @@
+[
+  {
+    "id": "series-i-love-lucy-1951",
+    "date": "1951-10-15",
+    "title": {
+      "fr": "I Love Lucy",
+      "it": "Lucy ed io"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/I_Love_Lucy",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q181943 : même date."
+  },
+  {
+    "id": "series-ma-sorciere-bien-aimee-1964",
+    "date": "1964-09-17",
+    "title": {
+      "fr": "Ma sorcière bien-aimée",
+      "en": "Bewitched",
+      "de": "Verliebt in eine Hexe",
+      "it": "Vita da strega",
+      "es": "Bewitched"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ma_sorcière_bien-aimée",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1044635 : même date."
+  },
+  {
+    "id": "series-happy-days-1974",
+    "date": "1974-01-15",
+    "title": {
+      "fr": "Happy Days"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Happy_Days_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q518589 : même date."
+  },
+  {
+    "id": "series-arnold-et-willy-1978",
+    "date": "1978-11-03",
+    "title": {
+      "fr": "Arnold et Willy",
+      "en": "Diff'rent Strokes",
+      "de": "Noch Fragen Arnold?",
+      "it": "Il mio amico Arnold",
+      "es": "Diff'rent Strokes"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Arnold_et_Willy",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2478848 : même date."
+  },
+  {
+    "id": "series-cheers-1982",
+    "date": "1982-09-30",
+    "title": {
+      "fr": "Cheers",
+      "it": "Cin cin"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Cheers_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q732063 : même date."
+  },
+  {
+    "id": "series-madame-est-servie-1984",
+    "date": "1984-09-20",
+    "title": {
+      "fr": "Madame est servie",
+      "en": "Who's the Boss?",
+      "de": "Wer ist hier der Boss?",
+      "it": "Casalingo Superpiù",
+      "es": "Who's the Boss?"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Madame_est_servie",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1623411 : même date."
+  },
+  {
+    "id": "series-maries-deux-enfants-1987",
+    "date": "1987-04-05",
+    "title": {
+      "fr": "Mariés, deux enfants",
+      "en": "Married... with Children",
+      "de": "Eine schrecklich nette Familie",
+      "it": "Sposati... con figli",
+      "es": "Married... with Children"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mariés,_deux_enfants",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q208647 : même date."
+  },
+  {
+    "id": "series-la-fete-a-la-maison-1987",
+    "date": "1987-09-22",
+    "title": {
+      "fr": "La Fête à la maison",
+      "en": "Full House",
+      "de": "Full House",
+      "it": "Gli amici di papà",
+      "es": "Full House"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/La_Fête_à_la_maison",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q465472 : même date."
+  },
+  {
+    "id": "series-les-annees-coup-de-coeur-1988",
+    "date": "1988-01-31",
+    "title": {
+      "fr": "Les Années coup de cœur",
+      "en": "The Wonder Years",
+      "de": "Wunderbare Jahre",
+      "it": "Blue Jeans",
+      "es": "The Wonder Years"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Les_Années_coup_de_cœur",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q691581 : même date."
+  },
+  {
+    "id": "series-seinfeld-1989",
+    "date": "1989-07-05",
+    "title": {
+      "fr": "Seinfeld"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Seinfeld",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23733 : même date."
+  },
+  {
+    "id": "series-sauves-par-le-gong-1989",
+    "date": "1989-08-20",
+    "title": {
+      "fr": "Sauvés par le gong",
+      "en": "Saved by the Bell",
+      "de": "California High School",
+      "it": "Bayside School",
+      "es": "Saved by the Bell"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Sauvés_par_le_gong",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1026823 : même date."
+  },
+  {
+    "id": "series-la-vie-de-famille-1989",
+    "date": "1989-09-22",
+    "title": {
+      "fr": "La Vie de famille",
+      "en": "Family Matters",
+      "de": "Alle unter einem Dach",
+      "it": "8 sotto un tetto",
+      "es": "Family Matters"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/La_Vie_de_famille",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q593838 : même date."
+  },
+  {
+    "id": "series-le-prince-de-bel-air-1990",
+    "date": "1990-09-10",
+    "title": {
+      "fr": "Le Prince de Bel-Air",
+      "en": "The Fresh Prince of Bel-Air",
+      "de": "Der Prinz von Bel-Air",
+      "it": "Willy, il principe di Bel-Air",
+      "es": "The Fresh Prince of Bel-Air"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Le_Prince_de_Bel-Air",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q309063 : même date."
+  },
+  {
+    "id": "series-frasier-1993",
+    "date": "1993-09-16",
+    "title": {
+      "fr": "Frasier"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Frasier",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q209282 : même date."
+  },
+  {
+    "id": "series-une-nounou-d-enfer-1993",
+    "date": "1993-11-03",
+    "title": {
+      "fr": "Une nounou d'enfer",
+      "en": "The Nanny",
+      "de": "Die Nanny",
+      "it": "La tata",
+      "es": "La niñera"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Une_nounou_d'enfer",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q464865 : même date."
+  },
+  {
+    "id": "series-friends-1994",
+    "date": "1994-09-22",
+    "title": {
+      "fr": "Friends"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Friends",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q79784 : même date."
+  },
+  {
+    "id": "series-sex-and-the-city-1998",
+    "date": "1998-06-06",
+    "title": {
+      "fr": "Sex and the City"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sex_and_the_City",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q35791 : même date."
+  },
+  {
+    "id": "series-that-70s-show-1998",
+    "date": "1998-08-23",
+    "title": {
+      "fr": "That '70s Show",
+      "de": "Die wilden Siebziger"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/That_'70s_Show",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q208072 : même date."
+  },
+  {
+    "id": "series-malcolm-2000",
+    "date": "2000-01-09",
+    "title": {
+      "fr": "Malcolm",
+      "en": "Malcolm in the Middle",
+      "de": "Malcolm mittendrin",
+      "es": "Malcolm in the Middle"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Malcolm_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q242596 : même date."
+  },
+  {
+    "id": "series-scrubs-2001",
+    "date": "2001-10-02",
+    "title": {
+      "fr": "Scrubs",
+      "de": "Scrubs – Die Anfänger",
+      "it": "Scrubs - Medici ai primi ferri"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Scrubs",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q485668 : même date."
+  },
+  {
+    "id": "series-mon-oncle-charlie-2003",
+    "date": "2003-09-22",
+    "title": {
+      "fr": "Mon oncle Charlie",
+      "en": "Two and a Half Men",
+      "de": "Two and a Half Men",
+      "it": "Due uomini e mezzo",
+      "es": "Dos hombres y medio"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mon_oncle_Charlie",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q189267 : même date."
+  },
+  {
+    "id": "series-the-office-2005",
+    "date": "2005-03-24",
+    "title": {
+      "fr": "The Office"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Office_(série_télévisée,_2005)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23831 : même date."
+  },
+  {
+    "id": "series-how-i-met-your-mother-2005",
+    "date": "2005-09-19",
+    "title": {
+      "fr": "How I Met Your Mother"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/How_I_Met_Your_Mother",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q147235 : même date."
+  },
+  {
+    "id": "series-the-big-bang-theory-2007",
+    "date": "2007-09-24",
+    "title": {
+      "fr": "The Big Bang Theory"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/The_Big_Bang_Theory",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q8539 : même date."
+  },
+  {
+    "id": "series-modern-family-2009",
+    "date": "2009-09-23",
+    "title": {
+      "fr": "Modern Family"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Modern_Family",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q16756 : même date."
+  },
+  {
+    "id": "series-brooklyn-nine-nine-2013",
+    "date": "2013-09-17",
+    "title": {
+      "fr": "Brooklyn Nine-Nine"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Brooklyn_Nine-Nine",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q13417244 : même date."
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "single-libertine-1986",
+    "date": "1986-03-25",
+    "title": {
+      "fr": "Libertine (Mylène Farmer)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Libertine_(chanson)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q2558349 : année ou mois seulement."
+  },
+  {
+    "id": "single-desenchantee-1991",
+    "date": "1991-03-18",
+    "title": {
+      "fr": "Désenchantée (Mylène Farmer)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Désenchantée",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q2576448 : pas de date."
+  }
+]

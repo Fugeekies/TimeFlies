@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-tour-de-france-jan-janssen-1968",
+    "date": "1968-07-21",
+    "title": {
+      "fr": "Victoire de Jan Janssen au Tour de France (1968)",
+      "en": "Jan Janssen wins the Tour de France (1968)",
+      "de": "Jan Janssen gewinnt die Tour de France (1968)",
+      "it": "Jan Janssen vince il Tour de France (1968)",
+      "es": "Jan Janssen gana el Tour de Francia (1968)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1968",
+    "note": "Arrivée à Paris le 1968-07-21 selon le texte de l'article (« du … au … ») et Wikidata Q378886 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-joop-zoetemelk-1980",
+    "date": "1980-07-20",
+    "title": {
+      "fr": "Victoire de Joop Zoetemelk au Tour de France (1980)",
+      "en": "Joop Zoetemelk wins the Tour de France (1980)",
+      "de": "Joop Zoetemelk gewinnt die Tour de France (1980)",
+      "it": "Joop Zoetemelk vince il Tour de France (1980)",
+      "es": "Joop Zoetemelk gana el Tour de Francia (1980)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1980",
+    "note": "Arrivée à Paris le 1980-07-20 selon le texte de l'article (« du … au … ») et Wikidata Q279235 (même date) ; vainqueur selon l'infobox."
+  }
+]

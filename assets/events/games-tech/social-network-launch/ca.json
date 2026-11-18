@@ -1,0 +1,13 @@
+[
+  {
+    "id": "tech-flickr-2004",
+    "date": "2004-02-10",
+    "title": {
+      "fr": "Flickr"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Flickr",
+    "note": "Lancement selon l'infobox. Wikidata Q103204 : même date."
+  }
+]

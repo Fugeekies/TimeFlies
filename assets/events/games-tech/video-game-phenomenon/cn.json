@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tech-genshin-impact-2020",
+    "date": "2020-09-28",
+    "title": {
+      "fr": "Genshin Impact"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Genshin_Impact",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q65059474 : même date."
+  },
+  {
+    "id": "tech-black-myth-wukong-2024",
+    "date": "2024-08-20",
+    "title": {
+      "fr": "Black Myth: Wukong"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Black_Myth:_Wukong",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q98582386 : même date (monde)."
+  }
+]

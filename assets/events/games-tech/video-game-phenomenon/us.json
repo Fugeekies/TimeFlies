@@ -1,0 +1,357 @@
+[
+  {
+    "id": "tech-doom-1993",
+    "date": "1993-12-10",
+    "title": {
+      "fr": "Doom"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Doom_(jeu_vidéo,_1993)",
+    "note": "Sortie sur PC (en téléchargement) selon l'infobox. Wikidata Q189784 : même date."
+  },
+  {
+    "id": "tech-crash-bandicoot-1996",
+    "date": "1996-11-08",
+    "title": {
+      "fr": "Crash Bandicoot"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Crash_Bandicoot_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q719176 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-spyro-the-dragon-1998",
+    "date": "1998-10-23",
+    "title": {
+      "fr": "Spyro the Dragon"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Spyro_the_Dragon_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q858391 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-halo-combat-evolved-2002",
+    "date": "2002-03-14",
+    "title": {
+      "fr": "Halo: Combat Evolved",
+      "de": "Halo: Kampf um die Zukunft"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Halo:_Combat_Evolved",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q276217 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-call-of-duty-2003",
+    "date": "2003-11-07",
+    "title": {
+      "fr": "Call of Duty"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Call_of_Duty_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q211096 : même date."
+  },
+  {
+    "id": "tech-les-sims-2-2004",
+    "date": "2004-09-16",
+    "title": {
+      "fr": "Les Sims 2",
+      "en": "The Sims 2",
+      "de": "Die Sims 2",
+      "it": "The Sims 2",
+      "es": "Los Sims 2"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Sims_2",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q182771 : même date."
+  },
+  {
+    "id": "tech-half-life-2-2004",
+    "date": "2004-11-16",
+    "title": {
+      "fr": "Half-Life 2"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Half-Life_2",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q193581 : même date."
+  },
+  {
+    "id": "tech-halo-3-2007",
+    "date": "2007-09-26",
+    "title": {
+      "fr": "Halo 3"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Halo_3",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q137802 : même date (Europe)."
+  },
+  {
+    "id": "tech-portal-2007",
+    "date": "2007-10-10",
+    "title": {
+      "fr": "Portal"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Portal_(jeu_vidéo)",
+    "note": "Sortie mondiale sur PC selon l'infobox. Wikidata Q274897 : même date."
+  },
+  {
+    "id": "tech-call-of-duty-4-modern-warfare-2007",
+    "date": "2007-11-09",
+    "title": {
+      "fr": "Call of Duty 4: Modern Warfare"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Call_of_Duty_4:_Modern_Warfare",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q76255 : même date (Europe)."
+  },
+  {
+    "id": "tech-guitar-hero-3-legends-of-rock-2007",
+    "date": "2007-11-23",
+    "title": {
+      "fr": "Guitar Hero 3: Legends of Rock",
+      "en": "Guitar Hero III: Legends of Rock",
+      "de": "Guitar Hero III: Legends of Rock",
+      "it": "Guitar Hero III: Legends of Rock",
+      "es": "Guitar Hero III: Legends of Rock"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Guitar_Hero_3:_Legends_of_Rock",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1047938 : même date (Europe)."
+  },
+  {
+    "id": "tech-league-of-legends-2009",
+    "date": "2009-10-27",
+    "title": {
+      "fr": "League of Legends"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/League_of_Legends",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q223341 : même date."
+  },
+  {
+    "id": "tech-call-of-duty-black-ops-2010",
+    "date": "2010-11-09",
+    "title": {
+      "fr": "Call of Duty: Black Ops"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Call_of_Duty:_Black_Ops",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q207986 : même date (Europe)."
+  },
+  {
+    "id": "tech-the-elder-scrolls-v-skyrim-2011",
+    "date": "2011-11-11",
+    "title": {
+      "fr": "The Elder Scrolls V: Skyrim"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q323862 : même date."
+  },
+  {
+    "id": "tech-bioshock-infinite-2013",
+    "date": "2013-03-26",
+    "title": {
+      "fr": "BioShock Infinite"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/BioShock_Infinite",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q2074746 : même date."
+  },
+  {
+    "id": "tech-les-sims-4-2014",
+    "date": "2014-09-04",
+    "title": {
+      "fr": "Les Sims 4",
+      "en": "The Sims 4",
+      "de": "Die Sims 4",
+      "it": "The Sims 4",
+      "es": "Los Sims 4"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Sims_4",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q12579896 : même date (Europe)."
+  },
+  {
+    "id": "tech-rocket-league-2015",
+    "date": "2015-07-07",
+    "title": {
+      "fr": "Rocket League"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rocket_League",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q20031743 : même date."
+  },
+  {
+    "id": "tech-stardew-valley-2016",
+    "date": "2016-02-26",
+    "title": {
+      "fr": "Stardew Valley"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Stardew_Valley",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q23013817 : même date (monde)."
+  },
+  {
+    "id": "tech-overwatch-2016",
+    "date": "2016-05-24",
+    "title": {
+      "fr": "Overwatch"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Overwatch",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q18515944 : même date."
+  },
+  {
+    "id": "tech-god-of-war-2018",
+    "date": "2018-04-20",
+    "title": {
+      "fr": "God of War"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/God_of_War_(jeu_vidéo,_2018)",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q18345138 : même date."
+  },
+  {
+    "id": "tech-among-us-2018",
+    "date": "2018-06-15",
+    "title": {
+      "fr": "Among Us"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Among_Us",
+    "note": "Sortie mondiale sur mobile selon l'infobox. Wikidata Q96417649 : même date."
+  },
+  {
+    "id": "tech-marvel-s-spider-man-2018",
+    "date": "2018-09-07",
+    "title": {
+      "fr": "Marvel's Spider-Man",
+      "de": "Marvel’s Spider-Man",
+      "it": "Spider-Man",
+      "es": "Spider-Man"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Marvel's_Spider-Man",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q25340029 : même date (monde)."
+  },
+  {
+    "id": "tech-red-dead-redemption-ii-2018",
+    "date": "2018-10-26",
+    "title": {
+      "fr": "Red Dead Redemption II",
+      "en": "Red Dead Redemption 2",
+      "de": "Red Dead Redemption 2",
+      "es": "Red Dead Redemption 2"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Red_Dead_Redemption_II",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q27438121 : même date."
+  },
+  {
+    "id": "tech-apex-legends-2019",
+    "date": "2019-02-04",
+    "title": {
+      "fr": "Apex Legends"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Apex_Legends",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q61478103 : même date."
+  },
+  {
+    "id": "tech-half-life-alyx-2020",
+    "date": "2020-03-23",
+    "title": {
+      "fr": "Half-Life: Alyx"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Half-Life:_Alyx",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q75653574 : même date (monde)."
+  },
+  {
+    "id": "tech-valorant-2020",
+    "date": "2020-06-02",
+    "title": {
+      "fr": "Valorant"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Valorant",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q86919275 : même date."
+  },
+  {
+    "id": "tech-the-last-of-us-part-ii-2020",
+    "date": "2020-06-19",
+    "title": {
+      "fr": "The Last of Us Part II",
+      "it": "The Last of Us Parte II"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Last_of_Us_Part_II",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q27950674 : même date (monde)."
+  },
+  {
+    "id": "tech-ghost-of-tsushima-2020",
+    "date": "2020-07-17",
+    "title": {
+      "fr": "Ghost of Tsushima"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ghost_of_Tsushima",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q42564798 : même date (monde)."
+  },
+  {
+    "id": "tech-fall-guys-2020",
+    "date": "2020-08-04",
+    "title": {
+      "fr": "Fall Guys",
+      "it": "Fall Guys: Ultimate Knockout"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Fall_Guys",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q85760410 : même date (monde)."
+  },
+  {
+    "id": "tech-hogwarts-legacy-l-heritage-de-poudlard-2023",
+    "date": "2023-02-10",
+    "title": {
+      "fr": "Hogwarts Legacy : L'Héritage de Poudlard",
+      "en": "Hogwarts Legacy",
+      "de": "Hogwarts Legacy",
+      "it": "Hogwarts Legacy",
+      "es": "Hogwarts Legacy"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hogwarts_Legacy_:_L'Héritage_de_Poudlard",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q99397854 : même date."
+  }
+]

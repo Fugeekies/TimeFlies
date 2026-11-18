@@ -1,0 +1,106 @@
+[
+  {
+    "id": "tech-dofus-2004",
+    "date": "2004-09-01",
+    "title": {
+      "fr": "Dofus"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dofus",
+    "note": "Sortie selon l'infobox. Wikidata Q1139866 : même date."
+  },
+  {
+    "id": "tech-rayman-contre-les-lapins-cretins-2006",
+    "date": "2006-12-08",
+    "title": {
+      "fr": "Rayman contre les lapins crétins",
+      "en": "Rayman Raving Rabbids",
+      "de": "Rayman Raving Rabbids",
+      "it": "Rayman Raving Rabbids",
+      "es": "Rayman Raving Rabbids"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rayman_contre_les_lapins_crétins",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1982922 : même date."
+  },
+  {
+    "id": "tech-assassin-s-creed-2007",
+    "date": "2007-11-16",
+    "title": {
+      "fr": "Assassin's Creed",
+      "de": "Assassin’s Creed"
+    },
+    "kind": "game-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Assassin's_Creed_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q200864 : même date."
+  },
+  {
+    "id": "tech-just-dance-2009",
+    "date": "2009-11-27",
+    "title": {
+      "fr": "Just Dance"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Just_Dance_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1714101 : même date."
+  },
+  {
+    "id": "tech-heavy-rain-2010",
+    "date": "2010-02-24",
+    "title": {
+      "fr": "Heavy Rain"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Heavy_Rain",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q647855 : même date (Europe)."
+  },
+  {
+    "id": "tech-rayman-origins-2011",
+    "date": "2011-11-25",
+    "title": {
+      "fr": "Rayman Origins"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rayman_Origins",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q606894 : même date (Europe)."
+  },
+  {
+    "id": "tech-rayman-legends-2013",
+    "date": "2013-08-30",
+    "title": {
+      "fr": "Rayman Legends"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rayman_Legends",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q2255492 : même date (Europe)."
+  },
+  {
+    "id": "tech-a-plague-tale-innocence-2019",
+    "date": "2019-05-14",
+    "title": {
+      "fr": "A Plague Tale: Innocence"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/A_Plague_Tale:_Innocence",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q54577668 : même date (monde)."
+  },
+  {
+    "id": "tech-clair-obscur-expedition-33-2025",
+    "date": "2025-04-24",
+    "title": {
+      "fr": "Clair Obscur: Expedition 33"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Clair_Obscur:_Expedition_33",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q126462072 : même date."
+  }
+]

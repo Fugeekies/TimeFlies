@@ -1,5 +1,49 @@
 [
   {
+    "id": "death-karen-carpenter-1983",
+    "date": "1983-02-04",
+    "title": {
+      "fr": "Karen Carpenter"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Karen_Carpenter",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q1250861 : même date."
+  },
+  {
+    "id": "death-selena-1995",
+    "date": "1995-03-31",
+    "title": {
+      "fr": "Selena"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Selena_(chanteuse)",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q23543 : même date."
+  },
+  {
+    "id": "death-frank-sinatra-1998",
+    "date": "1998-05-14",
+    "title": {
+      "fr": "Frank Sinatra"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Frank_Sinatra",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q40912 : même date."
+  },
+  {
+    "id": "death-johnny-cash-2003",
+    "date": "2003-09-12",
+    "title": {
+      "fr": "Johnny Cash"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Johnny_Cash",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q42775 : même date."
+  },
+  {
     "id": "death-michael-jackson-2009",
     "date": "2009-06-25",
     "title": {
@@ -9,6 +53,17 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Michael_Jackson",
     "note": "Date de décès de l'infobox. Wikidata Q2831 : même date."
+  },
+  {
+    "id": "death-donna-summer-2012",
+    "date": "2012-05-17",
+    "title": {
+      "fr": "Donna Summer"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Donna_Summer",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q908933 : même date."
   },
   {
     "id": "death-prince-2016",

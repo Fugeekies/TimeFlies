@@ -1,0 +1,13 @@
+[
+  {
+    "id": "tech-tidal-2014",
+    "date": "2014-10-28",
+    "title": {
+      "fr": "Tidal"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tidal_(service)",
+    "note": "Première version selon l'infobox. Wikidata Q19711013 : même date."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "history-charles-xvi-gustave-roi-de-suede-1973",
+    "date": "1973-09-15",
+    "title": {
+      "fr": "Charles XVI Gustave devient roi de Suède",
+      "en": "Carl XVI Gustaf becomes King of Sweden",
+      "de": "Carl XVI. Gustaf wird König von Schweden",
+      "it": "Carlo XVI Gustavo diventa re di Svezia",
+      "es": "Carlos XVI Gustavo se convierte en rey de Suecia"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Charles_XVI_Gustave",
+    "note": "Début du règne selon l'infobox. Wikidata Q45068 : pas de date relevée."
+  },
+  {
+    "id": "history-mariage-de-victoria-de-suede-2010",
+    "date": "2010-06-19",
+    "title": {
+      "fr": "Mariage de la princesse Victoria de Suède et de Daniel Westling",
+      "en": "Wedding of Crown Princess Victoria and Daniel Westling",
+      "de": "Hochzeit von Kronprinzessin Victoria und Daniel Westling",
+      "it": "Matrimonio della principessa Vittoria di Svezia e Daniel Westling",
+      "es": "Boda de la princesa Victoria de Suecia y Daniel Westling"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_de_la_princesse_Victoria_de_Suède_et_de_Daniel_Westling",
+    "note": "Date selon l'infobox. Wikidata Q2368479 : même date."
+  }
+]

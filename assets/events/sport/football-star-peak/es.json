@@ -1,5 +1,35 @@
 [
   {
+    "id": "sport-ballon-d-or-feminin-alexia-putellas-2021",
+    "date": "2021-11-29",
+    "title": {
+      "fr": "Premier Ballon d'or féminin d'Alexia Putellas",
+      "en": "Alexia Putellas's first Ballon d'Or Féminin",
+      "de": "Alexia Putellas' erster Ballon d'Or der Frauen",
+      "it": "Primo Pallone d'oro femminile di Alexia Putellas",
+      "es": "Primer Balón de Oro femenino de Alexia Putellas"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2021",
+    "note": "Date de la cérémonie et lauréate selon l'infobox. Wikidata Q108839629 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-feminin-aitana-bonmati-2023",
+    "date": "2023-10-30",
+    "title": {
+      "fr": "Premier Ballon d'or féminin d'Aitana Bonmatí",
+      "en": "Aitana Bonmatí's first Ballon d'Or Féminin",
+      "de": "Aitana Bonmatís erster Ballon d'Or der Frauen",
+      "it": "Primo Pallone d'oro femminile di Aitana Bonmatí",
+      "es": "Primer Balón de Oro femenino de Aitana Bonmatí"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2023",
+    "note": "Date de la cérémonie et lauréate selon l'infobox. Wikidata Q118525481 : même date."
+  },
+  {
     "id": "sport-ballon-d-or-rodri-2024",
     "date": "2024-10-28",
     "title": {
@@ -13,5 +43,35 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2024",
     "note": "Date de la cérémonie donnée par l'infobox. Wikidata Q126488939 : même date."
+  },
+  {
+    "id": "sport-ballon-d-or-feminin-aitana-bonmati-2025",
+    "date": "2025-09-22",
+    "title": {
+      "fr": "Troisième Ballon d'or féminin d'Aitana Bonmatí",
+      "en": "Aitana Bonmatí's third Ballon d'Or Féminin",
+      "de": "Aitana Bonmatís dritter Ballon d'Or der Frauen",
+      "it": "Terzo Pallone d'oro femminile di Aitana Bonmatí",
+      "es": "Tercer Balón de Oro femenino de Aitana Bonmatí"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2025",
+    "note": "Date de la cérémonie et lauréate (troisième trophée) selon l'infobox. Wikidata : non relevé."
+  },
+  {
+    "id": "sport-ballon-d-or-feminin-alexia-putellas-2026",
+    "date": "2026-10-26",
+    "title": {
+      "fr": "Troisième Ballon d'or féminin d'Alexia Putellas",
+      "en": "Alexia Putellas's third Ballon d'Or Féminin",
+      "de": "Alexia Putellas' dritter Ballon d'Or der Frauen",
+      "it": "Terzo Pallone d'oro femminile di Alexia Putellas",
+      "es": "Tercer Balón de Oro femenino de Alexia Putellas"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2026",
+    "note": "Date de la cérémonie et lauréate (troisième trophée) selon l'infobox. Wikidata : non relevé."
   }
 ]

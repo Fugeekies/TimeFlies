@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-ballon-d-or-harry-kane-2026",
+    "date": "2026-10-26",
+    "title": {
+      "fr": "Premier Ballon d'or de Harry Kane",
+      "en": "Harry Kane's first Ballon d'Or",
+      "de": "Harry Kanes erster Ballon d'Or",
+      "it": "Primo Pallone d'oro di Harry Kane",
+      "es": "Primer Balón de Oro de Harry Kane"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2026",
+    "note": "Date de la cérémonie et lauréat selon l'infobox. Wikidata : non relevé."
+  }
+]

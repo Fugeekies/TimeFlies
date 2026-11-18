@@ -1,0 +1,92 @@
+[
+  {
+    "id": "history-mort-de-joseph-staline-1953",
+    "date": "1953-03-05",
+    "title": {
+      "fr": "Mort de Joseph Staline",
+      "en": "Death of Joseph Stalin",
+      "de": "Tod von Josef Stalin",
+      "it": "Morte di Iosif Stalin",
+      "es": "Muerte de Iósif Stalin"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Joseph_Staline",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q855 : même date."
+  },
+  {
+    "id": "history-spoutnik-1-1957",
+    "date": "1957-10-04",
+    "title": {
+      "fr": "Lancement de Spoutnik 1, premier satellite artificiel",
+      "en": "Launch of Sputnik 1, the first artificial satellite",
+      "de": "Start von Sputnik 1, dem ersten künstlichen Satelliten",
+      "it": "Lancio dello Sputnik 1, primo satellite artificiale",
+      "es": "Lanzamiento del Sputnik 1, primer satélite artificial"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Spoutnik_1",
+    "note": "Date du lancement selon l'infobox. Wikidata Q80811 : pas de date."
+  },
+  {
+    "id": "history-vol-de-gagarine-1961",
+    "date": "1961-04-12",
+    "title": {
+      "fr": "Youri Gagarine, premier homme dans l'espace (Vostok 1)",
+      "en": "Yuri Gagarin, first man in space (Vostok 1)",
+      "de": "Juri Gagarin, erster Mensch im All (Wostok 1)",
+      "it": "Jurij Gagarin, primo uomo nello spazio (Vostok 1)",
+      "es": "Yuri Gagarin, primer hombre en el espacio (Vostok 1)"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Vostok_1",
+    "note": "Date du lancement selon l'infobox. Wikidata Q182524 : pas de date."
+  },
+  {
+    "id": "history-fin-de-l-urss-1991",
+    "date": "1991-12-26",
+    "title": {
+      "fr": "Dissolution de l'URSS",
+      "en": "Dissolution of the Soviet Union",
+      "de": "Auflösung der Sowjetunion",
+      "it": "Dissoluzione dell'Unione Sovietica",
+      "es": "Disolución de la Unión Soviética"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Dislocation_de_l'URSS",
+    "note": "Vote de la dissolution de l'URSS par le Soviet des nationalités selon l'article, au lendemain de la démission de Gorbatchev. Wikidata Q5167679 : même date."
+  },
+  {
+    "id": "history-invasion-de-l-ukraine-2022",
+    "date": "2022-02-24",
+    "title": {
+      "fr": "Invasion de l'Ukraine par la Russie",
+      "en": "Russian invasion of Ukraine",
+      "de": "Russischer Überfall auf die Ukraine",
+      "it": "Invasione russa dell'Ucraina",
+      "es": "Invasión rusa de Ucrania"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Invasion_de_l'Ukraine_par_la_Russie_en_2022",
+    "note": "Date selon l'infobox. Wikidata Q110999040 : même date."
+  },
+  {
+    "id": "history-mort-de-mikhail-gorbatchev-2022",
+    "date": "2022-08-30",
+    "title": {
+      "fr": "Mort de Mikhaïl Gorbatchev",
+      "en": "Death of Mikhail Gorbachev",
+      "de": "Tod von Michail Gorbatschow",
+      "it": "Morte di Michail Gorbačëv",
+      "es": "Muerte de Mijaíl Gorbachov"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mikhaïl_Gorbatchev",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q30487 : même date."
+  }
+]

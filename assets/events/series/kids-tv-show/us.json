@@ -1,0 +1,26 @@
+[
+  {
+    "id": "series-sesame-street-1969",
+    "date": "1969-11-10",
+    "title": {
+      "fr": "Sesame Street",
+      "de": "Sesamstraße",
+      "it": "Sesamo apriti"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Sesame_Street",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q155629 : même date."
+  },
+  {
+    "id": "series-power-rangers-1993",
+    "date": "1993-08-28",
+    "title": {
+      "fr": "Power Rangers"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Power_Rangers",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q333156 : même date."
+  }
+]

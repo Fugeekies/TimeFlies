@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sport-tour-de-france-eddy-merckx-1969",
+    "date": "1969-07-20",
+    "title": {
+      "fr": "Première victoire d'Eddy Merckx au Tour de France (1969)",
+      "en": "Eddy Merckx's first Tour de France win (1969)",
+      "de": "Erster Tour-de-France-Sieg von Eddy Merckx (1969)",
+      "it": "Prima vittoria di Eddy Merckx al Tour de France (1969)",
+      "es": "Primera victoria de Eddy Merckx en el Tour de Francia (1969)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1969",
+    "note": "Arrivée à Paris le 1969-07-20 selon le texte de l'article (« du … au … ») et Wikidata Q836884 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-eddy-merckx-1974",
+    "date": "1974-07-21",
+    "title": {
+      "fr": "Dernière victoire d'Eddy Merckx au Tour de France (1974)",
+      "en": "Eddy Merckx's last Tour de France win (1974)",
+      "de": "Letzter Tour-de-France-Sieg von Eddy Merckx (1974)",
+      "it": "Ultima vittoria di Eddy Merckx al Tour de France (1974)",
+      "es": "Última victoria de Eddy Merckx en el Tour de Francia (1974)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1974",
+    "note": "Arrivée à Paris le 1974-07-21 selon le texte de l'article (« du … au … ») et Wikidata Q754426 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-lucien-van-impe-1976",
+    "date": "1976-07-18",
+    "title": {
+      "fr": "Victoire de Lucien Van Impe au Tour de France (1976)",
+      "en": "Lucien Van Impe wins the Tour de France (1976)",
+      "de": "Lucien Van Impe gewinnt die Tour de France (1976)",
+      "it": "Lucien Van Impe vince il Tour de France (1976)",
+      "es": "Lucien Van Impe gana el Tour de Francia (1976)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1976",
+    "note": "Arrivée à Paris le 1976-07-18 selon le texte de l'article (« du … au … ») et Wikidata Q899379 (même date) ; vainqueur selon l'infobox."
+  }
+]

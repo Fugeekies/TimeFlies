@@ -1,0 +1,695 @@
+[
+  {
+    "id": "tech-super-mario-bros-1987",
+    "date": "1987-05-15",
+    "title": {
+      "fr": "Super Mario Bros."
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Bros.",
+    "note": "Sortie en Europe sur NES selon l'infobox et l'article. Wikidata Q11168 : même date."
+  },
+  {
+    "id": "tech-sonic-the-hedgehog-1991",
+    "date": "1991-06-21",
+    "title": {
+      "fr": "Sonic the Hedgehog"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sonic_the_Hedgehog_(jeu_vidéo,_1991,_version_16_bits)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q37123 : donne une autre date pour l'Europe : 1991-06-23."
+  },
+  {
+    "id": "tech-super-mario-world-1992",
+    "date": "1992-04-11",
+    "title": {
+      "fr": "Super Mario World"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_World",
+    "note": "Sortie en Europe et en France selon l'infobox (avec la Super Nintendo). Wikidata Q853143 : mois seulement pour la France."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-a-link-to-the-past-1992",
+    "date": "1992-09-24",
+    "title": {
+      "fr": "The Legend of Zelda: A Link to the Past"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q370055 : même date (Europe)."
+  },
+  {
+    "id": "tech-super-mario-kart-1993",
+    "date": "1993-01-21",
+    "title": {
+      "fr": "Super Mario Kart"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Kart",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1061560 : même date."
+  },
+  {
+    "id": "tech-final-fantasy-vii-1997",
+    "date": "1997-11-14",
+    "title": {
+      "fr": "Final Fantasy VII"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Final_Fantasy_VII",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q214232 : même date."
+  },
+  {
+    "id": "tech-gran-turismo-1998",
+    "date": "1998-05-08",
+    "title": {
+      "fr": "Gran Turismo"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Gran_Turismo_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q944320 : date japonaise seulement."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-ocarina-of-time-1998",
+    "date": "1998-12-11",
+    "title": {
+      "fr": "The Legend of Zelda: Ocarina of Time"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q213911 : même date."
+  },
+  {
+    "id": "tech-metal-gear-solid-1999",
+    "date": "1999-02-26",
+    "title": {
+      "fr": "Metal Gear Solid"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Metal_Gear_Solid",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q6582527 : date japonaise seulement."
+  },
+  {
+    "id": "tech-silent-hill-1999",
+    "date": "1999-07-16",
+    "title": {
+      "fr": "Silent Hill"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Silent_Hill_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q753164 : même date."
+  },
+  {
+    "id": "tech-pokemon-rouge-et-bleu-1999",
+    "date": "1999-10-08",
+    "title": {
+      "fr": "Pokémon Rouge et Bleu",
+      "en": "Pokémon Red, Blue, and Yellow",
+      "de": "Pokémon Rote und Blaue Edition",
+      "it": "Pokémon Rosso e Blu",
+      "es": "Pokémon rojo y Pokémon azul"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Rouge_et_Bleu",
+    "note": "Sortie en France selon l'infobox. Wikidata Q637137 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-soulcalibur-1999",
+    "date": "1999-11-26",
+    "title": {
+      "fr": "SoulCalibur"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/SoulCalibur",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1060715 : même date (Europe)."
+  },
+  {
+    "id": "tech-pokemon-or-et-argent-2001",
+    "date": "2001-04-06",
+    "title": {
+      "fr": "Pokémon Or et Argent",
+      "en": "Pokémon Gold and Silver",
+      "de": "Pokémon Goldene und Silberne Edition",
+      "it": "Pokémon Oro e Argento",
+      "es": "Pokémon oro y Pokémon plata"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Or_et_Argent",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q837346 : date japonaise seulement."
+  },
+  {
+    "id": "tech-super-smash-bros-melee-2002",
+    "date": "2002-05-24",
+    "title": {
+      "fr": "Super Smash Bros. Melee"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Smash_Bros._Melee",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1052131 : même date (Europe)."
+  },
+  {
+    "id": "tech-final-fantasy-x-2002",
+    "date": "2002-05-29",
+    "title": {
+      "fr": "Final Fantasy X"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Final_Fantasy_X",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q223381 : date japonaise seulement."
+  },
+  {
+    "id": "tech-super-mario-sunshine-2002",
+    "date": "2002-10-04",
+    "title": {
+      "fr": "Super Mario Sunshine"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Sunshine",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q639955 : même date (Europe)."
+  },
+  {
+    "id": "tech-kingdom-hearts-2002",
+    "date": "2002-11-15",
+    "title": {
+      "fr": "Kingdom Hearts"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Kingdom_Hearts_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q225912 : date japonaise seulement."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-the-wind-waker-2003",
+    "date": "2003-05-02",
+    "title": {
+      "fr": "The Legend of Zelda: The Wind Waker"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Wind_Waker",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q852563 : même date (Europe)."
+  },
+  {
+    "id": "tech-pokemon-rubis-et-saphir-2003",
+    "date": "2003-07-25",
+    "title": {
+      "fr": "Pokémon Rubis et Saphir",
+      "en": "Pokémon Ruby and Sapphire",
+      "de": "Pokémon Rubin- und Saphir-Edition",
+      "it": "Pokémon Rubino e Zaffiro",
+      "es": "Pokémon Rubí y Pokémon Zafiro"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Rubis_et_Saphir",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q721822 : même date (Europe)."
+  },
+  {
+    "id": "tech-mario-kart-double-dash-2003",
+    "date": "2003-11-14",
+    "title": {
+      "fr": "Mario Kart: Double Dash!!",
+      "en": "Mario Kart: Double Dash"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mario_Kart:_Double_Dash!!",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q5721431 : même date (Europe)."
+  },
+  {
+    "id": "tech-resident-evil-4-2005",
+    "date": "2005-03-18",
+    "title": {
+      "fr": "Resident Evil 4"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Resident_Evil_4",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q275950 : même date (Europe)."
+  },
+  {
+    "id": "tech-nintendogs-2005",
+    "date": "2005-10-07",
+    "title": {
+      "fr": "Nintendogs"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Nintendogs",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q864389 : même date."
+  },
+  {
+    "id": "tech-animal-crossing-wild-world-2006",
+    "date": "2006-03-31",
+    "title": {
+      "fr": "Animal Crossing: Wild World"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Animal_Crossing:_Wild_World",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q877501 : même date (Europe)."
+  },
+  {
+    "id": "tech-brain-training-2006",
+    "date": "2006-06-09",
+    "title": {
+      "fr": "Programme d'entraînement cérébral du Dr Kawashima : Quel âge a votre cerveau ?",
+      "en": "Brain Age: Train Your Brain in Minutes a Day!",
+      "de": "Dr. Kawashimas Gehirn-Jogging",
+      "it": "Brain Training del Dr. Kawashima: Quanti anni ha il tuo cervello?",
+      "es": "Brain Training del Dr. Kawashima ¿Cuántos años tiene tu cerebro?"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Programme_d'entraînement_cérébral_du_Dr_Kawashima_:_Quel_âge_a_votre_cerveau_?",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1773171 : date japonaise seulement."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-twilight-princess-2006",
+    "date": "2006-12-08",
+    "title": {
+      "fr": "The Legend of Zelda: Twilight Princess"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_Twilight_Princess",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q735613 : même date (Europe)."
+  },
+  {
+    "id": "tech-wii-sports-2006",
+    "date": "2006-12-08",
+    "title": {
+      "fr": "Wii Sports"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Wii_Sports",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q71936 : même date."
+  },
+  {
+    "id": "tech-super-mario-galaxy-2007",
+    "date": "2007-11-16",
+    "title": {
+      "fr": "Super Mario Galaxy"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Galaxy",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q170489 : même date."
+  },
+  {
+    "id": "tech-mario-kart-wii-2008",
+    "date": "2008-04-11",
+    "title": {
+      "fr": "Mario Kart Wii"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mario_Kart_Wii",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q838707 : même date (Europe)."
+  },
+  {
+    "id": "tech-wii-fit-2008",
+    "date": "2008-04-25",
+    "title": {
+      "fr": "Wii Fit"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Wii_Fit",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q840121 : même date."
+  },
+  {
+    "id": "tech-super-smash-bros-brawl-2008",
+    "date": "2008-06-27",
+    "title": {
+      "fr": "Super Smash Bros. Brawl"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Smash_Bros._Brawl",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q843131 : même date (Europe)."
+  },
+  {
+    "id": "tech-wii-sports-resort-2009",
+    "date": "2009-07-24",
+    "title": {
+      "fr": "Wii Sports Resort"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Wii_Sports_Resort",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1135241 : même date (Europe)."
+  },
+  {
+    "id": "tech-new-super-mario-bros-wii-2009",
+    "date": "2009-11-20",
+    "title": {
+      "fr": "New Super Mario Bros. Wii"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/New_Super_Mario_Bros._Wii",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q170410 : même date (Europe)."
+  },
+  {
+    "id": "tech-wii-party-2010",
+    "date": "2010-10-08",
+    "title": {
+      "fr": "Wii Party"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Wii_Party",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1200921 : même date (Europe)."
+  },
+  {
+    "id": "tech-pokemon-x-et-y-2013",
+    "date": "2013-10-12",
+    "title": {
+      "fr": "Pokémon X et Y",
+      "en": "Pokémon X and Y",
+      "de": "Pokémon X und Y",
+      "it": "Pokémon X e Y",
+      "es": "Pokémon X y Pokémon Y"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_X_et_Y",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q2769164 : même date."
+  },
+  {
+    "id": "tech-bloodborne-2015",
+    "date": "2015-03-25",
+    "title": {
+      "fr": "Bloodborne"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Bloodborne",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q17154554 : même date (Europe)."
+  },
+  {
+    "id": "tech-splatoon-2015",
+    "date": "2015-05-29",
+    "title": {
+      "fr": "Splatoon"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Splatoon",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q17490239 : même date."
+  },
+  {
+    "id": "tech-metal-gear-solid-v-the-phantom-pain-2015",
+    "date": "2015-09-01",
+    "title": {
+      "fr": "Metal Gear Solid V: The Phantom Pain"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Metal_Gear_Solid_V:_The_Phantom_Pain",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q717600 : même date."
+  },
+  {
+    "id": "tech-super-mario-maker-2015",
+    "date": "2015-09-11",
+    "title": {
+      "fr": "Super Mario Maker"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Maker",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q17164955 : même date (Europe)."
+  },
+  {
+    "id": "tech-yo-kai-watch-2016",
+    "date": "2016-04-29",
+    "title": {
+      "fr": "Yo-kai Watch"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Yo-kai_Watch_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q21078995 : même date (Europe)."
+  },
+  {
+    "id": "tech-final-fantasy-xv-2016",
+    "date": "2016-11-29",
+    "title": {
+      "fr": "Final Fantasy XV"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Final_Fantasy_XV",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q1779100 : même date (monde)."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-breath-of-the-wild-2017",
+    "date": "2017-03-03",
+    "title": {
+      "fr": "The Legend of Zelda: Breath of the Wild"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q17185964 : même date."
+  },
+  {
+    "id": "tech-persona-5-2017",
+    "date": "2017-04-04",
+    "title": {
+      "fr": "Persona 5"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Persona_5",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q15225985 : même date (monde)."
+  },
+  {
+    "id": "tech-splatoon-2-2017",
+    "date": "2017-07-21",
+    "title": {
+      "fr": "Splatoon 2"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Splatoon_2",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q28129061 : même date (Europe)."
+  },
+  {
+    "id": "tech-super-mario-odyssey-2017",
+    "date": "2017-10-27",
+    "title": {
+      "fr": "Super Mario Odyssey"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Odyssey",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q28234671 : même date."
+  },
+  {
+    "id": "tech-monster-hunter-world-2018",
+    "date": "2018-01-26",
+    "title": {
+      "fr": "Monster Hunter: World"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Monster_Hunter:_World",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q30252256 : même date."
+  },
+  {
+    "id": "tech-dragon-quest-xi-les-combattants-de-la-destinee-2018",
+    "date": "2018-09-04",
+    "title": {
+      "fr": "Dragon Quest XI : Les Combattants de la destinée",
+      "en": "Dragon Quest XI",
+      "it": "Dragon Quest XI: Echi di un'era perduta",
+      "es": "Dragon Quest XI: Ecos de un pasado perdido"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dragon_Quest_XI_:_Les_Combattants_de_la_destinée",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q20736242 : même date (monde)."
+  },
+  {
+    "id": "tech-super-mario-party-2018",
+    "date": "2018-10-05",
+    "title": {
+      "fr": "Super Mario Party"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Party",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q54936079 : même date (monde)."
+  },
+  {
+    "id": "tech-super-smash-bros-ultimate-2018",
+    "date": "2018-12-07",
+    "title": {
+      "fr": "Super Smash Bros. Ultimate"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Smash_Bros._Ultimate",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q54093632 : même date."
+  },
+  {
+    "id": "tech-resident-evil-2-2019",
+    "date": "2019-01-25",
+    "title": {
+      "fr": "Resident Evil 2"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Resident_Evil_2_(jeu_vidéo,_2019)",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q54920200 : même date (monde)."
+  },
+  {
+    "id": "tech-sekiro-shadows-die-twice-2019",
+    "date": "2019-03-22",
+    "title": {
+      "fr": "Sekiro: Shadows Die Twice"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Sekiro:_Shadows_Die_Twice",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q54906424 : même date (monde)."
+  },
+  {
+    "id": "tech-ring-fit-adventure-2019",
+    "date": "2019-10-18",
+    "title": {
+      "fr": "Ring Fit Adventure"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ring_Fit_Adventure",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q69557147 : même date."
+  },
+  {
+    "id": "tech-luigi-s-mansion-3-2019",
+    "date": "2019-10-31",
+    "title": {
+      "fr": "Luigi's Mansion 3",
+      "de": "Luigi’s Mansion 3"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Luigi's_Mansion_3",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q56641109 : même date."
+  },
+  {
+    "id": "tech-death-stranding-2019",
+    "date": "2019-11-08",
+    "title": {
+      "fr": "Death Stranding"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Death_Stranding",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q24666782 : même date (monde)."
+  },
+  {
+    "id": "tech-pokemon-epee-et-bouclier-2019",
+    "date": "2019-11-15",
+    "title": {
+      "fr": "Pokémon Épée et Bouclier",
+      "en": "Pokémon Sword and Shield",
+      "de": "Pokémon Schwert und Schild",
+      "it": "Pokémon Spada e Scudo",
+      "es": "Pokémon espada y Pokémon escudo"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Épée_et_Bouclier",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q61897498 : même date."
+  },
+  {
+    "id": "tech-animal-crossing-new-horizons-2020",
+    "date": "2020-03-20",
+    "title": {
+      "fr": "Animal Crossing: New Horizons"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Animal_Crossing:_New_Horizons",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q64566657 : même date."
+  },
+  {
+    "id": "tech-metroid-dread-2021",
+    "date": "2021-10-08",
+    "title": {
+      "fr": "Metroid Dread"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Metroid_Dread",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q17006956 : même date (monde)."
+  },
+  {
+    "id": "tech-elden-ring-2022",
+    "date": "2022-02-25",
+    "title": {
+      "fr": "Elden Ring"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Elden_Ring",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q64826862 : même date."
+  },
+  {
+    "id": "tech-pokemon-ecarlate-et-violet-2022",
+    "date": "2022-11-18",
+    "title": {
+      "fr": "Pokémon Écarlate et Violet",
+      "en": "Pokémon Scarlet and Violet",
+      "de": "Pokémon Karmesin und Purpur",
+      "it": "Pokémon Scarlatto e Violetto",
+      "es": "Pokémon escarlata y Pokémon púrpura"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Écarlate_et_Violet",
+    "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q111028839 : même date."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-tears-of-the-kingdom-2023",
+    "date": "2023-05-12",
+    "title": {
+      "fr": "The Legend of Zelda: Tears of the Kingdom"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_Tears_of_the_Kingdom",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q64577191 : même date."
+  },
+  {
+    "id": "tech-super-mario-bros-wonder-2023",
+    "date": "2023-10-20",
+    "title": {
+      "fr": "Super Mario Bros. Wonder"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Bros._Wonder",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q119819453 : même date (monde)."
+  }
+]

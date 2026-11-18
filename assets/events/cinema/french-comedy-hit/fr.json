@@ -1,5 +1,48 @@
 [
   {
+    "id": "film-les-vacances-de-monsieur-hulot-1953",
+    "date": "1953-02-25",
+    "title": {
+      "fr": "Les Vacances de monsieur Hulot",
+      "de": "Die Ferien des Monsieur Hulot",
+      "it": "Le vacanze del signor Hulot",
+      "es": "Las vacaciones del Sr. Hulot"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Vacances_de_monsieur_Hulot",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q532006 : donne une autre date : 1953-03-01."
+  },
+  {
+    "id": "film-le-gendarme-de-saint-tropez-1964",
+    "date": "1964-09-09",
+    "title": {
+      "fr": "Le Gendarme de Saint-Tropez",
+      "en": "The Troops of St. Tropez",
+      "de": "Der Gendarm von St. Tropez",
+      "it": "Una ragazza a Saint-Tropez",
+      "es": "El gendarme de Saint-Tropez"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Gendarme_de_Saint-Tropez",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q117464 : même date."
+  },
+  {
+    "id": "film-les-barbouzes-1964",
+    "date": "1964-12-10",
+    "title": {
+      "fr": "Les Barbouzes",
+      "en": "The Great Spy Chase",
+      "de": "Mordrezepte der Barbouzes",
+      "it": "Quattro spie sotto il letto"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Barbouzes",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q475089 : même date."
+  },
+  {
     "id": "film-le-corniaud-1965",
     "date": "1965-03-24",
     "title": {
@@ -28,6 +71,120 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q487789 donne une autre date française : 1966-12-07."
   },
   {
+    "id": "film-le-petit-baigneur-1968",
+    "date": "1968-03-22",
+    "title": {
+      "fr": "Le Petit Baigneur",
+      "en": "The Little Bather",
+      "de": "Balduin, der Trockenschwimmer",
+      "it": "Si salvi chi può"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Petit_Baigneur",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q634489 : pas de date française."
+  },
+  {
+    "id": "film-hibernatus-1969",
+    "date": "1969-09-10",
+    "title": {
+      "fr": "Hibernatus",
+      "de": "Onkel Paul, die große Pflaume",
+      "it": "Louis de Funès e il nonno surgelato"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hibernatus",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q568048 : pas de date française."
+  },
+  {
+    "id": "film-la-folie-des-grandeurs-1971",
+    "date": "1971-12-08",
+    "title": {
+      "fr": "La Folie des grandeurs",
+      "en": "Delusions of Grandeur",
+      "de": "Die dummen Streiche der Reichen",
+      "it": "Mania di grandezza"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Folie_des_grandeurs",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q705247 : pas de date française."
+  },
+  {
+    "id": "film-le-grand-blond-avec-une-chaussure-noire-1972",
+    "date": "1972-12-06",
+    "title": {
+      "fr": "Le Grand Blond avec une chaussure noire",
+      "en": "The Tall Blond Man with One Black Shoe",
+      "de": "Der große Blonde mit dem schwarzen Schuh",
+      "it": "Alto, biondo e... con una scarpa nera",
+      "es": "El gran rubio con un zapato negro"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Grand_Blond_avec_une_chaussure_noire",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q1094519 : même date."
+  },
+  {
+    "id": "film-les-aventures-de-rabbi-jacob-1973",
+    "date": "1973-10-18",
+    "title": {
+      "fr": "Les Aventures de Rabbi Jacob",
+      "en": "The Mad Adventures of Rabbi Jacob",
+      "de": "Die Abenteuer des Rabbi Jacob",
+      "it": "Le folli avventure di Rabbi Jacob",
+      "es": "Las locas aventuras de Rabbi Jacob"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Aventures_de_Rabbi_Jacob",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q1210863 : même date."
+  },
+  {
+    "id": "film-mais-ou-est-donc-passee-la-septieme-compagnie-1973",
+    "date": "1973-12-13",
+    "title": {
+      "fr": "Mais où est donc passée la septième compagnie ?",
+      "en": "Now Where Did the 7th Company Get to?",
+      "de": "Wo bitte ist die 7. Kompanie geblieben?",
+      "it": "Dov'è finita la 7ª compagnia?"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mais_où_est_donc_passée_la_septième_compagnie_?",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q663019 : même date."
+  },
+  {
+    "id": "film-un-elephant-ca-trompe-enormement-1976",
+    "date": "1976-09-22",
+    "title": {
+      "fr": "Un éléphant ça trompe énormément",
+      "en": "Pardon Mon Affaire",
+      "de": "Ein Elefant irrt sich gewaltig",
+      "it": "Certi piccolissimi peccati"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Un_éléphant_ça_trompe_énormément",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q534447 : même date."
+  },
+  {
+    "id": "film-l-aile-ou-la-cuisse-1976",
+    "date": "1976-10-27",
+    "title": {
+      "fr": "L'Aile ou la Cuisse",
+      "en": "The Wing or the Thigh",
+      "de": "Brust oder Keule",
+      "it": "L'ala o la coscia?",
+      "es": "Muslo o pechuga"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'Aile_ou_la_Cuisse",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q994421 : même date."
+  },
+  {
     "id": "film-la-cage-aux-folles-1978",
     "date": "1978-10-25",
     "title": {
@@ -54,6 +211,20 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q652094 : même date."
   },
   {
+    "id": "film-le-gendarme-et-les-extraterrestres-1979",
+    "date": "1979-02-02",
+    "title": {
+      "fr": "Le Gendarme et les Extraterrestres",
+      "en": "The Gendarme and the Extra-Terrestrials",
+      "de": "Louis’ unheimliche Begegnung mit den Außerirdischen",
+      "it": "Il gendarme e gli extraterrestri"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Gendarme_et_les_Extraterrestres",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q136734 : donne une autre date : 1979-01-31."
+  },
+  {
     "id": "film-les-bronzes-font-du-ski-1979",
     "date": "1979-11-21",
     "title": {
@@ -64,6 +235,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Bronz%C3%A9s_font_du_ski",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3011267 : pas de date française."
+  },
+  {
+    "id": "film-les-sous-doues-1980",
+    "date": "1980-04-30",
+    "title": {
+      "fr": "Les Sous-doués",
+      "en": "The Under-Gifted",
+      "de": "Glückwunsch … mal wieder sitzengeblieben",
+      "it": "I sottodotati"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Sous-doués",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q383220 : même date."
   },
   {
     "id": "film-le-pere-noel-est-une-ordure-1982",
@@ -77,6 +262,59 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Le_p%C3%A8re_No%C3%ABl_est_une_ordure_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1156447 : pas de date française."
+  },
+  {
+    "id": "film-papy-fait-de-la-resistance-1983",
+    "date": "1983-10-26",
+    "title": {
+      "fr": "Papy fait de la résistance",
+      "en": "Gramps Is in the Resistance"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Papy_fait_de_la_résistance",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q3362959 : pas de date française."
+  },
+  {
+    "id": "film-les-comperes-1983",
+    "date": "1983-11-23",
+    "title": {
+      "fr": "Les Compères",
+      "de": "Zwei irre Spaßvögel",
+      "it": "Les compères - Noi siamo tuo padre"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Compères",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q2425788 : pas de date française."
+  },
+  {
+    "id": "film-les-ripoux-1984",
+    "date": "1984-09-19",
+    "title": {
+      "fr": "Les Ripoux",
+      "en": "My New Partner",
+      "de": "Die Bestechlichen",
+      "it": "Il commissadro",
+      "es": "Los locos defensores de la ley"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Ripoux",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q674851 : pas de date française."
+  },
+  {
+    "id": "film-les-fugitifs-1986",
+    "date": "1986-12-17",
+    "title": {
+      "fr": "Les Fugitifs",
+      "de": "Die Flüchtigen",
+      "it": "Due fuggitivi e mezzo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Fugitifs_(film,_1986)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q176053 : pas de date française."
   },
   {
     "id": "film-les-visiteurs-1993",
@@ -93,6 +331,31 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q838013 : même date."
   },
   {
+    "id": "film-un-indien-dans-la-ville-1994",
+    "date": "1994-11-24",
+    "title": {
+      "fr": "Un Indien dans la ville",
+      "it": "Un indiano in città",
+      "es": "Un indio en París"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Un_Indien_dans_la_ville",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q1962409 : pas de date française."
+  },
+  {
+    "id": "film-les-trois-freres-1995",
+    "date": "1995-12-13",
+    "title": {
+      "fr": "Les Trois Frères",
+      "en": "The Three Brothers"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Trois_Frères",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q282064 : pas de date française."
+  },
+  {
     "id": "film-la-verite-si-je-mens-1997",
     "date": "1997-04-30",
     "title": {
@@ -104,6 +367,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/La_V%C3%A9rit%C3%A9_si_je_mens_!",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2891031 : pas de date française."
+  },
+  {
+    "id": "film-les-couloirs-du-temps-les-visiteurs-2-1998",
+    "date": "1998-02-11",
+    "title": {
+      "fr": "Les Couloirs du temps : Les Visiteurs 2",
+      "en": "The Visitors II: The Corridors of Time",
+      "de": "Die Zeitritter – Auf der Suche nach dem heiligen Zahn",
+      "it": "I visitatori 2 - Ritorno al passato",
+      "es": "Los Visitantes 2"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Couloirs_du_temps_:_Les_Visiteurs_2",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q280063 : pas de date française."
   },
   {
     "id": "film-taxi-1998",
@@ -131,6 +409,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Le_D%C3%AEner_de_cons_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q655315 : pas de date française."
+  },
+  {
+    "id": "film-le-placard-2001",
+    "date": "2001-01-17",
+    "title": {
+      "fr": "Le Placard",
+      "en": "The Closet",
+      "de": "Ein Mann sieht rosa",
+      "it": "L'apparenza inganna"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Placard",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q1304948 : pas de date française."
   },
   {
     "id": "film-le-fabuleux-destin-d-amelie-poulain-2001",
@@ -163,6 +455,29 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q737904 : même date."
   },
   {
+    "id": "film-chouchou-2003",
+    "date": "2003-03-19",
+    "title": {
+      "fr": "Chouchou"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Chouchou_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q2397097 : pas de date française."
+  },
+  {
+    "id": "film-rrrrrrr-2004",
+    "date": "2004-01-28",
+    "title": {
+      "fr": "RRRrrrr!!!",
+      "es": "¡¡¡Caverrrrnícola!!!"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/RRRrrrr!!!",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q670831 : pas de date française."
+  },
+  {
     "id": "film-brice-de-nice-2005",
     "date": "2005-04-06",
     "title": {
@@ -173,6 +488,19 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Brice_de_Nice_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2713293 : pas de date française."
+  },
+  {
+    "id": "film-les-bronzes-3-2006",
+    "date": "2006-02-01",
+    "title": {
+      "fr": "Les Bronzés 3",
+      "en": "French Fried Vacation 3",
+      "it": "Les bronzés 3: amis pour la vie"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Bronzés_3",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q2561963 : pas de date française."
   },
   {
     "id": "film-oss-117-le-caire-nid-d-espions-2006",
@@ -214,6 +542,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1144330 : même date."
   },
   {
+    "id": "film-rien-a-declarer-2011",
+    "date": "2011-02-02",
+    "title": {
+      "fr": "Rien à déclarer",
+      "en": "Nothing to Declare",
+      "de": "Nichts zu verzollen",
+      "it": "Niente da dichiarare?",
+      "es": "Nada que declarar"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rien_à_déclarer",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q250447 : même date."
+  },
+  {
     "id": "film-les-tuche-2011",
     "date": "2011-07-01",
     "title": {
@@ -252,5 +595,46 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Qu'est-ce_qu'on_a_fait_au_Bon_Dieu_%3F",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q16671761 : même date."
+  },
+  {
+    "id": "film-les-visiteurs-la-revolution-2016",
+    "date": "2016-04-06",
+    "title": {
+      "fr": "Les Visiteurs : La Révolution",
+      "en": "The Visitors: Bastille Day",
+      "it": "I visitatori 3 - Liberté, egalité, fraternité"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Visiteurs_:_La_Révolution",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q19826654 : pas de date française."
+  },
+  {
+    "id": "film-le-sens-de-la-fete-2017",
+    "date": "2017-10-04",
+    "title": {
+      "fr": "Le Sens de la fête",
+      "en": "C'est la vie!",
+      "de": "Das Leben ist ein Fest",
+      "it": "C'est la vie - Prendila come viene",
+      "es": "La fiesta de la vida"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Sens_de_la_fête",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q30139493 : pas de date française."
+  },
+  {
+    "id": "film-un-p-tit-truc-en-plus-2024",
+    "date": "2024-05-01",
+    "title": {
+      "fr": "Un p'tit truc en plus",
+      "en": "A Little Something Extra",
+      "de": "Was ist schon normal?"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Un_p'tit_truc_en_plus",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q125027720 : même date."
   }
 ]

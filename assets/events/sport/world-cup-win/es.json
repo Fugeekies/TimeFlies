@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-es-2010",
+    "date": "2010-07-11",
+    "title": {
+      "fr": "Titre mondial de l'Espagne (Coupe du monde de football 2010)",
+      "en": "Spain win the 2010 Football World Cup",
+      "de": "Spanien gewinnt die Fußball-WM 2010",
+      "it": "Titolo mondiale per la Spagna (Mondiali di calcio 2010)",
+      "es": "Título mundial para España (Mundial de fútbol 2010)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2010",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q208401 : même date."
+  },
+  {
+    "id": "sport-coupe-du-monde-footf-es-2023",
+    "date": "2023-08-20",
+    "title": {
+      "fr": "Titre mondial de l'Espagne (Coupe du monde féminine de football 2023)",
+      "en": "Spain win the 2023 Women's World Cup",
+      "de": "Spanien gewinnt die Frauen-Fußball-WM 2023",
+      "it": "Titolo mondiale per la Spagna (Mondiali di calcio femminile 2023)",
+      "es": "Título mundial para España (Mundial femenino de fútbol 2023)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_féminine_de_football_2023",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q19672232 : année seulement."
+  }
+]

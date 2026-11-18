@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-mort-de-fidel-castro-2016",
+    "date": "2016-11-25",
+    "title": {
+      "fr": "Mort de Fidel Castro",
+      "en": "Death of Fidel Castro",
+      "de": "Tod von Fidel Castro",
+      "it": "Morte di Fidel Castro",
+      "es": "Muerte de Fidel Castro"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Fidel_Castro",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q11256 : même date."
+  }
+]
