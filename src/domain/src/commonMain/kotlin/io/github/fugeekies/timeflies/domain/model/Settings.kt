@@ -12,7 +12,7 @@ import kotlinx.datetime.YearMonth
  * @property birth the user's birth month and year, never the day (decision of 13/11/2026); null when not given.
  * @property region region whose event dates are used (France only for now, decision of 15/11/2026).
  * @property onboardingDone the first launch screen was completed or skipped ("Plus tard"); it does not come back.
- * @property equivalenceFamilies themes ticked on the Equivalences screen (all by default).
+ * @property equivalenceFamilies themes ticked on the Equivalences and "Quel âge ?" screens, one choice for both (all by default, decision of 18/11/2026).
  * @property windows the Windows panel: notification, startup and tray.
  * @property excludedEventGroups paths of the event groups the user unticked ("music/rap-album-hit/us", see
  *   [EventGroup.path]): left out everywhere, as if not in the base (decision of 16/11/2026). Empty: everything.

@@ -10,6 +10,7 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
+import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsUiState
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.TemporaryAgesStore
@@ -32,12 +33,14 @@ data class EventLine(val event: Event, val ages: EventAges?)
  *
  * @property results search results; null while the query has fewer than 2 characters (the list by family shows).
  * @property byFamily every event by family, the most recent first; null until loaded.
+ * @property families themes ticked, shared with Equivalences (decision of 18/11/2026): the list and the search show only them.
  */
 data class EventAgesUiState(
     val region: Region = Region.FRANCE,
     val query: String = "",
     val results: List<EventLine>? = null,
     val byFamily: Map<Family, List<EventLine>>? = null,
+    val families: Set<Family> = Family.entries.toSet(),
     val error: Boolean = false,
 )
 
@@ -49,6 +52,7 @@ class EventAgesViewModel(
     private val searchEvents: SearchEvents,
     private val getEventAges: GetEventAges,
     observeSettings: ObserveSettings,
+    private val updateSettings: UpdateSettings,
     clock: Clock,
     temporaryAges: TemporaryAgesStore,
 ) : GenerationsViewModel(observeSettings, clock, temporaryAges) {
@@ -83,14 +87,16 @@ class EventAgesViewModel(
             cachedKey = key
         }
         val results = if (text.trim().length < SearchEvents.MIN_QUERY_LENGTH) null else runCatchingLogged { searchEvents.search(text, region) }
+        val families = people.settings.equivalenceFamilies
         val births = people.births
         fun line(event: Event) = EventLine(event, births.takeIf { it.isNotEmpty() }?.let { getEventAges(event, it, region) })
         _state.update {
             it.copy(
                 region = region,
                 query = text,
-                results = results?.map(::line),
-                byFamily = byFamily?.mapValues { (_, events) -> events.map(::line) },
+                results = results?.filter { event -> event.family in families }?.map(::line),
+                byFamily = byFamily?.filterKeys { family -> family in families }?.mapValues { (_, events) -> events.map(::line) },
+                families = families,
                 error = byFamily == null,
             )
         }
@@ -108,6 +114,16 @@ class EventAgesViewModel(
     fun onQueryChange(text: String) {
         query.value = text
         _state.update { it.copy(query = text) }
+    }
+
+    /** Ticks or unticks a theme, saved at once and shared with Equivalences. */
+    fun setFamily(family: Family, checked: Boolean) {
+        val current = _state.value.families
+        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) current + family else current - family) }
+    }
+
+    fun setAllFamilies(checked: Boolean) {
+        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.entries.toSet() else emptySet()) }
     }
 
     /** Opened from a card of Today or Equivalences: the event's title in the search, so its line shows at once. */

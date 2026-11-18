@@ -21,7 +21,7 @@ Las mismas que en [¿Qué edad?](event-ages.md): tu edad, luego **Añadir una ed
 
 ## Temas
 
-El botón **Temas** marca o desmarca las familias de acontecimientos (Series y TV, Cine, Música, Deporte, Videojuegos y tecnología, Política e historia), con **Marcar todo** y **Desmarcar todo**. Tu elección se conserva.
+El botón **Temas** marca o desmarca las familias de acontecimientos (Series y TV, Cine, Música, Deporte, Videojuegos y tecnología, Política e historia), con **Marcar todo** y **Desmarcar todo**. Tu elección se conserva y vale también para [¿Qué edad?](event-ages.md).
 
 ## Sin fecha de nacimiento
 

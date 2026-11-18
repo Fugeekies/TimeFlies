@@ -100,6 +100,7 @@
     <string name="event_ages_title">How old?</string>
     <string name="event_ages_search_hint">Search for a film, a series, an artist…</string>
     <string name="event_ages_no_results">No event matches this search.</string>
+    <string name="event_ages_no_themes">No theme ticked. Tick at least one theme with the Themes button.</string>
     <string name="event_ages_reduced">Give your birth month and year to see your age at each event.</string>
     <string name="event_ages_a11y_line">%1$s: %2$s.</string>
     <plurals name="years_signed">

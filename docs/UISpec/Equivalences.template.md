@@ -30,7 +30,7 @@ Le principe de l'épisode : pour une autre personne de l'âge choisi, quels év�
 #### Filtres (décision du 13/11/2026)
 * Bouton **« Thèmes »** qui ouvre une liste de **cases à cocher**, une par famille (Séries & télé, Cinéma, Musique, Sport, Jeux vidéo & tech, Politique & histoire), toutes cochées par défaut, avec « Tout cocher » / « Tout décocher ».
 * Le résumé du filtre s'affiche sous le bandeau (« 4 thèmes sur 6 »).
-* Le choix est **mémorisé durablement**, comme un réglage.
+* Le choix est **mémorisé durablement**, comme un réglage, et **partagé avec « Quel âge ? »**, qui a le même bouton (décision du 18/11/2026).
 
 #### Liste des cartes
 * **Sans âge ajouté** : à la place de la liste, « Ajoute un âge avec « + » pour voir tes équivalences. »

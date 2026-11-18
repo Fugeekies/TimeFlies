@@ -100,6 +100,7 @@
     <string name="event_ages_title">Wie alt?</string>
     <string name="event_ages_search_hint">Suche einen Film, eine Serie, einen Künstler…</string>
     <string name="event_ages_no_results">Kein Ereignis passt zu dieser Suche.</string>
+    <string name="event_ages_no_themes">Kein Thema ausgewählt. Wähle über die Schaltfläche Themen mindestens eines aus.</string>
     <string name="event_ages_reduced">Gib deinen Geburtsmonat und dein Geburtsjahr an, um dein Alter bei jedem Ereignis zu sehen.</string>
     <string name="event_ages_a11y_line">%1$s: %2$s.</string>
     <plurals name="years_signed">

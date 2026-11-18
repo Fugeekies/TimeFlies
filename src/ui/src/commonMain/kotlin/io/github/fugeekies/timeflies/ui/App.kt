@@ -250,7 +250,7 @@ private fun MainScreens(
                 modifier = content,
             )
             Destination.EVENT_AGES -> EventAgesScreen(
-                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, clock, temporaryAges) },
+                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, updateSettings, clock, temporaryAges) },
                 request = eventRequest,
                 onRequestHandled = { eventRequest = null },
                 onOpenSettings = { current = Destination.SETTINGS },

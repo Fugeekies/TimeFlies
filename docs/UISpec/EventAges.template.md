@@ -16,6 +16,7 @@ Comme sur Équivalences, aucune personne n'a de nom à l'écran : chacune a sa s
 * **Pas d'événement à choisir** : chaque ligne porte directement les âges, rien à toucher pour les voir.
 * Champ de recherche « Cherche un film, une série, un artiste… » : filtre les titres des événements dès 2 caractères, sans tenir compte des accents ni de la casse, du plus récent au plus ancien.
 * Sans recherche : tous les événements, groupés par famille (un titre avec la pastille de la famille), du plus récent au plus ancien.
+* **Filtre des thèmes** (décision du 18/11/2026) : au-dessus de la recherche, le même bouton **« Thèmes »** et le même résumé (« 4 thèmes sur 6 ») qu'Équivalences, avec le **même choix partagé** et mémorisé : décocher un thème dans un écran le décoche dans l'autre. La liste et la recherche ne montrent que les thèmes cochés ; visible aussi sans date de naissance. Aucun thème coché : « Aucun thème coché. Coche au moins un thème avec le bouton Thèmes. »
 * Chaque ligne : pastille de famille, titre, nature · année et, en dessous, **les âges côte à côte, dans l'ordre du bandeau** : « 👤 6 ans  👤 −14 ans  👤 37 ans », chacun dans la couleur de sa personne et précédé de sa silhouette. S'ils ne tiennent pas sur une ligne, le dernier passe à la ligne suivante, toujours dans le même ordre.
 * **Âge** (décision du 15/11/2026) : en années révolues, comme partout ; avant la naissance, négatif, avec un vrai signe moins (« −14 ans »). Quelques mois avant la naissance donnent « −1 an ».
 * Lecture d'écran, une phrase par ligne : « Titanic, Sortie au cinéma, 7 janvier 1998. Toi : 6 ans. Personne 2 : −14 ans. »
@@ -35,6 +36,7 @@ Comme sur Équivalences, aucune personne n'a de nom à l'écran : chacune a sa s
 │  👤 20 ans d'écart                      │
 │  👤 30 ans d'écart                      │
 │  👤 27 ans d'écart                      │
+│  [ Thèmes ]  4 thèmes sur 6            │
 │  [ Cherche un film, une série…     ]   │
 │                                        │
 │  ● CINÉMA                              │

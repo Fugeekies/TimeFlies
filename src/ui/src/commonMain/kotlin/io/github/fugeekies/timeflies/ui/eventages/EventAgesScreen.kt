@@ -46,12 +46,14 @@ import io.github.fugeekies.timeflies.ui.equivalences.Message
 import io.github.fugeekies.timeflies.ui.equivalences.Person
 import io.github.fugeekies.timeflies.ui.equivalences.PersonIcon
 import io.github.fugeekies.timeflies.ui.equivalences.ScreenTitle
+import io.github.fugeekies.timeflies.ui.equivalences.ThemesFilter
 import io.github.fugeekies.timeflies.ui.equivalences.color
 import io.github.fugeekies.timeflies.ui.equivalences.spokenName
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.equivalences_choose_ages
 import io.github.fugeekies.timeflies.ui.resources.event_ages_a11y_line
 import io.github.fugeekies.timeflies.ui.resources.event_ages_no_results
+import io.github.fugeekies.timeflies.ui.resources.event_ages_no_themes
 import io.github.fugeekies.timeflies.ui.resources.event_ages_reduced
 import io.github.fugeekies.timeflies.ui.resources.event_ages_search_hint
 import io.github.fugeekies.timeflies.ui.resources.event_ages_title
@@ -110,6 +112,14 @@ fun EventAgesScreen(
                 }
             }
             item {
+                ThemesFilter(
+                    state.families,
+                    onFamily = viewModel::setFamily,
+                    onAll = viewModel::setAllFamilies,
+                    modifier = Modifier.padding(top = 8.dp),
+                )
+            }
+            item {
                 OutlinedTextField(
                     value = state.query,
                     onValueChange = viewModel::onQueryChange,
@@ -128,6 +138,7 @@ private fun LazyListScope.eventList(state: EventAgesUiState) {
     val results = state.results
     val byFamily = state.byFamily
     when {
+        state.families.isEmpty() -> item { Message(stringResource(Res.string.event_ages_no_themes)) }
         results != null && results.isEmpty() -> item { Message(stringResource(Res.string.event_ages_no_results)) }
         results != null -> items(results, key = { "r:${it.event.id}" }) { LineRow(it, state.region) }
         state.error && byFamily == null -> item { Message(stringResource(Res.string.load_error)) }
