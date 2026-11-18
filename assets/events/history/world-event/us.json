@@ -1,0 +1,92 @@
+[
+  {
+    "id": "history-i-have-a-dream-1963",
+    "date": "1963-08-28",
+    "title": {
+      "fr": "« I Have a Dream », discours de Martin Luther King",
+      "en": "\"I Have a Dream\", Martin Luther King's speech",
+      "de": "„I Have a Dream“, Rede von Martin Luther King",
+      "it": "«I Have a Dream», discorso di Martin Luther King",
+      "es": "«I Have a Dream», discurso de Martin Luther King"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/I_have_a_dream",
+    "note": "Date du discours selon le texte de l'article. Wikidata Q192341 : même date."
+  },
+  {
+    "id": "history-assassinat-de-kennedy-1963",
+    "date": "1963-11-22",
+    "title": {
+      "fr": "Assassinat de John F. Kennedy",
+      "en": "Assassination of John F. Kennedy",
+      "de": "Attentat auf John F. Kennedy",
+      "it": "Assassinio di John F. Kennedy",
+      "es": "Asesinato de John F. Kennedy"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Assassinat_de_John_F._Kennedy",
+    "note": "Date selon l'infobox. Wikidata Q193484 : même date."
+  },
+  {
+    "id": "history-assassinat-de-martin-luther-king-1968",
+    "date": "1968-04-04",
+    "title": {
+      "fr": "Assassinat de Martin Luther King",
+      "en": "Assassination of Martin Luther King Jr.",
+      "de": "Ermordung von Martin Luther King",
+      "it": "Assassinio di Martin Luther King",
+      "es": "Asesinato de Martin Luther King"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Assassinat_de_Martin_Luther_King",
+    "note": "Date selon l'infobox. Wikidata Q757963 : même date."
+  },
+  {
+    "id": "history-apollo-11-alunissage-1969",
+    "date": "1969-07-20",
+    "title": {
+      "fr": "Apollo 11 se pose sur la Lune",
+      "en": "Apollo 11 lands on the Moon",
+      "de": "Apollo 11 landet auf dem Mond",
+      "it": "L'Apollo 11 atterra sulla Luna",
+      "es": "El Apolo 11 aluniza"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Apollo_11",
+    "note": "Date de l'alunissage selon l'infobox (le soir du 20 juillet, heure de Paris). Wikidata Q43653 : pas de date pour l'alunissage."
+  },
+  {
+    "id": "history-accident-de-challenger-1986",
+    "date": "1986-01-28",
+    "title": {
+      "fr": "Explosion de la navette spatiale Challenger",
+      "en": "Space Shuttle Challenger disaster",
+      "de": "Challenger-Katastrophe",
+      "it": "Disastro dello Space Shuttle Challenger",
+      "es": "Accidente del transbordador espacial Challenger"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Accident_de_la_navette_spatiale_Challenger",
+    "note": "Date selon l'infobox. Wikidata Q858145 : même date."
+  },
+  {
+    "id": "history-attentats-du-11-septembre-2001",
+    "date": "2001-09-11",
+    "title": {
+      "fr": "Attentats du 11 septembre 2001",
+      "en": "September 11 attacks",
+      "de": "Terroranschläge am 11. September 2001",
+      "it": "Attentati dell'11 settembre 2001",
+      "es": "Atentados del 11 de septiembre de 2001"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_du_11_septembre_2001",
+    "note": "Date selon l'infobox. Wikidata Q10806 : même date."
+  }
+]

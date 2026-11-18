@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-jonathan-edwards-1995",
+    "date": "1995-08-07",
+    "title": {
+      "fr": "Record du monde du triple saut de Jonathan Edwards",
+      "en": "Jonathan Edwards's triple jump world record",
+      "de": "Dreisprung-Weltrekord von Jonathan Edwards",
+      "it": "Record del mondo di salto triplo di Jonathan Edwards",
+      "es": "Récord del mundo de triple salto de Jonathan Edwards"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_triple_saut",
+    "note": "Date du record actuel selon l'infobox ; détenteur selon le texte de l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

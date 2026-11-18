@@ -1,0 +1,17 @@
+[
+  {
+    "id": "series-inspecteur-derrick-1974",
+    "date": "1974-10-20",
+    "title": {
+      "fr": "Inspecteur Derrick",
+      "en": "Derrick",
+      "de": "Derrick",
+      "it": "L'ispettore Derrick",
+      "es": "Derrick"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Inspecteur_Derrick",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q511224 : même date."
+  }
+]

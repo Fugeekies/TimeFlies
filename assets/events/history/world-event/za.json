@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-liberation-de-nelson-mandela-1990",
+    "date": "1990-02-11",
+    "title": {
+      "fr": "Libération de Nelson Mandela",
+      "en": "Release of Nelson Mandela",
+      "de": "Freilassung von Nelson Mandela",
+      "it": "Liberazione di Nelson Mandela",
+      "es": "Liberación de Nelson Mandela"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Nelson_Mandela",
+    "note": "Date de la libération selon le texte de l'article. Wikidata : pas de date pour cet événement."
+  }
+]

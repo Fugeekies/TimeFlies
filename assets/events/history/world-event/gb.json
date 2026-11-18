@@ -1,0 +1,32 @@
+[
+  {
+    "id": "history-naissance-de-la-brebis-dolly-1996",
+    "date": "1996-07-05",
+    "title": {
+      "fr": "Naissance de la brebis Dolly, premier mammifère cloné",
+      "en": "Birth of Dolly the sheep, the first cloned mammal",
+      "de": "Geburt des Klonschafs Dolly",
+      "it": "Nascita della pecora Dolly, primo mammifero clonato",
+      "es": "Nacimiento de la oveja Dolly, primer mamífero clonado"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dolly_(brebis)",
+    "note": "Naissance selon l'infobox et le texte de l'article. Wikidata Q171433 : pas de date de naissance."
+  },
+  {
+    "id": "history-referendum-du-brexit-2016",
+    "date": "2016-06-23",
+    "title": {
+      "fr": "Référendum du Brexit",
+      "en": "Brexit referendum",
+      "de": "Brexit-Referendum",
+      "it": "Referendum sulla Brexit",
+      "es": "Referéndum del Brexit"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Référendum_sur_l'appartenance_du_Royaume-Uni_à_l'Union_européenne",
+    "note": "Date du vote selon l'infobox. Wikidata Q21812812 : même date."
+  }
+]

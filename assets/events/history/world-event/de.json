@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-chute-du-mur-de-berlin-1989",
+    "date": "1989-11-09",
+    "title": {
+      "fr": "Chute du mur de Berlin",
+      "en": "Fall of the Berlin Wall",
+      "de": "Fall der Berliner Mauer",
+      "it": "Caduta del muro di Berlino",
+      "es": "Caída del muro de Berlín"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Chute_du_mur_de_Berlin",
+    "note": "Date selon l'infobox. Wikidata Q69163529 : même date."
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "series-the-osbournes-2002",
+    "date": "2002-03-05",
+    "title": {
+      "fr": "The Osbournes"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Osbournes",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1145002 : même date."
+  },
+  {
+    "id": "series-american-idol-2002",
+    "date": "2002-06-11",
+    "title": {
+      "fr": "American Idol"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/American_Idol",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q201052 : même date."
+  },
+  {
+    "id": "series-l-incroyable-famille-kardashian-2007",
+    "date": "2007-10-14",
+    "title": {
+      "fr": "L'Incroyable Famille Kardashian",
+      "en": "Keeping Up with the Kardashians",
+      "de": "Keeping Up with the Kardashians",
+      "it": "Al passo con i Kardashian",
+      "es": "Keeping Up with the Kardashians"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/L'Incroyable_Famille_Kardashian",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q152108 : même date."
+  },
+  {
+    "id": "series-rupaul-s-drag-race-2009",
+    "date": "2009-02-02",
+    "title": {
+      "fr": "RuPaul's Drag Race",
+      "de": "RuPaul’s Drag Race"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/RuPaul's_Drag_Race",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q169844 : même date."
+  }
+]

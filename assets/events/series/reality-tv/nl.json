@@ -1,0 +1,13 @@
+[
+  {
+    "id": "series-big-brother-1999",
+    "date": "1999-09-16",
+    "title": {
+      "fr": "Big Brother"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Big_Brother_(émission_de_téléréalité)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q127173 : même date."
+  }
+]

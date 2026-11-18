@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-volodymyr-zelensky-president-2019",
+    "date": "2019-04-21",
+    "title": {
+      "fr": "Volodymyr Zelensky élu président de l'Ukraine",
+      "en": "Volodymyr Zelenskyy elected President of Ukraine",
+      "de": "Wolodymyr Selenskyj zum Präsidenten der Ukraine gewählt",
+      "it": "Volodymyr Zelens'kyj eletto presidente dell'Ucraina",
+      "es": "Volodímir Zelenski elegido presidente de Ucrania"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_ukrainienne_de_2019",
+    "note": "Date du second tour selon l'infobox, aussi dans l'infobox de l'article Volodymyr Zelensky. Wikidata Q16948747 : même date."
+  }
+]

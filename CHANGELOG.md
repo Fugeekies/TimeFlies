@@ -11,6 +11,9 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Base d'événements passée de 192 à 512 événements, chacun daté au jour près d'après Wikipédia et recoupé avec Wikidata. Nouveaux thèmes : Séries & télé (166 : sitcoms, séries dramatiques et françaises, téléréalité, émissions jeunesse, dessins animés), Jeux vidéo & tech (55 : consoles, jeux phénomènes, réseaux sociaux, formats de musique) et Politique & histoire (89 : présidentielles françaises et américaines, acteurs devenus politiciens, grands événements, familles royales). Titres dans les cinq langues.
+- Sport : records du monde actuels de 14 disciplines et Ballons d'or féminins.
+- Réglages › Événements : noms de 15 nouveaux pays d'origine dans les cinq langues.
 - Titres des événements dans la langue de l'interface : titres des films tels qu'ils sont sortis dans chaque pays (d'après les liens entre les Wikipédias), titres du sport traduits ; les chansons et les artistes gardent leur nom. Sans titre dans une langue, le titre français s'affiche. Un titre dans une langue inconnue fait rejeter l'événement.
 - Polaroïd : un dessin au trait pour chacun des 32 types dans la photo (canapé pour les sitcoms, micro pour les divas, urne pour les présidentielles…), au lieu du dessin commun du thème.
 - Interface en anglais, allemand, italien et espagnol, en plus du français : choix dans Réglages › Affichage › Langue (la langue du système par défaut, le français si elle n'est pas proposée), appliqué aussitôt à l'application, au widget, à l'icône et à la notification Windows. Dates dans l'ordre de chaque langue. Les titres des événements restent en français pour l'instant.

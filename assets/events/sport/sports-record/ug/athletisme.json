@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-record-joshua-cheptegei-5000-m-2020",
+    "date": "2020-08-14",
+    "title": {
+      "fr": "Record du monde du 5 000 m de Joshua Cheptegei",
+      "en": "Joshua Cheptegei's 5000 m world record",
+      "de": "5000-m-Weltrekord von Joshua Cheptegei",
+      "it": "Record del mondo dei 5000 m di Joshua Cheptegei",
+      "es": "Récord del mundo de los 5000 m de Joshua Cheptegei"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_5_000_mètres",
+    "note": "Date du record actuel selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-record-joshua-cheptegei-10000-m-2020",
+    "date": "2020-10-07",
+    "title": {
+      "fr": "Record du monde du 10 000 m de Joshua Cheptegei",
+      "en": "Joshua Cheptegei's 10,000 m world record",
+      "de": "10.000-m-Weltrekord von Joshua Cheptegei",
+      "it": "Record del mondo dei 10.000 m di Joshua Cheptegei",
+      "es": "Récord del mundo de los 10 000 m de Joshua Cheptegei"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_10_000_mètres",
+    "note": "Date du record actuel selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

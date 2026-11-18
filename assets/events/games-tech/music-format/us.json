@@ -1,0 +1,35 @@
+[
+  {
+    "id": "tech-napster-1999",
+    "date": "1999-06-01",
+    "title": {
+      "fr": "Napster"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Napster",
+    "note": "Lancement selon l'infobox. Wikidata Q275141 : année seulement."
+  },
+  {
+    "id": "tech-ipod-2001",
+    "date": "2001-10-23",
+    "title": {
+      "fr": "iPod"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/IPod",
+    "note": "Lancement selon le texte de l'article. Wikidata Q9479 : même date."
+  },
+  {
+    "id": "tech-apple-music-2015",
+    "date": "2015-06-30",
+    "title": {
+      "fr": "Apple Music"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Apple_Music",
+    "note": "Première version selon l'infobox. Wikidata Q20056642 : même date."
+  }
+]

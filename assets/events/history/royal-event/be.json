@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-avenement-de-philippe-roi-des-belges-2013",
+    "date": "2013-07-21",
+    "title": {
+      "fr": "Philippe devient roi des Belges",
+      "en": "Philippe becomes King of the Belgians",
+      "de": "Philippe wird König der Belgier",
+      "it": "Filippo diventa re dei Belgi",
+      "es": "Felipe se convierte en rey de los belgas"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Philippe_(roi_des_Belges)",
+    "note": "Avènement selon l'infobox et le texte de l'article. Wikidata Q155004 : pas de date relevée."
+  }
+]

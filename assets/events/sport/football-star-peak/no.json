@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-ballon-d-or-feminin-ada-hegerberg-2018",
+    "date": "2018-12-03",
+    "title": {
+      "fr": "Ada Hegerberg, premier Ballon d'or féminin de l'histoire",
+      "en": "Ada Hegerberg, first-ever Ballon d'Or Féminin",
+      "de": "Ada Hegerberg, erste Gewinnerin des Ballon d'Or der Frauen",
+      "it": "Ada Hegerberg, primo Pallone d'oro femminile della storia",
+      "es": "Ada Hegerberg, primer Balón de Oro femenino de la historia"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ballon_d'or_2018",
+    "note": "Date de la cérémonie selon l'infobox ; Ada Hegerberg premier Ballon d'or féminin selon l'article. Wikidata : non relevé."
+  }
+]

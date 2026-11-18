@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-javier-sotomayor-1993",
+    "date": "1993-07-27",
+    "title": {
+      "fr": "Record du monde du saut en hauteur de Javier Sotomayor",
+      "en": "Javier Sotomayor's high jump world record",
+      "de": "Hochsprung-Weltrekord von Javier Sotomayor",
+      "it": "Record del mondo di salto in alto di Javier Sotomayor",
+      "es": "Récord del mundo de salto de altura de Javier Sotomayor"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_saut_en_hauteur",
+    "note": "Date du record actuel selon l'infobox ; détenteur selon le texte de l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

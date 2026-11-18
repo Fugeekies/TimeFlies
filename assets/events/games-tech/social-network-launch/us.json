@@ -1,0 +1,79 @@
+[
+  {
+    "id": "tech-msn-messenger-1999",
+    "date": "1999-07-22",
+    "title": {
+      "fr": "MSN Messenger"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Windows_Live_Messenger",
+    "note": "Première version selon l'infobox. Wikidata Q71493 : même date."
+  },
+  {
+    "id": "tech-linkedin-2003",
+    "date": "2003-05-05",
+    "title": {
+      "fr": "LinkedIn"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/LinkedIn",
+    "note": "Lancement selon l'infobox. Wikidata Q213660 : même date."
+  },
+  {
+    "id": "tech-facebook-2004",
+    "date": "2004-02-04",
+    "title": {
+      "fr": "Facebook"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Facebook",
+    "note": "Lancement de thefacebook.com selon l'article. Wikidata Q355 : même date."
+  },
+  {
+    "id": "tech-twitter-2006",
+    "date": "2006-03-21",
+    "title": {
+      "fr": "Twitter"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/X_(réseau_social)",
+    "note": "Création selon l'infobox. Wikidata Q918 : même date."
+  },
+  {
+    "id": "tech-instagram-2010",
+    "date": "2010-10-06",
+    "title": {
+      "fr": "Instagram"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Instagram",
+    "note": "Première version selon l'infobox. Wikidata Q209330 : même date."
+  },
+  {
+    "id": "tech-discord-2015",
+    "date": "2015-05-13",
+    "title": {
+      "fr": "Discord"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Discord",
+    "note": "Première version selon l'infobox. Wikidata Q22907849 : même date."
+  },
+  {
+    "id": "tech-threads-2023",
+    "date": "2023-07-05",
+    "title": {
+      "fr": "Threads"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Threads_(réseau_social)",
+    "note": "Première version selon l'infobox. Wikidata Q120281745 : donne aussi le 2023-07-06 (publication)."
+  }
+]

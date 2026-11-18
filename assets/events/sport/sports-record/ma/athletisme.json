@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-hicham-el-guerrouj-1998",
+    "date": "1998-07-14",
+    "title": {
+      "fr": "Record du monde du 1 500 m d'Hicham El Guerrouj",
+      "en": "Hicham El Guerrouj's 1500 m world record",
+      "de": "1500-m-Weltrekord von Hicham El Guerrouj",
+      "it": "Record del mondo dei 1500 m di Hicham El Guerrouj",
+      "es": "Récord del mundo de los 1500 m de Hicham El Guerrouj"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_1_500_mètres",
+    "note": "Date du record actuel selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

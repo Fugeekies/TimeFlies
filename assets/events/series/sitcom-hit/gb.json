@@ -1,0 +1,56 @@
+[
+  {
+    "id": "series-l-hotel-en-folie-1975",
+    "date": "1975-09-19",
+    "title": {
+      "fr": "L'Hôtel en folie",
+      "en": "Fawlty Towers",
+      "de": "Fawlty Towers",
+      "it": "Fawlty Towers",
+      "es": "Fawlty Towers"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/L'Hôtel_en_folie",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q212731 : même date."
+  },
+  {
+    "id": "series-mr-bean-1990",
+    "date": "1990-01-01",
+    "title": {
+      "fr": "Mr Bean",
+      "en": "Mr. Bean",
+      "de": "Mr. Bean",
+      "it": "Mr. Bean",
+      "es": "Mr. Bean"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mr_Bean",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q484020 : même date."
+  },
+  {
+    "id": "series-absolutely-fabulous-1992",
+    "date": "1992-11-12",
+    "title": {
+      "fr": "Absolutely Fabulous",
+      "es": "Absolutamente fabulosas"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Absolutely_Fabulous",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q332554 : même date."
+  },
+  {
+    "id": "series-the-it-crowd-2006",
+    "date": "2006-02-03",
+    "title": {
+      "fr": "The IT Crowd",
+      "it": "IT Crowd"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_IT_Crowd",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q239672 : même date."
+  }
+]

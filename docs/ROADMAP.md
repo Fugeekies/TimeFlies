@@ -42,7 +42,7 @@ Chaque type a son **dessin au trait** pour la photo du Polaroïd (`TypeDrawings.
 
 ### Données — Séries & télé
 Sitcoms et séries cultes, téléréalité, émissions jeunesse, dessins animés à la télé.
-- [ ] Palier 1 · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 166 événements (30 sitcoms, 42 séries dramatiques, 32 séries françaises, 18 téléréalités, 14 émissions jeunesse, 30 dessins animés), première diffusion dans le pays d'origine (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Cinéma
 Blockbusters, films d'animation, comédies françaises, sagas.
@@ -54,15 +54,15 @@ Morts d'icônes de la musique, divas, boys bands, albums de rap et de pop, tubes
 
 ### Données — Sport
 Stars du foot, victoires des Bleus, Jeux olympiques, records.
-- [x] Palier 1 : 38 événements (23 sommets de stars du foot : Ballons d'or et matchs, 2 victoires des Bleus en Coupe du monde, 5 Jeux olympiques en France, 8 records et exploits) (15/11/2026, PR [#19](https://github.com/Fugeekies/TimeFlies/pull/19), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 38 événements (23 sommets de stars du foot : Ballons d'or et matchs, 2 victoires des Bleus en Coupe du monde, 5 Jeux olympiques en France, 8 records et exploits) (15/11/2026, PR [#19](https://github.com/Fugeekies/TimeFlies/pull/19), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 48 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026) : sans répétition (premier et dernier Ballon d'or d'un joueur, seulement le record du monde actuel de chaque discipline), 14 records actuels et 7 Ballons d'or, dont les Ballons d'or féminins · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Jeux vidéo & tech
 Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
-- [ ] Palier 1 · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 55 événements (7 consoles Nintendo, 5 PlayStation, 8 consoles portables, 21 jeux phénomènes, 10 réseaux sociaux, 4 formats de musique), sortie en France ou en Europe (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36)). Aucun téléphone : pas de date française au jour près dans les articles · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Politique & histoire
 Élections, acteurs devenus politiciens, grands événements, familles royales.
-- [ ] Palier 1 · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 89 événements (12 présidentielles françaises, 21 américaines, 5 acteurs devenus politiciens, 31 grands événements, 20 événements royaux) (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36)) · [ ] Palier 2 · [ ] Palier 3
 
 ### Jalon — Cap des 5 000 événements
 - [ ] Mesurer le chargement et la mémoire sur un vrai téléphone, puis décider : rester en JSON ou passer à une base SQLite précompilée ([`ARCHITECTURE.md`](ARCHITECTURE.md), « Base d'événements »).

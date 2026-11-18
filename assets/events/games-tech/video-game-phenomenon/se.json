@@ -1,0 +1,13 @@
+[
+  {
+    "id": "tech-minecraft-2011",
+    "date": "2011-11-18",
+    "title": {
+      "fr": "Minecraft"
+    },
+    "kind": "game-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Minecraft",
+    "note": "Sortie de la version complète selon l'infobox. Wikidata Q49740 : même date."
+  }
+]

@@ -1,17 +1,32 @@
 [
   {
-    "id": "sport-record-eliud-kipchoge-2018",
-    "date": "2018-09-16",
+    "id": "sport-record-david-rudisha-2012",
+    "date": "2012-08-09",
     "title": {
-      "fr": "Record du monde du marathon d'Eliud Kipchoge à Berlin",
-      "en": "Eliud Kipchoge's marathon world record in Berlin",
-      "de": "Marathon-Weltrekord von Eliud Kipchoge in Berlin",
-      "it": "Record del mondo di maratona di Eliud Kipchoge a Berlino",
-      "es": "Récord del mundo de maratón de Eliud Kipchoge en Berlín"
+      "fr": "Record du monde du 800 m de David Rudisha",
+      "en": "David Rudisha's 800 m world record",
+      "de": "800-m-Weltrekord von David Rudisha",
+      "it": "Record del mondo degli 800 m di David Rudisha",
+      "es": "Récord del mundo de los 800 m de David Rudisha"
     },
     "kind": "sport",
     "importance": 2,
-    "source": "https://fr.wikipedia.org/wiki/Eliud_Kipchoge",
-    "note": "Date donnée par l'article Eliud Kipchoge et par l'article Record du monde du marathon. Wikidata : pas de date pour l'exploit."
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_800_mètres",
+    "note": "Date du record actuel selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-record-sabastian-sawe-2026",
+    "date": "2026-04-26",
+    "title": {
+      "fr": "Sabastian Sawe, premier marathon sous les deux heures (record du monde)",
+      "en": "Sabastian Sawe, first marathon under two hours (world record)",
+      "de": "Sabastian Sawe, erster Marathon unter zwei Stunden (Weltrekord)",
+      "it": "Sabastian Sawe, prima maratona sotto le due ore (record del mondo)",
+      "es": "Sabastian Sawe, primer maratón por debajo de las dos horas (récord del mundo)"
+    },
+    "kind": "sport",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_marathon",
+    "note": "Date du record actuel (1 h 59 min 30 s au marathon de Londres) selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
   }
 ]

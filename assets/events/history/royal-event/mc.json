@@ -1,0 +1,47 @@
+[
+  {
+    "id": "history-mariage-de-rainier-iii-et-grace-kelly-1956",
+    "date": "1956-04-19",
+    "title": {
+      "fr": "Mariage de Rainier III et de Grace Kelly",
+      "en": "Wedding of Rainier III and Grace Kelly",
+      "de": "Hochzeit von Rainier III. und Grace Kelly",
+      "it": "Matrimonio di Ranieri III e Grace Kelly",
+      "es": "Boda de Raniero III y Grace Kelly"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rainier_III",
+    "note": "Mariage religieux selon le texte de l'article (mariage civil la veille). Wikidata : pas de date pour cet événement."
+  },
+  {
+    "id": "history-mort-de-grace-kelly-1982",
+    "date": "1982-09-14",
+    "title": {
+      "fr": "Mort de la princesse Grace de Monaco (Grace Kelly)",
+      "en": "Death of Princess Grace of Monaco (Grace Kelly)",
+      "de": "Tod von Fürstin Gracia Patricia (Grace Kelly)",
+      "it": "Morte della principessa Grace di Monaco (Grace Kelly)",
+      "es": "Muerte de la princesa Grace de Mónaco (Grace Kelly)"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Grace_Kelly",
+    "note": "Date de décès selon l'infobox. Wikidata Q3925 : même date."
+  },
+  {
+    "id": "history-mariage-d-albert-ii-et-charlene-2011",
+    "date": "2011-07-02",
+    "title": {
+      "fr": "Mariage d'Albert II de Monaco et de Charlene Wittstock",
+      "en": "Wedding of Albert II of Monaco and Charlene Wittstock",
+      "de": "Hochzeit von Albert II. von Monaco und Charlene Wittstock",
+      "it": "Matrimonio di Alberto II di Monaco e Charlene Wittstock",
+      "es": "Boda de Alberto II de Mónaco y Charlene Wittstock"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Albert_II_de_Monaco_et_de_Charlene_Wittstock",
+    "note": "Mariage religieux selon l'infobox (mariage civil la veille). Wikidata Q1827444 : même date."
+  }
+]

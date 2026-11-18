@@ -1,0 +1,16 @@
+[
+  {
+    "id": "series-la-casa-de-papel-2017",
+    "date": "2017-05-02",
+    "title": {
+      "fr": "La casa de papel",
+      "en": "Money Heist",
+      "de": "Haus des Geldes",
+      "it": "La casa di carta"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_casa_de_papel",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q29647346 : même date."
+  }
+]

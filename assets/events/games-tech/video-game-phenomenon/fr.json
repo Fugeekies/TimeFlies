@@ -1,0 +1,25 @@
+[
+  {
+    "id": "tech-assassin-s-creed-2007",
+    "date": "2007-11-16",
+    "title": {
+      "fr": "Assassin's Creed",
+      "de": "Assassin’s Creed"
+    },
+    "kind": "game-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Assassin's_Creed_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q200864 : même date."
+  },
+  {
+    "id": "tech-clair-obscur-expedition-33-2025",
+    "date": "2025-04-24",
+    "title": {
+      "fr": "Clair Obscur: Expedition 33"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Clair_Obscur:_Expedition_33",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q126462072 : même date."
+  }
+]

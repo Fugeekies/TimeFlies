@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-mariage-de-victoria-de-suede-2010",
+    "date": "2010-06-19",
+    "title": {
+      "fr": "Mariage de la princesse Victoria de Suède et de Daniel Westling",
+      "en": "Wedding of Crown Princess Victoria and Daniel Westling",
+      "de": "Hochzeit von Kronprinzessin Victoria und Daniel Westling",
+      "it": "Matrimonio della principessa Vittoria di Svezia e Daniel Westling",
+      "es": "Boda de la princesa Victoria de Suecia y Daniel Westling"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_de_la_princesse_Victoria_de_Suède_et_de_Daniel_Westling",
+    "note": "Date selon l'infobox. Wikidata Q2368479 : même date."
+  }
+]

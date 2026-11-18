@@ -1,20 +1,5 @@
 [
   {
-    "id": "sport-record-bob-beamon-1968",
-    "date": "1968-10-18",
-    "title": {
-      "fr": "Le saut de Bob Beamon à 8,90 m",
-      "en": "Bob Beamon's 8.90 m jump",
-      "de": "Bob Beamons Sprung auf 8,90 m",
-      "it": "Il salto di Bob Beamon a 8,90 m",
-      "es": "El salto de Bob Beamon de 8,90 m"
-    },
-    "kind": "sport",
-    "importance": 2,
-    "source": "https://fr.wikipedia.org/wiki/Bob_Beamon",
-    "note": "Date de la finale de Mexico selon l'article Bob Beamon et l'article Record du monde du saut en longueur. Wikidata : pas de date pour l'exploit."
-  },
-  {
     "id": "sport-record-florence-griffith-joyner-1988",
     "date": "1988-07-16",
     "title": {
@@ -28,5 +13,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Florence_Griffith-Joyner",
     "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-record-mike-powell-1991",
+    "date": "1991-08-30",
+    "title": {
+      "fr": "Record du monde du saut en longueur de Mike Powell",
+      "en": "Mike Powell's long jump world record",
+      "de": "Weitsprung-Weltrekord von Mike Powell",
+      "it": "Record del mondo di salto in lungo di Mike Powell",
+      "es": "Récord del mundo de salto de longitud de Mike Powell"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_saut_en_longueur",
+    "note": "Date du record actuel selon l'infobox ; détenteur selon le texte de l'article. Wikidata : pas de date pour l'exploit."
   }
 ]

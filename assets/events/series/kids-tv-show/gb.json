@@ -1,0 +1,17 @@
+[
+  {
+    "id": "series-les-teletubbies-1997",
+    "date": "1997-03-31",
+    "title": {
+      "fr": "Les Télétubbies",
+      "en": "Teletubbies",
+      "de": "Teletubbies",
+      "it": "Teletubbies",
+      "es": "Teletubbies"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Télétubbies",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q41403 : même date."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "series-squid-game-2021",
+    "date": "2021-09-17",
+    "title": {
+      "fr": "Squid Game",
+      "es": "El juego del calamar"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Squid_Game",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q106582931 : même date."
+  }
+]

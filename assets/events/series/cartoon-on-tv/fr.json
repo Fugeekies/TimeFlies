@@ -1,0 +1,94 @@
+[
+  {
+    "id": "series-il-etait-une-fois-l-homme-1978",
+    "date": "1978-09-30",
+    "title": {
+      "fr": "Il était une fois… l'Homme",
+      "en": "Once Upon a Time... Man",
+      "de": "Es war einmal … der Mensch",
+      "it": "C'era una volta... l'uomo",
+      "es": "Érase una vez... el hombre"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Il_était_une_fois…_l'Homme",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q767850 : année seulement."
+  },
+  {
+    "id": "series-ulysse-31-1981",
+    "date": "1981-10-03",
+    "title": {
+      "fr": "Ulysse 31",
+      "en": "Ulysses 31",
+      "de": "Odysseus 31",
+      "es": "Ulises 31"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ulysse_31",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1637108 : donne une autre date : 1981-10-10."
+  },
+  {
+    "id": "series-les-mondes-engloutis-1985",
+    "date": "1985-09-24",
+    "title": {
+      "fr": "Les Mondes engloutis",
+      "en": "Spartakus and the Sun Beneath the Sea",
+      "it": "I mondi sommersi",
+      "es": "Espartaco y el sol bajo el mar"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Mondes_engloutis",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q785165 : donne une autre date : 1985-09-17."
+  },
+  {
+    "id": "series-il-etait-une-fois-la-vie-1986",
+    "date": "1986-12-10",
+    "title": {
+      "fr": "Il était une fois… la Vie",
+      "en": "Once Upon a Time... Life",
+      "de": "Es war einmal … das Leben",
+      "it": "Siamo fatti così",
+      "es": "Érase una vez... la Vida"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Il_était_une_fois…_la_Vie",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q913207 : même date."
+  },
+  {
+    "id": "series-titeuf-2001",
+    "date": "2001-04-04",
+    "title": {
+      "fr": "Titeuf"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Titeuf_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3529537 : même date."
+  },
+  {
+    "id": "series-totally-spies-2001",
+    "date": "2001-11-03",
+    "title": {
+      "fr": "Totally Spies!",
+      "it": "Totally Spies! - Che magnifiche spie!"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Totally_Spies!",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q218524 : même date."
+  },
+  {
+    "id": "series-code-lyoko-2003",
+    "date": "2003-09-03",
+    "title": {
+      "fr": "Code Lyoko"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Code_Lyoko",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q637190 : même date."
+  }
+]

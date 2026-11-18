@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-avenement-de-naruhito-2019",
+    "date": "2019-05-01",
+    "title": {
+      "fr": "Naruhito devient empereur du Japon",
+      "en": "Naruhito becomes Emperor of Japan",
+      "de": "Naruhito wird Kaiser von Japan",
+      "it": "Naruhito diventa imperatore del Giappone",
+      "es": "Naruhito se convierte en emperador de Japón"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Naruhito",
+    "note": "Début du règne selon l'infobox de l'article. Wikidata Q217096 : pas de date relevée."
+  }
+]

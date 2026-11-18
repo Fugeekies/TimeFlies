@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-wayde-van-niekerk-2016",
+    "date": "2016-08-14",
+    "title": {
+      "fr": "Record du monde du 400 m de Wayde van Niekerk (43 s 03)",
+      "en": "Wayde van Niekerk's 400 m world record (43.03 s)",
+      "de": "400-m-Weltrekord von Wayde van Niekerk (43,03 s)",
+      "it": "Record del mondo dei 400 m di Wayde van Niekerk (43\"03)",
+      "es": "Récord del mundo de los 400 m de Wayde van Niekerk (43,03 s)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_400_mètres",
+    "note": "Date du record actuel selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
+  }
+]

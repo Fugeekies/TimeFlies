@@ -1,0 +1,72 @@
+[
+  {
+    "id": "tech-doom-1993",
+    "date": "1993-12-10",
+    "title": {
+      "fr": "Doom"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Doom_(jeu_vidéo,_1993)",
+    "note": "Sortie sur PC (en téléchargement) selon l'infobox. Wikidata Q189784 : même date."
+  },
+  {
+    "id": "tech-halo-combat-evolved-2002",
+    "date": "2002-03-14",
+    "title": {
+      "fr": "Halo: Combat Evolved",
+      "de": "Halo: Kampf um die Zukunft"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Halo:_Combat_Evolved",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q276217 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-call-of-duty-2003",
+    "date": "2003-11-07",
+    "title": {
+      "fr": "Call of Duty"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Call_of_Duty_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q211096 : même date."
+  },
+  {
+    "id": "tech-league-of-legends-2009",
+    "date": "2009-10-27",
+    "title": {
+      "fr": "League of Legends"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/League_of_Legends",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q223341 : même date."
+  },
+  {
+    "id": "tech-among-us-2018",
+    "date": "2018-06-15",
+    "title": {
+      "fr": "Among Us"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Among_Us",
+    "note": "Sortie mondiale sur mobile selon l'infobox. Wikidata Q96417649 : même date."
+  },
+  {
+    "id": "tech-red-dead-redemption-ii-2018",
+    "date": "2018-10-26",
+    "title": {
+      "fr": "Red Dead Redemption II",
+      "en": "Red Dead Redemption 2",
+      "de": "Red Dead Redemption 2",
+      "es": "Red Dead Redemption 2"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Red_Dead_Redemption_II",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q27438121 : même date."
+  }
+]

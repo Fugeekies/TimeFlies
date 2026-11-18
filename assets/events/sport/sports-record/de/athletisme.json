@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-record-marita-koch-1985",
+    "date": "1985-10-06",
+    "title": {
+      "fr": "Record du monde du 400 m de Marita Koch (47 s 60)",
+      "en": "Marita Koch's 400 m world record (47.60 s)",
+      "de": "400-m-Weltrekord von Marita Koch (47,60 s)",
+      "it": "Record del mondo dei 400 m di Marita Koch (47\"60)",
+      "es": "Récord del mundo de los 400 m de Marita Koch (47,60 s)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Marita_Koch",
+    "note": "Date du record selon l'article, qui le dit toujours en vigueur ; même date dans l'infobox de l'article Record du monde du 400 mètres. Wikidata : pas de date pour l'exploit."
+  }
+]

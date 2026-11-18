@@ -1,0 +1,137 @@
+[
+  {
+    "id": "history-inauguration-de-la-tour-eiffel-1889",
+    "date": "1889-03-31",
+    "title": {
+      "fr": "Inauguration de la tour Eiffel",
+      "en": "Inauguration of the Eiffel Tower",
+      "de": "Einweihung des Eiffelturms",
+      "it": "Inaugurazione della Torre Eiffel",
+      "es": "Inauguración de la Torre Eiffel"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Tour_Eiffel",
+    "note": "Inauguration selon l'infobox et le texte de l'article. Wikidata Q243 : date du début des travaux seulement (1887-01-28)."
+  },
+  {
+    "id": "history-rafle-du-vel-d-hiv-1942",
+    "date": "1942-07-16",
+    "title": {
+      "fr": "Rafle du Vél' d'Hiv",
+      "en": "Vel' d'Hiv Roundup",
+      "de": "Rafle du Vélodrome d’Hiver",
+      "it": "Rastrellamento del Velodromo d'Inverno",
+      "es": "Redada del Velódromo de Invierno"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rafle_du_Vélodrome_d'Hiver",
+    "note": "Premier jour de la rafle (16 et 17 juillet 1942) selon le texte de l'article. Wikidata Q675228 : même date."
+  },
+  {
+    "id": "history-debarquement-de-normandie-1944",
+    "date": "1944-06-06",
+    "title": {
+      "fr": "Débarquement de Normandie",
+      "en": "Normandy landings",
+      "de": "Landung in der Normandie",
+      "it": "Sbarco in Normandia",
+      "es": "Desembarco de Normandía"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Débarquement_de_Normandie",
+    "note": "Date selon l'infobox. Wikidata Q16470 : même date."
+  },
+  {
+    "id": "history-loi-veil-1975",
+    "date": "1975-01-17",
+    "title": {
+      "fr": "Loi Veil sur l'IVG",
+      "en": "Veil Act legalising abortion in France",
+      "de": "Loi Veil (Legalisierung der Abtreibung in Frankreich)",
+      "it": "Legge Veil sull'aborto",
+      "es": "Ley Veil sobre el aborto"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Loi_Veil",
+    "note": "Promulgation de la loi selon l'infobox et le texte de l'article. Wikidata Q3258255 : pas de date."
+  },
+  {
+    "id": "history-premier-vol-commercial-du-concorde-1976",
+    "date": "1976-01-21",
+    "title": {
+      "fr": "Premier vol commercial du Concorde",
+      "en": "Concorde's first commercial flight",
+      "de": "Erster Linienflug der Concorde",
+      "it": "Primo volo commerciale del Concorde",
+      "es": "Primer vuelo comercial del Concorde"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Concorde_(avion)",
+    "note": "Début des vols commerciaux selon le texte de l'article. Wikidata Q6505 : pas de date."
+  },
+  {
+    "id": "history-attentat-contre-charlie-hebdo-2015",
+    "date": "2015-01-07",
+    "title": {
+      "fr": "Attentat contre Charlie Hebdo",
+      "en": "Charlie Hebdo shooting",
+      "de": "Anschlag auf Charlie Hebdo",
+      "it": "Attentato alla sede di Charlie Hebdo",
+      "es": "Atentado contra Charlie Hebdo"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attentat_contre_Charlie_Hebdo",
+    "note": "Date selon l'infobox. Wikidata Q18718876 : même date."
+  },
+  {
+    "id": "history-attentats-du-13-novembre-2015",
+    "date": "2015-11-13",
+    "title": {
+      "fr": "Attentats du 13 novembre 2015 à Paris et Saint-Denis",
+      "en": "November 2015 Paris attacks",
+      "de": "Terroranschläge am 13. November 2015 in Paris",
+      "it": "Attentati del 13 novembre 2015 a Parigi",
+      "es": "Atentados del 13 de noviembre de 2015 en París"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_du_13_novembre_2015_en_France",
+    "note": "Date selon l'infobox. Wikidata Q21479779 : même date."
+  },
+  {
+    "id": "history-incendie-de-notre-dame-2019",
+    "date": "2019-04-15",
+    "title": {
+      "fr": "Incendie de Notre-Dame de Paris",
+      "en": "Notre-Dame de Paris fire",
+      "de": "Brand von Notre-Dame de Paris",
+      "it": "Incendio di Notre-Dame de Paris",
+      "es": "Incendio de Notre Dame de París"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Incendie_de_Notre-Dame_de_Paris",
+    "note": "Début de l'incendie le 15 avril 2019 vers 18 h 20 selon l'article. Wikidata Q63167656 : même date."
+  },
+  {
+    "id": "history-premier-confinement-2020",
+    "date": "2020-03-17",
+    "title": {
+      "fr": "Début du premier confinement en France (Covid-19)",
+      "en": "Start of the first lockdown in France (COVID-19)",
+      "de": "Beginn des ersten Lockdowns in Frankreich (COVID-19)",
+      "it": "Inizio del primo lockdown in Francia (COVID-19)",
+      "es": "Comienzo del primer confinamiento en Francia (COVID-19)"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Confinements_liés_à_la_pandémie_de_Covid-19_en_France",
+    "note": "Début du premier confinement, le 17 mars 2020 à midi, selon l'article. Wikidata Q88215531 : même date."
+  }
+]

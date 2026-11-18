@@ -1,0 +1,182 @@
+[
+  {
+    "id": "history-election-charles-de-gaulle-1958",
+    "date": "1958-12-21",
+    "title": {
+      "fr": "Élection de Charles de Gaulle",
+      "en": "Election of Charles de Gaulle",
+      "de": "Wahl von Charles de Gaulle",
+      "it": "Elezione di Charles de Gaulle",
+      "es": "Elección de Charles de Gaulle"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1958",
+    "note": "Date de l'élection (au suffrage indirect, en un tour) selon l'infobox. Wikidata Q1450633 : même date."
+  },
+  {
+    "id": "history-election-charles-de-gaulle-1965",
+    "date": "1965-12-19",
+    "title": {
+      "fr": "Réélection de Charles de Gaulle",
+      "en": "Re-election of Charles de Gaulle",
+      "de": "Wiederwahl von Charles de Gaulle",
+      "it": "Rielezione di Charles de Gaulle",
+      "es": "Reelección de Charles de Gaulle"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1965",
+    "note": "Date du second tour selon l'infobox. Wikidata Q1450635 : même date."
+  },
+  {
+    "id": "history-election-georges-pompidou-1969",
+    "date": "1969-06-15",
+    "title": {
+      "fr": "Élection de Georges Pompidou",
+      "en": "Election of Georges Pompidou",
+      "de": "Wahl von Georges Pompidou",
+      "it": "Elezione di Georges Pompidou",
+      "es": "Elección de Georges Pompidou"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1969",
+    "note": "Date du second tour selon l'infobox. Wikidata Q1450646 : même date."
+  },
+  {
+    "id": "history-election-valery-giscard-d-estaing-1974",
+    "date": "1974-05-19",
+    "title": {
+      "fr": "Élection de Valéry Giscard d'Estaing",
+      "en": "Election of Valéry Giscard d'Estaing",
+      "de": "Wahl von Valéry Giscard d'Estaing",
+      "it": "Elezione di Valéry Giscard d'Estaing",
+      "es": "Elección de Valéry Giscard d'Estaing"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1974",
+    "note": "Date du second tour selon l'infobox. Wikidata Q1450654 : même date."
+  },
+  {
+    "id": "history-election-francois-mitterrand-1981",
+    "date": "1981-05-10",
+    "title": {
+      "fr": "Élection de François Mitterrand",
+      "en": "Election of François Mitterrand",
+      "de": "Wahl von François Mitterrand",
+      "it": "Elezione di François Mitterrand",
+      "es": "Elección de François Mitterrand"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1981",
+    "note": "Date du second tour selon l'infobox. Wikidata Q930869 : même date."
+  },
+  {
+    "id": "history-election-francois-mitterrand-1988",
+    "date": "1988-05-08",
+    "title": {
+      "fr": "Réélection de François Mitterrand",
+      "en": "Re-election of François Mitterrand",
+      "de": "Wiederwahl von François Mitterrand",
+      "it": "Rielezione di François Mitterrand",
+      "es": "Reelección de François Mitterrand"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1988",
+    "note": "Date du second tour selon l'infobox. Wikidata Q1450661 : même date."
+  },
+  {
+    "id": "history-election-jacques-chirac-1995",
+    "date": "1995-05-07",
+    "title": {
+      "fr": "Élection de Jacques Chirac",
+      "en": "Election of Jacques Chirac",
+      "de": "Wahl von Jacques Chirac",
+      "it": "Elezione di Jacques Chirac",
+      "es": "Elección de Jacques Chirac"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_1995",
+    "note": "Date du second tour selon l'infobox. Wikidata Q1450660 : même date."
+  },
+  {
+    "id": "history-election-jacques-chirac-2002",
+    "date": "2002-05-05",
+    "title": {
+      "fr": "Réélection de Jacques Chirac",
+      "en": "Re-election of Jacques Chirac",
+      "de": "Wiederwahl von Jacques Chirac",
+      "it": "Rielezione di Jacques Chirac",
+      "es": "Reelección de Jacques Chirac"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_2002",
+    "note": "Date du second tour selon l'infobox. Wikidata Q1129306 : même date."
+  },
+  {
+    "id": "history-election-nicolas-sarkozy-2007",
+    "date": "2007-05-06",
+    "title": {
+      "fr": "Élection de Nicolas Sarkozy",
+      "en": "Election of Nicolas Sarkozy",
+      "de": "Wahl von Nicolas Sarkozy",
+      "it": "Elezione di Nicolas Sarkozy",
+      "es": "Elección de Nicolas Sarkozy"
+    },
+    "kind": "election",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_2007",
+    "note": "Date du second tour selon l'infobox. Wikidata Q245238 : même date."
+  },
+  {
+    "id": "history-election-francois-hollande-2012",
+    "date": "2012-05-06",
+    "title": {
+      "fr": "Élection de François Hollande",
+      "en": "Election of François Hollande",
+      "de": "Wahl von François Hollande",
+      "it": "Elezione di François Hollande",
+      "es": "Elección de François Hollande"
+    },
+    "kind": "election",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_2012",
+    "note": "Date du second tour selon l'infobox. Wikidata Q487666 : même date."
+  },
+  {
+    "id": "history-election-emmanuel-macron-2017",
+    "date": "2017-05-07",
+    "title": {
+      "fr": "Élection d'Emmanuel Macron",
+      "en": "Election of Emmanuel Macron",
+      "de": "Wahl von Emmanuel Macron",
+      "it": "Elezione di Emmanuel Macron",
+      "es": "Elección de Emmanuel Macron"
+    },
+    "kind": "election",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_2017",
+    "note": "Date du second tour selon l'infobox. Wikidata Q7020999 : même date."
+  },
+  {
+    "id": "history-election-emmanuel-macron-2022",
+    "date": "2022-04-24",
+    "title": {
+      "fr": "Réélection d'Emmanuel Macron",
+      "en": "Re-election of Emmanuel Macron",
+      "de": "Wiederwahl von Emmanuel Macron",
+      "it": "Rielezione di Emmanuel Macron",
+      "es": "Reelección de Emmanuel Macron"
+    },
+    "kind": "election",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française_de_2022",
+    "note": "Date du second tour selon l'infobox. Wikidata Q30638578 : même date."
+  }
+]

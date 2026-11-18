@@ -1,0 +1,116 @@
+[
+  {
+    "id": "tech-super-mario-bros-1987",
+    "date": "1987-05-15",
+    "title": {
+      "fr": "Super Mario Bros."
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Bros.",
+    "note": "Sortie en Europe sur NES selon l'infobox et l'article. Wikidata Q11168 : même date."
+  },
+  {
+    "id": "tech-sonic-the-hedgehog-1991",
+    "date": "1991-06-21",
+    "title": {
+      "fr": "Sonic the Hedgehog"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sonic_the_Hedgehog_(jeu_vidéo,_1991,_version_16_bits)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q37123 : donne une autre date pour l'Europe : 1991-06-23."
+  },
+  {
+    "id": "tech-super-mario-kart-1993",
+    "date": "1993-01-21",
+    "title": {
+      "fr": "Super Mario Kart"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Super_Mario_Kart",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1061560 : même date."
+  },
+  {
+    "id": "tech-final-fantasy-vii-1997",
+    "date": "1997-11-14",
+    "title": {
+      "fr": "Final Fantasy VII"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Final_Fantasy_VII",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q214232 : même date."
+  },
+  {
+    "id": "tech-metal-gear-solid-1999",
+    "date": "1999-02-26",
+    "title": {
+      "fr": "Metal Gear Solid"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Metal_Gear_Solid",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q6582527 : date japonaise seulement."
+  },
+  {
+    "id": "tech-pokemon-rouge-et-bleu-1999",
+    "date": "1999-10-08",
+    "title": {
+      "fr": "Pokémon Rouge et Bleu",
+      "en": "Pokémon Red, Blue, and Yellow",
+      "de": "Pokémon Rote und Blaue Edition",
+      "it": "Pokémon Rosso e Blu",
+      "es": "Pokémon rojo y Pokémon azul"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Rouge_et_Bleu",
+    "note": "Sortie en France selon l'infobox. Wikidata Q637137 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-wii-sports-2006",
+    "date": "2006-12-08",
+    "title": {
+      "fr": "Wii Sports"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Wii_Sports",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q71936 : même date."
+  },
+  {
+    "id": "tech-the-legend-of-zelda-breath-of-the-wild-2017",
+    "date": "2017-03-03",
+    "title": {
+      "fr": "The Legend of Zelda: Breath of the Wild"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q17185964 : même date."
+  },
+  {
+    "id": "tech-animal-crossing-new-horizons-2020",
+    "date": "2020-03-20",
+    "title": {
+      "fr": "Animal Crossing: New Horizons"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Animal_Crossing:_New_Horizons",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q64566657 : même date."
+  },
+  {
+    "id": "tech-elden-ring-2022",
+    "date": "2022-02-25",
+    "title": {
+      "fr": "Elden Ring"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Elden_Ring",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q64826862 : même date."
+  }
+]

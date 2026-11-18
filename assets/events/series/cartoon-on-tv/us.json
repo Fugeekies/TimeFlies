@@ -1,0 +1,158 @@
+[
+  {
+    "id": "series-les-pierrafeu-1960",
+    "date": "1960-09-30",
+    "title": {
+      "fr": "Les Pierrafeu",
+      "en": "The Flintstones",
+      "de": "Familie Feuerstein",
+      "it": "Gli antenati",
+      "es": "Los Picapiedra"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Pierrafeu",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q201358 : même date."
+  },
+  {
+    "id": "series-scooby-doo-1969",
+    "date": "1969-09-13",
+    "title": {
+      "fr": "Scooby-Doo",
+      "en": "Scooby-Doo, Where Are You!",
+      "it": "Scooby-Doo, pensaci tu!",
+      "es": "Scooby-Doo, Where Are You!"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Scooby-Doo_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q936279 : même date."
+  },
+  {
+    "id": "series-tortues-ninja-les-chevaliers-d-ecaille-1987",
+    "date": "1987-12-10",
+    "title": {
+      "fr": "Tortues Ninja : Les Chevaliers d'écaille",
+      "en": "Teenage Mutant Ninja Turtles",
+      "de": "Teenage Mutant Hero Turtles",
+      "it": "Tartarughe Ninja alla riscossa",
+      "es": "Las Tortugas Ninja"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tortues_Ninja_:_Les_Chevaliers_d'écaille",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q249056 : donne une autre date : 1987-12-14."
+  },
+  {
+    "id": "series-les-simpson-1989",
+    "date": "1989-12-17",
+    "title": {
+      "fr": "Les Simpson",
+      "en": "The Simpsons",
+      "de": "Die Simpsons",
+      "it": "I Simpson",
+      "es": "Los Simpson"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Simpson",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q886 : même date."
+  },
+  {
+    "id": "series-les-razmoket-1991",
+    "date": "1991-08-11",
+    "title": {
+      "fr": "Les Razmoket",
+      "en": "Rugrats",
+      "de": "Rugrats",
+      "it": "I Rugrats",
+      "es": "Rugrats"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Razmoket_(série_télévisée_d'animation,_1991)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q304290 : même date."
+  },
+  {
+    "id": "series-south-park-1997",
+    "date": "1997-08-13",
+    "title": {
+      "fr": "South Park"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/South_Park",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q16538 : même date."
+  },
+  {
+    "id": "series-les-griffin-1999",
+    "date": "1999-01-31",
+    "title": {
+      "fr": "Les Griffin",
+      "en": "Family Guy",
+      "de": "Family Guy",
+      "it": "I Griffin",
+      "es": "Padre de familia"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Les_Griffin",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q5930 : même date."
+  },
+  {
+    "id": "series-futurama-1999",
+    "date": "1999-03-28",
+    "title": {
+      "fr": "Futurama"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Futurama",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q73622 : même date."
+  },
+  {
+    "id": "series-bob-l-eponge-1999",
+    "date": "1999-05-01",
+    "title": {
+      "fr": "Bob l'éponge",
+      "en": "SpongeBob SquarePants",
+      "de": "SpongeBob Schwammkopf",
+      "it": "SpongeBob",
+      "es": "Bob Esponja"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Bob_l'éponge",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q83279 : même date."
+  },
+  {
+    "id": "series-avatar-le-dernier-maitre-de-l-air-2005",
+    "date": "2005-02-21",
+    "title": {
+      "fr": "Avatar, le dernier maître de l'air",
+      "en": "Avatar: The Last Airbender",
+      "de": "Avatar – Der Herr der Elemente",
+      "it": "Avatar - La leggenda di Aang",
+      "es": "Avatar: la leyenda de Aang"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Avatar,_le_dernier_maître_de_l'air",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q11572 : même date."
+  },
+  {
+    "id": "series-rick-et-morty-2013",
+    "date": "2013-12-02",
+    "title": {
+      "fr": "Rick et Morty",
+      "en": "Rick and Morty",
+      "de": "Rick and Morty",
+      "it": "Rick and Morty",
+      "es": "Rick y Morty"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rick_et_Morty",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q15659308 : même date."
+  }
+]

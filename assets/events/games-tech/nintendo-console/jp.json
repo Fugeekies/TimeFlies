@@ -1,0 +1,84 @@
+[
+  {
+    "id": "tech-super-nintendo-1992",
+    "date": "1992-04-11",
+    "title": {
+      "fr": "Super Nintendo",
+      "en": "Super Nintendo Entertainment System",
+      "de": "Super Nintendo Entertainment System",
+      "it": "Super Nintendo Entertainment System"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Super_Nintendo",
+    "note": "Sortie en France et au Royaume-Uni selon l'infobox. Wikidata Q183259 : mois seulement pour l'Europe."
+  },
+  {
+    "id": "tech-nintendo-64-1997",
+    "date": "1997-09-01",
+    "title": {
+      "fr": "Nintendo 64"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nintendo_64",
+    "note": "Sortie en France selon l'infobox. Wikidata Q184839 : pas de date française."
+  },
+  {
+    "id": "tech-nintendo-gamecube-2002",
+    "date": "2002-05-03",
+    "title": {
+      "fr": "Nintendo GameCube",
+      "en": "GameCube",
+      "it": "GameCube"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nintendo_GameCube",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q182172 : même date."
+  },
+  {
+    "id": "tech-wii-2006",
+    "date": "2006-12-08",
+    "title": {
+      "fr": "Wii"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Wii",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q8079 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-wii-u-2012",
+    "date": "2012-11-30",
+    "title": {
+      "fr": "Wii U"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Wii_U",
+    "note": "Sortie en Europe selon l'infobox, en France le même jour selon l'article. Wikidata Q56942 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-nintendo-switch-2017",
+    "date": "2017-03-03",
+    "title": {
+      "fr": "Nintendo Switch"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nintendo_Switch",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q19610114 : même date."
+  },
+  {
+    "id": "tech-nintendo-switch-2-2025",
+    "date": "2025-06-05",
+    "title": {
+      "fr": "Nintendo Switch 2"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nintendo_Switch_2",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q122761124 : même date."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "series-hartley-coeurs-a-vif-1994",
+    "date": "1994-02-27",
+    "title": {
+      "fr": "Hartley, cœurs à vif",
+      "en": "Heartbreak High",
+      "de": "Heartbreak High",
+      "it": "Heartbreak High",
+      "es": "Heartbreak High"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hartley,_cœurs_à_vif",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1082594 : même date."
+  }
+]

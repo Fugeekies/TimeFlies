@@ -204,10 +204,15 @@
     <string-array name="origin_names">
         <item>Internazionale</item>
         <item>Argentina</item>
+        <item>Australia</item>
         <item>Belgio</item>
         <item>Brasile</item>
         <item>Canada</item>
+        <item>Cina</item>
+        <item>Cuba</item>
+        <item>Cechia</item>
         <item>Germania</item>
+        <item>Danimarca</item>
         <item>Spagna</item>
         <item>Francia</item>
         <item>Regno Unito</item>
@@ -216,12 +221,22 @@
         <item>Giappone</item>
         <item>Kenya</item>
         <item>Corea del Sud</item>
+        <item>Lituania</item>
+        <item>Marocco</item>
+        <item>Monaco</item>
         <item>Moldavia</item>
+        <item>Paesi Bassi</item>
+        <item>Norvegia</item>
+        <item>Filippine</item>
         <item>Porto Rico</item>
         <item>Portogallo</item>
         <item>Romania</item>
+        <item>Russia</item>
         <item>Svezia</item>
+        <item>Ucraina</item>
+        <item>Uganda</item>
         <item>Stati Uniti</item>
+        <item>Sudafrica</item>
     </string-array>
     <string-array name="subcategory_names">
         <item>Atletica</item>

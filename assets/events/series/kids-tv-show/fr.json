@@ -1,0 +1,126 @@
+[
+  {
+    "id": "series-l-ile-aux-enfants-1974",
+    "date": "1974-09-16",
+    "title": {
+      "fr": "L'Île aux enfants",
+      "de": "L’Île aux enfants"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'Île_aux_enfants",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3205682 : même date."
+  },
+  {
+    "id": "series-les-visiteurs-du-mercredi-1975",
+    "date": "1975-01-08",
+    "title": {
+      "fr": "Les Visiteurs du mercredi"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Visiteurs_du_mercredi",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3236115 : pas de date."
+  },
+  {
+    "id": "series-1-rue-sesame-1978",
+    "date": "1978-01-04",
+    "title": {
+      "fr": "1, rue Sésame"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/1,_rue_Sésame",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q13423015 : même date."
+  },
+  {
+    "id": "series-recre-a2-1978",
+    "date": "1978-07-03",
+    "title": {
+      "fr": "Récré A2"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Récré_A2",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3454642 : pas de date."
+  },
+  {
+    "id": "series-le-village-dans-les-nuages-1982",
+    "date": "1982-09-13",
+    "title": {
+      "fr": "Le Village dans les nuages"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Village_dans_les_nuages",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3228135 : pas de date."
+  },
+  {
+    "id": "series-telechat-1983",
+    "date": "1983-09-19",
+    "title": {
+      "fr": "Téléchat",
+      "de": "Die Sendung mit der Katze"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Téléchat",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1216222 : même date."
+  },
+  {
+    "id": "series-ca-cartoon-1986",
+    "date": "1986-02-16",
+    "title": {
+      "fr": "Ça cartoon"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ça_cartoon",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3577184 : pas de date."
+  },
+  {
+    "id": "series-club-dorothee-1987",
+    "date": "1987-09-02",
+    "title": {
+      "fr": "Club Dorothée"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Club_Dorothée",
+    "note": "Première diffusion selon l'infobox. Wikidata Q379301 : pas de date."
+  },
+  {
+    "id": "series-les-minikeums-1993",
+    "date": "1993-03-31",
+    "title": {
+      "fr": "Les Minikeums"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Minikeums",
+    "note": "Première diffusion selon l'infobox. Wikidata Q3233863 : même date."
+  },
+  {
+    "id": "series-les-zouzous-1999",
+    "date": "1999-09-11",
+    "title": {
+      "fr": "Les Zouzous",
+      "en": "Zouzous"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Zouzous",
+    "note": "Première diffusion selon l'infobox. Wikidata Q24174895 : pas de date."
+  },
+  {
+    "id": "series-kd2a-2001",
+    "date": "2001-09-03",
+    "title": {
+      "fr": "KD2A"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/KD2A",
+    "note": "Première diffusion selon l'infobox. Wikidata Q2931184 : pas de date."
+  }
+]

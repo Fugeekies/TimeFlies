@@ -1,0 +1,77 @@
+[
+  {
+    "id": "history-naufrage-du-titanic-1912",
+    "date": "1912-04-15",
+    "title": {
+      "fr": "Naufrage du Titanic",
+      "en": "Sinking of the Titanic",
+      "de": "Untergang der Titanic",
+      "it": "Naufragio del Titanic",
+      "es": "Hundimiento del Titanic"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Naufrage_du_Titanic",
+    "note": "Date du naufrage selon l'infobox (collision le soir du 14 avril). Wikidata Q2577588 : donne le 1912-04-14 (collision)."
+  },
+  {
+    "id": "history-capitulation-de-l-allemagne-1945",
+    "date": "1945-05-08",
+    "title": {
+      "fr": "Capitulation de l'Allemagne nazie (8 mai 1945)",
+      "en": "Surrender of Nazi Germany (8 May 1945)",
+      "de": "Kapitulation der Wehrmacht (8. Mai 1945)",
+      "it": "Resa della Germania nazista (8 maggio 1945)",
+      "es": "Capitulación de la Alemania nazi (8 de mayo de 1945)"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Actes_de_capitulation_du_Troisième_Reich",
+    "note": "Capitulation signée à Berlin le 8 mai 1945, date fêtée en France, selon l'article. Wikidata Q700983 : même date."
+  },
+  {
+    "id": "history-bombardement-d-hiroshima-1945",
+    "date": "1945-08-06",
+    "title": {
+      "fr": "Bombardement atomique d'Hiroshima",
+      "en": "Atomic bombing of Hiroshima",
+      "de": "Atombombenabwurf auf Hiroshima",
+      "it": "Bombardamento atomico di Hiroshima",
+      "es": "Bombardeo atómico de Hiroshima"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Bombardements_atomiques_d'Hiroshima_et_Nagasaki",
+    "note": "Bombe d'Hiroshima le 6 août 1945 selon le texte de l'article. Wikidata Q488 : même date."
+  },
+  {
+    "id": "history-traite-de-maastricht-1992",
+    "date": "1992-02-07",
+    "title": {
+      "fr": "Signature du traité de Maastricht",
+      "en": "Signing of the Maastricht Treaty",
+      "de": "Unterzeichnung des Vertrags von Maastricht",
+      "it": "Firma del trattato di Maastricht",
+      "es": "Firma del Tratado de Maastricht"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Traité_de_Maastricht",
+    "note": "Date de la signature selon l'infobox. Wikidata Q11146 : même date."
+  },
+  {
+    "id": "history-tsunami-de-l-ocean-indien-2004",
+    "date": "2004-12-26",
+    "title": {
+      "fr": "Séisme et tsunami dans l'océan Indien",
+      "en": "Indian Ocean earthquake and tsunami",
+      "de": "Erdbeben im Indischen Ozean",
+      "it": "Maremoto dell'Oceano Indiano",
+      "es": "Terremoto y tsunami del océano Índico"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Séisme_et_tsunami_de_2004_dans_l'océan_Indien",
+    "note": "Date selon l'infobox. Wikidata Q130754 : même date."
+  }
+]

@@ -13,5 +13,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Usain_Bolt",
     "note": "Date donnée par l'article Usain Bolt et par l'article Record du monde du 100 mètres. Wikidata : pas de date pour l'exploit."
+  },
+  {
+    "id": "sport-record-usain-bolt-200-m-2009",
+    "date": "2009-08-20",
+    "title": {
+      "fr": "Record du monde du 200 m d'Usain Bolt (19 s 19)",
+      "en": "Usain Bolt's 200 m world record (19.19 s)",
+      "de": "200-m-Weltrekord von Usain Bolt (19,19 s)",
+      "it": "Record del mondo dei 200 m di Usain Bolt (19\"19)",
+      "es": "Récord del mundo de los 200 m de Usain Bolt (19,19 s)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_200_mètres",
+    "note": "Date du record actuel selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
   }
 ]

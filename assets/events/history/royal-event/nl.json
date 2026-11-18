@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-intronisation-de-willem-alexander-2013",
+    "date": "2013-04-30",
+    "title": {
+      "fr": "Willem-Alexander devient roi des Pays-Bas",
+      "en": "Willem-Alexander becomes King of the Netherlands",
+      "de": "Willem-Alexander wird König der Niederlande",
+      "it": "Guglielmo Alessandro diventa re dei Paesi Bassi",
+      "es": "Guillermo Alejandro se convierte en rey de los Países Bajos"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Willem-Alexander_(roi_des_Pays-Bas)",
+    "note": "Début du règne selon l'infobox et le texte de l'article. Wikidata Q154952 : pas de date relevée."
+  }
+]

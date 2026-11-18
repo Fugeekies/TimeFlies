@@ -1,17 +1,17 @@
 [
   {
-    "id": "sport-record-armand-duplantis-2020",
-    "date": "2020-02-08",
+    "id": "sport-record-armand-duplantis-2026",
+    "date": "2026-03-12",
     "title": {
-      "fr": "Premier record du monde de saut à la perche d'Armand Duplantis (6,17 m)",
-      "en": "Armand Duplantis's first pole vault world record (6.17 m)",
-      "de": "Erster Stabhochsprung-Weltrekord von Armand Duplantis (6,17 m)",
-      "it": "Primo record del mondo di salto con l'asta di Armand Duplantis (6,17 m)",
-      "es": "Primer récord del mundo de salto con pértiga de Armand Duplantis (6,17 m)"
+      "fr": "Record du monde du saut à la perche d'Armand Duplantis (6,31 m)",
+      "en": "Armand Duplantis's pole vault world record (6.31 m)",
+      "de": "Stabhochsprung-Weltrekord von Armand Duplantis (6,31 m)",
+      "it": "Record del mondo di salto con l'asta di Armand Duplantis (6,31 m)",
+      "es": "Récord del mundo de salto con pértiga de Armand Duplantis (6,31 m)"
     },
     "kind": "sport",
-    "importance": 2,
-    "source": "https://fr.wikipedia.org/wiki/Armand_Duplantis",
-    "note": "Date donnée par l'article. Wikidata : pas de date pour l'exploit."
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Record_du_monde_du_saut_à_la_perche",
+    "note": "Date du record actuel (6,31 m à Uppsala) selon l'infobox et le texte de l'article. Wikidata : pas de date pour l'exploit."
   }
 ]

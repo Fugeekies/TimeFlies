@@ -1,0 +1,73 @@
+[
+  {
+    "id": "series-chapeau-melon-et-bottes-de-cuir-1961",
+    "date": "1961-01-07",
+    "title": {
+      "fr": "Chapeau melon et bottes de cuir",
+      "en": "The Avengers",
+      "de": "Mit Schirm, Charme und Melone",
+      "it": "Agente speciale",
+      "es": "Los vengadores"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Chapeau_melon_et_bottes_de_cuir",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q113700 : même date."
+  },
+  {
+    "id": "series-doctor-who-1963",
+    "date": "1963-11-23",
+    "title": {
+      "fr": "Doctor Who"
+    },
+    "kind": "series-premiere",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Doctor_Who",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q34316 : même date."
+  },
+  {
+    "id": "series-sherlock-2010",
+    "date": "2010-07-25",
+    "title": {
+      "fr": "Sherlock"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sherlock_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q192837 : même date."
+  },
+  {
+    "id": "series-downton-abbey-2010",
+    "date": "2010-09-26",
+    "title": {
+      "fr": "Downton Abbey"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Downton_Abbey",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q83071 : même date."
+  },
+  {
+    "id": "series-peaky-blinders-2013",
+    "date": "2013-09-12",
+    "title": {
+      "fr": "Peaky Blinders",
+      "de": "Peaky Blinders – Gangs of Birmingham"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Peaky_Blinders_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q14944179 : même date."
+  },
+  {
+    "id": "series-the-crown-2016",
+    "date": "2016-11-04",
+    "title": {
+      "fr": "The Crown"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Crown_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q20707362 : même date."
+  }
+]
