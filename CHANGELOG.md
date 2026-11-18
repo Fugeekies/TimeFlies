@@ -29,6 +29,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Sport sans répétition : le premier et le dernier Ballon d'or d'un même joueur seulement (Messi 2009 et 2023, Cristiano Ronaldo 2008 et 2017), et seulement le record du monde actuel de chaque discipline (Beamon, Lavillenie, Kipchoge et le premier record de Duplantis retirés).
 - Polaroïd : retour au cadre blanc cassé de la maquette pour tous les événements, sans couleur ni chiffre de décennie ; la photo garde la couleur du thème et le dessin du type. Widget Android aussi.
 - Premier lancement revu : titre « Ça ne nous rajeunit pas », texte qui explique l'application, une ligne claire par thème (contenu et nombre d'événements, case à cocher) ; plus de choix par pays sur cet écran, il reste dans Réglages › Événements.
 - Installeur Windows en anglais seulement ; l'application démarre dans la langue de Windows quand elle la propose.
