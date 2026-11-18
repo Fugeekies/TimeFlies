@@ -105,6 +105,14 @@ Notations : deux personnes `A` et `B` (l'utilisateur et l'autre personne, dans u
 - Un événement du 29 février est fêté le **28 février** les années non bissextiles (décision du 13/11/2026).
 - Sans date de naissance (premier lancement passé), les anniversaires s'affichent quand même, sans la ligne « Tu avais N ans » : « le 13/11/2026, les événements du 13/11/2000 ont 26 ans » (décision du 13/11/2026).
 
+## Méthode de saisie, toutes catégories (18/11/2026)
+
+Même méthode que le palier 1 des autres thèmes, avec ces décisions du 18/11/2026 :
+
+- **Séries** : `date` = **première diffusion dans le pays d'origine**, lue dans l'infobox de l'article en français (même exception que pour la musique : la diffusion française est rarement datée au jour près). La date française s'ajoutera en `regionalDates` si elle est sourcée.
+- **Consoles, téléphones et autres produits** : `date` = sortie en France ; quand l'article ne donne qu'une date « Europe », elle tient lieu de date française (noté dans `note`). Une date propre à la France reste prioritaire.
+- **Sport, pas de répétition** : un exploit qui s'est répété (Ballons d'or d'un même joueur, titres d'un même pays) n'entre que **deux fois au plus, le premier et le dernier**. Pour les **records du monde**, seul le **record actuel** entre, pas chaque record battu (et pour un athlète qui l'a battu plusieurs fois, son premier et son record actuel). Règle appliquée aussi aux données déjà en place.
+
 ## Volume visé
 
 Environ **400 événements**, pour que presque chaque jour de l'année ait au moins un anniversaire, et que chaque type ait assez d'événements répartis des années 1950 à aujourd'hui pour que les équivalences marchent quel que soit l'écart d'âge. Une vérification automatique (test) compte les jours de l'année sans anniversaire et les types qui ont moins de 4 événements.
