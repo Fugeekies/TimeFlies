@@ -55,6 +55,41 @@
     "note": "Première version selon l'infobox. Wikidata Q209330 : même date."
   },
   {
+    "id": "tech-google-plus-2011",
+    "date": "2011-06-28",
+    "title": {
+      "fr": "Google+"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Google+",
+    "note": "Lancement selon l'infobox. Wikidata Q356 : même date."
+  },
+  {
+    "id": "tech-facebook-messenger-2011",
+    "date": "2011-08-09",
+    "title": {
+      "fr": "Facebook Messenger",
+      "it": "Messenger",
+      "es": "Messenger"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Facebook_Messenger",
+    "note": "Première version selon l'infobox. Wikidata Q116947 : même date."
+  },
+  {
+    "id": "tech-periscope-2015",
+    "date": "2015-03-26",
+    "title": {
+      "fr": "Periscope"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Periscope_(application)",
+    "note": "Première version selon l'infobox. Wikidata Q19687076 : même date."
+  },
+  {
     "id": "tech-discord-2015",
     "date": "2015-05-13",
     "title": {

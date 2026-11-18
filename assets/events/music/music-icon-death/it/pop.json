@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-lucio-dalla-2012",
+    "date": "2012-03-01",
+    "title": {
+      "fr": "Lucio Dalla"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Lucio_Dalla",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q167546 : même date."
+  },
+  {
+    "id": "death-raffaella-carra-2021",
+    "date": "2021-07-05",
+    "title": {
+      "fr": "Raffaella Carrà"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Raffaella_Carrà",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q266640 : même date."
+  }
+]

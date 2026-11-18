@@ -1,5 +1,27 @@
 [
   {
+    "id": "album-entre-gris-clair-et-gris-fonce-1987",
+    "date": "1987-11-05",
+    "title": {
+      "fr": "Entre gris clair et gris foncé (Jean-Jacques Goldman)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Entre_gris_clair_et_gris_foncé",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q3055193 : même date."
+  },
+  {
+    "id": "album-ainsi-soit-je-1988",
+    "date": "1988-03-14",
+    "title": {
+      "fr": "Ainsi soit je... (Mylène Farmer)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ainsi_soit_je...",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q1952903 : même date."
+  },
+  {
     "id": "album-random-access-memories-2013",
     "date": "2013-05-17",
     "title": {

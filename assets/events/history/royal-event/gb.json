@@ -60,6 +60,36 @@
     "note": "Date selon l'infobox. Wikidata Q1094155 : même date."
   },
   {
+    "id": "history-naissance-du-prince-william-1982",
+    "date": "1982-06-21",
+    "title": {
+      "fr": "Naissance du prince William",
+      "en": "Birth of Prince William",
+      "de": "Geburt von Prinz William",
+      "it": "Nascita del principe William",
+      "es": "Nacimiento del príncipe Guillermo"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/William_de_Galles",
+    "note": "Date de naissance selon l'infobox et le texte de l'article. Wikidata Q36812 : pas de date relevée."
+  },
+  {
+    "id": "history-naissance-du-prince-harry-1984",
+    "date": "1984-09-15",
+    "title": {
+      "fr": "Naissance du prince Harry",
+      "en": "Birth of Prince Harry",
+      "de": "Geburt von Prinz Harry",
+      "it": "Nascita del principe Harry",
+      "es": "Nacimiento del príncipe Enrique"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_de_Sussex",
+    "note": "Date de naissance selon l'infobox et le texte de l'article. Wikidata Q152316 : pas de date relevée."
+  },
+  {
     "id": "history-mort-de-diana-1997",
     "date": "1997-08-31",
     "title": {
@@ -73,6 +103,36 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Mort_de_Diana_Spencer",
     "note": "Date selon l'infobox. Wikidata Q2193276 : même date."
+  },
+  {
+    "id": "history-mort-de-la-reine-mere-2002",
+    "date": "2002-03-30",
+    "title": {
+      "fr": "Mort de la reine mère Elizabeth",
+      "en": "Death of Queen Elizabeth The Queen Mother",
+      "de": "Tod von Queen Mum",
+      "it": "Morte della regina madre Elisabetta",
+      "es": "Muerte de la reina madre Isabel"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Elizabeth_Bowes-Lyon",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q10633 : même date."
+  },
+  {
+    "id": "history-mariage-de-charles-et-camilla-2005",
+    "date": "2005-04-09",
+    "title": {
+      "fr": "Mariage du prince Charles et de Camilla Parker Bowles",
+      "en": "Wedding of Prince Charles and Camilla Parker Bowles",
+      "de": "Hochzeit von Prinz Charles und Camilla Parker Bowles",
+      "it": "Matrimonio del principe Carlo e Camilla Parker Bowles",
+      "es": "Boda del príncipe Carlos y Camilla Parker Bowles"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Charles_de_Galles_et_de_Camilla_Parker_Bowles",
+    "note": "Date selon l'infobox. Wikidata Q3291135 : même date."
   },
   {
     "id": "history-mariage-de-william-et-catherine-2011",
@@ -118,6 +178,21 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Mariage_du_prince_Harry_et_de_Meghan_Markle",
     "note": "Date selon l'infobox. Wikidata Q43890449 : même date."
+  },
+  {
+    "id": "history-mort-du-prince-philip-2021",
+    "date": "2021-04-09",
+    "title": {
+      "fr": "Mort du prince Philip",
+      "en": "Death of Prince Philip",
+      "de": "Tod von Prinz Philip",
+      "it": "Morte del principe Filippo",
+      "es": "Muerte del príncipe Felipe"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Philip_Mountbatten",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q80976 : même date."
   },
   {
     "id": "history-mort-d-elisabeth-ii-2022",

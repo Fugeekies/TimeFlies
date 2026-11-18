@@ -52,7 +52,7 @@ Jetons de la maquette (clair) : fond `#E8DFD2`, cartes `#FBFAF7`, encre `#2B2420
 ##### Le cadre et la photo (décision du 17/11/2026, qui remplace celle du 14/11/2026)
 
 - **Le cadre** est blanc cassé pour tous les événements, comme sur la maquette. Les cadres de la couleur de la décennie et le chiffre de la décennie écrit dans le coin (décision du 14/11/2026) sont abandonnés : ce n'était pas beau.
-- **La photo** garde la couleur de la famille, avec en filigrane (blanc à 42 %), en haut à droite, **un dessin au trait par type** : pop-corn (blockbuster), crayon et étincelle (film d'animation), masques de théâtre (comédie française), planète et étoiles (épisode de saga). Un type sans dessin prend celui de sa famille : clap, télévision, vinyle, ballon, manette, monument. Les dessins des autres types arrivent avec leurs données.
+- **La photo** garde la couleur de la famille, avec en filigrane (blanc à 42 %), en haut à droite, **un dessin au trait par type** : pop-corn (blockbuster), crayon et étincelle (film d'animation), masques de théâtre (comédie française), planète et étoiles (épisode de saga). Un type sans dessin prend celui de sa famille : clap, télévision, vinyle, ballon, manette, monument. Les dessins des autres types arrivent avec leurs données. Types de sport ajoutés le 18/11/2026 : couronne de laurier autour d'une étoile (titre mondial), raquette et balle (Grand Chelem), vélo de course (Tour de France).
 - Tout est dessiné par l'application (vectoriel) : aucune image, aucun droit, aucun poids ajouté.
 
 #### Règles communes aux trois styles

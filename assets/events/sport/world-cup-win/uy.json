@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-uy-1930",
+    "date": "1930-07-30",
+    "title": {
+      "fr": "Premier titre mondial de l'Uruguay (Coupe du monde de football 1930)",
+      "en": "First world title for Uruguay (1930 Football World Cup)",
+      "de": "Erster Weltmeistertitel für Uruguay (Fußball-WM 1930)",
+      "it": "Primo titolo mondiale per l'Uruguay (Mondiali di calcio 1930)",
+      "es": "Primer título mundial para Uruguay (Mundial de fútbol 1930)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1930",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q63843 : même date."
+  },
+  {
+    "id": "sport-coupe-du-monde-foot-uy-1950",
+    "date": "1950-07-16",
+    "title": {
+      "fr": "Dernier titre mondial en date de l'Uruguay (Coupe du monde de football 1950)",
+      "en": "Latest world title for Uruguay (1950 Football World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Uruguay (Fußball-WM 1950)",
+      "it": "Ultimo titolo mondiale finora per l'Uruguay (Mondiali di calcio 1950)",
+      "es": "Último título mundial hasta la fecha para Uruguay (Mundial de fútbol 1950)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Match_de_football_Brésil_–_Uruguay_(1950)",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q754483 : même date."
+  }
+]

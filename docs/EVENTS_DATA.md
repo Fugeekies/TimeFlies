@@ -71,7 +71,7 @@ Catalogue initial, à compléter pendant la saisie de la base :
 | Séries & télé | `sitcom-hit` (sitcom culte), `drama-series-hit` (série dramatique culte), `french-series-hit`, `reality-tv` (téléréalité), `kids-tv-show` (émission jeunesse), `cartoon-on-tv` (dessin animé culte à la télé) |
 | Cinéma | `blockbuster`, `animated-feature` (film d'animation familial), `french-comedy-hit`, `saga-episode` (épisode d'une saga culte) |
 | Musique | `music-icon-death` (mort d'une icône de la musique, tous genres), `diva-hit`, `boy-band-hit`, `rap-album-hit`, `summer-hit` (tube de l'été), `pop-album-hit` |
-| Sport | `football-star-peak` (sommet d'une star du foot), `world-cup-win-france`, `olympics-in-france`, `sports-record` |
+| Sport | `football-star-peak` (sommet d'une star du foot), `world-cup-win-france`, `olympics-in-france`, `sports-record`, `world-cup-win` (titre mondial des autres nations : football, football féminin, rugby), `tennis-grand-slam` (titre du Grand Chelem en simple), `tour-de-france-win` (victoire au Tour de France) |
 | Jeux vidéo & tech | `nintendo-console`, `playstation-console`, `handheld-console`, `video-game-phenomenon`, `phone-launch`, `social-network-launch`, `music-format` (cassette, CD, MP3, streaming) |
 | Politique & histoire | `french-president-elected`, `us-president-elected`, `actor-turned-politician`, `world-event`, `royal-event` |
 

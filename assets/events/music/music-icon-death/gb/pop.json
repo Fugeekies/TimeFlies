@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-george-harrison-2001",
+    "date": "2001-11-29",
+    "title": {
+      "fr": "George Harrison"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/George_Harrison",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2643 : même date."
+  },
+  {
     "id": "death-george-michael-2016",
     "date": "2016-12-25",
     "title": {
@@ -9,5 +20,28 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/George_Michael",
     "note": "Date de décès de l'infobox. Wikidata Q130311 : même date."
+  },
+  {
+    "id": "death-sinead-o-connor-2023",
+    "date": "2023-07-26",
+    "title": {
+      "fr": "Sinéad O'Connor",
+      "de": "Sinéad O’Connor"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sinéad_O'Connor",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q193982 : même date."
+  },
+  {
+    "id": "death-liam-payne-2024",
+    "date": "2024-10-16",
+    "title": {
+      "fr": "Liam Payne"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Liam_Payne",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2756349 : même date."
   }
 ]

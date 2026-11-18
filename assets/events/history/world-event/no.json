@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-attentats-d-oslo-et-d-utoya-2011",
+    "date": "2011-07-22",
+    "title": {
+      "fr": "Attentats d'Oslo et d'Utøya",
+      "en": "Oslo and Utøya attacks",
+      "de": "Anschläge in Oslo und auf Utøya",
+      "it": "Attentati di Oslo e Utøya",
+      "es": "Atentados de Oslo y Utøya"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_d'Oslo_et_d'Utøya",
+    "note": "Date selon l'infobox. Wikidata Q79967 : même date."
+  }
+]

@@ -45,6 +45,21 @@
     "note": "Bombe d'Hiroshima le 6 août 1945 selon le texte de l'article. Wikidata Q488 : même date."
   },
   {
+    "id": "history-accords-de-schengen-1985",
+    "date": "1985-06-14",
+    "title": {
+      "fr": "Signature des accords de Schengen",
+      "en": "Signing of the Schengen Agreement",
+      "de": "Unterzeichnung des Schengener Abkommens",
+      "it": "Firma dell'accordo di Schengen",
+      "es": "Firma del Acuerdo de Schengen"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Accord_de_Schengen",
+    "note": "Date de la signature selon l'infobox. Wikidata Q2822795 : même date."
+  },
+  {
     "id": "history-traite-de-maastricht-1992",
     "date": "1992-02-07",
     "title": {
@@ -73,5 +88,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Séisme_et_tsunami_de_2004_dans_l'océan_Indien",
     "note": "Date selon l'infobox. Wikidata Q130754 : même date."
+  },
+  {
+    "id": "history-accord-de-paris-sur-le-climat-2015",
+    "date": "2015-12-12",
+    "title": {
+      "fr": "Adoption de l'accord de Paris sur le climat",
+      "en": "Adoption of the Paris Agreement on climate",
+      "de": "Annahme des Pariser Klimaabkommens",
+      "it": "Adozione dell'accordo di Parigi sul clima",
+      "es": "Adopción del Acuerdo de París sobre el clima"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Accord_de_Paris_sur_le_climat",
+    "note": "Date de l'adoption selon l'infobox. Wikidata Q21707860 : même date."
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-grand-chelem-rafael-nadal-rg-2005",
+    "date": "2005-06-05",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Rafael Nadal (Roland-Garros 2005)",
+      "en": "Rafael Nadal's first Grand Slam title (2005 French Open)",
+      "de": "Erster Grand-Slam-Titel von Rafael Nadal (French Open 2005)",
+      "it": "Primo titolo del Grande Slam di Rafael Nadal (Roland Garros 2005)",
+      "es": "Primer título de Grand Slam de Rafael Nadal (Roland Garros 2005)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_des_Internationaux_de_France_2005",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q225320 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-rafael-nadal-rg-2022",
+    "date": "2022-06-05",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Rafael Nadal (Roland-Garros 2022)",
+      "en": "Rafael Nadal's last Grand Slam title (2022 French Open)",
+      "de": "Letzter Grand-Slam-Titel von Rafael Nadal (French Open 2022)",
+      "it": "Ultimo titolo del Grande Slam di Rafael Nadal (Roland Garros 2022)",
+      "es": "Último título de Grand Slam de Rafael Nadal (Roland Garros 2022)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_des_Internationaux_de_France_2022",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q107126329 : année seulement."
+  }
+]

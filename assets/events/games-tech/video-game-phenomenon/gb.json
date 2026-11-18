@@ -11,6 +11,39 @@
     "note": "Sortie en Europe sur Saturn, première version du jeu, selon l'infobox. Wikidata Q317620 : donne une autre date : 1996-10-25."
   },
   {
+    "id": "tech-grand-theft-auto-iii-2001",
+    "date": "2001-10-26",
+    "title": {
+      "fr": "Grand Theft Auto III"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_III",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q149106 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-grand-theft-auto-san-andreas-2004",
+    "date": "2004-10-29",
+    "title": {
+      "fr": "Grand Theft Auto: San Andreas"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q83265 : date nord-américaine (2004-10-26) et dates d'autres plateformes seulement."
+  },
+  {
+    "id": "tech-candy-crush-saga-2012",
+    "date": "2012-04-12",
+    "title": {
+      "fr": "Candy Crush Saga"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Candy_Crush_Saga",
+    "note": "Sortie mondiale sur Facebook selon l'infobox. Wikidata Q8768018 : même date."
+  },
+  {
     "id": "tech-grand-theft-auto-v-2013",
     "date": "2013-09-17",
     "title": {

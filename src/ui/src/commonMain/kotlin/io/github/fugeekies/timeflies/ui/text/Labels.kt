@@ -60,6 +60,9 @@ import io.github.fugeekies.timeflies.ui.resources.type_football_star_peak
 import io.github.fugeekies.timeflies.ui.resources.type_world_cup_win_france
 import io.github.fugeekies.timeflies.ui.resources.type_olympics_in_france
 import io.github.fugeekies.timeflies.ui.resources.type_sports_record
+import io.github.fugeekies.timeflies.ui.resources.type_tennis_grand_slam
+import io.github.fugeekies.timeflies.ui.resources.type_tour_de_france_win
+import io.github.fugeekies.timeflies.ui.resources.type_world_cup_win
 import io.github.fugeekies.timeflies.ui.resources.type_nintendo_console
 import io.github.fugeekies.timeflies.ui.resources.type_playstation_console
 import io.github.fugeekies.timeflies.ui.resources.type_handheld_console
@@ -240,6 +243,9 @@ fun typeLabel(type: EventType): String = stringResource(
         EventType.WORLD_CUP_WIN_FRANCE -> Res.string.type_world_cup_win_france
         EventType.OLYMPICS_IN_FRANCE -> Res.string.type_olympics_in_france
         EventType.SPORTS_RECORD -> Res.string.type_sports_record
+        EventType.WORLD_CUP_WIN -> Res.string.type_world_cup_win
+        EventType.TENNIS_GRAND_SLAM -> Res.string.type_tennis_grand_slam
+        EventType.TOUR_DE_FRANCE_WIN -> Res.string.type_tour_de_france_win
         EventType.NINTENDO_CONSOLE -> Res.string.type_nintendo_console
         EventType.PLAYSTATION_CONSOLE -> Res.string.type_playstation_console
         EventType.HANDHELD_CONSOLE -> Res.string.type_handheld_console

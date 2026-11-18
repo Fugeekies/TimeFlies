@@ -11,6 +11,28 @@
     "note": "Sortie sur PC (en téléchargement) selon l'infobox. Wikidata Q189784 : même date."
   },
   {
+    "id": "tech-crash-bandicoot-1996",
+    "date": "1996-11-08",
+    "title": {
+      "fr": "Crash Bandicoot"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Crash_Bandicoot_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q719176 : date nord-américaine seulement."
+  },
+  {
+    "id": "tech-spyro-the-dragon-1998",
+    "date": "1998-10-23",
+    "title": {
+      "fr": "Spyro the Dragon"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Spyro_the_Dragon_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q858391 : date nord-américaine seulement."
+  },
+  {
     "id": "tech-halo-combat-evolved-2002",
     "date": "2002-03-14",
     "title": {
@@ -34,6 +56,43 @@
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q211096 : même date."
   },
   {
+    "id": "tech-les-sims-2-2004",
+    "date": "2004-09-16",
+    "title": {
+      "fr": "Les Sims 2",
+      "en": "The Sims 2",
+      "de": "Die Sims 2",
+      "it": "The Sims 2",
+      "es": "Los Sims 2"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Sims_2",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q182771 : même date."
+  },
+  {
+    "id": "tech-half-life-2-2004",
+    "date": "2004-11-16",
+    "title": {
+      "fr": "Half-Life 2"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Half-Life_2",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q193581 : même date."
+  },
+  {
+    "id": "tech-portal-2007",
+    "date": "2007-10-10",
+    "title": {
+      "fr": "Portal"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Portal_(jeu_vidéo)",
+    "note": "Sortie mondiale sur PC selon l'infobox. Wikidata Q274897 : même date."
+  },
+  {
     "id": "tech-league-of-legends-2009",
     "date": "2009-10-27",
     "title": {
@@ -43,6 +102,50 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/League_of_Legends",
     "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q223341 : même date."
+  },
+  {
+    "id": "tech-the-elder-scrolls-v-skyrim-2011",
+    "date": "2011-11-11",
+    "title": {
+      "fr": "The Elder Scrolls V: Skyrim"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q323862 : même date."
+  },
+  {
+    "id": "tech-rocket-league-2015",
+    "date": "2015-07-07",
+    "title": {
+      "fr": "Rocket League"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rocket_League",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q20031743 : même date."
+  },
+  {
+    "id": "tech-overwatch-2016",
+    "date": "2016-05-24",
+    "title": {
+      "fr": "Overwatch"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Overwatch",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q18515944 : même date."
+  },
+  {
+    "id": "tech-god-of-war-2018",
+    "date": "2018-04-20",
+    "title": {
+      "fr": "God of War"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/God_of_War_(jeu_vidéo,_2018)",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q18345138 : même date."
   },
   {
     "id": "tech-among-us-2018",
@@ -68,5 +171,31 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Red_Dead_Redemption_II",
     "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q27438121 : même date."
+  },
+  {
+    "id": "tech-valorant-2020",
+    "date": "2020-06-02",
+    "title": {
+      "fr": "Valorant"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Valorant",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q86919275 : même date."
+  },
+  {
+    "id": "tech-hogwarts-legacy-l-heritage-de-poudlard-2023",
+    "date": "2023-02-10",
+    "title": {
+      "fr": "Hogwarts Legacy : L'Héritage de Poudlard",
+      "en": "Hogwarts Legacy",
+      "de": "Hogwarts Legacy",
+      "it": "Hogwarts Legacy",
+      "es": "Hogwarts Legacy"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hogwarts_Legacy_:_L'Héritage_de_Poudlard",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q99397854 : même date."
   }
 ]

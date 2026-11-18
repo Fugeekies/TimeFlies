@@ -1,5 +1,16 @@
 [
   {
+    "id": "album-licensed-to-ill-1986",
+    "date": "1986-11-15",
+    "title": {
+      "fr": "Licensed to Ill (Beastie Boys)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Licensed_to_Ill",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q1073460 : même date."
+  },
+  {
     "id": "album-it-takes-a-nation-1988",
     "date": "1988-06-28",
     "title": {
@@ -9,6 +20,17 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/It_Takes_a_Nation_of_Millions_to_Hold_Us_Back",
     "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q926127 donne une autre date : 1988-06-30."
+  },
+  {
+    "id": "album-illmatic-1994",
+    "date": "1994-04-19",
+    "title": {
+      "fr": "Illmatic (Nas)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Illmatic",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q847541 : même date."
   },
   {
     "id": "album-ready-to-die-1994",
@@ -31,6 +53,17 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/All_Eyez_on_Me",
     "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q498054 : même date."
+  },
+  {
+    "id": "album-the-slim-shady-lp-1999",
+    "date": "1999-02-23",
+    "title": {
+      "fr": "The Slim Shady LP (Eminem)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Slim_Shady_LP",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q383459 : même date."
   },
   {
     "id": "album-2001-1999",
@@ -64,5 +97,27 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/The_College_Dropout",
     "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q747526 : même date."
+  },
+  {
+    "id": "album-good-kid-m-a-a-d-city-2012",
+    "date": "2012-10-22",
+    "title": {
+      "fr": "Good Kid, M.A.A.D City (Kendrick Lamar)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Good_Kid,_M.A.A.D_City",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q1930676 : même date."
+  },
+  {
+    "id": "album-to-pimp-a-butterfly-2015",
+    "date": "2015-03-15",
+    "title": {
+      "fr": "To Pimp a Butterfly (Kendrick Lamar)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/To_Pimp_a_Butterfly",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q19602856 : même date."
   }
 ]

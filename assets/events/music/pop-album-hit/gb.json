@@ -1,5 +1,16 @@
 [
   {
+    "id": "album-revolver-1966",
+    "date": "1966-08-05",
+    "title": {
+      "fr": "Revolver (The Beatles)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Revolver_(album)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q185121 : même date."
+  },
+  {
     "id": "album-sgt-peppers-1967",
     "date": "1967-06-01",
     "title": {
@@ -22,6 +33,17 @@
     "note": "Sortie au Royaume-Uni selon l'infobox (qui donne aussi la France le 12 septembre 1969). Wikidata Q173643 : même date."
   },
   {
+    "id": "album-led-zeppelin-iv-1971",
+    "date": "1971-11-08",
+    "title": {
+      "fr": "Led Zeppelin IV (Led Zeppelin)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Led_Zeppelin_IV",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q201940 : même date."
+  },
+  {
     "id": "album-the-dark-side-of-the-moon-1973",
     "date": "1973-03-01",
     "title": {
@@ -42,6 +64,17 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Rumours",
     "note": "Sortie selon l'infobox. Wikidata Q695405 : même date."
+  },
+  {
+    "id": "album-the-wall-1979",
+    "date": "1979-11-30",
+    "title": {
+      "fr": "The Wall (Pink Floyd)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Wall",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q151114 : même date."
   },
   {
     "id": "album-21-2011",

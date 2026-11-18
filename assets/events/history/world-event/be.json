@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-attentats-de-bruxelles-2016",
+    "date": "2016-03-22",
+    "title": {
+      "fr": "Attentats de Bruxelles",
+      "en": "Brussels bombings",
+      "de": "Terroranschläge in Brüssel",
+      "it": "Attentati di Bruxelles",
+      "es": "Atentados de Bruselas"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_du_22_mars_2016_à_Bruxelles",
+    "note": "Date selon l'infobox. Wikidata Q23365300 : même date."
+  }
+]

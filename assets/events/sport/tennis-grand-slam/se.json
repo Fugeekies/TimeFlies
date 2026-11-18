@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-grand-chelem-bjorn-borg-rg-1974",
+    "date": "1974-06-16",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Björn Borg (Roland-Garros 1974)",
+      "en": "Björn Borg's first Grand Slam title (1974 French Open)",
+      "de": "Erster Grand-Slam-Titel von Björn Borg (French Open 1974)",
+      "it": "Primo titolo del Grande Slam di Björn Borg (Roland Garros 1974)",
+      "es": "Primer título de Grand Slam de Björn Borg (Roland Garros 1974)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_des_Internationaux_de_France_1974",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q2054980 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-bjorn-borg-rg-1981",
+    "date": "1981-06-07",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Björn Borg (Roland-Garros 1981)",
+      "en": "Björn Borg's last Grand Slam title (1981 French Open)",
+      "de": "Letzter Grand-Slam-Titel von Björn Borg (French Open 1981)",
+      "it": "Ultimo titolo del Grande Slam di Björn Borg (Roland Garros 1981)",
+      "es": "Último título de Grand Slam de Björn Borg (Roland Garros 1981)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_des_Internationaux_de_France_1981",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q2559903 : année seulement."
+  }
+]

@@ -44,6 +44,28 @@
     "note": "Sortie originale selon l'infobox. Wikidata Q288411 : même date."
   },
   {
+    "id": "album-ouest-side-2006",
+    "date": "2006-02-13",
+    "title": {
+      "fr": "Ouest Side (Booba)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ouest_Side",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q3358099 : donne une autre date : 2006-02-18."
+  },
+  {
+    "id": "album-or-noir-2013",
+    "date": "2013-10-21",
+    "title": {
+      "fr": "Or noir (Kaaris)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Or_noir_(album)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q17111946 : même date."
+  },
+  {
     "id": "album-feu-2015",
     "date": "2015-06-08",
     "title": {
@@ -55,6 +77,17 @@
     "note": "Sortie selon l'infobox et l'introduction. Wikidata Q20668963 : même date."
   },
   {
+    "id": "album-le-monde-chico-2015",
+    "date": "2015-10-30",
+    "title": {
+      "fr": "Le Monde Chico (PNL)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Monde_Chico",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q28496259 : même date."
+  },
+  {
     "id": "album-dans-la-legende-2016",
     "date": "2016-09-16",
     "title": {
@@ -64,5 +97,27 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Dans_la_l%C3%A9gende",
     "note": "Sortie selon l'infobox. Wikidata Q28494258 : même date en France."
+  },
+  {
+    "id": "album-deux-freres-2019",
+    "date": "2019-04-05",
+    "title": {
+      "fr": "Deux frères (PNL)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Deux_Frères_(album)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q62695335 : même date."
+  },
+  {
+    "id": "album-civilisation-2021",
+    "date": "2021-11-19",
+    "title": {
+      "fr": "Civilisation (Orelsan)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Civilisation_(album)",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q109642385 : même date."
   }
 ]

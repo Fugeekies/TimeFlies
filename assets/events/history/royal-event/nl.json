@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-beatrix-reine-des-pays-bas-1980",
+    "date": "1980-04-30",
+    "title": {
+      "fr": "Beatrix devient reine des Pays-Bas",
+      "en": "Beatrix becomes Queen of the Netherlands",
+      "de": "Beatrix wird Königin der Niederlande",
+      "it": "Beatrice diventa regina dei Paesi Bassi",
+      "es": "Beatriz se convierte en reina de los Países Bajos"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Beatrix_(reine_des_Pays-Bas)",
+    "note": "Début du règne selon l'infobox. Wikidata Q29574 : pas de date relevée."
+  },
+  {
     "id": "history-intronisation-de-willem-alexander-2013",
     "date": "2013-04-30",
     "title": {

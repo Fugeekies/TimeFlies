@@ -316,6 +316,9 @@
     <string name="type_world_cup_win_france">Frankreich gewinnt die Weltmeisterschaft</string>
     <string name="type_olympics_in_france">Olympische Spiele in Frankreich</string>
     <string name="type_sports_record">Sportrekord</string>
+    <string name="type_world_cup_win">Weltmeistertitel</string>
+    <string name="type_tennis_grand_slam">Grand-Slam-Titel</string>
+    <string name="type_tour_de_france_win">Tour-de-France-Sieg</string>
     <string name="type_nintendo_console">Nintendo-Konsole</string>
     <string name="type_playstation_console">PlayStation-Konsole</string>
     <string name="type_handheld_console">Handheld-Konsole</string>

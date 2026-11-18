@@ -9,5 +9,16 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Bob_Marley",
     "note": "Date de décès de l'infobox. Wikidata Q409 : même date (et une seconde valeur erronée, 1981-04-11)."
+  },
+  {
+    "id": "death-peter-tosh-1987",
+    "date": "1987-09-11",
+    "title": {
+      "fr": "Peter Tosh"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Peter_Tosh",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q273049 : même date."
   }
 ]

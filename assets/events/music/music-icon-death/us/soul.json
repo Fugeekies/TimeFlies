@@ -1,5 +1,71 @@
 [
   {
+    "id": "death-sam-cooke-1964",
+    "date": "1964-12-11",
+    "title": {
+      "fr": "Sam Cooke"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sam_Cooke",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q295919 : même date."
+  },
+  {
+    "id": "death-otis-redding-1967",
+    "date": "1967-12-10",
+    "title": {
+      "fr": "Otis Redding"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Otis_Redding",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q217839 : même date."
+  },
+  {
+    "id": "death-marvin-gaye-1984",
+    "date": "1984-04-01",
+    "title": {
+      "fr": "Marvin Gaye"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Marvin_Gaye",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q189758 : même date."
+  },
+  {
+    "id": "death-barry-white-2003",
+    "date": "2003-07-04",
+    "title": {
+      "fr": "Barry White"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Barry_White",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q213647 : même date."
+  },
+  {
+    "id": "death-ray-charles-2004",
+    "date": "2004-06-10",
+    "title": {
+      "fr": "Ray Charles"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ray_Charles",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q544387 : même date."
+  },
+  {
+    "id": "death-james-brown-2006",
+    "date": "2006-12-25",
+    "title": {
+      "fr": "James Brown"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/James_Brown",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q5950 : même date."
+  },
+  {
     "id": "death-whitney-houston-2012",
     "date": "2012-02-11",
     "title": {
@@ -9,5 +75,27 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Whitney_Houston",
     "note": "Date de décès de l'infobox. Wikidata Q34389 : même date."
+  },
+  {
+    "id": "death-aretha-franklin-2018",
+    "date": "2018-08-16",
+    "title": {
+      "fr": "Aretha Franklin"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Aretha_Franklin",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q125121 : même date."
+  },
+  {
+    "id": "death-tina-turner-2023",
+    "date": "2023-05-24",
+    "title": {
+      "fr": "Tina Turner"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Tina_Turner",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q131814 : même date."
   }
 ]

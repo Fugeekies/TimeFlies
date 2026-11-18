@@ -1,0 +1,32 @@
+[
+  {
+    "id": "history-mort-de-francisco-franco-1975",
+    "date": "1975-11-20",
+    "title": {
+      "fr": "Mort de Francisco Franco",
+      "en": "Death of Francisco Franco",
+      "de": "Tod von Francisco Franco",
+      "it": "Morte di Francisco Franco",
+      "es": "Muerte de Francisco Franco"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Francisco_Franco",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q29179 : même date."
+  },
+  {
+    "id": "history-attentats-de-madrid-2004",
+    "date": "2004-03-11",
+    "title": {
+      "fr": "Attentats de Madrid",
+      "en": "Madrid train bombings",
+      "de": "Terroranschläge in Madrid",
+      "it": "Attentati di Madrid",
+      "es": "Atentados del 11 de marzo en Madrid"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_de_Madrid_du_11_mars_2004",
+    "note": "Date selon l'infobox. Wikidata Q213531 : même date."
+  }
+]

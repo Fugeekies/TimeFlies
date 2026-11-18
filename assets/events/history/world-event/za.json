@@ -13,5 +13,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Nelson_Mandela",
     "note": "Date de la libération selon le texte de l'article. Wikidata : pas de date pour cet événement."
+  },
+  {
+    "id": "history-premieres-elections-multiraciales-en-afrique-du-sud-1994",
+    "date": "1994-04-27",
+    "title": {
+      "fr": "Premières élections multiraciales en Afrique du Sud",
+      "en": "First multiracial elections in South Africa",
+      "de": "Erste freie Wahlen in Südafrika",
+      "it": "Prime elezioni multirazziali in Sudafrica",
+      "es": "Primeras elecciones multirraciales en Sudáfrica"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élections_générales_sud-africaines_de_1994",
+    "note": "Date de l'élection selon l'infobox. Wikidata Q957012 : même date."
   }
 ]

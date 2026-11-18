@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-br-2002",
+    "date": "2002-06-30",
+    "title": {
+      "fr": "Dernier titre mondial en date du Brésil (Coupe du monde de football 2002)",
+      "en": "Latest world title for Brazil (2002 Football World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Brasilien (Fußball-WM 2002)",
+      "it": "Ultimo titolo mondiale finora per il Brasile (Mondiali di calcio 2002)",
+      "es": "Último título mundial hasta la fecha para Brasil (Mundial de fútbol 2002)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2002",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q715021 : même date."
+  }
+]

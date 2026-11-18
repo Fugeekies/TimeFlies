@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-proclamation-de-juan-carlos-1975",
+    "date": "1975-11-22",
+    "title": {
+      "fr": "Proclamation de Juan Carlos Ier, roi d'Espagne",
+      "en": "Proclamation of Juan Carlos I as King of Spain",
+      "de": "Proklamation von Juan Carlos I. zum König von Spanien",
+      "it": "Proclamazione di Juan Carlos I re di Spagna",
+      "es": "Proclamación de Juan Carlos I como rey de España"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Juan_Carlos_Ier",
+    "note": "Début du règne selon l'infobox. Wikidata Q19943 : pas de date relevée."
+  },
+  {
     "id": "history-mariage-de-felipe-et-letizia-2004",
     "date": "2004-05-22",
     "title": {

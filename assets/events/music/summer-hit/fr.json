@@ -1,5 +1,27 @@
 [
   {
+    "id": "single-il-jouait-du-piano-debout-1980",
+    "date": "1980-05-19",
+    "title": {
+      "fr": "Il jouait du piano debout (France Gall)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Il_jouait_du_piano_debout",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q3148511 : même date."
+  },
+  {
+    "id": "single-les-sunlights-des-tropiques-1985",
+    "date": "1985-04-27",
+    "title": {
+      "fr": "Les Sunlights des tropiques (Gilbert Montagné)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Sunlights_des_tropiques",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q3235645 : même date."
+  },
+  {
     "id": "single-lambada-1989",
     "date": "1989-07-20",
     "title": {
@@ -9,5 +31,16 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Lambada_(chanson)",
     "note": "Sortie selon l'infobox. Wikidata Q701766 : mois seulement (juillet 1989)."
+  },
+  {
+    "id": "single-moi-lolita-2000",
+    "date": "2000-07-03",
+    "title": {
+      "fr": "Moi... Lolita (Alizée)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Moi…_Lolita",
+    "note": "Sortie originale selon le texte de l'article. Wikidata Q26402 : année ou mois seulement."
   }
 ]

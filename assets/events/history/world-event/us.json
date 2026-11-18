@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-attaque-de-pearl-harbor-1941",
+    "date": "1941-12-07",
+    "title": {
+      "fr": "Attaque de Pearl Harbor",
+      "en": "Attack on Pearl Harbor",
+      "de": "Angriff auf Pearl Harbor",
+      "it": "Attacco di Pearl Harbor",
+      "es": "Ataque a Pearl Harbor"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Attaque_de_Pearl_Harbor",
+    "note": "Date selon l'infobox. Wikidata Q52418 : même date."
+  },
+  {
     "id": "history-i-have-a-dream-1963",
     "date": "1963-08-28",
     "title": {
@@ -45,6 +60,21 @@
     "note": "Date selon l'infobox. Wikidata Q757963 : même date."
   },
   {
+    "id": "history-assassinat-de-robert-kennedy-1968",
+    "date": "1968-06-05",
+    "title": {
+      "fr": "Assassinat de Robert F. Kennedy",
+      "en": "Assassination of Robert F. Kennedy",
+      "de": "Attentat auf Robert F. Kennedy",
+      "it": "Assassinio di Robert F. Kennedy",
+      "es": "Asesinato de Robert F. Kennedy"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Assassinat_de_Robert_F._Kennedy",
+    "note": "Date selon l'infobox. Wikidata Q1187550 : même date."
+  },
+  {
     "id": "history-apollo-11-alunissage-1969",
     "date": "1969-07-20",
     "title": {
@@ -58,6 +88,36 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Apollo_11",
     "note": "Date de l'alunissage selon l'infobox (le soir du 20 juillet, heure de Paris). Wikidata Q43653 : pas de date pour l'alunissage."
+  },
+  {
+    "id": "history-lancement-d-apollo-13-1970",
+    "date": "1970-04-11",
+    "title": {
+      "fr": "Lancement d'Apollo 13",
+      "en": "Launch of Apollo 13",
+      "de": "Start von Apollo 13",
+      "it": "Lancio dell'Apollo 13",
+      "es": "Lanzamiento del Apolo 13"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Apollo_13",
+    "note": "Date du lancement selon l'infobox. Wikidata Q182252 : pas de date."
+  },
+  {
+    "id": "history-eruption-du-mont-saint-helens-1980",
+    "date": "1980-05-18",
+    "title": {
+      "fr": "Éruption du mont Saint Helens",
+      "en": "Eruption of Mount St. Helens",
+      "de": "Ausbruch des Mount St. Helens",
+      "it": "Eruzione del monte Sant'Elena",
+      "es": "Erupción del monte Santa Helena"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Éruption_du_mont_Saint_Helens_en_1980",
+    "note": "Date selon l'infobox. Wikidata Q778218 : même date (début)."
   },
   {
     "id": "history-accident-de-challenger-1986",
@@ -75,6 +135,21 @@
     "note": "Date selon l'infobox. Wikidata Q858145 : même date."
   },
   {
+    "id": "history-fusillade-de-columbine-1999",
+    "date": "1999-04-20",
+    "title": {
+      "fr": "Fusillade de Columbine",
+      "en": "Columbine High School massacre",
+      "de": "Amoklauf an der Columbine High School",
+      "it": "Massacro della Columbine High School",
+      "es": "Masacre de la Escuela Secundaria de Columbine"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fusillade_de_Columbine",
+    "note": "Date selon l'infobox. Wikidata Q473845 : même date."
+  },
+  {
     "id": "history-attentats-du-11-septembre-2001",
     "date": "2001-09-11",
     "title": {
@@ -88,5 +163,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Attentats_du_11_septembre_2001",
     "note": "Date selon l'infobox. Wikidata Q10806 : même date."
+  },
+  {
+    "id": "history-desintegration-de-columbia-2003",
+    "date": "2003-02-01",
+    "title": {
+      "fr": "Désintégration de la navette spatiale Columbia",
+      "en": "Space Shuttle Columbia disaster",
+      "de": "Columbia-Katastrophe",
+      "it": "Disastro dello Space Shuttle Columbia",
+      "es": "Accidente del transbordador espacial Columbia"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Accident_de_la_navette_spatiale_Columbia",
+    "note": "Date selon l'infobox. Wikidata Q580867 : même date."
   }
 ]

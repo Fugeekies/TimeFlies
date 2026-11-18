@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tech-the-witcher-3-wild-hunt-2015",
+    "date": "2015-05-19",
+    "title": {
+      "fr": "The Witcher 3: Wild Hunt"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q4267401 : même date."
+  },
+  {
+    "id": "tech-cyberpunk-2077-2020",
+    "date": "2020-12-10",
+    "title": {
+      "fr": "Cyberpunk 2077"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Cyberpunk_2077",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q3182559 : même date."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-seisme-en-haiti-2010",
+    "date": "2010-01-12",
+    "title": {
+      "fr": "Séisme en Haïti",
+      "en": "Haiti earthquake",
+      "de": "Erdbeben in Haiti",
+      "it": "Terremoto di Haiti",
+      "es": "Terremoto de Haití"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Séisme_de_2010_en_Haïti",
+    "note": "Date selon l'infobox. Wikidata Q43777 : même date."
+  }
+]

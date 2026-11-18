@@ -38,7 +38,7 @@ Paliers communs à tous les thèmes (répartition indicative, à ajuster selon c
 | 2 | ~300 | ~1 800 | plusieurs anniversaires par jour, des équivalences pour la plupart des écarts d'âge |
 | 3 | ~850 | ~5 000 | objectif final |
 
-Chaque type a son **dessin au trait** pour la photo du Polaroïd (`TypeDrawings.kt`, docs/UI_DESIGN_SPEC.md § 1) : les 32 types sont dessinés (décision du 17/11/2026), et tout nouveau type arrive avec le sien.
+Chaque type a son **dessin au trait** pour la photo du Polaroïd (`TypeDrawings.kt`, docs/UI_DESIGN_SPEC.md § 1) : les 32 types sont dessinés (décision du 17/11/2026), et tout nouveau type arrive avec le sien : 35 types depuis le 18/11/2026 (laurier et étoile pour `world-cup-win`, raquette et balle pour `tennis-grand-slam`, vélo pour `tour-de-france-win`).
 
 ### Données — Séries & télé
 Sitcoms et séries cultes, téléréalité, émissions jeunesse, dessins animés à la télé.

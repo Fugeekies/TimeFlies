@@ -1,5 +1,31 @@
 [
   {
+    "id": "tech-dofus-2004",
+    "date": "2004-09-01",
+    "title": {
+      "fr": "Dofus"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dofus",
+    "note": "Sortie selon l'infobox. Wikidata Q1139866 : même date."
+  },
+  {
+    "id": "tech-rayman-contre-les-lapins-cretins-2006",
+    "date": "2006-12-08",
+    "title": {
+      "fr": "Rayman contre les lapins crétins",
+      "en": "Rayman Raving Rabbids",
+      "de": "Rayman Raving Rabbids",
+      "it": "Rayman Raving Rabbids",
+      "es": "Rayman Raving Rabbids"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rayman_contre_les_lapins_crétins",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1982922 : même date."
+  },
+  {
     "id": "tech-assassin-s-creed-2007",
     "date": "2007-11-16",
     "title": {
@@ -10,6 +36,17 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Assassin's_Creed_(jeu_vidéo)",
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q200864 : même date."
+  },
+  {
+    "id": "tech-just-dance-2009",
+    "date": "2009-11-27",
+    "title": {
+      "fr": "Just Dance"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Just_Dance_(jeu_vidéo)",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1714101 : même date."
   },
   {
     "id": "tech-clair-obscur-expedition-33-2025",

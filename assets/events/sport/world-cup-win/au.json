@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-rugby-au-1991",
+    "date": "1991-11-02",
+    "title": {
+      "fr": "Premier titre mondial de l'Australie (Coupe du monde de rugby 1991)",
+      "en": "First world title for Australia (1991 Rugby World Cup)",
+      "de": "Erster Weltmeistertitel für Australien (Rugby-WM 1991)",
+      "it": "Primo titolo mondiale per l'Australia (Coppa del Mondo di rugby 1991)",
+      "es": "Primer título mundial para Australia (Copa Mundial de Rugby 1991)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_rugby_à_XV_1991",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q1322713 : date de la compétition seulement."
+  },
+  {
+    "id": "sport-coupe-du-monde-rugby-au-1999",
+    "date": "1999-11-06",
+    "title": {
+      "fr": "Dernier titre mondial en date de l'Australie (Coupe du monde de rugby 1999)",
+      "en": "Latest world title for Australia (1999 Rugby World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Australien (Rugby-WM 1999)",
+      "it": "Ultimo titolo mondiale finora per l'Australia (Coppa del Mondo di rugby 1999)",
+      "es": "Último título mundial hasta la fecha para Australia (Copa Mundial de Rugby 1999)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_rugby_à_XV_1999",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q1141048 : date de la compétition seulement."
+  }
+]

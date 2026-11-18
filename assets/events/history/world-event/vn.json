@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-chute-de-saigon-1975",
+    "date": "1975-04-30",
+    "title": {
+      "fr": "Chute de Saïgon",
+      "en": "Fall of Saigon",
+      "de": "Fall von Saigon",
+      "it": "Caduta di Saigon",
+      "es": "Caída de Saigón"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Chute_de_Saïgon",
+    "note": "Date selon l'infobox. Wikidata Q482456 : même date."
+  }
+]

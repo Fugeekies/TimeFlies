@@ -398,6 +398,9 @@
     <string name="type_world_cup_win_france">Victoire des Bleus en Coupe du monde</string>
     <string name="type_olympics_in_france">Jeux olympiques en France</string>
     <string name="type_sports_record">Record sportif</string>
+    <string name="type_world_cup_win">Victoire en Coupe du monde</string>
+    <string name="type_tennis_grand_slam">Titre du Grand Chelem</string>
+    <string name="type_tour_de_france_win">Victoire au Tour de France</string>
     <string name="type_nintendo_console">Console Nintendo</string>
     <string name="type_playstation_console">Console PlayStation</string>
     <string name="type_handheld_console">Console portable</string>

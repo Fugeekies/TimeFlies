@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-insurrection-de-budapest-1956",
+    "date": "1956-10-23",
+    "title": {
+      "fr": "Début de l'insurrection de Budapest",
+      "en": "Start of the Hungarian Revolution",
+      "de": "Beginn des Ungarischen Volksaufstands",
+      "it": "Inizio della rivoluzione ungherese",
+      "es": "Comienzo de la Revolución húngara"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Révolution_hongroise_de_1956",
+    "note": "Début de l'insurrection selon l'infobox. Wikidata Q164348 : même date (début)."
+  }
+]

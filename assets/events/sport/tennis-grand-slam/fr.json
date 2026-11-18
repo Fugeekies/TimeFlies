@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sport-grand-chelem-yannick-noah-rg-1983",
+    "date": "1983-06-05",
+    "title": {
+      "fr": "Victoire de Yannick Noah à Roland-Garros (1983)",
+      "en": "Yannick Noah wins the French Open (1983)",
+      "de": "Yannick Noah gewinnt die French Open (1983)",
+      "it": "Yannick Noah vince il Roland Garros (1983)",
+      "es": "Yannick Noah gana Roland Garros (1983)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_des_Internationaux_de_France_1983",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q2714991 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-mary-pierce-ao-1995",
+    "date": "1995-01-29",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Mary Pierce (Open d'Australie 1995)",
+      "en": "Mary Pierce's first Grand Slam title (1995 Australian Open)",
+      "de": "Erster Grand-Slam-Titel von Mary Pierce (Australian Open 1995)",
+      "it": "Primo titolo del Grande Slam di Mary Pierce (Australian Open 1995)",
+      "es": "Primer título de Grand Slam de Mary Pierce (Abierto de Australia 1995)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_de_l'Open_d'Australie_1995",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q782040 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-mary-pierce-rg-2000",
+    "date": "2000-06-11",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Mary Pierce (Roland-Garros 2000)",
+      "en": "Mary Pierce's last Grand Slam title (2000 French Open)",
+      "de": "Letzter Grand-Slam-Titel von Mary Pierce (French Open 2000)",
+      "it": "Ultimo titolo del Grande Slam di Mary Pierce (Roland Garros 2000)",
+      "es": "Último título de Grand Slam de Mary Pierce (Roland Garros 2000)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_des_Internationaux_de_France_2000",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1068835 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-amelie-mauresmo-ao-2006",
+    "date": "2006-01-29",
+    "title": {
+      "fr": "Premier titre du Grand Chelem d'Amélie Mauresmo (Open d'Australie 2006)",
+      "en": "Amélie Mauresmo's first Grand Slam title (2006 Australian Open)",
+      "de": "Erster Grand-Slam-Titel von Amélie Mauresmo (Australian Open 2006)",
+      "it": "Primo titolo del Grande Slam di Amélie Mauresmo (Australian Open 2006)",
+      "es": "Primer título de Grand Slam de Amélie Mauresmo (Abierto de Australia 2006)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_de_l'Open_d'Australie_2006",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q592954 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-amelie-mauresmo-w-2006",
+    "date": "2006-07-09",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem d'Amélie Mauresmo (Wimbledon 2006)",
+      "en": "Amélie Mauresmo's last Grand Slam title (2006 Wimbledon)",
+      "de": "Letzter Grand-Slam-Titel von Amélie Mauresmo (Wimbledon 2006)",
+      "it": "Ultimo titolo del Grande Slam di Amélie Mauresmo (Wimbledon 2006)",
+      "es": "Último título de Grand Slam de Amélie Mauresmo (Wimbledon 2006)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_du_tournoi_de_Wimbledon_2006",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q940938 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-marion-bartoli-w-2013",
+    "date": "2013-07-07",
+    "title": {
+      "fr": "Victoire de Marion Bartoli à Wimbledon (2013)",
+      "en": "Marion Bartoli wins Wimbledon (2013)",
+      "de": "Marion Bartoli gewinnt Wimbledon (2013)",
+      "it": "Marion Bartoli vince Wimbledon (2013)",
+      "es": "Marion Bartoli gana Wimbledon (2013)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_du_tournoi_de_Wimbledon_2013",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q2913208 : année seulement."
+  }
+]

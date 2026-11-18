@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-coupe-du-monde-footf-jp-2011",
+    "date": "2011-07-17",
+    "title": {
+      "fr": "Titre mondial du Japon (Coupe du monde féminine de football 2011)",
+      "en": "Japan win the 2011 Women's World Cup",
+      "de": "Japan gewinnt die Frauen-Fußball-WM 2011",
+      "it": "Titolo mondiale per il Giappone (Mondiali di calcio femminile 2011)",
+      "es": "Título mundial para Japón (Mundial femenino de fútbol 2011)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coupe_du_monde_féminine_de_football_2011",
+    "note": "Date de la finale, dernier jour de la compétition, selon l'infobox ; vainqueur selon l'infobox. Wikidata Q108183 : date de la compétition seulement."
+  }
+]

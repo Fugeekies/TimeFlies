@@ -1,5 +1,35 @@
 [
   {
+    "id": "history-mort-du-roi-baudouin-1993",
+    "date": "1993-07-31",
+    "title": {
+      "fr": "Mort du roi Baudouin",
+      "en": "Death of King Baudouin",
+      "de": "Tod von König Baudouin",
+      "it": "Morte di re Baldovino",
+      "es": "Muerte del rey Balduino"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Baudouin_(roi_des_Belges)",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q12976 : même date."
+  },
+  {
+    "id": "history-albert-ii-roi-des-belges-1993",
+    "date": "1993-08-09",
+    "title": {
+      "fr": "Albert II devient roi des Belges",
+      "en": "Albert II becomes King of the Belgians",
+      "de": "Albert II. wird König der Belgier",
+      "it": "Alberto II diventa re dei Belgi",
+      "es": "Alberto II se convierte en rey de los belgas"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Albert_II_(roi_des_Belges)",
+    "note": "Début du règne selon l'infobox. Wikidata Q3911 : pas de date relevée."
+  },
+  {
     "id": "history-avenement-de-philippe-roi-des-belges-2013",
     "date": "2013-07-21",
     "title": {

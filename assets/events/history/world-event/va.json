@@ -1,0 +1,62 @@
+[
+  {
+    "id": "history-election-du-pape-jean-paul-ii-1978",
+    "date": "1978-10-16",
+    "title": {
+      "fr": "Élection du pape Jean-Paul II",
+      "en": "Election of Pope John Paul II",
+      "de": "Wahl von Papst Johannes Paul II.",
+      "it": "Elezione di papa Giovanni Paolo II",
+      "es": "Elección del papa Juan Pablo II"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jean-Paul_II",
+    "note": "Début du pontificat selon l'infobox et le texte de l'article. Wikidata Q989 : pas de date pour cet événement."
+  },
+  {
+    "id": "history-mort-du-pape-jean-paul-ii-2005",
+    "date": "2005-04-02",
+    "title": {
+      "fr": "Mort du pape Jean-Paul II",
+      "en": "Death of Pope John Paul II",
+      "de": "Tod von Papst Johannes Paul II.",
+      "it": "Morte di papa Giovanni Paolo II",
+      "es": "Muerte del papa Juan Pablo II"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jean-Paul_II",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q989 : même date."
+  },
+  {
+    "id": "history-mort-du-pape-francois-2025",
+    "date": "2025-04-21",
+    "title": {
+      "fr": "Mort du pape François",
+      "en": "Death of Pope Francis",
+      "de": "Tod von Papst Franziskus",
+      "it": "Morte di papa Francesco",
+      "es": "Muerte del papa Francisco"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Conclave_de_2025",
+    "note": "Mort du pape François selon le texte de l'article sur le conclave. Wikidata Q133999044 : pas de date pour cet événement."
+  },
+  {
+    "id": "history-election-du-pape-leon-xiv-2025",
+    "date": "2025-05-08",
+    "title": {
+      "fr": "Élection du pape Léon XIV",
+      "en": "Election of Pope Leo XIV",
+      "de": "Wahl von Papst Leo XIV.",
+      "it": "Elezione di papa Leone XIV",
+      "es": "Elección del papa León XIV"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Conclave_de_2025",
+    "note": "Fin du conclave selon l'infobox. Wikidata Q133999044 : mois seulement."
+  }
+]

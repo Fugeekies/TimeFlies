@@ -1,0 +1,13 @@
+[
+  {
+    "id": "death-bon-scott-1980",
+    "date": "1980-02-19",
+    "title": {
+      "fr": "Bon Scott"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bon_Scott",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q204162 : même date."
+  }
+]

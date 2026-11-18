@@ -44,6 +44,17 @@
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q188642 : même date."
   },
   {
+    "id": "tech-game-boy-advance-sp-2003",
+    "date": "2003-03-28",
+    "title": {
+      "fr": "Game Boy Advance SP"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Game_Boy_Advance_SP",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q842836 : même date."
+  },
+  {
     "id": "tech-nintendo-ds-2005",
     "date": "2005-03-11",
     "title": {
@@ -53,6 +64,17 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Nintendo_DS",
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q170323 : même date."
+  },
+  {
+    "id": "tech-nintendo-ds-lite-2006",
+    "date": "2006-06-23",
+    "title": {
+      "fr": "Nintendo DS Lite"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Nintendo_DS_Lite",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q844552 : même date."
   },
   {
     "id": "tech-nintendo-dsi-2009",
@@ -86,5 +108,27 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/PlayStation_Vita",
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q188808 : même date."
+  },
+  {
+    "id": "tech-new-nintendo-3ds-2015",
+    "date": "2015-02-13",
+    "title": {
+      "fr": "New Nintendo 3DS"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/New_Nintendo_3DS",
+    "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q17679679 : même date."
+  },
+  {
+    "id": "tech-nintendo-switch-lite-2019",
+    "date": "2019-09-20",
+    "title": {
+      "fr": "Nintendo Switch Lite"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Nintendo_Switch_Lite",
+    "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q65458682 : même date."
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-eazy-e-1995",
+    "date": "1995-03-26",
+    "title": {
+      "fr": "Eazy-E"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Eazy-E",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q36804 : même date."
+  },
+  {
     "id": "death-tupac-shakur-1996",
     "date": "1996-09-13",
     "title": {
@@ -20,5 +31,82 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/The_Notorious_B.I.G.",
     "note": "Date de décès de l'infobox. Wikidata Q179157 : même date."
+  },
+  {
+    "id": "death-xxxtentacion-2018",
+    "date": "2018-06-18",
+    "title": {
+      "fr": "XXXTentacion"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/XXXTentacion",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q28561969 : même date."
+  },
+  {
+    "id": "death-mac-miller-2018",
+    "date": "2018-09-07",
+    "title": {
+      "fr": "Mac Miller"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mac_Miller",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q324726 : même date."
+  },
+  {
+    "id": "death-nipsey-hussle-2019",
+    "date": "2019-03-31",
+    "title": {
+      "fr": "Nipsey Hussle"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Nipsey_Hussle",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2073970 : même date."
+  },
+  {
+    "id": "death-juice-wrld-2019",
+    "date": "2019-12-08",
+    "title": {
+      "fr": "Juice Wrld"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Juice_Wrld",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q52151598 : même date."
+  },
+  {
+    "id": "death-pop-smoke-2020",
+    "date": "2020-02-19",
+    "title": {
+      "fr": "Pop Smoke"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pop_Smoke",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q81698554 : même date."
+  },
+  {
+    "id": "death-dmx-2021",
+    "date": "2021-04-09",
+    "title": {
+      "fr": "DMX"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/DMX_(rappeur)",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q223769 : même date."
+  },
+  {
+    "id": "death-coolio-2022",
+    "date": "2022-09-28",
+    "title": {
+      "fr": "Coolio"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Coolio",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q310357 : même date."
   }
 ]

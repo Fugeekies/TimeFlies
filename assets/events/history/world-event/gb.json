@@ -15,6 +15,21 @@
     "note": "Naissance selon l'infobox et le texte de l'article. Wikidata Q171433 : pas de date de naissance."
   },
   {
+    "id": "history-attentats-de-londres-2005",
+    "date": "2005-07-07",
+    "title": {
+      "fr": "Attentats de Londres",
+      "en": "London bombings",
+      "de": "Terroranschläge in London",
+      "it": "Attentati di Londra",
+      "es": "Atentados de Londres"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Attentats_de_Londres_du_7_juillet_2005",
+    "note": "Date selon l'infobox. Wikidata Q10818 : même date."
+  },
+  {
     "id": "history-referendum-du-brexit-2016",
     "date": "2016-06-23",
     "title": {

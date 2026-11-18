@@ -9,5 +9,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Deezer",
     "note": "Création selon l'infobox. Wikidata Q602243 : même date."
+  },
+  {
+    "id": "tech-qobuz-2007",
+    "date": "2007-09-12",
+    "title": {
+      "fr": "Qobuz"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qobuz",
+    "note": "Création selon l'infobox. Wikidata Q3412507 : année seulement."
   }
 ]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "tech-baldur-s-gate-iii-2023",
+    "date": "2023-08-03",
+    "title": {
+      "fr": "Baldur's Gate III",
+      "en": "Baldur's Gate 3",
+      "de": "Baldur’s Gate 3"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Baldur's_Gate_III",
+    "note": "Sortie mondiale sur PC selon l'infobox. Wikidata Q64441774 : même date."
+  }
+]

@@ -30,6 +30,21 @@
     "note": "Date de décès selon l'infobox. Wikidata Q3925 : même date."
   },
   {
+    "id": "history-albert-ii-prince-de-monaco-2005",
+    "date": "2005-04-06",
+    "title": {
+      "fr": "Albert II devient prince de Monaco",
+      "en": "Albert II becomes Prince of Monaco",
+      "de": "Albert II. wird Fürst von Monaco",
+      "it": "Alberto II diventa principe di Monaco",
+      "es": "Alberto II se convierte en príncipe de Mónaco"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Albert_II_de_Monaco",
+    "note": "Début du règne selon l'infobox. Wikidata Q3910 : pas de date relevée."
+  },
+  {
     "id": "history-mariage-d-albert-ii-et-charlene-2011",
     "date": "2011-07-02",
     "title": {

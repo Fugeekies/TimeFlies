@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-coupe-du-monde-foot-it-1934",
+    "date": "1934-06-10",
+    "title": {
+      "fr": "Premier titre mondial de l'Italie (Coupe du monde de football 1934)",
+      "en": "First world title for Italy (1934 Football World Cup)",
+      "de": "Erster Weltmeistertitel für Italien (Fußball-WM 1934)",
+      "it": "Primo titolo mondiale per l'Italia (Mondiali di calcio 1934)",
+      "es": "Primer título mundial para Italia (Mundial de fútbol 1934)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_1934",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q945608 : même date."
+  },
+  {
+    "id": "sport-coupe-du-monde-foot-it-2006",
+    "date": "2006-07-09",
+    "title": {
+      "fr": "Dernier titre mondial en date de l'Italie (Coupe du monde de football 2006)",
+      "en": "Latest world title for Italy (2006 Football World Cup)",
+      "de": "Bislang letzter Weltmeistertitel für Italien (Fußball-WM 2006)",
+      "it": "Ultimo titolo mondiale finora per l'Italia (Mondiali di calcio 2006)",
+      "es": "Último título mundial hasta la fecha para Italia (Mundial de fútbol 2006)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Finale_de_la_Coupe_du_monde_de_football_2006",
+    "note": "Date du match selon l'infobox ; vainqueur selon l'infobox. Wikidata Q268567 : même date."
+  }
+]

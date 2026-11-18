@@ -43,5 +43,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Arnold_Schwarzenegger",
     "note": "Date de l'élection selon l'infobox de l'article (le texte donne le 17 novembre 2003, jour de sa prise de fonction). Wikidata : pas de date pour cet événement."
+  },
+  {
+    "id": "history-al-franken-senateur-2008",
+    "date": "2008-11-04",
+    "title": {
+      "fr": "Al Franken élu sénateur du Minnesota",
+      "en": "Al Franken elected Senator from Minnesota",
+      "de": "Al Franken zum Senator von Minnesota gewählt",
+      "it": "Al Franken eletto senatore del Minnesota",
+      "es": "Al Franken elegido senador por Minnesota"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Al_Franken",
+    "note": "Date de l'élection selon l'infobox de l'article. Wikidata Q319084 : pas de date pour cet événement."
   }
 ]

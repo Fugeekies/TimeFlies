@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-buddy-holly-1959",
+    "date": "1959-02-03",
+    "title": {
+      "fr": "Buddy Holly"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Buddy_Holly",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q5977 : même date."
+  },
+  {
     "id": "death-jimi-hendrix-1970",
     "date": "1970-09-18",
     "title": {
@@ -42,5 +53,60 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Elvis_Presley",
     "note": "Date de décès de l'infobox. Wikidata Q303 : même date."
+  },
+  {
+    "id": "death-lou-reed-2013",
+    "date": "2013-10-27",
+    "title": {
+      "fr": "Lou Reed"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Lou_Reed",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q189080 : même date."
+  },
+  {
+    "id": "death-chris-cornell-2017",
+    "date": "2017-05-18",
+    "title": {
+      "fr": "Chris Cornell"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Chris_Cornell",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q270935 : même date."
+  },
+  {
+    "id": "death-chester-bennington-2017",
+    "date": "2017-07-20",
+    "title": {
+      "fr": "Chester Bennington"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Chester_Bennington",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q19198 : même date."
+  },
+  {
+    "id": "death-tom-petty-2017",
+    "date": "2017-10-02",
+    "title": {
+      "fr": "Tom Petty"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tom_Petty",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q311655 : même date."
+  },
+  {
+    "id": "death-eddie-van-halen-2020",
+    "date": "2020-10-06",
+    "title": {
+      "fr": "Eddie Van Halen"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Eddie_Van_Halen",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q272012 : même date."
   }
 ]
