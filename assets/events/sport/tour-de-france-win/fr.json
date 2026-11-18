@@ -1,0 +1,197 @@
+[
+  {
+    "id": "sport-tour-de-france-jean-robic-1947",
+    "date": "1947-07-20",
+    "title": {
+      "fr": "Victoire de Jean Robic au Tour de France (1947)",
+      "en": "Jean Robic wins the Tour de France (1947)",
+      "de": "Jean Robic gewinnt die Tour de France (1947)",
+      "it": "Jean Robic vince il Tour de France (1947)",
+      "es": "Jean Robic gana el Tour de Francia (1947)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1947",
+    "note": "Arrivée à Paris le 1947-07-20 selon le texte de l'article (« du … au … ») et Wikidata Q220683 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-louison-bobet-1955",
+    "date": "1955-07-30",
+    "title": {
+      "fr": "Dernière victoire de Louison Bobet au Tour de France (1955)",
+      "en": "Louison Bobet's last Tour de France win (1955)",
+      "de": "Letzter Tour-de-France-Sieg von Louison Bobet (1955)",
+      "it": "Ultima vittoria di Louison Bobet al Tour de France (1955)",
+      "es": "Última victoria de Louison Bobet en el Tour de Francia (1955)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1955",
+    "note": "Arrivée à Paris le 1955-07-30 selon le texte de l'article (« du … au … ») et Wikidata Q682253 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-roger-walkowiak-1956",
+    "date": "1956-07-28",
+    "title": {
+      "fr": "Victoire de Roger Walkowiak au Tour de France (1956)",
+      "en": "Roger Walkowiak wins the Tour de France (1956)",
+      "de": "Roger Walkowiak gewinnt die Tour de France (1956)",
+      "it": "Roger Walkowiak vince il Tour de France (1956)",
+      "es": "Roger Walkowiak gana el Tour de Francia (1956)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1956",
+    "note": "Arrivée à Paris le 1956-07-28 selon le texte de l'article (« du … au … ») et Wikidata Q907316 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-jacques-anquetil-1957",
+    "date": "1957-07-20",
+    "title": {
+      "fr": "Première victoire de Jacques Anquetil au Tour de France (1957)",
+      "en": "Jacques Anquetil's first Tour de France win (1957)",
+      "de": "Erster Tour-de-France-Sieg von Jacques Anquetil (1957)",
+      "it": "Prima vittoria di Jacques Anquetil al Tour de France (1957)",
+      "es": "Primera victoria de Jacques Anquetil en el Tour de Francia (1957)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1957",
+    "note": "Arrivée à Paris le 1957-07-20 selon le texte de l'article (« du … au … ») et Wikidata Q847630 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-jacques-anquetil-1964",
+    "date": "1964-07-14",
+    "title": {
+      "fr": "Dernière victoire de Jacques Anquetil au Tour de France (1964)",
+      "en": "Jacques Anquetil's last Tour de France win (1964)",
+      "de": "Letzter Tour-de-France-Sieg von Jacques Anquetil (1964)",
+      "it": "Ultima vittoria di Jacques Anquetil al Tour de France (1964)",
+      "es": "Última victoria de Jacques Anquetil en el Tour de Francia (1964)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1964",
+    "note": "Arrivée à Paris le 1964-07-14 selon le texte de l'article (« du … au … ») et Wikidata Q847615 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-lucien-aimar-1966",
+    "date": "1966-07-14",
+    "title": {
+      "fr": "Victoire de Lucien Aimar au Tour de France (1966)",
+      "en": "Lucien Aimar wins the Tour de France (1966)",
+      "de": "Lucien Aimar gewinnt die Tour de France (1966)",
+      "it": "Lucien Aimar vince il Tour de France (1966)",
+      "es": "Lucien Aimar gana el Tour de Francia (1966)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1966",
+    "note": "Arrivée à Paris le 1966-07-14 selon le texte de l'article (« du … au … ») et Wikidata Q654890 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-roger-pingeon-1967",
+    "date": "1967-07-23",
+    "title": {
+      "fr": "Victoire de Roger Pingeon au Tour de France (1967)",
+      "en": "Roger Pingeon wins the Tour de France (1967)",
+      "de": "Roger Pingeon gewinnt die Tour de France (1967)",
+      "it": "Roger Pingeon vince il Tour de France (1967)",
+      "es": "Roger Pingeon gana el Tour de Francia (1967)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1967",
+    "note": "Arrivée à Paris le 1967-07-23 selon le texte de l'article (« du … au … ») et Wikidata Q368629 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-bernard-thevenet-1975",
+    "date": "1975-07-20",
+    "title": {
+      "fr": "Première victoire de Bernard Thévenet au Tour de France (1975)",
+      "en": "Bernard Thévenet's first Tour de France win (1975)",
+      "de": "Erster Tour-de-France-Sieg von Bernard Thévenet (1975)",
+      "it": "Prima vittoria di Bernard Thévenet al Tour de France (1975)",
+      "es": "Primera victoria de Bernard Thévenet en el Tour de Francia (1975)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1975",
+    "note": "Arrivée à Paris le 1975-07-20 selon le texte de l'article (« du … au … ») et Wikidata Q581491 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-bernard-thevenet-1977",
+    "date": "1977-07-24",
+    "title": {
+      "fr": "Dernière victoire de Bernard Thévenet au Tour de France (1977)",
+      "en": "Bernard Thévenet's last Tour de France win (1977)",
+      "de": "Letzter Tour-de-France-Sieg von Bernard Thévenet (1977)",
+      "it": "Ultima vittoria di Bernard Thévenet al Tour de France (1977)",
+      "es": "Última victoria de Bernard Thévenet en el Tour de Francia (1977)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1977",
+    "note": "Arrivée à Paris le 1977-07-24 selon le texte de l'article (« du … au … ») et Wikidata Q749914 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-bernard-hinault-1978",
+    "date": "1978-07-23",
+    "title": {
+      "fr": "Première victoire de Bernard Hinault au Tour de France (1978)",
+      "en": "Bernard Hinault's first Tour de France win (1978)",
+      "de": "Erster Tour-de-France-Sieg von Bernard Hinault (1978)",
+      "it": "Prima vittoria di Bernard Hinault al Tour de France (1978)",
+      "es": "Primera victoria de Bernard Hinault en el Tour de Francia (1978)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1978",
+    "note": "Arrivée à Paris le 1978-07-23 selon le texte de l'article (« du … au … ») et Wikidata Q835582 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-laurent-fignon-1983",
+    "date": "1983-07-24",
+    "title": {
+      "fr": "Première victoire de Laurent Fignon au Tour de France (1983)",
+      "en": "Laurent Fignon's first Tour de France win (1983)",
+      "de": "Erster Tour-de-France-Sieg von Laurent Fignon (1983)",
+      "it": "Prima vittoria di Laurent Fignon al Tour de France (1983)",
+      "es": "Primera victoria de Laurent Fignon en el Tour de Francia (1983)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1983",
+    "note": "Arrivée à Paris le 1983-07-24 selon le texte de l'article (« du … au … ») et Wikidata Q608649 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-laurent-fignon-1984",
+    "date": "1984-07-22",
+    "title": {
+      "fr": "Dernière victoire de Laurent Fignon au Tour de France (1984)",
+      "en": "Laurent Fignon's last Tour de France win (1984)",
+      "de": "Letzter Tour-de-France-Sieg von Laurent Fignon (1984)",
+      "it": "Ultima vittoria di Laurent Fignon al Tour de France (1984)",
+      "es": "Última victoria de Laurent Fignon en el Tour de Francia (1984)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1984",
+    "note": "Arrivée à Paris le 1984-07-22 selon le texte de l'article (« du … au … ») et Wikidata Q833232 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-bernard-hinault-1985",
+    "date": "1985-07-21",
+    "title": {
+      "fr": "Dernière victoire de Bernard Hinault au Tour de France (1985)",
+      "en": "Bernard Hinault's last Tour de France win (1985)",
+      "de": "Letzter Tour-de-France-Sieg von Bernard Hinault (1985)",
+      "it": "Ultima vittoria di Bernard Hinault al Tour de France (1985)",
+      "es": "Última victoria de Bernard Hinault en el Tour de Francia (1985)"
+    },
+    "kind": "sport",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1985",
+    "note": "Arrivée à Paris le 1985-07-21 selon le texte de l'article (« du … au … ») et Wikidata Q278715 (même date) ; vainqueur selon l'infobox."
+  }
+]

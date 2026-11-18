@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-mort-de-mao-zedong-1976",
+    "date": "1976-09-09",
+    "title": {
+      "fr": "Mort de Mao Zedong",
+      "en": "Death of Mao Zedong",
+      "de": "Tod von Mao Zedong",
+      "it": "Morte di Mao Zedong",
+      "es": "Muerte de Mao Zedong"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mao_Zedong",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q5816 : même date."
+  },
+  {
     "id": "history-repression-de-tian-anmen-1989",
     "date": "1989-06-04",
     "title": {

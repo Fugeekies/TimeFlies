@@ -228,34 +228,57 @@
         <item>be</item>
         <item>br</item>
         <item>ca</item>
+        <item>ch</item>
+        <item>cl</item>
         <item>cn</item>
+        <item>co</item>
         <item>cu</item>
         <item>cz</item>
         <item>de</item>
         <item>dk</item>
+        <item>eg</item>
         <item>es</item>
+        <item>fi</item>
         <item>fr</item>
         <item>gb</item>
+        <item>gt</item>
         <item>hr</item>
+        <item>ht</item>
+        <item>hu</item>
+        <item>ie</item>
+        <item>il</item>
+        <item>in</item>
+        <item>iq</item>
+        <item>it</item>
         <item>jm</item>
         <item>jp</item>
         <item>ke</item>
         <item>kr</item>
         <item>lt</item>
+        <item>lu</item>
         <item>ma</item>
         <item>mc</item>
         <item>md</item>
         <item>nl</item>
         <item>no</item>
+        <item>nz</item>
         <item>ph</item>
+        <item>pl</item>
         <item>pr</item>
+        <item>ps</item>
         <item>pt</item>
         <item>ro</item>
+        <item>rs</item>
         <item>ru</item>
+        <item>sa</item>
         <item>se</item>
+        <item>si</item>
         <item>ua</item>
         <item>ug</item>
         <item>us</item>
+        <item>uy</item>
+        <item>va</item>
+        <item>vn</item>
         <item>za</item>
     </string-array>
     <string-array name="origin_names">
@@ -265,34 +288,57 @@
         <item>Belgique</item>
         <item>Brésil</item>
         <item>Canada</item>
+        <item>Suisse</item>
+        <item>Chili</item>
         <item>Chine</item>
+        <item>Colombie</item>
         <item>Cuba</item>
         <item>Tchéquie</item>
         <item>Allemagne</item>
         <item>Danemark</item>
+        <item>Égypte</item>
         <item>Espagne</item>
+        <item>Finlande</item>
         <item>France</item>
         <item>Royaume-Uni</item>
+        <item>Guatemala</item>
         <item>Croatie</item>
+        <item>Haïti</item>
+        <item>Hongrie</item>
+        <item>Irlande</item>
+        <item>Israël</item>
+        <item>Inde</item>
+        <item>Irak</item>
+        <item>Italie</item>
         <item>Jamaïque</item>
         <item>Japon</item>
         <item>Kenya</item>
         <item>Corée du Sud</item>
         <item>Lituanie</item>
+        <item>Luxembourg</item>
         <item>Maroc</item>
         <item>Monaco</item>
         <item>Moldavie</item>
         <item>Pays-Bas</item>
         <item>Norvège</item>
+        <item>Nouvelle-Zélande</item>
         <item>Philippines</item>
+        <item>Pologne</item>
         <item>Porto Rico</item>
+        <item>Palestine</item>
         <item>Portugal</item>
         <item>Roumanie</item>
+        <item>Serbie</item>
         <item>Russie</item>
+        <item>Arabie saoudite</item>
         <item>Suède</item>
+        <item>Slovénie</item>
         <item>Ukraine</item>
         <item>Ouganda</item>
         <item>États-Unis</item>
+        <item>Uruguay</item>
+        <item>Vatican</item>
+        <item>Viêt Nam</item>
         <item>Afrique du Sud</item>
     </string-array>
     <!-- Subcategories: music genres and sport disciplines, in the same order. -->

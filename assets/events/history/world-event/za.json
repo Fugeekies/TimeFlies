@@ -28,5 +28,20 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Élections_générales_sud-africaines_de_1994",
     "note": "Date de l'élection selon l'infobox. Wikidata Q957012 : même date."
+  },
+  {
+    "id": "history-mort-de-nelson-mandela-2013",
+    "date": "2013-12-05",
+    "title": {
+      "fr": "Mort de Nelson Mandela",
+      "en": "Death of Nelson Mandela",
+      "de": "Tod von Nelson Mandela",
+      "it": "Morte di Nelson Mandela",
+      "es": "Muerte de Nelson Mandela"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Nelson_Mandela",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q8023 : même date."
   }
 ]

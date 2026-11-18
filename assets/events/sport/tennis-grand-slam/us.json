@@ -60,6 +60,36 @@
     "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1191040 : année seulement."
   },
   {
+    "id": "sport-grand-chelem-serena-williams-us-1999",
+    "date": "1999-09-12",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Serena Williams (US Open 1999)",
+      "en": "Serena Williams's first Grand Slam title (1999 US Open)",
+      "de": "Erster Grand-Slam-Titel von Serena Williams (US Open 1999)",
+      "it": "Primo titolo del Grande Slam di Serena Williams (US Open 1999)",
+      "es": "Primer título de Grand Slam de Serena Williams (US Open 1999)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_de_l'US_Open_de_tennis_1999",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q478426 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-pete-sampras-us-2002",
+    "date": "2002-09-08",
+    "title": {
+      "fr": "Dernier titre du Grand Chelem de Pete Sampras (US Open 2002)",
+      "en": "Pete Sampras's last Grand Slam title (2002 US Open)",
+      "de": "Letzter Grand-Slam-Titel von Pete Sampras (US Open 2002)",
+      "it": "Ultimo titolo del Grande Slam di Pete Sampras (US Open 2002)",
+      "es": "Último título de Grand Slam de Pete Sampras (US Open 2002)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'US_Open_de_tennis_2002",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q1048938 : année seulement."
+  },
+  {
     "id": "sport-grand-chelem-andre-agassi-ao-2003",
     "date": "2003-01-26",
     "title": {

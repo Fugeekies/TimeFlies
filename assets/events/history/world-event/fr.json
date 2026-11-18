@@ -105,6 +105,36 @@
     "note": "Date de la signature selon l'infobox. Wikidata Q274811 : même date."
   },
   {
+    "id": "history-mort-de-charles-de-gaulle-1970",
+    "date": "1970-11-09",
+    "title": {
+      "fr": "Mort de Charles de Gaulle",
+      "en": "Death of Charles de Gaulle",
+      "de": "Tod von Charles de Gaulle",
+      "it": "Morte di Charles de Gaulle",
+      "es": "Muerte de Charles de Gaulle"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Charles_de_Gaulle",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q2042 : même date."
+  },
+  {
+    "id": "history-mort-de-georges-pompidou-1974",
+    "date": "1974-04-02",
+    "title": {
+      "fr": "Mort de Georges Pompidou",
+      "en": "Death of Georges Pompidou",
+      "de": "Tod von Georges Pompidou",
+      "it": "Morte di Georges Pompidou",
+      "es": "Muerte de Georges Pompidou"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Georges_Pompidou",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q2185 : même date."
+  },
+  {
     "id": "history-loi-veil-1975",
     "date": "1975-01-17",
     "title": {
@@ -225,6 +255,21 @@
     "note": "Date de décès selon le texte de l'article. Wikidata Q2038 : même date."
   },
   {
+    "id": "history-mort-de-jacques-yves-cousteau-1997",
+    "date": "1997-06-25",
+    "title": {
+      "fr": "Mort de Jacques-Yves Cousteau",
+      "en": "Death of Jacques Cousteau",
+      "de": "Tod von Jacques-Yves Cousteau",
+      "it": "Morte di Jacques-Yves Cousteau",
+      "es": "Muerte de Jacques Cousteau"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Jacques-Yves_Cousteau",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q83233 : même date."
+  },
+  {
     "id": "history-inauguration-du-stade-de-france-1998",
     "date": "1998-01-28",
     "title": {
@@ -313,6 +358,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Attentat_du_14_juillet_2016_à_Nice",
     "note": "Date selon l'infobox. Wikidata Q25893254 : même date."
+  },
+  {
+    "id": "history-mort-de-simone-veil-2017",
+    "date": "2017-06-30",
+    "title": {
+      "fr": "Mort de Simone Veil",
+      "en": "Death of Simone Veil",
+      "de": "Tod von Simone Veil",
+      "it": "Morte di Simone Veil",
+      "es": "Muerte de Simone Veil"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Simone_Veil",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q298180 : même date."
   },
   {
     "id": "history-incendie-de-notre-dame-2019",

@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-mort-de-winston-churchill-1965",
+    "date": "1965-01-24",
+    "title": {
+      "fr": "Mort de Winston Churchill",
+      "en": "Death of Winston Churchill",
+      "de": "Tod von Winston Churchill",
+      "it": "Morte di Winston Churchill",
+      "es": "Muerte de Winston Churchill"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Winston_Churchill",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q8016 : même date."
+  },
+  {
     "id": "history-naissance-de-la-brebis-dolly-1996",
     "date": "1996-07-05",
     "title": {
@@ -28,6 +43,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Attentats_de_Londres_du_7_juillet_2005",
     "note": "Date selon l'infobox. Wikidata Q10818 : même date."
+  },
+  {
+    "id": "history-mort-de-margaret-thatcher-2013",
+    "date": "2013-04-08",
+    "title": {
+      "fr": "Mort de Margaret Thatcher",
+      "en": "Death of Margaret Thatcher",
+      "de": "Tod von Margaret Thatcher",
+      "it": "Morte di Margaret Thatcher",
+      "es": "Muerte de Margaret Thatcher"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Margaret_Thatcher",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q7416 : même date."
   },
   {
     "id": "history-referendum-du-brexit-2016",

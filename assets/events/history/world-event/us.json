@@ -45,6 +45,21 @@
     "note": "Date selon l'infobox. Wikidata Q193484 : même date."
   },
   {
+    "id": "history-assassinat-de-malcolm-x-1965",
+    "date": "1965-02-21",
+    "title": {
+      "fr": "Assassinat de Malcolm X",
+      "en": "Assassination of Malcolm X",
+      "de": "Ermordung von Malcolm X",
+      "it": "Assassinio di Malcolm X",
+      "es": "Asesinato de Malcolm X"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Malcolm_X",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q43303 : même date."
+  },
+  {
     "id": "history-assassinat-de-martin-luther-king-1968",
     "date": "1968-04-04",
     "title": {
@@ -178,5 +193,50 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Accident_de_la_navette_spatiale_Columbia",
     "note": "Date selon l'infobox. Wikidata Q580867 : même date."
+  },
+  {
+    "id": "history-mort-de-ronald-reagan-2004",
+    "date": "2004-06-05",
+    "title": {
+      "fr": "Mort de Ronald Reagan",
+      "en": "Death of Ronald Reagan",
+      "de": "Tod von Ronald Reagan",
+      "it": "Morte di Ronald Reagan",
+      "es": "Muerte de Ronald Reagan"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Ronald_Reagan",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q9960 : même date."
+  },
+  {
+    "id": "history-mort-de-rosa-parks-2005",
+    "date": "2005-10-24",
+    "title": {
+      "fr": "Mort de Rosa Parks",
+      "en": "Death of Rosa Parks",
+      "de": "Tod von Rosa Parks",
+      "it": "Morte di Rosa Parks",
+      "es": "Muerte de Rosa Parks"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Rosa_Parks",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q41921 : même date."
+  },
+  {
+    "id": "history-mort-de-neil-armstrong-2012",
+    "date": "2012-08-25",
+    "title": {
+      "fr": "Mort de Neil Armstrong",
+      "en": "Death of Neil Armstrong",
+      "de": "Tod von Neil Armstrong",
+      "it": "Morte di Neil Armstrong",
+      "es": "Muerte de Neil Armstrong"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Neil_Armstrong",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q1615 : même date."
   }
 ]

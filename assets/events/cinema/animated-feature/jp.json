@@ -13,5 +13,49 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Le_Voyage_de_Chihiro",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q155653 : pas de date française."
+  },
+  {
+    "id": "film-le-chateau-ambulant-2005",
+    "date": "2005-01-12",
+    "title": {
+      "fr": "Le Château ambulant",
+      "en": "Howl's Moving Castle",
+      "de": "Das wandelnde Schloss",
+      "it": "Il castello errante di Howl",
+      "es": "Howl no Ugoku Shiro"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Château_ambulant",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q29011 : pas de date française."
+  },
+  {
+    "id": "film-ponyo-sur-la-falaise-2009",
+    "date": "2009-04-08",
+    "title": {
+      "fr": "Ponyo sur la falaise",
+      "en": "Ponyo",
+      "de": "Ponyo – Das große Abenteuer am Meer",
+      "it": "Ponyo sulla scogliera",
+      "es": "Gake no ue no Ponyo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ponyo_sur_la_falaise",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q236728 : pas de date française."
+  },
+  {
+    "id": "film-your-name-2016",
+    "date": "2016-12-28",
+    "title": {
+      "fr": "Your Name.",
+      "en": "Your Name",
+      "de": "Your Name. – Gestern, heute und für immer",
+      "es": "Kimi no Na wa."
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Your_Name.",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q21697406 : même date."
   }
 ]

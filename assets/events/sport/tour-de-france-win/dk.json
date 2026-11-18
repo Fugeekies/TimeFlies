@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sport-tour-de-france-bjarne-riis-1996",
+    "date": "1996-07-21",
+    "title": {
+      "fr": "Victoire de Bjarne Riis au Tour de France (1996)",
+      "en": "Bjarne Riis wins the Tour de France (1996)",
+      "de": "Bjarne Riis gewinnt die Tour de France (1996)",
+      "it": "Bjarne Riis vince il Tour de France (1996)",
+      "es": "Bjarne Riis gana el Tour de Francia (1996)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1996",
+    "note": "Arrivée à Paris le 1996-07-21 selon le texte de l'article (« du … au … ») et Wikidata Q546013 (même date) ; vainqueur selon l'infobox."
+  },
+  {
+    "id": "sport-tour-de-france-jonas-vingegaard-2022",
+    "date": "2022-07-24",
+    "title": {
+      "fr": "Première victoire de Jonas Vingegaard au Tour de France (2022)",
+      "en": "Jonas Vingegaard's first Tour de France win (2022)",
+      "de": "Erster Tour-de-France-Sieg von Jonas Vingegaard (2022)",
+      "it": "Prima vittoria di Jonas Vingegaard al Tour de France (2022)",
+      "es": "Primera victoria de Jonas Vingegaard en el Tour de Francia (2022)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_2022",
+    "note": "Dates de l'épreuve dans le texte de l'article ; arrivée selon Wikidata Q98043180, dont la date de départ concorde avec l'article ; vainqueur selon l'infobox."
+  }
+]

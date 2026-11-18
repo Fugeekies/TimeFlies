@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-mort-de-joseph-staline-1953",
+    "date": "1953-03-05",
+    "title": {
+      "fr": "Mort de Joseph Staline",
+      "en": "Death of Joseph Stalin",
+      "de": "Tod von Josef Stalin",
+      "it": "Morte di Iosif Stalin",
+      "es": "Muerte de Iósif Stalin"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Joseph_Staline",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q855 : même date."
+  },
+  {
     "id": "history-spoutnik-1-1957",
     "date": "1957-10-04",
     "title": {
@@ -58,5 +73,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Invasion_de_l'Ukraine_par_la_Russie_en_2022",
     "note": "Date selon l'infobox. Wikidata Q110999040 : même date."
+  },
+  {
+    "id": "history-mort-de-mikhail-gorbatchev-2022",
+    "date": "2022-08-30",
+    "title": {
+      "fr": "Mort de Mikhaïl Gorbatchev",
+      "en": "Death of Mikhail Gorbachev",
+      "de": "Tod von Michail Gorbatschow",
+      "it": "Morte di Michail Gorbačëv",
+      "es": "Muerte de Mijaíl Gorbachov"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Mikhaïl_Gorbatchev",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q30487 : même date."
   }
 ]

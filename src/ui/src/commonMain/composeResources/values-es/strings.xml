@@ -208,34 +208,57 @@
         <item>Bélgica</item>
         <item>Brasil</item>
         <item>Canadá</item>
+        <item>Suiza</item>
+        <item>Chile</item>
         <item>China</item>
+        <item>Colombia</item>
         <item>Cuba</item>
         <item>Chequia</item>
         <item>Alemania</item>
         <item>Dinamarca</item>
+        <item>Egipto</item>
         <item>España</item>
+        <item>Finlandia</item>
         <item>Francia</item>
         <item>Reino Unido</item>
+        <item>Guatemala</item>
         <item>Croacia</item>
+        <item>Haití</item>
+        <item>Hungría</item>
+        <item>Irlanda</item>
+        <item>Israel</item>
+        <item>India</item>
+        <item>Irak</item>
+        <item>Italia</item>
         <item>Jamaica</item>
         <item>Japón</item>
         <item>Kenia</item>
         <item>Corea del Sur</item>
         <item>Lituania</item>
+        <item>Luxemburgo</item>
         <item>Marruecos</item>
         <item>Mónaco</item>
         <item>Moldavia</item>
         <item>Países Bajos</item>
         <item>Noruega</item>
+        <item>Nueva Zelanda</item>
         <item>Filipinas</item>
+        <item>Polonia</item>
         <item>Puerto Rico</item>
+        <item>Palestina</item>
         <item>Portugal</item>
         <item>Rumanía</item>
+        <item>Serbia</item>
         <item>Rusia</item>
+        <item>Arabia Saudita</item>
         <item>Suecia</item>
+        <item>Eslovenia</item>
         <item>Ucrania</item>
         <item>Uganda</item>
         <item>Estados Unidos</item>
+        <item>Uruguay</item>
+        <item>Ciudad del Vaticano</item>
+        <item>Vietnam</item>
         <item>Sudáfrica</item>
     </string-array>
     <string-array name="subcategory_names">

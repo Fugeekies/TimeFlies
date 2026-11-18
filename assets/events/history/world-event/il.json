@@ -1,0 +1,17 @@
+[
+  {
+    "id": "history-assassinat-de-yitzhak-rabin-1995",
+    "date": "1995-11-04",
+    "title": {
+      "fr": "Assassinat de Yitzhak Rabin",
+      "en": "Assassination of Yitzhak Rabin",
+      "de": "Ermordung von Jitzchak Rabin",
+      "it": "Assassinio di Yitzhak Rabin",
+      "es": "Asesinato de Isaac Rabin"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Yitzhak_Rabin",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q34060 : même date."
+  }
+]

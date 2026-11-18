@@ -60,6 +60,34 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q181803 : pas de date française."
   },
   {
+    "id": "film-indiana-jones-et-le-temple-maudit-1984",
+    "date": "1984-09-12",
+    "title": {
+      "fr": "Indiana Jones et le Temple maudit",
+      "en": "Indiana Jones and the Temple of Doom",
+      "de": "Indiana Jones und der Tempel des Todes",
+      "it": "Indiana Jones e il tempio maledetto",
+      "es": "Indiana Jones and the Temple of Doom"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Indiana_Jones_et_le_Temple_maudit",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q179215 : pas de date française."
+  },
+  {
+    "id": "film-terminator-1985",
+    "date": "1985-04-24",
+    "title": {
+      "fr": "Terminator",
+      "en": "The Terminator",
+      "es": "The Terminator"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Terminator",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q162255 : même date."
+  },
+  {
     "id": "film-retour-vers-le-futur-1985",
     "date": "1985-10-30",
     "title": {
@@ -84,6 +112,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Batman_(film,_1989)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q116852 : même date."
+  },
+  {
+    "id": "film-indiana-jones-et-la-derniere-croisade-1989",
+    "date": "1989-10-18",
+    "title": {
+      "fr": "Indiana Jones et la Dernière Croisade",
+      "en": "Indiana Jones and the Last Crusade",
+      "de": "Indiana Jones und der letzte Kreuzzug",
+      "it": "Indiana Jones e l'ultima crociata",
+      "es": "Indiana Jones y la última cruzada"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Indiana_Jones_et_la_Dernière_Croisade",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q185658 : pas de date française."
+  },
+  {
+    "id": "film-retour-vers-le-futur-2-1989",
+    "date": "1989-12-20",
+    "title": {
+      "fr": "Retour vers le futur 2",
+      "en": "Back to the Future Part II",
+      "de": "Zurück in die Zukunft II",
+      "it": "Ritorno al futuro - Parte II",
+      "es": "Back to the Future Part II"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Retour_vers_le_futur_2",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q109331 : pas de date française."
   },
   {
     "id": "film-matrix-1999",
@@ -169,6 +227,36 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q484442 : même date."
   },
   {
+    "id": "film-harry-potter-et-la-chambre-des-secrets-2002",
+    "date": "2002-12-04",
+    "title": {
+      "fr": "Harry Potter et la Chambre des secrets",
+      "en": "Harry Potter and the Chamber of Secrets",
+      "de": "Harry Potter und die Kammer des Schreckens",
+      "it": "Harry Potter e la camera dei segreti",
+      "es": "Harry Potter y la cámara secreta"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_et_la_Chambre_des_secrets_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102244 : même date."
+  },
+  {
+    "id": "film-le-seigneur-des-anneaux-les-deux-tours-2002",
+    "date": "2002-12-18",
+    "title": {
+      "fr": "Le Seigneur des anneaux : Les Deux Tours",
+      "en": "The Lord of the Rings: The Two Towers",
+      "de": "Der Herr der Ringe: Die zwei Türme",
+      "it": "Il Signore degli Anelli - Le due torri",
+      "es": "El Señor de los Anillos: las dos torres"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Seigneur_des_anneaux_:_Les_Deux_Tours",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q164963 : même date."
+  },
+  {
     "id": "film-pirates-des-caraibes-la-malediction-du-black-pearl-2003",
     "date": "2003-08-13",
     "title": {
@@ -182,6 +270,77 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Pirates_des_Cara%C3%AFbes_:_La_Mal%C3%A9diction_du_Black_Pearl",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q46717 : même date."
+  },
+  {
+    "id": "film-le-seigneur-des-anneaux-le-retour-du-roi-2003",
+    "date": "2003-12-17",
+    "title": {
+      "fr": "Le Seigneur des anneaux : Le Retour du roi",
+      "en": "The Lord of the Rings: The Return of the King",
+      "de": "Der Herr der Ringe: Die Rückkehr des Königs",
+      "it": "Il Signore degli Anelli - Il ritorno del re",
+      "es": "El Señor de los Anillos: el retorno del Rey"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Le_Seigneur_des_anneaux_:_Le_Retour_du_roi",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q131074 : même date."
+  },
+  {
+    "id": "film-harry-potter-et-le-prisonnier-d-azkaban-2004",
+    "date": "2004-06-02",
+    "title": {
+      "fr": "Harry Potter et le Prisonnier d'Azkaban",
+      "en": "Harry Potter and the Prisoner of Azkaban",
+      "de": "Harry Potter und der Gefangene von Askaban",
+      "it": "Harry Potter e il prigioniero di Azkaban",
+      "es": "Harry Potter y el prisionero de Azkaban"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_et_le_Prisonnier_d'Azkaban_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102448 : même date."
+  },
+  {
+    "id": "film-spider-man-2-2004",
+    "date": "2004-07-14",
+    "title": {
+      "fr": "Spider-Man 2"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Spider-Man_2",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q190145 : même date."
+  },
+  {
+    "id": "film-harry-potter-et-la-coupe-de-feu-2005",
+    "date": "2005-11-30",
+    "title": {
+      "fr": "Harry Potter et la Coupe de feu",
+      "en": "Harry Potter and the Goblet of Fire",
+      "de": "Harry Potter und der Feuerkelch",
+      "it": "Harry Potter e il calice di fuoco",
+      "es": "Harry Potter y el cáliz de fuego"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_et_la_Coupe_de_feu_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102225 : même date."
+  },
+  {
+    "id": "film-harry-potter-et-l-ordre-du-phenix-2007",
+    "date": "2007-07-11",
+    "title": {
+      "fr": "Harry Potter et l'Ordre du Phénix",
+      "en": "Harry Potter and the Order of the Phoenix",
+      "de": "Harry Potter und der Orden des Phönix",
+      "it": "Harry Potter e l'Ordine della Fenice",
+      "es": "Harry Potter y la Orden del Fénix"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_et_l'Ordre_du_Phénix_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102235 : même date."
   },
   {
     "id": "film-the-dark-knight-le-chevalier-noir-2008",
@@ -214,6 +373,33 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q160071 : pas de date française."
   },
   {
+    "id": "film-harry-potter-et-le-prince-de-sang-mele-2009",
+    "date": "2009-07-15",
+    "title": {
+      "fr": "Harry Potter et le Prince de sang-mêlé",
+      "en": "Harry Potter and the Half-Blood Prince",
+      "de": "Harry Potter und der Halbblutprinz",
+      "it": "Harry Potter e il principe mezzosangue",
+      "es": "Harry Potter y el misterio del príncipe"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Harry_Potter_et_le_Prince_de_sang-mêlé_(film)",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q161687 : même date."
+  },
+  {
+    "id": "film-toy-story-3-2010",
+    "date": "2010-07-14",
+    "title": {
+      "fr": "Toy Story 3",
+      "it": "Toy Story 3 - La grande fuga"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Toy_Story_3",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q187278 : même date."
+  },
+  {
     "id": "film-hunger-games-2012",
     "date": "2012-03-21",
     "title": {
@@ -243,6 +429,32 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q182218 : même date."
   },
   {
+    "id": "film-le-hobbit-un-voyage-inattendu-2012",
+    "date": "2012-12-12",
+    "title": {
+      "fr": "Le Hobbit : Un voyage inattendu",
+      "en": "The Hobbit: An Unexpected Journey",
+      "de": "Der Hobbit: Eine unerwartete Reise",
+      "it": "Lo Hobbit - Un viaggio inaspettato",
+      "es": "El hobbit: un viaje inesperado"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Hobbit_:_Un_voyage_inattendu",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q80379 : même date."
+  },
+  {
+    "id": "film-jurassic-world-2015",
+    "date": "2015-06-10",
+    "title": {
+      "fr": "Jurassic World"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Jurassic_World",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q3512046 : même date."
+  },
+  {
     "id": "film-star-wars-episode-vii-le-reveil-de-la-force-2015",
     "date": "2015-12-16",
     "title": {
@@ -258,6 +470,17 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6074 : même date."
   },
   {
+    "id": "film-avengers-infinity-war-2018",
+    "date": "2018-04-25",
+    "title": {
+      "fr": "Avengers: Infinity War"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Avengers:_Infinity_War",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q23780914 : même date."
+  },
+  {
     "id": "film-avengers-endgame-2019",
     "date": "2019-04-24",
     "title": {
@@ -267,5 +490,31 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Avengers:_Endgame",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q23781155 : même date."
+  },
+  {
+    "id": "film-spider-man-no-way-home-2021",
+    "date": "2021-12-15",
+    "title": {
+      "fr": "Spider-Man: No Way Home"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Spider-Man:_No_Way_Home",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q68934496 : même date."
+  },
+  {
+    "id": "film-avatar-la-voie-de-l-eau-2022",
+    "date": "2022-12-14",
+    "title": {
+      "fr": "Avatar : La Voie de l'eau",
+      "en": "Avatar: The Way of Water",
+      "de": "Avatar: The Way of Water",
+      "it": "Avatar - La via dell'acqua",
+      "es": "Avatar: The Way of Water"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Avatar_:_La_Voie_de_l'eau",
+    "note": "Sortie nationale en France selon la fiche technique. Wikidata Q3604746 : même date."
   }
 ]

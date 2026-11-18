@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sport-grand-chelem-naomi-osaka-us-2018",
+    "date": "2018-09-09",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Naomi Osaka (US Open 2018)",
+      "en": "Naomi Osaka's first Grand Slam title (2018 US Open)",
+      "de": "Erster Grand-Slam-Titel von Naomi Osaka (US Open 2018)",
+      "it": "Primo titolo del Grande Slam di Naomi Osaka (US Open 2018)",
+      "es": "Primer título de Grand Slam de Naomi Osaka (US Open 2018)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_dames_de_l'US_Open_de_tennis_2018",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q47001965 : année seulement."
+  }
+]

@@ -28,5 +28,20 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_des_Internationaux_de_France_2022",
     "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q107126329 : année seulement."
+  },
+  {
+    "id": "sport-grand-chelem-carlos-alcaraz-us-2022",
+    "date": "2022-09-11",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Carlos Alcaraz (US Open 2022)",
+      "en": "Carlos Alcaraz's first Grand Slam title (2022 US Open)",
+      "de": "Erster Grand-Slam-Titel von Carlos Alcaraz (US Open 2022)",
+      "it": "Primo titolo del Grande Slam di Carlos Alcaraz (US Open 2022)",
+      "es": "Primer título de Grand Slam de Carlos Alcaraz (US Open 2022)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'US_Open_de_tennis_2022",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q108454403 : année seulement."
   }
 ]

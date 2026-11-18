@@ -30,6 +30,21 @@
     "note": "Date selon l'infobox. Wikidata Q7979114 : même date."
   },
   {
+    "id": "history-mort-de-george-vi-1952",
+    "date": "1952-02-06",
+    "title": {
+      "fr": "Mort de George VI",
+      "en": "Death of George VI",
+      "de": "Tod von Georg VI.",
+      "it": "Morte di Giorgio VI",
+      "es": "Muerte de Jorge VI"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/George_VI",
+    "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q280856 : même date."
+  },
+  {
     "id": "history-couronnement-d-elisabeth-ii-1953",
     "date": "1953-06-02",
     "title": {
