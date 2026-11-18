@@ -21,7 +21,7 @@ Le stesse di [Quanti anni?](event-ages.md): la tua età, poi **Aggiungi un'età*
 
 ## Temi
 
-Il pulsante **Temi** seleziona o deseleziona le famiglie di eventi (Serie & TV, Cinema, Musica, Sport, Videogiochi & tecnologia, Politica & storia), con **Seleziona tutto** e **Deseleziona tutto**. La scelta viene conservata.
+Il pulsante **Temi** seleziona o deseleziona le famiglie di eventi (Serie & TV, Cinema, Musica, Sport, Videogiochi & tecnologia, Politica & storia), con **Seleziona tutto** e **Deseleziona tutto**. La scelta viene conservata e vale anche per [Quanti anni?](event-ages.md).
 
 ## Senza data di nascita
 

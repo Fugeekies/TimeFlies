@@ -21,7 +21,7 @@ Dieselben wie bei [Wie alt?](event-ages.md): dein Alter, dann **Alter hinzufüge
 
 ## Themen
 
-Die Schaltfläche **Themen** hakt die Ereignisfamilien an oder ab (Serien & TV, Kino, Musik, Sport, Videospiele & Technik, Politik & Geschichte), mit **Alle anhaken** und **Alle abhaken**. Deine Auswahl wird gespeichert.
+Die Schaltfläche **Themen** hakt die Ereignisfamilien an oder ab (Serien & TV, Kino, Musik, Sport, Videospiele & Technik, Politik & Geschichte), mit **Alle anhaken** und **Alle abhaken**. Deine Auswahl wird gespeichert und gilt auch für [Wie alt?](event-ages.md).
 
 ## Ohne Geburtsdatum
 

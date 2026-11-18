@@ -21,7 +21,7 @@ Les mêmes que sur [Quel âge ?](event-ages.md) : ton âge, puis **Ajouter un â
 
 ## Thèmes
 
-Le bouton **Thèmes** coche ou décoche les familles d'événements (Séries & télé, Cinéma, Musique, Sport, Jeux vidéo & tech, Politique & histoire), avec **Tout cocher** et **Tout décocher**. Ce choix est gardé.
+Le bouton **Thèmes** coche ou décoche les familles d'événements (Séries & télé, Cinéma, Musique, Sport, Jeux vidéo & tech, Politique & histoire), avec **Tout cocher** et **Tout décocher**. Ce choix est gardé et vaut aussi pour [Quel âge ?](event-ages.md).
 
 ## Sans date de naissance
 

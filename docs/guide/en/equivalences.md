@@ -21,7 +21,7 @@ The same as on [How old?](event-ages.md): your age, then **Add an age** for one 
 
 ## Themes
 
-The **Themes** button ticks or unticks the families of events (Series & TV, Cinema, Music, Sport, Video games & tech, Politics & history), with **Check all** and **Uncheck all**. Your choice is kept.
+The **Themes** button ticks or unticks the families of events (Series & TV, Cinema, Music, Sport, Video games & tech, Politics & history), with **Check all** and **Uncheck all**. Your choice is kept and applies to [How old?](event-ages.md) too.
 
 ## Without a birth date
 

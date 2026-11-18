@@ -83,7 +83,6 @@ fun EquivalencesScreen(
 ) {
     val generations by viewModel.generations.collectAsStateWithLifecycle()
     val state by viewModel.state.collectAsStateWithLifecycle()
-    var themesOpen by remember { mutableStateOf(false) }
 
     val people = generations
     val list = state
@@ -112,16 +111,7 @@ fun EquivalencesScreen(
                 GenerationsBanner(
                     viewModel,
                     people,
-                    footer = {
-                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                            OutlinedButton(onClick = { themesOpen = true }) { Text(stringResource(Res.string.equivalences_themes)) }
-                            Text(
-                                pluralStringResource(Res.plurals.equivalences_themes_summary, list.families.size, list.families.size, Family.entries.size),
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                    },
+                    footer = { ThemesFilter(list.families, onFamily = viewModel::setFamily, onAll = viewModel::setAllFamilies) },
                 )
             }
             val cards = list.cards
@@ -137,9 +127,6 @@ fun EquivalencesScreen(
         }
     }
 
-    if (themesOpen) {
-        ThemesDialog(list.families, onFamily = viewModel::setFamily, onAll = viewModel::setAllFamilies, onDismiss = { themesOpen = false })
-    }
 }
 
 @Composable
@@ -218,32 +205,3 @@ private fun EquivalenceCard(card: Equivalence, dates: DateTexts, onClick: () -> 
     }
 }
 
-/** The themes as check boxes, saved at once (docs/UISpec/Equivalences.template.md, "Filtres"). */
-@Composable
-private fun ThemesDialog(checked: Set<Family>, onFamily: (Family, Boolean) -> Unit, onAll: (Boolean) -> Unit, onDismiss: () -> Unit) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        confirmButton = { TextButton(onClick = onDismiss) { Text(stringResource(Res.string.ok)) } },
-        title = { Text(stringResource(Res.string.equivalences_themes)) },
-        text = {
-            Column {
-                Family.entries.forEach { family ->
-                    val isChecked = family in checked
-                    Row(
-                        Modifier.fillMaxWidth().clickable(role = Role.Checkbox) { onFamily(family, !isChecked) },
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        Checkbox(checked = isChecked, onCheckedChange = null)
-                        Box(Modifier.size(10.dp).background(LocalStyle.current.familyColors.getValue(family), CircleShape))
-                        Text(familyLabel(family), style = MaterialTheme.typography.bodyLarge)
-                    }
-                }
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    TextButton(onClick = { onAll(true) }) { Text(stringResource(Res.string.equivalences_check_all)) }
-                    TextButton(onClick = { onAll(false) }) { Text(stringResource(Res.string.equivalences_uncheck_all)) }
-                }
-            }
-        },
-    )
-}

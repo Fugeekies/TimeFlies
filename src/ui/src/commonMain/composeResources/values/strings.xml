@@ -112,6 +112,7 @@
     <string name="event_ages_title">Quel âge ?</string>
     <string name="event_ages_search_hint">Cherche un film, une série, un artiste…</string>
     <string name="event_ages_no_results">Aucun événement ne correspond à cette recherche.</string>
+    <string name="event_ages_no_themes">Aucun thème coché. Coche au moins un thème avec le bouton Thèmes.</string>
     <string name="event_ages_reduced">Indique ton mois et ton année de naissance pour voir ton âge à chaque événement.</string>
     <!-- Read after an event: "Toi : 6 ans." / "L'autre personne : −14 ans." -->
     <string name="event_ages_a11y_line">%1$s : %2$s.</string>
