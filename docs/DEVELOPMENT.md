@@ -29,6 +29,7 @@
 ./gradlew check                      # tous les tests, dont la validation des fichiers d'événements
 ./gradlew :data:desktopTest          # tests de la couche data seulement (affiche le rapport de couverture)
 ./gradlew :benchmarks:benchmark      # benchmarks (environ 1 min, hors de check)
+./gradlew :desktopApp:siteScreenshots # captures de la page de présentation dans site/assets/
 ```
 
 Les benchmarks mesurent le chargement de la base et le calcul de chaque page, sur les fichiers réels et sur des jeux synthétiques de 500 à 10 000 événements. Le rapport s'écrit dans `src/benchmarks/build/reports/benchmarks/performance-report.md` ; une PR qui touche au chargement des données ou au calcul d'une page en committe une copie dans `docs/benchmarks/`. Les durées dépendent de la machine : comparer des rapports faits sur le même PC (ou sur la CI).
@@ -96,6 +97,18 @@ Une destination « Débogage » (icône de clé), présente uniquement dans les 
 - **Aucune donnée personnelle** dans les logs (ni mois ni année de naissance) : un fichier de réglages illisible est signalé par le nom de l'erreur seulement, son message pouvant citer le fichier.
 - Pas d'outil de rapport de plantage en ligne (aucune donnée n'est envoyée, la seule connexion cherche les nouvelles versions) : une exception non rattrapée est écrite dans les logs (étiquette `Crash`) avant l'arrêt, à joindre à la main à une issue GitHub.
 - La console Windows peut afficher les accents de travers (page de code) ; le fichier est en UTF-8.
+
+## Page de présentation
+
+Comme pour LMU-DeltaRacing (19/11/2026), une page en anglais présente l'application sur [fugeekies.github.io/TimeFlies](https://fugeekies.github.io/TimeFlies/), pour que les moteurs de recherche trouvent le projet (la page peut être déclarée dans Google Search Console, github.com non). Elle est dans `site/` ; le workflow « Pages » (`.github/workflows/pages.yml`) ne publie que ce dossier, à chaque modification de `site/` sur `main` ou à la main.
+
+- **Captures** : `./gradlew :desktopApp:siteScreenshots` rend les vrais écrans hors écran (Compose UI Test, source set `screenshots` de `desktopApp`, ni dans l'installeur ni dans la CI) dans `site/assets/` : en anglais, en clair, avec la vraie base d'événements, le 5 décembre 2026 (25 ans de *Harry Potter à l'école des sorciers*) pour une naissance en mai 1991, sans lire ni écrire les réglages de `%APPDATA%\TimeFlies`. À relancer après un changement visible des écrans.
+- **Image d'aperçu** (`site/social-preview.png`, 1280 × 640, aussi à mettre dans *Settings › Social preview* du dépôt) : `scripts/social-preview.html`, rendue avec Edge sans interface :
+  ```bash
+  msedge --headless=new --hide-scrollbars --window-size=1280,640 --screenshot=site/social-preview.png scripts/social-preview.html
+  ```
+- Polices de la page : Caveat et Atkinson Hyperlegible en woff2 (jeu latin), servies par la page elle-même, sans Google Fonts.
+- Activation (une fois) : *Settings › Pages › Source : GitHub Actions*.
 
 ## Releases
 

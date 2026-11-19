@@ -16,6 +16,7 @@ Ce fichier est la **source unique** des instructions pour les agents IA : GitHub
 | `docs/UI_DESIGN_SPEC.md` | Identité visuelle, palette, polices, navigation, langues, accessibilité. |
 | `docs/UISpec/*.template.md` | Une spécification et une maquette ASCII par écran : `Onboarding`, `Today`, `EventAges` (« Quel âge ? »), `Equivalences`, `Settings`, `AndroidWidget`, `WindowsTray`. |
 | `docs/maquettes/` | Maquettes visuelles (HTML et PNG) des écrans Android et Windows. En cas d'écart, les specs `UISpec/` font foi. |
+| `site/` | Page de présentation publiée sur GitHub Pages (`fugeekies.github.io/TimeFlies`) par `.github/workflows/pages.yml`, en anglais : seul ce dossier est publié. Captures des vrais écrans (`./gradlew :desktopApp:siteScreenshots`), image d'aperçu `social-preview.png` (1280×640), `sitemap.xml`. |
 | `docs/ROADMAP.md` | Jalons à faire et terminés. |
 | `docs/guide/<langue>/` | Guide d'utilisation en cinq langues (`en`, `fr`, `de`, `it`, `es`), une page courte par sujet, comme LMU-DeltaRacing (décision du 17/11/2026). |
 

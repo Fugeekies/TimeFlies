@@ -80,7 +80,6 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 - Notification du matin sur Android quand un anniversaire rond tombe.
 - Partager un coup de vieux en image.
 - Ajouter ses propres événements (souvenirs personnels).
-- Page de présentation sur GitHub Pages, comme LMU-DeltaRacing. Icône et favicon à reprendre d'`assets/icon/` (`timeflies-icon.svg` en favicon SVG, `timeflies-512.png`, `timeflies.ico`), image d'aperçu des réseaux sociaux comme celle du dépôt.
 
 ## Terminés
 
@@ -228,3 +227,7 @@ Décision du 17/11/2026 : l'interface est traduite dans les langues du guide d'u
 - [x] `domain` : `AppLanguage` (choix, sinon langue du système si proposée, sinon français), `Settings.language`, `UpdateSettings.setLanguage`. `data` : `settings.json` en version 8 (`language`). Tests.
 - [x] Réglages › Affichage › Langue : chaque langue écrite dans sa langue ; appliquée aussitôt à l'application (écran affiché et âges ajoutés gardés), au widget, à l'icône et à la notification Windows (`AppLocale`).
 - [x] Guide d'utilisation : la ligne Langue dans les cinq langues.
+
+### Page de présentation — 19/11/2026 · PR [#38](https://github.com/Fugeekies/TimeFlies/pull/38)
+- [x] Page en anglais sur [fugeekies.github.io/TimeFlies](https://fugeekies.github.io/TimeFlies/), comme LMU-DeltaRacing : `site/` publié par `pages.yml`, favicon tiré d'`assets/icon/` (SVG et `.ico`), image d'aperçu 1280 × 640, `sitemap.xml`, polices servies par la page.
+- [x] Captures des vrais écrans rendues par `./gradlew :desktopApp:siteScreenshots` (Aujourd'hui dans les trois styles, « Quel âge ? », Équivalences, fenêtre Windows).
