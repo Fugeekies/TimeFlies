@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TimeFlies – the app that makes you feel old, every day</title>
+    <meta name="description" content="Free Android and Windows app: every day, the anniversaries of the films, series, songs, matches and big events that marked your life, and how old you were. Generation equivalents, widget and morning notification. No account, no data collected.">
+    <link rel="canonical" href="https://fugeekies.github.io/TimeFlies/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <meta name="theme-color" content="#E8DFD2">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TimeFlies – the app that makes you feel old, every day">
+    <meta property="og:description" content="The anniversaries of the films, series, songs and events that marked your life, and how old you were. Android and Windows, no data collected.">
+    <meta property="og:url" content="https://fugeekies.github.io/TimeFlies/">
+    <meta property="og:image" content="https://fugeekies.github.io/TimeFlies/social-preview.png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TimeFlies",
+        "description": "Daily anniversaries of the films, series, songs and events that marked your life, with how old you were, and generation equivalents.",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Android 8.0+, Windows 10, Windows 11 (64-bit)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "downloadUrl": "https://github.com/Fugeekies/TimeFlies/releases/latest",
+        "codeRepository": "https://github.com/Fugeekies/TimeFlies",
+        "inLanguage": ["en", "fr", "de", "it", "es"]
+    }
+    </script>
+    <style>
+        @font-face { font-family: Atkinson; font-weight: 400; font-display: swap; src: url("assets/fonts/atkinson-regular-latin.woff2") format("woff2"); }
+        @font-face { font-family: Atkinson; font-weight: 700; font-display: swap; src: url("assets/fonts/atkinson-bold-latin.woff2") format("woff2"); }
+        @font-face { font-family: Caveat; font-weight: 700; font-display: swap; src: url("assets/fonts/caveat-bold-latin.woff2") format("woff2"); }
+
+        /* The Polaroïd palette of the app (docs/UI_DESIGN_SPEC.md, § 2), light and "darkroom". */
+        :root {
+            --background: #E8DFD2;
+            --surface: #FBFAF7;
+            --border: #D6CBBC;
+            --text: #2B2420;
+            --muted: #6A5D52;
+            --accent: #9A4E1C;
+            --on-accent: #FBFAF7;
+            --glow: rgb(227 168 58 / 30%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #1C1714;
+                --surface: #2A231F;
+                --border: #4A3F37;
+                --text: #F1E8DD;
+                --muted: #BFAF9F;
+                --accent: #E39A62;
+                --on-accent: #1C1714;
+                --glow: rgb(227 154 98 / 16%);
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at 85% 0%, var(--glow), transparent 45%), var(--background);
+            color: var(--text);
+            font-family: Atkinson, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        a { color: var(--accent); }
+
+        main, header, footer { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+        header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.25rem; flex-wrap: wrap; }
+
+        .brand { display: flex; align-items: center; gap: 0.75rem; color: var(--text); text-decoration: none; font-family: Caveat, cursive; font-size: 2.1rem; line-height: 1; }
+        .brand img { width: 56px; height: 56px; }
+
+        .languages { color: var(--muted); font-size: 0.9rem; }
+        .languages a { color: var(--muted); }
+
+        .hero { display: grid; gap: 1.25rem; padding: 3.5rem 0 2.5rem; }
+
+        h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+        h1 em { white-space: nowrap; font-family: Caveat, cursive; font-style: normal; font-size: 1.2em; color: var(--accent); }
+
+        .lead { max-width: 48rem; margin: 0; color: var(--muted); font-size: 1.15rem; }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+        .button { display: inline-flex; align-items: center; padding: 0.75rem 1.2rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); font-weight: 700; text-decoration: none; }
+        .button-primary { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+
+        .privacy { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+        .shot { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 6px 24px rgb(0 0 0 / 12%); }
+        .phone { border-radius: 22px; }
+
+        .phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 900px; }
+        .phones figure, .gallery figure { margin: 0; }
+        figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.95rem; }
+
+        h2 { margin: 3rem 0 1rem; font-family: Caveat, cursive; font-size: 2.4rem; line-height: 1.1; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; padding: 0; list-style: none; }
+        .features li { padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+        .features strong { display: block; margin-bottom: 0.3rem; }
+        .features p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+        .styles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 900px; }
+
+        ol.steps { padding-left: 1.25rem; color: var(--muted); }
+        ol.steps strong { color: var(--text); }
+
+        blockquote { margin: 2.5rem 0 0; padding-left: 1rem; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; }
+
+        footer { margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+        footer a { color: var(--muted); }
+
+        @media (max-width: 640px) {
+            .phones, .styles { grid-template-columns: 1fr; max-width: 360px; }
+            .hero { padding-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="brand" href="./">
+            <img src="assets/logo.png" alt="" width="56" height="56">
+            TimeFlies
+        </a>
+        <nav class="languages" aria-label="User guide in other languages">
+            User guide:
+            <a href="https://github.com/Fugeekies/TimeFlies/blob/main/docs/guide/en/README.md" hreflang="en">English</a> ·
+            <a href="https://github.com/Fugeekies/TimeFlies/blob/main/docs/guide/fr/README.md" hreflang="fr">Français</a> ·
+            <a href="https://github.com/Fugeekies/TimeFlies/blob/main/docs/guide/de/README.md" hreflang="de">Deutsch</a> ·
+            <a href="https://github.com/Fugeekies/TimeFlies/blob/main/docs/guide/it/README.md" hreflang="it">Italiano</a> ·
+            <a href="https://github.com/Fugeekies/TimeFlies/blob/main/docs/guide/es/README.md" hreflang="es">Español</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>The app that makes you <em>feel old</em>, every day.</h1>
+            <p class="lead">TimeFlies gives you the anniversaries of the films, series, songs, matches and big events that marked your life, and how old you were: “Harry Potter came out 25 years ago. You were 10.” It also finds equivalences: for a 15-year-old today, <i>Friends</i> is what <i>Happy Days</i> was for you.</p>
+            <div class="actions">
+                <a class="button button-primary" href="https://github.com/Fugeekies/TimeFlies/releases/latest">Download for Android and Windows</a>
+                <a class="button" href="https://github.com/Fugeekies/TimeFlies">Source code on GitHub</a>
+            </div>
+            <p class="privacy">Free and open source (GPL-3.0) · Android 8.0 and later, Windows 10 and 11 (64-bit) · Interface in English, French, German, Italian and Spanish · No account, no data collected.</p>
+            <div class="phones">
+                <figure>
+                    <img class="shot phone" src="assets/today.png" alt="Today screen: a Polaroid of Harry Potter and the Philosopher's Stone, 25 years, you were 10, then the other anniversaries of the day" width="1030" height="2230">
+                    <figcaption>Today: the anniversary of the day, round numbers first.</figcaption>
+                </figure>
+                <figure>
+                    <img class="shot phone" src="assets/how-old.png" alt="How old? screen: on the release of Harry Potter, you were 10 and a 15-year-old of today was −11" width="1030" height="2230">
+                    <figcaption>How old? Your age and up to three others on any event.</figcaption>
+                </figure>
+                <figure>
+                    <img class="shot phone" src="assets/equivalences.png" alt="Equivalences screen: events of the same type, shifted by the 20 years between you and a 15-year-old" width="1030" height="2230">
+                    <figcaption>Equivalences: same type of event, 20 years apart.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <h2>What it shows</h2>
+        <ul class="features">
+            <li><strong>Today</strong><p>The anniversaries of the day, round numbers first (10, 15, 20, 25 years…), with the age you had. Nothing today? The closest ones of the coming days.</p></li>
+            <li><strong>How old?</strong><p>Pick any event and see how old you were, side by side with up to three other ages, negative before a birth.</p></li>
+            <li><strong>Equivalences</strong><p>For someone younger or older, the events of the same type shifted by your age gap: the sitcom, the console, the summer hit of their own youth.</p></li>
+            <li><strong>Nearly 1,000 dated events</strong><p>Series and TV, cinema, music, games and tech, sport and history, each checked to the day. Untick the themes that do not speak to you.</p></li>
+            <li><strong>Android widget</strong><p>Today's reminder on your home screen, updated every day.</p></li>
+            <li><strong>Windows tray and notification</strong><p>An icon in the taskbar and a notification in the morning, when you want it.</p></li>
+            <li><strong>Three styles</strong><p>Polaroid, with ages written by hand, VHS tape or tear-off calendar, in Settings › Display.</p></li>
+            <li><strong>Private by design</strong><p>Only your birth month and year, never the day, kept on your device. The only connection is a daily check for a new version on GitHub, which you can turn off.</p></li>
+        </ul>
+
+        <h2>Three styles</h2>
+        <div class="styles">
+            <figure>
+                <img class="shot phone" src="assets/today.png" alt="Today in the Polaroid style" width="1030" height="2230" loading="lazy">
+                <figcaption>Polaroid, the default.</figcaption>
+            </figure>
+            <figure>
+                <img class="shot phone" src="assets/today-vhs.png" alt="Today in the VHS style: a tape label with 25 years in magenta" width="1030" height="2230" loading="lazy">
+                <figcaption>VHS, always dark.</figcaption>
+            </figure>
+            <figure>
+                <img class="shot phone" src="assets/today-ephemeris.png" alt="Today in the tear-off calendar style: a big red 25 years" width="1030" height="2230" loading="lazy">
+                <figcaption>Tear-off calendar.</figcaption>
+            </figure>
+        </div>
+
+        <h2>On Windows too</h2>
+        <img class="shot" src="assets/windows.png" alt="TimeFlies on Windows: navigation on the left, the Polaroid of the day and the other anniversaries side by side" width="1500" height="1050" loading="lazy">
+
+        <h2>Get started</h2>
+        <ol class="steps">
+            <li><strong>Download</strong> the file for your device from the <a href="https://github.com/Fugeekies/TimeFlies/releases/latest">latest release</a>: <code>TimeFlies-X.Y.Z.apk</code> for Android, <code>TimeFlies-X.Y.Z-Setup.exe</code> for Windows.</li>
+            <li><strong>Install</strong> it. Android asks you to allow installing apps from your browser, as for any app that is not on the Play Store. Windows may warn about an installer from an unknown publisher: choose “More info”, then “Run anyway”.</li>
+            <li><strong>Give your birth month and year</strong>, untick the themes you do not care about, and feel old. Details in the <a href="https://github.com/Fugeekies/TimeFlies/blob/main/docs/guide/en/installation.md">installation guide</a>.</li>
+        </ol>
+        <p class="privacy">Screenshots of the real app, for someone born in May 1991. Event dates are those of France for now.</p>
+
+        <blockquote lang="fr">« Pour un gars qui a 15 piges aujourd'hui, Friends, c'est exactement ce que Happy Days était pour nous. »<br>Inspired by the French comedy series <i>Bloqués</i>, episode 108.</blockquote>
+    </main>
+
+    <footer>
+        Copyright © 2026 TimeFlies · <a href="https://github.com/Fugeekies/TimeFlies/blob/main/LICENSE">GNU General Public License v3.0</a> · <a href="https://github.com/Fugeekies/TimeFlies#readme">Privacy policy</a> · <a href="https://github.com/Fugeekies/TimeFlies/issues">Report an issue</a> · Fonts: Caveat and Atkinson Hyperlegible, SIL Open Font License 1.1
+    </footer>
+</body>
+</html>

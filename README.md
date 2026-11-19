@@ -2,7 +2,7 @@
 
 # TimeFlies
 
-[English](#english) · [Français](#français) · [Deutsch](#deutsch) · [Italiano](#italiano) · [Español](#español)
+[English](#english) · [Français](#français) · [Deutsch](#deutsch) · [Italiano](#italiano) · [Español](#español) · 🌐 [fugeekies.github.io/TimeFlies](https://fugeekies.github.io/TimeFlies/)
 
 <p align="center"><img src="docs/maquettes/android/TodayPolaroid.png" alt="Today screen" width="260"> <img src="docs/maquettes/android/Equivalences.png" alt="Equivalences screen" width="260"></p>
 

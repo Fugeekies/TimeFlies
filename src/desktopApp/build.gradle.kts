@@ -49,6 +49,27 @@ tasks.processResources {
     from(rootProject.file("assets/icon/timeflies-256.png")) { into("icon") }
 }
 
+// Screenshots of the presentation page (site/assets/), rendered off screen from the real screens:
+// `./gradlew :desktopApp:siteScreenshots` (docs/DEVELOPMENT.md, "Page de présentation"). Kept out of the app and
+// of the tests, so neither the installer nor the CI carries it.
+val screenshots: SourceSet by sourceSets.creating {
+    compileClasspath += sourceSets.main.get().output
+    runtimeClasspath += sourceSets.main.get().output
+}
+configurations[screenshots.implementationConfigurationName].extendsFrom(configurations.implementation.get())
+configurations[screenshots.runtimeOnlyConfigurationName].extendsFrom(configurations.runtimeOnly.get())
+dependencies {
+    @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+    screenshots.implementationConfigurationName(compose.uiTest)
+}
+tasks.register<JavaExec>("siteScreenshots") {
+    group = "documentation"
+    description = "Renders the screenshots of the presentation page into site/assets/."
+    classpath = screenshots.runtimeClasspath
+    mainClass = "io.github.fugeekies.timeflies.desktop.screenshots.SiteScreenshotsKt"
+    args(rootProject.file("site/assets").absolutePath)
+}
+
 // `./gradlew :desktopApp:run '-Dtimeflies.debug=true'` hands the option to the app (debug panel, fake date);
 // the quotes are needed in PowerShell, which otherwise splits the option at the dot.
 // Only the local run task gets it: the installer never does (docs/DEVELOPMENT.md, "Panneau de débogage").
