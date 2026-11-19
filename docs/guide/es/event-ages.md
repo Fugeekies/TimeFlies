@@ -15,6 +15,7 @@
 ## La lista
 
 - Sin búsqueda, todos los acontecimientos, ordenados por tema, del más reciente al más antiguo.
+- **Mis acontecimientos**, los que has añadido en [Ajustes](settings.md#mis-acontecimientos), aparecen primero, sean cuales sean los temas marcados; la búsqueda también los encuentra.
 - El botón **Temas**, encima de la búsqueda, marca o desmarca las familias de acontecimientos, como en [Equivalencias](equivalences.md#temas): es la misma elección para las dos pantallas, y se conserva.
 - El campo **Busca una película, una serie, un artista…** filtra los títulos a partir de 2 letras, sin tener en cuenta acentos ni mayúsculas.
 - En cada línea, bajo el título, **las edades una al lado de otra, en el mismo orden que arriba** y en el color de cada persona. Antes de un nacimiento, la edad es negativa: «−14 años», esa persona aún no había nacido.

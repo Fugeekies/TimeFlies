@@ -21,6 +21,9 @@ import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
+import io.github.fugeekies.timeflies.domain.model.PersonalEvent
+import io.github.fugeekies.timeflies.domain.port.PersonalEventRepository
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
@@ -83,6 +86,17 @@ private class MemorySettings(initial: Settings) : SettingsRepository {
     override suspend fun update(transform: (Settings) -> Settings) = state.update(transform)
 }
 
+/** No personal events on the screenshots: only the real base (and nothing read from the user's own files). */
+private object NoPersonalEvents : PersonalEventRepository {
+    override val events = MutableStateFlow(emptyList<PersonalEvent>())
+    override suspend fun add(title: String, date: LocalDate) = Unit
+    override suspend fun update(id: String, title: String, date: LocalDate) = Unit
+    override suspend fun remove(id: String) = Unit
+    override suspend fun addAll(events: List<Pair<String, LocalDate>>) = Unit
+    override suspend fun encode() = ""
+    override fun decode(text: String): PersonalEventRepository.Decoded? = null
+}
+
 /** One launch of the app, through which [Session] taps and captures. */
 @OptIn(ExperimentalTestApi::class)
 private class Session(private val test: ComposeUiTest, private val output: File) {
@@ -121,6 +135,7 @@ private fun session(output: File, frame: Frame, style: DisplayStyle, steps: Sess
                     completeOnboarding = CompleteOnboarding(settings, clock),
                     countEvents = CountEvents(events),
                     getEventGroups = GetEventGroups(events),
+                    personalEvents = PersonalEvents(NoPersonalEvents, clock),
                     clock = clock,
                 )
             }

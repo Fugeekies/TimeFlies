@@ -18,6 +18,16 @@ Cada ajuste se guarda en cuanto cambia, sin botón de confirmar.
 - **Región**: por ahora Francia; elige las fechas de estreno utilizadas.
 - **Idioma**: Français, English, Deutsch, Italiano o Español, cada uno escrito en su idioma. Por defecto, el de tu dispositivo si está disponible; si no, el francés. Cambia al momento toda la app, el widget y, en Windows, el icono y la notificación. Los títulos de las películas y de los acontecimientos deportivos también siguen el idioma; las canciones y los artistas conservan su nombre.
 
+## Mis acontecimientos
+
+Tus propias fechas: una boda, un nacimiento, el primer piso… Sus aniversarios aparecen en [Hoy](today.md), en el widget y en la notificación de Windows, como los de la base, y los encuentras al principio de [¿Qué edad?](event-ages.md). No tienen equivalencias.
+
+- **Añadir un acontecimiento**: un título (80 caracteres como máximo) y una fecha exacta al día, no posterior a hoy.
+- Toca un acontecimiento para editarlo o **Eliminar**lo.
+- **Exportar** guarda tus acontecimientos en un archivo `timeflies-events.json`, donde quieras (Drive, Descargas, una memoria USB…). **Importar** vuelve a leer ese archivo en tu nuevo teléfono o PC: los acontecimientos que ya están (mismo título, misma fecha) no se añaden dos veces, y no se borra nada.
+
+Estos acontecimientos se quedan en tu dispositivo: no se envía nada por Internet.
+
 ## Acontecimientos
 
 **Desmarca lo que no te interese**: esos acontecimientos ya no aparecen en ningún sitio, ni en Hoy, ni en el widget, ni en las equivalencias. El árbol va del tema al tipo, luego al origen y a veces al género (por ejemplo, quedarse con el rap francés sin el rap de EE. UU.). Cada línea indica su número de acontecimientos. Toca una casilla para marcar o desmarcar todo lo que contiene; **▸** despliega una línea.

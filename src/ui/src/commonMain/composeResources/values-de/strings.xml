@@ -384,4 +384,43 @@
         <item>Samstag</item>
         <item>Sonntag</item>
     </string-array>
+
+    <!-- Personal events (decision of 19/11/2026, docs/UISpec/Settings.template.md, "Mes événements") -->
+    <string name="kind_personal">Persönliches Ereignis</string>
+    <string name="family_personal">Meine Ereignisse</string>
+    <string name="family_contents_personal">Die Daten, die du hinzugefügt hast</string>
+    <string name="settings_personal">MEINE EREIGNISSE</string>
+    <string name="settings_personal_help">Füge deine eigenen Daten hinzu (Hochzeit, Geburt, erste Wohnung…): Ihre Jahrestage erscheinen auf Heute, im Widget und in Wie alt?. Sie bleiben auf diesem Gerät.</string>
+    <string name="settings_personal_empty">Noch keine persönlichen Ereignisse.</string>
+    <string name="personal_add">Ereignis hinzufügen</string>
+    <string name="personal_new">Neues Ereignis</string>
+    <string name="personal_edit">Ereignis bearbeiten</string>
+    <string name="personal_title">Titel</string>
+    <string name="personal_title_hint">Unsere Hochzeit</string>
+    <string name="personal_day">Tag</string>
+    <string name="personal_save">Speichern</string>
+    <string name="personal_delete">Löschen</string>
+    <string name="personal_error_title_missing">Gib dem Ereignis einen Titel.</string>
+    <string name="personal_error_title_too_long">Titel zu lang: höchstens %1$d Zeichen.</string>
+    <string name="personal_error_date_future">Das Datum darf nicht nach heute liegen.</string>
+    <string name="personal_error_date_invalid">Dieses Datum gibt es nicht.</string>
+    <string name="personal_transfer_help">Zum Wechsel von Handy oder PC: Exportiere deine Ereignisse in eine Datei und importiere sie auf dem neuen Gerät. Nichts wird ins Internet gesendet.</string>
+    <string name="personal_export">Exportieren</string>
+    <string name="personal_import">Importieren</string>
+    <string name="personal_export_done">Ereignisse exportiert.</string>
+    <string name="personal_export_failed">Die Datei konnte nicht gespeichert werden.</string>
+    <string name="personal_import_failed">Die Datei konnte nicht gelesen werden.</string>
+    <string name="personal_import_not_export">Diese Datei ist kein Export von TimeFlies-Ereignissen.</string>
+    <plurals name="personal_import_added">
+        <item quantity="one">%1$d Ereignis hinzugefügt.</item>
+        <item quantity="other">%1$d Ereignisse hinzugefügt.</item>
+    </plurals>
+    <plurals name="personal_import_duplicates">
+        <item quantity="one">%1$d schon vorhanden, übersprungen.</item>
+        <item quantity="other">%1$d schon vorhanden, übersprungen.</item>
+    </plurals>
+    <plurals name="personal_import_invalid">
+        <item quantity="one">%1$d unlesbar, übersprungen.</item>
+        <item quantity="other">%1$d unlesbar, übersprungen.</item>
+    </plurals>
 </resources>

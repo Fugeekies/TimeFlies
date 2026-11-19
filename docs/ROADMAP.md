@@ -79,7 +79,6 @@ Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
 ### Liste d'idées à prioriser
 - Notification du matin sur Android quand un anniversaire rond tombe.
 - Partager un coup de vieux en image.
-- Ajouter ses propres événements (souvenirs personnels).
 
 ## Terminés
 
@@ -231,3 +230,10 @@ Décision du 17/11/2026 : l'interface est traduite dans les langues du guide d'u
 ### Page de présentation — 19/11/2026 · PR [#38](https://github.com/Fugeekies/TimeFlies/pull/38)
 - [x] Page en anglais sur [fugeekies.github.io/TimeFlies](https://fugeekies.github.io/TimeFlies/), comme LMU-DeltaRacing : `site/` publié par `pages.yml`, favicon tiré d'`assets/icon/` (SVG et `.ico`), image d'aperçu 1280 × 640, `sitemap.xml`, polices servies par la page.
 - [x] Captures des vrais écrans rendues par `./gradlew :desktopApp:siteScreenshots` (Aujourd'hui dans les trois styles, « Quel âge ? », Équivalences, fenêtre Windows).
+
+### Événements personnels — 19/11/2026
+- [x] Réglages › Mes événements : ajouter, modifier et supprimer ses propres dates (titre, date au jour près), gardées dans `personal-events.json` à côté des réglages.
+- [x] Leurs anniversaires sur Aujourd'hui, le widget Android et la notification Windows ; première section et recherche de « Quel âge ? », hors du filtre Thèmes ; jamais dans Équivalences (décision du 19/11/2026).
+- [x] Type, nature et famille `personal`, avec leur dessin au trait (une maison avec un cœur) et leur couleur.
+- [x] Export et import d'un fichier JSON par le sélecteur de fichiers du système, pour changer de téléphone ou de PC, sans doublons ni effacement.
+- [x] Guide d'utilisation : section Mes événements dans les cinq langues ; benchmarks avec 100 événements personnels.

@@ -70,6 +70,8 @@ fun DrawScope.drawTypeDrawing(type: EventType, color: Color) {
             EventType.ACTOR_TURNED_POLITICIAN -> grid.starAndLectern(this)
             EventType.WORLD_EVENT -> grid.globe(this)
             EventType.ROYAL_EVENT -> grid.crown(this)
+            // The user's own events (decision of 19/11/2026)
+            EventType.PERSONAL -> grid.heartHome(this)
         }
     }
 }
@@ -141,6 +143,13 @@ private class Grid(val unit: Float, val color: Color, val pen: Stroke) {
         }
         close()
     })
+
+    // Personal event: a house with a heart inside.
+    fun heartHome(scope: DrawScope) = with(scope) {
+        stroke(path { m(10f, 48f); l(50f, 14f); l(90f, 48f) })
+        stroke(path { m(22f, 40f); l(22f, 90f); l(78f, 90f); l(78f, 40f) })
+        stroke(path { m(50f, 80f); q(26f, 64f, 38f, 54f); q(46f, 48f, 50f, 58f); q(54f, 48f, 62f, 54f); q(74f, 64f, 50f, 80f); close() })
+    }
 
     // Sitcom: the sofa of the living room.
     fun sofa(scope: DrawScope) = with(scope) {

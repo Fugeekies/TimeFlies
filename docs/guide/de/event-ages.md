@@ -15,6 +15,7 @@ Wie alt warst du, als *Titanic* herauskam? Und dein Kind, deine Eltern? Dieser B
 ## Die Liste
 
 - Ohne Suche alle Ereignisse, nach Thema geordnet, vom neuesten zum ältesten.
+- **Meine Ereignisse**, die du in den [Einstellungen](settings.md#meine-ereignisse) hinzugefügt hast, kommen zuerst, egal welche Themen angehakt sind; die Suche findet sie auch.
 - Die Schaltfläche **Themen** über der Suche hakt die Ereignisfamilien an oder ab, wie bei [Entsprechungen](equivalences.md#themen): Es ist dieselbe Auswahl für beide Bildschirme, und sie wird gespeichert.
 - Das Feld **Suche einen Film, eine Serie, einen Künstler…** filtert die Titel ab 2 Buchstaben, ohne Akzente und Großschreibung zu beachten.
 - In jeder Zeile, unter dem Titel, **die Altersangaben nebeneinander, in derselben Reihenfolge wie oben** und in der Farbe jeder Person. Vor einer Geburt ist das Alter negativ: „−14“, die Person war noch nicht geboren.

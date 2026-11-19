@@ -71,6 +71,6 @@ class EquivalencesViewModel(
     }
 
     fun setAllFamilies(checked: Boolean) {
-        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.entries.toSet() else emptySet()) }
+        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.THEMES.toSet() else emptySet()) }
     }
 }

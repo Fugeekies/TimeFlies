@@ -1,6 +1,10 @@
 package io.github.fugeekies.timeflies.benchmarks
 
 import io.github.fugeekies.timeflies.data.events.JsonEventRepository
+import io.github.fugeekies.timeflies.data.personal.WithPersonalEvents
+import io.github.fugeekies.timeflies.domain.model.PersonalEvent
+import io.github.fugeekies.timeflies.domain.port.PersonalEventRepository
+import kotlinx.coroutines.flow.MutableStateFlow
 import io.github.fugeekies.timeflies.domain.model.EventType
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.MonthDay
@@ -122,7 +126,7 @@ class PerformanceBenchmarks {
         val user = Generations.userBirth(YearMonth(1991, Month.MAY))
         val child = Generations.birthFromAge(today, 15)
         val parent = Generations.birthFromAge(today, 66)
-        val allFamilies = Family.entries.toSet()
+        val allFamilies = Family.THEMES.toSet()
         rows += measure("Page Équivalences, un âge plus jeune (GetEquivalences)", iterations = 100) {
             runBlocking { getEquivalences(user, listOf(child), allFamilies, region) }
         }
@@ -141,7 +145,32 @@ class PerformanceBenchmarks {
         rows += measure("Page Quel âge ?, recherche × 4 (SearchEvents)", iterations = 50) {
             runBlocking { listOf("roi", "écran", "test 12", "zzz").forEach { searchEvents.search(it, region) } }
         }
+        // The same pages with 100 personal events added to the base (decision of 19/11/2026), as the apps build them.
+        val withPersonal = WithPersonalEvents(loaded, HundredPersonalEvents)
+        rows += measure("Page Aujourd'hui, 100 événements personnels (GetDailyShock)", iterations = 100) {
+            runBlocking { GetDailyShock(withPersonal, clock)() }
+        }
+        val searchWithPersonal = SearchEvents(withPersonal, clock)
+        rows += measure("Page Quel âge ?, liste par famille, 100 événements personnels", iterations = 50) {
+            runBlocking { searchWithPersonal.byFamily(region) }
+        }
+        rows += measure("Page Quel âge ?, recherche × 4, 100 événements personnels", iterations = 50) {
+            runBlocking { listOf("roi", "écran", "test 12", "zzz").forEach { searchWithPersonal.search(it, region) } }
+        }
         rows
+    }
+
+    /** 100 made-up personal events, one every 4 months from 1990 (benchmarks only). */
+    private object HundredPersonalEvents : PersonalEventRepository {
+        override val events = MutableStateFlow(
+            (0 until 100).map { i -> PersonalEvent("personal-$i", "Souvenir $i", LocalDate(1990 + i / 3, 1 + (i % 3) * 4, 1 + i % 28)) },
+        )
+        override suspend fun add(title: String, date: LocalDate) = Unit
+        override suspend fun update(id: String, title: String, date: LocalDate) = Unit
+        override suspend fun remove(id: String) = Unit
+        override suspend fun addAll(events: List<Pair<String, LocalDate>>) = Unit
+        override suspend fun encode() = ""
+        override fun decode(text: String): PersonalEventRepository.Decoded? = null
     }
 
     private fun report(sections: List<Section>): String = buildString {

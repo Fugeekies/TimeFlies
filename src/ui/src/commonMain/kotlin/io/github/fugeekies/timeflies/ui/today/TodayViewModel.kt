@@ -9,6 +9,7 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.ui.dayChanges
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -34,6 +35,7 @@ class TodayViewModel(
     private val getDailyShock: GetDailyShock,
     private val observeSettings: ObserveSettings,
     private val clock: Clock,
+    private val personalEvents: PersonalEvents,
 ) : ViewModel() {
 
     private val log = Logger.withTag("Today")
@@ -43,7 +45,8 @@ class TodayViewModel(
 
     init {
         viewModelScope.launch {
-            combine(observeSettings(), clock.dayChanges()) { settings, _ -> settings }
+            // The user's own events too, added or changed in Settings (decision of 19/11/2026).
+            combine(observeSettings(), clock.dayChanges(), personalEvents.observe()) { settings, _, _ -> settings }
                 .catch { e ->
                     log.e(e) { "Settings could not be read" }
                     _state.value = TodayUiState.Error

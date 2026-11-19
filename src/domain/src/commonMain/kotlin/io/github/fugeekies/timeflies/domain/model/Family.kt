@@ -13,9 +13,18 @@ enum class Family(val id: String) {
     SPORT("sport"),
     GAMES_TECH("games-tech"),
     HISTORY("history"),
+
+    /**
+     * The user's own events, added in Settings (decision of 19/11/2026): never in the base, not a theme of the filters,
+     * no equivalence.
+     */
+    PERSONAL("personal"),
     ;
 
     companion object {
+        /** The themes of the base: those of the filters of Equivalences, "Quel âge ?" and the first launch. */
+        val THEMES: List<Family> = entries.filter { it != PERSONAL }
+
         fun fromId(id: String): Family? = entries.firstOrNull { it.id == id }
     }
 }

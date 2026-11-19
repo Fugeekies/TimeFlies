@@ -15,6 +15,7 @@ How old were you when *Titanic* came out? And your child, your parents? This scr
 ## The list
 
 - Without a search, every event, sorted by theme, from the most recent to the oldest.
+- **My events**, the ones you added in [Settings](settings.md#my-events), come first, whatever themes are ticked; the search finds them too.
 - The **Themes** button, above the search, ticks or unticks the families of events, as on [Equivalences](equivalences.md#themes): it is the same choice for both screens, and it is kept.
 - The **Search for a film, a series, an artist…** field filters the titles from 2 letters on, ignoring accents and capitals.
 - On each line, under the title, **the ages side by side, in the same order as at the top** and in each person's colour. Before a birth, the age is negative: "−14", that person was not born yet.

@@ -11,6 +11,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Added
 
+- Événements personnels : Réglages › Mes événements pour ajouter, modifier ou supprimer ses propres dates (titre, date au jour près). Leurs anniversaires arrivent sur Aujourd'hui, le widget Android et la notification Windows, et ils ouvrent la liste de « Quel âge ? » ; pas d'équivalence. Dessin au trait et couleur à eux. **Exporter** et **Importer** un fichier `timeflies-events.json` par le sélecteur de fichiers du système pour changer de téléphone ou de PC, sans doublon ni effacement ; rien n'est envoyé sur Internet.
 - Page de présentation en anglais sur [fugeekies.github.io/TimeFlies](https://fugeekies.github.io/TimeFlies/), publiée par le workflow « Pages », avec les captures des vrais écrans (`./gradlew :desktopApp:siteScreenshots`) et une image d'aperçu pour les réseaux sociaux.
 
 - « Quel âge ? » : le bouton **Thèmes** d'Équivalences, au-dessus de la recherche. La liste et la recherche n'affichent que les thèmes cochés, et c'est le même choix, gardé, pour les deux écrans.

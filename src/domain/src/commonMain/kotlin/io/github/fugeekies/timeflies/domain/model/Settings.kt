@@ -24,7 +24,7 @@ data class Settings(
     val birth: YearMonth? = null,
     val region: Region = Region.FRANCE,
     val onboardingDone: Boolean = false,
-    val equivalenceFamilies: Set<Family> = Family.entries.toSet(),
+    val equivalenceFamilies: Set<Family> = Family.THEMES.toSet(),
     val windows: WindowsSettings = WindowsSettings(),
     val releaseCheck: ReleaseCheck = ReleaseCheck(),
     val excludedEventGroups: Set<String> = emptySet(),

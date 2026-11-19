@@ -81,6 +81,9 @@ import io.github.fugeekies.timeflies.ui.resources.settings_windows
 import io.github.fugeekies.timeflies.ui.resources.settings_events
 import io.github.fugeekies.timeflies.ui.resources.settings_events_help
 import io.github.fugeekies.timeflies.ui.events.EventFilterTree
+import io.github.fugeekies.timeflies.ui.personal.PersonalEventsPanel
+import io.github.fugeekies.timeflies.ui.personal.PersonalEventsViewModel
+import io.github.fugeekies.timeflies.ui.resources.settings_personal
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check_help
 import io.github.fugeekies.timeflies.ui.resources.settings_widget
@@ -116,6 +119,7 @@ private const val THIRD_PARTY_LICENSES_URL = "$REPOSITORY_URL/tree/main/licenses
  * @param appVersion version shown in "À propos"; null for a local development build.
  * @param showWindowsPanel the Windows app shows the "Notification et démarrage" panel.
  * @param widget the Android app shows the "Écran d'accueil" panel.
+ * @param personalEvents the "Mes événements" panel (decision of 19/11/2026); null hides it (previews).
  */
 @Composable
 fun SettingsScreen(
@@ -124,6 +128,7 @@ fun SettingsScreen(
     modifier: Modifier = Modifier,
     showWindowsPanel: Boolean = false,
     widget: WidgetPinning? = null,
+    personalEvents: PersonalEventsViewModel? = null,
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val current = state ?: return
@@ -146,6 +151,11 @@ fun SettingsScreen(
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
             Panel { DisplayPanel(current.displayStyle, viewModel::onDisplayStyle, current.region, current.language, viewModel::onLanguage) }
+            // The user's own events, kept on the device, exported to change phones (decision of 19/11/2026).
+            if (personalEvents != null) {
+                Eyebrow(stringResource(Res.string.settings_personal))
+                Panel { PersonalEventsPanel(personalEvents) }
+            }
             // What is shown at all: unticked groups disappear everywhere (decision of 16/11/2026).
             if (current.eventGroups.isNotEmpty()) {
                 Eyebrow(stringResource(Res.string.settings_events))

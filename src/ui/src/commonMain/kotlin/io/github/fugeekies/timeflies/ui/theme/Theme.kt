@@ -84,6 +84,8 @@ internal val FamilyColors = mapOf(
     Family.SPORT to Color(0xFF1FA463),
     Family.GAMES_TECH to Color(0xFF2E8BFF),
     Family.HISTORY to Color(0xFF8A7F72),
+    // The user's own events (decision of 19/11/2026): a teal no theme uses.
+    Family.PERSONAL to Color(0xFF13A39B),
 )
 
 /**

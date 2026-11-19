@@ -31,7 +31,8 @@ class GetEquivalences(
         if (otherBirths.isEmpty()) return emptyList()
         val today = clock.today()
         val cards = mutableListOf<Equivalence>()
-        for (type in EventType.entries.filter { it.family in families }) {
+        // Personal events have no match: never a card (decision of 19/11/2026).
+        for (type in EventType.entries.filter { it.family in families && it.family != Family.PERSONAL }) {
             // Sorted by date in the region, events younger than a year excluded.
             val ofType = events.ofType(type, EARLIEST, today, region).filter { Equivalences.isOldEnough(it.dateFor(region), today) }
             for (event in ofType) {
