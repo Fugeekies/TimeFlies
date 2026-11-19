@@ -21,7 +21,7 @@ data class CoverageReport(
 
     override fun toString(): String = buildString {
         appendLine("Événements : $eventCount")
-        Family.entries.forEach { appendLine("  ${it.id} : ${eventsByFamily[it] ?: 0}") }
+        Family.THEMES.forEach { appendLine("  ${it.id} : ${eventsByFamily[it] ?: 0}") }
         appendLine("Jours de l'année sans anniversaire : $daysWithoutAnniversary / ${ALL_DAYS.size}")
         appendLine("Types avec moins de $MIN_EVENTS_PER_TYPE événements : ${typesBelowMinimum.size}")
         typesBelowMinimum.forEach { (type, count) -> appendLine("  ${type.id} : $count") }

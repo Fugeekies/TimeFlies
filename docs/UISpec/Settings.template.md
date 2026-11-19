@@ -17,6 +17,13 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 * **Naissance d'un âge ajouté** : **aujourd'hui moins cet âge**, au jour près (une personne « de 15 ans » est née il y a exactement 15 ans). Elle peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
 * **Écart** : différence entre les deux dates de naissance, au jour près, dans un sens ou dans l'autre ; un écart de moins de 5 ans est permis avec un avertissement (voir `Equivalences.template.md`). Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
 
+#### Panneau « Mes événements » (eyebrow « MES ÉVÉNEMENTS », décision du 19/11/2026)
+* Entre Affichage et Événements. « Ajoute tes propres dates (mariage, naissance, premier appartement…) : leurs anniversaires arrivent sur Aujourd'hui, dans le widget et dans Quel âge ?. Elles restent sur cet appareil. »
+* La liste des événements, du plus ancien au plus récent : pastille de la couleur « personnel », titre et date longue ; toucher une ligne ouvre la boîte « Modifier l'événement », avec **Supprimer**. Sans événement : « Aucun événement personnel pour l'instant. »
+* **Ajouter un événement** ouvre « Nouvel événement » : champ Titre (80 caractères au plus), listes Jour, Mois, Année (de l'année en cours à 1900), **Enregistrer** et **Annuler**. Erreurs sous les champs : titre manquant, date inexistante (31 février), date après aujourd'hui.
+* « Pour changer de téléphone ou de PC : exporte tes événements dans un fichier, puis importe-le sur le nouvel appareil. Rien n'est envoyé sur Internet. » **Importer** et **Exporter** (grisé sans événement) ouvrent le sélecteur de fichiers du système ; le fichier proposé s'appelle `timeflies-events.json`. Le résultat s'affiche sous les boutons : « Événements exportés. », « 3 événements ajoutés. 1 déjà présent, ignoré. », « Ce fichier n'est pas un export d'événements TimeFlies. ». Format et règles : [`ARCHITECTURE.md`](../ARCHITECTURE.md), « Événements personnels ».
+* Ces événements apparaissent sur Aujourd'hui (et le widget, la notification Windows) et en tête de « Quel âge ? », jamais dans Équivalences. Dessin du Polaroïd : une maison avec un cœur ; couleur : sarcelle.
+
 #### Panneau « Événements » (eyebrow « ÉVÉNEMENTS », décision du 16/11/2026)
 * « Décoche ce qui ne t'intéresse pas : ces événements n'apparaissent plus nulle part, ni sur Aujourd'hui, ni dans le widget, ni dans les équivalences. »
 * Arbre famille › type › origine › sous-catégorie, replié au départ : chaque ligne a une case à trois états (cochée, décochée, en partie) et son nombre d'événements ; « ▸ » la déplie. Toucher une case coche ou décoche tout ce qu'elle contient. Tout est coché par défaut.
@@ -73,6 +80,18 @@ Valeurs par défaut décidées le 13/11/2026.
 │  │ (●)Éphém. ( )VHS    └──────┘     │  │
 │  │                     ( )Polaroïd  │  │
 │  │ Région             France     ›  │  │
+│  └──────────────────────────────────┘  │
+│                                        │
+│  MES ÉVÉNEMENTS                        │
+│  ┌──────────────────────────────────┐  │
+│  │ Ajoute tes propres dates…        │  │
+│  │ ● Notre mariage                ›  │  │
+│  │   20 juin 2015                   │  │
+│  │ ● Naissance de Léa             ›  │  │
+│  │   2 mars 2018                    │  │
+│  │           [ Ajouter un événement ]│  │
+│  │ Pour changer de téléphone…       │  │
+│  │          [ Importer ] [ Exporter ]│  │
 │  └──────────────────────────────────┘  │
 │                                        │
 │  ÉCRAN D'ACCUEIL                       │

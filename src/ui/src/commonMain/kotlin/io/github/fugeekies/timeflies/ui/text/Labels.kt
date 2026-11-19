@@ -14,11 +14,13 @@ import io.github.fugeekies.timeflies.ui.resources.family_cinema
 import io.github.fugeekies.timeflies.ui.resources.family_contents_cinema
 import io.github.fugeekies.timeflies.ui.resources.family_contents_games_tech
 import io.github.fugeekies.timeflies.ui.resources.family_contents_history
+import io.github.fugeekies.timeflies.ui.resources.family_contents_personal
 import io.github.fugeekies.timeflies.ui.resources.family_contents_music
 import io.github.fugeekies.timeflies.ui.resources.family_contents_series_tv
 import io.github.fugeekies.timeflies.ui.resources.family_contents_sport
 import io.github.fugeekies.timeflies.ui.resources.family_games_tech
 import io.github.fugeekies.timeflies.ui.resources.family_history
+import io.github.fugeekies.timeflies.ui.resources.family_personal
 import io.github.fugeekies.timeflies.ui.resources.family_music
 import io.github.fugeekies.timeflies.ui.resources.family_series_tv
 import io.github.fugeekies.timeflies.ui.resources.family_sport
@@ -26,6 +28,7 @@ import io.github.fugeekies.timeflies.ui.resources.first_of_month
 import io.github.fugeekies.timeflies.ui.resources.kind_album_release
 import io.github.fugeekies.timeflies.ui.resources.kind_death
 import io.github.fugeekies.timeflies.ui.resources.kind_election
+import io.github.fugeekies.timeflies.ui.resources.kind_personal
 import io.github.fugeekies.timeflies.ui.resources.kind_film_release
 import io.github.fugeekies.timeflies.ui.resources.kind_game_release
 import io.github.fugeekies.timeflies.ui.resources.kind_history
@@ -107,6 +110,7 @@ internal fun kindResource(kind: EventKind): StringResource =
         EventKind.SPORT -> Res.string.kind_sport
         EventKind.HISTORY -> Res.string.kind_history
         EventKind.ELECTION -> Res.string.kind_election
+        EventKind.PERSONAL -> Res.string.kind_personal
     }
 
 /** "Tu avais 20 ans.", or null when the user's birth is unknown (the line is not shown). */
@@ -133,6 +137,7 @@ fun familyContents(family: Family): String = stringResource(
         Family.SPORT -> Res.string.family_contents_sport
         Family.GAMES_TECH -> Res.string.family_contents_games_tech
         Family.HISTORY -> Res.string.family_contents_history
+        Family.PERSONAL -> Res.string.family_contents_personal
     },
 )
 
@@ -143,6 +148,7 @@ private fun familyResource(family: Family): StringResource = when (family) {
     Family.SPORT -> Res.string.family_sport
     Family.GAMES_TECH -> Res.string.family_games_tech
     Family.HISTORY -> Res.string.family_history
+    Family.PERSONAL -> Res.string.family_personal
 }
 
 /**
@@ -258,6 +264,8 @@ fun typeLabel(type: EventType): String = stringResource(
         EventType.ACTOR_TURNED_POLITICIAN -> Res.string.type_actor_turned_politician
         EventType.WORLD_EVENT -> Res.string.type_world_event
         EventType.ROYAL_EVENT -> Res.string.type_royal_event
+        // Never on an equivalence card; the same words as its kind.
+        EventType.PERSONAL -> Res.string.kind_personal
     },
 )
 

@@ -8,6 +8,8 @@ import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
+import io.github.fugeekies.timeflies.domain.model.PersonalEvent
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
@@ -40,7 +42,7 @@ data class EventAgesUiState(
     val query: String = "",
     val results: List<EventLine>? = null,
     val byFamily: Map<Family, List<EventLine>>? = null,
-    val families: Set<Family> = Family.entries.toSet(),
+    val families: Set<Family> = Family.THEMES.toSet(),
     val error: Boolean = false,
 )
 
@@ -51,6 +53,7 @@ data class EventAgesUiState(
 class EventAgesViewModel(
     private val searchEvents: SearchEvents,
     private val getEventAges: GetEventAges,
+    private val personalEvents: PersonalEvents,
     observeSettings: ObserveSettings,
     private val updateSettings: UpdateSettings,
     clock: Clock,
@@ -64,38 +67,41 @@ class EventAgesViewModel(
 
     /** Every event by family for [cachedKey], read once per region and event filter. */
     private var cachedByFamily: Map<Family, List<Event>>? = null
-    private var cachedKey: Pair<Region, Set<String>>? = null
+    private var cachedKey: Triple<Region, Set<String>, List<PersonalEvent>>? = null
 
     init {
         start()
         // The lines: recomputed when the people, the region or the query change.
         viewModelScope.launch {
-            combine(generations.filterNotNull(), query) { people, text -> people to text }
-                .collectLatest { (people, text) -> load(people, text) }
+            combine(generations.filterNotNull(), query, personalEvents.observe()) { people, text, own -> Triple(people, text, own) }
+                .collectLatest { (people, text, own) -> load(people, text, own) }
         }
     }
 
     /** Nothing to do here: [load] follows the same changes. */
     override suspend fun onGenerations(generations: GenerationsUiState) = Unit
 
-    private suspend fun load(people: GenerationsUiState, text: String) {
+    private suspend fun load(people: GenerationsUiState, text: String, own: List<PersonalEvent>) {
         val region = people.settings.region
         // The event filter changes the list too: unticked groups are no longer in it (decision of 16/11/2026).
-        val key = region to people.settings.excludedEventGroups
+        // And so do the user's own events, added or changed in Settings (decision of 19/11/2026).
+        val key = Triple(region, people.settings.excludedEventGroups, own)
         val byFamily = cachedByFamily.takeIf { cachedKey == key } ?: runCatchingLogged { searchEvents.byFamily(region) }?.also {
             cachedByFamily = it
             cachedKey = key
         }
         val results = if (text.trim().length < SearchEvents.MIN_QUERY_LENGTH) null else runCatchingLogged { searchEvents.search(text, region) }
+        // The user's own events are not a theme of the filter: always shown (decision of 19/11/2026).
         val families = people.settings.equivalenceFamilies
+        val shown = families + Family.PERSONAL
         val births = people.births
         fun line(event: Event) = EventLine(event, births.takeIf { it.isNotEmpty() }?.let { getEventAges(event, it, region) })
         _state.update {
             it.copy(
                 region = region,
                 query = text,
-                results = results?.filter { event -> event.family in families }?.map(::line),
-                byFamily = byFamily?.filterKeys { family -> family in families }?.mapValues { (_, events) -> events.map(::line) },
+                results = results?.filter { event -> event.family in shown }?.map(::line),
+                byFamily = byFamily?.filterKeys { family -> family in shown }?.mapValues { (_, events) -> events.map(::line) },
                 families = families,
                 error = byFamily == null,
             )
@@ -123,7 +129,7 @@ class EventAgesViewModel(
     }
 
     fun setAllFamilies(checked: Boolean) {
-        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.entries.toSet() else emptySet()) }
+        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.THEMES.toSet() else emptySet()) }
     }
 
     /** Opened from a card of Today or Equivalences: the event's title in the search, so its line shows at once. */

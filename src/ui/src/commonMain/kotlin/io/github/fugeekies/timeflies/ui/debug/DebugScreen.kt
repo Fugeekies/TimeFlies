@@ -283,7 +283,7 @@ private fun StatsPanel(state: DebugUiState, viewModel: DebugViewModel) {
     val color = MaterialTheme.colorScheme.onSurface
     if (stats != null) {
         Text(stringResource(Res.string.debug_stats_count, stats.eventCount), style = MaterialTheme.typography.titleMedium, color = color)
-        Family.entries.forEach { family ->
+        Family.THEMES.forEach { family ->
             Text(stringResource(Res.string.debug_stats_family, familyLabel(family), stats.eventsByFamily[family] ?: 0), style = body, color = color)
         }
         Text(stringResource(Res.string.debug_stats_empty_days, stats.emptyDays.size), style = body, color = color)

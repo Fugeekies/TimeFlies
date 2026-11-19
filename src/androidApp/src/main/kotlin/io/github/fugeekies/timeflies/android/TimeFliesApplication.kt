@@ -50,7 +50,8 @@ class TimeFliesApplication : Application() {
             // Only what the widget shows (the event filter, the style and the language included): ticking a theme of
             // Equivalences does not.
             val shown = graph.observeSettings().map { listOf(it.birth, it.region, it.onboardingDone, it.excludedEventGroups, it.displayStyle, it.language) }.distinctUntilChanged()
-            combine(shown, graph.clock.manualChanges().onStart { emit(Unit) }) { _, _ -> }
+            // The user's own events too (decision of 19/11/2026): a wedding added today shows at once.
+            combine(shown, graph.personalEvents.observe(), graph.clock.manualChanges().onStart { emit(Unit) }) { _, _, _ -> }
                 .collect {
                     try {
                         WidgetUpdates.refresh(this@TimeFliesApplication)

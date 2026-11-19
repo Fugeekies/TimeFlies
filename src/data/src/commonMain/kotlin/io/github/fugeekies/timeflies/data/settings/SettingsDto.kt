@@ -46,7 +46,7 @@ internal data class SettingsDto(
         birth = if (birthYear != null && birthMonth in 1..12) YearMonth(birthYear, Month(birthMonth!!)) else null,
         region = Region.of(region) ?: Region.FRANCE,
         onboardingDone = onboardingDone,
-        equivalenceFamilies = equivalenceFamilies?.mapNotNull(::familyOf)?.toSet() ?: Family.entries.toSet(),
+        equivalenceFamilies = equivalenceFamilies?.mapNotNull(::familyOf)?.toSet() ?: Family.THEMES.toSet(),
         windows = windows.toDomain(),
         releaseCheck = releaseCheck.toDomain(),
         excludedEventGroups = excludedEventGroups.toSet(),
@@ -62,7 +62,7 @@ internal data class SettingsDto(
             birthMonth = settings.birth?.month?.number,
             region = settings.region.code,
             onboardingDone = settings.onboardingDone,
-            equivalenceFamilies = Family.entries.filter { it in settings.equivalenceFamilies }.map(::idOf),
+            equivalenceFamilies = Family.THEMES.filter { it in settings.equivalenceFamilies }.map(::idOf),
             windows = WindowsSettingsDto.of(settings.windows),
             releaseCheck = ReleaseCheckDto.of(settings.releaseCheck),
             excludedEventGroups = settings.excludedEventGroups.sorted(),
@@ -73,6 +73,6 @@ internal data class SettingsDto(
         /** "series", "cinema", "games-tech"…: the name of the family's event file, readable by hand. */
         private fun idOf(family: Family): String = family.id
 
-        private fun familyOf(id: String): Family? = Family.entries.firstOrNull { idOf(it) == id }
+        private fun familyOf(id: String): Family? = Family.THEMES.firstOrNull { idOf(it) == id }
     }
 }

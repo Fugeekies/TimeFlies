@@ -15,6 +15,7 @@ Quel âge avais-tu à la sortie de *Titanic* ? Et ton enfant, tes parents ? Cet 
 ## La liste
 
 - Sans recherche, tous les événements, rangés par thème, du plus récent au plus ancien.
+- **Mes événements**, ceux que tu as ajoutés dans [Réglages](settings.md#mes-événements), viennent en premier, quels que soient les thèmes cochés ; la recherche les trouve aussi.
 - Le bouton **Thèmes**, au-dessus de la recherche, coche ou décoche les familles d'événements, comme sur [Équivalences](equivalences.md#thèmes) : c'est le même choix pour les deux écrans, et il est gardé.
 - Le champ **Cherche un film, une série, un artiste…** filtre les titres dès 2 lettres, sans tenir compte des accents ni des majuscules.
 - Sur chaque ligne, sous le titre, **les âges côte à côte, dans le même ordre qu'en haut** et dans la couleur de chaque personne. Avant une naissance, l'âge est négatif : « −14 ans », la personne n'était pas encore née.

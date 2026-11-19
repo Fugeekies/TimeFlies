@@ -28,10 +28,13 @@ class SearchEvents(
             .sortedWith(compareByDescending<Event> { it.dateFor(region) }.thenBy { it.id })
     }
 
-    /** Every event by family, in the order of the families, the most recent first within each. */
+    /**
+     * Every event by family, the most recent first within each: the user's own events first (decision of 19/11/2026),
+     * then the themes in their order.
+     */
     suspend fun byFamily(region: Region = Region.FRANCE): Map<Family, List<Event>> {
         val today = clock.today()
-        return Family.entries.associateWith { family ->
+        return (listOf(Family.PERSONAL) + Family.THEMES).associateWith { family ->
             EventType.entries.filter { it.family == family }
                 .flatMap { events.ofType(it, EARLIEST, today, region) }
                 .filter { Equivalences.isOldEnough(it.dateFor(region), today) }

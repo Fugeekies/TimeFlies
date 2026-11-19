@@ -27,6 +27,8 @@ class MainActivity : ComponentActivity() {
         if (savedInstanceState == null) handle(intent)
         val app = application as TimeFliesApplication
         val graph = app.graph
+        // Registered now, before the activity starts: the export and import of Settings › Mes événements.
+        val files = AndroidFileExchange(this)
         val widget = WidgetPinning(pin = if (WidgetUpdates.canPin(this)) ({ WidgetUpdates.pin(this) }) else null)
         val refreshWidget = graph.debugTools?.let { { app.scope.launch { WidgetUpdates.refresh(app) }; Unit } }
         // At most once a day, on opening the app (never from the widget): a new version on GitHub?
@@ -42,6 +44,7 @@ class MainActivity : ComponentActivity() {
                 completeOnboarding = graph.completeOnboarding,
                 countEvents = graph.countEvents,
                 getEventGroups = graph.getEventGroups,
+                personalEvents = graph.personalEvents,
                 clock = graph.clock,
                 debugTools = graph.debugTools,
                 appVersion = BuildConfig.RELEASE_VERSION,
@@ -51,6 +54,7 @@ class MainActivity : ComponentActivity() {
                     onScreenRequestHandled = { screenRequest = null },
                     widget = widget,
                     refreshWidget = refreshWidget,
+                    files = files,
                     onDarkTheme = ::applySystemBars,
                 ),
             )

@@ -75,6 +75,8 @@ Catalogue initial, à compléter pendant la saisie de la base :
 | Jeux vidéo & tech | `nintendo-console`, `playstation-console`, `handheld-console`, `video-game-phenomenon`, `phone-launch`, `social-network-launch`, `music-format` (cassette, CD, MP3, streaming) |
 | Politique & histoire | `french-president-elected`, `us-president-elected`, `actor-turned-politician`, `world-event`, `royal-event` |
 
+Le type `personal`, de la famille `personal`, est réservé aux événements que l'utilisateur ajoute dans Réglages (décision du 19/11/2026, [`ARCHITECTURE.md`](ARCHITECTURE.md), « Événements personnels ») : aucun fichier de la base ne peut être rangé dans `assets/events/personal/`, et ces événements n'ont pas d'équivalence.
+
 Exemples tirés de l'épisode, qui guident la saisie : Friends ↔ Happy Days (`sitcom-hit`), la mort de Tupac ↔ la mort d'Elvis (`music-icon-death`), Zidane ↔ Platini (`football-star-peak`), Céline Dion ↔ Cher (`diva-hit`), Schwarzenegger ↔ Reagan (`actor-turned-politician`).
 
 ## Règles d'appariement des équivalences

@@ -36,6 +36,9 @@ import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
+import io.github.fugeekies.timeflies.ui.personal.FileExchange
+import io.github.fugeekies.timeflies.ui.personal.PersonalEventsViewModel
 import io.github.fugeekies.timeflies.ui.debug.DebugScreen
 import io.github.fugeekies.timeflies.ui.debug.DebugViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.EquivalencesScreen
@@ -89,6 +92,7 @@ enum class AppScreen { TODAY, SETTINGS }
  * @property sendMorningNotification the debug panel offers to send the morning notification at once.
  * @property widget Android: Settings shows the "Écran d'accueil" panel; null elsewhere.
  * @property refreshWidget the debug panel offers to update the Android widget at once.
+ * @property files the system file picker for the export and import of Settings › Mes événements; null hides them.
  * @property onDarkTheme the colours shown became dark or light (the VHS is always dark): Android sets the icons of its
  *   system bars to match.
  */
@@ -99,6 +103,7 @@ data class PlatformHooks(
     val sendMorningNotification: (() -> Unit)? = null,
     val widget: WidgetPinning? = null,
     val refreshWidget: (() -> Unit)? = null,
+    val files: FileExchange? = null,
     val onDarkTheme: (Boolean) -> Unit = {},
 )
 
@@ -131,6 +136,7 @@ fun App(
     completeOnboarding: CompleteOnboarding,
     countEvents: CountEvents,
     getEventGroups: GetEventGroups,
+    personalEvents: PersonalEvents,
     clock: Clock,
     appVersion: String? = null,
     debugTools: DebugTools? = null,
@@ -166,7 +172,7 @@ fun App(
                     }
                 } else {
                     MainScreens(
-                        getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, getEventGroups, clock,
+                        getDailyShock, getEquivalences, getEventAges, searchEvents, observeSettings, updateSettings, countEvents, getEventGroups, personalEvents, clock,
                         appVersion, debugTools, platform, releaseUpdates, themeMode, onThemeMode = { themeMode = it },
                         destination = destination, temporaryAges = temporaryAges,
                     )
@@ -186,6 +192,7 @@ private fun MainScreens(
     updateSettings: UpdateSettings,
     countEvents: CountEvents,
     getEventGroups: GetEventGroups,
+    personalEvents: PersonalEvents,
     clock: Clock,
     appVersion: String?,
     debugTools: DebugTools?,
@@ -230,7 +237,7 @@ private fun MainScreens(
                 // A newer version than the running one: above the sheet of the day (decision of 16/11/2026).
                 releaseUpdates?.let { UpdateBanner(viewModel { UpdateViewModel(it) }) }
                 TodayScreen(
-                    viewModel { TodayViewModel(getDailyShock, observeSettings, clock) },
+                    viewModel { TodayViewModel(getDailyShock, observeSettings, clock, personalEvents) },
                     onOpenEvent = openEvent,
                     modifier = Modifier.weight(1f).fillMaxWidth(),
                 )
@@ -241,6 +248,7 @@ private fun MainScreens(
                 content,
                 showWindowsPanel = platform.showWindowsPanel,
                 widget = platform.widget,
+                personalEvents = viewModel { PersonalEventsViewModel(personalEvents, clock, platform.files) },
             )
             // Their reduced mode (without birth) also offers ages picked on the fly.
             Destination.EQUIVALENCES -> EquivalencesScreen(
@@ -250,7 +258,7 @@ private fun MainScreens(
                 modifier = content,
             )
             Destination.EVENT_AGES -> EventAgesScreen(
-                viewModel { EventAgesViewModel(searchEvents, getEventAges, observeSettings, updateSettings, clock, temporaryAges) },
+                viewModel { EventAgesViewModel(searchEvents, getEventAges, personalEvents, observeSettings, updateSettings, clock, temporaryAges) },
                 request = eventRequest,
                 onRequestHandled = { eventRequest = null },
                 onOpenSettings = { current = Destination.SETTINGS },

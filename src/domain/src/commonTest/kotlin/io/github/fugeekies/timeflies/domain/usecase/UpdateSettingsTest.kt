@@ -38,7 +38,7 @@ class UpdateSettingsTest {
     fun startsWithTheFirstLaunchDefaults() = runTest {
         val settings = ObserveSettings(repository)().first()
         assertNull(settings.birth)
-        assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
+        assertEquals(Family.THEMES.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
     }
 

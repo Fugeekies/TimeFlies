@@ -51,7 +51,7 @@ internal fun ThemesFilter(
     Row(modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
         OutlinedButton(onClick = { open = true }) { Text(stringResource(Res.string.equivalences_themes)) }
         Text(
-            pluralStringResource(Res.plurals.equivalences_themes_summary, checked.size, checked.size, Family.entries.size),
+            pluralStringResource(Res.plurals.equivalences_themes_summary, checked.size, checked.size, Family.THEMES.size),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -68,7 +68,7 @@ private fun ThemesDialog(checked: Set<Family>, onFamily: (Family, Boolean) -> Un
         title = { Text(stringResource(Res.string.equivalences_themes)) },
         text = {
             Column {
-                Family.entries.forEach { family ->
+                Family.THEMES.forEach { family ->
                     val isChecked = family in checked
                     Row(
                         Modifier.fillMaxWidth().clickable(role = Role.Checkbox) { onFamily(family, !isChecked) },

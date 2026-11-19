@@ -3,6 +3,9 @@ package io.github.fugeekies.timeflies.android
 import co.touchlab.kermit.Logger
 import io.github.fugeekies.timeflies.data.debug.DataDebugTools
 import io.github.fugeekies.timeflies.data.events.JsonEventRepository
+import io.github.fugeekies.timeflies.data.personal.DataStorePersonalEventRepository
+import io.github.fugeekies.timeflies.data.personal.WithPersonalEvents
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.data.settings.DataStoreSettingsRepository
 import io.github.fugeekies.timeflies.data.time.AdjustableClock
 import io.github.fugeekies.timeflies.data.time.SystemClock
@@ -37,7 +40,7 @@ class AppGraph(filesDir: File, debug: Boolean) {
     private val adjustableClock = if (debug) AdjustableClock(SystemClock()) else null
     val clock: Clock = adjustableClock ?: SystemClock()
 
-    private val events = JsonEventRepository(
+    private val baseEvents = JsonEventRepository(
         readFile = ::readResourceFile,
         clock = clock,
         // The groups unticked in Settings are left out of every query (decision of 16/11/2026).
@@ -52,6 +55,16 @@ class AppGraph(filesDir: File, debug: Boolean) {
         onCorruption = { log.w { "settings.json illisible (${it::class.simpleName}) : valeurs par défaut" } },
     )
 
+    // The user's own events, next to the settings (decision of 19/11/2026); never their titles in the logs.
+    private val personal = DataStorePersonalEventRepository(
+        fileSystem = FileSystem.SYSTEM,
+        file = File(filesDir, "personal-events.json").toOkioPath(),
+        onCorruption = { log.w { "personal-events.json illisible (${it::class.simpleName}) : liste vide" } },
+    )
+
+    private val events = WithPersonalEvents(baseEvents, personal)
+
+    val personalEvents = PersonalEvents(personal, clock)
     val getDailyShock = GetDailyShock(events, clock)
     val getEquivalences = GetEquivalences(events, clock)
     val getEventAges = GetEventAges()
@@ -63,5 +76,5 @@ class AppGraph(filesDir: File, debug: Boolean) {
     val getEventGroups = GetEventGroups(events)
     // New versions on GitHub (decision of 16/11/2026); a local build has no version and never asks.
     val releaseUpdates = ReleaseUpdates(GitHubReleases(::httpText), settings, clock, BuildConfig.RELEASE_VERSION)
-    val debugTools: DebugTools? = adjustableClock?.let { DataDebugTools(it, settings, events) }
+    val debugTools: DebugTools? = adjustableClock?.let { DataDebugTools(it, settings, baseEvents) }
 }

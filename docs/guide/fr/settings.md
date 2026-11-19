@@ -18,6 +18,16 @@ Chaque réglage est enregistré dès qu'il change, sans bouton à valider.
 - **Région** : France pour l'instant ; elle choisit les dates de sortie utilisées.
 - **Langue** : Français, English, Deutsch, Italiano ou Español, chaque langue écrite dans sa langue. Par défaut, celle de ton appareil si elle est proposée, sinon le français. Elle change aussitôt toute l'application, le widget et, sur Windows, l'icône et la notification. Les titres des films et des événements sportifs suivent aussi la langue ; les chansons et les artistes gardent leur nom.
 
+## Mes événements
+
+Tes propres dates : un mariage, une naissance, un premier appartement… Leurs anniversaires arrivent sur [Aujourd'hui](today.md), dans le widget et la notification Windows, comme ceux de la base, et tu les retrouves en tête de [Quel âge ?](event-ages.md). Ils n'ont pas d'équivalences.
+
+- **Ajouter un événement** : un titre (80 caractères au plus) et une date au jour près, pas après aujourd'hui.
+- Touche un événement pour le modifier ou le **Supprimer**.
+- **Exporter** enregistre tes événements dans un fichier `timeflies-events.json`, à l'endroit de ton choix (Drive, Téléchargements, clé USB…). **Importer** relit ce fichier sur ton nouveau téléphone ou PC : les événements déjà présents (même titre, même date) ne sont pas ajoutés une seconde fois, et rien n'est effacé.
+
+Ces événements restent sur ton appareil : rien n'est envoyé sur Internet.
+
 ## Événements
 
 **Décoche ce qui ne t'intéresse pas** : ces événements n'apparaissent plus nulle part, ni sur Aujourd'hui, ni dans le widget, ni dans les équivalences. L'arbre va du thème au type, puis à l'origine et parfois au genre (par exemple garder le rap français sans le rap US). Chaque ligne donne son nombre d'événements. Touche une case pour tout cocher ou décocher dedans ; **▸** déplie une ligne.

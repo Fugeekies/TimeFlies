@@ -13,6 +13,9 @@ enum class EventKind(val id: String) {
     SPORT("sport"),
     HISTORY("history"),
     ELECTION("election"),
+
+    /** An event the user added in Settings (decision of 19/11/2026). */
+    PERSONAL("personal"),
     ;
 
     companion object {

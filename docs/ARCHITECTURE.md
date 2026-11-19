@@ -133,6 +133,16 @@ Une seule implémentation pour les deux plateformes : DataStore (`datastore-core
 
 Une désinstallation Android efface les réglages. Sur Windows, le dossier `%APPDATA%\TimeFlies` reste après une désinstallation : une réinstallation retrouve les réglages (décision du 13/11/2026).
 
+## Événements personnels (décision du 19/11/2026)
+
+L'utilisateur ajoute ses propres dates dans Réglages › Mes événements : un titre (80 caractères au plus, une seule langue) et une date au jour près, pas après aujourd'hui.
+
+- **Domaine** : `PersonalEvent` (id, titre, date), converti en `Event` de type, nature et famille `personal` (`EventType.PERSONAL`, `EventKind.PERSONAL`, `Family.PERSONAL`), importance 3, même date dans toutes les régions. `Family.THEMES` liste les familles de la base, sans `PERSONAL` : ce sont elles que proposent les filtres Thèmes et le premier lancement. Le port `PersonalEventRepository` et le cas d'usage `PersonalEvents` (ajouter, modifier, supprimer, exporter, importer) portent les règles.
+- **Stockage** : `personal-events.json`, à côté de `settings.json` (dossier privé sur Android, `%APPDATA%\TimeFlies` sur Windows), par DataStore comme les réglages (`DataStorePersonalEventRepository`). Un fichier illisible donne une liste vide.
+- **Affichage** : `WithPersonalEvents` ajoute ces événements à la base pour les anniversaires d'un jour (Aujourd'hui, widget, notification Windows), la recherche et le type `personal` de « Quel âge ? », où ils forment la première section, hors du filtre Thèmes. Ils ne comptent pas dans les groupes de la base (filtre de Réglages) ni dans le nombre d'événements de « À propos », et `GetEquivalences` les ignore : aucun événement de la base n'a leur type.
+- **Export et import** : le même JSON, sans les ids : `{"format": "timeflies-personal-events", "version": 1, "events": [{"title": "…", "date": "2015-06-20"}]}`. L'export passe par le sélecteur de fichiers du système (`FileExchange` : Storage Access Framework sur Android, boîtes Enregistrer et Ouvrir sur Windows), rien n'est envoyé sur Internet. L'import ajoute les événements valides absents (même titre sans tenir compte de la casse, même date), sans rien effacer, et refuse un autre fichier ou une version plus récente du format.
+- Comme les réglages, jamais de titre ni de date de ces événements dans les logs.
+
 ## Langues de l'interface
 
 - **Textes** : ressources Compose Multiplatform, français de référence dans `composeResources/values/strings.xml`, traductions dans `values-<langue>/strings.xml`. Accords avec `<plurals>` (« 1 an », « 15 ans ») et `pluralStringResource`. Aucun texte écrit en dur dans un écran.

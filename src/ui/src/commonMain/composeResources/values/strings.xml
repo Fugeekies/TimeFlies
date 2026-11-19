@@ -493,4 +493,43 @@
         <item>samedi</item>
         <item>dimanche</item>
     </string-array>
+
+    <!-- Personal events (decision of 19/11/2026, docs/UISpec/Settings.template.md, "Mes événements") -->
+    <string name="kind_personal">Événement personnel</string>
+    <string name="family_personal">Mes événements</string>
+    <string name="family_contents_personal">Les dates que tu as ajoutées</string>
+    <string name="settings_personal">MES ÉVÉNEMENTS</string>
+    <string name="settings_personal_help">Ajoute tes propres dates (mariage, naissance, premier appartement…) : leurs anniversaires arrivent sur Aujourd'hui, dans le widget et dans Quel âge ?. Elles restent sur cet appareil.</string>
+    <string name="settings_personal_empty">Aucun événement personnel pour l'instant.</string>
+    <string name="personal_add">Ajouter un événement</string>
+    <string name="personal_new">Nouvel événement</string>
+    <string name="personal_edit">Modifier l'événement</string>
+    <string name="personal_title">Titre</string>
+    <string name="personal_title_hint">Notre mariage</string>
+    <string name="personal_day">Jour</string>
+    <string name="personal_save">Enregistrer</string>
+    <string name="personal_delete">Supprimer</string>
+    <string name="personal_error_title_missing">Donne un titre à l'événement.</string>
+    <string name="personal_error_title_too_long">Titre trop long : %1$d caractères au plus.</string>
+    <string name="personal_error_date_future">La date ne peut pas être après aujourd'hui.</string>
+    <string name="personal_error_date_invalid">Cette date n'existe pas.</string>
+    <string name="personal_transfer_help">Pour changer de téléphone ou de PC : exporte tes événements dans un fichier, puis importe-le sur le nouvel appareil. Rien n'est envoyé sur Internet.</string>
+    <string name="personal_export">Exporter</string>
+    <string name="personal_import">Importer</string>
+    <string name="personal_export_done">Événements exportés.</string>
+    <string name="personal_export_failed">Le fichier n'a pas pu être enregistré.</string>
+    <string name="personal_import_failed">Le fichier n'a pas pu être lu.</string>
+    <string name="personal_import_not_export">Ce fichier n'est pas un export d'événements TimeFlies.</string>
+    <plurals name="personal_import_added">
+        <item quantity="one">%1$d événement ajouté.</item>
+        <item quantity="other">%1$d événements ajoutés.</item>
+    </plurals>
+    <plurals name="personal_import_duplicates">
+        <item quantity="one">%1$d déjà présent, ignoré.</item>
+        <item quantity="other">%1$d déjà présents, ignorés.</item>
+    </plurals>
+    <plurals name="personal_import_invalid">
+        <item quantity="one">%1$d illisible, ignoré.</item>
+        <item quantity="other">%1$d illisibles, ignorés.</item>
+    </plurals>
 </resources>

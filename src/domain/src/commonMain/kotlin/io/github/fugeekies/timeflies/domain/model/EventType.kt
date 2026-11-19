@@ -51,6 +51,9 @@ enum class EventType(val id: String, val family: Family) {
     ACTOR_TURNED_POLITICIAN("actor-turned-politician", Family.HISTORY),
     WORLD_EVENT("world-event", Family.HISTORY),
     ROYAL_EVENT("royal-event", Family.HISTORY),
+
+    // The user's own events (decision of 19/11/2026): never paired, no event of the base has this type.
+    PERSONAL("personal", Family.PERSONAL),
     ;
 
     companion object {

@@ -384,4 +384,43 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
+
+    <!-- Personal events (decision of 19/11/2026, docs/UISpec/Settings.template.md, "Mes événements") -->
+    <string name="kind_personal">Personal event</string>
+    <string name="family_personal">My events</string>
+    <string name="family_contents_personal">The dates you added</string>
+    <string name="settings_personal">MY EVENTS</string>
+    <string name="settings_personal_help">Add your own dates (wedding, birth, first flat…): their anniversaries show up on Today, in the widget and in How old?. They stay on this device.</string>
+    <string name="settings_personal_empty">No personal events yet.</string>
+    <string name="personal_add">Add an event</string>
+    <string name="personal_new">New event</string>
+    <string name="personal_edit">Edit the event</string>
+    <string name="personal_title">Title</string>
+    <string name="personal_title_hint">Our wedding</string>
+    <string name="personal_day">Day</string>
+    <string name="personal_save">Save</string>
+    <string name="personal_delete">Delete</string>
+    <string name="personal_error_title_missing">Give the event a title.</string>
+    <string name="personal_error_title_too_long">Title too long: %1$d characters at most.</string>
+    <string name="personal_error_date_future">The date cannot be after today.</string>
+    <string name="personal_error_date_invalid">This date does not exist.</string>
+    <string name="personal_transfer_help">To change phone or PC: export your events to a file, then import it on the new device. Nothing is sent over the Internet.</string>
+    <string name="personal_export">Export</string>
+    <string name="personal_import">Import</string>
+    <string name="personal_export_done">Events exported.</string>
+    <string name="personal_export_failed">The file could not be saved.</string>
+    <string name="personal_import_failed">The file could not be read.</string>
+    <string name="personal_import_not_export">This file is not a TimeFlies events export.</string>
+    <plurals name="personal_import_added">
+        <item quantity="one">%1$d event added.</item>
+        <item quantity="other">%1$d events added.</item>
+    </plurals>
+    <plurals name="personal_import_duplicates">
+        <item quantity="one">%1$d already there, skipped.</item>
+        <item quantity="other">%1$d already there, skipped.</item>
+    </plurals>
+    <plurals name="personal_import_invalid">
+        <item quantity="one">%1$d unreadable, skipped.</item>
+        <item quantity="other">%1$d unreadable, skipped.</item>
+    </plurals>
 </resources>

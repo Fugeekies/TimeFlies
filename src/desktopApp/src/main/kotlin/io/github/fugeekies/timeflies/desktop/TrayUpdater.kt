@@ -6,6 +6,7 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.SendMorningNotification
 import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.ui.text.ShockMessages
 import io.github.fugeekies.timeflies.ui.text.apply
@@ -33,15 +34,16 @@ class TrayUpdater(
     private val observeSettings: ObserveSettings,
     private val clock: Clock,
     private val releaseUpdates: ReleaseUpdates,
+    private val personalEvents: PersonalEvents,
 ) {
     private val log = Logger.withTag("Tray")
 
-    /** Day, region, event filter and language of the tooltip shown, to recompute it only when one of them changes. */
+    /** Day, region, event filter, language and personal events of the tooltip shown, to recompute it only when one of them changes. */
     private var tooltipFor: List<Any?>? = null
 
     /** Runs until cancelled, when the app quits. */
     suspend fun run(tray: WindowsTray) {
-        merge(observeSettings().map { }, clock.manualChanges(), everyMinute()).collect { check(tray) }
+        merge(observeSettings().map { }, personalEvents.observe().map { }, clock.manualChanges(), everyMinute()).collect { check(tray) }
     }
 
     /** "Coup de vieux du jour" in the menu and the debug panel: today's notification at once, the morning one still due. */
@@ -58,7 +60,8 @@ class TrayUpdater(
             val settings = observeSettings().first()
             // The tray may run before any window: its texts follow the language chosen in Settings too (milestone 17).
             AppLocale.apply(settings.language)
-            val key = listOf(clock.today(), settings.region, settings.excludedEventGroups, settings.language)
+            // The user's own events too (decision of 19/11/2026).
+            val key = listOf(clock.today(), settings.region, settings.excludedEventGroups, settings.language, personalEvents.observe().first())
             if (key != tooltipFor) {
                 tray.setTooltip(ShockMessages.tooltip(sendMorningNotification.now()))
                 tooltipFor = key

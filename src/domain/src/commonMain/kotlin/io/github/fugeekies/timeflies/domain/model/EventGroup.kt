@@ -32,6 +32,7 @@ data class EventGroup(val type: EventType, val origin: String, val subcategory: 
             val reasons = mutableListOf<String>()
             val family = Family.fromId(parts[0]) ?: null.also { reasons += "famille « ${parts[0]} » inconnue" }
             val type = EventType.fromId(parts[1]) ?: null.also { reasons += "type « ${parts[1]} » inconnu" }
+            if (family == Family.PERSONAL) reasons += "famille « ${family.id} » réservée aux événements personnels"
             if (family != null && type != null && type.family != family) reasons += "type « ${type.id} » rangé dans la famille « ${family.id} »"
             val origin = parts[2]
             if (origin != INTERNATIONAL && !ORIGIN.matches(origin)) reasons += "origine « $origin » : code de pays en minuscules ou « international »"

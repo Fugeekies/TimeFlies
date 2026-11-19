@@ -97,7 +97,7 @@ class DataStoreSettingsRepositoryTest {
         FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 6, "birthYear": 1980, "birthMonth": 13, "otherAge": 99, "equivalencesReversed": true, "region": "france", "future": true}""") }
         val settings = open().settings.first()
         assertNull(settings.birth)
-        assertEquals(Family.entries.toSet(), settings.equivalenceFamilies)
+        assertEquals(Family.THEMES.toSet(), settings.equivalenceFamilies)
         assertEquals("FR", settings.region.code)
         assertEquals(WindowsSettings(), settings.windows, "a file without the Windows panel gets its defaults")
     }
