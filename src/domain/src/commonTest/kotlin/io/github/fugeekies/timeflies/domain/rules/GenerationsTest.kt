@@ -38,6 +38,37 @@ class GenerationsTest {
     }
 
     @Test
+    fun anAddedAgeFallsOnTheDayOfTheYearOfTheUsersBirth() {
+        // The case of 19/11/2026: born in February 1995, 31 years old; an added "32" is one year older, not less.
+        val day = LocalDate(2026, 11, 19)
+        val user = Generations.userBirth(YearMonth(1995, Month.FEBRUARY))
+        assertEquals(31, Ages.age(user, day))
+        val older = Generations.birthFromAge(day, 32, anchor = user)
+        assertEquals(LocalDate(1994, 2, 1), older)
+        assertEquals(32, Ages.age(older, day))
+        assertEquals(1, Generations.gap(user, older))
+        // Without the anchor, the former rule: 32 years ago to the day, 2.5 months from the user.
+        assertEquals(0, Generations.gap(user, Generations.birthFromAge(day, 32)))
+        // Every age and every gap matches the ages shown, younger or older, whatever the birth month.
+        for (month in Month.entries) {
+            val birth = Generations.userBirth(YearMonth(1995, month))
+            val userAge = Ages.age(birth, day)
+            for (age in Generations.AGE_RANGE) {
+                val other = Generations.birthFromAge(day, age, anchor = birth)
+                assertEquals(age, Ages.age(other, day), "$month, $age")
+                assertEquals(kotlin.math.abs(age - userAge), Generations.gap(birth, other), "$month, $age")
+            }
+        }
+    }
+
+    @Test
+    fun anAnchorOnTheTwentyNinthOfFebruaryFallsOnTheTwentyEighthOutsideLeapYears() {
+        val day = LocalDate(2026, 3, 10)
+        assertEquals(LocalDate(2011, 2, 28), Generations.birthFromAge(day, 15, anchor = LocalDate(2000, 2, 29)))
+        assertEquals(LocalDate(2016, 2, 29), Generations.birthFromAge(day, 10, anchor = LocalDate(2000, 2, 29)))
+    }
+
+    @Test
     fun allowsAnOtherPersonYoungerOrOlderWithAWarningUnderFiveYears() {
         // Decision of 15/11/2026: from 1 to 100, whatever the user's age.
         assertTrue(Generations.isOtherAgeAllowed(1))

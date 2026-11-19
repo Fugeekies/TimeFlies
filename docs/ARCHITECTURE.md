@@ -115,7 +115,7 @@ class GetDailyShock(
 
 Détaillées dans [`EVENTS_DATA.md`](EVENTS_DATA.md) (format et types) et dans les spécifications d'écran (`UISpec/`). En résumé :
 
-- **Naissance** : l'utilisateur ne donne que son **mois et son année** (jamais le jour, décision du 13/11/2026) ; la date retenue est le 1er du mois. Celle de chaque âge ajouté dans « Quel âge ? » et Équivalences (jusqu'à 3, plus jeunes ou plus âgés, décisions du 15/11/2026 et du 17/11/2026) est aujourd'hui moins cet âge.
+- **Naissance** : l'utilisateur ne donne que son **mois et son année** (jamais le jour, décision du 13/11/2026) ; la date retenue est le 1er du mois. Celle de chaque âge ajouté dans « Quel âge ? » et Équivalences (jusqu'à 3, plus jeunes ou plus âgés, décisions du 15/11/2026 et du 17/11/2026) tombe le même jour de l'année que celle de l'utilisateur, pour que l'écart soit la différence des âges affichés (décision du 19/11/2026) ; sans naissance de l'utilisateur, aujourd'hui moins cet âge.
 - **Âge à une date** : années civiles révolues entre la date de naissance et la date, comme un âge réel (on ne prend pas d'année de 365,25 jours).
 - **Date d'un événement** : `regionalDates[région] ?: date` (date de référence : la date française, décision du 14/11/2026).
 - **Anniversaire** : même jour et même mois qu'une date d'événement, au moins un an après. Un événement du 29 février est fêté le 28 février les années non bissextiles (décision du 13/11/2026).
