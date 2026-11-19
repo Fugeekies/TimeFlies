@@ -108,11 +108,14 @@ abstract class GenerationsViewModel(
     protected abstract suspend fun onGenerations(generations: GenerationsUiState)
 
     private fun generations(settings: Settings, temporary: TemporaryAges, today: LocalDate): GenerationsUiState {
+        // Every age falls on the day of the year of the user's birth (decision of 19/11/2026): the gaps and the ages at
+        // each event match the ages shown ("31" and "32": one year apart, never "less than a year").
+        val savedBirth = settings.birth?.let(Generations::userBirth)
         val userBirth = when {
-            temporary.user != null -> Generations.birthFromAge(today, temporary.user)
-            else -> settings.birth?.let(Generations::userBirth)
+            temporary.user != null -> Generations.birthFromAge(today, temporary.user, savedBirth)
+            else -> savedBirth
         }
-        val otherBirths = temporary.others.map { Generations.birthFromAge(today, it) }
+        val otherBirths = temporary.others.map { Generations.birthFromAge(today, it, userBirth) }
         return GenerationsUiState(
             userAge = when {
                 temporary.user != null -> temporary.user

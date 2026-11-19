@@ -14,7 +14,7 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 
 #### Calcul des âges et de l'écart (décision du 13/11/2026)
 * **Naissance de l'utilisateur** : le **1er jour** du mois choisi. L'âge affiché peut donc avoir un an d'avance seulement pendant le mois de son anniversaire, avant le jour exact.
-* **Naissance d'un âge ajouté** : **aujourd'hui moins cet âge**, au jour près (une personne « de 15 ans » est née il y a exactement 15 ans). Elle peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
+* **Naissance d'un âge ajouté** (décision du 19/11/2026, qui remplace « aujourd'hui moins cet âge ») : le **même jour de l'année que la naissance de l'utilisateur** (le 1er de son mois), l'année choisie pour que la personne ait cet âge aujourd'hui. L'écart est ainsi toujours la différence des âges affichés : né en février 1995, l'utilisateur a 31 ans le 19/11/2026 ; un âge « 32 » naît le 1er février 1994, 1 an d'écart (avant, né le 19/11/1994, « Moins d'un an d'écart »). Un âge temporaire de l'utilisateur suit la même règle. Sans naissance de l'utilisateur : aujourd'hui moins cet âge, au jour près. La personne peut être plus jeune ou plus âgée que l'utilisateur (décision du 15/11/2026).
 * **Écart** : différence entre les deux dates de naissance, au jour près, dans un sens ou dans l'autre ; un écart de moins de 5 ans est permis avec un avertissement (voir `Equivalences.template.md`). Il change légèrement chaque jour, ce qui garde cohérents les âges affichés des deux côtés d'une équivalence.
 
 #### Panneau « Mes événements » (eyebrow « MES ÉVÉNEMENTS », décision du 19/11/2026)

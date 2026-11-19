@@ -4,6 +4,7 @@ import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.YearMonth
 import kotlinx.datetime.minus
+import kotlinx.datetime.number
 
 /**
  * Birth dates, ages and age gap of the user and of the other person they compare themselves with
@@ -36,8 +37,23 @@ object Generations {
     /** The user's birth date: the 1st day of the chosen month. */
     fun userBirth(birth: YearMonth): LocalDate = LocalDate(birth.year, birth.month, 1)
 
-    /** Birth date of someone given by their age only (the other person, or an age picked on the fly): today minus that age, to the day. */
-    fun birthFromAge(today: LocalDate, age: Int): LocalDate = today.minus(age, DateTimeUnit.YEAR)
+    /**
+     * Birth date of someone given by their age only (an age added in the banner, or a temporary age of the user).
+     *
+     * With [anchor], the user's birth, it falls on the same day of the year (decision of 19/11/2026): the person is
+     * [age] today and the gap with the user is exactly the difference of the ages shown. Otherwise "32" would be born
+     * 32 years ago to the day, while a user born in February is already near the end of their 31st year: the banner
+     * said "Moins d'un an d'écart". Without [anchor]: today minus that age, to the day.
+     */
+    fun birthFromAge(today: LocalDate, age: Int, anchor: LocalDate? = null): LocalDate {
+        if (anchor == null) return today.minus(age, DateTimeUnit.YEAR)
+        // The birthday of the year: on or before today, the person already had it.
+        val hadBirthday = today.month.number * 100 + today.day >= anchor.month.number * 100 + anchor.day
+        val year = today.year - age - if (hadBirthday) 0 else 1
+        // 29 February outside a leap year: 28 February (the user's birth is the 1st of a month today).
+        val day = if (anchor.month.number == 2 && anchor.day == 29 && !Ages.isLeapYear(year)) 28 else anchor.day
+        return LocalDate(year, anchor.month, day)
+    }
 
     /** The user's age on [today], in completed years. */
     fun userAge(birth: YearMonth, today: LocalDate): Int = Ages.age(userBirth(birth), today)

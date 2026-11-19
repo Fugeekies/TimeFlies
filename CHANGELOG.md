@@ -53,6 +53,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Fixed
 
+- « Quel âge ? » et Équivalences : un âge ajouté naît le même jour de l'année que toi, l'écart est donc la différence des âges affichés. Né en février 1995 (31 ans), un âge « 32 » affichait « Moins d'un an d'écart » au lieu de « 1 an d'écart ».
 - Premier lancement : quand l'écran revenait dans la même session (« Revoir le premier lancement » du panneau de débogage), « C'est parti » et « Plus tard » restaient désactivés.
 - Les événements se chargent hors du fil de l'interface : le premier écran ne se fige plus pendant la lecture de la base, qui grossira jusqu'à 5 000 événements.
 - Équivalences, « Quel âge ? » et Réglages se recalculent aussi à minuit quand l'application reste ouverte, comme Aujourd'hui.
