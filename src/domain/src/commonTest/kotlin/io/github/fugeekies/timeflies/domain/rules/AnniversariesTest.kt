@@ -1,9 +1,9 @@
 package io.github.fugeekies.timeflies.domain.rules
 
-import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.MonthDay
 import io.github.fugeekies.timeflies.domain.model.Region
+import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.domain.testEvent
 import kotlinx.datetime.LocalDate
 import kotlin.test.Test

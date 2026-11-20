@@ -2,13 +2,13 @@ package io.github.fugeekies.timeflies.ui.onboarding
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import io.github.fugeekies.timeflies.domain.model.EventGroupCount
+import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
-import io.github.fugeekies.timeflies.domain.model.EventGroupCount
-import io.github.fugeekies.timeflies.domain.model.Family
-import kotlinx.coroutines.CancellationException
+import io.github.fugeekies.timeflies.ui.recoverFailures
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -33,7 +33,6 @@ data class OnboardingUiState(
     /** Families of the base, in their order. */
     val families: List<Family> get() = groups.map { it.group.family }.distinct().sorted()
 
-
     /** Number of events of each family, shown on its line. */
     val familyCounts: Map<Family, Int> get() = groups.groupBy { it.group.family }.mapValues { (_, ofFamily) -> ofFamily.sumOf { it.count } }
 
@@ -56,13 +55,7 @@ class OnboardingViewModel(
 
     init {
         viewModelScope.launch {
-            val groups = try {
-                getEventGroups()
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                emptyList()
-            }
+            val groups = recoverFailures(onFailure = { emptyList() }) { getEventGroups() }
             _state.update { it.copy(groups = groups) }
         }
     }
@@ -71,7 +64,6 @@ class OnboardingViewModel(
     fun onFamilyToggled(family: Family) = _state.update {
         it.copy(excludedFamilies = if (family in it.excludedFamilies) it.excludedFamilies - family else it.excludedFamilies + family)
     }
-
 
     fun onMonthPicked(month: Month) = _state.update { it.copy(month = month) }
 

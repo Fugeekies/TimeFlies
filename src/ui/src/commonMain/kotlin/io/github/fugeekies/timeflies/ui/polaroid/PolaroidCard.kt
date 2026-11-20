@@ -1,6 +1,5 @@
 package io.github.fugeekies.timeflies.ui.polaroid
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -43,6 +42,7 @@ import io.github.fugeekies.timeflies.ui.resources.family_and_year
 import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.years_unit
 import io.github.fugeekies.timeflies.ui.text.familyLabel
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.PhotoPaper
 import io.github.fugeekies.timeflies.ui.theme.bestInkOn

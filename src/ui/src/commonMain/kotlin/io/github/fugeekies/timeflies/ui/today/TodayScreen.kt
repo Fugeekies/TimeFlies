@@ -1,8 +1,6 @@
 package io.github.fugeekies.timeflies.ui.today
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -11,10 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -28,16 +23,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,39 +39,37 @@ import io.github.fugeekies.timeflies.domain.model.DailyShock
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.UpcomingDay
+import io.github.fugeekies.timeflies.ui.components.CenteredText
+import io.github.fugeekies.timeflies.ui.ephemeris.EphemerisSheet
+import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.a11y_anniversary
 import io.github.fugeekies.timeflies.ui.resources.also_today
 import io.github.fugeekies.timeflies.ui.resources.app_name
 import io.github.fugeekies.timeflies.ui.resources.day_and_delay
-import io.github.fugeekies.timeflies.ui.resources.family_and_year
 import io.github.fugeekies.timeflies.ui.resources.in_days
 import io.github.fugeekies.timeflies.ui.resources.kind_and_date
 import io.github.fugeekies.timeflies.ui.resources.kind_and_year
 import io.github.fugeekies.timeflies.ui.resources.load_error
 import io.github.fugeekies.timeflies.ui.resources.loading
 import io.github.fugeekies.timeflies.ui.resources.nothing_soon
-import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.upcoming
 import io.github.fugeekies.timeflies.ui.resources.vhs_play
 import io.github.fugeekies.timeflies.ui.resources.will_turn
 import io.github.fugeekies.timeflies.ui.resources.years_count
-import io.github.fugeekies.timeflies.ui.resources.years_unit
 import io.github.fugeekies.timeflies.ui.text.DateTexts
 import io.github.fugeekies.timeflies.ui.text.capitalized
-import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import io.github.fugeekies.timeflies.ui.text.userAgeText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.accent
 import io.github.fugeekies.timeflies.ui.theme.rememberReducedMotion
-import io.github.fugeekies.timeflies.ui.polaroid.PolaroidCard
 import io.github.fugeekies.timeflies.ui.vhs.VhsTape
-import io.github.fugeekies.timeflies.ui.ephemeris.EphemerisSheet
+import io.github.fugeekies.timeflies.ui.vhs.VhsYellow
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.minus
-import io.github.fugeekies.timeflies.ui.vhs.VhsYellow
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -115,12 +105,6 @@ fun TodayScreen(viewModel: TodayViewModel, onOpenEvent: (Event) -> Unit = {}, mo
     }
 }
 
-@Composable
-private fun CenteredText(text: String, modifier: Modifier) {
-    Box(modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
-    }
-}
 
 @Composable
 fun TodayContent(shock: DailyShock, modifier: Modifier = Modifier) {

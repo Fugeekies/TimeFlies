@@ -11,7 +11,7 @@ import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.ui.dayChanges
-import kotlinx.coroutines.CancellationException
+import io.github.fugeekies.timeflies.ui.recoverFailures
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -56,13 +56,13 @@ class TodayViewModel(
     }
 
     private suspend fun load(settings: Settings) {
-        _state.value = try {
+        _state.value = recoverFailures(
+            onFailure = { e ->
+                log.e(e) { "Daily shock could not be computed" }
+                TodayUiState.Error
+            },
+        ) {
             TodayUiState.Loaded(getDailyShock(settings.region, settings.birth?.let(Generations::userBirth)))
-        } catch (e: CancellationException) {
-            throw e
-        } catch (e: Exception) {
-            log.e(e) { "Daily shock could not be computed" }
-            TodayUiState.Error
         }
     }
 

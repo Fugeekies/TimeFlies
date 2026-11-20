@@ -2,13 +2,10 @@ package io.github.fugeekies.timeflies.data.personal
 
 import androidx.datastore.core.CorruptionException
 import androidx.datastore.core.DataStore
-import androidx.datastore.core.DataStoreFactory
-import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
 import androidx.datastore.core.okio.OkioSerializer
-import androidx.datastore.core.okio.OkioStorage
+import io.github.fugeekies.timeflies.data.jsonDataStore
 import io.github.fugeekies.timeflies.domain.model.PersonalEvent
 import io.github.fugeekies.timeflies.domain.port.PersonalEventRepository
-import kotlin.random.Random
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -20,6 +17,7 @@ import okio.BufferedSink
 import okio.BufferedSource
 import okio.FileSystem
 import okio.Path
+import kotlin.random.Random
 
 /**
  * The user's own events in `personal-events.json` through DataStore, next to `settings.json` (decision of 19/11/2026):
@@ -38,18 +36,7 @@ class DataStorePersonalEventRepository(
     private val random: Random = Random.Default,
 ) : PersonalEventRepository {
 
-    private val store: DataStore<PersonalEventsDto> = run {
-        val storage = OkioStorage(fileSystem, PersonalEventsSerializer, producePath = { file })
-        val corruptionHandler = ReplaceFileCorruptionHandler<PersonalEventsDto> { error ->
-            onCorruption(error)
-            PersonalEventsDto()
-        }
-        if (scope == null) {
-            DataStoreFactory.create(storage, corruptionHandler)
-        } else {
-            DataStoreFactory.create(storage, corruptionHandler, scope = scope)
-        }
-    }
+    private val store: DataStore<PersonalEventsDto> = jsonDataStore(fileSystem, file, PersonalEventsSerializer, scope, onCorruption)
 
     override val events: Flow<List<PersonalEvent>> = store.data.map { dto -> dto.toDomain() }.distinctUntilChanged()
 

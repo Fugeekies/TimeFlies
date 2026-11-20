@@ -1,17 +1,15 @@
 package io.github.fugeekies.timeflies.ui.equivalences
 
-import androidx.lifecycle.viewModelScope
 import io.github.fugeekies.timeflies.domain.model.Equivalence
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
-import kotlinx.coroutines.CancellationException
+import io.github.fugeekies.timeflies.ui.recoverFailures
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
 
 /**
  * The list of the Equivalences screen.
@@ -32,10 +30,10 @@ data class EquivalencesUiState(
 class EquivalencesViewModel(
     private val getEquivalences: GetEquivalences,
     observeSettings: ObserveSettings,
-    private val updateSettings: UpdateSettings,
+    updateSettings: UpdateSettings,
     clock: Clock,
     temporaryAges: TemporaryAgesStore,
-) : GenerationsViewModel(observeSettings, clock, temporaryAges) {
+) : GenerationsViewModel(observeSettings, updateSettings, clock, temporaryAges) {
 
     private val _state = MutableStateFlow<EquivalencesUiState?>(null)
     val state: StateFlow<EquivalencesUiState?> = _state.asStateFlow()
@@ -54,23 +52,13 @@ class EquivalencesViewModel(
         )
         _state.value = base
         if (userBirth == null) return
-        _state.value = try {
+        _state.value = recoverFailures(
+            onFailure = { e ->
+                log.e(e) { "Equivalences could not be computed" }
+                base.copy(cards = null, error = true)
+            },
+        ) {
             base.copy(cards = getEquivalences(userBirth, generations.otherBirths, settings.equivalenceFamilies, settings.region))
-        } catch (e: CancellationException) {
-            throw e
-        } catch (e: Exception) {
-            log.e(e) { "Equivalences could not be computed" }
-            base.copy(cards = null, error = true)
         }
-    }
-
-    fun setFamily(family: Family, checked: Boolean) {
-        val current = _state.value ?: return
-        val families = if (checked) current.families + family else current.families - family
-        viewModelScope.launch { updateSettings.setEquivalenceFamilies(families) }
-    }
-
-    fun setAllFamilies(checked: Boolean) {
-        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.THEMES.toSet() else emptySet()) }
     }
 }

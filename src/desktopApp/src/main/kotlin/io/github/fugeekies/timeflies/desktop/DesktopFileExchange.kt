@@ -1,13 +1,13 @@
 package io.github.fugeekies.timeflies.desktop
 
 import io.github.fugeekies.timeflies.ui.personal.FileExchange
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.swing.Swing
+import kotlinx.coroutines.withContext
 import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
 import java.io.IOException
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.swing.Swing
-import kotlinx.coroutines.withContext
 
 /**
  * The export and import of Settings › Mes événements through the Windows Save and Open dialogs (decision of

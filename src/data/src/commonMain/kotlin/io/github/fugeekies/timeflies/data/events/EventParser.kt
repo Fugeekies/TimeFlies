@@ -2,8 +2,8 @@ package io.github.fugeekies.timeflies.data.events
 
 import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.Event
-import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.EventGroup
+import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.Region
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerializationException
@@ -37,10 +37,8 @@ class EventParser(private val today: LocalDate) {
         array.forEachIndexed { index, element ->
             val dto = try {
                 json.decodeFromJsonElement(EventDto.serializer(), element)
-            } catch (e: SerializationException) {
-                rejections += Rejection(file, index, null, listOf("entrée illisible : ${e.message?.lineSequence()?.firstOrNull()}"))
-                return@forEachIndexed
             } catch (e: IllegalArgumentException) {
+                // SerializationException (wrong type of a field) is an IllegalArgumentException.
                 rejections += Rejection(file, index, null, listOf("entrée illisible : ${e.message?.lineSequence()?.firstOrNull()}"))
                 return@forEachIndexed
             }
@@ -77,7 +75,7 @@ class EventParser(private val today: LocalDate) {
         val titles = dto.title.filterValues { it.isNotBlank() }
         if (titles[Event.FRENCH] == null) reasons += "title.fr manquant ou vide"
         // Only the languages of the interface (docs/EVENTS_DATA.md, "title"): a typo ("fr-FR", "ENG") would never show.
-        val unknownLanguages = dto.title.keys.filter { AppLanguage.entries.none { language -> language.tag == it } }
+        val unknownLanguages = dto.title.keys.filter { AppLanguage.of(it)?.tag != it }
         if (unknownLanguages.isNotEmpty()) reasons += "title : langue inconnue ${unknownLanguages.joinToString()} (fr, en, de, it, es)"
 
         val kind = dto.kind.let { if (it == null) { reasons += "kind manquant"; null } else EventKind.fromId(it) ?: run { reasons += "kind « $it » inconnu"; null } }

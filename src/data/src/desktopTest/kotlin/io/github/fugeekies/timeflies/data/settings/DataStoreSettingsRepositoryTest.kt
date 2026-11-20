@@ -1,9 +1,12 @@
 package io.github.fugeekies.timeflies.data.settings
 
 import io.github.fugeekies.timeflies.domain.model.AppLanguage
+import io.github.fugeekies.timeflies.domain.model.AppRelease
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Family
+import io.github.fugeekies.timeflies.domain.model.ReleaseCheck
 import io.github.fugeekies.timeflies.domain.model.Settings
+import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -11,9 +14,6 @@ import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.job
 import kotlinx.coroutines.runBlocking
-import io.github.fugeekies.timeflies.domain.model.AppRelease
-import io.github.fugeekies.timeflies.domain.model.ReleaseCheck
-import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month

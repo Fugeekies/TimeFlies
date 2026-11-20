@@ -7,7 +7,6 @@ import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.EventRepository
 import io.github.fugeekies.timeflies.domain.rules.Equivalences
-import kotlinx.datetime.LocalDate
 
 /**
  * The events the user can choose on the "Quel âge ?" screen (docs/UISpec/EventAges.template.md, "Recherche").
@@ -25,7 +24,7 @@ class SearchEvents(
         val today = clock.today()
         return events.search(query, MAX_RESULTS)
             .filter { Equivalences.isOldEnough(it.dateFor(region), today) }
-            .sortedWith(compareByDescending<Event> { it.dateFor(region) }.thenBy { it.id })
+            .sortedWith(mostRecentFirst(region))
     }
 
     /**
@@ -33,18 +32,19 @@ class SearchEvents(
      * then the themes in their order.
      */
     suspend fun byFamily(region: Region = Region.FRANCE): Map<Family, List<Event>> {
-        val today = clock.today()
+        val latest = Equivalences.latestOldEnough(clock.today())
         return (listOf(Family.PERSONAL) + Family.THEMES).associateWith { family ->
             EventType.entries.filter { it.family == family }
-                .flatMap { events.ofType(it, EARLIEST, today, region) }
-                .filter { Equivalences.isOldEnough(it.dateFor(region), today) }
-                .sortedWith(compareByDescending<Event> { it.dateFor(region) }.thenBy { it.id })
+                .flatMap { events.ofType(it, Equivalences.EARLIEST, latest, region) }
+                .sortedWith(mostRecentFirst(region))
         }.filterValues { it.isNotEmpty() }
     }
+
+    private fun mostRecentFirst(region: Region): Comparator<Event> =
+        compareByDescending<Event> { it.dateFor(region) }.thenBy { it.id }
 
     companion object {
         const val MIN_QUERY_LENGTH = 2
         const val MAX_RESULTS = 100
-        private val EARLIEST = LocalDate(1, 1, 1)
     }
 }

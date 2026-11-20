@@ -18,53 +18,37 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.onClick
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Equivalence
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.Family
+import io.github.fugeekies.timeflies.ui.components.CenteredText
+import io.github.fugeekies.timeflies.ui.components.Message
+import io.github.fugeekies.timeflies.ui.components.ScreenTitle
 import io.github.fugeekies.timeflies.ui.resources.Res
-import io.github.fugeekies.timeflies.ui.resources.equivalences_check_all
 import io.github.fugeekies.timeflies.ui.resources.equivalences_empty
 import io.github.fugeekies.timeflies.ui.resources.equivalences_no_other
-import io.github.fugeekies.timeflies.ui.resources.equivalences_themes
-import io.github.fugeekies.timeflies.ui.resources.equivalences_themes_summary
 import io.github.fugeekies.timeflies.ui.resources.equivalences_title
-import io.github.fugeekies.timeflies.ui.resources.equivalences_uncheck_all
 import io.github.fugeekies.timeflies.ui.resources.load_error
 import io.github.fugeekies.timeflies.ui.resources.loading
-import io.github.fugeekies.timeflies.ui.resources.ok
 import io.github.fugeekies.timeflies.ui.text.DateTexts
-import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
 import io.github.fugeekies.timeflies.ui.text.typeLabel
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
-import io.github.fugeekies.timeflies.ui.theme.accent
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /**
@@ -129,33 +113,6 @@ fun EquivalencesScreen(
 
 }
 
-@Composable
-internal fun ScreenTitle(text: String) {
-    Text(
-        text,
-        style = LocalStyle.current.accent(34f),
-        color = MaterialTheme.colorScheme.onBackground,
-        modifier = Modifier.semantics { heading() },
-    )
-}
-
-@Composable
-internal fun CenteredText(text: String, modifier: Modifier) {
-    Box(modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
-    }
-}
-
-@Composable
-internal fun Message(text: String) {
-    Text(
-        text,
-        style = MaterialTheme.typography.bodyLarge,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        textAlign = TextAlign.Center,
-        modifier = Modifier.fillMaxWidth().padding(vertical = 32.dp, horizontal = 8.dp),
-    )
-}
 
 /** Family dot and type name, at the top of a card. */
 @Composable

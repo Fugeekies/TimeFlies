@@ -18,15 +18,15 @@ import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import co.touchlab.kermit.Logger
 import io.github.fugeekies.timeflies.android.TimeFliesApplication
+import io.github.fugeekies.timeflies.domain.rules.Midnight
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
-import io.github.fugeekies.timeflies.domain.rules.Midnight
 import kotlinx.datetime.TimeZone
 import java.util.concurrent.TimeUnit
-import kotlin.time.Clock as KotlinClock
 import kotlin.time.Duration.Companion.minutes
+import kotlin.time.Clock as KotlinClock
 
 /** Declared in the manifest: the system asks it to draw the widget. */
 class TimeFliesWidgetReceiver : GlanceAppWidgetReceiver() {

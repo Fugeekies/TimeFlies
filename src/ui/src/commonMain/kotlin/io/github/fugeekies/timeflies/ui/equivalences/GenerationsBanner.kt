@@ -1,6 +1,5 @@
 package io.github.fugeekies.timeflies.ui.equivalences
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -67,6 +66,7 @@ import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.text.DateTexts
 import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.personAgeText
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.TimeFliesIcons
 import io.github.fugeekies.timeflies.ui.theme.accent

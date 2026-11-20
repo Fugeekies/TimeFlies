@@ -10,7 +10,7 @@ import io.github.fugeekies.timeflies.domain.port.BaseStats
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
-import kotlinx.coroutines.CancellationException
+import io.github.fugeekies.timeflies.ui.recoverFailures
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -57,14 +57,12 @@ class DebugViewModel(
 
     fun refreshStats() {
         viewModelScope.launch {
-            stats.value = try {
-                tools.baseStats()
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                log.e(e) { "Statistics could not be computed" }
-                null
-            }
+            stats.value = recoverFailures(
+                onFailure = { e ->
+                    log.e(e) { "Statistics could not be computed" }
+                    null
+                },
+            ) { tools.baseStats() }
         }
     }
 

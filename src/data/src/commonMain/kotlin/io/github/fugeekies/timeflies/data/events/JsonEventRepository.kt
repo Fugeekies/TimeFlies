@@ -7,13 +7,13 @@ import io.github.fugeekies.timeflies.domain.model.MonthDay
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.EventRepository
-import kotlin.concurrent.Volatile
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlinx.datetime.LocalDate
+import kotlin.concurrent.Volatile
 
 /** Outcome of loading the event files, for logs and the debug panel. */
 data class LoadReport(val events: List<Event>, val rejections: List<Rejection>)
@@ -48,6 +48,10 @@ class JsonEventRepository(
     @Volatile
     private var loaded: LoadReport? = null
 
+    /** The folded titles of [searchableTitles], built on the first search; two searches at once may both build it. */
+    @Volatile
+    private var searchable: List<Pair<Event, String>>? = null
+
     /** Built indexes, replaced as a whole under [mutex] so it can be read without it. */
     @Volatile
     private var indexes: Map<IndexKey, EventIndex> = emptyMap()
@@ -67,16 +71,28 @@ class JsonEventRepository(
     override suspend fun search(query: String, limit: Int): List<Event> {
         val needle = fold(query.trim())
         if (needle.isEmpty() || limit <= 0) return emptyList()
-        val events = shown()
+        val excluded = excludedGroups()
+        val titles = searchableTitles()
         return withContext(computation) {
-            events.asSequence()
-                .filter { event -> event.titles.values.any { fold(it).contains(needle) } }
+            titles.asSequence()
+                .filter { (event, folded) -> folded.contains(needle) && event.group.path !in excluded }
+                .map { it.first }
                 .take(limit)
                 .toList()
         }
     }
 
     override suspend fun count(): Int = shown().size
+
+    /**
+     * Every event with all its titles folded once ([fold]) and joined by a character no query holds, so a search folds
+     * the query only, not the thousands of titles at each key typed.
+     */
+    private suspend fun searchableTitles(): List<Pair<Event, String>> = searchable ?: run {
+        val events = load().events
+        withContext(computation) { events.map { it to it.titles.values.joinToString(TITLE_SEPARATOR) { title -> fold(title) } } }
+            .also { searchable = it }
+    }
 
     /** The events of the ticked groups. */
     private suspend fun shown(): List<Event> {
@@ -133,5 +149,8 @@ class JsonEventRepository(
     companion object {
         /** The list of the files of the base, one path per line without ".json", made at build time. */
         const val INDEX = "index.txt"
+
+        /** Between the folded titles of an event: never typed, so a match never spans two titles. */
+        private const val TITLE_SEPARATOR = "\u0000"
     }
 }

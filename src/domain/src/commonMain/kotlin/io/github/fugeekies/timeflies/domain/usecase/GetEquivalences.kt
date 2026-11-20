@@ -34,7 +34,7 @@ class GetEquivalences(
         // Personal events have no match: never a card (decision of 19/11/2026).
         for (type in EventType.entries.filter { it.family in families && it.family != Family.PERSONAL }) {
             // Sorted by date in the region, events younger than a year excluded.
-            val ofType = events.ofType(type, EARLIEST, today, region).filter { Equivalences.isOldEnough(it.dateFor(region), today) }
+            val ofType = events.ofType(type, Equivalences.EARLIEST, Equivalences.latestOldEnough(today), region)
             for (event in ofType) {
                 val date = event.dateFor(region)
                 val others = otherBirths.map { otherBirth ->
@@ -68,9 +68,5 @@ class GetEquivalences(
             if (sorted[mid].dateFor(region) < date) low = mid + 1 else high = mid
         }
         return low
-    }
-
-    private companion object {
-        val EARLIEST = LocalDate(1, 1, 1)
     }
 }

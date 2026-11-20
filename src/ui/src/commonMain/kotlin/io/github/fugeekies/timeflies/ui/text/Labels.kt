@@ -1,7 +1,9 @@
 package io.github.fugeekies.timeflies.ui.text
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import io.github.fugeekies.timeflies.domain.model.EventKind
+import io.github.fugeekies.timeflies.domain.model.EventType
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.UserAge
 import io.github.fugeekies.timeflies.ui.resources.Res
@@ -14,75 +16,73 @@ import io.github.fugeekies.timeflies.ui.resources.family_cinema
 import io.github.fugeekies.timeflies.ui.resources.family_contents_cinema
 import io.github.fugeekies.timeflies.ui.resources.family_contents_games_tech
 import io.github.fugeekies.timeflies.ui.resources.family_contents_history
-import io.github.fugeekies.timeflies.ui.resources.family_contents_personal
 import io.github.fugeekies.timeflies.ui.resources.family_contents_music
+import io.github.fugeekies.timeflies.ui.resources.family_contents_personal
 import io.github.fugeekies.timeflies.ui.resources.family_contents_series_tv
 import io.github.fugeekies.timeflies.ui.resources.family_contents_sport
 import io.github.fugeekies.timeflies.ui.resources.family_games_tech
 import io.github.fugeekies.timeflies.ui.resources.family_history
-import io.github.fugeekies.timeflies.ui.resources.family_personal
 import io.github.fugeekies.timeflies.ui.resources.family_music
+import io.github.fugeekies.timeflies.ui.resources.family_personal
 import io.github.fugeekies.timeflies.ui.resources.family_series_tv
 import io.github.fugeekies.timeflies.ui.resources.family_sport
 import io.github.fugeekies.timeflies.ui.resources.first_of_month
 import io.github.fugeekies.timeflies.ui.resources.kind_album_release
 import io.github.fugeekies.timeflies.ui.resources.kind_death
 import io.github.fugeekies.timeflies.ui.resources.kind_election
-import io.github.fugeekies.timeflies.ui.resources.kind_personal
 import io.github.fugeekies.timeflies.ui.resources.kind_film_release
 import io.github.fugeekies.timeflies.ui.resources.kind_game_release
 import io.github.fugeekies.timeflies.ui.resources.kind_history
+import io.github.fugeekies.timeflies.ui.resources.kind_personal
 import io.github.fugeekies.timeflies.ui.resources.kind_product_launch
 import io.github.fugeekies.timeflies.ui.resources.kind_series_finale
 import io.github.fugeekies.timeflies.ui.resources.kind_series_premiere
 import io.github.fugeekies.timeflies.ui.resources.kind_single_release
 import io.github.fugeekies.timeflies.ui.resources.kind_sport
 import io.github.fugeekies.timeflies.ui.resources.months
+import io.github.fugeekies.timeflies.ui.resources.person_age_birth_year
+import io.github.fugeekies.timeflies.ui.resources.person_age_under_one
+import io.github.fugeekies.timeflies.ui.resources.type_actor_turned_politician
+import io.github.fugeekies.timeflies.ui.resources.type_animated_feature
+import io.github.fugeekies.timeflies.ui.resources.type_blockbuster
+import io.github.fugeekies.timeflies.ui.resources.type_boy_band_hit
+import io.github.fugeekies.timeflies.ui.resources.type_cartoon_on_tv
+import io.github.fugeekies.timeflies.ui.resources.type_diva_hit
+import io.github.fugeekies.timeflies.ui.resources.type_drama_series_hit
+import io.github.fugeekies.timeflies.ui.resources.type_football_star_peak
+import io.github.fugeekies.timeflies.ui.resources.type_french_comedy_hit
+import io.github.fugeekies.timeflies.ui.resources.type_french_president_elected
+import io.github.fugeekies.timeflies.ui.resources.type_french_series_hit
+import io.github.fugeekies.timeflies.ui.resources.type_handheld_console
+import io.github.fugeekies.timeflies.ui.resources.type_kids_tv_show
+import io.github.fugeekies.timeflies.ui.resources.type_music_format
+import io.github.fugeekies.timeflies.ui.resources.type_music_icon_death
+import io.github.fugeekies.timeflies.ui.resources.type_nintendo_console
+import io.github.fugeekies.timeflies.ui.resources.type_olympics_in_france
+import io.github.fugeekies.timeflies.ui.resources.type_phone_launch
+import io.github.fugeekies.timeflies.ui.resources.type_playstation_console
+import io.github.fugeekies.timeflies.ui.resources.type_pop_album_hit
+import io.github.fugeekies.timeflies.ui.resources.type_rap_album_hit
+import io.github.fugeekies.timeflies.ui.resources.type_reality_tv
+import io.github.fugeekies.timeflies.ui.resources.type_royal_event
+import io.github.fugeekies.timeflies.ui.resources.type_saga_episode
+import io.github.fugeekies.timeflies.ui.resources.type_sitcom_hit
+import io.github.fugeekies.timeflies.ui.resources.type_social_network_launch
+import io.github.fugeekies.timeflies.ui.resources.type_sports_record
+import io.github.fugeekies.timeflies.ui.resources.type_summer_hit
+import io.github.fugeekies.timeflies.ui.resources.type_tennis_grand_slam
+import io.github.fugeekies.timeflies.ui.resources.type_tour_de_france_win
+import io.github.fugeekies.timeflies.ui.resources.type_us_president_elected
+import io.github.fugeekies.timeflies.ui.resources.type_video_game_phenomenon
+import io.github.fugeekies.timeflies.ui.resources.type_world_cup_win
+import io.github.fugeekies.timeflies.ui.resources.type_world_cup_win_france
+import io.github.fugeekies.timeflies.ui.resources.type_world_event
 import io.github.fugeekies.timeflies.ui.resources.user_age_before_birth
 import io.github.fugeekies.timeflies.ui.resources.user_age_birth_year
 import io.github.fugeekies.timeflies.ui.resources.user_age_under_one
 import io.github.fugeekies.timeflies.ui.resources.user_age_years
-
-import io.github.fugeekies.timeflies.ui.resources.type_sitcom_hit
-import io.github.fugeekies.timeflies.ui.resources.type_drama_series_hit
-import io.github.fugeekies.timeflies.ui.resources.type_french_series_hit
-import io.github.fugeekies.timeflies.ui.resources.type_reality_tv
-import io.github.fugeekies.timeflies.ui.resources.type_kids_tv_show
-import io.github.fugeekies.timeflies.ui.resources.type_cartoon_on_tv
-import io.github.fugeekies.timeflies.ui.resources.type_blockbuster
-import io.github.fugeekies.timeflies.ui.resources.type_animated_feature
-import io.github.fugeekies.timeflies.ui.resources.type_french_comedy_hit
-import io.github.fugeekies.timeflies.ui.resources.type_saga_episode
-import io.github.fugeekies.timeflies.ui.resources.type_music_icon_death
-import io.github.fugeekies.timeflies.ui.resources.type_diva_hit
-import io.github.fugeekies.timeflies.ui.resources.type_boy_band_hit
-import io.github.fugeekies.timeflies.ui.resources.type_rap_album_hit
-import io.github.fugeekies.timeflies.ui.resources.type_summer_hit
-import io.github.fugeekies.timeflies.ui.resources.type_pop_album_hit
-import io.github.fugeekies.timeflies.ui.resources.type_football_star_peak
-import io.github.fugeekies.timeflies.ui.resources.type_world_cup_win_france
-import io.github.fugeekies.timeflies.ui.resources.type_olympics_in_france
-import io.github.fugeekies.timeflies.ui.resources.type_sports_record
-import io.github.fugeekies.timeflies.ui.resources.type_tennis_grand_slam
-import io.github.fugeekies.timeflies.ui.resources.type_tour_de_france_win
-import io.github.fugeekies.timeflies.ui.resources.type_world_cup_win
-import io.github.fugeekies.timeflies.ui.resources.type_nintendo_console
-import io.github.fugeekies.timeflies.ui.resources.type_playstation_console
-import io.github.fugeekies.timeflies.ui.resources.type_handheld_console
-import io.github.fugeekies.timeflies.ui.resources.type_video_game_phenomenon
-import io.github.fugeekies.timeflies.ui.resources.type_phone_launch
-import io.github.fugeekies.timeflies.ui.resources.type_social_network_launch
-import io.github.fugeekies.timeflies.ui.resources.type_music_format
-import io.github.fugeekies.timeflies.ui.resources.type_french_president_elected
-import io.github.fugeekies.timeflies.ui.resources.type_us_president_elected
-import io.github.fugeekies.timeflies.ui.resources.type_actor_turned_politician
-import io.github.fugeekies.timeflies.ui.resources.type_world_event
-import io.github.fugeekies.timeflies.ui.resources.type_royal_event
-import io.github.fugeekies.timeflies.ui.resources.person_age_birth_year
-import io.github.fugeekies.timeflies.ui.resources.person_age_under_one
 import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.resources.years_signed
-import io.github.fugeekies.timeflies.domain.model.EventType
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.isoDayNumber
 import kotlinx.datetime.number
@@ -92,6 +92,7 @@ import org.jetbrains.compose.resources.getStringArray
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
 import org.jetbrains.compose.resources.stringResource
+import kotlin.math.abs
 
 /** Label shown under an event title (docs/EVENTS_DATA.md, "Natures"). */
 @Composable
@@ -197,17 +198,19 @@ class DateTexts(
 }
 
 @Composable
-fun rememberDateTexts(): DateTexts = DateTexts(
-    months = stringArrayResource(Res.array.months),
-    days = stringArrayResource(Res.array.days),
-    firstOfMonth = stringResource(Res.string.first_of_month),
-    patterns = DatePatterns(
+fun rememberDateTexts(): DateTexts {
+    val months = stringArrayResource(Res.array.months)
+    val days = stringArrayResource(Res.array.days)
+    val firstOfMonth = stringResource(Res.string.first_of_month)
+    val patterns = DatePatterns(
         long = stringResource(Res.string.date_long),
         dayAndMonth = stringResource(Res.string.date_day_and_month),
         withDayName = stringResource(Res.string.date_with_day_name),
         short = stringResource(Res.string.date_short),
-    ),
-)
+    )
+    // One instance per language, not one per recomposition of every card.
+    return remember(months, days, firstOfMonth, patterns) { DateTexts(months, days, firstOfMonth, patterns) }
+}
 
 /** The same outside a screen (widget, tray, notifications), in the current language. */
 suspend fun loadDateTexts(): DateTexts = DateTexts(
@@ -285,5 +288,5 @@ fun personAgeText(age: UserAge): String = when (age) {
 @Composable
 fun signedYearsText(years: Int): String {
     val number = if (years < 0) "−${-years}" else years.toString()
-    return pluralStringResource(Res.plurals.years_signed, kotlin.math.abs(years), number)
+    return pluralStringResource(Res.plurals.years_signed, abs(years), number)
 }

@@ -5,11 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import io.github.fugeekies.timeflies.ui.personal.FileExchange
-import java.io.ByteArrayOutputStream
-import java.io.IOException
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.ByteArrayOutputStream
+import java.io.IOException
 
 /**
  * The export and import of Settings › Mes événements through the Storage Access Framework (decision of 19/11/2026):

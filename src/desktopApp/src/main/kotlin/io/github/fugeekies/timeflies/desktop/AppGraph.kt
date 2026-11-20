@@ -5,7 +5,7 @@ import io.github.fugeekies.timeflies.data.debug.DataDebugTools
 import io.github.fugeekies.timeflies.data.events.JsonEventRepository
 import io.github.fugeekies.timeflies.data.personal.DataStorePersonalEventRepository
 import io.github.fugeekies.timeflies.data.personal.WithPersonalEvents
-import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
+import io.github.fugeekies.timeflies.data.release.GitHubReleases
 import io.github.fugeekies.timeflies.data.settings.DataStoreSettingsRepository
 import io.github.fugeekies.timeflies.data.time.AdjustableClock
 import io.github.fugeekies.timeflies.data.time.SystemClock
@@ -13,18 +13,19 @@ import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.DebugTools
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
-import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
-import kotlinx.coroutines.flow.first
-import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
-import io.github.fugeekies.timeflies.data.release.GitHubReleases
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
-import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
+import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
+import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
+import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
+import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import io.github.fugeekies.timeflies.domain.usecase.SendMorningNotification
-import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
+import io.github.fugeekies.timeflies.ui.AppUseCases
 import io.github.fugeekies.timeflies.ui.readResourceFile
+import kotlinx.coroutines.flow.first
 import okio.FileSystem
 import okio.Path
 import okio.Path.Companion.toPath
@@ -65,15 +66,25 @@ class AppGraph(debug: Boolean) {
     private val events = WithPersonalEvents(baseEvents, personal)
 
     val personalEvents = PersonalEvents(personal, clock)
-    val getDailyShock = GetDailyShock(events, clock)
-    val getEquivalences = GetEquivalences(events, clock)
-    val getEventAges = GetEventAges()
-    val searchEvents = SearchEvents(events, clock)
     val observeSettings = ObserveSettings(settings)
     val updateSettings = UpdateSettings(settings, clock)
-    val completeOnboarding = CompleteOnboarding(settings, clock)
-    val countEvents = CountEvents(events)
-    val getEventGroups = GetEventGroups(events)
+    private val getDailyShock = GetDailyShock(events, clock)
+
+    /** What the shared screens call. */
+    val useCases = AppUseCases(
+        getDailyShock = getDailyShock,
+        getEquivalences = GetEquivalences(events, clock),
+        getEventAges = GetEventAges(),
+        searchEvents = SearchEvents(events, clock),
+        observeSettings = observeSettings,
+        updateSettings = updateSettings,
+        completeOnboarding = CompleteOnboarding(settings, clock),
+        countEvents = CountEvents(events),
+        getEventGroups = GetEventGroups(events),
+        personalEvents = personalEvents,
+        clock = clock,
+    )
+
     // New versions on GitHub (decision of 16/11/2026); a local build has no version and never asks.
     val releaseUpdates = ReleaseUpdates(GitHubReleases(::httpText), settings, clock, System.getProperty("timeflies.version"))
     val sendMorningNotification = SendMorningNotification(getDailyShock, settings, clock)

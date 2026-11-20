@@ -7,8 +7,8 @@ import kotlinx.datetime.minus
 import kotlinx.datetime.number
 
 /**
- * Birth dates, ages and age gap of the user and of the other person they compare themselves with
- * (docs/UISpec/Settings.template.md). The other person can be younger or older (decision of 15/11/2026).
+ * Birth dates, ages and age gaps of the user and of the ages added next to theirs (docs/UISpec/Settings.template.md).
+ * An added age can be younger or older than the user (decision of 15/11/2026).
  */
 object Generations {
     const val MIN_OTHER_AGE = 1
@@ -20,7 +20,7 @@ object Generations {
     /** Ages that can be added next to the user's in "Quel âge ?" and Equivalences (decision of 17/11/2026). */
     const val MAX_OTHER_PEOPLE = 3
 
-    /** Range of the ages picked on the fly on the Equivalences screen, for both people. */
+    /** Range of the ages picked on the fly in the banner, the user's and the added ones. */
     val AGE_RANGE: IntRange = MIN_OTHER_AGE..MAX_OTHER_AGE
 
     /** Below this gap, in either direction, the equivalences may not be meaningful: the screen warns (not forbidden). */
@@ -48,7 +48,7 @@ object Generations {
     fun birthFromAge(today: LocalDate, age: Int, anchor: LocalDate? = null): LocalDate {
         if (anchor == null) return today.minus(age, DateTimeUnit.YEAR)
         // The birthday of the year: on or before today, the person already had it.
-        val hadBirthday = today.month.number * 100 + today.day >= anchor.month.number * 100 + anchor.day
+        val hadBirthday = Ages.dayOfYearKey(today) >= Ages.dayOfYearKey(anchor)
         val year = today.year - age - if (hadBirthday) 0 else 1
         // 29 February outside a leap year: 28 February (the user's birth is the 1st of a month today).
         val day = if (anchor.month.number == 2 && anchor.day == 29 && !Ages.isLeapYear(year)) 28 else anchor.day

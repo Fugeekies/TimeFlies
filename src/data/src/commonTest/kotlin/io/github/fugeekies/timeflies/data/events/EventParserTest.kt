@@ -1,8 +1,8 @@
 package io.github.fugeekies.timeflies.data.events
 
+import io.github.fugeekies.timeflies.domain.model.EventGroup
 import io.github.fugeekies.timeflies.domain.model.EventKind
 import io.github.fugeekies.timeflies.domain.model.EventType
-import io.github.fugeekies.timeflies.domain.model.EventGroup
 import io.github.fugeekies.timeflies.domain.model.Region
 import kotlinx.datetime.LocalDate
 import kotlin.test.Test

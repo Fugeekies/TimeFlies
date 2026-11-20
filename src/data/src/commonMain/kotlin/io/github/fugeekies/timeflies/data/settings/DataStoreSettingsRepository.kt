@@ -2,10 +2,8 @@ package io.github.fugeekies.timeflies.data.settings
 
 import androidx.datastore.core.CorruptionException
 import androidx.datastore.core.DataStore
-import androidx.datastore.core.DataStoreFactory
-import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
 import androidx.datastore.core.okio.OkioSerializer
-import androidx.datastore.core.okio.OkioStorage
+import io.github.fugeekies.timeflies.data.jsonDataStore
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
 import kotlinx.coroutines.CoroutineScope
@@ -36,18 +34,7 @@ class DataStoreSettingsRepository(
     onCorruption: (Throwable) -> Unit = {},
 ) : SettingsRepository {
 
-    private val store: DataStore<SettingsDto> = run {
-        val storage = OkioStorage(fileSystem, SettingsSerializer, producePath = { file })
-        val corruptionHandler = ReplaceFileCorruptionHandler<SettingsDto> { error ->
-            onCorruption(error)
-            SettingsDto()
-        }
-        if (scope == null) {
-            DataStoreFactory.create(storage, corruptionHandler)
-        } else {
-            DataStoreFactory.create(storage, corruptionHandler, scope = scope)
-        }
-    }
+    private val store: DataStore<SettingsDto> = jsonDataStore(fileSystem, file, SettingsSerializer, scope, onCorruption)
 
     override val settings: Flow<Settings> = store.data.map { it.toDomain() }.distinctUntilChanged()
 
