@@ -35,17 +35,7 @@ class MainActivity : ComponentActivity() {
         app.scope.launch { graph.releaseUpdates.checkIfDue() }
         setContent {
             App(
-                getDailyShock = graph.getDailyShock,
-                getEquivalences = graph.getEquivalences,
-                getEventAges = graph.getEventAges,
-                searchEvents = graph.searchEvents,
-                observeSettings = graph.observeSettings,
-                updateSettings = graph.updateSettings,
-                completeOnboarding = graph.completeOnboarding,
-                countEvents = graph.countEvents,
-                getEventGroups = graph.getEventGroups,
-                personalEvents = graph.personalEvents,
-                clock = graph.clock,
+                useCases = graph.useCases,
                 debugTools = graph.debugTools,
                 appVersion = BuildConfig.RELEASE_VERSION,
                 releaseUpdates = graph.releaseUpdates,

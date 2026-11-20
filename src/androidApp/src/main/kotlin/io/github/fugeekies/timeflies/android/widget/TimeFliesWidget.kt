@@ -46,7 +46,6 @@ import androidx.glance.state.PreferencesGlanceStateDefinition
 import androidx.glance.text.FontWeight
 import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
-import androidx.glance.unit.ColorProvider as FixedColorProvider
 import co.touchlab.kermit.Logger
 import io.github.fugeekies.timeflies.android.MainActivity
 import io.github.fugeekies.timeflies.android.TimeFliesApplication
@@ -54,12 +53,13 @@ import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.ui.text.AppLocale
 import io.github.fugeekies.timeflies.ui.text.WidgetContent
-import io.github.fugeekies.timeflies.ui.text.apply
 import io.github.fugeekies.timeflies.ui.text.WidgetSheet
 import io.github.fugeekies.timeflies.ui.text.WidgetTexts
+import io.github.fugeekies.timeflies.ui.text.apply
 import io.github.fugeekies.timeflies.ui.theme.WidgetPalette
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
+import androidx.glance.unit.ColorProvider as FixedColorProvider
 
 /**
  * The home screen widget (docs/UISpec/AndroidWidget.template.md): the same "coup de vieux" as the Today screen,

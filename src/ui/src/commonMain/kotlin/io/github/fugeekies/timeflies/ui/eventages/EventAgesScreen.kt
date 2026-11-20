@@ -1,11 +1,10 @@
 package io.github.fugeekies.timeflies.ui.eventages
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,20 +31,18 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.Region
-import io.github.fugeekies.timeflies.ui.equivalences.CenteredText
+import io.github.fugeekies.timeflies.ui.components.CenteredText
+import io.github.fugeekies.timeflies.ui.components.Message
+import io.github.fugeekies.timeflies.ui.components.ScreenTitle
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsBanner
-import io.github.fugeekies.timeflies.ui.equivalences.Message
 import io.github.fugeekies.timeflies.ui.equivalences.Person
 import io.github.fugeekies.timeflies.ui.equivalences.PersonIcon
-import io.github.fugeekies.timeflies.ui.equivalences.ScreenTitle
 import io.github.fugeekies.timeflies.ui.equivalences.ThemesFilter
 import io.github.fugeekies.timeflies.ui.equivalences.color
 import io.github.fugeekies.timeflies.ui.equivalences.spokenName
@@ -65,6 +62,7 @@ import io.github.fugeekies.timeflies.ui.resources.open_settings
 import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.kindLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import io.github.fugeekies.timeflies.ui.text.signedYearsText
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.accent

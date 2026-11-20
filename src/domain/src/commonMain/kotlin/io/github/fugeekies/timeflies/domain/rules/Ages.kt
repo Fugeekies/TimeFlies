@@ -12,9 +12,12 @@ object Ages {
      */
     fun age(birth: LocalDate, at: LocalDate): Int {
         if (at < birth) return -age(at, birth) - 1
-        val beforeBirthday = at.month.number * 100 + at.day < birth.month.number * 100 + birth.day
+        val beforeBirthday = dayOfYearKey(at) < dayOfYearKey(birth)
         return at.year - birth.year - if (beforeBirthday) 1 else 0
     }
+
+    /** Month and day as one comparable number (1105 for 5 November): whether a birthday has passed in a year. */
+    internal fun dayOfYearKey(date: LocalDate): Int = date.month.number * 100 + date.day
 
     /**
      * How old the person born on [birth] was on [at]: before the birth, a negative age in completed years, as on the

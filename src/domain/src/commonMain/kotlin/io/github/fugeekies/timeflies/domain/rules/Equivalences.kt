@@ -22,7 +22,13 @@ object Equivalences {
         eventDate.plus(fromBirth.daysUntil(toBirth), DateTimeUnit.DAY)
 
     /** An event counts from 1 year old (decision of 13/11/2026): younger ones are neither paired nor shown. */
-    fun isOldEnough(date: LocalDate, today: LocalDate): Boolean = date <= today.minus(1, DateTimeUnit.YEAR)
+    fun isOldEnough(date: LocalDate, today: LocalDate): Boolean = date <= latestOldEnough(today)
+
+    /** The most recent date an event may have on [today] to be shown: a year ago, to the day. */
+    fun latestOldEnough(today: LocalDate): LocalDate = today.minus(1, DateTimeUnit.YEAR)
+
+    /** The start of the date ranges that mean "since the beginning". */
+    val EARLIEST: LocalDate = LocalDate(1, 1, 1)
 
     /** First and last dates a candidate may have around [target]. */
     fun window(target: LocalDate): ClosedRange<LocalDate> =

@@ -7,8 +7,8 @@ import androidx.compose.ui.LocalSystemTheme
 import androidx.compose.ui.SystemTheme
 import androidx.compose.ui.graphics.toAwtImage
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.ComposeUiTest
+import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
@@ -18,12 +18,11 @@ import androidx.compose.ui.unit.Density
 import io.github.fugeekies.timeflies.data.events.JsonEventRepository
 import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
+import io.github.fugeekies.timeflies.domain.model.PersonalEvent
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
-import io.github.fugeekies.timeflies.domain.port.SettingsRepository
-import io.github.fugeekies.timeflies.domain.model.PersonalEvent
 import io.github.fugeekies.timeflies.domain.port.PersonalEventRepository
-import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
+import io.github.fugeekies.timeflies.domain.port.SettingsRepository
 import io.github.fugeekies.timeflies.domain.usecase.CompleteOnboarding
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetDailyShock
@@ -31,9 +30,11 @@ import io.github.fugeekies.timeflies.domain.usecase.GetEquivalences
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
 import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.App
+import io.github.fugeekies.timeflies.ui.AppUseCases
 import io.github.fugeekies.timeflies.ui.readResourceFile
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.first
@@ -126,17 +127,19 @@ private fun session(output: File, frame: Frame, style: DisplayStyle, steps: Sess
             // Light, whatever the theme of the PC that renders them (the VHS stays dark).
             CompositionLocalProvider(LocalDensity provides Density(frame.density), LocalSystemTheme provides SystemTheme.Light) {
                 App(
-                    getDailyShock = GetDailyShock(events, clock),
-                    getEquivalences = GetEquivalences(events, clock),
-                    getEventAges = GetEventAges(),
-                    searchEvents = SearchEvents(events, clock),
-                    observeSettings = ObserveSettings(settings),
-                    updateSettings = UpdateSettings(settings, clock),
-                    completeOnboarding = CompleteOnboarding(settings, clock),
-                    countEvents = CountEvents(events),
-                    getEventGroups = GetEventGroups(events),
-                    personalEvents = PersonalEvents(NoPersonalEvents, clock),
-                    clock = clock,
+                    AppUseCases(
+                        getDailyShock = GetDailyShock(events, clock),
+                        getEquivalences = GetEquivalences(events, clock),
+                        getEventAges = GetEventAges(),
+                        searchEvents = SearchEvents(events, clock),
+                        observeSettings = ObserveSettings(settings),
+                        updateSettings = UpdateSettings(settings, clock),
+                        completeOnboarding = CompleteOnboarding(settings, clock),
+                        countEvents = CountEvents(events),
+                        getEventGroups = GetEventGroups(events),
+                        personalEvents = PersonalEvents(NoPersonalEvents, clock),
+                        clock = clock,
+                    ),
                 )
             }
         }

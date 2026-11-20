@@ -3,10 +3,12 @@ package io.github.fugeekies.timeflies.ui.equivalences
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.touchlab.kermit.Logger
+import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.dayChanges
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -70,6 +72,7 @@ data class GenerationsUiState(
  */
 abstract class GenerationsViewModel(
     private val observeSettings: ObserveSettings,
+    private val updateSettings: UpdateSettings,
     protected val clock: Clock,
     private val temporaryAges: TemporaryAgesStore,
 ) : ViewModel() {
@@ -164,6 +167,17 @@ abstract class GenerationsViewModel(
 
     /** "Choisir des âges" without a birth: a temporary age for the user (35, the mock-ups' example). */
     fun startTemporaryAges() = change { it.copy(user = it.user ?: _generations.value?.userAge ?: DEFAULT_TEMPORARY_USER_AGE) }
+
+    /** Ticks or unticks a theme, saved at once: one choice for Equivalences and "Quel âge ?" (decision of 18/11/2026). */
+    fun setFamily(family: Family, checked: Boolean) {
+        val current = _generations.value?.settings?.equivalenceFamilies ?: return
+        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) current + family else current - family) }
+    }
+
+    /** "Tout cocher" or "Tout décocher". */
+    fun setAllFamilies(checked: Boolean) {
+        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.THEMES.toSet() else emptySet()) }
+    }
 
     /** "Revenir à mes réglages": the user's age comes from the settings again; the added ages stay. */
     fun clearTemporaryAges() {

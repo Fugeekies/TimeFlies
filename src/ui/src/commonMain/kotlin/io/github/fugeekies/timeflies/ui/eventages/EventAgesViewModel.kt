@@ -1,22 +1,22 @@
 package io.github.fugeekies.timeflies.ui.eventages
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.lifecycle.viewModelScope
 import io.github.fugeekies.timeflies.domain.model.Event
 import io.github.fugeekies.timeflies.domain.model.EventAges
 import io.github.fugeekies.timeflies.domain.model.Family
+import io.github.fugeekies.timeflies.domain.model.PersonalEvent
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.usecase.GetEventAges
-import io.github.fugeekies.timeflies.domain.model.PersonalEvent
-import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
+import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsUiState
 import io.github.fugeekies.timeflies.ui.equivalences.GenerationsViewModel
 import io.github.fugeekies.timeflies.ui.equivalences.TemporaryAgesStore
-import kotlinx.coroutines.CancellationException
+import io.github.fugeekies.timeflies.ui.recoverFailures
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -55,10 +55,10 @@ class EventAgesViewModel(
     private val getEventAges: GetEventAges,
     private val personalEvents: PersonalEvents,
     observeSettings: ObserveSettings,
-    private val updateSettings: UpdateSettings,
+    updateSettings: UpdateSettings,
     clock: Clock,
     temporaryAges: TemporaryAgesStore,
-) : GenerationsViewModel(observeSettings, clock, temporaryAges) {
+) : GenerationsViewModel(observeSettings, updateSettings, clock, temporaryAges) {
 
     private val _state = MutableStateFlow(EventAgesUiState())
     val state: StateFlow<EventAgesUiState> = _state.asStateFlow()
@@ -108,28 +108,17 @@ class EventAgesViewModel(
         }
     }
 
-    private suspend fun <T> runCatchingLogged(block: suspend () -> T): T? = try {
-        block()
-    } catch (e: CancellationException) {
-        throw e
-    } catch (e: Exception) {
-        log.e(e) { "Events could not be read" }
-        null
-    }
+    private inline fun <T> runCatchingLogged(block: () -> T): T? = recoverFailures(
+        onFailure = { e ->
+            log.e(e) { "Events could not be read" }
+            null
+        },
+        block = block,
+    )
 
     fun onQueryChange(text: String) {
         query.value = text
         _state.update { it.copy(query = text) }
-    }
-
-    /** Ticks or unticks a theme, saved at once and shared with Equivalences. */
-    fun setFamily(family: Family, checked: Boolean) {
-        val current = _state.value.families
-        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) current + family else current - family) }
-    }
-
-    fun setAllFamilies(checked: Boolean) {
-        viewModelScope.launch { updateSettings.setEquivalenceFamilies(if (checked) Family.THEMES.toSet() else emptySet()) }
     }
 
     /** Opened from a card of Today or Equivalences: the event's title in the search, so its line shows at once. */

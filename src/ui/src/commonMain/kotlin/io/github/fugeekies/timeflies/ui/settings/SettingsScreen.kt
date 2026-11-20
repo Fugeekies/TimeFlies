@@ -1,5 +1,6 @@
 package io.github.fugeekies.timeflies.ui.settings
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,41 +11,47 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
-import io.github.fugeekies.timeflies.ui.text.nativeName
-import io.github.fugeekies.timeflies.ui.resources.settings_language
-import io.github.fugeekies.timeflies.ui.resources.cancel
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.selection.selectable
-import androidx.compose.foundation.selection.selectableGroup
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.RadioButton
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import io.github.fugeekies.timeflies.domain.model.Region
+import io.github.fugeekies.timeflies.domain.model.WindowsSettings
+import io.github.fugeekies.timeflies.domain.rules.MorningNotification
+import io.github.fugeekies.timeflies.ui.WidgetPinning
+import io.github.fugeekies.timeflies.ui.components.BirthFields
+import io.github.fugeekies.timeflies.ui.components.ChoiceField
+import io.github.fugeekies.timeflies.ui.components.Eyebrow
+import io.github.fugeekies.timeflies.ui.components.Panel
+import io.github.fugeekies.timeflies.ui.components.ScreenTitle
+import io.github.fugeekies.timeflies.ui.events.EventFilterTree
+import io.github.fugeekies.timeflies.ui.personal.PersonalEventsPanel
+import io.github.fugeekies.timeflies.ui.personal.PersonalEventsViewModel
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.about_dev_version
 import io.github.fugeekies.timeflies.ui.resources.about_event_count
@@ -57,6 +64,7 @@ import io.github.fugeekies.timeflies.ui.resources.about_report
 import io.github.fugeekies.timeflies.ui.resources.about_source
 import io.github.fugeekies.timeflies.ui.resources.about_third_party
 import io.github.fugeekies.timeflies.ui.resources.about_version
+import io.github.fugeekies.timeflies.ui.resources.cancel
 import io.github.fugeekies.timeflies.ui.resources.months
 import io.github.fugeekies.timeflies.ui.resources.region_fr
 import io.github.fugeekies.timeflies.ui.resources.settings_about
@@ -66,43 +74,31 @@ import io.github.fugeekies.timeflies.ui.resources.settings_birth_unset_help
 import io.github.fugeekies.timeflies.ui.resources.settings_birth_value
 import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.resources.settings_display
+import io.github.fugeekies.timeflies.ui.resources.settings_events
+import io.github.fugeekies.timeflies.ui.resources.settings_events_help
 import io.github.fugeekies.timeflies.ui.resources.settings_generations
-import io.github.fugeekies.timeflies.ui.resources.settings_region
-import io.github.fugeekies.timeflies.ui.resources.settings_style
-import io.github.fugeekies.timeflies.ui.resources.settings_style_help
-import io.github.fugeekies.timeflies.ui.resources.settings_title
-import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.resources.settings_keep_in_tray
+import io.github.fugeekies.timeflies.ui.resources.settings_language
 import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup
 import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup_help
 import io.github.fugeekies.timeflies.ui.resources.settings_morning_notification
 import io.github.fugeekies.timeflies.ui.resources.settings_notification_time
-import io.github.fugeekies.timeflies.ui.resources.settings_windows
-import io.github.fugeekies.timeflies.ui.resources.settings_events
-import io.github.fugeekies.timeflies.ui.resources.settings_events_help
-import io.github.fugeekies.timeflies.ui.events.EventFilterTree
-import io.github.fugeekies.timeflies.ui.personal.PersonalEventsPanel
-import io.github.fugeekies.timeflies.ui.personal.PersonalEventsViewModel
 import io.github.fugeekies.timeflies.ui.resources.settings_personal
+import io.github.fugeekies.timeflies.ui.resources.settings_region
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check_help
+import io.github.fugeekies.timeflies.ui.resources.settings_style
+import io.github.fugeekies.timeflies.ui.resources.settings_style_help
+import io.github.fugeekies.timeflies.ui.resources.settings_title
 import io.github.fugeekies.timeflies.ui.resources.settings_widget
 import io.github.fugeekies.timeflies.ui.resources.settings_widget_add
 import io.github.fugeekies.timeflies.ui.resources.settings_widget_manual
 import io.github.fugeekies.timeflies.ui.resources.settings_widget_text
-import io.github.fugeekies.timeflies.ui.WidgetPinning
-import androidx.compose.material3.Button
-import io.github.fugeekies.timeflies.domain.model.WindowsSettings
-import io.github.fugeekies.timeflies.domain.rules.MorningNotification
-import io.github.fugeekies.timeflies.ui.components.BirthFields
-import io.github.fugeekies.timeflies.ui.components.ChoiceField
-import androidx.compose.foundation.selection.toggleable
-import androidx.compose.material3.Checkbox
-import androidx.compose.ui.semantics.Role
-import kotlinx.datetime.LocalTime
+import io.github.fugeekies.timeflies.ui.resources.settings_windows
+import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.text.capitalized
-import io.github.fugeekies.timeflies.ui.theme.LocalStyle
-import io.github.fugeekies.timeflies.ui.theme.accent
+import io.github.fugeekies.timeflies.ui.text.nativeName
+import kotlinx.datetime.LocalTime
 import kotlinx.datetime.number
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
@@ -141,12 +137,7 @@ fun SettingsScreen(
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Text(
-                stringResource(Res.string.settings_title),
-                style = LocalStyle.current.accent(34f),
-                color = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.semantics { heading() },
-            )
+            ScreenTitle(stringResource(Res.string.settings_title))
             Eyebrow(stringResource(Res.string.settings_generations))
             Panel { GenerationsPanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.settings_display))
@@ -175,28 +166,6 @@ fun SettingsScreen(
             Eyebrow(stringResource(Res.string.settings_about))
             Panel { AboutPanel(appVersion, current.eventCount, current.releaseCheck, viewModel::onReleaseCheck) }
         }
-    }
-}
-
-@Composable
-private fun Eyebrow(text: String) {
-    Text(
-        text,
-        style = MaterialTheme.typography.labelSmall,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(top = 8.dp).semantics { heading() },
-    )
-}
-
-@Composable
-private fun Panel(content: @Composable ColumnScope.() -> Unit) {
-    Surface(
-        color = MaterialTheme.colorScheme.surface,
-        shape = RoundedCornerShape(6.dp),
-        shadowElevation = 1.dp,
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) { content() }
     }
 }
 

@@ -27,9 +27,9 @@ import io.github.fugeekies.timeflies.ui.text.apply
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jetbrains.skia.Image
@@ -154,17 +154,7 @@ fun main(args: Array<String>) {
                 }
             }
             App(
-                getDailyShock = graph.getDailyShock,
-                getEquivalences = graph.getEquivalences,
-                getEventAges = graph.getEventAges,
-                searchEvents = graph.searchEvents,
-                observeSettings = graph.observeSettings,
-                updateSettings = graph.updateSettings,
-                completeOnboarding = graph.completeOnboarding,
-                countEvents = graph.countEvents,
-                getEventGroups = graph.getEventGroups,
-                personalEvents = graph.personalEvents,
-                clock = graph.clock,
+                useCases = graph.useCases,
                 debugTools = graph.debugTools,
                 // Given by the release build only (desktopApp/build.gradle.kts); null says "version de développement".
                 appVersion = System.getProperty("timeflies.version"),

@@ -2,33 +2,33 @@ package io.github.fugeekies.timeflies.ui.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
-import io.github.fugeekies.timeflies.ui.text.AppLocale
+import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.model.Settings
 import io.github.fugeekies.timeflies.domain.model.WindowsSettings
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.domain.usecase.CountEvents
 import io.github.fugeekies.timeflies.domain.usecase.GetEventGroups
-import io.github.fugeekies.timeflies.ui.events.FilterNode
-import io.github.fugeekies.timeflies.ui.events.filterTree
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.map
 import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
-import kotlinx.coroutines.CancellationException
+import io.github.fugeekies.timeflies.ui.dayChanges
+import io.github.fugeekies.timeflies.ui.events.FilterNode
+import io.github.fugeekies.timeflies.ui.events.filterTree
+import io.github.fugeekies.timeflies.ui.recoverFailures
+import io.github.fugeekies.timeflies.ui.text.AppLocale
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import io.github.fugeekies.timeflies.ui.dayChanges
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.Month
 import kotlinx.datetime.LocalTime
+import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 
 /**
@@ -60,7 +60,7 @@ data class SettingsUiState(
 
 /**
  * State of the Settings screen (docs/UISpec/Settings.template.md). Every change is saved at once.
- * The young person's age is not set here but on the Equivalences screen (decision of 15/11/2026).
+ * The other ages are not set here but in the banner of "Quel âge ?" and Equivalences (decision of 17/11/2026).
  */
 class SettingsViewModel(
     observeSettings: ObserveSettings,
@@ -91,23 +91,11 @@ class SettingsViewModel(
         // Counted again when the event filter changes: "192 événements" follows what is shown.
         viewModelScope.launch {
             observeSettings().map { it.excludedEventGroups }.distinctUntilChanged().collect {
-                eventCount.value = try {
-                    countEvents()
-                } catch (e: CancellationException) {
-                    throw e
-                } catch (e: Exception) {
-                    null
-                }
+                eventCount.value = recoverFailures(onFailure = { null }) { countEvents() }
             }
         }
         viewModelScope.launch {
-            eventGroups.value = try {
-                filterTree(getEventGroups())
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                emptyList()
-            }
+            eventGroups.value = recoverFailures(onFailure = { emptyList() }) { filterTree(getEventGroups()) }
         }
     }
 
@@ -167,12 +155,12 @@ class SettingsViewModel(
         viewModelScope.launch { updateSettings.setExcludedEventGroups(paths) }
     }
 
-    /** Settings › Affichage: applied at once to the whole app and to the widget. */
     /** Settings › Affichage › Langue: saved, then applied by the app root to every text. */
     fun onLanguage(language: AppLanguage) {
         viewModelScope.launch { updateSettings.setLanguage(language) }
     }
 
+    /** Settings › Affichage: applied at once to the whole app and to the widget. */
     fun onDisplayStyle(style: DisplayStyle) {
         viewModelScope.launch { updateSettings.setDisplayStyle(style) }
     }

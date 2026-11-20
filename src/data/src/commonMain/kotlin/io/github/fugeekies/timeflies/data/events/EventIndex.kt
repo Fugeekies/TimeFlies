@@ -23,23 +23,17 @@ internal class EventIndex(events: List<Event>, private val region: Region) {
     fun ofType(type: EventType, from: LocalDate, to: LocalDate): List<Event> {
         val sorted = byType[type] ?: return emptyList()
         if (from > to) return emptyList()
-        val start = lowerBound(sorted, from)
-        val result = mutableListOf<Event>()
-        for (i in start until sorted.size) {
-            val event = sorted[i]
-            if (event.dateFor(region) > to) break
-            result += event
-        }
-        return result
+        // A copy: the callers walk it in hot loops, where a view of the index would cost an indirection at each read.
+        return sorted.subList(firstIndex(sorted) { it >= from }, firstIndex(sorted) { it > to }).toList()
     }
 
-    /** First position whose date is on or after [date]. */
-    private fun lowerBound(sorted: List<Event>, date: LocalDate): Int {
+    /** First position whose date meets [after], or the size when none does; the list is sorted by date. */
+    private inline fun firstIndex(sorted: List<Event>, after: (LocalDate) -> Boolean): Int {
         var low = 0
         var high = sorted.size
         while (low < high) {
             val mid = (low + high) ushr 1
-            if (sorted[mid].dateFor(region) < date) low = mid + 1 else high = mid
+            if (after(sorted[mid].dateFor(region))) high = mid else low = mid + 1
         }
         return low
     }

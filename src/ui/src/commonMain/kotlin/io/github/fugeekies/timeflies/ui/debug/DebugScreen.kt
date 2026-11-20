@@ -12,15 +12,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -30,15 +28,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.semantics.heading
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.fugeekies.timeflies.domain.model.Family
 import io.github.fugeekies.timeflies.domain.rules.Generations
 import io.github.fugeekies.timeflies.ui.components.BirthFields
+import io.github.fugeekies.timeflies.ui.components.Eyebrow
+import io.github.fugeekies.timeflies.ui.components.Panel
+import io.github.fugeekies.timeflies.ui.components.ScreenTitle
 import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.debug_apply
 import io.github.fugeekies.timeflies.ui.resources.debug_current_region
@@ -55,14 +52,13 @@ import io.github.fugeekies.timeflies.ui.resources.debug_next_empty_day
 import io.github.fugeekies.timeflies.ui.resources.debug_previous_day
 import io.github.fugeekies.timeflies.ui.resources.debug_redo_onboarding
 import io.github.fugeekies.timeflies.ui.resources.debug_refresh
+import io.github.fugeekies.timeflies.ui.resources.debug_refresh_widget
+import io.github.fugeekies.timeflies.ui.resources.debug_refresh_widget_note
 import io.github.fugeekies.timeflies.ui.resources.debug_region_input
 import io.github.fugeekies.timeflies.ui.resources.debug_reset_settings
+import io.github.fugeekies.timeflies.ui.resources.debug_send_notification
+import io.github.fugeekies.timeflies.ui.resources.debug_send_notification_note
 import io.github.fugeekies.timeflies.ui.resources.debug_settings
-import io.github.fugeekies.timeflies.ui.resources.debug_theme
-import io.github.fugeekies.timeflies.ui.resources.debug_theme_dark
-import io.github.fugeekies.timeflies.ui.resources.debug_theme_light
-import io.github.fugeekies.timeflies.ui.resources.debug_theme_note
-import io.github.fugeekies.timeflies.ui.resources.debug_theme_system
 import io.github.fugeekies.timeflies.ui.resources.debug_stats
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_count
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_empty_days
@@ -70,19 +66,18 @@ import io.github.fugeekies.timeflies.ui.resources.debug_stats_family
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_poor_types
 import io.github.fugeekies.timeflies.ui.resources.debug_stats_rejections
 import io.github.fugeekies.timeflies.ui.resources.debug_system_clock
+import io.github.fugeekies.timeflies.ui.resources.debug_theme
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_dark
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_light
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_note
+import io.github.fugeekies.timeflies.ui.resources.debug_theme_system
 import io.github.fugeekies.timeflies.ui.resources.debug_title
-import io.github.fugeekies.timeflies.ui.resources.debug_send_notification
-import io.github.fugeekies.timeflies.ui.resources.debug_send_notification_note
-import io.github.fugeekies.timeflies.ui.resources.debug_windows
-import io.github.fugeekies.timeflies.ui.resources.debug_refresh_widget
-import io.github.fugeekies.timeflies.ui.resources.debug_refresh_widget_note
 import io.github.fugeekies.timeflies.ui.resources.debug_widget
+import io.github.fugeekies.timeflies.ui.resources.debug_windows
 import io.github.fugeekies.timeflies.ui.resources.settings_birth
 import io.github.fugeekies.timeflies.ui.resources.settings_clear
 import io.github.fugeekies.timeflies.ui.text.familyLabel
 import io.github.fugeekies.timeflies.ui.text.rememberDateTexts
-import io.github.fugeekies.timeflies.ui.theme.LocalStyle
-import io.github.fugeekies.timeflies.ui.theme.accent
 import io.github.fugeekies.timeflies.ui.theme.ThemeMode
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.Month
@@ -112,12 +107,7 @@ fun DebugScreen(
             Modifier.widthIn(max = 640.dp).fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 16.dp, vertical = 12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Text(
-                stringResource(Res.string.debug_title),
-                style = LocalStyle.current.accent(34f),
-                color = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.semantics { heading() },
-            )
+            ScreenTitle(stringResource(Res.string.debug_title))
             Eyebrow(stringResource(Res.string.debug_date))
             Panel { DatePanel(current, viewModel) }
             Eyebrow(stringResource(Res.string.debug_settings))
@@ -168,18 +158,6 @@ private fun ThemePanel(themeMode: ThemeMode, onThemeMode: (ThemeMode) -> Unit) {
         }
     }
     Text(stringResource(Res.string.debug_theme_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-}
-
-@Composable
-private fun Eyebrow(text: String) {
-    Text(text, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp).semantics { heading() })
-}
-
-@Composable
-private fun Panel(content: @Composable ColumnScope.() -> Unit) {
-    Surface(color = MaterialTheme.colorScheme.surface, shape = RoundedCornerShape(6.dp), shadowElevation = 1.dp, modifier = Modifier.fillMaxWidth()) {
-        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) { content() }
-    }
 }
 
 @OptIn(ExperimentalLayoutApi::class)

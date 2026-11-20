@@ -1,6 +1,5 @@
 package io.github.fugeekies.timeflies.ui.vhs
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -39,6 +38,7 @@ import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.vhs_label_date
 import io.github.fugeekies.timeflies.ui.resources.vhs_rec
 import io.github.fugeekies.timeflies.ui.resources.years_count
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle
 import io.github.fugeekies.timeflies.ui.theme.VhsCyan
 import io.github.fugeekies.timeflies.ui.theme.VhsLabel

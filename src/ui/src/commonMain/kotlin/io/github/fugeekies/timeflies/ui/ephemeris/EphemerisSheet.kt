@@ -1,6 +1,5 @@
 package io.github.fugeekies.timeflies.ui.ephemeris
 
-import io.github.fugeekies.timeflies.ui.text.shownTitle
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.tween
@@ -43,6 +42,7 @@ import io.github.fugeekies.timeflies.ui.resources.Res
 import io.github.fugeekies.timeflies.ui.resources.round_chip
 import io.github.fugeekies.timeflies.ui.resources.years_unit
 import io.github.fugeekies.timeflies.ui.text.familyLabel
+import io.github.fugeekies.timeflies.ui.text.shownTitle
 import io.github.fugeekies.timeflies.ui.theme.EphemerisRingDark
 import io.github.fugeekies.timeflies.ui.theme.EphemerisRingLight
 import io.github.fugeekies.timeflies.ui.theme.LocalStyle

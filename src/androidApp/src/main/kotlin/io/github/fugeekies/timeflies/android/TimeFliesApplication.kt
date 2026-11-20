@@ -6,6 +6,7 @@ import androidx.work.ExistingWorkPolicy
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.Severity
 import io.github.fugeekies.timeflies.android.widget.WidgetUpdates
+import io.github.fugeekies.timeflies.ui.recoverFailures
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -53,11 +54,8 @@ class TimeFliesApplication : Application() {
             // The user's own events too (decision of 19/11/2026): a wedding added today shows at once.
             combine(shown, graph.personalEvents.observe(), graph.clock.manualChanges().onStart { emit(Unit) }) { _, _, _ -> }
                 .collect {
-                    try {
+                    recoverFailures(onFailure = { e -> Logger.withTag("Widget").e(e) { "Widget could not be updated" } }) {
                         WidgetUpdates.refresh(this@TimeFliesApplication)
-                    } catch (e: Exception) {
-                        if (e is kotlinx.coroutines.CancellationException) throw e
-                        Logger.withTag("Widget").e(e) { "Widget could not be updated" }
                     }
                 }
         }

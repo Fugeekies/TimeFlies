@@ -17,9 +17,10 @@ import kotlinx.serialization.Serializable
  * Version 2 (milestone 7) renamed `youngAge` to `otherAge` (the other person can be older, decision of 15/11/2026).
  * Version 3 (milestone 10) added the Windows panel ([windows]); version 4 the check for new versions ([releaseCheck]);
  * version 5 the event filter ([excludedEventGroups]); version 6 the display style ([style], decision of 17/11/2026).
- * An older file gets their defaults. Version 7 (milestone 16, decision of 17/11/2026) dropped `otherAge` and `equivalencesReversed`: the other
- * ages are forgotten when the app closes and the user's column comes first; an older file still reads, those
- * fields being ignored. Version 8 (milestone 17) added the language of the interface ([language]).
+ * An older file gets their defaults. Version 7 (milestone 16, decision of 17/11/2026) dropped `otherAge` and
+ * `equivalencesReversed`: the other ages are forgotten when the app closes and the user's column comes first; an older
+ * file still reads, those fields being ignored. Version 8 (milestone 17) added the language of the interface
+ * ([language]).
  */
 @Serializable
 internal data class SettingsDto(
@@ -46,7 +47,7 @@ internal data class SettingsDto(
         birth = if (birthYear != null && birthMonth in 1..12) YearMonth(birthYear, Month(birthMonth!!)) else null,
         region = Region.of(region) ?: Region.FRANCE,
         onboardingDone = onboardingDone,
-        equivalenceFamilies = equivalenceFamilies?.mapNotNull(::familyOf)?.toSet() ?: Family.THEMES.toSet(),
+        equivalenceFamilies = equivalenceFamilies?.mapNotNull { id -> Family.THEMES.firstOrNull { it.id == id } }?.toSet() ?: Family.THEMES.toSet(),
         windows = windows.toDomain(),
         releaseCheck = releaseCheck.toDomain(),
         excludedEventGroups = excludedEventGroups.toSet(),
@@ -62,17 +63,13 @@ internal data class SettingsDto(
             birthMonth = settings.birth?.month?.number,
             region = settings.region.code,
             onboardingDone = settings.onboardingDone,
-            equivalenceFamilies = Family.THEMES.filter { it in settings.equivalenceFamilies }.map(::idOf),
+            // "series", "cinema", "games-tech"…: the folder names of the base, readable by hand.
+            equivalenceFamilies = Family.THEMES.filter { it in settings.equivalenceFamilies }.map { it.id },
             windows = WindowsSettingsDto.of(settings.windows),
             releaseCheck = ReleaseCheckDto.of(settings.releaseCheck),
             excludedEventGroups = settings.excludedEventGroups.sorted(),
             style = settings.displayStyle.id,
             language = settings.language?.tag,
         )
-
-        /** "series", "cinema", "games-tech"…: the name of the family's event file, readable by hand. */
-        private fun idOf(family: Family): String = family.id
-
-        private fun familyOf(id: String): Family? = Family.THEMES.firstOrNull { idOf(it) == id }
     }
 }

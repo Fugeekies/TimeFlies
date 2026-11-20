@@ -33,6 +33,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Revue du code : les cas d'usage des écrans passent en un seul lot (`AppUseCases`) au lieu de quinze paramètres de `App()` ; les petits composables communs (titre d'écran, message, panneau) sont dans `ui/components` au lieu d'être recopiés d'écran en écran ; une seule fabrique DataStore pour `settings.json` et `personal-events.json` ; une seule aide `recoverFailures` remplace les `try`/`catch` recopiés dans les ViewModels ; imports triés et inutiles retirés. Aucun changement visible.
 - Sport sans répétition : le premier et le dernier Ballon d'or d'un même joueur seulement (Messi 2009 et 2023, Cristiano Ronaldo 2008 et 2017), et seulement le record du monde actuel de chaque discipline (Beamon, Lavillenie, Kipchoge et le premier record de Duplantis retirés).
 - Polaroïd : retour au cadre blanc cassé de la maquette pour tous les événements, sans couleur ni chiffre de décennie ; la photo garde la couleur du thème et le dessin du type. Widget Android aussi.
 - Premier lancement revu : titre « Ça ne nous rajeunit pas », texte qui explique l'application, une ligne claire par thème (contenu et nombre d'événements, case à cocher) ; plus de choix par pays sur cet écran, il reste dans Réglages › Événements.
@@ -48,6 +49,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Performance
 
+- Recherche de « Quel âge ? » : les titres sont mis en minuscules et sans accents une seule fois, et non plus à chaque lettre tapée ; 20 recherches sur la vraie base en 5,5 ms au lieu de 20,5 ms (`docs/benchmarks/performance-2026-11-20-revue.md`). Les listes d'Équivalences et de « Quel âge ? » demandent directement les événements d'au moins un an au lieu de tout lire puis filtrer.
 - APK Android réduite par R8 : 2,7 Mo au lieu de 11 Mo.
 - Widget Android : recalculé seulement quand ce qu'il affiche change (naissance, région, premier lancement, style), plus à chaque réglage d'Équivalences.
 
