@@ -28,6 +28,51 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q106440 : pas de date française."
   },
   {
+    "id": "film-operation-tonnerre-1965",
+    "date": "1965-12-17",
+    "title": {
+      "fr": "Opération Tonnerre",
+      "en": "Thunderball",
+      "de": "James Bond 007 – Feuerball",
+      "it": "Agente 007 - Thunderball",
+      "es": "Operación Trueno"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Opération_Tonnerre",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q107724 : année seulement."
+  },
+  {
+    "id": "film-l-espion-qui-m-aimait-1977",
+    "date": "1977-10-12",
+    "title": {
+      "fr": "L'Espion qui m'aimait",
+      "en": "The Spy Who Loved Me",
+      "de": "James Bond 007 – Der Spion, der mich liebte",
+      "it": "La spia che mi amava",
+      "es": "La espía que me amó"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'Espion_qui_m'aimait",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q320423 : année seulement."
+  },
+  {
+    "id": "film-goldeneye-1995",
+    "date": "1995-12-20",
+    "title": {
+      "fr": "GoldenEye",
+      "en": "GoldenEye",
+      "de": "James Bond 007 – GoldenEye",
+      "it": "GoldenEye",
+      "es": "GoldenEye"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/GoldenEye",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q19089 : année seulement."
+  },
+  {
     "id": "film-casino-royale-2006",
     "date": "2006-11-22",
     "title": {
@@ -38,5 +83,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Casino_Royale_(film,_2006)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q151904 : pas de date française."
+  },
+  {
+    "id": "film-mourir-peut-attendre-2021",
+    "date": "2021-10-06",
+    "title": {
+      "fr": "Mourir peut attendre",
+      "en": "No Time to Die",
+      "de": "James Bond 007: Keine Zeit zu sterben",
+      "it": "No Time to Die",
+      "es": "Sin tiempo para morir"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mourir_peut_attendre",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q21534241 : pas de date française."
   }
 ]

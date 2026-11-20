@@ -33,6 +33,17 @@
     "note": "Sortie selon l'infobox. Wikidata Q920654 : même date."
   },
   {
+    "id": "album-la-vie-avant-la-mort-rohff-2001",
+    "date": "2001-09-25",
+    "title": {
+      "fr": "La Vie avant la mort (Rohff)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/La_Vie_avant_la_mort",
+    "note": "Sortie selon l'infobox. Wikidata Q958969 : donne une autre date : 2001-09-24."
+  },
+  {
     "id": "album-temps-mort-2002",
     "date": "2002-01-22",
     "title": {
@@ -44,6 +55,28 @@
     "note": "Sortie originale selon l'infobox. Wikidata Q288411 : même date."
   },
   {
+    "id": "album-pantheon-booba-2004",
+    "date": "2004-05-11",
+    "title": {
+      "fr": "Panthéon (Booba)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Panthéon_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q3362490 : donne une autre date : 2004-05-15."
+  },
+  {
+    "id": "album-dans-ma-bulle-diam-s-2006",
+    "date": "2006-02-06",
+    "title": {
+      "fr": "Dans ma bulle (Diam's)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dans_ma_bulle",
+    "note": "Sortie selon l'infobox. Wikidata Q3015551 : même date."
+  },
+  {
     "id": "album-ouest-side-2006",
     "date": "2006-02-13",
     "title": {
@@ -53,6 +86,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Ouest_Side",
     "note": "Sortie originale selon le texte de l'article. Wikidata Q3358099 : donne une autre date : 2006-02-18."
+  },
+  {
+    "id": "album-l-apogee-sexion-d-assaut-2012",
+    "date": "2012-03-05",
+    "title": {
+      "fr": "L'Apogée (Sexion d'Assaut)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/L'Apogée",
+    "note": "Sortie selon l'infobox. Wikidata Q3202158 : même date."
+  },
+  {
+    "id": "album-subliminal-maitre-gims-2013",
+    "date": "2013-05-20",
+    "title": {
+      "fr": "Subliminal (Maître Gims)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Subliminal_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q3502571 : même date."
   },
   {
     "id": "album-or-noir-2013",
@@ -97,6 +152,39 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Dans_la_l%C3%A9gende",
     "note": "Sortie selon l'infobox. Wikidata Q28494258 : même date en France."
+  },
+  {
+    "id": "album-jvlivs-sch-2018",
+    "date": "2018-10-19",
+    "title": {
+      "fr": "JVLIVS (SCH)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/JVLIVS",
+    "note": "Sortie selon l'infobox. Wikidata Q60833377 : même date."
+  },
+  {
+    "id": "album-jeannine-lomepal-2018",
+    "date": "2018-12-07",
+    "title": {
+      "fr": "Jeannine (Lomepal)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jeannine",
+    "note": "Sortie selon l'infobox. Wikidata Q60835108 : même date."
+  },
+  {
+    "id": "album-destin-ninho-2019",
+    "date": "2019-03-22",
+    "title": {
+      "fr": "Destin (Ninho)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Destin_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q86661715 : même date."
   },
   {
     "id": "album-deux-freres-2019",

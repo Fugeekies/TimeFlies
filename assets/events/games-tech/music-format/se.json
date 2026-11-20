@@ -1,0 +1,17 @@
+[
+  {
+    "id": "tech-spotify-2006",
+    "date": "2006-04-23",
+    "title": {
+      "fr": "Spotify",
+      "en": "Spotify",
+      "de": "Spotify",
+      "it": "Spotify",
+      "es": "Spotify"
+    },
+    "kind": "product-launch",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Spotify",
+    "note": "Sortie selon l'infobox. Wikidata Q689141 : même date."
+  }
+]

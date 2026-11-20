@@ -1,0 +1,16 @@
+[
+  {
+    "id": "tech-steam-deck-2022",
+    "date": "2022-02-25",
+    "title": {
+      "fr": "Steam Deck",
+      "en": "Steam Deck",
+      "de": "Steam Deck",
+      "es": "Steam Deck"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Steam_Deck",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q107542665 : même date."
+  }
+]

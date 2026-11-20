@@ -55,6 +55,21 @@
     "note": "Première version selon l'infobox. Wikidata Q209330 : même date."
   },
   {
+    "id": "tech-twitch-2011",
+    "date": "2011-06-06",
+    "title": {
+      "fr": "Twitch",
+      "en": "Twitch",
+      "de": "Twitch",
+      "it": "Twitch",
+      "es": "Twitch"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Twitch",
+    "note": "Sortie selon l'infobox. Wikidata Q4555537 : même date."
+  },
+  {
     "id": "tech-google-plus-2011",
     "date": "2011-06-28",
     "title": {

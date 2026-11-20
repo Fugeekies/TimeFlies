@@ -33,6 +33,17 @@
     "note": "Sortie de la version de Whitney Houston selon la seconde infobox de l'article. Wikidata Q666856 : année de la version originale seulement (1974)."
   },
   {
+    "id": "single-hero-mariah-carey-1993",
+    "date": "1993-10-19",
+    "title": {
+      "fr": "Hero (Mariah Carey)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hero_(chanson_de_Mariah_Carey)",
+    "note": "Sortie selon l'infobox. Wikidata Q933978 : année seulement."
+  },
+  {
     "id": "single-believe-1998",
     "date": "1998-10-19",
     "title": {
@@ -97,6 +108,28 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Halo_(chanson_de_Beyoncé)",
     "note": "Sortie originale selon le texte de l'article. Wikidata Q147734 : même date."
+  },
+  {
+    "id": "single-bad-romance-lady-gaga-2009",
+    "date": "2009-10-26",
+    "title": {
+      "fr": "Bad Romance (Lady Gaga)"
+    },
+    "kind": "single-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bad_Romance",
+    "note": "Sortie selon l'infobox. Wikidata Q153064 : donne une autre date : 2009-10-25."
+  },
+  {
+    "id": "single-shake-it-off-taylor-swift-2014",
+    "date": "2014-08-18",
+    "title": {
+      "fr": "Shake It Off (Taylor Swift)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Shake_It_Off_(chanson_de_Taylor_Swift)",
+    "note": "Sortie selon l'infobox. Wikidata Q17544624 : donne une autre date : 2014-08-19."
   },
   {
     "id": "single-flowers-2023",

@@ -20,5 +20,38 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Peter_Tosh",
     "note": "Date de décès selon le texte de l'article. Wikidata Q273049 : même date."
+  },
+  {
+    "id": "death-gregory-isaacs-2010",
+    "date": "2010-10-25",
+    "title": {
+      "fr": "Gregory Isaacs"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Gregory_Isaacs",
+    "note": "Date de décès selon l'infobox. Wikidata Q440898 : même date."
+  },
+  {
+    "id": "death-toots-hibbert-2020",
+    "date": "2020-09-11",
+    "title": {
+      "fr": "Toots Hibbert"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Toots_Hibbert",
+    "note": "Date de décès selon l'infobox. Wikidata Q360348 : même date."
+  },
+  {
+    "id": "death-bunny-wailer-2021",
+    "date": "2021-03-02",
+    "title": {
+      "fr": "Bunny Wailer"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Bunny_Wailer",
+    "note": "Date de décès selon l'infobox. Wikidata Q441203 : même date."
   }
 ]

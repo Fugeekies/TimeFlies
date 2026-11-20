@@ -45,6 +45,36 @@
     "note": "Bombe d'Hiroshima le 6 août 1945 selon le texte de l'article. Wikidata Q488 : même date."
   },
   {
+    "id": "history-adoption-de-la-declaration-universelle-des-droits-de-l-homme-1948",
+    "date": "1948-12-10",
+    "title": {
+      "fr": "Adoption de la Déclaration universelle des droits de l'homme",
+      "en": "Adoption of the Universal Declaration of Human Rights",
+      "de": "Verabschiedung der Allgemeinen Erklärung der Menschenrechte",
+      "it": "Adozione della Dichiarazione universale dei diritti umani",
+      "es": "Adopción de la Declaración Universal de los Derechos Humanos"
+    },
+    "kind": "history",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Déclaration_universelle_des_droits_de_l'homme",
+    "note": "Date selon le texte de l'article. Wikidata Q7813 : même date."
+  },
+  {
+    "id": "history-signature-du-traite-de-rome-1957",
+    "date": "1957-03-25",
+    "title": {
+      "fr": "Signature du traité de Rome",
+      "en": "Signing of the Treaty of Rome",
+      "de": "Unterzeichnung der Römischen Verträge",
+      "it": "Firma dei trattati di Roma",
+      "es": "Firma del Tratado de Roma"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Traité_de_Rome",
+    "note": "Date selon le texte de l'article. Wikidata Q414432 : pas de date."
+  },
+  {
     "id": "history-accords-de-schengen-1985",
     "date": "1985-06-14",
     "title": {

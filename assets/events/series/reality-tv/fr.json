@@ -66,6 +66,18 @@
     "note": "Première diffusion selon l'infobox. Wikidata Q256520 : même date."
   },
   {
+    "id": "series-la-ferme-celebrites-2004",
+    "date": "2004-04-10",
+    "title": {
+      "fr": "La Ferme Célébrités",
+      "en": "La Ferme Célébrités"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Ferme_Célébrités",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3208791 : même date."
+  },
+  {
     "id": "series-pekin-express-2006",
     "date": "2006-01-15",
     "title": {
@@ -77,6 +89,18 @@
     "note": "Première diffusion selon l'infobox. Wikidata Q18046240 : même date."
   },
   {
+    "id": "series-la-france-a-un-incroyable-talent-2006",
+    "date": "2006-11-02",
+    "title": {
+      "fr": "La France a un incroyable talent",
+      "en": "La France a un incroyable talent"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_France_a_un_incroyable_talent",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q15146712 : même date."
+  },
+  {
     "id": "series-secret-story-2007",
     "date": "2007-06-23",
     "title": {
@@ -86,6 +110,17 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Secret_Story",
     "note": "Première diffusion selon l'infobox. Wikidata Q13419757 : même date."
+  },
+  {
+    "id": "series-un-diner-presque-parfait-2008",
+    "date": "2008-02-11",
+    "title": {
+      "fr": "Un dîner presque parfait"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Un_dîner_presque_parfait",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q17176466 : pas de date."
   },
   {
     "id": "series-masterchef-2010",
@@ -100,6 +135,17 @@
     "note": "Première diffusion selon l'infobox. Wikidata Q4114407 : même date."
   },
   {
+    "id": "series-qui-veut-epouser-mon-fils-2010",
+    "date": "2010-10-29",
+    "title": {
+      "fr": "Qui veut épouser mon fils ?"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qui_veut_épouser_mon_fils_?",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3414432 : pas de date."
+  },
+  {
     "id": "series-les-anges-de-la-telerealite-2011",
     "date": "2011-01-10",
     "title": {
@@ -110,6 +156,29 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Anges_(émission_de_téléréalité)",
     "note": "Première diffusion selon l'infobox. Wikidata Q219061 : année seulement."
+  },
+  {
+    "id": "series-danse-avec-les-stars-2011",
+    "date": "2011-02-12",
+    "title": {
+      "fr": "Danse avec les stars",
+      "en": "Danse avec les stars"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Danse_avec_les_stars",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1660463 : même date."
+  },
+  {
+    "id": "series-cauchemar-en-cuisine-2011",
+    "date": "2011-04-18",
+    "title": {
+      "fr": "Cauchemar en cuisine"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Cauchemar_en_cuisine_(France)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q16023912 : même date."
   },
   {
     "id": "series-les-ch-tis-2011",
@@ -144,5 +213,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Marseillais",
     "note": "Première diffusion selon l'infobox. Wikidata Q3233728 : pas de date."
+  },
+  {
+    "id": "series-les-reines-du-shopping-2013",
+    "date": "2013-06-10",
+    "title": {
+      "fr": "Les Reines du shopping",
+      "en": "Les Reines du shopping"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Reines_du_shopping",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q16655284 : pas de date."
+  },
+  {
+    "id": "series-maries-au-premier-regard-2016",
+    "date": "2016-11-07",
+    "title": {
+      "fr": "Mariés au premier regard"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mariés_au_premier_regard_(France)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q109044435 : pas de date."
   }
 ]

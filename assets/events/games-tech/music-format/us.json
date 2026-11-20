@@ -1,5 +1,20 @@
 [
   {
+    "id": "tech-winamp-1997",
+    "date": "1997-04-21",
+    "title": {
+      "fr": "Winamp",
+      "en": "Winamp",
+      "de": "Winamp",
+      "it": "Winamp",
+      "es": "Winamp"
+    },
+    "kind": "product-launch",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Winamp",
+    "note": "Sortie selon l'infobox. Wikidata Q193493 : même date."
+  },
+  {
     "id": "tech-napster-1999",
     "date": "1999-06-01",
     "title": {

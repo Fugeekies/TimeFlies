@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-signature-des-accords-d-oslo-1993",
+    "date": "1993-09-13",
+    "title": {
+      "fr": "Signature des accords d'Oslo",
+      "en": "Signing of the Oslo Accords",
+      "de": "Unterzeichnung des Oslo-Abkommens",
+      "it": "Firma degli accordi di Oslo",
+      "es": "Firma de los Acuerdos de Oslo"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Accords_d'Oslo",
+    "note": "Date selon le texte de l'article. Wikidata Q17013132 : même date."
+  },
+  {
     "id": "history-mort-de-yasser-arafat-2004",
     "date": "2004-11-11",
     "title": {

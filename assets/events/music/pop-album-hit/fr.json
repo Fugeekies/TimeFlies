@@ -1,5 +1,16 @@
 [
   {
+    "id": "album-histoire-de-melody-nelson-serge-gainsbourg-1971",
+    "date": "1971-03-24",
+    "title": {
+      "fr": "Histoire de Melody Nelson (Serge Gainsbourg)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Histoire_de_Melody_Nelson",
+    "note": "Sortie selon l'infobox. Wikidata Q1036873 : même date."
+  },
+  {
     "id": "album-entre-gris-clair-et-gris-fonce-1987",
     "date": "1987-11-05",
     "title": {
@@ -22,6 +33,17 @@
     "note": "Sortie originale selon le texte de l'article. Wikidata Q1952903 : même date."
   },
   {
+    "id": "album-moon-safari-air-1998",
+    "date": "1998-01-19",
+    "title": {
+      "fr": "Moon Safari (Air)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Moon_Safari",
+    "note": "Sortie selon l'infobox. Wikidata Q1091500 : donne une autre date : 1998-01-16."
+  },
+  {
     "id": "album-random-access-memories-2013",
     "date": "2013-05-17",
     "title": {
@@ -31,5 +53,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Random_Access_Memories",
     "note": "Première sortie selon l'infobox. Wikidata Q8119033 : même date pour les premiers pays (2013-05-20 en France)."
+  },
+  {
+    "id": "album-chaleur-humaine-christine-and-the-queens-2014",
+    "date": "2014-06-02",
+    "title": {
+      "fr": "Chaleur humaine (Christine and the Queens)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Chaleur_humaine",
+    "note": "Sortie selon l'infobox. Wikidata Q19508203 : même date."
   }
 ]

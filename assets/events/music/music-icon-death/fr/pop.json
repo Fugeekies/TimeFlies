@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-mort-shuman-1991",
+    "date": "1991-11-02",
+    "title": {
+      "fr": "Mort Shuman"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mort_Shuman",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q1353559 : même date."
+  },
+  {
     "id": "death-michel-berger-1992",
     "date": "1992-08-02",
     "title": {
@@ -9,5 +20,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Michel_Berger",
     "note": "Date de décès selon le texte de l'article. Wikidata Q543613 : même date."
+  },
+  {
+    "id": "death-christophe-2020",
+    "date": "2020-04-16",
+    "title": {
+      "fr": "Christophe"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Christophe_(chanteur)",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q1086279 : même date."
   }
 ]

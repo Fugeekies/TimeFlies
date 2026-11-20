@@ -1,0 +1,13 @@
+[
+  {
+    "id": "album-the-joshua-tree-u2-1987",
+    "date": "1987-03-09",
+    "title": {
+      "fr": "The Joshua Tree (U2)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Joshua_Tree",
+    "note": "Sortie selon l'infobox. Wikidata Q152873 : même date."
+  }
+]

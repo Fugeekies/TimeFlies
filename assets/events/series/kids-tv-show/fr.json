@@ -45,6 +45,31 @@
     "note": "Première diffusion selon l'infobox. Wikidata Q3454642 : pas de date."
   },
   {
+    "id": "series-le-club-des-cinq-1978",
+    "date": "1978-07-03",
+    "title": {
+      "fr": "Le Club des Cinq",
+      "en": "The Famous Five",
+      "de": "Fünf Freunde",
+      "it": "La banda dei cinque"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Club_des_Cinq_(série_télévisée,_1978)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1481583 : même date."
+  },
+  {
+    "id": "series-croque-vacances-1980",
+    "date": "1980-02-11",
+    "title": {
+      "fr": "Croque-vacances"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Croque-vacances",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3003728 : pas de date."
+  },
+  {
     "id": "series-le-village-dans-les-nuages-1982",
     "date": "1982-09-13",
     "title": {
@@ -122,5 +147,29 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/KD2A",
     "note": "Première diffusion selon l'infobox. Wikidata Q2931184 : pas de date."
+  },
+  {
+    "id": "series-tfou-2007",
+    "date": "2007-01-01",
+    "title": {
+      "fr": "Tfou",
+      "en": "TFOU",
+      "es": "Tfou"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tfou",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3512139 : même date."
+  },
+  {
+    "id": "series-ludo-2009",
+    "date": "2009-12-19",
+    "title": {
+      "fr": "Ludo"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ludo_(émission_de_télévision)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3266078 : pas de date."
   }
 ]

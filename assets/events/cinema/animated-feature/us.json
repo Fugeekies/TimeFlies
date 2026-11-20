@@ -102,6 +102,36 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q19090 : pas de date française."
   },
   {
+    "id": "film-rox-et-rouky-1981",
+    "date": "1981-11-25",
+    "title": {
+      "fr": "Rox et Rouky",
+      "en": "The Fox and the Hound",
+      "de": "Cap und Capper",
+      "it": "Red e Toby nemiciamici",
+      "es": "The Fox and the Hound"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Rox_et_Rouky",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q40302 : pas de date française."
+  },
+  {
+    "id": "film-oliver-et-compagnie-1989",
+    "date": "1989-11-29",
+    "title": {
+      "fr": "Oliver et Compagnie",
+      "en": "Oliver & Company",
+      "de": "Oliver & Co.",
+      "it": "Oliver & Company",
+      "es": "Oliver y su pandilla"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Oliver_et_Compagnie",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q216929 : pas de date française."
+  },
+  {
     "id": "film-la-petite-sirene-1990",
     "date": "1990-11-28",
     "title": {
@@ -186,6 +216,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q171048 : pas de date française."
   },
   {
+    "id": "film-le-bossu-de-notre-dame-1996",
+    "date": "1996-11-27",
+    "title": {
+      "fr": "Le Bossu de Notre-Dame",
+      "en": "The Hunchback of Notre Dame",
+      "de": "Der Glöckner von Notre Dame",
+      "it": "Il gobbo di Notre Dame",
+      "es": "El jorobado de Notre Dame"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Bossu_de_Notre-Dame",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q213787 : pas de date française."
+  },
+  {
     "id": "film-hercule-1997",
     "date": "1997-11-26",
     "title": {
@@ -212,6 +257,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q537407 : pas de date française."
   },
   {
+    "id": "film-1-001-pattes-1999",
+    "date": "1999-02-10",
+    "title": {
+      "fr": "1 001 Pattes",
+      "en": "A Bug's Life",
+      "de": "Das große Krabbeln",
+      "it": "A Bug's Life - Megaminimondo",
+      "es": "Bichos: Una aventura en miniatura"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/1_001_Pattes",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q216153 : année seulement."
+  },
+  {
     "id": "film-tarzan-1999",
     "date": "1999-06-18",
     "title": {
@@ -222,6 +282,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Tarzan_(film,_1999)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q208696 : pas de date française."
+  },
+  {
+    "id": "film-toy-story-2-2000",
+    "date": "2000-02-02",
+    "title": {
+      "fr": "Toy Story 2",
+      "en": "Toy Story 2",
+      "de": "Toy Story 2",
+      "it": "Toy Story 2 - Woody e Buzz alla riscossa",
+      "es": "Toy Story 2"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Toy_Story_2",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q187266 : pas de date française."
+  },
+  {
+    "id": "film-kuzco-l-empereur-megalo-2001",
+    "date": "2001-03-28",
+    "title": {
+      "fr": "Kuzco, l'empereur mégalo",
+      "en": "The Emperor's New Groove",
+      "de": "Ein Königreich für ein Lama",
+      "it": "Le follie dell'imperatore",
+      "es": "The Emperor's New Groove"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Kuzco,_l'empereur_mégalo",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q223163 : pas de date française."
   },
   {
     "id": "film-shrek-2001",
@@ -296,6 +386,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q132863 : même date."
   },
   {
+    "id": "film-shrek-2-2004",
+    "date": "2004-06-23",
+    "title": {
+      "fr": "Shrek 2",
+      "en": "Shrek 2",
+      "de": "Shrek 2 – Der tollkühne Held kehrt zurück",
+      "it": "Shrek 2",
+      "es": "Shrek 2"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Shrek_2",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q485983 : même date."
+  },
+  {
     "id": "film-les-indestructibles-2004",
     "date": "2004-11-24",
     "title": {
@@ -320,6 +425,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Madagascar_(film)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q174555 : pas de date française."
+  },
+  {
+    "id": "film-cars-2006",
+    "date": "2006-06-14",
+    "title": {
+      "fr": "Cars",
+      "en": "Cars",
+      "de": "Cars",
+      "it": "Cars - Motori ruggenti",
+      "es": "Cars"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Cars_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q182153 : pas de date française."
   },
   {
     "id": "film-ratatouille-2007",
@@ -403,6 +523,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q188439 : même date."
   },
   {
+    "id": "film-les-mondes-de-ralph-2012",
+    "date": "2012-12-05",
+    "title": {
+      "fr": "Les Mondes de Ralph",
+      "en": "Wreck-It Ralph",
+      "de": "Ralph reichts",
+      "it": "Ralph Spaccatutto",
+      "es": "Wreck-It Ralph"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Mondes_de_Ralph",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q28891 : pas de date française."
+  },
+  {
     "id": "film-la-reine-des-neiges-2013",
     "date": "2013-12-04",
     "title": {
@@ -416,6 +551,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/La_Reine_des_neiges_(film,_2013)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q246283 : même date."
+  },
+  {
+    "id": "film-les-nouveaux-heros-2015",
+    "date": "2015-02-11",
+    "title": {
+      "fr": "Les Nouveaux Héros",
+      "en": "Big Hero 6",
+      "de": "Baymax – Riesiges Robowabohu",
+      "it": "Big Hero 6",
+      "es": "Big Hero 6"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Nouveaux_Héros",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q13091172 : même date."
   },
   {
     "id": "film-vice-versa-2015",
@@ -463,6 +613,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q15270647 : même date."
   },
   {
+    "id": "film-le-monde-de-dory-2016",
+    "date": "2016-06-22",
+    "title": {
+      "fr": "Le Monde de Dory",
+      "en": "Finding Dory",
+      "de": "Findet Dorie",
+      "it": "Alla ricerca di Dory",
+      "es": "Buscando a Dory"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Monde_de_Dory",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q9321426 : pas de date française."
+  },
+  {
     "id": "film-vaiana-la-legende-du-bout-du-monde-2016",
     "date": "2016-11-30",
     "title": {
@@ -505,6 +670,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q15632949 : pas de date française."
   },
   {
+    "id": "film-la-reine-des-neiges-2-2019",
+    "date": "2019-11-20",
+    "title": {
+      "fr": "La Reine des neiges 2",
+      "en": "Frozen 2",
+      "de": "Die Eiskönigin II",
+      "it": "Frozen II - Il segreto di Arendelle",
+      "es": "Frozen II"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Reine_des_neiges_2",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q24733929 : pas de date française."
+  },
+  {
     "id": "film-encanto-la-fantastique-famille-madrigal-2021",
     "date": "2021-11-24",
     "title": {
@@ -518,5 +698,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Encanto_:_La_Fantastique_Famille_Madrigal",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q103372692 : même date."
+  },
+  {
+    "id": "film-vice-versa-2-2024",
+    "date": "2024-06-19",
+    "title": {
+      "fr": "Vice-versa 2",
+      "en": "Inside Out 2",
+      "de": "Alles steht Kopf 2",
+      "it": "Inside Out 2",
+      "es": "Inside Out 2"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Vice-versa_2",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q113877606 : donne une autre date : 2024-06-14."
   }
 ]

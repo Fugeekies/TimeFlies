@@ -29,6 +29,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1637108 : donne une autre date : 1981-10-10."
   },
   {
+    "id": "series-il-etait-une-fois-l-espace-1982",
+    "date": "1982-10-02",
+    "title": {
+      "fr": "Il était une fois… l'Espace",
+      "en": "Once Upon a Time... Space",
+      "de": "Es war einmal … der Weltraum",
+      "it": "Ai confini dell'universo",
+      "es": "Érase una vez... el espacio"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Il_était_une_fois…_l'Espace",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1366626 : même date."
+  },
+  {
     "id": "series-les-mondes-engloutis-1985",
     "date": "1985-09-24",
     "title": {
@@ -41,6 +56,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Mondes_engloutis",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q785165 : donne une autre date : 1985-09-17."
+  },
+  {
+    "id": "series-clementine-1985",
+    "date": "1985-10-02",
+    "title": {
+      "fr": "Clémentine",
+      "en": "Clémentine",
+      "it": "Clémentine",
+      "es": "La burbuja azul"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Clémentine_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2594360 : année seulement."
   },
   {
     "id": "series-il-etait-une-fois-la-vie-1986",
@@ -56,6 +85,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Il_était_une_fois…_la_Vie",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q913207 : même date."
+  },
+  {
+    "id": "series-les-zinzins-de-l-espace-1997",
+    "date": "1997-09-06",
+    "title": {
+      "fr": "Les Zinzins de l'espace",
+      "en": "Space Goofs",
+      "de": "Ein Heim für Aliens",
+      "it": "Space Goofs - Vicini, troppo vicini!",
+      "es": "Space Goofs"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Zinzins_de_l'espace",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2487639 : même date."
   },
   {
     "id": "series-titeuf-2001",
@@ -90,5 +134,19 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Code_Lyoko",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q637190 : même date."
+  },
+  {
+    "id": "series-wakfu-2008",
+    "date": "2008-10-30",
+    "title": {
+      "fr": "Wakfu",
+      "en": "Wakfu",
+      "it": "Wakfu",
+      "es": "Wakfu"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Wakfu_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2760256 : même date."
   }
 ]

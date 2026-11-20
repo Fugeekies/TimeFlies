@@ -15,6 +15,21 @@
     "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q378627 : année seulement."
   },
   {
+    "id": "sport-grand-chelem-stan-wawrinka-ao-2014",
+    "date": "2014-01-26",
+    "title": {
+      "fr": "Premier titre du Grand Chelem de Stan Wawrinka (Open d'Australie 2014)",
+      "en": "Stan Wawrinka's first Grand Slam title (2014 Australian Open)",
+      "de": "Erster Grand-Slam-Titel von Stan Wawrinka (Australian Open 2014)",
+      "it": "Primo titolo del Grande Slam di Stan Wawrinka (Australian Open 2014)",
+      "es": "Primer título de Grand Slam de Stan Wawrinka (Abierto de Australia 2014)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Simple_messieurs_de_l'Open_d'Australie_2014",
+    "note": "Date de la finale et vainqueur selon l'infobox. Wikidata Q4630192 : année seulement."
+  },
+  {
     "id": "sport-grand-chelem-roger-federer-ao-2018",
     "date": "2018-01-28",
     "title": {

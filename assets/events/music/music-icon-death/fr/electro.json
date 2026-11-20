@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-dj-mehdi-2011",
+    "date": "2011-09-13",
+    "title": {
+      "fr": "DJ Mehdi"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/DJ_Mehdi",
+    "note": "Date de décès selon l'infobox. Wikidata Q1154202 : même date."
+  },
+  {
+    "id": "death-philippe-zdar-2019",
+    "date": "2019-06-19",
+    "title": {
+      "fr": "Philippe Zdar"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Philippe_Zdar",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q64736693 : même date."
+  }
+]

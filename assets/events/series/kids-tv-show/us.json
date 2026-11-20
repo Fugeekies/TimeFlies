@@ -13,6 +13,51 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q155629 : même date."
   },
   {
+    "id": "series-le-muppet-show-1976",
+    "date": "1976-09-05",
+    "title": {
+      "fr": "Le Muppet Show",
+      "en": "The Muppet Show",
+      "de": "Die Muppet Show",
+      "it": "Muppet Show",
+      "es": "El show de los Muppets"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Le_Muppet_Show",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2120540 : même date."
+  },
+  {
+    "id": "series-fraggle-rock-1983",
+    "date": "1983-01-10",
+    "title": {
+      "fr": "Fraggle Rock",
+      "en": "Fraggle Rock",
+      "de": "Die Fraggles",
+      "it": "Fraggle Rock",
+      "es": "Fraggle Rock"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Fraggle_Rock",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1212572 : même date."
+  },
+  {
+    "id": "series-barney-1992",
+    "date": "1992-04-06",
+    "title": {
+      "fr": "Barney",
+      "en": "Barney & Friends",
+      "de": "Barney und seine Freunde",
+      "it": "Barney",
+      "es": "Barney y sus amigos"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Barney_(émission_de_télévision)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q213588 : même date."
+  },
+  {
     "id": "series-power-rangers-1993",
     "date": "1993-08-28",
     "title": {
@@ -22,5 +67,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Power_Rangers",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q333156 : même date."
+  },
+  {
+    "id": "series-jeu-de-bleue-1996",
+    "date": "1996-09-08",
+    "title": {
+      "fr": "Jeu de Bleue",
+      "en": "Blue's Clues",
+      "de": "Blue’s Clues – Blau und schlau",
+      "it": "Blue's Clues",
+      "es": "Las pistas de Blue"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jeu_de_Bleue",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q886105 : même date."
   }
 ]

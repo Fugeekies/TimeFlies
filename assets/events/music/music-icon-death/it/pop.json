@@ -1,5 +1,38 @@
 [
   {
+    "id": "death-domenico-modugno-1994",
+    "date": "1994-08-06",
+    "title": {
+      "fr": "Domenico Modugno"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Domenico_Modugno",
+    "note": "Date de décès selon l'infobox. Wikidata Q201392 : même date."
+  },
+  {
+    "id": "death-lucio-battisti-1998",
+    "date": "1998-09-09",
+    "title": {
+      "fr": "Lucio Battisti"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Lucio_Battisti",
+    "note": "Date de décès selon l'infobox. Wikidata Q469154 : même date."
+  },
+  {
+    "id": "death-fabrizio-de-andre-1999",
+    "date": "1999-01-11",
+    "title": {
+      "fr": "Fabrizio De André"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fabrizio_De_André",
+    "note": "Date de décès selon l'infobox. Wikidata Q25106 : même date."
+  },
+  {
     "id": "death-lucio-dalla-2012",
     "date": "2012-03-01",
     "title": {
@@ -11,6 +44,28 @@
     "note": "Date de décès selon le texte de l'article. Wikidata Q167546 : même date."
   },
   {
+    "id": "death-pino-daniele-2015",
+    "date": "2015-01-04",
+    "title": {
+      "fr": "Pino Daniele"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pino_Daniele",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q736851 : même date."
+  },
+  {
+    "id": "death-franco-battiato-2021",
+    "date": "2021-05-18",
+    "title": {
+      "fr": "Franco Battiato"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Franco_Battiato",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q25147 : même date."
+  },
+  {
     "id": "death-raffaella-carra-2021",
     "date": "2021-07-05",
     "title": {
@@ -20,5 +75,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Raffaella_Carrà",
     "note": "Date de décès selon le texte de l'article. Wikidata Q266640 : même date."
+  },
+  {
+    "id": "death-toto-cutugno-2023",
+    "date": "2023-08-22",
+    "title": {
+      "fr": "Toto Cutugno"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Toto_Cutugno",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q487473 : même date."
   }
 ]

@@ -55,6 +55,50 @@
     "note": "Date de décès de l'infobox. Wikidata Q303 : même date."
   },
   {
+    "id": "death-roy-orbison-1988",
+    "date": "1988-12-06",
+    "title": {
+      "fr": "Roy Orbison"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Roy_Orbison",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q188426 : même date."
+  },
+  {
+    "id": "death-jerry-garcia-1995",
+    "date": "1995-08-09",
+    "title": {
+      "fr": "Jerry Garcia"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jerry_Garcia",
+    "note": "Date de décès selon l'infobox. Wikidata Q312870 : même date."
+  },
+  {
+    "id": "death-joey-ramone-2001",
+    "date": "2001-04-15",
+    "title": {
+      "fr": "Joey Ramone"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Joey_Ramone",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q312387 : même date."
+  },
+  {
+    "id": "death-layne-staley-2002",
+    "date": "2002-04-05",
+    "title": {
+      "fr": "Layne Staley"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Layne_Staley",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q309838 : même date."
+  },
+  {
     "id": "death-lou-reed-2013",
     "date": "2013-10-27",
     "title": {
@@ -64,6 +108,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Lou_Reed",
     "note": "Date de décès selon le texte de l'article. Wikidata Q189080 : même date."
+  },
+  {
+    "id": "death-glenn-frey-2016",
+    "date": "2016-01-18",
+    "title": {
+      "fr": "Glenn Frey"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Glenn_Frey",
+    "note": "Date de décès selon l'infobox. Wikidata Q472051 : même date."
+  },
+  {
+    "id": "death-chuck-berry-2017",
+    "date": "2017-03-18",
+    "title": {
+      "fr": "Chuck Berry"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Chuck_Berry",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q5921 : même date."
   },
   {
     "id": "death-chris-cornell-2017",
@@ -99,6 +165,28 @@
     "note": "Date de décès selon le texte de l'article. Wikidata Q311655 : même date."
   },
   {
+    "id": "death-fats-domino-2017",
+    "date": "2017-10-24",
+    "title": {
+      "fr": "Fats Domino"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fats_Domino",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q209586 : même date."
+  },
+  {
+    "id": "death-little-richard-2020",
+    "date": "2020-05-09",
+    "title": {
+      "fr": "Little Richard"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Little_Richard",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q82222 : même date."
+  },
+  {
     "id": "death-eddie-van-halen-2020",
     "date": "2020-10-06",
     "title": {
@@ -108,5 +196,38 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Eddie_Van_Halen",
     "note": "Date de décès selon le texte de l'article. Wikidata Q272012 : même date."
+  },
+  {
+    "id": "death-meat-loaf-2022",
+    "date": "2022-01-20",
+    "title": {
+      "fr": "Meat Loaf"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Meat_Loaf",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q152929 : même date."
+  },
+  {
+    "id": "death-taylor-hawkins-2022",
+    "date": "2022-03-25",
+    "title": {
+      "fr": "Taylor Hawkins"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Taylor_Hawkins",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q312395 : même date."
+  },
+  {
+    "id": "death-jerry-lee-lewis-2022",
+    "date": "2022-10-28",
+    "title": {
+      "fr": "Jerry Lee Lewis"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Jerry_Lee_Lewis",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q202729 : même date."
   }
 ]

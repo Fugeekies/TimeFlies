@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-marc-bolan-1977",
+    "date": "1977-09-16",
+    "title": {
+      "fr": "Marc Bolan"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Marc_Bolan",
+    "note": "Date de décès selon l'infobox. Wikidata Q287514 : même date."
+  },
+  {
     "id": "death-keith-moon-1978",
     "date": "1978-09-07",
     "title": {
@@ -9,6 +20,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Keith_Moon",
     "note": "Date de décès selon le texte de l'article. Wikidata Q211696 : même date."
+  },
+  {
+    "id": "death-sid-vicious-1979",
+    "date": "1979-02-02",
+    "title": {
+      "fr": "Sid Vicious"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sid_Vicious",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q47878 : même date."
+  },
+  {
+    "id": "death-ian-curtis-1980",
+    "date": "1980-05-18",
+    "title": {
+      "fr": "Ian Curtis"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ian_Curtis",
+    "note": "Date de décès selon l'infobox. Wikidata Q207867 : même date."
   },
   {
     "id": "death-john-bonham-1980",
@@ -44,6 +77,17 @@
     "note": "Date de décès de l'infobox. Wikidata Q15869 : même date."
   },
   {
+    "id": "death-john-entwistle-2002",
+    "date": "2002-06-27",
+    "title": {
+      "fr": "John Entwistle"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/John_Entwistle",
+    "note": "Date de décès selon l'infobox. Wikidata Q215835 : même date."
+  },
+  {
     "id": "death-joe-strummer-2002",
     "date": "2002-12-22",
     "title": {
@@ -53,6 +97,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Joe_Strummer",
     "note": "Date de décès selon le texte de l'article. Wikidata Q310052 : même date."
+  },
+  {
+    "id": "death-syd-barrett-2006",
+    "date": "2006-07-07",
+    "title": {
+      "fr": "Syd Barrett"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Syd_Barrett",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q173061 : même date."
+  },
+  {
+    "id": "death-joe-cocker-2014",
+    "date": "2014-12-22",
+    "title": {
+      "fr": "Joe Cocker"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Joe_Cocker",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q190076 : même date."
   },
   {
     "id": "death-lemmy-kilmister-2015",

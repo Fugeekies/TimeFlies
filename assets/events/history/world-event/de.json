@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-incendie-du-reichstag-1933",
+    "date": "1933-02-27",
+    "title": {
+      "fr": "Incendie du Reichstag",
+      "en": "Reichstag fire",
+      "de": "Reichstagsbrand",
+      "it": "Incendio del Reichstag",
+      "es": "Incendio del Reichstag"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Incendie_du_Reichstag",
+    "note": "Date selon le texte de l'article. Wikidata Q153992 : même date."
+  },
+  {
     "id": "history-catastrophe-du-hindenburg-1937",
     "date": "1937-05-06",
     "title": {

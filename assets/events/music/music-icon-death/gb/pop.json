@@ -1,5 +1,16 @@
 [
   {
+    "id": "death-dusty-springfield-1999",
+    "date": "1999-03-02",
+    "title": {
+      "fr": "Dusty Springfield"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dusty_Springfield",
+    "note": "Date de décès selon l'infobox. Wikidata Q219782 : même date."
+  },
+  {
     "id": "death-george-harrison-2001",
     "date": "2001-11-29",
     "title": {

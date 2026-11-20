@@ -144,6 +144,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q109331 : pas de date française."
   },
   {
+    "id": "film-retour-vers-le-futur-3-1990",
+    "date": "1990-07-18",
+    "title": {
+      "fr": "Retour vers le futur 3",
+      "en": "Back to the Future Part III",
+      "de": "Zurück in die Zukunft III",
+      "it": "Ritorno al futuro - Parte III",
+      "es": "Back to the Future Part III"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Retour_vers_le_futur_3",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q230552 : pas de date française."
+  },
+  {
     "id": "film-matrix-1999",
     "date": "1999-06-23",
     "title": {
@@ -216,6 +231,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q127367 : même date."
   },
   {
+    "id": "film-star-wars-episode-ii-l-attaque-des-clones-2002",
+    "date": "2002-05-17",
+    "title": {
+      "fr": "Star Wars, épisode II : L'Attaque des clones",
+      "en": "Star Wars: Episode II – Attack of the Clones",
+      "de": "Star Wars: Episode II – Angriff der Klonkrieger",
+      "it": "Star Wars - Episodio II - L'attacco dei cloni",
+      "es": "Star Wars: Episodio II - El ataque de los clones"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_épisode_II_:_L'Attaque_des_clones",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q181069 : même date."
+  },
+  {
     "id": "film-spider-man-2002",
     "date": "2002-06-12",
     "title": {
@@ -255,6 +285,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Le_Seigneur_des_anneaux_:_Les_Deux_Tours",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q164963 : même date."
+  },
+  {
+    "id": "film-matrix-reloaded-2003",
+    "date": "2003-05-16",
+    "title": {
+      "fr": "Matrix Reloaded",
+      "en": "The Matrix Reloaded",
+      "de": "Matrix Reloaded",
+      "it": "Matrix Reloaded",
+      "es": "The Matrix Reloaded"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Matrix_Reloaded",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q189600 : même date."
   },
   {
     "id": "film-pirates-des-caraibes-la-malediction-du-black-pearl-2003",
@@ -313,6 +358,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q190145 : même date."
   },
   {
+    "id": "film-star-wars-episode-iii-la-revanche-des-sith-2005",
+    "date": "2005-05-18",
+    "title": {
+      "fr": "Star Wars, épisode III : La Revanche des Sith",
+      "en": "Star Wars: Episode III – Revenge of the Sith",
+      "de": "Star Wars: Episode III – Die Rache der Sith",
+      "it": "Star Wars - Episodio III - La vendetta dei Sith",
+      "es": "Star Wars: Episodio III - La venganza de los Sith"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_épisode_III_:_La_Revanche_des_Sith",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q42051 : même date."
+  },
+  {
     "id": "film-harry-potter-et-la-coupe-de-feu-2005",
     "date": "2005-11-30",
     "title": {
@@ -328,6 +388,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102225 : même date."
   },
   {
+    "id": "film-pirates-des-caraibes-le-secret-du-coffre-maudit-2006",
+    "date": "2006-08-02",
+    "title": {
+      "fr": "Pirates des Caraïbes : Le Secret du coffre maudit",
+      "en": "Pirates of the Caribbean: Dead Man's Chest",
+      "de": "Pirates of the Caribbean – Fluch der Karibik 2",
+      "it": "Pirati dei Caraibi - La maledizione del forziere fantasma",
+      "es": "Pirates of the Caribbean: Dead Man's Chest"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pirates_des_Caraïbes_:_Le_Secret_du_coffre_maudit",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q161087 : même date."
+  },
+  {
     "id": "film-harry-potter-et-l-ordre-du-phenix-2007",
     "date": "2007-07-11",
     "title": {
@@ -341,6 +416,36 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Harry_Potter_et_l'Ordre_du_Phénix_(film)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q102235 : même date."
+  },
+  {
+    "id": "film-iron-man-2008",
+    "date": "2008-04-30",
+    "title": {
+      "fr": "Iron Man",
+      "en": "Iron Man",
+      "de": "Iron Man",
+      "it": "Iron Man",
+      "es": "Iron Man"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Iron_Man_(film,_2008)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q192724 : même date."
+  },
+  {
+    "id": "film-indiana-jones-et-le-royaume-du-crane-de-cristal-2008",
+    "date": "2008-05-21",
+    "title": {
+      "fr": "Indiana Jones et le Royaume du crâne de cristal",
+      "en": "Indiana Jones and the Kingdom of the Crystal Skull",
+      "de": "Indiana Jones und das Königreich des Kristallschädels",
+      "it": "Indiana Jones e il regno del teschio di cristallo",
+      "es": "Indiana Jones y el reino de la calavera de cristal"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Indiana_Jones_et_le_Royaume_du_crâne_de_cristal",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q182373 : même date."
   },
   {
     "id": "film-the-dark-knight-le-chevalier-noir-2008",
@@ -388,6 +493,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q161687 : même date."
   },
   {
+    "id": "film-twilight-chapitre-ii-tentation-2009",
+    "date": "2009-11-18",
+    "title": {
+      "fr": "Twilight, chapitre II : Tentation",
+      "en": "The Twilight Saga: New Moon",
+      "de": "New Moon – Biss zur Mittagsstunde",
+      "it": "The Twilight Saga: New Moon",
+      "es": "The Twilight Saga: New Moon"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Twilight,_chapitre_II_:_Tentation",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q116928 : même date."
+  },
+  {
     "id": "film-toy-story-3-2010",
     "date": "2010-07-14",
     "title": {
@@ -398,6 +518,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Toy_Story_3",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q187278 : même date."
+  },
+  {
+    "id": "film-mission-impossible-protocole-fantome-2011",
+    "date": "2011-12-14",
+    "title": {
+      "fr": "Mission impossible : Protocole Fantôme",
+      "en": "Mission: Impossible – Ghost Protocol",
+      "de": "Mission: Impossible – Phantom Protokoll",
+      "it": "Mission: Impossible - Protocollo fantasma",
+      "es": "Misión imposible: protocolo fantasma"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mission_impossible_:_Protocole_Fantôme",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q628154 : même date."
   },
   {
     "id": "film-hunger-games-2012",
@@ -429,6 +564,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q182218 : même date."
   },
   {
+    "id": "film-the-dark-knight-rises-2012",
+    "date": "2012-07-25",
+    "title": {
+      "fr": "The Dark Knight Rises",
+      "en": "The Dark Knight Rises",
+      "de": "The Dark Knight Rises",
+      "it": "Il cavaliere oscuro - Il ritorno",
+      "es": "The Dark Knight Rises"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Dark_Knight_Rises",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q189330 : même date."
+  },
+  {
     "id": "film-le-hobbit-un-voyage-inattendu-2012",
     "date": "2012-12-12",
     "title": {
@@ -442,6 +592,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Le_Hobbit_:_Un_voyage_inattendu",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q80379 : même date."
+  },
+  {
+    "id": "film-fast-and-furious-7-2015",
+    "date": "2015-04-01",
+    "title": {
+      "fr": "Fast and Furious 7",
+      "en": "Furious 7",
+      "de": "Fast & Furious 7",
+      "it": "Fast & Furious 7",
+      "es": "Furious 7"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Fast_and_Furious_7",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q14650496 : même date."
   },
   {
     "id": "film-jurassic-world-2015",
@@ -468,6 +633,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Star_Wars,_%C3%A9pisode_VII_:_Le_R%C3%A9veil_de_la_Force",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q6074 : même date."
+  },
+  {
+    "id": "film-captain-america-civil-war-2016",
+    "date": "2016-04-27",
+    "title": {
+      "fr": "Captain America: Civil War",
+      "en": "Captain America: Civil War",
+      "de": "The First Avenger: Civil War",
+      "it": "Captain America: Civil War",
+      "es": "Capitán América: Civil War"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Captain_America:_Civil_War",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q18407657 : pas de date française."
+  },
+  {
+    "id": "film-star-wars-episode-viii-les-derniers-jedi-2017",
+    "date": "2017-12-13",
+    "title": {
+      "fr": "Star Wars, épisode VIII : Les Derniers Jedi",
+      "en": "Star Wars: The Last Jedi",
+      "de": "Star Wars: Die letzten Jedi",
+      "it": "Star Wars - Gli ultimi Jedi",
+      "es": "Star Wars: Episodio VIII - Los últimos Jedi"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Star_Wars,_épisode_VIII_:_Les_Derniers_Jedi",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q18486021 : pas de date française."
   },
   {
     "id": "film-avengers-infinity-war-2018",
@@ -501,6 +696,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Spider-Man:_No_Way_Home",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q68934496 : même date."
+  },
+  {
+    "id": "film-black-panther-wakanda-forever-2022",
+    "date": "2022-11-09",
+    "title": {
+      "fr": "Black Panther: Wakanda Forever",
+      "en": "Black Panther: Wakanda Forever",
+      "de": "Black Panther: Wakanda Forever",
+      "it": "Black Panther: Wakanda Forever",
+      "es": "Black Panther: Wakanda Forever"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Black_Panther:_Wakanda_Forever",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q54860489 : pas de date française."
   },
   {
     "id": "film-avatar-la-voie-de-l-eau-2022",

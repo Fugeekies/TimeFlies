@@ -71,6 +71,21 @@
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q182771 : même date."
   },
   {
+    "id": "tech-halo-2-2004",
+    "date": "2004-11-10",
+    "title": {
+      "fr": "Halo 2",
+      "en": "Halo 2",
+      "de": "Halo 2",
+      "it": "Halo 2",
+      "es": "Halo 2"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Halo_2",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q252804 : donne une autre date : 2004-11-09."
+  },
+  {
     "id": "tech-half-life-2-2004",
     "date": "2004-11-16",
     "title": {
@@ -80,6 +95,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Half-Life_2",
     "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q193581 : même date."
+  },
+  {
+    "id": "tech-world-of-warcraft-2005",
+    "date": "2005-02-11",
+    "title": {
+      "fr": "World of Warcraft",
+      "en": "World of Warcraft",
+      "de": "World of Warcraft",
+      "it": "World of Warcraft",
+      "es": "World of Warcraft"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/World_of_Warcraft",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q131007 : même date."
   },
   {
     "id": "tech-halo-3-2007",
@@ -130,6 +160,21 @@
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q1047938 : même date (Europe)."
   },
   {
+    "id": "tech-uncharted-2-among-thieves-2009",
+    "date": "2009-10-14",
+    "title": {
+      "fr": "Uncharted 2: Among Thieves",
+      "en": "Uncharted 2: Among Thieves",
+      "de": "Uncharted 2: Among Thieves",
+      "it": "Uncharted 2: Il covo dei ladri",
+      "es": "Uncharted 2: El reino de los ladrones"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Uncharted_2:_Among_Thieves",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q17146 : donne une autre date : 2009-10-13."
+  },
+  {
     "id": "tech-league-of-legends-2009",
     "date": "2009-10-27",
     "title": {
@@ -172,6 +217,19 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/BioShock_Infinite",
     "note": "Sortie selon l'infobox (une seule date, sans précision de région). Wikidata Q2074746 : même date."
+  },
+  {
+    "id": "tech-the-last-of-us-2013",
+    "date": "2013-06-14",
+    "title": {
+      "fr": "The Last of Us",
+      "en": "The Last of Us",
+      "es": "The Last of Us"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Last_of_Us",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q28062624 : même date."
   },
   {
     "id": "tech-les-sims-4-2014",
