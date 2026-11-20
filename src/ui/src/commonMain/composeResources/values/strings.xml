@@ -280,6 +280,11 @@
         <item>va</item>
         <item>vn</item>
         <item>za</item>
+        <item>at</item>
+        <item>cv</item>
+        <item>ml</item>
+        <item>mx</item>
+        <item>ng</item>
     </string-array>
     <string-array name="origin_names">
         <item>International</item>
@@ -340,6 +345,11 @@
         <item>Vatican</item>
         <item>Viêt Nam</item>
         <item>Afrique du Sud</item>
+        <item>Autriche</item>
+        <item>Cap-Vert</item>
+        <item>Mali</item>
+        <item>Mexique</item>
+        <item>Nigeria</item>
     </string-array>
     <!-- Subcategories: music genres and sport disciplines, in the same order. -->
     <string-array name="subcategory_codes">
