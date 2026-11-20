@@ -38,8 +38,8 @@ Diese Ereignisse bleiben auf deinem Gerät: Nichts wird ins Internet gesendet.
 
 ## Windows
 
-- **TimeFlies beim Start von Windows starten**: nötig für das Taskleistensymbol und die Morgenbenachrichtigung.
-- **Jeden Morgen eine Benachrichtigung** und ihre **Uhrzeit der Benachrichtigung** (standardmäßig 9:00).
+- **TimeFlies beim Start von Windows starten**: nötig für das Taskleistensymbol und die Benachrichtigung beim Start des PCs.
+- **Benachrichtigung beim Start von TimeFlies (einmal am Tag)**.
 - **TimeFlies beim Schließen des Fensters in der Taskleiste behalten**.
 
 Siehe [das Taskleistensymbol](windows-tray.md).

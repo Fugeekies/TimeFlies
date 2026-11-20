@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 import kotlin.test.Test
@@ -22,7 +21,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 
-class SendMorningNotificationTest {
+class SendLaunchNotificationTest {
 
     private class InMemorySettings(initial: Settings) : SettingsRepository {
         val state = MutableStateFlow(initial)
@@ -42,22 +41,21 @@ class SendMorningNotificationTest {
     private val today = LocalDate(2026, 11, 2)
     private val clock = Clock { today }
     private val settings = InMemorySettings(Settings(birth = YearMonth(1991, Month.MAY), onboardingDone = true))
-    private val send = SendMorningNotification(GetDailyShock(FakeEvents(listOf(testEvent("film", "2011-11-02"))), clock), settings, clock)
+    private val send = SendLaunchNotification(GetDailyShock(FakeEvents(listOf(testEvent("film", "2011-11-02"))), clock), settings, clock)
 
     @Test
     fun sendsTheDailyShockOnceWhenDue() = runTest {
-        assertNull(send.ifDue(LocalTime(8, 0)), "not yet 9:00")
-        val shock = assertNotNull(send.ifDue(LocalTime(9, 0)))
+        val shock = assertNotNull(send.ifDue())
         assertEquals("film", shock.main?.event?.id)
         assertEquals(UserAge.Years(20), shock.main?.userAge, "with the user's age, as on Today")
         assertEquals(today, settings.state.value.windows.lastNotification)
-        assertNull(send.ifDue(LocalTime(9, 1)), "only once a day")
+        assertNull(send.ifDue(), "a second start the same day sends nothing")
     }
 
     @Test
     fun sendsAtOnceWithoutMarkingTheDay() = runTest {
         assertEquals("film", send.now().main?.event?.id)
         assertNull(settings.state.value.windows.lastNotification)
-        assertNotNull(send.ifDue(LocalTime(9, 0)), "the morning notification still goes out")
+        assertNotNull(send.ifDue(), "the notification of the start still goes out")
     }
 }

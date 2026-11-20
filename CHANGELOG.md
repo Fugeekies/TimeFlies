@@ -33,6 +33,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Changed
 
+- Notification Windows au lancement de TimeFlies (au démarrage du PC ou à la main), une fois par jour, au lieu de chaque matin à une heure choisie : plus de réglage d'heure ni de vérification toutes les minutes, l'application ne fait plus rien en attendant dans la barre des tâches. L'infobulle se met à jour à minuit et quand les réglages changent. `settings.json` passe en version 9 ; le choix d'activer la notification est gardé.
 - Revue du code : les cas d'usage des écrans passent en un seul lot (`AppUseCases`) au lieu de quinze paramètres de `App()` ; les petits composables communs (titre d'écran, message, panneau) sont dans `ui/components` au lieu d'être recopiés d'écran en écran ; une seule fabrique DataStore pour `settings.json` et `personal-events.json` ; une seule aide `recoverFailures` remplace les `try`/`catch` recopiés dans les ViewModels ; imports triés et inutiles retirés. Aucun changement visible.
 - Sport sans répétition : le premier et le dernier Ballon d'or d'un même joueur seulement (Messi 2009 et 2023, Cristiano Ronaldo 2008 et 2017), et seulement le record du monde actuel de chaque discipline (Beamon, Lavillenie, Kipchoge et le premier record de Duplantis retirés).
 - Polaroïd : retour au cadre blanc cassé de la maquette pour tous les événements, sans couleur ni chiffre de décennie ; la photo garde la couleur du thème et le dessin du type. Widget Android aussi.

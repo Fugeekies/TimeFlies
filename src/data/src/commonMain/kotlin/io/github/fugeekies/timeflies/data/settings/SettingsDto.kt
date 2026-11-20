@@ -17,10 +17,10 @@ import kotlinx.serialization.Serializable
  * Version 2 (milestone 7) renamed `youngAge` to `otherAge` (the other person can be older, decision of 15/11/2026).
  * Version 3 (milestone 10) added the Windows panel ([windows]); version 4 the check for new versions ([releaseCheck]);
  * version 5 the event filter ([excludedEventGroups]); version 6 the display style ([style], decision of 17/11/2026).
- * An older file gets their defaults. Version 7 (milestone 16, decision of 17/11/2026) dropped `otherAge` and
- * `equivalencesReversed`: the other ages are forgotten when the app closes and the user's column comes first; an older
- * file still reads, those fields being ignored. Version 8 (milestone 17) added the language of the interface
- * ([language]).
+ * An older file gets their defaults. Version 7 (milestone 16, decision of 17/11/2026) dropped `otherAge` and `equivalencesReversed`: the other
+ * ages are forgotten when the app closes and the user's column comes first; an older file still reads, those
+ * fields being ignored. Version 8 (milestone 17) added the language of the interface ([language]). Version 9
+ * (decision of 20/11/2026) dropped the time of the Windows notification, now sent when TimeFlies starts.
  */
 @Serializable
 internal data class SettingsDto(
@@ -56,7 +56,7 @@ internal data class SettingsDto(
     )
 
     companion object {
-        const val CURRENT_VERSION = 8
+        const val CURRENT_VERSION = 9
 
         fun of(settings: Settings) = SettingsDto(
             birthYear = settings.birth?.year,

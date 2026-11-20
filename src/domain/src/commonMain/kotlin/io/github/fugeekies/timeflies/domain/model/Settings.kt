@@ -1,7 +1,7 @@
 package io.github.fugeekies.timeflies.domain.model
 
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalTime
+
 import kotlinx.datetime.YearMonth
 
 /**
@@ -52,25 +52,20 @@ data class ReleaseCheck(
 data class AppRelease(val version: String, val url: String)
 
 /**
- * Settings of the Windows tray icon and morning notification (docs/UISpec/WindowsTray.template.md), defaults
- * decided on 13/11/2026. Ignored on Android.
+ * Settings of the Windows tray icon and notification (docs/UISpec/WindowsTray.template.md), defaults decided on
+ * 13/11/2026. Ignored on Android.
  *
  * @property launchAtStartup TimeFlies starts with Windows, window hidden, in the notification area only.
- * @property morningNotification the "coup de vieux" is sent as a notification each morning at [notificationTime].
- * @property notificationTime a quarter of an hour (9:00 by default).
+ * @property launchNotification the "coup de vieux" is sent as a notification when TimeFlies starts, with Windows or by
+ *   hand, once a day at most (decision of 20/11/2026, instead of every morning at a chosen time).
  * @property keepInTray closing the window hides it instead of quitting the app.
  * @property trayHintShown the notification explaining that TimeFlies stays in the taskbar was already shown once.
- * @property lastNotification the day the morning notification was last sent: at most once a day, even after a sleep.
+ * @property lastNotification the day the notification was last sent: a second start the same day sends nothing.
  */
 data class WindowsSettings(
     val launchAtStartup: Boolean = true,
-    val morningNotification: Boolean = true,
-    val notificationTime: LocalTime = DEFAULT_NOTIFICATION_TIME,
+    val launchNotification: Boolean = true,
     val keepInTray: Boolean = true,
     val trayHintShown: Boolean = false,
     val lastNotification: LocalDate? = null,
-) {
-    companion object {
-        val DEFAULT_NOTIFICATION_TIME = LocalTime(9, 0)
-    }
-}
+)

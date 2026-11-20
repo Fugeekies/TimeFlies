@@ -141,11 +141,11 @@
     <string name="debug_stats_rejections">Bei der Prüfung verworfene Einträge: %1$d</string>
     <string name="debug_refresh">Aktualisieren</string>
     <string name="debug_windows">WINDOWS</string>
-    <string name="debug_send_notification">Morgenbenachrichtigung senden</string>
+    <string name="debug_send_notification">Benachrichtigung des Tages senden</string>
     <string name="debug_widget">WIDGET</string>
     <string name="debug_refresh_widget">Widget aktualisieren</string>
     <string name="debug_refresh_widget_note">Berechnet jedes platzierte Widget sofort neu, mit dem heutigen Datum (echt oder falsch).</string>
-    <string name="debug_send_notification_note">Sofort, ohne auf die Uhrzeit zu warten; die Morgenbenachrichtigung kommt trotzdem.</string>
+    <string name="debug_send_notification_note">Sofort, ohne auf den nächsten Start zu warten.</string>
 
     <string name="settings_title">Einstellungen</string>
     <string name="settings_generations">GENERATIONEN</string>
@@ -187,9 +187,8 @@
     <string name="update_later">Später</string>
     <string name="settings_windows">WINDOWS</string>
     <string name="settings_launch_at_startup">TimeFlies beim Start von Windows starten</string>
-    <string name="settings_launch_at_startup_help">Nötig für das Taskleistensymbol und die Morgenbenachrichtigung.</string>
-    <string name="settings_morning_notification">Jeden Morgen eine Benachrichtigung</string>
-    <string name="settings_notification_time">Uhrzeit der Benachrichtigung</string>
+    <string name="settings_launch_at_startup_help">Nötig für das Taskleistensymbol und die Benachrichtigung beim Start des PCs.</string>
+    <string name="settings_morning_notification">Benachrichtigung beim Start von TimeFlies (einmal am Tag)</string>
     <string name="settings_keep_in_tray">TimeFlies beim Schließen des Fensters in der Taskleiste behalten</string>
 
     <string name="settings_events">EREIGNISSE</string>

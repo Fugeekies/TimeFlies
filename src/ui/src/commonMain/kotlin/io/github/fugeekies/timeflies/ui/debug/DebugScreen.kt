@@ -88,7 +88,7 @@ import org.jetbrains.compose.resources.stringResource
  * The debug panel (docs/DEVELOPMENT.md, "Panneau de débogage"), debug builds only.
  *
  * @param themeMode light or dark forced for this session; [onThemeMode] changes it.
- * @param onSendMorningNotification Windows: sends the morning notification at once; null elsewhere (no panel).
+ * @param onSendNotification Windows: sends today's notification at once; null elsewhere (no panel).
  * @param onRefreshWidget Android: updates the widget at once; null elsewhere (no panel).
  */
 @Composable
@@ -97,7 +97,7 @@ fun DebugScreen(
     themeMode: ThemeMode,
     onThemeMode: (ThemeMode) -> Unit,
     modifier: Modifier = Modifier,
-    onSendMorningNotification: (() -> Unit)? = null,
+    onSendNotification: (() -> Unit)? = null,
     onRefreshWidget: (() -> Unit)? = null,
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -121,10 +121,10 @@ fun DebugScreen(
                     Text(stringResource(Res.string.debug_refresh_widget_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
-            if (onSendMorningNotification != null) {
+            if (onSendNotification != null) {
                 Eyebrow(stringResource(Res.string.debug_windows))
                 Panel {
-                    OutlinedButton(onClick = onSendMorningNotification) { Text(stringResource(Res.string.debug_send_notification)) }
+                    OutlinedButton(onClick = onSendNotification) { Text(stringResource(Res.string.debug_send_notification)) }
                     Text(stringResource(Res.string.debug_send_notification_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }

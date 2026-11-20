@@ -18,6 +18,6 @@ Por defecto, cerrar la ventana la **oculta**: TimeFlies se queda en la barra de 
 
 Con **Iniciar TimeFlies al arrancar Windows** marcado, TimeFlies arranca con Windows, con la ventana oculta, solo en la barra de tareas. Volver a abrirlo desde el menú Inicio recupera su ventana en lugar de abrir la app por segunda vez.
 
-## La notificación de la mañana
+## La notificación al iniciar
 
-Cada día a la hora elegida (9:00 por defecto), una notificación: «15 años hoy», con el acontecimiento, su fecha y tu edad. Si tu PC estaba apagado o en suspensión a esa hora, se envía en su primer despertar del día, una sola vez. Hacer clic en ella abre Hoy.
+Al iniciar TimeFlies, con tu PC o cuando lo abres, una notificación: «15 años hoy», con el acontecimiento, su fecha y tu edad. Una sola vez al día: si vuelves a abrir TimeFlies el mismo día, no llega nada más. Hacer clic en ella abre Hoy.

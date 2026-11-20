@@ -18,6 +18,6 @@ Standardmäßig **versteckt** das Schließen das Fenster: TimeFlies bleibt in de
 
 Mit angehaktem **TimeFlies beim Start von Windows starten** startet TimeFlies mit Windows, Fenster versteckt, nur in der Taskleiste. Ein erneuter Start über das Startmenü holt sein Fenster zurück, statt die App ein zweites Mal zu öffnen.
 
-## Die Morgenbenachrichtigung
+## Die Benachrichtigung beim Start
 
-Jeden Tag zur gewählten Uhrzeit (standardmäßig 9:00) eine Benachrichtigung: „Heute 15 Jahre“, mit dem Ereignis, seinem Datum und deinem Alter. War dein PC zu dieser Zeit aus oder im Ruhezustand, kommt sie beim ersten Aufwachen des Tages, nur einmal. Ein Klick darauf öffnet Heute.
+Beim Start von TimeFlies, mit deinem PC oder wenn du es öffnest, eine Benachrichtigung: „Heute 15 Jahre“, mit dem Ereignis, seinem Datum und deinem Alter. Nur einmal am Tag: Startest du TimeFlies am selben Tag erneut, kommt nichts mehr. Ein Klick darauf öffnet Heute.

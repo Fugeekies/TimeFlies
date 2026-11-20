@@ -141,11 +141,11 @@
     <string name="debug_stats_rejections">Entradas descartadas por la validación: %1$d</string>
     <string name="debug_refresh">Actualizar</string>
     <string name="debug_windows">WINDOWS</string>
-    <string name="debug_send_notification">Enviar la notificación de la mañana</string>
+    <string name="debug_send_notification">Enviar la notificación del día</string>
     <string name="debug_widget">WIDGET</string>
     <string name="debug_refresh_widget">Actualizar el widget</string>
     <string name="debug_refresh_widget_note">Recalcula enseguida cada widget colocado, con la fecha de hoy (real o falsa).</string>
-    <string name="debug_send_notification_note">Enseguida, sin esperar la hora; la notificación de la mañana se enviará igualmente.</string>
+    <string name="debug_send_notification_note">Enseguida, sin esperar al próximo inicio.</string>
 
     <string name="settings_title">Ajustes</string>
     <string name="settings_generations">GENERACIONES</string>
@@ -187,9 +187,8 @@
     <string name="update_later">Más tarde</string>
     <string name="settings_windows">WINDOWS</string>
     <string name="settings_launch_at_startup">Iniciar TimeFlies al arrancar Windows</string>
-    <string name="settings_launch_at_startup_help">Necesario para el icono de la barra de tareas y la notificación de la mañana.</string>
-    <string name="settings_morning_notification">Notificación cada mañana</string>
-    <string name="settings_notification_time">Hora de la notificación</string>
+    <string name="settings_launch_at_startup_help">Necesario para el icono de la barra de tareas y la notificación al iniciar el PC.</string>
+    <string name="settings_morning_notification">Notificación al iniciar TimeFlies (una vez al día)</string>
     <string name="settings_keep_in_tray">Mantener TimeFlies en la barra de tareas al cerrar la ventana</string>
 
     <string name="settings_events">ACONTECIMIENTOS</string>

@@ -38,8 +38,8 @@ These events stay on your device: nothing is sent over the Internet.
 
 ## Windows
 
-- **Start TimeFlies when Windows starts**: needed for the taskbar icon and the morning notification.
-- **Morning notification every day** and its **Notification time** (9:00 by default).
+- **Start TimeFlies when Windows starts**: needed for the taskbar icon and the notification when the PC starts.
+- **Notification when TimeFlies starts (once a day)**.
 - **Keep TimeFlies in the taskbar when I close the window**.
 
 See [the taskbar icon](windows-tray.md).

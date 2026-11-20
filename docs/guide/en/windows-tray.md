@@ -18,6 +18,6 @@ By default, closing the window **hides** it: TimeFlies stays in the taskbar. To 
 
 With **Start TimeFlies when Windows starts** ticked, TimeFlies starts with Windows, window hidden, only in the taskbar. Starting it again from the Start menu brings its window back instead of opening the app a second time.
 
-## The morning notification
+## The notification at start
 
-Every day at the chosen time (9:00 by default), a notification: "15 years today", with the event, its date and your age. If your PC was off or asleep at that time, it is sent when it first wakes up that day, only once. Clicking it opens Today.
+When TimeFlies starts, with your PC or when you open it, a notification: "15 years today", with the event, its date and your age. Only once a day: if you start TimeFlies again the same day, nothing more. Clicking it opens Today.

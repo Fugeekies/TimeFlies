@@ -141,11 +141,11 @@
     <string name="debug_stats_rejections">Entries rejected by the validation: %1$d</string>
     <string name="debug_refresh">Refresh</string>
     <string name="debug_windows">WINDOWS</string>
-    <string name="debug_send_notification">Send the morning notification</string>
+    <string name="debug_send_notification">Send today's notification</string>
     <string name="debug_widget">WIDGET</string>
     <string name="debug_refresh_widget">Update the widget</string>
     <string name="debug_refresh_widget_note">Recomputes every widget on the home screen right away, with today's date (real or fake).</string>
-    <string name="debug_send_notification_note">Right away, without waiting for the time; the morning notification will still be sent.</string>
+    <string name="debug_send_notification_note">Right away, without waiting for the next launch.</string>
 
     <string name="settings_title">Settings</string>
     <string name="settings_generations">GENERATIONS</string>
@@ -187,9 +187,8 @@
     <string name="update_later">Later</string>
     <string name="settings_windows">WINDOWS</string>
     <string name="settings_launch_at_startup">Start TimeFlies when Windows starts</string>
-    <string name="settings_launch_at_startup_help">Needed for the taskbar icon and the morning notification.</string>
-    <string name="settings_morning_notification">Morning notification every day</string>
-    <string name="settings_notification_time">Notification time</string>
+    <string name="settings_launch_at_startup_help">Needed for the taskbar icon and the notification when the PC starts.</string>
+    <string name="settings_morning_notification">Notification when TimeFlies starts (once a day)</string>
     <string name="settings_keep_in_tray">Keep TimeFlies in the taskbar when I close the window</string>
 
     <string name="settings_events">EVENTS</string>

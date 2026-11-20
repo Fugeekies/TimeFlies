@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.job
 import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 import okio.FileSystem
@@ -77,7 +76,7 @@ class DataStoreSettingsRepositoryTest {
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
         assertTrue("\"birthYear\": 1991" in text, text)
         assertTrue("\"birthMonth\": 5" in text, text)
-        assertTrue("\"version\": 8" in text, text)
+        assertTrue("\"version\": 9" in text, text)
         // Version 7: the other ages are forgotten when the app closes, nothing of them is written.
         assertTrue("otherAge" !in text && "youngAge" !in text && "equivalencesReversed" !in text, text)
     }
@@ -157,25 +156,27 @@ class DataStoreSettingsRepositoryTest {
     fun keepsTheWindowsPanel() = runBlocking {
         val windows = WindowsSettings(
             launchAtStartup = false,
-            morningNotification = false,
-            notificationTime = LocalTime(7, 45),
+            launchNotification = false,
             keepInTray = false,
             trayHintShown = true,
             lastNotification = LocalDate(2026, 11, 16),
         )
         open().update { it.copy(windows = windows) }
         val text = FileSystem.SYSTEM.read(file) { readUtf8() }
-        assertTrue("\"notificationTime\": \"07:45\"" in text, text)
+        // The field keeps its former name, so the choice of an older file stays (version 9).
+        assertTrue("\"morningNotification\": false" in text, text)
+        assertTrue("notificationTime" !in text, text)
         assertTrue("\"lastNotificationDate\": \"2026-11-16\"" in text, text)
         assertEquals(windows, open().settings.first().windows)
     }
 
     @Test
-    fun givesTheDefaultTimeForAnUnreadableOne() = runBlocking {
+    fun readsTheWindowsPanelOfAnOlderFile() = runBlocking {
         FileSystem.SYSTEM.createDirectories(file.parent!!)
-        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 3, "windows": {"notificationTime": "9h10", "lastNotificationDate": "hier"}}""") }
+        // Version 8: the time of the notification is ignored, its choice stays; an unreadable date is dropped.
+        FileSystem.SYSTEM.write(file) { writeUtf8("""{"version": 8, "windows": {"morningNotification": false, "notificationTime": "07:45", "lastNotificationDate": "hier"}}""") }
         val windows = open().settings.first().windows
-        assertEquals(LocalTime(9, 0), windows.notificationTime)
+        assertEquals(false, windows.launchNotification)
         assertNull(windows.lastNotification)
     }
 }

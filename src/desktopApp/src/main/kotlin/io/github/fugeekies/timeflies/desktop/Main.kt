@@ -53,7 +53,7 @@ fun main(args: Array<String>) {
     val showRequests = MutableStateFlow(0)
     if (!SingleInstance.acquire(AppFolder.path().toFile(), showWindow = !background) { showRequests.update { it + 1 } }) return
     val graph = AppGraph(debug)
-    val trayUpdater = TrayUpdater(graph.sendMorningNotification, graph.observeSettings, graph.clock, graph.releaseUpdates, graph.personalEvents)
+    val trayUpdater = TrayUpdater(graph.sendLaunchNotification, graph.observeSettings, graph.clock, graph.releaseUpdates, graph.personalEvents)
     application {
         val scope = rememberCoroutineScope()
         val settings by remember { graph.observeSettings() }.collectAsState(initial = null)
@@ -163,7 +163,7 @@ fun main(args: Array<String>) {
                     screenRequest = screenRequest,
                     onScreenRequestHandled = { screenRequest = null },
                     showWindowsPanel = tray != null,
-                    sendMorningNotification = tray?.let { current -> { scope.launch { trayUpdater.sendNow(current) } } },
+                    sendNotification = tray?.let { current -> { scope.launch { trayUpdater.sendNow(current) } } },
                     files = remember(window) { DesktopFileExchange(window) },
                 ),
             )
