@@ -38,8 +38,8 @@ Ces événements restent sur ton appareil : rien n'est envoyé sur Internet.
 
 ## Windows
 
-- **Lancer TimeFlies au démarrage de Windows** : nécessaire pour l'icône de la barre des tâches et la notification du matin.
-- **Notification du coup de vieux chaque matin** et son **Heure de la notification** (9:00 par défaut).
+- **Lancer TimeFlies au démarrage de Windows** : nécessaire pour l'icône de la barre des tâches et la notification au démarrage du PC.
+- **Notification du coup de vieux au lancement de TimeFlies (une fois par jour)**.
 - **Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre**.
 
 Voir [l'icône de la barre des tâches](windows-tray.md).

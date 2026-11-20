@@ -21,7 +21,7 @@ import io.github.fugeekies.timeflies.domain.usecase.ObserveSettings
 import io.github.fugeekies.timeflies.domain.usecase.PersonalEvents
 import io.github.fugeekies.timeflies.domain.usecase.ReleaseUpdates
 import io.github.fugeekies.timeflies.domain.usecase.SearchEvents
-import io.github.fugeekies.timeflies.domain.usecase.SendMorningNotification
+import io.github.fugeekies.timeflies.domain.usecase.SendLaunchNotification
 import io.github.fugeekies.timeflies.domain.usecase.UpdateSettings
 import io.github.fugeekies.timeflies.ui.AppUseCases
 import io.github.fugeekies.timeflies.ui.readResourceFile
@@ -87,7 +87,7 @@ class AppGraph(debug: Boolean) {
 
     // New versions on GitHub (decision of 16/11/2026); a local build has no version and never asks.
     val releaseUpdates = ReleaseUpdates(GitHubReleases(::httpText), settings, clock, System.getProperty("timeflies.version"))
-    val sendMorningNotification = SendMorningNotification(getDailyShock, settings, clock)
+    val sendLaunchNotification = SendLaunchNotification(getDailyShock, settings, clock)
     val debugTools: DebugTools? = adjustableClock?.let { DataDebugTools(it, settings, baseEvents) }
 }
 

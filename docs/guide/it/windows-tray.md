@@ -18,6 +18,6 @@ Per impostazione predefinita, chiudere la finestra la **nasconde**: TimeFlies re
 
 Con **Avvia TimeFlies all'avvio di Windows** selezionato, TimeFlies parte con Windows, a finestra nascosta, solo nella barra delle applicazioni. Riaprirlo dal menu Start riporta la sua finestra invece di aprire l'app una seconda volta.
 
-## La notifica del mattino
+## La notifica all'avvio
 
-Ogni giorno all'ora scelta (9:00 per impostazione predefinita), una notifica: «15 anni oggi», con l'evento, la sua data e la tua età. Se a quell'ora il PC era spento o in sospensione, parte al primo risveglio della giornata, una sola volta. Facendo clic si apre Oggi.
+All'avvio di TimeFlies, con il PC o quando lo apri, una notifica: «15 anni oggi», con l'evento, la sua data e la tua età. Una sola volta al giorno: se riavvii TimeFlies lo stesso giorno, non arriva altro. Facendo clic si apre Oggi.

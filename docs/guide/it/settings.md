@@ -38,8 +38,8 @@ Questi eventi restano sul tuo dispositivo: niente viene inviato su Internet.
 
 ## Windows
 
-- **Avvia TimeFlies all'avvio di Windows**: necessario per l'icona della barra delle applicazioni e la notifica del mattino.
-- **Notifica ogni mattina** e il suo **Orario della notifica** (9:00 per impostazione predefinita).
+- **Avvia TimeFlies all'avvio di Windows**: necessario per l'icona della barra delle applicazioni e la notifica all'avvio del PC.
+- **Notifica all'avvio di TimeFlies (una volta al giorno)**.
 - **Tieni TimeFlies nella barra delle applicazioni quando chiudo la finestra**.
 
 Vedi [l'icona della barra delle applicazioni](windows-tray.md).

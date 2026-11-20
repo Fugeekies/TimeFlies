@@ -18,6 +18,6 @@ Par défaut, fermer la fenêtre la **cache** : TimeFlies reste dans la barre des
 
 Avec **Lancer TimeFlies au démarrage de Windows** coché, TimeFlies démarre avec Windows, fenêtre cachée, seulement dans la barre des tâches. Le relancer depuis le menu Démarrer ramène sa fenêtre au lieu d'ouvrir une seconde fois l'application.
 
-## La notification du matin
+## La notification au lancement
 
-Chaque jour à l'heure choisie (9:00 par défaut), une notification : « 15 ans aujourd'hui », avec l'événement, sa date et ton âge. Si ton PC était éteint ou en veille à cette heure-là, elle part à son premier réveil de la journée, une seule fois. Cliquer dessus ouvre Aujourd'hui.
+Au lancement de TimeFlies, au démarrage de ton PC ou quand tu l'ouvres, une notification : « 15 ans aujourd'hui », avec l'événement, sa date et ton âge. Une seule fois par jour : si tu relances TimeFlies le même jour, rien de plus. Cliquer dessus ouvre Aujourd'hui.

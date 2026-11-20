@@ -42,10 +42,8 @@ import io.github.fugeekies.timeflies.domain.model.AppLanguage
 import io.github.fugeekies.timeflies.domain.model.DisplayStyle
 import io.github.fugeekies.timeflies.domain.model.Region
 import io.github.fugeekies.timeflies.domain.model.WindowsSettings
-import io.github.fugeekies.timeflies.domain.rules.MorningNotification
 import io.github.fugeekies.timeflies.ui.WidgetPinning
 import io.github.fugeekies.timeflies.ui.components.BirthFields
-import io.github.fugeekies.timeflies.ui.components.ChoiceField
 import io.github.fugeekies.timeflies.ui.components.Eyebrow
 import io.github.fugeekies.timeflies.ui.components.Panel
 import io.github.fugeekies.timeflies.ui.components.ScreenTitle
@@ -82,7 +80,6 @@ import io.github.fugeekies.timeflies.ui.resources.settings_language
 import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup
 import io.github.fugeekies.timeflies.ui.resources.settings_launch_at_startup_help
 import io.github.fugeekies.timeflies.ui.resources.settings_morning_notification
-import io.github.fugeekies.timeflies.ui.resources.settings_notification_time
 import io.github.fugeekies.timeflies.ui.resources.settings_personal
 import io.github.fugeekies.timeflies.ui.resources.settings_region
 import io.github.fugeekies.timeflies.ui.resources.settings_release_check
@@ -98,7 +95,6 @@ import io.github.fugeekies.timeflies.ui.resources.settings_windows
 import io.github.fugeekies.timeflies.ui.resources.years_count
 import io.github.fugeekies.timeflies.ui.text.capitalized
 import io.github.fugeekies.timeflies.ui.text.nativeName
-import kotlinx.datetime.LocalTime
 import kotlinx.datetime.number
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringArrayResource
@@ -282,23 +278,9 @@ private fun WindowsPanel(windows: WindowsSettings, viewModel: SettingsViewModel)
         color = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.padding(start = 48.dp),
     )
-    CheckRow(stringResource(Res.string.settings_morning_notification), windows.morningNotification, viewModel::onMorningNotification)
-    val timeName = stringResource(Res.string.settings_notification_time)
-    ChoiceField(
-        name = timeName,
-        value = timeText(windows.notificationTime),
-        options = MorningNotification.TIMES,
-        optionLabel = ::timeText,
-        onPick = viewModel::onNotificationTime,
-        enabled = windows.morningNotification,
-        modifier = Modifier.padding(start = 48.dp).widthIn(max = 160.dp),
-    )
+    CheckRow(stringResource(Res.string.settings_morning_notification), windows.launchNotification, viewModel::onLaunchNotification)
     CheckRow(stringResource(Res.string.settings_keep_in_tray), windows.keepInTray, viewModel::onKeepInTray)
 }
-
-/** "09:00", as in the time list of the wireframe. */
-private fun timeText(time: LocalTime): String =
-    "${time.hour.toString().padStart(2, '0')}:${time.minute.toString().padStart(2, '0')}"
 
 /** A check box and its label, the whole row clickable. */
 @Composable

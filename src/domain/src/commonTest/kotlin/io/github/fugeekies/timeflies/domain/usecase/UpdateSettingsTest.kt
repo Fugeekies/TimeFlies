@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 import kotlin.test.Test
@@ -67,8 +66,7 @@ class UpdateSettingsTest {
     fun startsWithTheWindowsDefaults() = runTest {
         val windows = repository.state.value.windows
         assertTrue(windows.launchAtStartup)
-        assertTrue(windows.morningNotification)
-        assertEquals(LocalTime(9, 0), windows.notificationTime)
+        assertTrue(windows.launchNotification)
         assertTrue(windows.keepInTray)
         assertFalse(windows.trayHintShown)
         assertNull(windows.lastNotification)
@@ -77,23 +75,16 @@ class UpdateSettingsTest {
     @Test
     fun savesTheWindowsPanel() = runTest {
         update.setLaunchAtStartup(false)
-        update.setMorningNotification(false)
-        update.setNotificationTime(LocalTime(7, 45))
+        update.setLaunchNotification(false)
         update.setKeepInTray(false)
         update.markTrayHintShown()
         val windows = repository.state.value.windows
         assertFalse(windows.launchAtStartup)
-        assertFalse(windows.morningNotification)
-        assertEquals(LocalTime(7, 45), windows.notificationTime)
+        assertFalse(windows.launchNotification)
         assertFalse(windows.keepInTray)
         assertTrue(windows.trayHintShown)
     }
 
-    @Test
-    fun rejectsANotificationTimeOffTheQuarters() = runTest {
-        assertFailsWith<IllegalArgumentException> { update.setNotificationTime(LocalTime(9, 10)) }
-        assertEquals(LocalTime(9, 0), repository.state.value.windows.notificationTime)
-    }
 
     @Test
     fun savesTheDisplayStyle() = runTest {

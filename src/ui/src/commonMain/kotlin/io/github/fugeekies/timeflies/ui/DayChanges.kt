@@ -13,7 +13,7 @@ import kotlin.time.Clock as KotlinClock
  * Emits at once, then one second past each local midnight and whenever the debug panel changes the date by hand:
  * every screen that depends on today's date recomputes, even when the app stays open overnight.
  */
-internal fun Clock.dayChanges(): Flow<Unit> = merge(midnights(), manualChanges())
+fun Clock.dayChanges(): Flow<Unit> = merge(midnights(), manualChanges())
 
 private fun midnights(): Flow<Unit> = flow {
     while (true) {

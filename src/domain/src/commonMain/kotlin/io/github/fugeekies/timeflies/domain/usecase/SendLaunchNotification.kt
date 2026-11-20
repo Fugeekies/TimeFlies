@@ -4,27 +4,26 @@ import io.github.fugeekies.timeflies.domain.model.DailyShock
 import io.github.fugeekies.timeflies.domain.port.Clock
 import io.github.fugeekies.timeflies.domain.port.SettingsRepository
 import io.github.fugeekies.timeflies.domain.rules.Generations
-import io.github.fugeekies.timeflies.domain.rules.MorningNotification
+import io.github.fugeekies.timeflies.domain.rules.LaunchNotification
 import kotlinx.coroutines.flow.first
-import kotlinx.datetime.LocalTime
 
 /**
- * The Windows morning notification (docs/UISpec/WindowsTray.template.md). The tray checks it regularly; the
- * content is the same "coup de vieux" as the Today screen.
+ * The Windows notification sent when TimeFlies starts (docs/UISpec/WindowsTray.template.md, decision of 20/11/2026);
+ * the content is the same "coup de vieux" as the Today screen.
  */
-class SendMorningNotification(
+class SendLaunchNotification(
     private val getDailyShock: GetDailyShock,
     private val settings: SettingsRepository,
     private val clock: Clock,
 ) {
     /**
-     * The daily shock to send when the notification is due at [now] ([MorningNotification.isDue]), marking today as
-     * sent so it goes out only once; null when it is not due.
+     * The daily shock to send at a start when the notification is due ([LaunchNotification.isDue]), marking today as
+     * sent so a second start the same day sends nothing; null when it is not due.
      */
-    suspend fun ifDue(now: LocalTime): DailyShock? {
+    suspend fun ifDue(): DailyShock? {
         val today = clock.today()
         val current = settings.settings.first()
-        if (!MorningNotification.isDue(current.windows, today, now)) return null
+        if (!LaunchNotification.isDue(current.windows, today)) return null
         val shock = getDailyShock(current.region, current.birth?.let(Generations::userBirth))
         settings.update { it.copy(windows = it.windows.copy(lastNotification = today)) }
         return shock

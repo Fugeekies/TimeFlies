@@ -27,7 +27,6 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth
 
@@ -142,12 +141,8 @@ class SettingsViewModel(
         viewModelScope.launch { updateSettings.setLaunchAtStartup(enabled) }
     }
 
-    fun onMorningNotification(enabled: Boolean) {
-        viewModelScope.launch { updateSettings.setMorningNotification(enabled) }
-    }
-
-    fun onNotificationTime(time: LocalTime) {
-        viewModelScope.launch { updateSettings.setNotificationTime(time) }
+    fun onLaunchNotification(enabled: Boolean) {
+        viewModelScope.launch { updateSettings.setLaunchNotification(enabled) }
     }
 
     /** The new set of unticked event groups, from the filter tree. */

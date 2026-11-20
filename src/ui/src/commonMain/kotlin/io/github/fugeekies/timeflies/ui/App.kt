@@ -78,7 +78,7 @@ enum class AppScreen { TODAY, SETTINGS }
  *
  * @property screenRequest a screen to open, asked from outside the window; [onScreenRequestHandled] clears it.
  * @property showWindowsPanel Settings shows the "Notification et démarrage" panel.
- * @property sendMorningNotification the debug panel offers to send the morning notification at once.
+ * @property sendNotification the debug panel offers to send today's Windows notification at once.
  * @property widget Android: Settings shows the "Écran d'accueil" panel; null elsewhere.
  * @property refreshWidget the debug panel offers to update the Android widget at once.
  * @property files the system file picker for the export and import of Settings › Mes événements; null hides them.
@@ -89,7 +89,7 @@ data class PlatformHooks(
     val screenRequest: AppScreen? = null,
     val onScreenRequestHandled: () -> Unit = {},
     val showWindowsPanel: Boolean = false,
-    val sendMorningNotification: (() -> Unit)? = null,
+    val sendNotification: (() -> Unit)? = null,
     val widget: WidgetPinning? = null,
     val refreshWidget: (() -> Unit)? = null,
     val files: FileExchange? = null,
@@ -245,7 +245,7 @@ private fun MainScreens(
                         themeMode,
                         onThemeMode,
                         content,
-                        onSendMorningNotification = platform.sendMorningNotification,
+                        onSendNotification = platform.sendNotification,
                         onRefreshWidget = platform.refreshWidget,
                     )
                 }

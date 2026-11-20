@@ -38,8 +38,8 @@ Estos acontecimientos se quedan en tu dispositivo: no se envía nada por Interne
 
 ## Windows
 
-- **Iniciar TimeFlies al arrancar Windows**: necesario para el icono de la barra de tareas y la notificación de la mañana.
-- **Notificación cada mañana** y su **Hora de la notificación** (9:00 por defecto).
+- **Iniciar TimeFlies al arrancar Windows**: necesario para el icono de la barra de tareas y la notificación al iniciar el PC.
+- **Notificación al iniciar TimeFlies (una vez al día)**.
 - **Mantener TimeFlies en la barra de tareas al cerrar la ventana**.
 
 Consulta [el icono de la barra de tareas](windows-tray.md).

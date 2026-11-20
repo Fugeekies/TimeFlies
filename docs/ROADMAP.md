@@ -98,6 +98,7 @@ Après une bonne version en débogage sur PC (releases à la fin, décision du 1
 - [x] Icône, infobulle et menu ; notification du matin ; fenêtre fermée qui reste dans la barre des tâches ; lancement au démarrage ([`WindowsTray.template.md`](UISpec/WindowsTray.template.md)). `domain` : `WindowsSettings`, règle `MorningNotification` (heure atteinte, une fois par jour, au premier réveil), cas d'usage `SendMorningNotification`, tests. `data` : `settings.json` en version 3 (objet `windows`), tests. `desktopApp` : `WindowsTray` (sur le `TrayIcon` d'AWT pour le clic gauche simple), `TrayUpdater` (infobulle, vérification chaque minute), `WindowsStartup` (`reg.exe`, argument `--background`).
 - [x] Panneau Windows des Réglages.
 - [x] Panneau de débogage : envoyer tout de suite la notification du matin.
+- [x] (20/11/2026) La notification part au lancement de TimeFlies, une fois par jour, au lieu de chaque matin à une heure choisie : règle `LaunchNotification`, cas d'usage `SendLaunchNotification`, plus de vérification chaque minute, `settings.json` en version 9.
 
 ### Jalon 9 — Finitions du style Polaroïd — 15/11/2026 · PR [#16](https://github.com/Fugeekies/TimeFlies/pull/16)
 - [x] Version sombre « chambre noire » (décision du 15/11/2026), le thème suit le système, fenêtre Android jour/nuit sans éclair blanc. Contrastes AA vérifiés par `ContrastTest` (jetons, silhouettes, cadres, tampon des décennies, encre de la photo choisie selon la couleur de la famille) ; écriture manuscrite jamais sous 20 sp.

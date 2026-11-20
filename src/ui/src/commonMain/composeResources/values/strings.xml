@@ -156,11 +156,11 @@
     <string name="debug_stats_rejections">Entrées écartées par la validation : %1$d</string>
     <string name="debug_refresh">Actualiser</string>
     <string name="debug_windows">WINDOWS</string>
-    <string name="debug_send_notification">Envoyer la notification du matin</string>
+    <string name="debug_send_notification">Envoyer la notification du jour</string>
     <string name="debug_widget">WIDGET</string>
     <string name="debug_refresh_widget">Mettre à jour le widget</string>
     <string name="debug_refresh_widget_note">Recalcule tout de suite chaque widget posé, avec la date du jour (vraie ou fausse).</string>
-    <string name="debug_send_notification_note">Tout de suite, sans attendre l'heure ; la notification du matin partira quand même.</string>
+    <string name="debug_send_notification_note">Tout de suite, sans attendre le prochain lancement.</string>
 
     <!-- Settings (docs/UISpec/Settings.template.md) -->
     <string name="settings_title">Réglages</string>
@@ -205,9 +205,8 @@
     <!-- Windows panel (docs/UISpec/Settings.template.md, "Notification et démarrage") -->
     <string name="settings_windows">WINDOWS</string>
     <string name="settings_launch_at_startup">Lancer TimeFlies au démarrage de Windows</string>
-    <string name="settings_launch_at_startup_help">Nécessaire pour l'icône de la barre des tâches et la notification du matin.</string>
-    <string name="settings_morning_notification">Notification du coup de vieux chaque matin</string>
-    <string name="settings_notification_time">Heure de la notification</string>
+    <string name="settings_launch_at_startup_help">Nécessaire pour l'icône de la barre des tâches et la notification au démarrage du PC.</string>
+    <string name="settings_morning_notification">Notification du coup de vieux au lancement de TimeFlies (une fois par jour)</string>
     <string name="settings_keep_in_tray">Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre</string>
 
     <!-- Event filter (decision of 16/11/2026, docs/EVENTS_DATA.md "Fichiers et stockage") -->

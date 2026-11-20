@@ -46,7 +46,7 @@ Les réglages qui pilotent toute l'application (mois et année de naissance, ré
 #### Panneau « Notification et démarrage » (Windows uniquement, eyebrow « WINDOWS »)
 Valeurs par défaut décidées le 13/11/2026.
 * Case **« Lancer TimeFlies au démarrage de Windows »** (cochée par défaut) : nécessaire pour l'icône de la barre des tâches et la notification. Écrit ou retire la clé `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\TimeFlies` (utilisateur courant, sans droits administrateur).
-* Case **« Notification du coup de vieux chaque matin »** (cochée par défaut) et **heure** (liste par quart d'heure, 9:00 par défaut).
+* Case **« Notification du coup de vieux au lancement de TimeFlies (une fois par jour) »** (cochée par défaut). Plus d'heure à choisir depuis le 20/11/2026 : la notification part au lancement (voir `WindowsTray.template.md`).
 * Case **« Garder TimeFlies dans la barre des tâches quand je ferme la fenêtre »** (cochée par défaut) : fermer la fenêtre la cache au lieu de quitter l'application (voir `WindowsTray.template.md`).
 
 #### Panneau « À propos »
@@ -122,7 +122,8 @@ Valeurs par défaut décidées le 13/11/2026.
 │  WINDOWS                                                          │
 │  ┌─────────────────────────────────────────────────────────────┐  │
 │  │ ☑ Lancer TimeFlies au démarrage de Windows                  │  │
-│  │ ☑ Notification du coup de vieux chaque matin à [ 09:00 ▼ ]  │  │
+│  │ ☑ Notification du coup de vieux au lancement de TimeFlies   │  │
+│  │   (une fois par jour)                                       │  │
 │  │ ☑ Garder TimeFlies dans la barre des tâches quand je ferme  │  │
 │  │   la fenêtre                                                │  │
 │  └─────────────────────────────────────────────────────────────┘  │
