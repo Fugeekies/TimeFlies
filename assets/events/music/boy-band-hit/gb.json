@@ -33,6 +33,17 @@
     "note": "Sortie selon l'infobox. Wikidata Q27979 : même date."
   },
   {
+    "id": "single-best-song-ever-one-direction-2013",
+    "date": "2013-07-22",
+    "title": {
+      "fr": "Best Song Ever (One Direction)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Best_Song_Ever_(chanson_de_One_Direction)",
+    "note": "Sortie selon l'infobox. Wikidata Q14180932 : même date."
+  },
+  {
     "id": "single-story-of-my-life-2013",
     "date": "2013-10-28",
     "title": {

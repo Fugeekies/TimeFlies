@@ -42,5 +42,80 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Triplettes_de_Belleville",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q779517 : même date."
+  },
+  {
+    "id": "film-kirikou-et-les-betes-sauvages-2005",
+    "date": "2005-12-07",
+    "title": {
+      "fr": "Kirikou et les Bêtes sauvages",
+      "en": "Kirikou and the Wild Beasts",
+      "de": "Kiriku und die wilden Tiere",
+      "it": "Kirikù e gli animali selvaggi",
+      "es": "Kirikú y las bestias salvajes"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Kirikou_et_les_Bêtes_sauvages",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2724377 : même date."
+  },
+  {
+    "id": "film-persepolis-2007",
+    "date": "2007-06-27",
+    "title": {
+      "fr": "Persepolis",
+      "en": "Persepolis",
+      "de": "Persepolis",
+      "it": "Persepolis",
+      "es": "Persépolis"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Persepolis_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q477965 : même date."
+  },
+  {
+    "id": "film-ernest-et-celestine-2012",
+    "date": "2012-12-12",
+    "title": {
+      "fr": "Ernest et Célestine",
+      "en": "Ernest & Celestine",
+      "de": "Ernest & Célestine",
+      "it": "Ernest & Celestine",
+      "es": "Ernest y Célestine"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ernest_et_Célestine_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3057240 : année seulement."
+  },
+  {
+    "id": "film-le-petit-prince-2015",
+    "date": "2015-07-29",
+    "title": {
+      "fr": "Le Petit Prince",
+      "en": "The Little Prince",
+      "de": "Der Kleine Prinz",
+      "it": "Il piccolo principe",
+      "es": "El principito"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Petit_Prince_(film,_2015)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q16386722 : même date."
+  },
+  {
+    "id": "film-asterix-le-secret-de-la-potion-magique-2018",
+    "date": "2018-12-05",
+    "title": {
+      "fr": "Astérix : Le Secret de la potion magique",
+      "en": "Asterix: The Secret of the Magic Potion",
+      "de": "Asterix und das Geheimnis des Zaubertranks",
+      "it": "Asterix e il segreto della pozione magica",
+      "es": "Astérix: El secreto de la poción mágica"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Astérix_:_Le_Secret_de_la_potion_magique",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q48757642 : même date."
   }
 ]

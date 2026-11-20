@@ -42,5 +42,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Moi…_Lolita",
     "note": "Sortie originale selon le texte de l'article. Wikidata Q26402 : année ou mois seulement."
+  },
+  {
+    "id": "single-andalouse-kendji-girac-2014",
+    "date": "2014-08-18",
+    "title": {
+      "fr": "Andalouse (Kendji Girac)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Andalouse_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q18636033 : même date."
   }
 ]

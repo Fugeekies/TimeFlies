@@ -27,6 +27,36 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1044635 : même date."
   },
   {
+    "id": "series-papa-schultz-1965",
+    "date": "1965-09-17",
+    "title": {
+      "fr": "Papa Schultz",
+      "en": "Hogan's Heroes",
+      "de": "Ein Käfig voller Helden",
+      "it": "Gli eroi di Hogan",
+      "es": "Los héroes de Hogan"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Papa_Schultz",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q431917 : même date."
+  },
+  {
+    "id": "series-mash-1972",
+    "date": "1972-09-17",
+    "title": {
+      "fr": "MASH",
+      "en": "M*A*S*H",
+      "de": "M*A*S*H",
+      "it": "M*A*S*H",
+      "es": "MASH"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/MASH_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q494244 : même date."
+  },
+  {
     "id": "series-happy-days-1974",
     "date": "1974-01-15",
     "title": {
@@ -36,6 +66,21 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Happy_Days_(série_télévisée)",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q518589 : même date."
+  },
+  {
+    "id": "series-taxi-1978",
+    "date": "1978-09-12",
+    "title": {
+      "fr": "Taxi",
+      "en": "Taxi",
+      "de": "Taxi",
+      "it": "Taxi",
+      "es": "Taxi"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Taxi_(série_télévisée,_1978)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q427529 : même date."
   },
   {
     "id": "series-arnold-et-willy-1978",
@@ -78,6 +123,36 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Madame_est_servie",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1623411 : même date."
+  },
+  {
+    "id": "series-les-craquantes-1985",
+    "date": "1985-09-14",
+    "title": {
+      "fr": "Les Craquantes",
+      "en": "The Golden Girls",
+      "de": "Golden Girls",
+      "it": "Cuori senza età",
+      "es": "The Golden Girls"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Les_Craquantes",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q912467 : même date."
+  },
+  {
+    "id": "series-alf-1986",
+    "date": "1986-09-22",
+    "title": {
+      "fr": "Alf",
+      "en": "ALF",
+      "de": "Alf",
+      "it": "ALF",
+      "es": "ALF"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Alf_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q264221 : même date."
   },
   {
     "id": "series-maries-deux-enfants-1987",
@@ -123,6 +198,21 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Les_Années_coup_de_cœur",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q691581 : même date."
+  },
+  {
+    "id": "series-murphy-brown-1988",
+    "date": "1988-11-14",
+    "title": {
+      "fr": "Murphy Brown",
+      "en": "Murphy Brown",
+      "de": "Murphy Brown",
+      "it": "Murphy Brown",
+      "es": "Murphy Brown"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Murphy_Brown",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q521718 : même date."
   },
   {
     "id": "series-seinfeld-1989",
@@ -181,6 +271,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q309063 : même date."
   },
   {
+    "id": "series-notre-belle-famille-1991",
+    "date": "1991-09-20",
+    "title": {
+      "fr": "Notre belle famille",
+      "en": "Step by Step",
+      "de": "Eine starke Familie",
+      "it": "Una bionda per papà",
+      "es": "Step by Step"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Notre_belle_famille",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q658216 : même date."
+  },
+  {
     "id": "series-frasier-1993",
     "date": "1993-09-16",
     "title": {
@@ -218,6 +323,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q79784 : même date."
   },
   {
+    "id": "series-tout-le-monde-aime-raymond-1996",
+    "date": "1996-09-13",
+    "title": {
+      "fr": "Tout le monde aime Raymond",
+      "en": "Everybody Loves Raymond",
+      "de": "Alle lieben Raymond",
+      "it": "Tutti amano Raymond",
+      "es": "Everybody Loves Raymond"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tout_le_monde_aime_Raymond",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q208568 : même date."
+  },
+  {
     "id": "series-sex-and-the-city-1998",
     "date": "1998-06-06",
     "title": {
@@ -241,6 +361,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q208072 : même date."
   },
   {
+    "id": "series-will-et-grace-1998",
+    "date": "1998-09-21",
+    "title": {
+      "fr": "Will et Grace",
+      "en": "Will & Grace",
+      "de": "Will & Grace",
+      "it": "Will & Grace",
+      "es": "Will & Grace"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Will_et_Grace",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q212135 : même date."
+  },
+  {
     "id": "series-malcolm-2000",
     "date": "2000-01-09",
     "title": {
@@ -253,6 +388,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Malcolm_(série_télévisée)",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q242596 : même date."
+  },
+  {
+    "id": "series-larry-et-son-nombril-2000",
+    "date": "2000-10-14",
+    "title": {
+      "fr": "Larry et son nombril",
+      "en": "Curb Your Enthusiasm",
+      "de": "Lass es, Larry!",
+      "it": "Curb Your Enthusiasm",
+      "es": "Curb Your Enthusiasm"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Larry_et_son_nombril",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23722 : donne une autre date : 2000-10-15."
   },
   {
     "id": "series-scrubs-2001",
@@ -305,6 +455,36 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q147235 : même date."
   },
   {
+    "id": "series-hannah-montana-2006",
+    "date": "2006-03-24",
+    "title": {
+      "fr": "Hannah Montana",
+      "en": "Hannah Montana",
+      "de": "Hannah Montana",
+      "it": "Hannah Montana",
+      "es": "Hannah Montana"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hannah_Montana",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q126631 : même date."
+  },
+  {
+    "id": "series-30-rock-2006",
+    "date": "2006-10-11",
+    "title": {
+      "fr": "30 Rock",
+      "en": "30 Rock",
+      "de": "30 Rock",
+      "it": "30 Rock",
+      "es": "30 Rock"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/30_Rock",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q189350 : même date."
+  },
+  {
     "id": "series-the-big-bang-theory-2007",
     "date": "2007-09-24",
     "title": {
@@ -314,6 +494,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/The_Big_Bang_Theory",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q8539 : même date."
+  },
+  {
+    "id": "series-parks-and-recreation-2009",
+    "date": "2009-04-09",
+    "title": {
+      "fr": "Parks and Recreation",
+      "en": "Parks and Recreation",
+      "de": "Parks and Recreation",
+      "it": "Parks and Recreation",
+      "es": "Parks and Recreation"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Parks_and_Recreation",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q218035 : même date."
   },
   {
     "id": "series-modern-family-2009",
@@ -327,6 +522,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q16756 : même date."
   },
   {
+    "id": "series-new-girl-2011",
+    "date": "2011-09-20",
+    "title": {
+      "fr": "New Girl",
+      "en": "New Girl",
+      "de": "New Girl",
+      "it": "New Girl",
+      "es": "New Girl"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/New_Girl",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q844059 : même date."
+  },
+  {
     "id": "series-brooklyn-nine-nine-2013",
     "date": "2013-09-17",
     "title": {
@@ -336,5 +546,35 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Brooklyn_Nine-Nine",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q13417244 : même date."
+  },
+  {
+    "id": "series-the-good-place-2016",
+    "date": "2016-09-19",
+    "title": {
+      "fr": "The Good Place",
+      "en": "The Good Place",
+      "de": "The Good Place",
+      "it": "The Good Place",
+      "es": "The Good Place"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Good_Place",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q22908690 : même date."
+  },
+  {
+    "id": "series-ted-lasso-2020",
+    "date": "2020-08-14",
+    "title": {
+      "fr": "Ted Lasso",
+      "en": "Ted Lasso",
+      "de": "Ted Lasso",
+      "it": "Ted Lasso",
+      "es": "Ted Lasso"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ted_Lasso",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q96407897 : même date."
   }
 ]

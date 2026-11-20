@@ -1,5 +1,20 @@
 [
   {
+    "id": "series-the-real-world-1992",
+    "date": "1992-05-21",
+    "title": {
+      "fr": "The Real World",
+      "en": "The Real World",
+      "de": "The Real World",
+      "it": "The Real World",
+      "es": "The Real World"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Real_World",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q743738 : même date."
+  },
+  {
     "id": "series-the-osbournes-2002",
     "date": "2002-03-05",
     "title": {
@@ -9,6 +24,19 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/The_Osbournes",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1145002 : même date."
+  },
+  {
+    "id": "series-the-bachelor-2002",
+    "date": "2002-03-25",
+    "title": {
+      "fr": "The Bachelor",
+      "en": "The Bachelor",
+      "es": "The Bachelor"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Bachelor_(émission_de_téléréalité_américaine)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q700722 : même date."
   },
   {
     "id": "series-american-idol-2002",

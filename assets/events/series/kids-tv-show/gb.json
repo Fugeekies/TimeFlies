@@ -1,5 +1,20 @@
 [
   {
+    "id": "series-art-attack-1990",
+    "date": "1990-06-15",
+    "title": {
+      "fr": "Art Attack",
+      "en": "Art Attack",
+      "de": "Art Attack",
+      "it": "Art Attack",
+      "es": "Art Attack"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Art_Attack",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q705388 : même date."
+  },
+  {
     "id": "series-les-teletubbies-1997",
     "date": "1997-03-31",
     "title": {

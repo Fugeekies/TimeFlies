@@ -1,5 +1,16 @@
 [
   {
+    "id": "album-highway-61-revisited-bob-dylan-1965",
+    "date": "1965-08-30",
+    "title": {
+      "fr": "Highway 61 Revisited (Bob Dylan)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Highway_61_Revisited",
+    "note": "Sortie selon l'infobox. Wikidata Q217211 : même date."
+  },
+  {
     "id": "album-pet-sounds-1966",
     "date": "1966-05-16",
     "title": {
@@ -9,6 +20,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Pet_Sounds",
     "note": "Sortie originale selon le texte de l'article. Wikidata Q212863 : même date."
+  },
+  {
+    "id": "album-tapestry-carole-king-1971",
+    "date": "1971-02-10",
+    "title": {
+      "fr": "Tapestry (Carole King)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tapestry_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q411032 : même date."
+  },
+  {
+    "id": "album-born-to-run-bruce-springsteen-1975",
+    "date": "1975-09-01",
+    "title": {
+      "fr": "Born to Run (Bruce Springsteen)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Born_to_Run",
+    "note": "Sortie selon l'infobox. Wikidata Q752366 : donne une autre date : 1975-08-25."
   },
   {
     "id": "album-thriller-1982",
@@ -44,6 +77,17 @@
     "note": "Sortie originale selon le texte de l'article. Wikidata Q253004 : même date."
   },
   {
+    "id": "album-appetite-for-destruction-guns-n-roses-1987",
+    "date": "1987-07-21",
+    "title": {
+      "fr": "Appetite for Destruction (Guns N' Roses)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Appetite_for_Destruction",
+    "note": "Sortie selon l'infobox. Wikidata Q270690 : même date."
+  },
+  {
     "id": "album-bad-1987",
     "date": "1987-08-31",
     "title": {
@@ -75,6 +119,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Nevermind",
     "note": "Sortie selon l'infobox. Wikidata Q17444 : même date."
+  },
+  {
+    "id": "album-hybrid-theory-linkin-park-2000",
+    "date": "2000-10-24",
+    "title": {
+      "fr": "Hybrid Theory (Linkin Park)"
+    },
+    "kind": "album-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Hybrid_Theory",
+    "note": "Sortie selon l'infobox. Wikidata Q19862 : même date."
+  },
+  {
+    "id": "album-come-away-with-me-norah-jones-2002",
+    "date": "2002-02-26",
+    "title": {
+      "fr": "Come Away with Me (Norah Jones)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Come_Away_with_Me",
+    "note": "Sortie selon l'infobox. Wikidata Q868452 : même date."
   },
   {
     "id": "album-1989-2014",

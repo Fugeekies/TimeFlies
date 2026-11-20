@@ -33,6 +33,61 @@
     "note": "Date de décès de l'infobox. Wikidata Q179157 : même date."
   },
   {
+    "id": "death-big-pun-2000",
+    "date": "2000-02-07",
+    "title": {
+      "fr": "Big Pun"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Big_Pun",
+    "note": "Date de décès selon l'infobox. Wikidata Q380656 : même date."
+  },
+  {
+    "id": "death-jam-master-jay-2002",
+    "date": "2002-10-30",
+    "title": {
+      "fr": "Jam Master Jay"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Jam_Master_Jay",
+    "note": "Date de décès selon l'infobox. Wikidata Q462735 : même date."
+  },
+  {
+    "id": "death-ol-dirty-bastard-2004",
+    "date": "2004-11-13",
+    "title": {
+      "fr": "Ol' Dirty Bastard"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Ol'_Dirty_Bastard",
+    "note": "Date de décès selon l'infobox. Wikidata Q336924 : même date."
+  },
+  {
+    "id": "death-adam-yauch-2012",
+    "date": "2012-05-04",
+    "title": {
+      "fr": "Adam Yauch"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Adam_Yauch",
+    "note": "Date de décès selon l'infobox. Wikidata Q344784 : même date."
+  },
+  {
+    "id": "death-lil-peep-2017",
+    "date": "2017-11-15",
+    "title": {
+      "fr": "Lil Peep"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Lil_Peep",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q29388200 : même date."
+  },
+  {
     "id": "death-xxxtentacion-2018",
     "date": "2018-06-18",
     "title": {
@@ -86,6 +141,17 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Pop_Smoke",
     "note": "Date de décès selon le texte de l'article. Wikidata Q81698554 : même date."
+  },
+  {
+    "id": "death-mf-doom-2020",
+    "date": "2020-10-31",
+    "title": {
+      "fr": "MF DOOM"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/MF_DOOM",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q304675 : même date."
   },
   {
     "id": "death-dmx-2021",

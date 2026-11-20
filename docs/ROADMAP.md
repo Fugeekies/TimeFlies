@@ -42,27 +42,27 @@ Chaque type a son **dessin au trait** pour la photo du Polaroïd (`TypeDrawings.
 
 ### Données — Séries & télé
 Sitcoms et séries cultes, téléréalité, émissions jeunesse, dessins animés à la télé.
-- [x] Palier 1 : 166 événements (30 sitcoms, 42 séries dramatiques, 32 séries françaises, 18 téléréalités, 14 émissions jeunesse, 30 dessins animés), première diffusion dans le pays d'origine (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 166 événements (30 sitcoms, 42 séries dramatiques, 32 séries françaises, 18 téléréalités, 14 émissions jeunesse, 30 dessins animés), première diffusion dans le pays d'origine (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 264 après la troisième passe (20/11/2026) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Cinéma
 Blockbusters, films d'animation, comédies françaises, sagas.
-- [x] Palier 1 : 76 films (17 blockbusters, 20 films d'animation, 19 comédies françaises, 20 épisodes de sagas), sortie nationale en France recoupée avec Wikidata (14/11/2026, PR [#6](https://github.com/Fugeekies/TimeFlies/pull/6), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 173 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026) · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 76 films (17 blockbusters, 20 films d'animation, 19 comédies françaises, 20 épisodes de sagas), sortie nationale en France recoupée avec Wikidata (14/11/2026, PR [#6](https://github.com/Fugeekies/TimeFlies/pull/6), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 173 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026) ; 252 après la troisième passe (20/11/2026) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Musique
 Morts d'icônes de la musique, divas, boys bands, albums de rap et de pop, tubes de l'été.
-- [x] Palier 1 : 78 événements (25 morts d'icônes, 12 albums pop, 12 albums de rap, 10 tubes de divas, 10 tubes de boys bands, 9 tubes de l'été), date de sortie originale pour les albums et les singles (15/11/2026, PR [#18](https://github.com/Fugeekies/TimeFlies/pull/18), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 171 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026), dates des albums et des morts relues dans le texte des articles · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 78 événements (25 morts d'icônes, 12 albums pop, 12 albums de rap, 10 tubes de divas, 10 tubes de boys bands, 9 tubes de l'été), date de sortie originale pour les albums et les singles (15/11/2026, PR [#18](https://github.com/Fugeekies/TimeFlies/pull/18), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 171 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026), dates des albums et des morts relues dans le texte des articles ; 301 après la troisième passe (20/11/2026) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Sport
 Stars du foot, victoires des Bleus, Jeux olympiques, records.
-- [x] Palier 1 : 38 événements (23 sommets de stars du foot : Ballons d'or et matchs, 2 victoires des Bleus en Coupe du monde, 5 Jeux olympiques en France, 8 records et exploits) (15/11/2026, PR [#19](https://github.com/Fugeekies/TimeFlies/pull/19), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 150 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026) : trois nouveaux types (titres mondiaux, Grand Chelem, Tour de France) et sans répétition (premier et dernier Ballon d'or d'un joueur, seulement le record du monde actuel de chaque discipline), 14 records actuels et 7 Ballons d'or, dont les Ballons d'or féminins · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 38 événements (23 sommets de stars du foot : Ballons d'or et matchs, 2 victoires des Bleus en Coupe du monde, 5 Jeux olympiques en France, 8 records et exploits) (15/11/2026, PR [#19](https://github.com/Fugeekies/TimeFlies/pull/19), méthode dans [`EVENTS_DATA.md`](EVENTS_DATA.md)) ; 150 après la PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36) (18/11/2026) : trois nouveaux types (titres mondiaux, Grand Chelem, Tour de France) et sans répétition (premier et dernier Ballon d'or d'un joueur, seulement le record du monde actuel de chaque discipline), 14 records actuels et 7 Ballons d'or, dont les Ballons d'or féminins ; 162 après la troisième passe (20/11/2026) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Jeux vidéo & tech
 Consoles, jeux phénomènes, téléphones, réseaux sociaux, formats de musique.
-- [x] Palier 1 : 161 événements (7 consoles Nintendo, 5 PlayStation, 12 consoles portables, 114 jeux phénomènes, 14 réseaux sociaux, 9 formats de musique), sortie en France ou en Europe (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36)). Aucun téléphone : pas de date française au jour près dans les articles · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 161 événements (7 consoles Nintendo, 5 PlayStation, 12 consoles portables, 114 jeux phénomènes, 14 réseaux sociaux, 9 formats de musique), sortie en France ou en Europe (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36)). Aucun téléphone : pas de date française au jour près dans les articles ; 176 après la troisième passe (20/11/2026) · [ ] Palier 2 · [ ] Palier 3
 
 ### Données — Politique & histoire
 Élections, acteurs devenus politiciens, grands événements, familles royales.
-- [x] Palier 1 : 172 événements (12 présidentielles françaises, 21 américaines, 7 acteurs devenus politiciens, 97 grands événements, 35 événements royaux) (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36)) · [ ] Palier 2 · [ ] Palier 3
+- [x] Palier 1 : 172 événements (12 présidentielles françaises, 21 américaines, 7 acteurs devenus politiciens, 97 grands événements, 35 événements royaux) (18/11/2026, PR [#36](https://github.com/Fugeekies/TimeFlies/pull/36)) ; 207 après la troisième passe (20/11/2026) · [ ] Palier 2 · [ ] Palier 3
 
 ### Jalon — Cap des 5 000 événements
 - [ ] Mesurer le chargement et la mémoire sur un vrai téléphone, puis décider : rester en JSON ou passer à une base SQLite précompilée ([`ARCHITECTURE.md`](ARCHITECTURE.md), « Base d'événements »).

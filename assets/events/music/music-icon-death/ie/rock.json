@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-phil-lynott-1986",
+    "date": "1986-01-04",
+    "title": {
+      "fr": "Phil Lynott"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Phil_Lynott",
+    "note": "Date de décès selon l'infobox. Wikidata Q298930 : même date."
+  },
+  {
+    "id": "death-shane-macgowan-2023",
+    "date": "2023-11-30",
+    "title": {
+      "fr": "Shane MacGowan"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Shane_MacGowan",
+    "note": "Date de décès selon l'infobox. Wikidata Q356369 : même date."
+  }
+]

@@ -1,5 +1,35 @@
 [
   {
+    "id": "tech-prince-of-persia-les-sables-du-temps-2004",
+    "date": "2004-02-20",
+    "title": {
+      "fr": "Prince of Persia : Les Sables du Temps",
+      "en": "Prince of Persia: The Sands of Time",
+      "de": "Prince of Persia: The Sands of Time",
+      "it": "Prince of Persia: Le sabbie del tempo",
+      "es": "Prince of Persia: Las Arenas del Tiempo"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Prince_of_Persia_:_Les_Sables_du_Temps",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q715292 : même date."
+  },
+  {
+    "id": "tech-assassin-s-creed-ii-2009",
+    "date": "2009-11-19",
+    "title": {
+      "fr": "Assassin's Creed II",
+      "en": "Assassin's Creed II",
+      "de": "Assassin’s Creed II",
+      "it": "Assassin's Creed II",
+      "es": "Assassin's Creed II"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Assassin's_Creed_II",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q211735 : donne une autre date : 2009-11-20."
+  },
+  {
     "id": "tech-ea-sports-fc-24-2023",
     "date": "2023-09-29",
     "title": {

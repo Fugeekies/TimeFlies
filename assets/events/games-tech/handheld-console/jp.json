@@ -130,5 +130,19 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Nintendo_Switch_Lite",
     "note": "Sortie mondiale le même jour selon l'infobox. Wikidata Q65458682 : même date."
+  },
+  {
+    "id": "tech-playstation-portal-2023",
+    "date": "2023-11-15",
+    "title": {
+      "fr": "PlayStation Portal",
+      "en": "PlayStation Portal",
+      "de": "PlayStation Portal",
+      "es": "PlayStation Portal"
+    },
+    "kind": "product-launch",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/PlayStation_Portal",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q118645698 : même date."
   }
 ]

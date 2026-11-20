@@ -1,5 +1,20 @@
 [
   {
+    "id": "series-le-fugitif-1963",
+    "date": "1963-09-17",
+    "title": {
+      "fr": "Le Fugitif",
+      "en": "The Fugitive",
+      "de": "Auf der Flucht",
+      "it": "Il fuggiasco",
+      "es": "El fugitivo"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Le_Fugitif_(série_télévisée,_1963)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q137034 : même date."
+  },
+  {
     "id": "series-les-mysteres-de-l-ouest-1965",
     "date": "1965-09-17",
     "title": {
@@ -41,6 +56,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q371207 : même date."
   },
   {
+    "id": "series-hawai-police-d-etat-1968",
+    "date": "1968-09-20",
+    "title": {
+      "fr": "Hawaï police d'État",
+      "en": "Hawaii Five-O",
+      "de": "Hawaii Fünf-Null",
+      "it": "Hawaii Squadra Cinque Zero",
+      "es": "Hawaii Five-O"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Hawaï_police_d'État",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q697407 : même date."
+  },
+  {
     "id": "series-les-feux-de-l-amour-1973",
     "date": "1973-03-26",
     "title": {
@@ -54,6 +84,21 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Les_Feux_de_l'amour",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q849627 : même date."
+  },
+  {
+    "id": "series-kojak-1973",
+    "date": "1973-10-24",
+    "title": {
+      "fr": "Kojak",
+      "en": "Kojak",
+      "de": "Kojak – Einsatz in Manhattan",
+      "it": "Kojak",
+      "es": "Kojak"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Kojak_(série_télévisée,_1973)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q510554 : même date."
   },
   {
     "id": "series-starsky-et-hutch-1975",
@@ -141,6 +186,36 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q464123 : même date."
   },
   {
+    "id": "series-deux-flics-a-miami-1984",
+    "date": "1984-09-16",
+    "title": {
+      "fr": "Deux Flics à Miami",
+      "en": "Miami Vice",
+      "de": "Miami Vice",
+      "it": "Miami Vice",
+      "es": "Miami Vice"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Deux_Flics_à_Miami",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q559321 : même date."
+  },
+  {
+    "id": "series-arabesque-1984",
+    "date": "1984-09-30",
+    "title": {
+      "fr": "Arabesque",
+      "en": "Murder, She Wrote",
+      "de": "Mord ist ihr Hobby",
+      "it": "La signora in giallo",
+      "es": "Murder, She Wrote"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Arabesque_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q833322 : même date."
+  },
+  {
     "id": "series-alerte-a-malibu-1989",
     "date": "1989-04-23",
     "title": {
@@ -166,6 +241,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Twin_Peaks_(série_télévisée)",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2085 : même date."
+  },
+  {
+    "id": "series-new-york-police-judiciaire-1990",
+    "date": "1990-09-13",
+    "title": {
+      "fr": "New York, police judiciaire",
+      "en": "Law & Order",
+      "de": "Law & Order",
+      "it": "Law & Order - I due volti della giustizia",
+      "es": "Law & Order"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/New_York,_police_judiciaire",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q321423 : même date."
   },
   {
     "id": "series-beverly-hills-90210-1990",
@@ -195,6 +285,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/X-Files_:_Aux_frontières_du_réel",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2744 : même date."
+  },
+  {
+    "id": "series-new-york-police-blues-1993",
+    "date": "1993-09-21",
+    "title": {
+      "fr": "New York Police Blues",
+      "en": "NYPD Blue",
+      "de": "New York Cops – NYPD Blue",
+      "it": "NYPD - New York Police Department",
+      "es": "NYPD Blue"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/New_York_Police_Blues",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q609274 : même date."
   },
   {
     "id": "series-urgences-1994",
@@ -227,6 +332,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q183513 : même date."
   },
   {
+    "id": "series-ally-mcbeal-1997",
+    "date": "1997-09-08",
+    "title": {
+      "fr": "Ally McBeal",
+      "en": "Ally McBeal",
+      "de": "Ally McBeal",
+      "it": "Ally McBeal",
+      "es": "Ally McBeal"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ally_McBeal",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q244803 : même date."
+  },
+  {
     "id": "series-dawson-1998",
     "date": "1998-01-20",
     "title": {
@@ -255,6 +375,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Soprano",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23628 : même date."
+  },
+  {
+    "id": "series-a-la-maison-blanche-1999",
+    "date": "1999-09-22",
+    "title": {
+      "fr": "À la Maison-Blanche",
+      "en": "The West Wing",
+      "de": "The West Wing – Im Zentrum der Macht",
+      "it": "West Wing - Tutti gli uomini del Presidente",
+      "es": "El ala oeste de la Casa Blanca"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/À_la_Maison-Blanche",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3577037 : même date."
   },
   {
     "id": "series-les-experts-2000",
@@ -365,6 +500,36 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q80044 : même date."
   },
   {
+    "id": "series-esprits-criminels-2005",
+    "date": "2005-09-22",
+    "title": {
+      "fr": "Esprits criminels",
+      "en": "Criminal Minds",
+      "de": "Criminal Minds",
+      "it": "Criminal Minds",
+      "es": "Mentes criminales"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Esprits_criminels",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q202141 : même date."
+  },
+  {
+    "id": "series-dexter-2006",
+    "date": "2006-10-01",
+    "title": {
+      "fr": "Dexter",
+      "en": "Dexter",
+      "de": "Dexter",
+      "it": "Dexter",
+      "es": "Dexter"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dexter_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23577 : même date."
+  },
+  {
     "id": "series-mad-men-2007",
     "date": "2007-07-19",
     "title": {
@@ -385,6 +550,36 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Breaking_Bad",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1079 : même date."
+  },
+  {
+    "id": "series-sons-of-anarchy-2008",
+    "date": "2008-09-03",
+    "title": {
+      "fr": "Sons of Anarchy",
+      "en": "Sons of Anarchy",
+      "de": "Sons of Anarchy",
+      "it": "Sons of Anarchy",
+      "es": "Sons of Anarchy"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Sons_of_Anarchy",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q171254 : même date."
+  },
+  {
+    "id": "series-glee-2009",
+    "date": "2009-05-19",
+    "title": {
+      "fr": "Glee",
+      "en": "Glee",
+      "de": "Glee",
+      "it": "Glee",
+      "es": "Glee"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Glee_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q152178 : même date."
   },
   {
     "id": "series-the-walking-dead-2010",
@@ -410,6 +605,66 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q23572 : même date."
   },
   {
+    "id": "series-house-of-cards-2013",
+    "date": "2013-02-01",
+    "title": {
+      "fr": "House of Cards",
+      "en": "House of Cards",
+      "de": "House of Cards",
+      "it": "House of Cards - Gli intrighi del potere",
+      "es": "House of Cards"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/House_of_Cards_(série_télévisée,_2013)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q3330940 : même date."
+  },
+  {
+    "id": "series-orange-is-the-new-black-2013",
+    "date": "2013-07-11",
+    "title": {
+      "fr": "Orange Is the New Black",
+      "en": "Orange Is the New Black",
+      "de": "Orange Is the New Black",
+      "it": "Orange Is the New Black",
+      "es": "Orange Is the New Black"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Orange_Is_the_New_Black",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q7099650 : même date."
+  },
+  {
+    "id": "series-true-detective-2014",
+    "date": "2014-01-12",
+    "title": {
+      "fr": "True Detective",
+      "en": "True Detective",
+      "de": "True Detective",
+      "it": "True Detective",
+      "es": "True Detective"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/True_Detective",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q7847400 : même date."
+  },
+  {
+    "id": "series-better-call-saul-2015",
+    "date": "2015-02-08",
+    "title": {
+      "fr": "Better Call Saul",
+      "en": "Better Call Saul",
+      "de": "Better Call Saul",
+      "it": "Better Call Saul",
+      "es": "Better Call Saul"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Better_Call_Saul",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q14925221 : même date."
+  },
+  {
     "id": "series-stranger-things-2016",
     "date": "2016-07-15",
     "title": {
@@ -419,6 +674,111 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Stranger_Things",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q19798734 : même date."
+  },
+  {
+    "id": "series-westworld-2016",
+    "date": "2016-10-02",
+    "title": {
+      "fr": "Westworld",
+      "en": "Westworld",
+      "de": "Westworld",
+      "it": "Westworld - Dove tutto è concesso",
+      "es": "Westworld"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Westworld_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q17572811 : même date."
+  },
+  {
+    "id": "series-the-handmaid-s-tale-la-servante-ecarlate-2017",
+    "date": "2017-04-26",
+    "title": {
+      "fr": "The Handmaid's Tale : La Servante écarlate",
+      "en": "The Handmaid's Tale",
+      "de": "The Handmaid’s Tale – Der Report der Magd",
+      "it": "The Handmaid's Tale",
+      "es": "El cuento de la criada"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Handmaid's_Tale_:_La_Servante_écarlate",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q25207350 : même date."
+  },
+  {
+    "id": "series-succession-2018",
+    "date": "2018-06-03",
+    "title": {
+      "fr": "Succession",
+      "en": "Succession",
+      "de": "Succession",
+      "it": "Succession",
+      "es": "Succession"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Succession_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q30599007 : même date."
+  },
+  {
+    "id": "series-the-boys-2019",
+    "date": "2019-07-26",
+    "title": {
+      "fr": "The Boys",
+      "en": "The Boys",
+      "de": "The Boys",
+      "it": "The Boys",
+      "es": "The Boys"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Boys_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q48796994 : même date."
+  },
+  {
+    "id": "series-the-mandalorian-2019",
+    "date": "2019-11-12",
+    "title": {
+      "fr": "The Mandalorian",
+      "en": "The Mandalorian",
+      "de": "The Mandalorian",
+      "it": "The Mandalorian",
+      "es": "The Mandalorian"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Mandalorian",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q56876444 : même date."
+  },
+  {
+    "id": "series-le-jeu-de-la-dame-2020",
+    "date": "2020-10-23",
+    "title": {
+      "fr": "Le Jeu de la dame",
+      "en": "The Queen's Gambit",
+      "de": "Das Damengambit",
+      "it": "La regina degli scacchi",
+      "es": "Gambito de dama"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Jeu_de_la_dame",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q85808226 : même date."
+  },
+  {
+    "id": "series-la-chronique-des-bridgerton-2020",
+    "date": "2020-12-25",
+    "title": {
+      "fr": "La Chronique des Bridgerton",
+      "en": "Bridgerton",
+      "de": "Bridgerton",
+      "it": "Bridgerton",
+      "es": "Bridgerton"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/La_Chronique_des_Bridgerton",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q85748936 : même date."
   },
   {
     "id": "series-mercredi-2022",
@@ -434,5 +794,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Mercredi_(série_télévisée)",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q105553568 : même date."
+  },
+  {
+    "id": "series-the-last-of-us-2023",
+    "date": "2023-01-15",
+    "title": {
+      "fr": "The Last of Us",
+      "en": "The Last of Us",
+      "de": "The Last of Us",
+      "it": "The Last of Us",
+      "es": "The Last of Us"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Last_of_Us_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q87131973 : même date."
   }
 ]

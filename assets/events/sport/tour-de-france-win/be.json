@@ -1,5 +1,80 @@
 [
   {
+    "id": "sport-tour-de-france-odile-defraye-1912",
+    "date": "1912-07-28",
+    "title": {
+      "fr": "Victoire d'Odile Defraye au Tour de France (1912)",
+      "en": "Odile Defraye wins the Tour de France (1912)",
+      "de": "Odile Defraye gewinnt die Tour de France (1912)",
+      "it": "Odile Defraye vince il Tour de France (1912)",
+      "es": "Odile Defraye gana el Tour de Francia (1912)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1912",
+    "note": "Arrivée à Paris et vainqueur selon l'infobox. Wikidata Q579685 : même date."
+  },
+  {
+    "id": "sport-tour-de-france-philippe-thys-1913",
+    "date": "1913-07-27",
+    "title": {
+      "fr": "Première victoire de Philippe Thys au Tour de France (1913)",
+      "en": "Philippe Thys's first Tour de France win (1913)",
+      "de": "Erster Tour-de-France-Sieg von Philippe Thys (1913)",
+      "it": "Prima vittoria di Philippe Thys al Tour de France (1913)",
+      "es": "Primera victoria de Philippe Thys en el Tour de Francia (1913)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1913",
+    "note": "Arrivée à Paris et vainqueur selon l'infobox. Wikidata Q849885 : même date."
+  },
+  {
+    "id": "sport-tour-de-france-maurice-de-waele-1929",
+    "date": "1929-07-28",
+    "title": {
+      "fr": "Victoire de Maurice De Waele au Tour de France (1929)",
+      "en": "Maurice De Waele wins the Tour de France (1929)",
+      "de": "Maurice De Waele gewinnt die Tour de France (1929)",
+      "it": "Maurice De Waele vince il Tour de France (1929)",
+      "es": "Maurice De Waele gana el Tour de Francia (1929)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1929",
+    "note": "Arrivée à Paris et vainqueur selon l'infobox. Wikidata Q733200 : même date."
+  },
+  {
+    "id": "sport-tour-de-france-sylvere-maes-1936",
+    "date": "1936-08-02",
+    "title": {
+      "fr": "Première victoire de Sylvère Maes au Tour de France (1936)",
+      "en": "Sylvère Maes's first Tour de France win (1936)",
+      "de": "Erster Tour-de-France-Sieg von Sylvère Maes (1936)",
+      "it": "Prima vittoria di Sylvère Maes al Tour de France (1936)",
+      "es": "Primera victoria de Sylvère Maes en el Tour de Francia (1936)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1936",
+    "note": "Arrivée à Paris et vainqueur selon l'infobox. Wikidata Q384895 : même date."
+  },
+  {
+    "id": "sport-tour-de-france-sylvere-maes-1939",
+    "date": "1939-07-30",
+    "title": {
+      "fr": "Dernière victoire de Sylvère Maes au Tour de France (1939)",
+      "en": "Sylvère Maes's last Tour de France win (1939)",
+      "de": "Letzter Tour-de-France-Sieg von Sylvère Maes (1939)",
+      "it": "Ultima vittoria di Sylvère Maes al Tour de France (1939)",
+      "es": "Última victoria de Sylvère Maes en el Tour de Francia (1939)"
+    },
+    "kind": "sport",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tour_de_France_1939",
+    "note": "Arrivée à Paris et vainqueur selon l'infobox. Wikidata Q916617 : même date."
+  },
+  {
     "id": "sport-tour-de-france-eddy-merckx-1969",
     "date": "1969-07-20",
     "title": {

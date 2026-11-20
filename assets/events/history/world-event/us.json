@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-krach-de-1929-jeudi-noir-1929",
+    "date": "1929-10-24",
+    "title": {
+      "fr": "Krach de 1929 (Jeudi noir)",
+      "en": "Wall Street Crash of 1929 (Black Thursday)",
+      "de": "Börsencrash von 1929 (Schwarzer Donnerstag)",
+      "it": "Crollo di Wall Street del 1929 (giovedì nero)",
+      "es": "Crac del 29 (jueves negro)"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Krach_de_1929",
+    "note": "Date selon l'infobox. Wikidata Q201684 : même date."
+  },
+  {
     "id": "history-attaque-de-pearl-harbor-1941",
     "date": "1941-12-07",
     "title": {
@@ -238,5 +253,35 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Neil_Armstrong",
     "note": "Date de décès selon l'infobox et le texte de l'article. Wikidata Q1615 : même date."
+  },
+  {
+    "id": "history-mort-de-george-floyd-2020",
+    "date": "2020-05-25",
+    "title": {
+      "fr": "Mort de George Floyd",
+      "en": "Murder of George Floyd",
+      "de": "Tod von George Floyd",
+      "it": "Morte di George Floyd",
+      "es": "Muerte de George Floyd"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Meurtre_de_George_Floyd",
+    "note": "Date selon l'infobox. Wikidata Q95579249 : même date."
+  },
+  {
+    "id": "history-assaut-du-capitole-2021",
+    "date": "2021-01-06",
+    "title": {
+      "fr": "Assaut du Capitole",
+      "en": "January 6 United States Capitol attack",
+      "de": "Sturm auf das Kapitol",
+      "it": "Assalto al Campidoglio",
+      "es": "Asalto al Capitolio"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Assaut_du_Capitole_par_des_partisans_de_Donald_Trump",
+    "note": "Date selon l'infobox. Wikidata Q104705419 : même date."
   }
 ]

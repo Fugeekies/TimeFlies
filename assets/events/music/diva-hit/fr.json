@@ -11,6 +11,17 @@
     "note": "Sortie originale selon le texte de l'article. Wikidata Q2558349 : année ou mois seulement."
   },
   {
+    "id": "single-sans-contrefacon-mylene-farmer-1987",
+    "date": "1987-10-16",
+    "title": {
+      "fr": "Sans contrefaçon (Mylène Farmer)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Sans_contrefaçon",
+    "note": "Sortie selon l'infobox. Wikidata Q3472413 : mois seulement."
+  },
+  {
     "id": "single-desenchantee-1991",
     "date": "1991-03-18",
     "title": {
@@ -20,5 +31,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Désenchantée",
     "note": "Sortie originale selon le texte de l'article. Wikidata Q2576448 : pas de date."
+  },
+  {
+    "id": "single-djadja-aya-nakamura-2018",
+    "date": "2018-04-06",
+    "title": {
+      "fr": "Djadja (Aya Nakamura)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Djadja",
+    "note": "Sortie selon l'infobox. Wikidata Q55596661 : mois seulement."
   }
 ]

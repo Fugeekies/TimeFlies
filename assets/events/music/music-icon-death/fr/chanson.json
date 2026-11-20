@@ -11,6 +11,17 @@
     "note": "Date de décès de l'infobox. Wikidata Q1631 donne deux dates : 1963-10-10 et 1963-10-11 (annonce officielle le 11)."
   },
   {
+    "id": "death-luis-mariano-1970",
+    "date": "1970-07-14",
+    "title": {
+      "fr": "Luis Mariano"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Luis_Mariano",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2087642 : même date."
+  },
+  {
     "id": "death-bourvil-1970",
     "date": "1970-09-23",
     "title": {
@@ -20,6 +31,28 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Bourvil",
     "note": "Date de décès selon le texte de l'article. Wikidata Q2750 : même date."
+  },
+  {
+    "id": "death-maurice-chevalier-1972",
+    "date": "1972-01-01",
+    "title": {
+      "fr": "Maurice Chevalier"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Maurice_Chevalier",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q106001 : même date."
+  },
+  {
+    "id": "death-boby-lapointe-1972",
+    "date": "1972-06-30",
+    "title": {
+      "fr": "Boby Lapointe"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Boby_Lapointe",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q888912 : même date."
   },
   {
     "id": "death-mike-brant-1975",
@@ -132,6 +165,28 @@
     "note": "Date de décès selon le texte de l'article. Wikidata Q320146 : même date."
   },
   {
+    "id": "death-marcel-mouloudji-1994",
+    "date": "1994-06-14",
+    "title": {
+      "fr": "Marcel Mouloudji"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Marcel_Mouloudji",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q993521 : même date."
+  },
+  {
+    "id": "death-nino-ferrer-1998",
+    "date": "1998-08-13",
+    "title": {
+      "fr": "Nino Ferrer"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nino_Ferrer",
+    "note": "Date de décès selon l'infobox. Wikidata Q1377646 : même date."
+  },
+  {
     "id": "death-charles-trenet-2001",
     "date": "2001-02-19",
     "title": {
@@ -154,6 +209,17 @@
     "note": "Date de décès selon le texte de l'article. Wikidata Q160433 : même date."
   },
   {
+    "id": "death-claude-nougaro-2004",
+    "date": "2004-03-04",
+    "title": {
+      "fr": "Claude Nougaro"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Claude_Nougaro",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q719314 : même date."
+  },
+  {
     "id": "death-sacha-distel-2004",
     "date": "2004-07-22",
     "title": {
@@ -163,6 +229,28 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Sacha_Distel",
     "note": "Date de décès selon le texte de l'article. Wikidata Q370928 : même date."
+  },
+  {
+    "id": "death-serge-reggiani-2004",
+    "date": "2004-07-22",
+    "title": {
+      "fr": "Serge Reggiani"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Serge_Reggiani",
+    "note": "Date de décès selon l'infobox. Wikidata Q461111 : même date."
+  },
+  {
+    "id": "death-pierre-bachelet-2005",
+    "date": "2005-02-15",
+    "title": {
+      "fr": "Pierre Bachelet"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Pierre_Bachelet",
+    "note": "Date de décès selon l'infobox. Wikidata Q1373824 : même date."
   },
   {
     "id": "death-henri-salvador-2008",
@@ -231,6 +319,17 @@
     "note": "Date de décès de l'introduction de l'article. Wikidata Q208258 : même date."
   },
   {
+    "id": "death-rachid-taha-2018",
+    "date": "2018-09-12",
+    "title": {
+      "fr": "Rachid Taha"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Rachid_Taha",
+    "note": "Date de décès selon l'infobox. Wikidata Q502990 : même date."
+  },
+  {
     "id": "death-charles-aznavour-2018",
     "date": "2018-10-01",
     "title": {
@@ -251,6 +350,28 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Michel_Legrand",
     "note": "Date de décès selon le texte de l'article. Wikidata Q313281 : même date."
+  },
+  {
+    "id": "death-marie-laforet-2019",
+    "date": "2019-11-02",
+    "title": {
+      "fr": "Marie Laforêt"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Marie_Laforêt",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q239807 : même date."
+  },
+  {
+    "id": "death-juliette-greco-2020",
+    "date": "2020-09-23",
+    "title": {
+      "fr": "Juliette Gréco"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Juliette_Gréco",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q156485 : même date."
   },
   {
     "id": "death-jane-birkin-2023",

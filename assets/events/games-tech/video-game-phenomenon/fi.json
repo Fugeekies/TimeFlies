@@ -9,5 +9,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Clash_of_Clans",
     "note": "Sortie mondiale sur iOS selon l'infobox. Wikidata Q13399098 : même date."
+  },
+  {
+    "id": "tech-clash-royale-2016",
+    "date": "2016-03-02",
+    "title": {
+      "fr": "Clash Royale",
+      "en": "Clash Royale",
+      "de": "Clash Royale",
+      "it": "Clash Royale",
+      "es": "Clash Royale"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Clash_Royale",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q22095476 : même date."
   }
 ]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-falco-1998",
+    "date": "1998-02-06",
+    "title": {
+      "fr": "Falco"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Falco_(chanteur)",
+    "note": "Date de décès selon l'infobox. Wikidata Q44398 : même date."
+  },
+  {
+    "id": "death-udo-jurgens-2014",
+    "date": "2014-12-21",
+    "title": {
+      "fr": "Udo Jürgens"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Udo_Jürgens",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q155236 : même date."
+  }
+]

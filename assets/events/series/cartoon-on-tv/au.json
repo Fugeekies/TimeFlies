@@ -1,0 +1,17 @@
+[
+  {
+    "id": "series-bluey-2018",
+    "date": "2018-10-01",
+    "title": {
+      "fr": "Bluey",
+      "en": "Bluey",
+      "de": "Bluey",
+      "it": "Bluey",
+      "es": "Bluey"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bluey_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q39071378 : même date."
+  }
+]

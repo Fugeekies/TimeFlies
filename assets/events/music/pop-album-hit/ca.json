@@ -1,5 +1,16 @@
 [
   {
+    "id": "album-d-eux-celine-dion-1995",
+    "date": "1995-03-28",
+    "title": {
+      "fr": "D'eux (Céline Dion)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/D'eux",
+    "note": "Sortie selon l'infobox. Wikidata Q987317 : donne une autre date : 1995-03-30."
+  },
+  {
     "id": "album-jagged-little-pill-1995",
     "date": "1995-06-13",
     "title": {

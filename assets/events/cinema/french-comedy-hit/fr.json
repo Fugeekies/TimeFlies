@@ -85,6 +85,20 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q634489 : pas de date française."
   },
   {
+    "id": "film-le-gendarme-se-marie-1968",
+    "date": "1968-10-30",
+    "title": {
+      "fr": "Le Gendarme se marie",
+      "en": "Le Gendarme se marie",
+      "de": "Balduin, der Heiratsmuffel",
+      "it": "Calma ragazze, oggi mi sposo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Gendarme_se_marie",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q140602 : même date."
+  },
+  {
     "id": "film-hibernatus-1969",
     "date": "1969-09-10",
     "title": {
@@ -110,6 +124,33 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/La_Folie_des_grandeurs",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q705247 : pas de date française."
+  },
+  {
+    "id": "film-le-viager-1972",
+    "date": "1972-01-25",
+    "title": {
+      "fr": "Le Viager",
+      "en": "Le Viager",
+      "it": "Il vitalizio"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Viager",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3228079 : année seulement."
+  },
+  {
+    "id": "film-l-aventure-c-est-l-aventure-1972",
+    "date": "1972-05-04",
+    "title": {
+      "fr": "L'aventure c'est l'aventure",
+      "en": "L'aventure, c'est l'aventure",
+      "de": "Die Entführer lassen grüßen",
+      "it": "L'avventura è l'avventura"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/L'aventure_c'est_l'aventure",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q765339 : année seulement."
   },
   {
     "id": "film-le-grand-blond-avec-une-chaussure-noire-1972",
@@ -183,6 +224,20 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/L'Aile_ou_la_Cuisse",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q994421 : même date."
+  },
+  {
+    "id": "film-le-jouet-1976",
+    "date": "1976-12-08",
+    "title": {
+      "fr": "Le Jouet",
+      "en": "The Toy",
+      "de": "Das Spielzeug",
+      "it": "Professione... giocattolo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Jouet",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1170439 : même date."
   },
   {
     "id": "film-la-cage-aux-folles-1978",
@@ -317,6 +372,20 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q176053 : pas de date française."
   },
   {
+    "id": "film-la-vie-est-un-long-fleuve-tranquille-1988",
+    "date": "1988-02-03",
+    "title": {
+      "fr": "La vie est un long fleuve tranquille",
+      "en": "Life Is a Long Quiet River",
+      "de": "Das Leben ist ein langer, ruhiger Fluß",
+      "it": "La vita è un lungo fiume tranquillo"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_vie_est_un_long_fleuve_tranquille",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q638315 : année seulement."
+  },
+  {
     "id": "film-les-visiteurs-1993",
     "date": "1993-01-27",
     "title": {
@@ -369,6 +438,18 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q2891031 : pas de date française."
   },
   {
+    "id": "film-le-pari-1997",
+    "date": "1997-10-15",
+    "title": {
+      "fr": "Le Pari",
+      "en": "The Bet"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Pari_(film,_1997)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3225250 : année seulement."
+  },
+  {
     "id": "film-les-couloirs-du-temps-les-visiteurs-2-1998",
     "date": "1998-02-11",
     "title": {
@@ -409,6 +490,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Le_D%C3%AEner_de_cons_(film)",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q655315 : pas de date française."
+  },
+  {
+    "id": "film-asterix-et-obelix-contre-cesar-1999",
+    "date": "1999-02-03",
+    "title": {
+      "fr": "Astérix et Obélix contre César",
+      "en": "Asterix and Obelix vs. Caesar",
+      "de": "Asterix und Obelix gegen Caesar",
+      "it": "Asterix & Obelix contro Cesare",
+      "es": "Astérix y Obélix contra César"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Astérix_et_Obélix_contre_César",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q314642 : même date."
+  },
+  {
+    "id": "film-le-gout-des-autres-2000",
+    "date": "2000-03-01",
+    "title": {
+      "fr": "Le Goût des autres",
+      "en": "The Taste of Others",
+      "de": "Lust auf Anderes",
+      "it": "Il gusto degli altri",
+      "es": "Para todos los gustos"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Goût_des_autres",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q348013 : année seulement."
   },
   {
     "id": "film-le-placard-2001",
@@ -582,6 +693,34 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q595 : pas de date française."
   },
   {
+    "id": "film-les-profs-2013",
+    "date": "2013-04-17",
+    "title": {
+      "fr": "Les Profs",
+      "en": "Serial Teachers",
+      "de": "School Camp – Fies gegen mies"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Profs_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q3234929 : année seulement."
+  },
+  {
+    "id": "film-supercondriaque-2014",
+    "date": "2014-02-26",
+    "title": {
+      "fr": "Supercondriaque",
+      "en": "Supercondriaque",
+      "de": "Super-Hypochonder",
+      "it": "Supercondriaco - Ridere fa bene alla salute",
+      "es": "Supercondriaque"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Supercondriaque",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q15814138 : année seulement."
+  },
+  {
     "id": "film-qu-est-ce-qu-on-a-fait-au-bon-dieu-2014",
     "date": "2014-04-16",
     "title": {
@@ -595,6 +734,35 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Qu'est-ce_qu'on_a_fait_au_Bon_Dieu_%3F",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q16671761 : même date."
+  },
+  {
+    "id": "film-babysitting-2014",
+    "date": "2014-04-16",
+    "title": {
+      "fr": "Babysitting",
+      "en": "Babysitting",
+      "it": "Babysitting",
+      "es": "Se nos fue de las manos"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Babysitting_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q16530861 : même date."
+  },
+  {
+    "id": "film-la-famille-belier-2014",
+    "date": "2014-12-17",
+    "title": {
+      "fr": "La Famille Bélier",
+      "en": "La Famille Bélier",
+      "de": "Verstehen Sie die Béliers?",
+      "it": "La famiglia Bélier",
+      "es": "La familia Bélier"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Famille_Bélier",
+    "note": "Sortie nationale en France, fiche technique de l'article (après une avant-première le 3 octobre 2014). Wikidata Q18214711 : année seulement."
   },
   {
     "id": "film-les-visiteurs-la-revolution-2016",
@@ -623,6 +791,62 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Le_Sens_de_la_fête",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q30139493 : pas de date française."
+  },
+  {
+    "id": "film-le-brio-2017",
+    "date": "2017-11-22",
+    "title": {
+      "fr": "Le Brio",
+      "en": "Le Brio",
+      "de": "Die brillante Mademoiselle Neïla",
+      "it": "Quasi nemici - L'importante è avere ragione",
+      "es": "Una razón brillante"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Brio",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q43400054 : année seulement."
+  },
+  {
+    "id": "film-les-tuche-3-liberte-egalite-fraternituche-2018",
+    "date": "2018-01-31",
+    "title": {
+      "fr": "Les Tuche 3 : Liberté, Égalité, Fraternituche",
+      "en": "Les Tuche 3",
+      "it": "Les Tuche 3"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Les_Tuche_3_:_Liberté,_Égalité,_Fraternituche",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q30738504 : même date."
+  },
+  {
+    "id": "film-alad-2-2018",
+    "date": "2018-10-03",
+    "title": {
+      "fr": "Alad'2",
+      "en": "Alad'2",
+      "de": "Aladin – Wunderlampe vs. Armleuchter"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Alad'2",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q48757519 : année seulement."
+  },
+  {
+    "id": "film-le-grand-bain-2018",
+    "date": "2018-10-24",
+    "title": {
+      "fr": "Le Grand Bain",
+      "en": "Sink or Swim",
+      "de": "Ein Becken voller Männer",
+      "it": "7 uomini a mollo",
+      "es": "Le Grand Bain"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Grand_Bain_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q28497074 : année seulement."
   },
   {
     "id": "film-un-p-tit-truc-en-plus-2024",

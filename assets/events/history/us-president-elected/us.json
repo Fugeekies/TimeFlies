@@ -1,5 +1,320 @@
 [
   {
+    "id": "history-election-zachary-taylor-1848",
+    "date": "1848-11-07",
+    "title": {
+      "fr": "Élection de Zachary Taylor",
+      "en": "Election of Zachary Taylor",
+      "de": "Wahl von Zachary Taylor",
+      "it": "Elezione di Zachary Taylor",
+      "es": "Elección de Zachary Taylor"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1848",
+    "note": "Jour du vote selon l'infobox. Wikidata Q698769 : même date."
+  },
+  {
+    "id": "history-election-franklin-pierce-1852",
+    "date": "1852-11-02",
+    "title": {
+      "fr": "Élection de Franklin Pierce",
+      "en": "Election of Franklin Pierce",
+      "de": "Wahl von Franklin Pierce",
+      "it": "Elezione di Franklin Pierce",
+      "es": "Elección de Franklin Pierce"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1852",
+    "note": "Jour du vote selon l'infobox. Wikidata Q698802 : même date."
+  },
+  {
+    "id": "history-election-james-buchanan-1856",
+    "date": "1856-11-04",
+    "title": {
+      "fr": "Élection de James Buchanan",
+      "en": "Election of James Buchanan",
+      "de": "Wahl von James Buchanan",
+      "it": "Elezione di James Buchanan",
+      "es": "Elección de James Buchanan"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1856",
+    "note": "Jour du vote selon l'infobox. Wikidata Q575819 : même date."
+  },
+  {
+    "id": "history-election-abraham-lincoln-1860",
+    "date": "1860-11-06",
+    "title": {
+      "fr": "Élection de Abraham Lincoln",
+      "en": "Election of Abraham Lincoln",
+      "de": "Wahl von Abraham Lincoln",
+      "it": "Elezione di Abraham Lincoln",
+      "es": "Elección de Abraham Lincoln"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1860",
+    "note": "Jour du vote selon l'infobox. Wikidata Q698842 : même date."
+  },
+  {
+    "id": "history-reelection-abraham-lincoln-1864",
+    "date": "1864-11-08",
+    "title": {
+      "fr": "Réélection de Abraham Lincoln",
+      "en": "Re-election of Abraham Lincoln",
+      "de": "Wiederwahl von Abraham Lincoln",
+      "it": "Rielezione di Abraham Lincoln",
+      "es": "Reelección de Abraham Lincoln"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1864",
+    "note": "Jour du vote selon l'infobox. Wikidata Q698908 : même date."
+  },
+  {
+    "id": "history-election-ulysses-s-grant-1868",
+    "date": "1868-11-03",
+    "title": {
+      "fr": "Élection de Ulysses S. Grant",
+      "en": "Election of Ulysses S. Grant",
+      "de": "Wahl von Ulysses S. Grant",
+      "it": "Elezione di Ulysses S. Grant",
+      "es": "Elección de Ulysses S. Grant"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1868",
+    "note": "Jour du vote selon l'infobox. Wikidata Q698955 : même date."
+  },
+  {
+    "id": "history-reelection-ulysses-s-grant-1872",
+    "date": "1872-11-05",
+    "title": {
+      "fr": "Réélection de Ulysses S. Grant",
+      "en": "Re-election of Ulysses S. Grant",
+      "de": "Wiederwahl von Ulysses S. Grant",
+      "it": "Rielezione di Ulysses S. Grant",
+      "es": "Reelección de Ulysses S. Grant"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1872",
+    "note": "Jour du vote selon l'infobox. Wikidata Q698999 : même date."
+  },
+  {
+    "id": "history-election-rutherford-b-hayes-1876",
+    "date": "1876-11-07",
+    "title": {
+      "fr": "Élection de Rutherford B. Hayes",
+      "en": "Election of Rutherford B. Hayes",
+      "de": "Wahl von Rutherford B. Hayes",
+      "it": "Elezione di Rutherford B. Hayes",
+      "es": "Elección de Rutherford B. Hayes"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1876",
+    "note": "Jour du vote selon l'infobox. Wikidata Q72251 : même date."
+  },
+  {
+    "id": "history-election-james-a-garfield-1880",
+    "date": "1880-11-02",
+    "title": {
+      "fr": "Élection de James A. Garfield",
+      "en": "Election of James A. Garfield",
+      "de": "Wahl von James A. Garfield",
+      "it": "Elezione di James A. Garfield",
+      "es": "Elección de James A. Garfield"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1880",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699120 : même date."
+  },
+  {
+    "id": "history-election-grover-cleveland-1884",
+    "date": "1884-11-04",
+    "title": {
+      "fr": "Élection de Grover Cleveland",
+      "en": "Election of Grover Cleveland",
+      "de": "Wahl von Grover Cleveland",
+      "it": "Elezione di Grover Cleveland",
+      "es": "Elección de Grover Cleveland"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1884",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699139 : même date."
+  },
+  {
+    "id": "history-election-benjamin-harrison-1888",
+    "date": "1888-11-06",
+    "title": {
+      "fr": "Élection de Benjamin Harrison",
+      "en": "Election of Benjamin Harrison",
+      "de": "Wahl von Benjamin Harrison",
+      "it": "Elezione di Benjamin Harrison",
+      "es": "Elección de Benjamin Harrison"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1888",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699168 : même date."
+  },
+  {
+    "id": "history-reelection-grover-cleveland-1892",
+    "date": "1892-11-08",
+    "title": {
+      "fr": "Réélection de Grover Cleveland",
+      "en": "Re-election of Grover Cleveland",
+      "de": "Wiederwahl von Grover Cleveland",
+      "it": "Rielezione di Grover Cleveland",
+      "es": "Reelección de Grover Cleveland"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1892",
+    "note": "Jour du vote selon l'infobox. Wikidata Q72472 : même date."
+  },
+  {
+    "id": "history-election-william-mckinley-1896",
+    "date": "1896-11-03",
+    "title": {
+      "fr": "Élection de William McKinley",
+      "en": "Election of William McKinley",
+      "de": "Wahl von William McKinley",
+      "it": "Elezione di William McKinley",
+      "es": "Elección de William McKinley"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1896",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699201 : même date."
+  },
+  {
+    "id": "history-reelection-william-mckinley-1900",
+    "date": "1900-11-06",
+    "title": {
+      "fr": "Réélection de William McKinley",
+      "en": "Re-election of William McKinley",
+      "de": "Wiederwahl von William McKinley",
+      "it": "Rielezione di William McKinley",
+      "es": "Reelección de William McKinley"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1900",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699227 : même date."
+  },
+  {
+    "id": "history-election-theodore-roosevelt-1904",
+    "date": "1904-11-08",
+    "title": {
+      "fr": "Élection de Theodore Roosevelt",
+      "en": "Election of Theodore Roosevelt",
+      "de": "Wahl von Theodore Roosevelt",
+      "it": "Elezione di Theodore Roosevelt",
+      "es": "Elección de Theodore Roosevelt"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1904",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699252 : même date."
+  },
+  {
+    "id": "history-election-william-howard-taft-1908",
+    "date": "1908-11-03",
+    "title": {
+      "fr": "Élection de William Howard Taft",
+      "en": "Election of William Howard Taft",
+      "de": "Wahl von William Howard Taft",
+      "it": "Elezione di William Howard Taft",
+      "es": "Elección de William Howard Taft"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1908",
+    "note": "Jour du vote selon l'infobox. Wikidata Q72835 : même date."
+  },
+  {
+    "id": "history-election-woodrow-wilson-1912",
+    "date": "1912-11-05",
+    "title": {
+      "fr": "Élection de Woodrow Wilson",
+      "en": "Election of Woodrow Wilson",
+      "de": "Wahl von Woodrow Wilson",
+      "it": "Elezione di Woodrow Wilson",
+      "es": "Elección de Woodrow Wilson"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1912",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699289 : même date."
+  },
+  {
+    "id": "history-reelection-woodrow-wilson-1916",
+    "date": "1916-11-07",
+    "title": {
+      "fr": "Réélection de Woodrow Wilson",
+      "en": "Re-election of Woodrow Wilson",
+      "de": "Wiederwahl von Woodrow Wilson",
+      "it": "Rielezione di Woodrow Wilson",
+      "es": "Reelección de Woodrow Wilson"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1916",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699318 : même date."
+  },
+  {
+    "id": "history-election-warren-g-harding-1920",
+    "date": "1920-11-02",
+    "title": {
+      "fr": "Élection de Warren G. Harding",
+      "en": "Election of Warren G. Harding",
+      "de": "Wahl von Warren G. Harding",
+      "it": "Elezione di Warren G. Harding",
+      "es": "Elección de Warren G. Harding"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1920",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699343 : même date."
+  },
+  {
+    "id": "history-election-calvin-coolidge-1924",
+    "date": "1924-11-04",
+    "title": {
+      "fr": "Élection de Calvin Coolidge",
+      "en": "Election of Calvin Coolidge",
+      "de": "Wahl von Calvin Coolidge",
+      "it": "Elezione di Calvin Coolidge",
+      "es": "Elección de Calvin Coolidge"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1924",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699360 : même date."
+  },
+  {
+    "id": "history-election-herbert-hoover-1928",
+    "date": "1928-11-06",
+    "title": {
+      "fr": "Élection de Herbert Hoover",
+      "en": "Election of Herbert Hoover",
+      "de": "Wahl von Herbert Hoover",
+      "it": "Elezione di Herbert Hoover",
+      "es": "Elección de Herbert Hoover"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1928",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699380 : même date."
+  },
+  {
     "id": "history-election-franklin-d-roosevelt-1932",
     "date": "1932-11-08",
     "title": {
@@ -13,6 +328,51 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1932",
     "note": "Jour du vote selon l'infobox. Wikidata Q179868 : même date."
+  },
+  {
+    "id": "history-reelection-franklin-d-roosevelt-1936",
+    "date": "1936-11-03",
+    "title": {
+      "fr": "Réélection de Franklin D. Roosevelt",
+      "en": "Re-election of Franklin D. Roosevelt",
+      "de": "Wiederwahl von Franklin D. Roosevelt",
+      "it": "Rielezione di Franklin D. Roosevelt",
+      "es": "Reelección de Franklin D. Roosevelt"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1936",
+    "note": "Jour du vote selon l'infobox. Wikidata Q634429 : même date."
+  },
+  {
+    "id": "history-reelection-franklin-d-roosevelt-1940",
+    "date": "1940-11-05",
+    "title": {
+      "fr": "Réélection de Franklin D. Roosevelt",
+      "en": "Re-election of Franklin D. Roosevelt",
+      "de": "Wiederwahl von Franklin D. Roosevelt",
+      "it": "Rielezione di Franklin D. Roosevelt",
+      "es": "Reelección de Franklin D. Roosevelt"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1940",
+    "note": "Jour du vote selon l'infobox. Wikidata Q699416 : même date."
+  },
+  {
+    "id": "history-reelection-franklin-d-roosevelt-1944",
+    "date": "1944-11-07",
+    "title": {
+      "fr": "Réélection de Franklin D. Roosevelt",
+      "en": "Re-election of Franklin D. Roosevelt",
+      "de": "Wiederwahl von Franklin D. Roosevelt",
+      "it": "Rielezione di Franklin D. Roosevelt",
+      "es": "Reelección de Franklin D. Roosevelt"
+    },
+    "kind": "election",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Élection_présidentielle_américaine_de_1944",
+    "note": "Jour du vote selon l'infobox. Wikidata Q596667 : même date."
   },
   {
     "id": "history-election-harry-s-truman-1948",

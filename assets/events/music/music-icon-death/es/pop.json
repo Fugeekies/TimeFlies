@@ -1,0 +1,24 @@
+[
+  {
+    "id": "death-rocio-jurado-2006",
+    "date": "2006-06-01",
+    "title": {
+      "fr": "Rocío Jurado"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rocío_Jurado",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q259152 : même date."
+  },
+  {
+    "id": "death-camilo-sesto-2019",
+    "date": "2019-09-08",
+    "title": {
+      "fr": "Camilo Sesto"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Camilo_Sesto",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q1029506 : même date."
+  }
+]

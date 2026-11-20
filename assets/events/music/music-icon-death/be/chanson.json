@@ -20,5 +20,27 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Barbara",
     "note": "Date de décès selon le texte de l'article. Wikidata Q1804 : même date."
+  },
+  {
+    "id": "death-maurane-2018",
+    "date": "2018-05-07",
+    "title": {
+      "fr": "Maurane"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Maurane",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q509029 : même date."
+  },
+  {
+    "id": "death-annie-cordy-2020",
+    "date": "2020-09-04",
+    "title": {
+      "fr": "Annie Cordy"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Annie_Cordy",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q465249 : même date."
   }
 ]

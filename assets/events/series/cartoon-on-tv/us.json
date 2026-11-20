@@ -29,6 +29,21 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q936279 : même date."
   },
   {
+    "id": "series-transformers-1984",
+    "date": "1984-09-17",
+    "title": {
+      "fr": "Transformers",
+      "en": "The Transformers",
+      "de": "Transformers",
+      "it": "Transformers",
+      "es": "The Transformers"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Transformers_(série_télévisée_d'animation)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q602883 : même date."
+  },
+  {
     "id": "series-tortues-ninja-les-chevaliers-d-ecaille-1987",
     "date": "1987-12-10",
     "title": {
@@ -72,6 +87,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Les_Razmoket_(série_télévisée_d'animation,_1991)",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q304290 : même date."
+  },
+  {
+    "id": "series-animaniacs-1993",
+    "date": "1993-09-13",
+    "title": {
+      "fr": "Animaniacs",
+      "en": "Animaniacs",
+      "de": "Animaniacs",
+      "it": "Animaniacs",
+      "es": "Animaniacs"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Animaniacs",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q547744 : même date."
+  },
+  {
+    "id": "series-le-laboratoire-de-dexter-1996",
+    "date": "1996-04-28",
+    "title": {
+      "fr": "Le Laboratoire de Dexter",
+      "en": "Dexter's Laboratory",
+      "de": "Dexters Labor",
+      "it": "Il laboratorio di Dexter",
+      "es": "El laboratorio de Dexter"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Laboratoire_de_Dexter",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q904733 : même date."
   },
   {
     "id": "series-south-park-1997",
@@ -139,6 +184,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Avatar,_le_dernier_maître_de_l'air",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q11572 : même date."
+  },
+  {
+    "id": "series-adventure-time-2010",
+    "date": "2010-04-05",
+    "title": {
+      "fr": "Adventure Time",
+      "en": "Adventure Time",
+      "de": "Adventure Time – Abenteuerzeit mit Finn und Jake",
+      "it": "Adventure Time",
+      "es": "Adventure Time"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Adventure_Time",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q53093 : même date."
+  },
+  {
+    "id": "series-le-monde-incroyable-de-gumball-2011",
+    "date": "2011-05-03",
+    "title": {
+      "fr": "Le Monde incroyable de Gumball",
+      "en": "The Amazing World of Gumball",
+      "de": "Die fantastische Welt von Gumball",
+      "it": "Lo straordinario mondo di Gumball",
+      "es": "The Amazing World of Gumball"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Monde_incroyable_de_Gumball",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q906186 : même date."
   },
   {
     "id": "series-rick-et-morty-2013",

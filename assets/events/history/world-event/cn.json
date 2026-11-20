@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-proclamation-de-la-republique-populaire-de-chine-1949",
+    "date": "1949-10-01",
+    "title": {
+      "fr": "Proclamation de la république populaire de Chine",
+      "en": "Proclamation of the People's Republic of China",
+      "de": "Ausrufung der Volksrepublik China",
+      "it": "Proclamazione della Repubblica Popolare Cinese",
+      "es": "Proclamación de la República Popular China"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Proclamation_de_la_république_populaire_de_Chine",
+    "note": "Date selon l'infobox. Wikidata Q10872057 : même date."
+  },
+  {
     "id": "history-mort-de-mao-zedong-1976",
     "date": "1976-09-09",
     "title": {
@@ -28,5 +43,20 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Manifestations_de_la_place_Tian'anmen",
     "note": "Jour de la répression selon l'infobox (manifestations du 15 avril au 4 juin 1989). Wikidata Q99717 : année seulement pour l'événement, début le 1989-04-15."
+  },
+  {
+    "id": "history-retrocession-de-hong-kong-a-la-chine-1997",
+    "date": "1997-07-01",
+    "title": {
+      "fr": "Rétrocession de Hong Kong à la Chine",
+      "en": "Handover of Hong Kong to China",
+      "de": "Rückgabe Hongkongs an China",
+      "it": "Restituzione di Hong Kong alla Cina",
+      "es": "Transferencia de Hong Kong a China"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Rétrocession_de_Hong_Kong_à_la_Chine",
+    "note": "Date selon le texte de l'article. Wikidata Q15251 : même date."
   }
 ]

@@ -13,5 +13,20 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Inspecteur_Derrick",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q511224 : même date."
+  },
+  {
+    "id": "series-dark-2017",
+    "date": "2017-12-01",
+    "title": {
+      "fr": "Dark",
+      "en": "Dark",
+      "de": "Dark",
+      "it": "Dark",
+      "es": "Dark"
+    },
+    "kind": "series-premiere",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dark_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q28443710 : même date."
   }
 ]

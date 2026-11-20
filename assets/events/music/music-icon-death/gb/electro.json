@@ -9,5 +9,16 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Keith_Flint",
     "note": "Date de décès selon le texte de l'article. Wikidata Q1776790 : même date."
+  },
+  {
+    "id": "death-andrew-fletcher-2022",
+    "date": "2022-05-26",
+    "title": {
+      "fr": "Andrew Fletcher"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Andrew_Fletcher_(musicien)",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q501296 : même date."
   }
 ]

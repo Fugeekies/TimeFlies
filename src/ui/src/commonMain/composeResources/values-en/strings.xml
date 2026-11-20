@@ -260,6 +260,11 @@
         <item>Vatican City</item>
         <item>Vietnam</item>
         <item>South Africa</item>
+        <item>Austria</item>
+        <item>Cape Verde</item>
+        <item>Mali</item>
+        <item>Mexico</item>
+        <item>Nigeria</item>
     </string-array>
     <string-array name="subcategory_names">
         <item>Athletics</item>

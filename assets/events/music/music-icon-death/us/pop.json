@@ -1,5 +1,49 @@
 [
   {
+    "id": "death-patsy-cline-1963",
+    "date": "1963-03-05",
+    "title": {
+      "fr": "Patsy Cline"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Patsy_Cline",
+    "note": "Date de décès selon l'infobox. Wikidata Q273080 : même date."
+  },
+  {
+    "id": "death-nat-king-cole-1965",
+    "date": "1965-02-15",
+    "title": {
+      "fr": "Nat King Cole"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Nat_King_Cole",
+    "note": "Date de décès selon l'infobox. Wikidata Q137042 : même date."
+  },
+  {
+    "id": "death-judy-garland-1969",
+    "date": "1969-06-22",
+    "title": {
+      "fr": "Judy Garland"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Judy_Garland",
+    "note": "Date de décès selon l'infobox. Wikidata Q11637 : même date."
+  },
+  {
+    "id": "death-bing-crosby-1977",
+    "date": "1977-10-14",
+    "title": {
+      "fr": "Bing Crosby"
+    },
+    "kind": "death",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Bing_Crosby",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q72984 : même date."
+  },
+  {
     "id": "death-karen-carpenter-1983",
     "date": "1983-02-04",
     "title": {
@@ -22,6 +66,17 @@
     "note": "Date de décès selon le texte de l'article. Wikidata Q23543 : même date."
   },
   {
+    "id": "death-dean-martin-1995",
+    "date": "1995-12-25",
+    "title": {
+      "fr": "Dean Martin"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dean_Martin",
+    "note": "Date de décès selon l'infobox. Wikidata Q215359 : même date."
+  },
+  {
     "id": "death-frank-sinatra-1998",
     "date": "1998-05-14",
     "title": {
@@ -31,6 +86,17 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Frank_Sinatra",
     "note": "Date de décès selon le texte de l'article. Wikidata Q40912 : même date."
+  },
+  {
+    "id": "death-aaliyah-2001",
+    "date": "2001-08-25",
+    "title": {
+      "fr": "Aaliyah"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Aaliyah",
+    "note": "Date de décès selon l'infobox. Wikidata Q11617 : même date."
   },
   {
     "id": "death-johnny-cash-2003",
@@ -75,5 +141,16 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Prince_(musicien)",
     "note": "Date de décès de l'infobox. Wikidata Q7542 : même date."
+  },
+  {
+    "id": "death-tony-bennett-2023",
+    "date": "2023-07-21",
+    "title": {
+      "fr": "Tony Bennett"
+    },
+    "kind": "death",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Tony_Bennett",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q296729 : même date."
   }
 ]

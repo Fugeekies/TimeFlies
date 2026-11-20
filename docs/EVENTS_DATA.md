@@ -129,6 +129,20 @@ Demande du 18/11/2026 : au moins 150 événements dans chacun des six thèmes. R
 - **Grandes figures** : la mort ou l'assassinat d'une personnalité mondiale (de Gaulle, Mandela, Churchill…) entre en `world-event`, avec la date de décès de l'infobox, du texte et de Wikidata, toutes trois identiques.
 - Un événement de moins d'un an (Ballon d'or 2026, Tour de France 2026, records de 2026) est valide mais ne s'affiche qu'à partir de son premier anniversaire.
 
+### Troisième passe : vers 250 événements par thème (20/11/2026)
+
+Demande du 20/11/2026 : 250 événements par thème, en une seule PR. Résultat : 1 362 événements (Séries 264, Cinéma 252, Musique 301, Sport 162, Jeux vidéo & tech 176, Politique & histoire 207). Le Sport, les Jeux vidéo & tech et la Politique & histoire restent en dessous de 250 : la méthode a écarté plus de candidats qu'ailleurs (voir plus bas), et la demande acceptait de s'arrêter là.
+
+- **Relevé par script** (Wikipédia en français et Wikidata, quelques requêtes groupées pour respecter les limites de Wikimedia) : titre de l'article, date de l'infobox, du texte ou de la fiche technique, dates de Wikidata, nombre de Wikipédia (importance) et titres des articles liés en anglais, allemand, italien et espagnol (liens de Wikidata). Une entrée n'est ajoutée que si la date de l'article est la même que celle de Wikidata, ou à une semaine près, ou si Wikidata n'a que l'année, le mois ou rien ; sinon elle est écartée. Chaque liste retenue a été relue avant l'écriture.
+- **Séries relancées** (*Murphy Brown*, *Art Attack*…) : la première diffusion est la plus ancienne date de l'infobox.
+- **Morts lues dans le texte** : la naissance figure dans la même phrase ; la date la plus récente est le décès, recoupée avec Wikidata.
+- **Albums et singles** : la plus ancienne date de l'infobox est la sortie d'origine (les suivantes sont des rééditions), recoupée avec Wikidata.
+- **Films** : trois dates relues à la main dans la fiche technique, notées comme telles : *Alien* (1979, la date de 2003 est une version longue en festival), *Parasite* (sortie nationale après Cannes), *La Famille Bélier* (sortie nationale après une avant-première). Écartés : *Dragons* (deux dates françaises inexpliquées), *Black Panther* et *Bons baisers de Russie* (désaccord de plus d'une semaine avec Wikidata).
+- **Jeux vidéo et produits** : seule la **première sortie** compte, la plus ancienne date que Wikidata attribue à la France, à l'Europe ou au monde entier, et elle doit se retrouver dans l'article ; aucune entrée de ce thème sur la seule foi de l'article. La plupart des articles de jeux n'écrivent plus de date dans le wikitexte (infobox alimentée par Wikidata) : ils n'entrent pas, d'où le petit nombre de jeux ajoutés.
+- **Tennis et Tour de France** : la date est la fin de l'édition dans l'infobox (finale, arrivée à Paris), et le **vainqueur de l'infobox** doit être celui attendu. Beaucoup d'articles d'éditions n'ont pas de date dans le wikitexte : ils n'entrent pas.
+- **Élections américaines de 1848 à 1928** et réélections de Franklin D. Roosevelt : jour du vote selon l'infobox, même date que Wikidata.
+- Écartés à la relecture parce que la date relevée ne correspond pas à l'événement du titre : *Thunderbirds* (l'article trouvé est le remake de 2015), *Pandémie de Covid-19* (début de l'épidémie, pas la déclaration de l'OMS), Gandhi (date de naissance), ouragan Katrina (formation, pas l'arrivée en Louisiane), révolution d'Octobre et putsch de Moscou (dates de fin), mort de Michael Jackson (déjà en Musique).
+
 ## Volume visé
 
 Environ **400 événements**, pour que presque chaque jour de l'année ait au moins un anniversaire, et que chaque type ait assez d'événements répartis des années 1950 à aujourd'hui pour que les équivalences marchent quel que soit l'écart d'âge. Une vérification automatique (test) compte les jours de l'année sans anniversaire et les types qui ont moins de 4 événements.

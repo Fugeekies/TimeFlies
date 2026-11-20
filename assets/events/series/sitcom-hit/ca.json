@@ -1,0 +1,17 @@
+[
+  {
+    "id": "series-schitt-s-creek-2015",
+    "date": "2015-01-13",
+    "title": {
+      "fr": "Schitt's Creek",
+      "en": "Schitt's Creek",
+      "de": "Schitt’s Creek",
+      "it": "Schitt's Creek",
+      "es": "Schitt's Creek"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Schitt's_Creek",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q17111973 : même date."
+  }
+]

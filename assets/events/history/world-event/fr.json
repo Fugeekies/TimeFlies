@@ -1,5 +1,20 @@
 [
   {
+    "id": "history-prise-de-la-bastille-1789",
+    "date": "1789-07-14",
+    "title": {
+      "fr": "Prise de la Bastille",
+      "en": "Storming of the Bastille",
+      "de": "Sturm auf die Bastille",
+      "it": "Presa della Bastiglia",
+      "es": "Toma de la Bastilla"
+    },
+    "kind": "history",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Prise_de_la_Bastille",
+    "note": "Date selon l'infobox. Wikidata Q6539 : même date."
+  },
+  {
     "id": "history-inauguration-de-la-tour-eiffel-1889",
     "date": "1889-03-31",
     "title": {
@@ -88,6 +103,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Constitution_française_du_4_octobre_1958",
     "note": "Date de la constitution, dans son titre ; même date dans Wikidata. Wikidata Q832508 : même date."
+  },
+  {
+    "id": "history-signature-des-accords-d-evian-1962",
+    "date": "1962-03-18",
+    "title": {
+      "fr": "Signature des accords d'Évian",
+      "en": "Signing of the Évian Accords",
+      "de": "Unterzeichnung der Verträge von Évian",
+      "it": "Firma degli accordi di Évian",
+      "es": "Firma de los Acuerdos de Évian"
+    },
+    "kind": "history",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Accords_d'Évian",
+    "note": "Date selon l'infobox. Wikidata Q1471139 : même date."
   },
   {
     "id": "history-traite-de-l-elysee-1963",

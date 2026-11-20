@@ -1,0 +1,47 @@
+[
+  {
+    "id": "series-pop-idol-2001",
+    "date": "2001-10-05",
+    "title": {
+      "fr": "Pop Idol",
+      "en": "Pop Idol",
+      "de": "Pop Idol",
+      "it": "Pop Idol",
+      "es": "Pop Idol"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pop_Idol",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q6502417 : donne une autre date : 2001-10-06."
+  },
+  {
+    "id": "series-the-x-factor-2004",
+    "date": "2004-09-04",
+    "title": {
+      "fr": "The X Factor",
+      "en": "The X Factor",
+      "de": "The X Factor",
+      "it": "The X Factor",
+      "es": "The X Factor"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_X_Factor_(Royaume-Uni)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q4431988 : même date."
+  },
+  {
+    "id": "series-britain-s-got-talent-2007",
+    "date": "2007-06-09",
+    "title": {
+      "fr": "Britain's Got Talent",
+      "en": "Britain's Got Talent",
+      "de": "Britain’s Got Talent",
+      "it": "Britain's Got Talent",
+      "es": "Britain's Got Talent"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Britain's_Got_Talent",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q556444 : même date."
+  }
+]

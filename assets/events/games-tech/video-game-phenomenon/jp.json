@@ -11,6 +11,21 @@
     "note": "Sortie en Europe sur NES selon l'infobox et l'article. Wikidata Q11168 : même date."
   },
   {
+    "id": "tech-the-legend-of-zelda-1987",
+    "date": "1987-11-15",
+    "title": {
+      "fr": "The Legend of Zelda",
+      "en": "The Legend of Zelda",
+      "de": "The Legend of Zelda",
+      "it": "The Legend of Zelda",
+      "es": "The Legend of Zelda"
+    },
+    "kind": "game-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda_(jeu_vidéo)",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q12395 : même date."
+  },
+  {
     "id": "tech-sonic-the-hedgehog-1991",
     "date": "1991-06-21",
     "title": {
@@ -439,6 +454,21 @@
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q17164955 : même date (Europe)."
   },
   {
+    "id": "tech-dark-souls-iii-2016",
+    "date": "2016-04-12",
+    "title": {
+      "fr": "Dark Souls III",
+      "en": "Dark Souls III",
+      "de": "Dark Souls III",
+      "it": "Dark Souls III",
+      "es": "Dark Souls III"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Dark_Souls_III",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q20112508 : même date."
+  },
+  {
     "id": "tech-yo-kai-watch-2016",
     "date": "2016-04-29",
     "title": {
@@ -448,6 +478,21 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Yo-kai_Watch_(jeu_vidéo)",
     "note": "Sortie en Europe selon l'infobox, faute de date propre à la France. Wikidata Q21078995 : même date (Europe)."
+  },
+  {
+    "id": "tech-pokemon-soleil-et-lune-2016",
+    "date": "2016-11-23",
+    "title": {
+      "fr": "Pokémon Soleil et Lune",
+      "en": "Pokémon Sun and Moon",
+      "de": "Pokémon Sonne und Mond",
+      "it": "Pokémon Sole e Luna",
+      "es": "Pokémon Sol y Pokémon Luna"
+    },
+    "kind": "game-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Pokémon_Soleil_et_Lune",
+    "note": "Sortie en Europe, faute de date propre à la France, selon l'infobox. Wikidata Q22954794 : même date."
   },
   {
     "id": "tech-final-fantasy-xv-2016",

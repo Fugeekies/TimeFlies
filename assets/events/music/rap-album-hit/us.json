@@ -22,6 +22,50 @@
     "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q926127 donne une autre date : 1988-06-30."
   },
   {
+    "id": "album-straight-outta-compton-n-w-a-1988",
+    "date": "1988-08-08",
+    "title": {
+      "fr": "Straight Outta Compton (N.W.A)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Straight_Outta_Compton",
+    "note": "Sortie selon l'infobox. Wikidata Q644326 : même date."
+  },
+  {
+    "id": "album-the-chronic-dr-dre-1992",
+    "date": "1992-12-15",
+    "title": {
+      "fr": "The Chronic (Dr. Dre)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Chronic",
+    "note": "Sortie selon l'infobox. Wikidata Q749154 : même date."
+  },
+  {
+    "id": "album-enter-the-wu-tang-wu-tang-clan-1993",
+    "date": "1993-11-09",
+    "title": {
+      "fr": "Enter the Wu-Tang (Wu-Tang Clan)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers)",
+    "note": "Sortie selon l'infobox. Wikidata Q679150 : année seulement."
+  },
+  {
+    "id": "album-doggystyle-snoop-doggy-dogg-1993",
+    "date": "1993-11-23",
+    "title": {
+      "fr": "Doggystyle (Snoop Doggy Dogg)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Doggystyle",
+    "note": "Sortie selon l'infobox. Wikidata Q753494 : même date."
+  },
+  {
     "id": "album-illmatic-1994",
     "date": "1994-04-19",
     "title": {
@@ -53,6 +97,17 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/All_Eyez_on_Me",
     "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q498054 : même date."
+  },
+  {
+    "id": "album-the-miseducation-of-lauryn-hill-lauryn-hill-1998",
+    "date": "1998-08-25",
+    "title": {
+      "fr": "The Miseducation of Lauryn Hill (Lauryn Hill)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Miseducation_of_Lauryn_Hill",
+    "note": "Sortie selon l'infobox. Wikidata Q945926 : même date."
   },
   {
     "id": "album-the-slim-shady-lp-1999",
@@ -88,6 +143,39 @@
     "note": "Sortie selon l'infobox. Wikidata Q153607 : même date."
   },
   {
+    "id": "album-the-blueprint-jay-z-2001",
+    "date": "2001-09-11",
+    "title": {
+      "fr": "The Blueprint (Jay-Z)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Blueprint",
+    "note": "Sortie selon l'infobox. Wikidata Q1088473 : même date."
+  },
+  {
+    "id": "album-the-eminem-show-eminem-2002",
+    "date": "2002-05-21",
+    "title": {
+      "fr": "The Eminem Show (Eminem)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Eminem_Show",
+    "note": "Sortie selon l'infobox. Wikidata Q155339 : donne une autre date : 2002-05-28."
+  },
+  {
+    "id": "album-get-rich-or-die-tryin-50-cent-2003",
+    "date": "2003-02-06",
+    "title": {
+      "fr": "Get Rich or Die Tryin' (50 Cent)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Get_Rich_or_Die_Tryin'",
+    "note": "Sortie selon l'infobox. Wikidata Q756782 : même date."
+  },
+  {
     "id": "album-the-college-dropout-2004",
     "date": "2004-02-10",
     "title": {
@@ -97,6 +185,28 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/The_College_Dropout",
     "note": "Sortie aux États-Unis selon l'infobox. Wikidata Q747526 : même date."
+  },
+  {
+    "id": "album-tha-carter-iii-lil-wayne-2008",
+    "date": "2008-06-09",
+    "title": {
+      "fr": "Tha Carter III (Lil Wayne)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Tha_Carter_III",
+    "note": "Sortie selon l'infobox. Wikidata Q1417942 : donne une autre date : 2008-06-10."
+  },
+  {
+    "id": "album-my-beautiful-dark-twisted-fantasy-kanye-west-2010",
+    "date": "2010-11-22",
+    "title": {
+      "fr": "My Beautiful Dark Twisted Fantasy (Kanye West)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/My_Beautiful_Dark_Twisted_Fantasy",
+    "note": "Sortie selon l'infobox. Wikidata Q547624 : même date."
   },
   {
     "id": "album-good-kid-m-a-a-d-city-2012",

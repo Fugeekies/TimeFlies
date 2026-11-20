@@ -15,6 +15,20 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q212731 : même date."
   },
   {
+    "id": "series-only-fools-and-horses-1981",
+    "date": "1981-09-09",
+    "title": {
+      "fr": "Only Fools and Horses",
+      "en": "Only Fools and Horses",
+      "de": "Only Fools and Horses",
+      "it": "Only Fools and Horses"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Only_Fools_and_Horses",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1247858 : donne une autre date : 1981-09-08."
+  },
+  {
     "id": "series-mr-bean-1990",
     "date": "1990-01-01",
     "title": {
@@ -42,6 +56,48 @@
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q332554 : même date."
   },
   {
+    "id": "series-the-vicar-of-dibley-1994",
+    "date": "1994-11-10",
+    "title": {
+      "fr": "The Vicar of Dibley",
+      "en": "The Vicar of Dibley"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/The_Vicar_of_Dibley",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q2360590 : même date."
+  },
+  {
+    "id": "series-little-britain-2003",
+    "date": "2003-09-16",
+    "title": {
+      "fr": "Little Britain",
+      "en": "Little Britain",
+      "de": "Little Britain",
+      "it": "Little Britain",
+      "es": "Little Britain"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Little_Britain",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q637033 : même date."
+  },
+  {
+    "id": "series-peep-show-2003",
+    "date": "2003-09-19",
+    "title": {
+      "fr": "Peep Show",
+      "en": "Peep Show",
+      "de": "Peep Show",
+      "it": "Peep Show",
+      "es": "Peep Show"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Peep_Show_(série_télévisée)",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q1519256 : même date."
+  },
+  {
     "id": "series-the-it-crowd-2006",
     "date": "2006-02-03",
     "title": {
@@ -52,5 +108,35 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/The_IT_Crowd",
     "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q239672 : même date."
+  },
+  {
+    "id": "series-fleabag-2016",
+    "date": "2016-07-21",
+    "title": {
+      "fr": "Fleabag",
+      "en": "Fleabag",
+      "de": "Fleabag",
+      "it": "Fleabag",
+      "es": "Fleabag"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Fleabag",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q16868648 : même date."
+  },
+  {
+    "id": "series-derry-girls-2018",
+    "date": "2018-01-04",
+    "title": {
+      "fr": "Derry Girls",
+      "en": "Derry Girls",
+      "de": "Derry Girls",
+      "it": "Derry Girls",
+      "es": "Derry Girls"
+    },
+    "kind": "series-premiere",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Derry_Girls",
+    "note": "Première diffusion dans le pays d'origine selon l'infobox. Wikidata Q47090557 : même date."
   }
 ]

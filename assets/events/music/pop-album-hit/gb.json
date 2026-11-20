@@ -77,6 +77,39 @@
     "note": "Sortie originale selon le texte de l'article. Wikidata Q151114 : même date."
   },
   {
+    "id": "album-brothers-in-arms-dire-straits-1985",
+    "date": "1985-05-17",
+    "title": {
+      "fr": "Brothers in Arms (Dire Straits)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Brothers_in_Arms_(album)",
+    "note": "Sortie selon l'infobox. Wikidata Q258609 : donne une autre date : 1985-05-13."
+  },
+  {
+    "id": "album-what-s-the-story-morning-glory-oasis-1995",
+    "date": "1995-10-02",
+    "title": {
+      "fr": "(What's the Story) Morning Glory? (Oasis)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/(What's_the_Story)_Morning_Glory?",
+    "note": "Sortie selon l'infobox. Wikidata Q8360 : même date."
+  },
+  {
+    "id": "album-back-to-black-amy-winehouse-2006",
+    "date": "2006-10-27",
+    "title": {
+      "fr": "Back to Black (Amy Winehouse)"
+    },
+    "kind": "album-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Back_to_Black",
+    "note": "Sortie selon l'infobox. Wikidata Q156670 : même date."
+  },
+  {
     "id": "album-21-2011",
     "date": "2011-01-24",
     "title": {

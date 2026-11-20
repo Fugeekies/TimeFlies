@@ -1,0 +1,35 @@
+[
+  {
+    "id": "death-juan-gabriel-2016",
+    "date": "2016-08-28",
+    "title": {
+      "fr": "Juan Gabriel"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Juan_Gabriel",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q738404 : même date."
+  },
+  {
+    "id": "death-jose-jose-2019",
+    "date": "2019-09-28",
+    "title": {
+      "fr": "José José"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/José_José",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q2608238 : même date."
+  },
+  {
+    "id": "death-vicente-fernandez-2021",
+    "date": "2021-12-12",
+    "title": {
+      "fr": "Vicente Fernández"
+    },
+    "kind": "death",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Vicente_Fernández",
+    "note": "Date de décès selon le texte de l'article. Wikidata Q119069 : même date."
+  }
+]

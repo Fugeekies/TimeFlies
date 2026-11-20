@@ -1,5 +1,20 @@
 [
   {
+    "id": "film-ben-hur-1960",
+    "date": "1960-10-06",
+    "title": {
+      "fr": "Ben-Hur",
+      "en": "Ben-Hur",
+      "de": "Ben Hur",
+      "it": "Ben-Hur",
+      "es": "Ben-Hur"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Ben-Hur_(film,_1959)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q180098 : pas de date française."
+  },
+  {
     "id": "film-les-dents-de-la-mer-1976",
     "date": "1976-01-28",
     "title": {
@@ -15,6 +30,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q189505 : pas de date française."
   },
   {
+    "id": "film-la-fievre-du-samedi-soir-1978",
+    "date": "1978-04-05",
+    "title": {
+      "fr": "La Fièvre du samedi soir",
+      "en": "Saturday Night Fever",
+      "de": "Saturday Night Fever",
+      "it": "La febbre del sabato sera",
+      "es": "Saturday Night Fever"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/La_Fièvre_du_samedi_soir",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q47654 : pas de date française."
+  },
+  {
     "id": "film-grease-1978",
     "date": "1978-10-03",
     "title": {
@@ -24,6 +54,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Grease_(film)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q267721 : pas de date française."
+  },
+  {
+    "id": "film-alien-1979",
+    "date": "1979-09-12",
+    "title": {
+      "fr": "Alien",
+      "en": "Alien",
+      "de": "Alien – Das unheimliche Wesen aus einer fremden Welt",
+      "it": "Alien",
+      "es": "Alien: el octavo pasajero"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Alien_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article (la date de 2003 est une version longue en festival). Wikidata Q103569 : pas de date française."
   },
   {
     "id": "film-e-t-l-extra-terrestre-1982",
@@ -54,6 +99,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q244963 : pas de date française."
   },
   {
+    "id": "film-flashdance-1983",
+    "date": "1983-09-14",
+    "title": {
+      "fr": "Flashdance",
+      "en": "Flashdance",
+      "de": "Flashdance",
+      "it": "Flashdance",
+      "es": "Flashdance"
+    },
+    "kind": "film-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Flashdance",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q611043 : année seulement."
+  },
+  {
     "id": "film-sos-fantomes-1984",
     "date": "1984-12-12",
     "title": {
@@ -67,6 +127,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/SOS_Fant%C3%B4mes",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q108745 : pas de date française."
+  },
+  {
+    "id": "film-le-flic-de-beverly-hills-1985",
+    "date": "1985-03-27",
+    "title": {
+      "fr": "Le Flic de Beverly Hills",
+      "en": "Beverly Hills Cop",
+      "de": "Beverly Hills Cop – Ich lös’ den Fall auf jeden Fall",
+      "it": "Beverly Hills Cop - Un piedipiatti a Beverly Hills",
+      "es": "Beverly Hills Cop"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Flic_de_Beverly_Hills",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q722267 : même date."
   },
   {
     "id": "film-les-goonies-1985",
@@ -96,6 +171,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q110138 : pas de date française."
   },
   {
+    "id": "film-crocodile-dundee-1987",
+    "date": "1987-02-04",
+    "title": {
+      "fr": "Crocodile Dundee",
+      "en": "Crocodile Dundee",
+      "de": "Crocodile Dundee – Ein Krokodil zum Küssen",
+      "it": "Mr. Crocodile Dundee",
+      "es": "Cocodrilo Dundee"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Crocodile_Dundee",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q615254 : même date."
+  },
+  {
     "id": "film-dirty-dancing-1987",
     "date": "1987-12-09",
     "title": {
@@ -105,6 +195,51 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Dirty_Dancing",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q253978 : pas de date française."
+  },
+  {
+    "id": "film-liaison-fatale-1988",
+    "date": "1988-01-27",
+    "title": {
+      "fr": "Liaison fatale",
+      "en": "Fatal Attraction",
+      "de": "Eine verhängnisvolle Affäre",
+      "it": "Attrazione fatale",
+      "es": "Atracción fatal"
+    },
+    "kind": "film-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Liaison_fatale",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q504157 : pas de date française."
+  },
+  {
+    "id": "film-piege-de-cristal-1988",
+    "date": "1988-09-21",
+    "title": {
+      "fr": "Piège de cristal",
+      "en": "Die Hard",
+      "de": "Stirb langsam",
+      "it": "Trappola di cristallo",
+      "es": "Die Hard"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Piège_de_cristal",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q105598 : année seulement."
+  },
+  {
+    "id": "film-qui-veut-la-peau-de-roger-rabbit-1988",
+    "date": "1988-10-18",
+    "title": {
+      "fr": "Qui veut la peau de Roger Rabbit",
+      "en": "Who Framed Roger Rabbit",
+      "de": "Falsches Spiel mit Roger Rabbit",
+      "it": "Chi ha incastrato Roger Rabbit",
+      "es": "¿Quién engañó a Roger Rabbit?"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Qui_veut_la_peau_de_Roger_Rabbit",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q379873 : pas de date française."
   },
   {
     "id": "film-rain-man-1989",
@@ -117,6 +252,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Rain_Man",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q188845 : pas de date française."
+  },
+  {
+    "id": "film-le-cercle-des-poetes-disparus-1990",
+    "date": "1990-01-17",
+    "title": {
+      "fr": "Le Cercle des poètes disparus",
+      "en": "Dead Poets Society",
+      "de": "Der Club der toten Dichter",
+      "it": "L'attimo fuggente",
+      "es": "Dead Poets Society"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Le_Cercle_des_poètes_disparus",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q106316 : pas de date française."
   },
   {
     "id": "film-pretty-woman-1990",
@@ -158,6 +308,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q105031 : pas de date française."
   },
   {
+    "id": "film-danse-avec-les-loups-1991",
+    "date": "1991-02-20",
+    "title": {
+      "fr": "Danse avec les loups",
+      "en": "Dances With Wolves",
+      "de": "Der mit dem Wolf tanzt",
+      "it": "Balla coi lupi",
+      "es": "Dances with Wolves"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Danse_avec_les_loups",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q20456 : pas de date française."
+  },
+  {
     "id": "film-le-silence-des-agneaux-1991",
     "date": "1991-04-10",
     "title": {
@@ -186,6 +351,21 @@
     "importance": 3,
     "source": "https://fr.wikipedia.org/wiki/Terminator_2_:_Le_Jugement_dernier",
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q170564 : pas de date française."
+  },
+  {
+    "id": "film-basic-instinct-1992",
+    "date": "1992-05-08",
+    "title": {
+      "fr": "Basic Instinct",
+      "en": "Basic Instinct",
+      "de": "Basic Instinct",
+      "it": "Basic Instinct",
+      "es": "Basic Instinct"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Basic_Instinct",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q146673 : même date."
   },
   {
     "id": "film-le-fugitif-1993",
@@ -276,6 +456,21 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q104123 : pas de date française."
   },
   {
+    "id": "film-braveheart-1995",
+    "date": "1995-10-04",
+    "title": {
+      "fr": "Braveheart",
+      "en": "Braveheart",
+      "de": "Braveheart",
+      "it": "Braveheart - Cuore impavido",
+      "es": "Braveheart"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Braveheart",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q162729 : même date."
+  },
+  {
     "id": "film-seven-1996",
     "date": "1996-01-31",
     "title": {
@@ -361,6 +556,36 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q208344 : pas de date française."
   },
   {
+    "id": "film-il-faut-sauver-le-soldat-ryan-1998",
+    "date": "1998-09-30",
+    "title": {
+      "fr": "Il faut sauver le soldat Ryan",
+      "en": "Saving Private Ryan",
+      "de": "Der Soldat James Ryan",
+      "it": "Salvate il soldato Ryan",
+      "es": "Saving Private Ryan"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Il_faut_sauver_le_soldat_Ryan",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q165817 : année seulement."
+  },
+  {
+    "id": "film-american-beauty-2000",
+    "date": "2000-02-02",
+    "title": {
+      "fr": "American Beauty",
+      "en": "American Beauty",
+      "de": "American Beauty",
+      "it": "American Beauty",
+      "es": "American Beauty"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/American_Beauty",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q25139 : pas de date française."
+  },
+  {
     "id": "film-gladiator-2000",
     "date": "2000-06-20",
     "title": {
@@ -373,6 +598,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q128518 : pas de date française."
   },
   {
+    "id": "film-seul-au-monde-2001",
+    "date": "2001-01-17",
+    "title": {
+      "fr": "Seul au monde",
+      "en": "Cast Away",
+      "de": "Cast Away – Verschollen",
+      "it": "Cast Away",
+      "es": "Náufrago"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Seul_au_monde",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q213411 : pas de date française."
+  },
+  {
     "id": "film-pearl-harbor-2001",
     "date": "2001-06-06",
     "title": {
@@ -382,6 +622,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Pearl_Harbor_(film)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q194413 : pas de date française."
+  },
+  {
+    "id": "film-arrete-moi-si-tu-peux-2003",
+    "date": "2003-02-12",
+    "title": {
+      "fr": "Arrête-moi si tu peux",
+      "en": "Catch Me If You Can",
+      "de": "Catch Me If You Can",
+      "it": "Prova a prendermi",
+      "es": "Atrápame si puedes"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Arrête-moi_si_tu_peux",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q208108 : année seulement."
   },
   {
     "id": "film-kill-bill-volume-1-2003",
@@ -408,6 +663,21 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Mamma_Mia!_(film)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q188850 : même date."
+  },
+  {
+    "id": "film-slumdog-millionaire-2009",
+    "date": "2009-01-14",
+    "title": {
+      "fr": "Slumdog Millionaire",
+      "en": "Slumdog Millionaire",
+      "de": "Slumdog Millionär",
+      "it": "The Millionaire",
+      "es": "Slumdog Millionaire"
+    },
+    "kind": "film-release",
+    "importance": 3,
+    "source": "https://fr.wikipedia.org/wiki/Slumdog_Millionaire",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q125076 : pas de date française."
   },
   {
     "id": "film-very-bad-trip-2009",
@@ -448,6 +718,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q25188 : même date."
   },
   {
+    "id": "film-django-unchained-2013",
+    "date": "2013-01-16",
+    "title": {
+      "fr": "Django Unchained",
+      "en": "Django Unchained",
+      "de": "Django Unchained",
+      "it": "Django Unchained",
+      "es": "Django Unchained"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Django_Unchained",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q571032 : pas de date française."
+  },
+  {
     "id": "film-gravity-2013",
     "date": "2013-10-23",
     "title": {
@@ -485,6 +770,21 @@
     "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q13417189 : même date."
   },
   {
+    "id": "film-mad-max-fury-road-2015",
+    "date": "2015-05-14",
+    "title": {
+      "fr": "Mad Max: Fury Road",
+      "en": "Mad Max: Fury Road",
+      "de": "Mad Max: Fury Road",
+      "it": "Mad Max: Fury Road",
+      "es": "Mad Max: Fury Road"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Mad_Max:_Fury_Road",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q1757288 : pas de date française."
+  },
+  {
     "id": "film-la-la-land-2017",
     "date": "2017-01-25",
     "title": {
@@ -496,6 +796,36 @@
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q20856802 : même date."
   },
   {
+    "id": "film-bohemian-rhapsody-2018",
+    "date": "2018-10-31",
+    "title": {
+      "fr": "Bohemian Rhapsody",
+      "en": "Bohemian Rhapsody",
+      "de": "Bohemian Rhapsody",
+      "it": "Bohemian Rhapsody",
+      "es": "Bohemian Rhapsody"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Bohemian_Rhapsody_(film)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q27894574 : même date."
+  },
+  {
+    "id": "film-parasite-2019",
+    "date": "2019-06-05",
+    "title": {
+      "fr": "Parasite",
+      "en": "Parasite",
+      "de": "Parasite",
+      "it": "Parasite",
+      "es": "Parásitos"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Parasite_(film,_2019)",
+    "note": "Sortie nationale en France, fiche technique de l'article (après le Festival de Cannes 2019). Wikidata Q61448040 : pas de date française."
+  },
+  {
     "id": "film-joker-2019",
     "date": "2019-10-09",
     "title": {
@@ -505,6 +835,36 @@
     "importance": 2,
     "source": "https://fr.wikipedia.org/wiki/Joker_(film,_2019)",
     "note": "Sortie nationale en France selon la fiche technique. Wikidata Q42759035 : même date."
+  },
+  {
+    "id": "film-dune-2021",
+    "date": "2021-09-15",
+    "title": {
+      "fr": "Dune",
+      "en": "Dune",
+      "de": "Dune",
+      "it": "Dune",
+      "es": "Dune"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Dune_(film,_2021)",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q60834962 : pas de date française."
+  },
+  {
+    "id": "film-top-gun-maverick-2022",
+    "date": "2022-05-25",
+    "title": {
+      "fr": "Top Gun: Maverick",
+      "en": "Top Gun: Maverick",
+      "de": "Top Gun: Maverick",
+      "it": "Top Gun: Maverick",
+      "es": "Top Gun: Maverick"
+    },
+    "kind": "film-release",
+    "importance": 2,
+    "source": "https://fr.wikipedia.org/wiki/Top_Gun:_Maverick",
+    "note": "Sortie nationale en France, fiche technique de l'article. Wikidata Q31202708 : même date."
   },
   {
     "id": "film-barbie-2023",

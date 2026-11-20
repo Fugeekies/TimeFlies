@@ -1,5 +1,16 @@
 [
   {
+    "id": "single-end-of-the-road-boyz-ii-men-1992",
+    "date": "1992-06-30",
+    "title": {
+      "fr": "End of the Road (Boyz II Men)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/End_of_the_Road_(chanson)",
+    "note": "Sortie selon l'infobox. Wikidata Q4038061 : mois seulement."
+  },
+  {
     "id": "single-quit-playing-games-1996",
     "date": "1996-10-14",
     "title": {
@@ -53,5 +64,16 @@
     "importance": 1,
     "source": "https://fr.wikipedia.org/wiki/Bye_Bye_Bye",
     "note": "Sortie selon l'infobox. Wikidata Q3647850 : mois seulement (janvier 2000)."
+  },
+  {
+    "id": "single-sucker-jonas-brothers-2019",
+    "date": "2019-03-01",
+    "title": {
+      "fr": "Sucker (Jonas Brothers)"
+    },
+    "kind": "single-release",
+    "importance": 1,
+    "source": "https://fr.wikipedia.org/wiki/Sucker_(chanson_des_Jonas_Brothers)",
+    "note": "Sortie selon l'infobox. Wikidata Q61971037 : même date."
   }
 ]
